@@ -1,312 +1,209 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistema 90G — Verifica Tecnica Cucine</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f2ec;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 90px 0 70px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .logo {
-      font-size: 14px;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-      color: #555;
-    }
-
-    h1 {
-      font-size: 48px;
-      line-height: 1.1;
-      max-width: 800px;
-      margin-bottom: 25px;
-    }
-
-    .highlight {
-      color: #b32020;
-    }
-
-    .subtitle {
-      max-width: 700px;
-      font-size: 20px;
-      color: #444;
-      margin-bottom: 40px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      padding: 16px 28px;
-      font-size: 16px;
-      transition: 0.2s ease;
-    }
-
-    .cta-button:hover {
-      background: #b32020;
-    }
-
-    section {
-      padding: 80px 0;
-      border-bottom: 1px solid #ddd;
-    }
-
-    h2 {
-      font-size: 34px;
-      margin-bottom: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border: 1px solid #ddd;
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
-
-    .audit-image {
-      width: 100%;
-      border: 1px solid #ccc;
-      margin-top: 30px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
-    .final-cta {
-      text-align: center;
-      padding: 100px 0;
-    }
-
-    .final-cta p {
-      max-width: 700px;
-      margin: 0 auto 35px;
-      color: #444;
-      font-size: 20px;
-    }
-
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 28px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-      }
-    }
-
-      .case-study {
-      padding: 20px 0 60px;
-    }
-
-      .case-image {
-          width: 100%;
-          border: 1px solid #ddd;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema 90G verifica tecnicamente il progetto cucina prima dell'ordine: misure, passaggi, aperture, impianti, ergonomia e interferenze che nei render spesso non si vedono.">
+  <title>Sistema 90G | Verifica tecnica indipendente per cucine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <div class="logo">SISTEMA 90G</div>
-
-      <h1>
-      La tua cucina può avere errori invisibili prima ancora della produzione.
-      </h1>
-
-      <p>
-      Analizziamo passaggi, aperture, impianti ed ergonomia prima dell’ordine per individuare problemi che nel render spesso non si vedono.
-      </p>
-
-      <a href="https://wa.me/393275478485" class="cta-button" target="_blank">
-        Verifica il progetto su WhatsApp
-      </a>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sistema 90G home">
+      <span class="brand-mark">90G</span>
+      <span>Sistema 90G</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="#problemi">Problemi</a>
+      <a href="#protocollo">Protocollo</a>
+      <a href="#audit">Audit</a>
+      <a href="#contatto">Contatto</a>
+    </nav>
   </header>
 
-  <section class="case-study">
-  <div class="container">
-
-    <img
-      src="images/audit-esempio.jpg"
-      alt="Errore tecnico cucina passaggio stretto"
-      class="case-image"
-    >
-
-  </div>
-</section>
-
-  <section>
-    <div class="container">
-      <h2>Problemi che spesso emergono troppo tardi</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Passaggi troppo stretti</h3>
-          <p>
-            Nel render sembrano corretti. Nell’uso reale diventano punti congestionati tra isola, colonne e aperture.
-          </p>
+  <main id="top">
+    <section class="hero" aria-label="Sistema 90G">
+      <img src="images/audit-esempio.jpg" alt="Esempio di verifica tecnica Sistema 90G su passaggio cucina troppo stretto">
+      <div class="hero-content">
+        <p class="eyebrow">Audit tecnico indipendente</p>
+        <h1>Verifica tecnica indipendente per il tuo progetto cucina.</h1>
+        <p class="hero-copy">
+          Prima di ordinare, controlliamo misure, passaggi, aperture, impianti ed ergonomia
+          per individuare errori che nel render spesso non si vedono.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/393275478485?text=Ciao%2C%20vorrei%20una%20verifica%20tecnica%20Sistema%2090G%20del%20mio%20progetto%20cucina." target="_blank" rel="noopener">
+            Invia il progetto su WhatsApp
+          </a>
+          <a class="button button-secondary" href="#protocollo">
+            Cosa controlliamo
+          </a>
         </div>
-
-        <div class="card">
-          <h3>Aperture in conflitto</h3>
-          <p>
-            Sportelli, lavastoviglie e frigoriferi possono interferire tra loro creando movimenti scomodi quotidiani.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Impianti poco funzionali</h3>
-          <p>
-            Alcune criticità emergono solo durante l’utilizzo reale della cucina, quando ormai il progetto è già stato ordinato.
-          </p>
+        <div class="hero-metrics" aria-label="Indicatori del servizio">
+          <div>
+            <strong>48h</strong>
+            <span>consegna report</span>
+          </div>
+          <div>
+            <strong>6</strong>
+            <span>aree controllate</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>preventivi da vendere</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <h2>Cosa controlla il Protocollo 90G</h2>
+    <section class="intro-band">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">Prima dell'ordine</p>
+          <h2>Il problema non è fare una cucina più bella.</h2>
+        </div>
+        <p>
+          Il problema è evitare errori reali nell'uso quotidiano: ante che si bloccano,
+          passaggi ridotti, lavastoviglie che invade il percorso, prese nel punto sbagliato
+          o elettrodomestici che interferiscono tra loro.
+        </p>
+      </div>
+    </section>
 
-      <div class="grid">
-        <div class="card">
-          <ul>
-            <li>Misure reali</li>
-            <li>Passaggi operativi</li>
-            <li>Aperture e collisioni</li>
-          </ul>
+    <section id="problemi" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Criticità invisibili</p>
+          <h2>Nel render sembra tutto corretto. Poi la cucina viene usata.</h2>
         </div>
 
-        <div class="card">
-          <ul>
-            <li>Ergonomia quotidiana</li>
-            <li>Interferenze tra elementi</li>
-            <li>Flussi di movimento</li>
-          </ul>
+        <div class="problem-grid">
+          <article class="problem">
+            <span>01</span>
+            <h3>Passaggi troppo stretti</h3>
+            <p>Quando colonne, isola e aperture si avvicinano, pochi centimetri possono trasformare un percorso in un punto congestionato.</p>
+          </article>
+          <article class="problem">
+            <span>02</span>
+            <h3>Aperture in conflitto</h3>
+            <p>Frigo, forno, lavastoviglie, cassetti e sportelli devono essere verificati aperti, non solo chiusi nel disegno.</p>
+          </article>
+          <article class="problem">
+            <span>03</span>
+            <h3>Impianti scomodi</h3>
+            <p>Prese, scarichi e attacchi possono sembrare dettagli, ma se cadono nel punto sbagliato generano costi e modifiche in cantiere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-case">
+      <div class="container visual-layout">
+        <div>
+          <p class="eyebrow">Esempio reale di controllo</p>
+          <h2>Una lavastoviglie può bloccare il passaggio anche se nel render non sembra.</h2>
+          <p>
+            La verifica 90G osserva la cucina mentre viene usata: ante aperte, persone in movimento, zone operative e accessi principali.
+          </p>
+        </div>
+        <figure class="audit-figure">
+          <img src="images/caso-lavastoviglie.jpg" alt="Schema tecnico con lavastoviglie aperta che blocca il passaggio">
+          <figcaption>Controllo apertura lavastoviglie e passaggio operativo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="protocollo" class="section protocol">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Protocollo 90G</p>
+          <h2>Cosa viene controllato</h2>
         </div>
 
-        <div class="card">
-          <ul>
-            <li>Impianti</li>
-            <li>Criticità invisibili</li>
-            <li>Uso reale della cucina</li>
+        <div class="check-grid">
+          <div class="check-item">Misure reali</div>
+          <div class="check-item">Passaggi operativi</div>
+          <div class="check-item">Aperture e collisioni</div>
+          <div class="check-item">Ergonomia quotidiana</div>
+          <div class="check-item">Impianti e prese</div>
+          <div class="check-item">Interferenze tra elementi</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="audit" class="section audit-section">
+      <div class="container audit-grid">
+        <figure class="audit-figure">
+          <img src="images/caso-frigo.jpg" alt="Schema tecnico con frigorifero in conflitto con zona lavello">
+          <figcaption>Verifica interferenze tra frigorifero, lavello e percorso.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Output</p>
+          <h2>Ricevi un audit tecnico PDF.</h2>
+          <p>
+            Il report evidenzia criticità, interferenze e osservazioni operative prima che la cucina venga ordinata o prodotta.
+          </p>
+          <ul class="deliverables">
+            <li>Criticità evidenziate sulla piantina</li>
+            <li>Osservazioni tecniche indipendenti</li>
+            <li>Controllo prima della produzione</li>
+            <li>Consegna entro 48 ore dalla ricezione del materiale</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <h2>Esempio di audit tecnico</h2>
-
-      <p>
-        Ogni verifica viene eseguita sulla base della piantina del progetto per evidenziare criticità difficili da percepire nei render.
-      </p>
-
-      <img
-        src="audit-esempio.jpg"
-        alt="Esempio audit tecnico cucina"
-        class="audit-image"
-      />
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Cosa ricevi</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Audit PDF</h3>
-          <p>
-            Documento tecnico con criticità evidenziate e osservazioni operative.
-          </p>
+    <section class="section fit-section">
+      <div class="container fit-grid">
+        <div>
+          <p class="eyebrow">Quando usarlo</p>
+          <h2>Serve quando il progetto sembra pronto, ma vuoi ridurre il rischio.</h2>
         </div>
-
-        <div class="card">
-          <h3>Verifica indipendente</h3>
-          <p>
-            Analisi focalizzata sull’utilizzo reale e non sulla sola resa estetica.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Consegna rapida</h3>
-          <p>
-            Report tecnico inviato entro 48h dalla ricezione del materiale.
-          </p>
+        <div class="fit-list">
+          <p>Hai una piantina o un preventivo e vuoi un controllo prima della conferma.</p>
+          <p>Stai valutando una cucina con isola, colonne, passaggi stretti o molti elettrodomestici.</p>
+          <p>Vuoi un parere tecnico indipendente, non un secondo preventivo commerciale.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="final-cta">
-    <div class="container">
-      <h2>Invia la tua piantina</h2>
+    <section class="section method">
+      <div class="container method-grid">
+        <div>
+          <span class="step">1</span>
+          <h3>Invii i file</h3>
+          <p>Piantina, render, schema cucina o PDF del progetto.</p>
+        </div>
+        <div>
+          <span class="step">2</span>
+          <h3>Analisi tecnica</h3>
+          <p>Controllo di misure, passaggi, aperture, impianti e uso reale.</p>
+        </div>
+        <div>
+          <span class="step">3</span>
+          <h3>Report 90G</h3>
+          <p>Ricevi un documento chiaro con criticità e osservazioni operative.</p>
+        </div>
+      </div>
+    </section>
 
-      <p>
-        Se vuoi una verifica tecnica indipendente del tuo progetto cucina, puoi inviare la piantina via email.
-      </p>
+    <section id="contatto" class="final-cta">
+      <div class="container">
+        <p class="eyebrow">Verifica prima di ordinare</p>
+        <h2>Hai già un progetto cucina?</h2>
+        <p>
+          Invia la piantina o il PDF del progetto. Ti diciamo cosa va controllato prima della produzione.
+        </p>
+        <a class="button button-primary" href="https://wa.me/393275478485?text=Ciao%2C%20vorrei%20inviare%20la%20piantina%20per%20una%20verifica%20tecnica%20Sistema%2090G." target="_blank" rel="noopener">
+          Invia il progetto su WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
 
-      <a href="https://wa.me/393275478485" class="cta-button" target="_blank">
-        Invia il progetto su WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    Sistema 90G — Verifica Tecnica Cucine
+  <footer class="site-footer">
+    <span>Sistema 90G — Progettazione Cucine</span>
+    <span>Metodo. Precisione. Indipendenza.</span>
   </footer>
-
 </body>
 </html>
