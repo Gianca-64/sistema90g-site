@@ -7,19 +7,26 @@ function loadAnalytics() {
   }
 
   window.s90gAnalyticsLoaded = true;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag() {
-    window.dataLayer.push(arguments);
-  };
-  window.gtag('js', new Date());
+  window.gtag('consent', 'update', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
   window.gtag('config', GA_ID, {
     anonymize_ip: true
   });
+}
 
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  document.head.appendChild(script);
+function denyAnalytics() {
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  }
 }
 
 function hideCookieBanner(banner) {
@@ -46,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (savedChoice === 'rejected') {
     hideCookieBanner(banner);
+    denyAnalytics();
     return;
   }
 
@@ -59,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (accepted) {
         loadAnalytics();
+      } else {
+        denyAnalytics();
       }
     });
   });
