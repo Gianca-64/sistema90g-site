@@ -437,6 +437,64 @@ h3 {
   color: var(--ink);
 }
 
+.level-example-block {
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.level-example-block h3 {
+  max-width: 720px;
+  margin: 0 0 22px;
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+.level-example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.level-example-grid article {
+  padding: 24px;
+  background: #fdfbf7;
+  border: 1px solid var(--line-strong);
+  border-top: 5px solid var(--red);
+}
+
+.level-example-grid span {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.level-example-grid h4 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.level-example-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.level-example-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.level-example-grid li {
+  color: #2c2c2c;
+}
+
 .visual-case {
   padding: 94px 0;
   background: var(--ink);
@@ -1099,6 +1157,7 @@ h3 {
   .additional-levels,
   .additional-level-grid,
   .application-case-grid,
+  .level-example-grid,
   .case-grid,
   .pricing-grid,
   .method-grid,
