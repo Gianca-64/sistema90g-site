@@ -397,6 +397,46 @@ h3 {
   color: var(--muted);
 }
 
+.application-cases {
+  background:
+    linear-gradient(135deg, rgba(184, 32, 24, 0.08), transparent 38%),
+    var(--white);
+}
+
+.application-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.application-case-grid article {
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+}
+
+.application-case-grid span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.application-case-grid h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.application-case-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.application-case-grid strong {
+  color: var(--ink);
+}
+
 .visual-case {
   padding: 94px 0;
   background: var(--ink);
@@ -669,6 +709,117 @@ h3 {
   max-width: 860px;
   margin: 26px 0 0;
   color: var(--muted);
+}
+
+.level-explainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.level-explainer article {
+  padding: 28px;
+  background: #fdfbf7;
+  border: 1px solid var(--line-strong);
+  border-left: 5px solid var(--red);
+}
+
+.level-explainer span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.level-explainer h3 {
+  margin: 0 0 12px;
+  font-size: 30px;
+}
+
+.level-explainer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.level-explainer ul {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding-left: 20px;
+}
+
+.level-explainer li {
+  color: #2c2c2c;
+}
+
+.additional-levels {
+  display: grid;
+  grid-template-columns: 0.36fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.additional-levels h3 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.08;
+}
+
+.additional-level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.additional-level-grid article {
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+}
+
+.additional-level-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.additional-level-grid h4 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.additional-level-grid strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.additional-level-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.additional-level-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.additional-level-grid li {
+  color: #2c2c2c;
 }
 
 .text-link {
@@ -944,6 +1095,10 @@ h3 {
   .service-hero-grid,
   .policy-grid,
   .problem-grid,
+  .level-explainer,
+  .additional-levels,
+  .additional-level-grid,
+  .application-case-grid,
   .case-grid,
   .pricing-grid,
   .method-grid,
