@@ -1,4 +1,4 @@
-const GA_ID = 'G-G5DFNDR00';
+const GA_ID = 'G-G5D6FNDR00';
 const CONSENT_KEY = 's90g_cookie_consent';
 
 function loadAnalytics() {

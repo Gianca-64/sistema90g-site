@@ -457,10 +457,20 @@ h3 {
 }
 
 .level-example-grid article {
+  overflow: hidden;
   padding: 24px;
   background: #fdfbf7;
   border: 1px solid var(--line-strong);
   border-top: 5px solid var(--red);
+}
+
+.level-example-grid img {
+  width: calc(100% + 48px);
+  max-width: none;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  margin: -24px -24px 22px;
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .level-example-grid span {
