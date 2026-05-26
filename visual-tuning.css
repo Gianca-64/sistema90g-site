@@ -1,0 +1,71 @@
+:root {
+  --ink: #171514;
+  --muted: #5f5a54;
+  --red: #a92820;
+  --red-dark: #7f1f18;
+  --paper: #f7f4ee;
+  --paper-deep: #eee8dc;
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(23, 21, 20, 0.018) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.018) 1px, transparent 1px),
+    var(--paper);
+}
+
+.hero,
+.professional-hero {
+  background: #171514;
+}
+
+.hero > img {
+  opacity: 0.62;
+}
+
+.hero::after {
+  background:
+    linear-gradient(90deg, rgba(23, 21, 20, 0.82), rgba(23, 21, 20, 0.56) 52%, rgba(23, 21, 20, 0.24)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.34), rgba(23, 21, 20, 0.08));
+}
+
+.professional-hero::after {
+  background:
+    linear-gradient(90deg, rgba(23, 21, 20, 0.84), rgba(23, 21, 20, 0.58) 54%, rgba(23, 21, 20, 0.22)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.34), rgba(23, 21, 20, 0.08));
+}
+
+.brand-mark,
+.problem,
+.price-card,
+.case-card,
+.professional-target-grid article,
+.check-item {
+  box-shadow: 0 14px 34px rgba(23, 21, 20, 0.055);
+}
+
+.eyebrow,
+.problem span,
+.case-card span,
+.step {
+  color: var(--red);
+}
+
+.problem::after,
+.case-note {
+  border-color: var(--red);
+}
+
+.button-primary {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.button-primary:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+}
+
+.main-nav a:hover {
+  color: var(--red);
+}
