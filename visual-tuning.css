@@ -19,20 +19,25 @@ body {
   background: #171514;
 }
 
-.hero > img {
-  opacity: 0.62;
+.hero > img,
+.professional-hero > img {
+  opacity: 0.84;
 }
 
 .hero::after {
   background:
-    linear-gradient(90deg, rgba(23, 21, 20, 0.82), rgba(23, 21, 20, 0.56) 52%, rgba(23, 21, 20, 0.24)),
-    linear-gradient(0deg, rgba(23, 21, 20, 0.34), rgba(23, 21, 20, 0.08));
+    linear-gradient(90deg, rgba(23, 21, 20, 0.58), rgba(23, 21, 20, 0.34) 52%, rgba(23, 21, 20, 0.12)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.26), rgba(23, 21, 20, 0.04));
 }
 
 .professional-hero::after {
   background:
-    linear-gradient(90deg, rgba(23, 21, 20, 0.84), rgba(23, 21, 20, 0.58) 54%, rgba(23, 21, 20, 0.22)),
-    linear-gradient(0deg, rgba(23, 21, 20, 0.34), rgba(23, 21, 20, 0.08));
+    linear-gradient(90deg, rgba(23, 21, 20, 0.62), rgba(23, 21, 20, 0.36) 54%, rgba(23, 21, 20, 0.12)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.26), rgba(23, 21, 20, 0.04));
+}
+
+.hero-content {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
 }
 
 .brand-mark,
