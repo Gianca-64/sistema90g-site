@@ -21,23 +21,66 @@ body {
 
 .hero > img,
 .professional-hero > img {
-  opacity: 0.84;
+  opacity: 0.72;
 }
 
 .hero::after {
   background:
-    linear-gradient(90deg, rgba(23, 21, 20, 0.58), rgba(23, 21, 20, 0.34) 52%, rgba(23, 21, 20, 0.12)),
-    linear-gradient(0deg, rgba(23, 21, 20, 0.26), rgba(23, 21, 20, 0.04));
+    linear-gradient(90deg, rgba(23, 21, 20, 0.70), rgba(23, 21, 20, 0.42) 52%, rgba(23, 21, 20, 0.16)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.30), rgba(23, 21, 20, 0.06));
 }
 
 .professional-hero::after {
   background:
-    linear-gradient(90deg, rgba(23, 21, 20, 0.62), rgba(23, 21, 20, 0.36) 54%, rgba(23, 21, 20, 0.12)),
-    linear-gradient(0deg, rgba(23, 21, 20, 0.26), rgba(23, 21, 20, 0.04));
+    linear-gradient(90deg, rgba(23, 21, 20, 0.68), rgba(23, 21, 20, 0.40) 54%, rgba(23, 21, 20, 0.14)),
+    linear-gradient(0deg, rgba(23, 21, 20, 0.30), rgba(23, 21, 20, 0.06));
 }
 
 .hero-content {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+.hero-clean {
+  min-height: auto;
+  padding: 96px 0;
+  align-items: center;
+}
+
+.hero-clean::after,
+.hero-clean > img {
+  display: none;
+}
+
+.hero-clean .hero-content {
+  padding: 0;
+  text-align: center;
+}
+
+.hero-clean h1,
+.hero-clean .hero-copy {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.audit-figure {
+  margin: 0 0 40px;
+  overflow: hidden;
+  background: #171514;
+  border: 1px solid rgba(23, 21, 20, 0.16);
+  box-shadow: 0 18px 44px rgba(23, 21, 20, 0.12);
+}
+
+.audit-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.audit-figure figcaption {
+  padding: 14px 18px;
+  color: #f7f4ee;
+  font-size: 15px;
+  background: #171514;
 }
 
 .brand-mark,
@@ -73,4 +116,14 @@ body {
 
 .main-nav a:hover {
   color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .hero-clean {
+    padding: 72px 0;
+  }
+
+  .audit-figure figcaption {
+    font-size: 14px;
+  }
 }
