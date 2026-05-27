@@ -42,7 +42,7 @@ body {
 
 .hero-clean {
   min-height: auto;
-  padding: 96px 0;
+  padding: 88px 0;
   align-items: center;
 }
 
@@ -83,6 +83,32 @@ body {
   background: #171514;
 }
 
+.full-bleed-media {
+  padding: 0;
+  background: #171514;
+  border-bottom: 1px solid rgba(23, 21, 20, 0.18);
+}
+
+.full-bleed-media .audit-figure {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.full-bleed-media .audit-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.full-bleed-media .audit-figure figcaption {
+  padding-left: max(24px, calc((100vw - 1120px) / 2));
+  padding-right: max(24px, calc((100vw - 1120px) / 2));
+}
+
 .brand-mark,
 .problem,
 .price-card,
@@ -120,10 +146,15 @@ body {
 
 @media (max-width: 760px) {
   .hero-clean {
-    padding: 72px 0;
+    padding: 64px 0;
   }
 
   .audit-figure figcaption {
     font-size: 14px;
+  }
+
+  .full-bleed-media .audit-figure img {
+    min-height: 320px;
+    object-fit: cover;
   }
 }
