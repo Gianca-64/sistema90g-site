@@ -99,8 +99,8 @@ body {
 .full-bleed-media .audit-figure img {
   width: 100%;
   height: auto;
-  max-height: 78vh;
-  object-fit: cover;
+  max-height: none;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -154,7 +154,7 @@ body {
   }
 
   .full-bleed-media .audit-figure img {
-    min-height: 320px;
-    object-fit: cover;
+    min-height: 0;
+    object-fit: contain;
   }
 }
