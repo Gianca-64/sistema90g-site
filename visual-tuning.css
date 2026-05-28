@@ -1,10 +1,10 @@
 :root {
   --ink: #111111;
   --muted: #5f5f5f;
-  --red: #a92820;
-  --red-dark: #7f1f18;
-  --paper: #f8f7f4;
-  --paper-deep: #efede7;
+  --red: #8b6b4a;
+  --red-dark: #70553a;
+  --paper: #f6f3ee;
+  --paper-deep: #ece6dc;
   --line: rgba(17, 17, 17, 0.10);
 }
 
@@ -15,7 +15,7 @@ body {
 
 .site-header {
   backdrop-filter: blur(18px);
-  background: rgba(248, 247, 244, 0.82);
+  background: rgba(246, 243, 238, 0.86);
   border-bottom: 1px solid var(--line);
 }
 
