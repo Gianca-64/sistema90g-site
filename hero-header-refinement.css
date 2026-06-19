@@ -1,4 +1,4 @@
-/* Hero + header refinement - Sistema 90G */
+/* Sistema 90G - visual refinements */
 
 .site-header {
   background: rgba(6, 19, 27, 0.98);
@@ -59,8 +59,6 @@
   transform-origin: center;
 }
 
-/* Phase B - internal sections */
-
 .premium-section,
 .premium-split,
 .premium-contrast,
@@ -113,8 +111,7 @@
   padding: 30px;
   border-radius: 26px;
   border: 1px solid rgba(7, 19, 26, 0.09);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0.92));
+  background: linear-gradient(180deg, #ffffff, rgba(255,255,255,0.92));
   box-shadow: 0 22px 60px rgba(7, 19, 26, 0.07);
   overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
@@ -165,10 +162,25 @@
   box-shadow: 0 22px 70px rgba(7, 19, 26, 0.12);
 }
 
+.seo-faq {
+  overflow: hidden;
+  background: linear-gradient(180deg, #f4f8f5, #ffffff);
+}
+
+.seo-faq .premium-copy,
+.seo-faq .faq-list {
+  position: relative;
+  z-index: 2;
+}
+
+.seo-faq .premium-copy h2 {
+  max-width: 760px;
+}
+
 .faq-list details {
   border: 1px solid rgba(7, 19, 26, 0.09);
   border-radius: 18px;
-  background: rgba(255,255,255,0.88);
+  background: #ffffff;
   box-shadow: 0 18px 48px rgba(7, 19, 26, 0.045);
 }
 
@@ -200,12 +212,15 @@
 }
 
 .premium-cta {
+  overflow: hidden;
   background:
     radial-gradient(circle at 50% 0%, rgba(47, 125, 88, 0.18), transparent 34%),
     linear-gradient(180deg, #ffffff, #e8f1ec);
 }
 
 .premium-cta .premium-copy.center {
+  position: relative;
+  z-index: 2;
   max-width: 780px;
   padding: clamp(34px, 5vw, 58px);
   border: 1px solid rgba(7, 19, 26, 0.08);
@@ -224,6 +239,7 @@
 }
 
 .site-footer {
+  min-height: 72px;
   font-size: 14px;
 }
 
@@ -298,6 +314,20 @@
     margin-bottom: 20px;
   }
 
+  .seo-faq .premium-copy h2 {
+    max-width: none;
+  }
+
+  .faq-list summary {
+    padding: 18px;
+  }
+
+  .faq-list summary::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
   .premium-cta .premium-copy.center {
     padding: 26px 20px;
     border-radius: 22px;
@@ -307,13 +337,7 @@
     min-width: 0;
   }
 
-  .faq-list summary {
-    padding: 18px 18px;
-  }
-
-  .faq-list summary::before {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+  .site-footer {
+    min-height: auto;
   }
 }
