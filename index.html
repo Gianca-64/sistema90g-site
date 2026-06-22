@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5D6FNDR00"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
     gtag('js', new Date());
-    gtag('config', 'G-G5D6FNDR00');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5D6FNDR00"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Controllo progetto casa, cucina, preventivo e redistribuzione ambienti prima della firma. Sistema 90G aiuta a individuare errori costosi in planimetrie, proposte e ristrutturazioni.">
@@ -23,7 +27,7 @@
   <title>Controllo progetto casa, cucina e preventivo | Sistema 90G</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="visual-tuning.css?v=20260619f">
-  <link rel="stylesheet" href="hero-header-refinement.css?v=20260619h">
+  <link rel="stylesheet" href="hero-header-refinement.css?v=20260623a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -103,6 +107,17 @@
   </script>
 </head>
 <body>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferenze cookie" hidden>
+  <div>
+    <strong>Cookie e statistiche</strong>
+    <p>Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.</p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-button secondary" data-cookie-choice="reject">Rifiuta</button>
+    <button type="button" class="cookie-button primary" data-cookie-choice="accept">Accetta</button>
+  </div>
+</div>
+
 <header class="site-header">
   <a class="brand" href="#top" aria-label="Sistema 90G home">
     <span class="brand-mark"><img src="images/logo-90g.jpg" alt="" aria-hidden="true"></span>
@@ -290,7 +305,7 @@
         <p class="eyebrow">Invia il tuo caso</p>
         <h2>Hai un progetto, una proposta, un preventivo o una planimetria da controllare?</h2>
         <p>Mandami il materiale e il dubbio principale. Ti dirò se il caso è valutabile e quale controllo 90G è più adatto prima di procedere con l’analisi completa.</p>
-        <a class="button button-primary" href="https://wa.me/393275478485?text=Ciao%2C%20vorrei%20far%20controllare%20un%20progetto%2C%20una%20proposta%2C%20un%20preventivo%20o%20una%20planimetria%20con%20Sistema%2090G." target="_blank" rel="noopener">Invia il caso su WhatsApp</a>
+        <a class="button button-primary" data-track-whatsapp href="https://wa.me/393275478485?text=Ciao%2C%20vorrei%20far%20controllare%20un%20progetto%2C%20una%20proposta%2C%20un%20preventivo%20o%20una%20planimetria%20con%20Sistema%2090G." target="_blank" rel="noopener">Invia il caso su WhatsApp</a>
         <p>Puoi inviare anche foto, screenshot o documenti non definitivi. L’importante è spiegare cosa ti preoccupa.</p>
       </div>
     </div>
@@ -301,9 +316,13 @@
   <span>© Sistema 90G</span>
   <span>Partita IVA IT02844900221</span>
   <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+    <a href="#" data-cookie-settings>Gestisci cookie</a>
     <a href="mailto:info@sistema90g.it">info@sistema90g.it</a>
     <a href="#top">Torna su</a>
   </div>
 </footer>
+<script src="privacy-consent.js?v=20260623a" defer></script>
 </body>
 </html>
