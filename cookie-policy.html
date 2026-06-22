@@ -17,10 +17,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
     });
     gtag('js', new Date());
   </script>
@@ -29,7 +29,7 @@
 <body>
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferenze cookie" hidden>
     <div>
-      <strong>Cookie e Analytics</strong>
+      <strong>Cookie e statistiche</strong>
       <p>Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.</p>
     </div>
     <div class="cookie-actions">
@@ -40,16 +40,14 @@
 
   <header class="site-header">
     <a class="brand" href="index.html#top" aria-label="Sistema 90G home">
-      <span class="brand-mark">
-        <img src="images/logo-90g.jpg" alt="" aria-hidden="true">
-      </span>
+      <span class="brand-mark"><img src="images/logo-90g.jpg" alt="" aria-hidden="true"></span>
       <span>Sistema 90G</span>
     </a>
     <nav class="main-nav" aria-label="Navigazione principale">
-      <a href="index.html#casi">Casi</a>
-      <a href="index.html#protocollo">Protocollo</a>
-      <a href="index.html#prezzi">Prezzi</a>
-      <a href="index.html#contatto">Contatto</a>
+      <a href="index.html#quando-serve">Quando serve</a>
+      <a href="index.html#controlli">Cosa controlliamo</a>
+      <a href="index.html#servizi">Servizi</a>
+      <a href="index.html#contatto">Invia il caso</a>
     </nav>
   </header>
 
@@ -58,46 +56,48 @@
       <div class="container">
         <p class="eyebrow">Informativa</p>
         <h1>Cookie Policy</h1>
-        <p>Ultimo aggiornamento: 17 maggio 2026</p>
+        <p>Ultimo aggiornamento: 23 giugno 2026</p>
       </div>
     </section>
 
     <section class="policy-content">
       <div class="container policy-grid">
         <aside>
-          <p>Il sito usa una gestione prudente: nessun Google Analytics viene caricato prima della tua scelta nel banner.</p>
+          <p>Google Analytics viene attivato solo dopo una scelta positiva nel banner. Se rifiuti, puoi continuare a usare il sito.</p>
         </aside>
         <div class="policy-text">
           <h2>Cosa sono i cookie</h2>
           <p>I cookie e strumenti simili permettono a un sito di ricordare informazioni nel browser o raccogliere dati sul funzionamento delle pagine.</p>
 
           <h2>Cookie tecnici</h2>
-          <p>Il sito usa strumenti tecnici necessari al funzionamento e salva la tua scelta sui cookie nel browser con la chiave <strong>s90g_cookie_consent</strong>. Questa preferenza serve solo a non mostrarti il banner a ogni visita.</p>
+          <p>Il sito usa strumenti tecnici necessari al funzionamento e salva la tua scelta nel browser con la chiave <strong>s90g_cookie_consent</strong>. Questa preferenza serve a non mostrare il banner a ogni visita.</p>
 
           <h2>Cookie statistici</h2>
-          <p>Google Analytics viene caricato solo se clicchi su "Accetta". Serve a capire quali pagine vengono visitate e come migliorare i contenuti. Se clicchi su "Rifiuta", Analytics non viene caricato.</p>
+          <p>Google Analytics viene configurato solo se clicchi su “Accetta”. Serve a capire quali pagine vengono visitate e se il pulsante WhatsApp viene utilizzato. Se clicchi su “Rifiuta”, il consenso per Analytics resta negato.</p>
 
           <h2>Come modificare la scelta</h2>
-          <p>Puoi cambiare idea cancellando i dati del sito dal browser e ricaricando la pagina: il banner comparira di nuovo. Puoi anche bloccare o cancellare cookie e dati locali dalle impostazioni del browser.</p>
+          <p>Puoi riaprire in qualsiasi momento il banner tramite il collegamento <a href="#" data-cookie-settings>Gestisci cookie</a> presente nel footer e scegliere nuovamente. Puoi anche cancellare i dati del sito dalle impostazioni del browser.</p>
 
           <h2>Servizi di terze parti</h2>
-          <p>Quando accetti i cookie statistici, il sito puo collegarsi a Google Analytics. I link verso WhatsApp aprono un servizio esterno: quando lo usi, si applicano anche le regole privacy del servizio di destinazione.</p>
+          <p>Quando accetti i cookie statistici, il sito può collegarsi a Google Analytics. I link verso WhatsApp aprono un servizio esterno: quando lo usi, si applicano anche le regole privacy del servizio di destinazione.</p>
 
-          <h2>Perche il banner</h2>
-          <p>Il banner consente di navigare anche rifiutando gli strumenti statistici. È una scelta conservativa e adatta a un sito che usa Analytics ma non necessita di profilazione pubblicitaria.</p>
+          <h2>Nota</h2>
+          <p>Questa pagina descrive la configurazione attuale del sito. Per una verifica legale completa è opportuno rivolgersi a un consulente privacy.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>Sistema 90G — Progettazione Cucine</span>
-    <span>Metodo. Precisione. Indipendenza.</span>
+    <span>© Sistema 90G</span>
+    <span>Partita IVA IT02844900221</span>
     <span class="footer-links">
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="#" data-cookie-settings>Gestisci cookie</a>
+      <a href="index.html#top">Torna alla home</a>
     </span>
   </footer>
-  <script src="privacy-consent.js" defer></script>
+  <script src="privacy-consent.js?v=20260623a" defer></script>
 </body>
 </html>
