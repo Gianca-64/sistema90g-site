@@ -76,29 +76,45 @@ function applyDedicatedPageImages() {
   });
 }
 
-function addAboutLinks() {
-  const footerLinks = document.querySelector('.footer-links');
-  if (footerLinks && !footerLinks.querySelector('a[href="chi-e-sistema90g.html"]')) {
-    const aboutLink = document.createElement('a');
-    aboutLink.href = 'chi-e-sistema90g.html';
-    aboutLink.textContent = 'Chi c’è dietro Sistema 90G';
-    footerLinks.prepend(aboutLink);
+function buildNavigationLink(href, label) {
+  const link = document.createElement('a');
+  link.href = href;
+  link.textContent = label;
+  return link;
+}
+
+function applySiteNavigation() {
+  const mainNav = document.querySelector('.main-nav');
+  if (!mainNav) {
+    return;
   }
 
-  if (window.location.pathname === '/' || window.location.pathname.endsWith('/index.html')) {
-    const mainNav = document.querySelector('.main-nav');
-    if (mainNav && !mainNav.querySelector('a[href="chi-e-sistema90g.html"]')) {
-      const aboutLink = document.createElement('a');
-      aboutLink.href = 'chi-e-sistema90g.html';
-      aboutLink.textContent = 'Chi sono';
-      mainNav.insertBefore(aboutLink, mainNav.lastElementChild);
-    }
+  const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
+
+  if (isHome) {
+    mainNav.replaceChildren(
+      buildNavigationLink('#top', 'Home'),
+      buildNavigationLink('controllo-progetto-cucina.html', 'Cucina'),
+      buildNavigationLink('verifica-planimetria-distribuzione-casa.html', 'Planimetria'),
+      buildNavigationLink('analisi-preventivo-cucina.html', 'Preventivo'),
+      buildNavigationLink('scelta-finiture-casa.html', 'Finiture'),
+      buildNavigationLink('chi-e-sistema90g.html', 'Chi sono'),
+      buildNavigationLink('#contatto', 'Invia il caso')
+    );
+  }
+}
+
+function addAboutLinkToFooter() {
+  const footerLinks = document.querySelector('.footer-links');
+  if (footerLinks && !footerLinks.querySelector('a[href="chi-e-sistema90g.html"]')) {
+    footerLinks.prepend(buildNavigationLink('chi-e-sistema90g.html', 'Chi c’è dietro Sistema 90G'));
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   applyDedicatedPageImages();
-  addAboutLinks();
+  applySiteNavigation();
+  addAboutLinkToFooter();
 
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
