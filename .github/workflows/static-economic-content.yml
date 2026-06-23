@@ -1,0 +1,159 @@
+name: Static economic content
+
+on:
+  push:
+    paths:
+      - '.github/workflows/static-economic-content.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-static-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Insert static economic content
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          home = Path('index.html')
+          text = home.read_text(encoding='utf-8')
+          text = text.replace(
+              'Sistema 90G verifica proposte, preventivi, planimetrie e redistribuzioni degli ambienti per capire se rispondono alle tue esigenze e per individuare errori che dopo possono costare tempo, soldi e nervi.',
+              'Sistema90G controlla progetto, preventivo e scelte prima che un dubbio diventi una modifica, una spesa aggiuntiva o un problema difficile da correggere.'
+          )
+          text = text.replace(
+              '<article><span>Conseguenze</span><h3>Cosa rischi di pagare o subire dopo.</h3></article>',
+              '<article><span>Conseguenze</span><h3>Quali conseguenze pratiche o costi aggiuntivi possono emergere dopo.</h3></article>'
+          )
+          if 'id="economic-value"' not in text:
+              section = '''
+  <section class="premium-section economic-value-section" id="economic-value">
+    <div class="container">
+      <div class="premium-copy wide economic-intro">
+        <p class="eyebrow">Prima che diventi una spesa</p>
+        <h2>Quanto può costare scoprirlo dopo?</h2>
+        <p>Prima dell’ordine, modificare una scelta può significare correggere un disegno.<br>Dopo l’ordine può significare cambiare un modulo, rifare un top, spostare un impianto, aggiungere lavorazioni o accettare una soluzione scomoda.<br>Sistema90G interviene quando il problema è ancora una decisione, non una spesa già sostenuta.</p>
+      </div>
+      <div class="economic-value-grid">
+        <article><h3>Elementi da modificare o rifare</h3><p>Moduli, top, pannelli, ante o componenti incompatibili con misure e aperture reali.</p></article>
+        <article><h3>Lavori aggiuntivi</h3><p>Prese, scarichi, attacchi, pareti o rivestimenti da correggere quando il progetto è già avanzato.</p></article>
+        <article><h3>Costi non chiariti</h3><p>Accessori, lavorazioni, montaggi o componenti indispensabili non evidenziati chiaramente nel preventivo.</p></article>
+        <article><h3>Problemi che restano</h3><p>Passaggi scomodi, aperture che interferiscono, poco contenimento o spazi belli nel render ma difficili da usare.</p></article>
+      </div>
+      <p class="economic-value-closing">Il controllo costa una piccola parte rispetto a ciò che può costare correggere una scelta quando mobili e lavori sono già stati avviati.</p>
+    </div>
+  </section>
+
+'''
+              marker = '  <section class="premium-section" id="servizi">'
+              text = text.replace(marker, section + marker)
+          text = text.replace('privacy-consent.js?v=20260623a', 'privacy-consent.js?v=20260623g')
+          home.write_text(text, encoding='utf-8')
+
+          blocks = {
+            'controllo-progetto-cucina.html': (
+              'Il servizio controlla disposizione, misure, aperture, elettrodomestici, piano utile e uso quotidiano prima dell’ordine.',
+              'Una criticità scoperta prima dell’ordine può richiedere solo una correzione al progetto. La stessa criticità scoperta dopo può coinvolgere mobili già prodotti, top, impianti o montaggio.',
+              'Il controllo non elimina ogni rischio, ma aiuta a chiarire i punti critici quando sono ancora modificabili.'
+            ),
+            'verifica-planimetria-distribuzione-casa.html': (
+              'La verifica controlla distribuzione, passaggi, aperture, contenimento e relazione tra gli ambienti prima di demolizioni, impianti e finiture.',
+              'Un conflitto scoperto tardi può richiedere modifiche a pareti, porte, impianti o lavorazioni già avviate, oppure lasciare un compromesso difficile da correggere.',
+              'Il costo del controllo riguarda una decisione che può coinvolgere più ambienti e diverse lavorazioni della casa.'
+            ),
+            'analisi-preventivo-cucina.html': (
+              'L’analisi controlla cosa è incluso, cosa manca, quali voci sono poco chiare e quali componenti possono cambiare il costo finale.',
+              'Il prezzo iniziale non sempre coincide con il costo finale. Elementi esclusi, lavorazioni aggiuntive e componenti indispensabili possono emergere quando la scelta è già stata fatta.',
+              'L’analisi serve a chiarire il contenuto economico della proposta prima della firma, senza promettere il prezzo più basso.'
+            ),
+            'scelta-finiture-casa.html': (
+              'La verifica controlla coerenza tra materiali, luce reale, manutenzione e continuità tra cucina e ambienti collegati prima dell’ordine.',
+              'Una scelta poco adatta scoperta dopo può significare sostituire materiali già acquistati, rifare una superficie o accettare un risultato difficile da correggere.',
+              'Il controllo aiuta a valutare la scelta quando campioni e materiali possono ancora essere confrontati e modificati.'
+            )
+          }
+
+          for filename, (check, consequence, comparison) in blocks.items():
+              p = Path(filename)
+              text = p.read_text(encoding='utf-8')
+              text = text.replace(
+                  'Prima di approvare il progetto o iniziare demolizioni e impianti, quando è ancora possibile correggere la disposizione senza costi aggiuntivi.',
+                  'Prima di approvare il progetto o iniziare demolizioni e impianti, quando una correzione può ancora essere valutata prima di coinvolgere lavori già avviati.'
+              )
+              if 'id="service-economic-value"' not in text:
+                  section = f'''
+  <section class="premium-section service-value-block" id="service-economic-value">
+    <div class="container">
+      <div class="premium-copy wide">
+        <p class="eyebrow">Valore del controllo</p>
+        <h2>Cosa può succedere se emerge dopo</h2>
+      </div>
+      <div class="service-value-grid">
+        <article><h3>Cosa controlla</h3><p>{check}</p></article>
+        <article><h3>Se emerge tardi</h3><p>{consequence}</p></article>
+        <article><h3>Perché farlo prima</h3><p>{comparison}</p></article>
+      </div>
+    </div>
+  </section>
+
+'''
+                  hero_end = text.find('</section>', text.find('<section class="premium-hero">'))
+                  if hero_end != -1:
+                      hero_end += len('</section>')
+                      text = text[:hero_end] + '\n' + section + text[hero_end:]
+              text = re.sub(r'privacy-consent\.js\?v=[^"\']+', 'privacy-consent.js?v=20260623g', text)
+              p.write_text(text, encoding='utf-8')
+
+          css = Path('hero-header-refinement.css')
+          css_text = css.read_text(encoding='utf-8')
+          if '.economic-value-section' not in css_text:
+              css_text += '''
+
+/* Valore economico del controllo */
+.economic-value-section { padding: 72px 0; }
+.economic-value-section .economic-intro { max-width: 880px; }
+.economic-value-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 30px; }
+.economic-value-grid article { padding: 24px; border: 1px solid rgba(22, 43, 35, .14); border-radius: 18px; background: #fff; }
+.economic-value-grid h3 { margin: 0 0 10px; font-size: 1.08rem; }
+.economic-value-grid p { margin: 0; }
+.economic-value-closing { margin-top: 28px; max-width: 880px; font-weight: 700; }
+.service-value-block { padding: 56px 0; }
+.service-value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+.service-value-grid article { padding: 22px; border-radius: 16px; background: rgba(31,122,79,.06); border: 1px solid rgba(31,122,79,.14); }
+.service-value-grid h3 { margin: 0 0 8px; font-size: 1rem; }
+.service-value-grid p { margin: 0; }
+@media (max-width: 900px) {
+  .economic-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-value-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .economic-value-section, .service-value-block { padding: 48px 0; }
+  .economic-value-grid { grid-template-columns: 1fr; gap: 14px; }
+  .economic-value-grid article, .service-value-grid article { padding: 20px; }
+}
+'''
+          css.write_text(css_text, encoding='utf-8')
+
+          js = Path('privacy-consent.js')
+          js_text = js.read_text(encoding='utf-8')
+          for fn in ['injectEconomicValueStyles', 'findSectionByHeading', 'addHomeEconomicValueSection', 'getServiceValueContent', 'addServiceEconomicValueBlock', 'correctEconomicClaims']:
+              js_text = re.sub(rf'\nfunction {fn}\([^)]*\) \{{.*?\n\}}\n', '\n', js_text, flags=re.S)
+          for call in ['injectEconomicValueStyles();', 'addHomeEconomicValueSection();', 'addServiceEconomicValueBlock();', 'correctEconomicClaims();']:
+              js_text = js_text.replace('  ' + call + '\n', '')
+          js.write_text(js_text, encoding='utf-8')
+
+          workflow = Path('.github/workflows/static-economic-content.yml')
+          if workflow.exists():
+              workflow.unlink()
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Rende statici i contenuti sul valore economico" || exit 0
+          git push
