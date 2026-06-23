@@ -98,6 +98,8 @@ function applySiteNavigation() {
       buildNavigationLink('verifica-planimetria-distribuzione-casa.html', 'Planimetria'),
       buildNavigationLink('analisi-preventivo-cucina.html', 'Preventivo'),
       buildNavigationLink('scelta-finiture-casa.html', 'Finiture'),
+      buildNavigationLink('render-fotorealistici-interni.html', 'Render'),
+      buildNavigationLink('agenzie-immobiliari.html', 'Agenzie'),
       buildNavigationLink('chi-e-sistema90g.html', 'Chi sono'),
       buildNavigationLink('#contatto', 'Invia il caso')
     );
@@ -108,6 +110,8 @@ function addAboutLinkToFooter() {
   const footerLinks = document.querySelector('.footer-links');
   if (footerLinks && !footerLinks.querySelector('a[href="chi-e-sistema90g.html"]')) {
     footerLinks.prepend(buildNavigationLink('chi-e-sistema90g.html', 'Chi c’è dietro Sistema 90G'));
+    footerLinks.prepend(buildNavigationLink('render-fotorealistici-interni.html', 'Render fotorealistici'));
+    footerLinks.prepend(buildNavigationLink('agenzie-immobiliari.html', 'Agenzie immobiliari'));
   }
 }
 
