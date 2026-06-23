@@ -65,12 +65,22 @@ function applyDedicatedPageImages() {
     '/analisi-preventivo-cucina.html': 'images/hero-analisi-preventivo-cucina.svg?v=20260623e',
     '/verifica-planimetria-distribuzione-casa.html': 'images/hero-verifica-planimetria-casa.svg?v=20260623e',
     '/scelta-finiture-casa.html': 'images/hero-scelta-finiture-casa.svg?v=20260623e',
-    '/casi-analizzati.html': 'images/errori-reali-lavastoviglie.jpeg?v=20260623e'
+    '/casi-analizzati.html': 'images/caso-lavastoviglie.jpg?v=20260623f',
+    '/agenzie-immobiliari.html': 'images/agenzie-immobiliari-sopralluogo.jpg?v=20260623f'
   };
   const imagePath = pageImages[window.location.pathname];
   if (!imagePath) return;
   const heroImage = document.querySelector('.premium-hero .premium-image img');
   if (heroImage) heroImage.src = imagePath;
+}
+
+function applyAgencySecondaryImage() {
+  if (window.location.pathname !== '/agenzie-immobiliari.html') return;
+  const secondaryImage = document.querySelector('.premium-split .premium-image img');
+  if (secondaryImage) {
+    secondaryImage.src = 'images/agenzie-immobiliari-analisi.jpg?v=20260623f';
+    secondaryImage.alt = 'Analisi commerciale di un immobile con planimetria, fotografie e documenti';
+  }
 }
 
 function buildNavigationLink(href, label) {
@@ -175,6 +185,7 @@ function addMobileStickyCta() {
 document.addEventListener('DOMContentLoaded', () => {
   injectImageRepairStyles();
   applyDedicatedPageImages();
+  applyAgencySecondaryImage();
   applySiteNavigation();
   addAboutLinkToFooter();
   addDeliverySection();
