@@ -341,3 +341,27 @@
     min-height: auto;
   }
 }
+
+
+/* Valore economico del controllo */
+.economic-value-section { padding: 72px 0; }
+.economic-value-section .economic-intro { max-width: 880px; }
+.economic-value-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 30px; }
+.economic-value-grid article { padding: 24px; border: 1px solid rgba(22, 43, 35, .14); border-radius: 18px; background: #fff; }
+.economic-value-grid h3 { margin: 0 0 10px; font-size: 1.08rem; }
+.economic-value-grid p { margin: 0; }
+.economic-value-closing { margin-top: 28px; max-width: 880px; font-weight: 700; }
+.service-value-block { padding: 56px 0; }
+.service-value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+.service-value-grid article { padding: 22px; border-radius: 16px; background: rgba(31,122,79,.06); border: 1px solid rgba(31,122,79,.14); }
+.service-value-grid h3 { margin: 0 0 8px; font-size: 1rem; }
+.service-value-grid p { margin: 0; }
+@media (max-width: 900px) {
+  .economic-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-value-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .economic-value-section, .service-value-block { padding: 48px 0; }
+  .economic-value-grid { grid-template-columns: 1fr; gap: 14px; }
+  .economic-value-grid article, .service-value-grid article { padding: 20px; }
+}
