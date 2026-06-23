@@ -127,6 +127,7 @@
     <a href="#quando-serve">Quando serve</a>
     <a href="#controlli">Cosa controlliamo</a>
     <a href="#servizi">Servizi</a>
+    <a href="casi-analizzati.html">Casi</a>
     <a href="#faq">Domande</a>
     <a href="#contatto">Invia il caso</a>
   </nav>
@@ -320,6 +321,7 @@
   <span>© Sistema 90G</span>
   <span>Partita IVA IT02844900221</span>
   <div class="footer-links">
+    <a href="casi-analizzati.html">Casi analizzati</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="cookie-policy.html">Cookie Policy</a>
     <a href="#" data-cookie-settings>Gestisci cookie</a>
@@ -328,5 +330,16 @@
   </div>
 </footer>
 <script src="privacy-consent.js?v=20260623a" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    const nav = document.querySelector('.main-nav');
+    if (nav && !nav.querySelector('a[href="casi-analizzati.html"]')) {
+      const link = document.createElement('a');
+      link.href = 'casi-analizzati.html';
+      link.textContent = 'Casi';
+      nav.insertBefore(link, nav.lastElementChild);
+    }
+  });
+</script>
 </body>
 </html>
