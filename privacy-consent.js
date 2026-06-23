@@ -2,16 +2,10 @@ const GA_ID = 'G-G5D6FNDR00';
 const CONSENT_KEY = 's90g_cookie_consent';
 
 function loadAnalytics() {
-  if (window.s90gAnalyticsLoaded) {
-    return;
-  }
-
+  if (window.s90gAnalyticsLoaded) return;
   window.s90gAnalyticsLoaded = true;
   window.gtag('consent', 'update', {
-    analytics_storage: 'granted',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied'
+    analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
   });
   window.gtag('config', GA_ID);
 }
@@ -19,60 +13,34 @@ function loadAnalytics() {
 function denyAnalytics() {
   if (typeof window.gtag === 'function') {
     window.gtag('consent', 'update', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
+      analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
     });
   }
 }
 
-function hideCookieBanner(banner) {
-  if (banner) {
-    banner.setAttribute('hidden', '');
-  }
-}
-
-function showCookieBanner(banner) {
-  if (banner) {
-    banner.removeAttribute('hidden');
-  }
-}
-
-function saveConsent(choice) {
-  window.localStorage.setItem(CONSENT_KEY, choice);
-}
+function hideCookieBanner(banner) { if (banner) banner.setAttribute('hidden', ''); }
+function showCookieBanner(banner) { if (banner) banner.removeAttribute('hidden'); }
+function saveConsent(choice) { window.localStorage.setItem(CONSENT_KEY, choice); }
 
 function trackWhatsAppLead(link) {
   const accepted = window.localStorage.getItem(CONSENT_KEY) === 'accepted';
-
-  if (!accepted || typeof window.gtag !== 'function') {
-    return;
-  }
-
+  if (!accepted || typeof window.gtag !== 'function') return;
   window.gtag('event', 'whatsapp_lead', {
-    event_category: 'lead',
-    link_url: link.href,
-    link_text: link.textContent.trim(),
-    transport_type: 'beacon'
+    event_category: 'lead', link_url: link.href, link_text: link.textContent.trim(), transport_type: 'beacon'
   });
 }
 
 function applyDedicatedPageImages() {
   const pageImages = {
-    '/controllo-progetto-cucina.html': 'images/hero-controllo-progetto-cucina.svg?v=20260623a',
-    '/analisi-preventivo-cucina.html': 'images/hero-analisi-preventivo-cucina.svg?v=20260623a',
-    '/verifica-planimetria-distribuzione-casa.html': 'images/hero-verifica-planimetria-casa.svg?v=20260623a',
-    '/scelta-finiture-casa.html': 'images/hero-scelta-finiture-casa.svg?v=20260623a'
+    '/controllo-progetto-cucina.html': 'images/hero-controllo-progetto-cucina.jpg?v=20260623b',
+    '/analisi-preventivo-cucina.html': 'images/hero-analisi-preventivo-cucina.jpg?v=20260623b',
+    '/verifica-planimetria-distribuzione-casa.html': 'images/hero-verifica-planimetria-casa.jpg?v=20260623b',
+    '/scelta-finiture-casa.html': 'images/hero-scelta-finiture-casa.jpg?v=20260623b'
   };
-
   const imagePath = pageImages[window.location.pathname];
-  if (!imagePath) {
-    return;
-  }
-
-  document.querySelectorAll('img[src*="90G-hero-v1-open-space-vissuto.png"]').forEach((image) => {
-    image.src = imagePath;
+  if (!imagePath) return;
+  document.querySelectorAll('img[src*="90G-hero-v1-open-space-vissuto.png"], .premium-hero img').forEach((image) => {
+    if (image.closest('.premium-hero')) image.src = imagePath;
   });
 }
 
@@ -85,12 +53,8 @@ function buildNavigationLink(href, label) {
 
 function applySiteNavigation() {
   const mainNav = document.querySelector('.main-nav');
-  if (!mainNav) {
-    return;
-  }
-
+  if (!mainNav) return;
   const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
-
   if (isHome) {
     mainNav.replaceChildren(
       buildNavigationLink('#top', 'Home'),
@@ -113,108 +77,30 @@ function addAboutLinkToFooter() {
 
 function addDeliverySection() {
   const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
-  if (!isHome || document.getElementById('consegna')) {
-    return;
-  }
-
+  if (!isHome || document.getElementById('consegna')) return;
   const faqSection = document.getElementById('faq');
-  if (!faqSection) {
-    return;
-  }
-
+  if (!faqSection) return;
   const section = document.createElement('section');
   section.className = 'premium-section';
   section.id = 'consegna';
-  section.innerHTML = `
-    <div class="container">
-      <div class="premium-copy wide">
-        <p class="eyebrow">Consegna e tempi</p>
-        <h2>Prima del pagamento sai cosa ricevi, in quale formato e quando sarà pronto.</h2>
-        <p>La data di consegna viene comunicata dopo aver verificato che il materiale sia sufficiente e prima della conferma. I tempi dipendono dalla complessità del caso, non da una promessa standard uguale per tutti.</p>
-      </div>
-      <div class="premium-three">
-        <article>
-          <span>Formato</span>
-          <h3>Analisi scritta e consultabile.</h3>
-          <p>Ricevi un documento chiaro con criticità, conseguenze pratiche, punti da chiarire e priorità decisionali. Non sei obbligato a partecipare a una call.</p>
-        </article>
-        <article>
-          <span>Tempi</span>
-          <h3>Concordati prima di iniziare.</h3>
-          <p>La consegna parte soltanto quando il materiale è completo, il servizio è confermato e il pagamento è ricevuto.</p>
-        </article>
-        <article>
-          <span>Confini</span>
-          <h3>Nessuna falsa verifica tecnica.</h3>
-          <p>Quando servono controlli edilizi, strutturali, impiantistici o misure in cantiere, vengono indicati come verifiche da affidare ai professionisti competenti.</p>
-        </article>
-      </div>
-    </div>`;
-
+  section.innerHTML = `<div class="container"><div class="premium-copy wide"><p class="eyebrow">Consegna e tempi</p><h2>Prima del pagamento sai cosa ricevi, in quale formato e quando sarà pronto.</h2><p>La data di consegna viene comunicata dopo aver verificato che il materiale sia sufficiente e prima della conferma.</p></div><div class="premium-three"><article><span>Formato</span><h3>Analisi scritta e consultabile.</h3><p>Ricevi un documento chiaro con criticità, conseguenze pratiche, punti da chiarire e priorità decisionali.</p></article><article><span>Tempi</span><h3>Concordati prima di iniziare.</h3><p>La consegna parte soltanto quando il materiale è completo, il servizio è confermato e il pagamento è ricevuto.</p></article><article><span>Confini</span><h3>Nessuna falsa verifica tecnica.</h3><p>Quando servono controlli edilizi, strutturali, impiantistici o misure in cantiere, vengono indicati come verifiche da affidare ai professionisti competenti.</p></article></div></div>`;
   faqSection.parentNode.insertBefore(section, faqSection);
 }
 
 function injectMobileStickyStyles() {
-  if (document.getElementById('mobile-sticky-cta-styles')) {
-    return;
-  }
-
+  if (document.getElementById('mobile-sticky-cta-styles')) return;
   const style = document.createElement('style');
   style.id = 'mobile-sticky-cta-styles';
-  style.textContent = `
-    .mobile-sticky-cta { display: none; }
-    @media (max-width: 680px) {
-      body { padding-bottom: 84px; }
-      .mobile-sticky-cta {
-        position: fixed;
-        left: 12px;
-        right: 12px;
-        bottom: calc(12px + env(safe-area-inset-bottom));
-        z-index: 999;
-        display: block;
-      }
-      .mobile-sticky-cta a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        min-height: 58px;
-        padding: 14px 18px;
-        border-radius: 18px;
-        background: #1f7a4f;
-        color: #ffffff;
-        text-decoration: none;
-        box-shadow: 0 16px 42px rgba(7, 19, 26, 0.28);
-        border: 1px solid rgba(255,255,255,0.18);
-      }
-      .mobile-sticky-cta span {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: .08em;
-        opacity: .8;
-      }
-      .mobile-sticky-cta strong {
-        font-size: 17px;
-      }
-      .cookie-banner:not([hidden]) ~ .mobile-sticky-cta { display: none; }
-    }
-  `;
+  style.textContent = `.mobile-sticky-cta{display:none}@media(max-width:680px){body{padding-bottom:84px}.mobile-sticky-cta{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:999;display:block}.mobile-sticky-cta a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:58px;padding:14px 18px;border-radius:18px;background:#1f7a4f;color:#fff;text-decoration:none;box-shadow:0 16px 42px rgba(7,19,26,.28);border:1px solid rgba(255,255,255,.18)}.mobile-sticky-cta span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.8}.mobile-sticky-cta strong{font-size:17px}.cookie-banner:not([hidden])~.mobile-sticky-cta{display:none}}`;
   document.head.appendChild(style);
 }
 
 function addMobileStickyCta() {
-  if (document.querySelector('.mobile-sticky-cta')) {
-    return;
-  }
-
+  if (document.querySelector('.mobile-sticky-cta')) return;
   const sourceLink = document.querySelector('a[data-track-whatsapp]');
-  if (!sourceLink) {
-    return;
-  }
-
+  if (!sourceLink) return;
   const wrapper = document.createElement('div');
   wrapper.className = 'mobile-sticky-cta';
-
   const link = document.createElement('a');
   link.href = sourceLink.href;
   link.target = '_blank';
@@ -222,7 +108,6 @@ function addMobileStickyCta() {
   link.dataset.trackWhatsapp = '';
   link.setAttribute('aria-label', 'Invia il caso su WhatsApp');
   link.innerHTML = '<span aria-hidden="true">WhatsApp</span><strong>Invia il caso</strong>';
-
   wrapper.appendChild(link);
   document.body.appendChild(wrapper);
 }
@@ -234,41 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
   addDeliverySection();
   injectMobileStickyStyles();
   addMobileStickyCta();
-
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
-
-  if (savedChoice === 'accepted') {
-    hideCookieBanner(banner);
-    loadAnalytics();
-  } else if (savedChoice === 'rejected') {
-    hideCookieBanner(banner);
-    denyAnalytics();
-  } else {
-    showCookieBanner(banner);
-  }
-
+  if (savedChoice === 'accepted') { hideCookieBanner(banner); loadAnalytics(); }
+  else if (savedChoice === 'rejected') { hideCookieBanner(banner); denyAnalytics(); }
+  else showCookieBanner(banner);
   document.querySelectorAll('[data-cookie-choice]').forEach((button) => {
     button.addEventListener('click', () => {
       const accepted = button.dataset.cookieChoice === 'accept';
       saveConsent(accepted ? 'accepted' : 'rejected');
       hideCookieBanner(banner);
-
-      if (accepted) {
-        loadAnalytics();
-      } else {
-        denyAnalytics();
-      }
+      accepted ? loadAnalytics() : denyAnalytics();
     });
   });
-
   document.querySelectorAll('[data-cookie-settings]').forEach((control) => {
-    control.addEventListener('click', (event) => {
-      event.preventDefault();
-      showCookieBanner(banner);
-    });
+    control.addEventListener('click', (event) => { event.preventDefault(); showCookieBanner(banner); });
   });
-
   document.querySelectorAll('[data-track-whatsapp]').forEach((link) => {
     link.addEventListener('click', () => trackWhatsAppLead(link));
   });
