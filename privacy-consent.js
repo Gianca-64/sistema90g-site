@@ -133,21 +133,9 @@ function addDeliverySection() {
         <p>La data di consegna viene comunicata dopo aver verificato che il materiale sia sufficiente e prima della conferma. I tempi dipendono dalla complessità del caso, non da una promessa standard uguale per tutti.</p>
       </div>
       <div class="premium-three">
-        <article>
-          <span>Formato</span>
-          <h3>Analisi scritta e consultabile.</h3>
-          <p>Ricevi un documento chiaro con criticità, conseguenze pratiche, punti da chiarire e priorità decisionali. Non sei obbligato a partecipare a una call.</p>
-        </article>
-        <article>
-          <span>Tempi</span>
-          <h3>Concordati prima di iniziare.</h3>
-          <p>La consegna parte soltanto quando il materiale è completo, il servizio è confermato e il pagamento è ricevuto.</p>
-        </article>
-        <article>
-          <span>Confini</span>
-          <h3>Nessuna falsa verifica tecnica.</h3>
-          <p>Quando servono controlli edilizi, strutturali, impiantistici o misure in cantiere, vengono indicati come verifiche da affidare ai professionisti competenti.</p>
-        </article>
+        <article><span>Formato</span><h3>Analisi scritta e consultabile.</h3><p>Ricevi un documento chiaro con criticità, conseguenze pratiche, punti da chiarire e priorità decisionali. Non sei obbligato a partecipare a una call.</p></article>
+        <article><span>Tempi</span><h3>Concordati prima di iniziare.</h3><p>La consegna parte soltanto quando il materiale è completo, il servizio è confermato e il pagamento è ricevuto.</p></article>
+        <article><span>Confini</span><h3>Nessuna falsa verifica tecnica.</h3><p>Quando servono controlli edilizi, strutturali, impiantistici o misure in cantiere, vengono indicati come verifiche da affidare ai professionisti competenti.</p></article>
       </div>
     </div>`;
 
@@ -165,37 +153,10 @@ function injectMobileStickyStyles() {
     .mobile-sticky-cta { display: none; }
     @media (max-width: 680px) {
       body { padding-bottom: 84px; }
-      .mobile-sticky-cta {
-        position: fixed;
-        left: 12px;
-        right: 12px;
-        bottom: calc(12px + env(safe-area-inset-bottom));
-        z-index: 999;
-        display: block;
-      }
-      .mobile-sticky-cta a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        min-height: 58px;
-        padding: 14px 18px;
-        border-radius: 18px;
-        background: #1f7a4f;
-        color: #ffffff;
-        text-decoration: none;
-        box-shadow: 0 16px 42px rgba(7, 19, 26, 0.28);
-        border: 1px solid rgba(255,255,255,0.18);
-      }
-      .mobile-sticky-cta span {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: .08em;
-        opacity: .8;
-      }
-      .mobile-sticky-cta strong {
-        font-size: 17px;
-      }
+      .mobile-sticky-cta { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 999; display: block; }
+      .mobile-sticky-cta a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; padding: 14px 18px; border-radius: 18px; background: #1f7a4f; color: #ffffff; text-decoration: none; box-shadow: 0 16px 42px rgba(7, 19, 26, 0.28); border: 1px solid rgba(255,255,255,0.18); }
+      .mobile-sticky-cta span { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
+      .mobile-sticky-cta strong { font-size: 17px; }
       .cookie-banner:not([hidden]) ~ .mobile-sticky-cta { display: none; }
     }
   `;
@@ -253,12 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const accepted = button.dataset.cookieChoice === 'accept';
       saveConsent(accepted ? 'accepted' : 'rejected');
       hideCookieBanner(banner);
-
-      if (accepted) {
-        loadAnalytics();
-      } else {
-        denyAnalytics();
-      }
+      if (accepted) loadAnalytics(); else denyAnalytics();
     });
   });
 
