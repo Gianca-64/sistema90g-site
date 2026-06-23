@@ -12,3 +12,19 @@
   margin-bottom: 20px;
   border: 1px solid rgba(7, 19, 26, 0.08);
 }
+
+img[src*="caso-lavastoviglie-passaggio.svg"] {
+  content: url("images/photo-lavastoviglie-reale.svg?v=20260623c");
+}
+
+img[src*="caso-ingresso-tavolo-living.svg"] {
+  content: url("images/photo-ingresso-living-reale-v2.svg?v=20260623c");
+}
+
+img[src*="caso-cucina-piccola-tre-lati.svg"] {
+  content: url("images/photo-cucina-tre-lati-reale.svg?v=20260623c");
+}
+
+img[src*="caso-preventivo-sconto-valore.svg"] {
+  content: url("images/photo-preventivo-reale.svg?v=20260623c");
+}
