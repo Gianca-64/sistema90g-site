@@ -1,0 +1,22 @@
+name: Cleanup image update
+on:
+  push:
+    branches: [image-update]
+    paths: ['.github/workflows/cleanup-image-update.yml']
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          rm -rf tmp-images tmp
+          rm -f .github/workflows/build-service-images.yml
+          rm -f .github/workflows/connect-service-images.yml
+      - run: |
+          git config user.name github-actions-bot
+          git config user.email actions@github.com
+          git add -A
+          git diff --cached --quiet || git commit -m 'Rimuove file temporanei delle immagini'
+          git push
