@@ -1,0 +1,14 @@
+.premium-hero .premium-image::before,
+.premium-hero .premium-image::after {
+  display: none !important;
+  content: none !important;
+}
+
+.case-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(7, 19, 26, 0.08);
+}
