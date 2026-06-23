@@ -1,0 +1,24 @@
+name: Update site menus
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-site-menus.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add menu links
+        run: |
+          sed -i "/buildNavigationLink('scelta-finiture-casa.html', 'Finiture'),/a\      buildNavigationLink('render-fotorealistici-interni.html', 'Render'),\n      buildNavigationLink('agenzie-immobiliari.html', 'Agenzie')," privacy-consent.js
+          sed -i "/footerLinks.prepend(buildNavigationLink('chi-e-sistema90g.html', 'Chi c’è dietro Sistema 90G'));/a\    footerLinks.prepend(buildNavigationLink('render-fotorealistici-interni.html', 'Render fotorealistici'));\n    footerLinks.prepend(buildNavigationLink('agenzie-immobiliari.html', 'Agenzie immobiliari'));" privacy-consent.js
+      - name: Commit changes
+        run: |
+          git config user.name github-actions-bot
+          git config user.email actions@github.com
+          git add privacy-consent.js
+          git commit -m 'Aggiunge Render e Agenzie ai menu del sito'
+          git push
