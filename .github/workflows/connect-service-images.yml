@@ -1,0 +1,23 @@
+name: Connect service images
+on:
+  push:
+    branches: [image-update]
+    paths: ['.github/workflows/connect-service-images.yml']
+permissions:
+  contents: write
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sed -i 's#images/90G-hero-v1-open-space-vissuto.png?v=20260530#images/hero-controllo-progetto-cucina.jpg?v=20260623b#' controllo-progetto-cucina.html
+          sed -i 's#images/90G-hero-v1-open-space-vissuto.png?v=20260530#images/hero-analisi-preventivo-cucina.jpg?v=20260623b#' analisi-preventivo-cucina.html
+          sed -i 's#images/90G-hero-v1-open-space-vissuto.png?v=20260530#images/hero-verifica-planimetria-casa.jpg?v=20260623b#' verifica-planimetria-distribuzione-casa.html
+          sed -i 's#images/90G-hero-v1-open-space-vissuto.png?v=20260530#images/hero-scelta-finiture-casa.jpg?v=20260623b#' scelta-finiture-casa.html
+      - run: |
+          git config user.name github-actions-bot
+          git config user.email actions@github.com
+          git add *.html
+          git diff --cached --quiet || git commit -m 'Collega fotografie alle pagine servizio'
+          git push
