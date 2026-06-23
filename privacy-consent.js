@@ -111,10 +111,54 @@ function addAboutLinkToFooter() {
   }
 }
 
+function addDeliverySection() {
+  const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
+  if (!isHome || document.getElementById('consegna')) {
+    return;
+  }
+
+  const faqSection = document.getElementById('faq');
+  if (!faqSection) {
+    return;
+  }
+
+  const section = document.createElement('section');
+  section.className = 'premium-section';
+  section.id = 'consegna';
+  section.innerHTML = `
+    <div class="container">
+      <div class="premium-copy wide">
+        <p class="eyebrow">Consegna e tempi</p>
+        <h2>Prima del pagamento sai cosa ricevi, in quale formato e quando sarà pronto.</h2>
+        <p>La data di consegna viene comunicata dopo aver verificato che il materiale sia sufficiente e prima della conferma. I tempi dipendono dalla complessità del caso, non da una promessa standard uguale per tutti.</p>
+      </div>
+      <div class="premium-three">
+        <article>
+          <span>Formato</span>
+          <h3>Analisi scritta e consultabile.</h3>
+          <p>Ricevi un documento chiaro con criticità, conseguenze pratiche, punti da chiarire e priorità decisionali. Non sei obbligato a partecipare a una call.</p>
+        </article>
+        <article>
+          <span>Tempi</span>
+          <h3>Concordati prima di iniziare.</h3>
+          <p>La consegna parte soltanto quando il materiale è completo, il servizio è confermato e il pagamento è ricevuto.</p>
+        </article>
+        <article>
+          <span>Confini</span>
+          <h3>Nessuna falsa verifica tecnica.</h3>
+          <p>Quando servono controlli edilizi, strutturali, impiantistici o misure in cantiere, vengono indicati come verifiche da affidare ai professionisti competenti.</p>
+        </article>
+      </div>
+    </div>`;
+
+  faqSection.parentNode.insertBefore(section, faqSection);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   applyDedicatedPageImages();
   applySiteNavigation();
   addAboutLinkToFooter();
+  addDeliverySection();
 
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
