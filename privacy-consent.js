@@ -154,6 +154,54 @@ function addDeliverySection() {
   faqSection.parentNode.insertBefore(section, faqSection);
 }
 
+function injectMobileStickyStyles() {
+  if (document.getElementById('mobile-sticky-cta-styles')) {
+    return;
+  }
+
+  const style = document.createElement('style');
+  style.id = 'mobile-sticky-cta-styles';
+  style.textContent = `
+    .mobile-sticky-cta { display: none; }
+    @media (max-width: 680px) {
+      body { padding-bottom: 84px; }
+      .mobile-sticky-cta {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        z-index: 999;
+        display: block;
+      }
+      .mobile-sticky-cta a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 58px;
+        padding: 14px 18px;
+        border-radius: 18px;
+        background: #1f7a4f;
+        color: #ffffff;
+        text-decoration: none;
+        box-shadow: 0 16px 42px rgba(7, 19, 26, 0.28);
+        border: 1px solid rgba(255,255,255,0.18);
+      }
+      .mobile-sticky-cta span {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        opacity: .8;
+      }
+      .mobile-sticky-cta strong {
+        font-size: 17px;
+      }
+      .cookie-banner:not([hidden]) ~ .mobile-sticky-cta { display: none; }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 function addMobileStickyCta() {
   if (document.querySelector('.mobile-sticky-cta')) {
     return;
@@ -184,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applySiteNavigation();
   addAboutLinkToFooter();
   addDeliverySection();
+  injectMobileStickyStyles();
   addMobileStickyCta();
 
   const banner = document.getElementById('cookie-banner');
