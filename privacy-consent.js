@@ -76,8 +76,29 @@ function applyDedicatedPageImages() {
   });
 }
 
+function addAboutLinks() {
+  const footerLinks = document.querySelector('.footer-links');
+  if (footerLinks && !footerLinks.querySelector('a[href="chi-e-sistema90g.html"]')) {
+    const aboutLink = document.createElement('a');
+    aboutLink.href = 'chi-e-sistema90g.html';
+    aboutLink.textContent = 'Chi c’è dietro Sistema 90G';
+    footerLinks.prepend(aboutLink);
+  }
+
+  if (window.location.pathname === '/' || window.location.pathname.endsWith('/index.html')) {
+    const mainNav = document.querySelector('.main-nav');
+    if (mainNav && !mainNav.querySelector('a[href="chi-e-sistema90g.html"]')) {
+      const aboutLink = document.createElement('a');
+      aboutLink.href = 'chi-e-sistema90g.html';
+      aboutLink.textContent = 'Chi sono';
+      mainNav.insertBefore(aboutLink, mainNav.lastElementChild);
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   applyDedicatedPageImages();
+  addAboutLinks();
 
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
