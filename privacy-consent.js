@@ -58,7 +58,27 @@ function trackWhatsAppLead(link) {
   });
 }
 
+function applyDedicatedPageImages() {
+  const pageImages = {
+    '/controllo-progetto-cucina.html': 'images/hero-controllo-progetto-cucina.svg?v=20260623a',
+    '/analisi-preventivo-cucina.html': 'images/hero-analisi-preventivo-cucina.svg?v=20260623a',
+    '/verifica-planimetria-distribuzione-casa.html': 'images/hero-verifica-planimetria-casa.svg?v=20260623a',
+    '/scelta-finiture-casa.html': 'images/hero-scelta-finiture-casa.svg?v=20260623a'
+  };
+
+  const imagePath = pageImages[window.location.pathname];
+  if (!imagePath) {
+    return;
+  }
+
+  document.querySelectorAll('img[src*="90G-hero-v1-open-space-vissuto.png"]').forEach((image) => {
+    image.src = imagePath;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  applyDedicatedPageImages();
+
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
 
