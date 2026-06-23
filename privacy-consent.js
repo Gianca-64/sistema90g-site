@@ -83,6 +83,131 @@ function applyAgencySecondaryImage() {
   }
 }
 
+function injectEconomicValueStyles() {
+  if (document.getElementById('economic-value-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'economic-value-styles';
+  style.textContent = `
+    .economic-value-section { padding: 72px 0; }
+    .economic-value-section .economic-intro { max-width: 880px; }
+    .economic-value-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 30px; }
+    .economic-value-grid article { padding: 24px; border: 1px solid rgba(22, 43, 35, .14); border-radius: 18px; background: #fff; }
+    .economic-value-grid h3 { margin: 0 0 10px; font-size: 1.08rem; }
+    .economic-value-grid p { margin: 0; }
+    .economic-value-closing { margin-top: 28px; max-width: 880px; font-weight: 700; }
+    .service-value-block { padding: 56px 0; }
+    .service-value-block .service-value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .service-value-block article { padding: 22px; border-radius: 16px; background: rgba(31,122,79,.06); border: 1px solid rgba(31,122,79,.14); }
+    .service-value-block h3 { margin: 0 0 8px; font-size: 1rem; }
+    .service-value-block p { margin: 0; }
+    @media (max-width: 900px) {
+      .economic-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .service-value-block .service-value-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .economic-value-section, .service-value-block { padding: 48px 0; }
+      .economic-value-grid { grid-template-columns: 1fr; gap: 14px; }
+      .economic-value-grid article, .service-value-block article { padding: 20px; }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function findSectionByHeading(text) {
+  const heading = [...document.querySelectorAll('h2')].find((item) => item.textContent.trim().includes(text));
+  return heading ? heading.closest('section') : null;
+}
+
+function addHomeEconomicValueSection() {
+  const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
+  if (!isHome || document.getElementById('economic-value')) return;
+
+  const section = document.createElement('section');
+  section.className = 'premium-section economic-value-section';
+  section.id = 'economic-value';
+  section.innerHTML = `
+    <div class="container">
+      <div class="premium-copy wide economic-intro">
+        <p class="eyebrow">Prima che diventi una spesa</p>
+        <h2>Quanto può costare scoprirlo dopo?</h2>
+        <p>Prima dell’ordine, modificare una scelta può significare correggere un disegno.<br>Dopo l’ordine può significare cambiare un modulo, rifare un top, spostare un impianto, aggiungere lavorazioni o accettare una soluzione scomoda.<br>Sistema90G interviene quando il problema è ancora una decisione, non una spesa già sostenuta.</p>
+      </div>
+      <div class="economic-value-grid">
+        <article><h3>Elementi da modificare o rifare</h3><p>Moduli, top, pannelli, ante o componenti incompatibili con misure e aperture reali.</p></article>
+        <article><h3>Lavori aggiuntivi</h3><p>Prese, scarichi, attacchi, pareti o rivestimenti da correggere quando il progetto è già avanzato.</p></article>
+        <article><h3>Costi non chiariti</h3><p>Accessori, lavorazioni, montaggi o componenti indispensabili non evidenziati chiaramente nel preventivo.</p></article>
+        <article><h3>Problemi che restano</h3><p>Passaggi scomodi, aperture che interferiscono, poco contenimento o spazi belli nel render ma difficili da usare.</p></article>
+      </div>
+      <p class="economic-value-closing">Il controllo costa una piccola parte rispetto a ciò che può costare correggere una scelta quando mobili e lavori sono già stati avviati.</p>
+    </div>`;
+
+  const servicesSection = findSectionByHeading('Scegli il controllo adatto');
+  const anchor = servicesSection || findSectionByHeading('Non guardiamo solo l’estetica');
+  if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(section, anchor);
+  else document.querySelector('main')?.appendChild(section);
+}
+
+function getServiceValueContent(pathname) {
+  const blocks = {
+    '/controllo-progetto-cucina.html': {
+      check: 'Il servizio controlla disposizione, misure, aperture, elettrodomestici, piano utile e uso quotidiano prima dell’ordine.',
+      consequence: 'Una criticità scoperta prima dell’ordine può richiedere solo una correzione al progetto. La stessa criticità scoperta dopo può coinvolgere mobili già prodotti, top, impianti o montaggio.',
+      comparison: 'Il controllo non elimina ogni rischio, ma aiuta a chiarire i punti critici quando sono ancora modificabili.'
+    },
+    '/verifica-planimetria-distribuzione-casa.html': {
+      check: 'La verifica controlla distribuzione, passaggi, aperture, contenimento e relazione tra gli ambienti prima di demolizioni, impianti e finiture.',
+      consequence: 'Un conflitto scoperto tardi può richiedere modifiche a pareti, porte, impianti o lavorazioni già avviate, oppure lasciare un compromesso difficile da correggere.',
+      comparison: 'Il costo del controllo riguarda una decisione che può coinvolgere più ambienti e diverse lavorazioni della casa.'
+    },
+    '/analisi-preventivo-cucina.html': {
+      check: 'L’analisi controlla cosa è incluso, cosa manca, quali voci sono poco chiare e quali componenti possono cambiare il costo finale.',
+      consequence: 'Il prezzo iniziale non sempre coincide con il costo finale. Elementi esclusi, lavorazioni aggiuntive e componenti indispensabili possono emergere quando la scelta è già stata fatta.',
+      comparison: 'L’analisi serve a chiarire il contenuto economico della proposta prima della firma, senza promettere il prezzo più basso.'
+    },
+    '/scelta-finiture-casa.html': {
+      check: 'La verifica controlla coerenza tra materiali, luce reale, manutenzione e continuità tra cucina e ambienti collegati prima dell’ordine.',
+      consequence: 'Una scelta poco adatta scoperta dopo può significare sostituire materiali già acquistati, rifare una superficie o accettare un risultato difficile da correggere.',
+      comparison: 'Il controllo aiuta a valutare la scelta quando campioni e materiali possono ancora essere confrontati e modificati.'
+    }
+  };
+  return blocks[pathname];
+}
+
+function addServiceEconomicValueBlock() {
+  const content = getServiceValueContent(window.location.pathname);
+  if (!content || document.getElementById('service-economic-value')) return;
+  const section = document.createElement('section');
+  section.className = 'premium-section service-value-block';
+  section.id = 'service-economic-value';
+  section.innerHTML = `
+    <div class="container">
+      <div class="premium-copy wide">
+        <p class="eyebrow">Valore del controllo</p>
+        <h2>Cosa può succedere se emerge dopo</h2>
+      </div>
+      <div class="service-value-grid">
+        <article><h3>Cosa controlla</h3><p>${content.check}</p></article>
+        <article><h3>Se emerge tardi</h3><p>${content.consequence}</p></article>
+        <article><h3>Perché farlo prima</h3><p>${content.comparison}</p></article>
+      </div>
+    </div>`;
+  const hero = document.querySelector('.premium-hero');
+  if (hero?.parentNode) hero.parentNode.insertBefore(section, hero.nextSibling);
+}
+
+function correctEconomicClaims() {
+  const replacements = [
+    ['Sistema 90G verifica proposte, preventivi, planimetrie e redistribuzioni degli ambienti per capire se rispondono alle tue esigenze e per individuare errori che dopo possono costare tempo, soldi e nervi.', 'Sistema90G controlla progetto, preventivo e scelte prima che un dubbio diventi una modifica, una spesa aggiuntiva o un problema difficile da correggere.'],
+    ['Cosa rischi di pagare o subire dopo.', 'Quali conseguenze pratiche o costi aggiuntivi possono emergere dopo.'],
+    ['Prima di approvare il progetto o iniziare demolizioni e impianti, quando è ancora possibile correggere la disposizione senza costi aggiuntivi.', 'Prima di approvare il progetto o iniziare demolizioni e impianti, quando una correzione può ancora essere valutata prima di coinvolgere lavori già avviati.']
+  ];
+  document.querySelectorAll('p, h3').forEach((node) => {
+    const text = node.textContent.trim();
+    const replacement = replacements.find(([from]) => text === from);
+    if (replacement) node.textContent = replacement[1];
+  });
+}
+
 function buildNavigationLink(href, label) {
   const link = document.createElement('a');
   link.href = href;
@@ -184,8 +309,12 @@ function addMobileStickyCta() {
 
 document.addEventListener('DOMContentLoaded', () => {
   injectImageRepairStyles();
+  injectEconomicValueStyles();
   applyDedicatedPageImages();
   applyAgencySecondaryImage();
+  correctEconomicClaims();
+  addHomeEconomicValueSection();
+  addServiceEconomicValueBlock();
   applySiteNavigation();
   addAboutLinkToFooter();
   addDeliverySection();
