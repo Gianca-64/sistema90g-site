@@ -154,11 +154,37 @@ function addDeliverySection() {
   faqSection.parentNode.insertBefore(section, faqSection);
 }
 
+function addMobileStickyCta() {
+  if (document.querySelector('.mobile-sticky-cta')) {
+    return;
+  }
+
+  const sourceLink = document.querySelector('a[data-track-whatsapp]');
+  if (!sourceLink) {
+    return;
+  }
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'mobile-sticky-cta';
+
+  const link = document.createElement('a');
+  link.href = sourceLink.href;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.dataset.trackWhatsapp = '';
+  link.setAttribute('aria-label', 'Invia il caso su WhatsApp');
+  link.innerHTML = '<span aria-hidden="true">WhatsApp</span><strong>Invia il caso</strong>';
+
+  wrapper.appendChild(link);
+  document.body.appendChild(wrapper);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   applyDedicatedPageImages();
   applySiteNavigation();
   addAboutLinkToFooter();
   addDeliverySection();
+  addMobileStickyCta();
 
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
