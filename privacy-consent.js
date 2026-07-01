@@ -1,5 +1,7 @@
 const GA_ID = 'G-G5D6FNDR00';
 const CONSENT_KEY = 's90g_cookie_consent';
+const PUBLIC_PORTAL_URL = 'https://portale.sistema90g.it/';
+const WHATSAPP_CHAT_URL = 'https://wa.me/393275478485?text=Ciao%2C%20ho%20una%20domanda%20rapida%20su%20Sistema%2090G.';
 
 function loadAnalytics() {
   if (window.s90gAnalyticsLoaded) return;
@@ -31,7 +33,18 @@ function saveConsent(choice) { window.localStorage.setItem(CONSENT_KEY, choice);
 function trackWhatsAppLead(link) {
   const accepted = window.localStorage.getItem(CONSENT_KEY) === 'accepted';
   if (!accepted || typeof window.gtag !== 'function') return;
-  window.gtag('event', 'whatsapp_lead', {
+  window.gtag('event', 'whatsapp_chat_open', {
+    event_category: 'lead',
+    link_url: link.href,
+    link_text: link.textContent.trim(),
+    transport_type: 'beacon'
+  });
+}
+
+function trackPortalOpen(link) {
+  const accepted = window.localStorage.getItem(CONSENT_KEY) === 'accepted';
+  if (!accepted || typeof window.gtag !== 'function') return;
+  window.gtag('event', 'public_portal_open', {
     event_category: 'lead',
     link_url: link.href,
     link_text: link.textContent.trim(),
@@ -53,14 +66,22 @@ function injectSiteStyles() {
     .service-card-link { display:inline-block; margin-top:16px; font-weight:700; }
     .social-proof-line { margin:0 auto 34px; max-width:760px; padding:18px 22px; border:1px solid rgba(20,38,48,.12); border-radius:18px; text-align:center; background:rgba(255,255,255,.72); }
     .social-proof-line strong { display:block; font-size:1.2rem; margin-bottom:4px; }
-    .mobile-sticky-cta { display:none; }
+    .portal-chat-note { max-width:720px; margin:22px auto 0; font-size:.95rem; opacity:.86; }
+    .whatsapp-chat { position:fixed; right:18px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:998; }
+    .whatsapp-chat a { display:flex; align-items:center; gap:11px; min-height:54px; padding:10px 16px 10px 13px; border-radius:999px; background:#1f7a4f; color:#fff; text-decoration:none; box-shadow:0 16px 42px rgba(7,19,26,.28); border:1px solid rgba(255,255,255,.2); transition:transform .18s ease, box-shadow .18s ease; }
+    .whatsapp-chat a:hover { transform:translateY(-2px); box-shadow:0 20px 48px rgba(7,19,26,.32); }
+    .whatsapp-chat a:focus-visible { outline:3px solid rgba(31,122,79,.3); outline-offset:3px; }
+    .whatsapp-chat svg { width:26px; height:26px; flex:0 0 auto; fill:currentColor; }
+    .whatsapp-chat-copy { display:flex; flex-direction:column; align-items:flex-start; line-height:1.1; }
+    .whatsapp-chat-copy span { font-size:10px; text-transform:uppercase; letter-spacing:.08em; opacity:.82; }
+    .whatsapp-chat-copy strong { margin-top:3px; font-size:14px; }
+    .cookie-banner:not([hidden]) ~ .whatsapp-chat { display:none; }
     @media (max-width:680px) {
-      body { padding-bottom:84px; }
-      .mobile-sticky-cta { position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); z-index:999; display:block; }
-      .mobile-sticky-cta a { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:58px; padding:14px 18px; border-radius:18px; background:#1f7a4f; color:#fff; text-decoration:none; box-shadow:0 16px 42px rgba(7,19,26,.28); border:1px solid rgba(255,255,255,.18); }
-      .mobile-sticky-cta span { font-size:12px; text-transform:uppercase; letter-spacing:.08em; opacity:.8; }
-      .mobile-sticky-cta strong { font-size:17px; }
-      .cookie-banner:not([hidden]) ~ .mobile-sticky-cta { display:none; }
+      body { padding-bottom:78px; }
+      .whatsapp-chat { right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); }
+      .whatsapp-chat a { min-height:52px; padding:10px 14px 10px 12px; }
+      .whatsapp-chat-copy span { display:none; }
+      .whatsapp-chat-copy strong { margin-top:0; font-size:14px; }
     }
   `;
   document.head.appendChild(style);
@@ -107,7 +128,7 @@ function applySiteNavigation() {
     buildNavigationLink('casi-analizzati.html', 'Casi'),
     buildNavigationLink('agenzie-immobiliari.html', 'Agenzie'),
     buildNavigationLink('chi-e-sistema90g.html', 'Chi sono'),
-    buildNavigationLink('#contatto', 'Invia il caso')
+    buildNavigationLink('#contatto', 'Sottoponi il caso')
   );
 }
 
@@ -194,7 +215,7 @@ function applyServiceArchitecture() {
         </div>
         <div class="premium-copy wide" style="margin-top:28px">
           <p>La valutazione iniziale è gratuita, ma non è una consulenza: serve a individuare il livello corretto. Il lavoro inizia dopo conferma, pagamento e ricezione del materiale completo.</p>
-          <a class="button button-primary" href="#contatto">Invia il tuo caso</a>
+          <a class="button button-primary" href="#contatto">Sottoponi il tuo caso</a>
         </div>
       </div>`;
   }
@@ -249,19 +270,39 @@ function addDeliverySection() {
   faqSection.parentNode.insertBefore(section, faqSection);
 }
 
-function addMobileStickyCta() {
-  if (document.querySelector('.mobile-sticky-cta')) return;
-  const sourceLink = document.querySelector('a[data-track-whatsapp]');
-  if (!sourceLink) return;
+function applyPublicPortalCta() {
+  const section = document.getElementById('contatto');
+  if (!section) return;
+  const copy = section.querySelector('.premium-copy');
+  if (!copy) return;
+  copy.innerHTML = `
+    <p class="eyebrow">Portale pubblico</p>
+    <h2>Sottoponi il tuo caso in modo ordinato e completo.</h2>
+    <p>Nel portale pubblico puoi descrivere cosa devi decidere e allegare foto, planimetrie, render, preventivi e altri documenti in un unico invio.</p>
+    <p>La valutazione iniziale serve a verificare se il caso è adatto a Sistema 90G e a indicare il livello corretto. Non è una consulenza e non comporta obbligo di acquisto.</p>
+    <p>Se decidi di procedere, ricevi un link personale riservato per consultare la proposta, accettarla, pagare, caricare i materiali, seguire lo stato del lavoro e scaricare la consegna.</p>
+    <a class="button button-primary" data-track-portal href="${PUBLIC_PORTAL_URL}" target="_blank" rel="noopener">Apri il portale pubblico</a>
+    <p class="portal-chat-note"><strong>Hai solo una domanda rapida?</strong> Usa la chat WhatsApp in basso a destra. Per inviare un caso completo usa sempre il portale.</p>
+  `;
+}
+
+function addWhatsAppChat() {
+  if (document.querySelector('.whatsapp-chat')) return;
   const wrapper = document.createElement('div');
-  wrapper.className = 'mobile-sticky-cta';
+  wrapper.className = 'whatsapp-chat';
   const link = document.createElement('a');
-  link.href = sourceLink.href;
+  link.href = WHATSAPP_CHAT_URL;
   link.target = '_blank';
   link.rel = 'noopener';
   link.dataset.trackWhatsapp = '';
-  link.setAttribute('aria-label', 'Invia il caso su WhatsApp');
-  link.innerHTML = '<span aria-hidden="true">WhatsApp</span><strong>Invia il caso</strong>';
+  link.setAttribute('aria-label', 'Apri la chat WhatsApp per una domanda rapida');
+  link.innerHTML = `
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.64.23-1.19.16-1.29-.07-.11-.25-.18-.52-.32z"/>
+      <path d="M16.03 3.2c-7.07 0-12.82 5.75-12.82 12.82 0 2.26.59 4.47 1.71 6.41L3.1 29.08l6.8-1.78a12.79 12.79 0 0 0 6.12 1.56h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.03 3.2zm0 23.5h-.01c-1.91 0-3.79-.51-5.43-1.48l-.39-.23-4.04 1.06 1.08-3.94-.25-.4a10.61 10.61 0 0 1-1.63-5.67c0-5.88 4.79-10.67 10.68-10.67 5.88 0 10.67 4.79 10.67 10.68 0 5.88-4.79 10.66-10.68 10.66z"/>
+    </svg>
+    <span class="whatsapp-chat-copy"><span>Domande rapide</span><strong>Chat WhatsApp</strong></span>
+  `;
   wrapper.appendChild(link);
   document.body.appendChild(wrapper);
 }
@@ -275,7 +316,8 @@ document.addEventListener('DOMContentLoaded', () => {
   applyServiceArchitecture();
   applyAgencyOffer();
   addDeliverySection();
-  addMobileStickyCta();
+  applyPublicPortalCta();
+  addWhatsAppChat();
 
   const banner = document.getElementById('cookie-banner');
   const savedChoice = window.localStorage.getItem(CONSENT_KEY);
@@ -307,5 +349,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('[data-track-whatsapp]').forEach((link) => {
     link.addEventListener('click', () => trackWhatsAppLead(link));
+  });
+
+  document.querySelectorAll('[data-track-portal]').forEach((link) => {
+    link.addEventListener('click', () => trackPortalOpen(link));
   });
 });
