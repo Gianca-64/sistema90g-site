@@ -1,6 +1,6 @@
 const GA_ID = 'G-G5D6FNDR00';
 const CONSENT_KEY = 's90g_cookie_consent';
-const PUBLIC_PORTAL_URL = 'https://portale.sistema90g.it/';
+const PUBLIC_PORTAL_URL = 'https://sistema90g-console.sistema90g.workers.dev/richiesta';
 const WHATSAPP_CHAT_URL = 'https://wa.me/393275478485?text=Ciao%2C%20ho%20una%20domanda%20rapida%20su%20Sistema%2090G.';
 
 function loadAnalytics() {
