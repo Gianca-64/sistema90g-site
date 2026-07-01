@@ -27,20 +27,26 @@ function injectSiteStyles(){
 
 function applyBrandImages(){
   const p=window.location.pathname;
-  const A='images/90g-style-hero.svg?v=20260702a',C='images/90g-style-conflitto.svg?v=20260702a',P='images/90g-style-planimetria.svg?v=20260702a',V='images/90g-style-preventivo.svg?v=20260702a',F='images/90g-style-finiture.svg?v=20260702a',G='images/90g-style-agenzie.svg?v=20260702a';
+  const K='images/90g-real-kitchen.svg?v=20260702b';
+  const O='images/90g-real-open-space.svg?v=20260702b';
+  const Q='images/90g-real-preventivo.svg?v=20260702b';
+  const P='images/90g-style-planimetria.svg?v=20260702b';
+  const F='images/90g-style-finiture.svg?v=20260702b';
+  const G='images/90g-style-agenzie.svg?v=20260702b';
   const map={
-    '/':[A,C,P],'/index.html':[A,C,P],'/analisi-preventiva.html':[A,C,P],
-    '/controllo-mirato.html':[C,A],'/analisi-completa.html':[P,C],'/progetto-da-zero.html':[A,P],
-    '/chi-e-sistema90g.html':[A,P],'/casi-analizzati.html':[C,P,A],
-    '/controllo-progetto-cucina.html':[C,A],'/analisi-preventivo-cucina.html':[V,F],
-    '/verifica-planimetria-distribuzione-casa.html':[P,C],'/scelta-finiture-casa.html':[F,A],
-    '/render-fotorealistici-interni.html':[A,F],'/agenzie-immobiliari.html':[G,P],
-    '/caso-lavastoviglie-passaggio-cucina.html':[C,A],'/caso-ingresso-tavolo-living.html':[P,C],
-    '/caso-cucina-piccola-tre-lati.html':[C,P],'/caso-preventivo-cucina-sconto-valore.html':[V,F]
+    '/':[K,O,P],'/index.html':[K,O,P],'/analisi-preventiva.html':[K,O,P],
+    '/controllo-mirato.html':[O,K],'/analisi-completa.html':[P,O],'/progetto-da-zero.html':[K,P],
+    '/chi-e-sistema90g.html':[K,P],'/casi-analizzati.html':[O,K,P],
+    '/controllo-progetto-cucina.html':[K,O],'/analisi-preventivo-cucina.html':[Q,F],
+    '/verifica-planimetria-distribuzione-casa.html':[P,O],'/scelta-finiture-casa.html':[F,K],
+    '/render-fotorealistici-interni.html':[K,O],'/agenzie-immobiliari.html':[G,P],
+    '/caso-lavastoviglie-passaggio-cucina.html':[O,K],'/caso-ingresso-tavolo-living.html':[O,P],
+    '/caso-cucina-piccola-tre-lati.html':[K,O],'/caso-preventivo-cucina-sconto-valore.html':[Q,F]
   };
-  const sequence=map[p]||[A,P,F];
+  const sequence=map[p]||[K,O,P];
   const images=[...document.querySelectorAll('main img')].filter(img=>!img.closest('.brand'));
-  images.forEach((img,i)=>{img.src=sequence[i%sequence.length];img.removeAttribute('srcset');img.dataset.s90gVisual='';img.alt=img.alt||'Analisi preventiva Sistema 90G in stile tecnico e realistico'})
+  images.forEach((img,i)=>{img.src=sequence[i%sequence.length];img.removeAttribute('srcset');img.dataset.s90gVisual='';img.alt=img.alt||'Analisi preventiva Sistema 90G con render realistico, quote e annotazioni'});
+  const og=document.querySelector('meta[property="og:image"]');if(og)og.content=new URL(sequence[0],location.href).href;
 }
 
 function buildNavigationLink(href,label){const a=document.createElement('a');a.href=href;a.textContent=label;return a}
