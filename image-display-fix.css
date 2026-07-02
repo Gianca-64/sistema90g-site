@@ -1,18 +1,21 @@
-/* Visualizzazione immagini Sistema 90G: grandi, complete, mai ritagliate */
+/* Regole definitive immagini Sistema 90G: nessun ritaglio e nessuna sostituzione CSS */
 html body main section.premium-hero figure.premium-image,
-html body main section.premium-split figure.premium-image {
+html body main section.premium-split figure.premium-image,
+html body main figure.audit-figure {
   width: 100% !important;
   max-width: none !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   background: #f8f7f4 !important;
 }
 
 html body main section.premium-hero figure.premium-image img,
 html body main section.premium-split figure.premium-image img,
+html body main figure.audit-figure img,
 html body main img[data-s90g-visual] {
   display: block !important;
   width: 100% !important;
   height: auto !important;
+  max-width: 100% !important;
   max-height: none !important;
   aspect-ratio: auto !important;
   object-fit: contain !important;
@@ -20,48 +23,37 @@ html body main img[data-s90g-visual] {
   background: #f8f7f4 !important;
 }
 
-html body main .premium-three article img.case-card-image {
+/* Più specifico delle vecchie regole iniettate dallo script. */
+html body main#top section#raccolta div.container div.premium-three article img.case-card-image,
+html body main#top div.container div.premium-three article img.case-card-image {
   display: block !important;
-  width: calc(100% + 60px) !important;
+  width: 100% !important;
   height: auto !important;
+  max-width: 100% !important;
   max-height: none !important;
   aspect-ratio: auto !important;
   object-fit: contain !important;
   object-position: center !important;
   padding: 0 !important;
-  margin: -30px -30px 22px !important;
+  margin: 0 0 22px 0 !important;
   border: 0 !important;
-  border-radius: 26px 26px 18px 18px !important;
+  border-radius: 16px !important;
   background: #f8f7f4 !important;
 }
 
-/* Ogni caso deve avere una visuale propria: niente immagini generiche ripetute. */
-#raccolta article:has(a[href="caso-ingresso-tavolo-living.html"]) img.case-card-image {
-  content: url("images/caso-ingresso-tavolo-living-90g.svg?v=20260702k") !important;
-}
-#raccolta article:has(a[href="caso-cucina-piccola-tre-lati.html"]) img.case-card-image {
-  content: url("images/caso-cucina-piccola-tre-lati-90g.svg?v=20260702k") !important;
-}
-#raccolta article:has(a[href="caso-isola-passaggi-cucina.html"]) img.case-card-image {
-  content: url("images/caso-isola-passaggi-cucina-90g.svg?v=20260702k") !important;
-}
-#raccolta article:has(a[href="caso-lavello-sotto-finestra-aperture.html"]) img.case-card-image {
-  content: url("images/caso-lavello-sotto-finestra-90g.svg?v=20260702k") !important;
-}
-#raccolta article:has(a[href="caso-scala-interna-terrazzo-planimetria.html"]) img.case-card-image {
-  content: url("images/caso-scala-terrazzo-90g.svg?v=20260702k") !important;
-}
+/* Nessun content:url: il file mostrato deve essere quello dichiarato nell'HTML. */
 
 @media (min-width: 901px) {
-  html body .premium-hero .container {
-    grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr) !important;
+  html body main section.premium-hero .container {
+    grid-template-columns: minmax(0, 0.85fr) minmax(520px, 1.15fr) !important;
   }
 }
 
 @media (max-width: 680px) {
-  html body main .premium-three article img.case-card-image {
-    width: calc(100% + 44px) !important;
-    margin: -22px -22px 18px !important;
-    border-radius: 20px 20px 16px 16px !important;
+  html body main#top section#raccolta div.container div.premium-three article img.case-card-image,
+  html body main#top div.container div.premium-three article img.case-card-image {
+    width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    border-radius: 14px !important;
   }
 }
