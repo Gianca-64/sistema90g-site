@@ -27,20 +27,24 @@ function injectSiteStyles(){
 
 function applyBrandImages(){
   const p=window.location.pathname;
-  const K='images/90g-real-kitchen.svg?v=20260702b';
-  const O='images/90g-real-open-space.svg?v=20260702b';
-  const Q='images/90g-real-preventivo.svg?v=20260702b';
-  const P='images/90g-style-planimetria.svg?v=20260702b';
-  const F='images/90g-style-finiture.svg?v=20260702b';
-  const G='images/90g-style-agenzie.svg?v=20260702b';
+  const K='images/hero-cucina-conflitto-90g.jpg?v=20260702c';
+  const O='images/hero-open-space-90g.jpg?v=20260702c';
+  const Q='images/hero-preventivo-90g.jpg?v=20260702c';
+  const P='images/hero-planimetria-90g.jpg?v=20260702c';
+  const F='images/hero-finiture-90g.jpg?v=20260702c';
+  const G='images/hero-agenzie-90g.jpg?v=20260702c';
+  const A='images/hero-analisi-90g.jpg?v=20260702c';
+  const C='images/hero-casi-90g.jpg?v=20260702c';
+  const Z='images/hero-progetto-zero-90g.jpg?v=20260702c';
+  const L='images/hero-livelli-90g.jpg?v=20260702c';
   const map={
-    '/':[K,O,P],'/index.html':[K,O,P],'/analisi-preventiva.html':[K,O,P],
-    '/controllo-mirato.html':[O,K],'/analisi-completa.html':[P,O],'/progetto-da-zero.html':[K,P],
-    '/chi-e-sistema90g.html':[K,P],'/casi-analizzati.html':[O,K,P],
+    '/':[K,O,P],'/index.html':[K,O,P],'/analisi-preventiva.html':[A,O,P],
+    '/controllo-mirato.html':[O,K],'/analisi-completa.html':[L,A],'/progetto-da-zero.html':[Z,P],
+    '/chi-e-sistema90g.html':[A,P],'/casi-analizzati.html':[C,K,O],
     '/controllo-progetto-cucina.html':[K,O],'/analisi-preventivo-cucina.html':[Q,F],
     '/verifica-planimetria-distribuzione-casa.html':[P,O],'/scelta-finiture-casa.html':[F,K],
-    '/render-fotorealistici-interni.html':[K,O],'/agenzie-immobiliari.html':[G,P],
-    '/caso-lavastoviglie-passaggio-cucina.html':[O,K],'/caso-ingresso-tavolo-living.html':[O,P],
+    '/render-fotorealistici-interni.html':[A,K],'/agenzie-immobiliari.html':[G,P],
+    '/caso-lavastoviglie-passaggio-cucina.html':[K,O],'/caso-ingresso-tavolo-living.html':[O,P],
     '/caso-cucina-piccola-tre-lati.html':[K,O],'/caso-preventivo-cucina-sconto-valore.html':[Q,F]
   };
   const sequence=map[p]||[K,O,P];
@@ -48,7 +52,6 @@ function applyBrandImages(){
   images.forEach((img,i)=>{img.src=sequence[i%sequence.length];img.removeAttribute('srcset');img.dataset.s90gVisual='';img.alt=img.alt||'Analisi preventiva Sistema 90G con render realistico, quote e annotazioni'});
   const og=document.querySelector('meta[property="og:image"]');if(og)og.content=new URL(sequence[0],location.href).href;
 }
-
 function buildNavigationLink(href,label){const a=document.createElement('a');a.href=href;a.textContent=label;return a}
 function applySiteNavigation(){const nav=document.querySelector('.main-nav');if(!nav)return;const home=location.pathname==='/'||location.pathname.endsWith('/index.html');if(!home)return;nav.replaceChildren(buildNavigationLink('#top','Home'),buildNavigationLink('#servizi','Servizi'),buildNavigationLink('casi-analizzati.html','Casi'),buildNavigationLink('agenzie-immobiliari.html','Agenzie'),buildNavigationLink('chi-e-sistema90g.html','Chi sono'),buildNavigationLink('#contatto','Sottoponi il caso'))}
 function addFooterLinks(){const f=document.querySelector('.footer-links');if(!f)return;[['progetto-da-zero.html','Progetto da zero'],['analisi-completa.html','Analisi completa'],['controllo-mirato.html','Controllo mirato'],['agenzie-immobiliari.html','Agenzie immobiliari'],['render-fotorealistici-interni.html','Render fotorealistici'],['chi-e-sistema90g.html','Chi c’è dietro Sistema 90G']].forEach(([h,l])=>{if(!f.querySelector(`a[href="${h}"]`))f.prepend(buildNavigationLink(h,l))})}
