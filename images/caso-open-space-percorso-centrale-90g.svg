@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Tre stanze aperte, ma il percorso resta nel mezzo</title>
+  <desc id="desc">Schema architettonico semplificato di una casa con cucina, tinello e soggiorno e un percorso centrale verso camere e bagno.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#d9d5ce" stroke-width="1" opacity=".38"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#1c2528" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#b82018"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1000" fill="#f6f3ed"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <g transform="translate(70,52)">
+    <text x="0" y="52" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="800" fill="#111">TRE STANZE APERTE,</text>
+    <text x="0" y="105" font-family="Georgia,serif" font-size="49" font-style="italic" fill="#222">ma il percorso resta nel mezzo</text>
+    <text x="0" y="146" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#5d5a55">Aprire le pareti non basta se il passaggio principale continua ad attraversare il living.</text>
+  </g>
+  <g transform="translate(70,230)" filter="url(#shadow)">
+    <rect x="0" y="0" width="930" height="680" rx="24" fill="#fffdf9" stroke="#c9c3b8" stroke-width="2"/>
+    <text x="32" y="44" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#7a756d">SCHEMA SEMPLIFICATO DEL CASO</text>
+    <g transform="translate(48,74)">
+      <rect x="0" y="0" width="830" height="550" fill="#faf7f1" stroke="#252525" stroke-width="12"/>
+      <path d="M0 185H830M315 0V185M515 0V185" fill="none" stroke="#252525" stroke-width="10"/>
+      <path d="M315 115H515" fill="none" stroke="#252525" stroke-width="10"/>
+      <path d="M0 335H350M500 335H830M350 185V550M500 185V550" fill="none" stroke="#252525" stroke-width="10"/>
+      <path d="M0 415H170M170 415V550" fill="none" stroke="#252525" stroke-width="10"/>
+      <path d="M350 250V302M500 250V302M414 185H458M315 75V112M515 72V112" stroke="#faf7f1" stroke-width="18"/>
+      <path d="M0 280H12M830 265H818M228 550H280M650 550H705" stroke="#faf7f1" stroke-width="18"/>
+      <g transform="translate(24,220)">
+        <rect x="0" y="0" width="250" height="90" fill="none" stroke="#252525" stroke-width="5"/>
+        <path d="M25 0V90M55 0V90M85 0V90M115 0V90M145 0V90M175 0V90M205 0V90" stroke="#6d6962" stroke-width="3"/>
+        <path d="M220 45H55" stroke="#b82018" stroke-width="4" marker-end="url(#arrow)"/>
+      </g>
+      <g font-family="Georgia,serif" font-style="italic" fill="#383632" text-anchor="middle">
+        <text x="156" y="92" font-size="30">Camera</text>
+        <text x="415" y="62" font-size="27">Bagno</text>
+        <text x="415" y="96" font-size="24">e W.C.</text>
+        <text x="672" y="92" font-size="30">Camera</text>
+        <text x="112" y="382" font-size="27">Terrazzo</text>
+        <text x="112" y="416" font-size="27">coperto</text>
+        <text x="260" y="465" font-size="32">Tinello</text>
+        <text x="419" y="463" font-size="28" transform="rotate(-90 419 463)">Cucinino</text>
+        <text x="666" y="456" font-size="34">Soggiorno</text>
+        <text x="323" y="292" font-size="22">Rip.</text>
+      </g>
+      <path d="M665 510C605 450 575 385 575 322C575 270 536 242 456 238C425 236 413 212 413 164C413 139 413 126 413 111" fill="none" stroke="#b82018" stroke-width="7" stroke-linecap="round" stroke-dasharray="16 14" marker-end="url(#arrow)"/>
+      <path d="M575 322C515 330 468 344 420 372" fill="none" stroke="#b82018" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
+      <circle cx="575" cy="322" r="10" fill="#b82018"/>
+    </g>
+  </g>
+  <g transform="translate(1050,230)">
+    <text x="0" y="0" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" fill="#111">SISTEMA <tspan fill="#b82018">90G</tspan></text>
+    <text x="0" y="31" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2" fill="#4f4b46">PROBLEMI INVISIBILI, PRIMA</text>
+    <g transform="translate(0,78)">
+      <rect width="480" height="205" rx="22" fill="#fffdf9" stroke="#c9c3b8" stroke-width="2"/>
+      <text x="28" y="46" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#b82018">IL RISCHIO NASCOSTO</text>
+      <path d="M28 61H220" stroke="#b82018" stroke-width="4"/>
+      <text x="28" y="101" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#222"><tspan x="28" dy="0">Cucina, tavolo e divano</tspan><tspan x="28" dy="34">possono restare divisi</tspan><tspan x="28" dy="34" font-weight="700">dal percorso quotidiano.</tspan></text>
+    </g>
+    <g transform="translate(0,310)">
+      <rect width="480" height="185" rx="22" fill="#ebe5db" stroke="#c9c3b8" stroke-width="2"/>
+      <text x="28" y="46" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#111">SCENA REALE</text>
+      <text x="28" y="87" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#222"><tspan x="28" dy="0">Per raggiungere camere e bagno</tspan><tspan x="28" dy="32">si attraversa la zona giorno,</tspan><tspan x="28" dy="32" font-weight="700">anche dopo aver aperto le pareti.</tspan></text>
+    </g>
+    <g transform="translate(0,522)">
+      <rect width="480" height="178" rx="22" fill="#fffdf9" stroke="#c9c3b8" stroke-width="2"/>
+      <text x="28" y="46" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#111">DA VERIFICARE PRIMA</text>
+      <text x="28" y="88" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#222"><tspan x="28" dy="0">Pareti, impianti e disposizione</tspan><tspan x="28" dy="32">reale, quando la decisione</tspan><tspan x="28" dy="32" font-weight="700" fill="#b82018">è ancora modificabile.</tspan></text>
+    </g>
+  </g>
+  <text x="70" y="962" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#5d5a55">La superficie aumenta solo sulla carta se le funzioni restano attraversate dal passaggio principale.</text>
+  <text x="1530" y="962" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#77716a">sistema90g.it</text>
+</svg>
