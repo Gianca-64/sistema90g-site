@@ -12,33 +12,39 @@ function trackLead(name,link){if(window.localStorage.getItem(CONSENT_KEY)!=='acc
 
 function injectSiteStyles(){
   if(document.getElementById('s90g-runtime-styles'))return;
-  const style=document.createElement('style');style.id='s90g-runtime-styles';style.textContent=`
+  const style=document.createElement('style');
+  style.id='s90g-runtime-styles';
+  style.textContent=`
   .premium-hero .premium-image::before,.premium-hero .premium-image::after{display:none!important;content:none!important}
-  html body main img[data-s90g-visual],html body .premium-hero .premium-image img,html body .premium-split .premium-image img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#f8f7f4}
-  html body .premium-hero .premium-image{width:100%;max-width:900px;margin-left:auto;margin-right:auto;overflow:visible!important}
-  .case-card-image{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;padding:8px;background:#f8f7f4;border-radius:18px}
+  html body main img[data-s90g-visual],html body main .premium-hero .premium-image img,html body main .premium-split .premium-image img,html body main .audit-figure img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#f8f7f4}
+  html body main .premium-hero .premium-image,html body main .premium-split .premium-image{width:100%!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;overflow:visible!important;transform:none!important}
+  html body main .premium-three article img.case-card-image{display:block!important;width:calc(100% + 60px)!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;padding:0!important;margin:-30px -30px 22px!important;border:0!important;border-radius:26px 26px 18px 18px!important;background:#f8f7f4}
+  html body main .case-card img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important}
   .service-price{display:block;margin:10px 0 14px;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:750;line-height:1}
   .service-meta{margin-top:14px;font-size:.94rem;opacity:.82}.service-boundary{margin-top:14px;padding-top:14px;border-top:1px solid rgba(20,38,48,.12);font-size:.94rem}.service-card-link{display:inline-block;margin-top:16px;font-weight:700}
   .social-proof-line{margin:0 auto 34px;max-width:760px;padding:18px 22px;border:1px solid rgba(20,38,48,.12);border-radius:18px;text-align:center;background:rgba(255,255,255,.72)}.social-proof-line strong{display:block;font-size:1.2rem;margin-bottom:4px}
   .portal-chat-note{max-width:720px;margin:22px auto 0;font-size:.95rem;opacity:.86}
   .whatsapp-chat{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:998}.whatsapp-chat a{display:flex;align-items:center;gap:11px;min-height:54px;padding:10px 16px 10px 13px;border-radius:999px;background:#1f7a4f;color:#fff;text-decoration:none;box-shadow:0 16px 42px rgba(7,19,26,.28);border:1px solid rgba(255,255,255,.2)}.whatsapp-chat svg{width:26px;height:26px;fill:currentColor}.whatsapp-chat-copy{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}.whatsapp-chat-copy span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;opacity:.82}.whatsapp-chat-copy strong{margin-top:3px;font-size:14px}.cookie-banner:not([hidden])~.whatsapp-chat{display:none}
-  @media(min-width:901px){html body .premium-hero .container{grid-template-columns:minmax(560px,1.18fr) minmax(360px,.82fr)!important;gap:clamp(34px,4vw,58px)!important}}
-  @media(max-width:680px){body{padding-bottom:78px}.whatsapp-chat{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}.whatsapp-chat-copy span{display:none}.case-card-image{padding:5px}}
-  `;document.head.appendChild(style)
+  @media(min-width:1101px){html body main .premium-hero .container{width:min(1380px,calc(100% - 64px))!important;grid-template-columns:minmax(430px,.78fr) minmax(650px,1.22fr)!important;gap:clamp(34px,4vw,64px)!important}html body main .premium-hero .premium-copy{max-width:620px!important}}
+  @media(min-width:901px) and (max-width:1100px){html body main .premium-hero .container{width:min(1040px,calc(100% - 48px))!important;grid-template-columns:minmax(380px,.86fr) minmax(500px,1.14fr)!important;gap:34px!important}}
+  @media(max-width:900px){html body main .premium-hero .container{grid-template-columns:1fr!important}html body main .premium-hero .premium-image{max-width:820px!important}}
+  @media(max-width:680px){body{padding-bottom:78px}.whatsapp-chat{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}.whatsapp-chat-copy span{display:none}html body main .premium-three article img.case-card-image{width:calc(100% + 44px)!important;margin:-22px -22px 18px!important;border-radius:20px 20px 16px 16px!important}}
+  `;
+  document.head.appendChild(style)
 }
 
 function applyBrandImages(){
   const p=window.location.pathname;
-  const K='images/hero-cucina-conflitto-90g.jpg?v=20260702e';
-  const O='images/hero-open-space-90g.jpg?v=20260702e';
-  const Q='images/hero-preventivo-90g.jpg?v=20260702e';
-  const P='images/hero-planimetria-90g.jpg?v=20260702e';
-  const F='images/hero-finiture-90g.jpg?v=20260702e';
-  const G='images/hero-agenzie-90g.jpg?v=20260702e';
-  const A='images/hero-analisi-90g.jpg?v=20260702e';
-  const C='images/hero-casi-90g.jpg?v=20260702e';
-  const Z='images/hero-progetto-zero-90g.jpg?v=20260702e';
-  const L='images/hero-livelli-90g.jpg?v=20260702e';
+  const K='images/hero-cucina-conflitto-90g.jpg?v=20260702j';
+  const O='images/hero-open-space-90g.jpg?v=20260702j';
+  const Q='images/hero-preventivo-90g.jpg?v=20260702j';
+  const P='images/hero-planimetria-90g.jpg?v=20260702j';
+  const F='images/hero-finiture-90g.jpg?v=20260702j';
+  const G='images/hero-agenzie-90g.jpg?v=20260702j';
+  const A='images/hero-analisi-90g.jpg?v=20260702j';
+  const C='images/hero-casi-90g.jpg?v=20260702j';
+  const Z='images/hero-progetto-zero-90g.jpg?v=20260702j';
+  const L='images/hero-livelli-90g.jpg?v=20260702j';
   const map={
     '/':[K,O,P],'/index.html':[K,O,P],'/analisi-preventiva.html':[A,O,P],
     '/controllo-mirato.html':[O,K],'/analisi-completa.html':[L,A],'/progetto-da-zero.html':[Z,P],
@@ -49,10 +55,11 @@ function applyBrandImages(){
     '/caso-lavastoviglie-passaggio-cucina.html':[K,O],'/caso-ingresso-tavolo-living.html':[O,P],
     '/caso-cucina-piccola-tre-lati.html':[K,O],'/caso-preventivo-cucina-sconto-valore.html':[Q,F],
     '/caso-isola-passaggi-cucina.html':[K,O],'/caso-secondo-bagno-impianti-spazio.html':[P,A],
-    '/caso-open-space-tv-divano-passaggi.html':[O,P],'/caso-lavello-sotto-finestra-aperture.html':[K,P]
+    '/caso-open-space-tv-divano-passaggi.html':[O,P],'/caso-lavello-sotto-finestra-aperture.html':[K,P],
+    '/caso-scala-interna-terrazzo-planimetria.html':[P,O]
   };
   const sequence=map[p]||[K,O,P];
-  const images=[...document.querySelectorAll('main img')].filter(img=>!img.closest('.brand'));
+  const images=[...document.querySelectorAll('main .premium-image img,main img[data-brand-image]')];
   images.forEach((img,i)=>{img.src=sequence[i%sequence.length];img.removeAttribute('srcset');img.dataset.s90gVisual='';img.alt=img.alt||'Analisi preventiva Sistema 90G con render realistico, quote e annotazioni'});
   const og=document.querySelector('meta[property="og:image"]');if(og)og.content=new URL(sequence[0],location.href).href;
 }
