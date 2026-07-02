@@ -35,6 +35,23 @@ html body main .premium-three article img.case-card-image {
   background: #f8f7f4 !important;
 }
 
+/* Ogni caso deve avere una visuale propria: niente immagini generiche ripetute. */
+#raccolta article:has(a[href="caso-ingresso-tavolo-living.html"]) img.case-card-image {
+  content: url("images/caso-ingresso-tavolo-living-90g.svg?v=20260702k") !important;
+}
+#raccolta article:has(a[href="caso-cucina-piccola-tre-lati.html"]) img.case-card-image {
+  content: url("images/caso-cucina-piccola-tre-lati-90g.svg?v=20260702k") !important;
+}
+#raccolta article:has(a[href="caso-isola-passaggi-cucina.html"]) img.case-card-image {
+  content: url("images/caso-isola-passaggi-cucina-90g.svg?v=20260702k") !important;
+}
+#raccolta article:has(a[href="caso-lavello-sotto-finestra-aperture.html"]) img.case-card-image {
+  content: url("images/caso-lavello-sotto-finestra-90g.svg?v=20260702k") !important;
+}
+#raccolta article:has(a[href="caso-scala-interna-terrazzo-planimetria.html"]) img.case-card-image {
+  content: url("images/caso-scala-terrazzo-90g.svg?v=20260702k") !important;
+}
+
 @media (min-width: 901px) {
   html body .premium-hero .container {
     grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr) !important;
