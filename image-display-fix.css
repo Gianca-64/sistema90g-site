@@ -1,8 +1,50 @@
-html body main section.premium-hero figure.premium-image{max-width:none!important;overflow:hidden!important}
+/* Visualizzazione immagini Sistema 90G: grandi, complete, mai ritagliate */
+html body main section.premium-hero figure.premium-image,
+html body main section.premium-split figure.premium-image {
+  width: 100% !important;
+  max-width: none !important;
+  overflow: hidden !important;
+  background: #f8f7f4 !important;
+}
+
 html body main section.premium-hero figure.premium-image img,
 html body main section.premium-split figure.premium-image img,
-html body main img[data-s90g-visual]{display:block!important;width:100%!important;height:clamp(330px,42vw,620px)!important;max-height:none!important;aspect-ratio:16/10!important;object-fit:cover!important;object-position:center!important;background:#f8f7f4}
-html body main .premium-three article img.case-card-image{display:block!important;width:calc(100% + 60px)!important;height:230px!important;max-height:none!important;aspect-ratio:16/10!important;object-fit:cover!important;object-position:center!important;padding:0!important;margin:-30px -30px 22px!important;border:0!important;border-radius:26px 26px 18px 18px!important;background:#f8f7f4}
-@media(min-width:901px){html body .premium-hero .container{grid-template-columns:minmax(620px,1.3fr) minmax(340px,.7fr)!important}}
-@media(max-width:900px){html body main section.premium-hero figure.premium-image img,html body main section.premium-split figure.premium-image img,html body main img[data-s90g-visual]{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}}
-@media(max-width:680px){html body main .premium-three article img.case-card-image{width:calc(100% + 44px)!important;height:210px!important;margin:-22px -22px 18px!important;border-radius:20px 20px 16px 16px!important}}
+html body main img[data-s90g-visual] {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f8f7f4 !important;
+}
+
+html body main .premium-three article img.case-card-image {
+  display: block !important;
+  width: calc(100% + 60px) !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  padding: 0 !important;
+  margin: -30px -30px 22px !important;
+  border: 0 !important;
+  border-radius: 26px 26px 18px 18px !important;
+  background: #f8f7f4 !important;
+}
+
+@media (min-width: 901px) {
+  html body .premium-hero .container {
+    grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  html body main .premium-three article img.case-card-image {
+    width: calc(100% + 44px) !important;
+    margin: -22px -22px 18px !important;
+    border-radius: 20px 20px 16px 16px !important;
+  }
+}
