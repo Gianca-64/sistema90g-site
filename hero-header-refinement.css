@@ -60,7 +60,7 @@
 .site-footer span:nth-child(2) { color:rgba(255,255,255,.62); }
 .site-footer a:hover { color:#fff; }
 
-/* Regole definitive immagini: nessun ritaglio, nessuna espansione oltre il contenitore. */
+/* Regole immagini: mantengono il file dichiarato nell'HTML e impediscono il ritaglio. */
 main figure,
 main .premium-image,
 main .audit-figure { overflow:visible !important; }
@@ -89,16 +89,6 @@ main .premium-three article img.case-card-image {
   object-fit:contain !important;
 }
 
-/* Migrazione dei vecchi visual già ritagliati verso file completi. */
-img[src*="90G-hero-v1-open-space-vissuto.png"] { content:url("images/caso-open-space-tv-passaggio-90g.svg?v=20260703c"); }
-img[src*="hero-controllo-progetto-cucina.jpg"] { content:url("images/caso-lavastoviglie-passaggio-90g.svg?v=20260703c"); }
-img[src*="errori-reali-lavastoviglie.jpeg"] { content:url("images/caso-lavastoviglie-passaggio-90g.svg?v=20260703c"); }
-img[src*="hero-preventivo-90g.jpg"],img[src*="04_preventivo_cucina.jpg"] { content:url("images/caso-preventivo-valore-90g.svg?v=20260703c"); }
-img[src*="hero-planimetria-90g.jpg"] { content:url("images/caso-terza-camera-zona-giorno-90g.svg?v=20260703c"); }
-img[src*="hero-open-space-90g.jpg"] { content:url("images/caso-open-space-tv-passaggio-90g.svg?v=20260703c"); }
-img[src*="hero-cucina-conflitto-90g.jpg"] { content:url("images/caso-lavastoviglie-passaggio-90g.svg?v=20260703c"); }
-
-/* Valore economico del controllo */
 .economic-value-section { padding:72px 0; }
 .economic-value-section .economic-intro { max-width:880px; }
 .economic-value-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:30px; }
