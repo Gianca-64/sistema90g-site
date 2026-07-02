@@ -85,6 +85,13 @@ html body main img[data-s90g-visual] {
   font-size: 0.96rem;
 }
 
+.premium-three.one-case {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 901px) {
   html body .premium-hero .container {
     grid-template-columns: minmax(520px, 1.12fr) minmax(380px, 0.88fr) !important;
