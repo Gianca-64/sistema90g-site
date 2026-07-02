@@ -12,3 +12,55 @@
   margin-bottom: 20px;
   border: 1px solid rgba(7, 19, 26, 0.08);
 }
+
+.case-meta {
+  margin: 18px 0 0;
+  font-size: 0.94rem;
+  color: rgba(20, 38, 48, 0.72);
+}
+
+.case-meta a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.quick-answer {
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 26px 30px;
+  border: 1px solid rgba(20, 38, 48, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 44px rgba(7, 19, 26, 0.06);
+}
+
+.quick-answer h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+}
+
+.quick-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.case-evidence {
+  margin-top: 24px;
+}
+
+.case-evidence article p {
+  margin-bottom: 0;
+}
+
+.case-limit {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(20, 38, 48, 0.12);
+  font-size: 0.96rem;
+}
+
+@media (max-width: 680px) {
+  .quick-answer {
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+}
