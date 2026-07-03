@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - tools/generate_site_visuals.py
+      - tools/fix_case_visual_references.py
       - .github/workflows/generate-site-visuals.yml
 
 permissions:
@@ -31,6 +32,9 @@ jobs:
 
       - name: Generate visual assets
         run: python tools/generate_site_visuals.py
+
+      - name: Fix case visual references
+        run: python tools/fix_case_visual_references.py
 
       - name: Commit generated assets
         run: |
