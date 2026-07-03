@@ -818,3 +818,54 @@ button {
     min-height: 190px;
   }
 }
+
+/* Correzioni emerse dall'audit generale */
+.s90g-chat-button {
+  position: fixed;
+  right: clamp(14px, 2vw, 26px);
+  bottom: clamp(14px, 2vw, 26px);
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  background: #284b36;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 14px 35px rgba(20, 44, 30, .24);
+}
+
+.s90g-chat-button:hover {
+  background: #1d3928;
+}
+
+.case-card-image,
+.premium-three article > img {
+  width: 100% !important;
+  height: clamp(240px, 20vw, 330px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f5f3ed !important;
+}
+
+@media (max-width: 760px) {
+  .s90g-chat-button {
+    right: 12px;
+    bottom: 12px;
+    min-height: 44px;
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .case-card-image,
+  .premium-three article > img {
+    height: auto !important;
+    min-height: 220px;
+    max-height: 320px;
+  }
+}

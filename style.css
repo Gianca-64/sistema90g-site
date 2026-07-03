@@ -373,13 +373,18 @@ h3 {
 }
 
 .case-card img {
-  width: calc(100% + 60px);
-  max-width: none;
-  aspect-ratio: 1.45;
-  object-fit: cover;
-  margin: -30px -30px 26px;
-  border-bottom: 1px solid var(--line-strong);
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 0 26px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
 }
+
 
 .case-card span {
   display: inline-block;
