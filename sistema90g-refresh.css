@@ -434,3 +434,387 @@ p {
     padding: 32px 24px !important;
   }
 }
+
+/* =========================================================
+   SISTEMA 90G — LAYOUT FLUIDO E RESPONSIVE GLOBALE
+   ========================================================= */
+
+:root {
+  --s90g-page-gap: clamp(14px, 2vw, 32px);
+  --s90g-content-max: 1560px;
+  --s90g-reading-max: 820px;
+}
+
+/* Tutti i contenitori principali usano quasi tutta la larghezza */
+.container,
+.premium-hero .container,
+.hero .container,
+.professional-hero .container,
+.premium-section > .container,
+.section > .container,
+.intro-band > .container,
+.final-cta > .container,
+.premium-contrast > .container,
+.premium-cta > .container,
+.site-footer {
+  width: min(
+    var(--s90g-content-max),
+    calc(100vw - (var(--s90g-page-gap) * 2))
+  ) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Sezioni a tutta larghezza con contenuto fluido */
+main,
+.premium-section,
+.section,
+.intro-band,
+.final-cta,
+.premium-contrast,
+.premium-cta {
+  width: 100%;
+}
+
+/* Hero desktop più ampia e bilanciata */
+.premium-hero,
+.hero,
+.professional-hero {
+  width: 100%;
+  padding-left: var(--s90g-page-gap) !important;
+  padding-right: var(--s90g-page-gap) !important;
+}
+
+.premium-hero .container,
+.hero .container,
+.professional-hero .container {
+  grid-template-columns:
+    minmax(420px, 0.95fr)
+    minmax(520px, 1.25fr) !important;
+  gap: clamp(36px, 5vw, 84px) !important;
+  min-height: clamp(520px, 62vh, 720px) !important;
+}
+
+/* Immagini hero sempre intere */
+.premium-hero .premium-image img,
+.hero img,
+.professional-hero img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 620px !important;
+  object-fit: contain !important;
+}
+
+/* Testi lunghi leggibili */
+.premium-copy,
+.section-heading,
+.quick-answer,
+.case-note,
+.case-limit,
+.case-meta,
+.intro-grid p,
+.final-cta p {
+  max-width: var(--s90g-reading-max);
+}
+
+/* Griglie desktop ampie */
+.premium-three,
+.case-grid,
+.cases-grid,
+.casi-grid,
+.problem-grid,
+.method-grid,
+.check-grid,
+.economic-value-grid,
+.compare-grid {
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(18px, 2vw, 32px) !important;
+}
+
+/* Card sempre proporzionate */
+.premium-three article,
+.case-card,
+.case-grid article,
+.cases-grid article,
+.casi-grid article,
+.problem,
+.method,
+.compare-grid article,
+.economic-value-grid article {
+  min-width: 0;
+}
+
+/* Immagini card fluide e non tagliate */
+.case-card-image,
+.case-card img,
+.premium-three article > img,
+.case-grid article > img,
+.cases-grid article > img,
+.casi-grid article > img {
+  width: 100% !important;
+  height: clamp(220px, 18vw, 320px) !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Tabelle, form e media non devono uscire dal viewport */
+table,
+iframe,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+/* Header desktop */
+.site-header {
+  width: 100%;
+  padding-left: var(--s90g-page-gap) !important;
+  padding-right: var(--s90g-page-gap) !important;
+}
+
+.main-nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Footer piena larghezza ma contenuto ordinato */
+.site-footer {
+  padding-left: var(--s90g-page-gap) !important;
+  padding-right: var(--s90g-page-gap) !important;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .premium-hero .container,
+  .hero .container,
+  .professional-hero .container {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+    min-height: auto !important;
+  }
+
+  .premium-three,
+  .case-grid,
+  .cases-grid,
+  .casi-grid,
+  .problem-grid,
+  .method-grid,
+  .check-grid,
+  .economic-value-grid,
+  .compare-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  h1 {
+    font-size: clamp(42px, 6.2vw, 66px) !important;
+  }
+}
+
+/* Smartphone e tablet piccoli */
+@media (max-width: 760px) {
+  :root {
+    --s90g-page-gap: 12px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .brand {
+    justify-self: start;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .main-nav a:last-child {
+    padding: 9px 14px !important;
+  }
+
+  .premium-hero,
+  .hero,
+  .professional-hero {
+    padding-top: 12px !important;
+  }
+
+  .premium-hero .container,
+  .hero .container,
+  .professional-hero .container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 22px !important;
+    min-height: auto !important;
+  }
+
+  .premium-hero .premium-copy,
+  .hero-content,
+  .professional-hero .premium-copy {
+    order: 1;
+  }
+
+  .premium-hero .premium-image,
+  .hero > figure,
+  .professional-hero .premium-image {
+    order: 2;
+  }
+
+  .premium-hero .premium-image img,
+  .hero img,
+  .professional-hero img {
+    max-height: 420px !important;
+  }
+
+  h1 {
+    font-size: clamp(38px, 11vw, 54px) !important;
+    line-height: 1 !important;
+  }
+
+  h2 {
+    font-size: clamp(30px, 8vw, 42px) !important;
+  }
+
+  h3 {
+    font-size: clamp(21px, 6vw, 28px) !important;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .premium-section,
+  .section,
+  .intro-band,
+  .final-cta,
+  .premium-contrast,
+  .premium-cta {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .premium-three,
+  .case-grid,
+  .cases-grid,
+  .casi-grid,
+  .problem-grid,
+  .method-grid,
+  .check-grid,
+  .economic-value-grid,
+  .compare-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .case-card-image,
+  .case-card img,
+  .premium-three article > img,
+  .case-grid article > img,
+  .cases-grid article > img,
+  .casi-grid article > img {
+    height: auto !important;
+    min-height: 210px;
+    max-height: 320px;
+  }
+
+  .premium-three article,
+  .case-card,
+  .case-grid article,
+  .cases-grid article,
+  .casi-grid article {
+    padding: 18px !important;
+  }
+
+  .button,
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .premium-cta .container {
+    padding: 28px 20px !important;
+  }
+
+  .site-footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    text-align: left;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Smartphone piccoli */
+@media (max-width: 420px) {
+  .premium-hero .container,
+  .hero .container,
+  .professional-hero .container {
+    padding: 18px !important;
+    border-radius: 16px !important;
+  }
+
+  h1 {
+    font-size: clamp(34px, 10.5vw, 46px) !important;
+  }
+
+  .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .brand span:last-child {
+    font-size: 13px;
+  }
+
+  .case-card-image,
+  .case-card img,
+  .premium-three article > img,
+  .case-grid article > img,
+  .cases-grid article > img,
+  .casi-grid article > img {
+    min-height: 190px;
+  }
+}
