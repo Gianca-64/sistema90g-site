@@ -39,4 +39,33 @@
       if (target === current) link.setAttribute('aria-current', 'page');
     });
   }
+
+  const visualVersion = '20260703-visual4';
+  const caseVisuals = {
+    'caso-lavastoviglie-passaggio-cucina.html': 'caso-lavastoviglie-passaggio-2026.jpg',
+    'caso-ingresso-tavolo-living.html': 'caso-ingresso-living-2026.jpg',
+    'caso-cucina-piccola-tre-lati.html': 'caso-cucina-tre-lati-2026.jpg',
+    'caso-preventivo-cucina-sconto-valore.html': 'caso-preventivo-valore-2026.jpg',
+    'caso-isola-passaggi-cucina.html': 'caso-isola-passaggi-2026.jpg',
+    'caso-secondo-bagno-impianti-spazio.html': 'caso-secondo-bagno-2026.jpg',
+    'caso-open-space-tv-divano-passaggi.html': 'caso-open-space-tv-2026.jpg',
+    'caso-lavello-sotto-finestra-aperture.html': 'caso-lavello-finestra-2026.jpg',
+    'caso-scala-interna-terrazzo-planimetria.html': 'caso-scala-planimetria-2026.jpg',
+    'caso-open-space-percorso-centrale.html': 'caso-percorso-centrale-2026.jpg',
+    'caso-terza-camera-zona-giorno.html': 'caso-terza-camera-2026.jpg',
+    'caso-cucina-profondita-75-angolo.html': 'caso-profondita-angolo-2026.jpg',
+    'caso-bagno-lavatrice-dieci-centimetri.html': 'caso-bagno-lavatrice-2026.jpg',
+    'caso-cabina-armadio-camera-irregolare.html': 'caso-cabina-armadio-2026.jpg',
+    'caso-divano-letto-soggiorno-tre-persone.html': 'caso-divano-letto-2026.jpg'
+  };
+
+  document.querySelectorAll('.premium-three article').forEach(article => {
+    const link = article.querySelector('a.text-link[href]');
+    const image = article.querySelector('img.case-card-image');
+    if (!link || !image) return;
+
+    const target = link.getAttribute('href').split('#')[0];
+    const filename = caseVisuals[target];
+    if (filename) image.src = `images/${filename}?v=${visualVersion}`;
+  });
 })();
