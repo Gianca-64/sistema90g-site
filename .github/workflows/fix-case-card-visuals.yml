@@ -1,0 +1,84 @@
+name: Fix case card visuals
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-case-card-visuals.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Replace case card visuals
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          page = Path('casi-analizzati.html')
+          text = page.read_text(encoding='utf-8')
+          version = '20260704-reference2'
+          mapping = {
+              'caso-lavastoviglie-passaggio-cucina.html': 'hero-cucina-conflitto-90g.jpg',
+              'caso-ingresso-tavolo-living.html': 'hero-open-space-90g.jpg',
+              'caso-cucina-piccola-tre-lati.html': 'hero-progetto-zero-90g.jpg',
+              'caso-preventivo-cucina-sconto-valore.html': 'hero-preventivo-90g.jpg',
+              'caso-isola-passaggi-cucina.html': 'hero-cucina-conflitto-90g.jpg',
+              'caso-secondo-bagno-impianti-spazio.html': 'hero-analisi-90g.jpg',
+              'caso-open-space-tv-divano-passaggi.html': 'hero-open-space-90g.jpg',
+              'caso-lavello-sotto-finestra-aperture.html': 'hero-finiture-90g.jpg',
+              'caso-scala-interna-terrazzo-planimetria.html': 'hero-planimetria-90g.jpg',
+              'caso-open-space-percorso-centrale.html': 'hero-analisi-90g.jpg',
+              'caso-terza-camera-zona-giorno.html': 'hero-planimetria-90g.jpg',
+              'caso-cucina-profondita-75-angolo.html': 'hero-progetto-zero-90g.jpg',
+              'caso-bagno-lavatrice-dieci-centimetri.html': 'hero-analisi-90g.jpg',
+              'caso-cabina-armadio-camera-irregolare.html': 'hero-livelli-90g.jpg',
+              'caso-divano-letto-soggiorno-tre-persone.html': 'hero-open-space-90g.jpg',
+          }
+
+          for target, image in mapping.items():
+              pattern = re.compile(
+                  r'<article>.*?<a class="text-link" href="' + re.escape(target) + r'">.*?</a></article>',
+                  re.S,
+              )
+              match = pattern.search(text)
+              if not match:
+                  raise SystemExit(f'Card not found: {target}')
+              block = match.group(0)
+              block, count = re.subn(
+                  r'(<img class="case-card-image" src=")[^"]+',
+                  rf'\1images/{image}?v={version}',
+                  block,
+                  count=1,
+              )
+              if count != 1:
+                  raise SystemExit(f'Image not found: {target}')
+              text = text[:match.start()] + block + text[match.end():]
+
+          page.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify
+        run: |
+          if grep -E 'case-card-image" src="images/(90g-|caso-.*\.svg)' casi-analizzati.html; then
+            echo "Old schematic card visuals still present"
+            exit 1
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add casi-analizzati.html
+          git commit -m "site: sostituisce le immagini schematiche nella raccolta casi"
+          git push
