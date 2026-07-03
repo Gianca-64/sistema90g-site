@@ -20,14 +20,12 @@
   <meta property="og:description" content="Una visione completa del progetto per vedere prima problemi non evidenti, incompatibilità, vincoli e possibili costi tardivi.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sistema90g.it/">
-  <meta property="og:image" content="https://sistema90g.it/images/hero-open-space-90g.jpg?v=20260703-imagefix2">
+  <meta property="og:image" content="https://sistema90g.it/images/90g-style-hero.svg?v=20260703-unified1">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://sistema90g.it/">
   <link rel="icon" type="image/png" href="images/favicon-512.png">
   <title>Analisi preventiva per casa, cucina e ristrutturazione | Sistema 90G</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="visual-tuning.css?v=20260619f">
-  <link rel="stylesheet" href="hero-header-refinement.css?v=20260623a">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,10 +111,9 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="image-layout-fix.css?v=20260703-imagefix2">
-  <link rel="stylesheet" href="sistema90g-refresh.css?v=20260703-auditfix1">
+  <link rel="stylesheet" href="sistema90g-refresh.css?v=20260703-unified2">
 </head>
-<body>
+<body class="s90g-unified">
 <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferenze cookie" hidden>
   <div>
     <strong>Cookie e statistiche</strong>
@@ -128,19 +125,23 @@
   </div>
 </div>
 
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="Sistema 90G home">
-    <span class="brand-mark"><img src="images/logo-90g.jpg" alt="" aria-hidden="true"></span>
-    <span>Sistema 90G</span>
+<header class="site-header" data-s90g-header>
+  <a class="brand" href="index.html" aria-label="Sistema 90G, torna alla home">
+    <span class="brand-mark"><img src="images/logo-90g.jpg?v=20260703-unified1" alt="" aria-hidden="true"></span>
+    <span class="brand-copy"><strong>Sistema 90G</strong><small>Analisi preventiva indipendente</small></span>
   </a>
-  <nav class="main-nav" aria-label="Navigazione principale">
-    <a href="#perche">Perché nasce</a>
-    <a href="#metodo">Come troviamo i problemi</a>
-    <a href="#visione-completa">Visione completa</a>
-    <a href="#servizi">Servizi</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-label">Menu</span>
+    <span class="nav-toggle-icon" aria-hidden="true"></span>
+  </button>
+  <nav class="main-nav" id="site-nav" aria-label="Navigazione principale">
+    <a href="index.html">Home</a>
+    <a href="controllo-progetto-cucina.html">Cucina</a>
+    <a href="verifica-planimetria-distribuzione-casa.html">Planimetria</a>
+    <a href="analisi-preventivo-cucina.html">Preventivo</a>
     <a href="casi-analizzati.html">Casi</a>
-    <a href="#faq">Domande</a>
-    <a href="#contatto">Invia il caso</a>
+    <a href="chi-e-sistema90g.html">Chi sono</a>
+    <a class="nav-cta" data-track-portal href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener">Sottoponi il caso</a>
   </nav>
 </header>
 
@@ -148,7 +149,7 @@
   <section class="premium-hero">
     <div class="container">
       <figure class="premium-image">
-        <img src="images/hero-open-space-90g.jpg?v=20260703-imagefix2" alt="Analisi preventiva di progetto, arredi e spazi prima dell'ordine">
+        <img src="images/90g-style-hero.svg?v=20260703-unified1" alt="Analisi preventiva di progetto, arredi e spazi prima dell'ordine">
       </figure>
       <div class="premium-copy wide">
         <p class="eyebrow">Analisi preventiva indipendente</p>
@@ -291,7 +292,7 @@
   <section class="premium-split" id="come-funziona">
     <div class="container split-grid">
       <figure class="premium-image">
-        <img src="images/hero-cucina-conflitto-90g.jpg?v=20260703-imagefix2" alt="Esempio di interferenza tra lavastoviglie aperta e passaggio in cucina">
+        <img src="images/90g-style-conflitto.svg?v=20260703-unified1" alt="Esempio di interferenza tra lavastoviglie aperta e passaggio in cucina">
       </figure>
       <div class="premium-copy">
         <p class="eyebrow">Come funziona</p>
@@ -351,27 +352,32 @@
         <p class="eyebrow">Prima che la scelta diventi definitiva</p>
         <h2>Hai un progetto, una proposta, un preventivo o una planimetria da controllare?</h2>
         <p>Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto, senza obbligo di acquisto.</p>
-        <a class="button button-primary" data-track-whatsapp href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener">Apri il portale pubblico</a>
+        <a class="button button-primary" data-track-portal href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener">Apri il portale pubblico</a>
       </div>
     </div>
   </section>
 </main>
+<script src="privacy-consent.js?v=20260623g" defer></script>
 
 <footer class="site-footer">
-  <span>© Sistema 90G</span>
-  <span>Partita IVA IT02844900221</span>
-  <div class="footer-links">
-    <a href="analisi-preventiva.html">Analisi preventiva</a>
-    <a href="chi-e-sistema90g.html">Chi è Sistema 90G</a>
-    <a href="casi-analizzati.html">Casi analizzati</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="cookie-policy.html">Cookie Policy</a>
-    <a href="#" data-cookie-settings>Gestisci cookie</a>
-    <a href="mailto:info@sistema90g.it">info@sistema90g.it</a>
-    <a href="#top">Torna su</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>Sistema 90G</strong>
+      <span>Analisi preventiva indipendente</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="casi-analizzati.html">Casi analizzati</a>
+      <a href="chi-e-sistema90g.html">Chi sono</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="cookie-policy.html">Cookie</a>
+      <a href="mailto:info@sistema90g.it">info@sistema90g.it</a>
+      <a href="#" data-cookie-settings>Gestisci cookie</a>
+    </div>
+    <div class="footer-legal">© Sistema 90G · Partita IVA IT02844900221</div>
   </div>
 </footer>
-<script src="privacy-consent.js?v=20260623g" defer></script>
-  <a class="s90g-chat-button" href="https://wa.me/393275478485" target="_blank" rel="noopener" aria-label="Apri la chat WhatsApp">Chat WhatsApp</a>
+<a class="s90g-chat-button" href="https://wa.me/393275478485" target="_blank" rel="noopener" aria-label="Apri la chat WhatsApp">Chat WhatsApp</a>
+<script src="site-ui.js?v=20260703-unified2" defer></script>
 </body>
 </html>
