@@ -67,3 +67,4 @@ for image_name in case_page_map.values():
 
 collection.write_text(text, encoding="utf-8")
 print("Riferimenti dei 15 casi corretti e verificati.")
+# trigger 2026-07-03: esecuzione correttiva finale
