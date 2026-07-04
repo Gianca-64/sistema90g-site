@@ -4,13 +4,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **49**
+- Pagine HTML controllate: **50**
 - File immagine presenti: **82**
-- Immagini di contenuto pubblicate: **42**
+- Immagini di contenuto pubblicate: **43**
 - File riutilizzati in più punti: **16**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **55**
+- Immagini non utilizzate: **54**
 
 ## Mappa pagina → immagine → contesto
 
@@ -39,6 +39,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cucina-piccola-tre-lati.html` | `images/final/case-03-compact-kitchen.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina compatta con ante e cassetti aperti che occupano il centro stanza |
 | `caso-cucina-profondita-75-angolo.html` | `images/final/case-12-deep-corner.jpg` | Usiamo Google Analytics solo se accetti. | Cucina ad angolo con profondità 75 centimetri e mobile angolare aperto |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/final/case-15-sofa-bed.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema di soggiorno cucina trasformato ogni sera in spazio notte con divano letto |
+| `caso-due-appartamenti-accessi-disimpegni.html` | `images/final/case-16-two-apartments-access.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di due appartamenti con ingressi indipendenti e disimpegno centrale |
 | `caso-ingresso-tavolo-living.html` | `images/final/case-02-entry-living.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Ingresso che apre sulla zona pranzo con filtro che restringe il living |
 | `caso-isola-passaggi-cucina.html` | `images/final/case-05-island-passages.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di un |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/final/case-01-dishwasher.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Lavastoviglie aperta che riduce il passaggio in una cucina |
@@ -190,7 +191,6 @@ Nessun riferimento mancante.
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
-- `images/final/case-16-two-apartments-access.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
