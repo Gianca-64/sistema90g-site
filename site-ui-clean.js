@@ -88,12 +88,16 @@
   }
 
   const page = location.pathname.split('/').pop() || 'index.html';
-  const version = '20260704-unique-visuals1';
+  const version = '20260704-editorial2';
   const heroMap = {
-    'progetto-da-zero.html': ['hero-project-zero-unique.svg', 'Progetto da zero: planimetria, campioni e proposta in sviluppo'],
-    'casi-analizzati.html': ['hero-cases-method-unique.svg', 'Metodo di analisi dei casi con percorsi, aperture e funzioni in relazione'],
-    'caso-cabina-armadio-camera-irregolare.html': ['case-14-wardrobe-room-unique.svg', 'Camera irregolare con letto, percorso e zona guardaroba'],
-    'caso-bagno-lavatrice-dieci-centimetri.html': ['case-13-bath-laundry-unique.svg', 'Bagno compatto con lavanderia e apertura da verificare']
+    'progetto-da-zero.html': ['images/hero-progetto-zero-90g.jpg', 'Progetto da zero: planimetria, campioni e proposta in sviluppo'],
+    'render-fotorealistici-interni.html': ['images/90g-style-finiture.svg', 'Materiali, luce e proporzioni visualizzati prima dell’ordine'],
+    'agenzie-immobiliari.html': ['images/hero-agenzie-90g.jpg', 'Lettura preventiva di un immobile prima della presentazione al mercato'],
+    'controllo-mirato.html': ['images/hero-analisi-90g.jpg', 'Controllo indipendente di un dubbio preciso'],
+    'analisi-completa.html': ['images/hero-casa90g.jpg', 'Analisi complessiva di progetto, uso reale e vincoli'],
+    'casi-analizzati.html': ['images/final/hero-cases-method-unique.svg', 'Metodo di analisi dei casi con percorsi, aperture e funzioni in relazione'],
+    'caso-cabina-armadio-camera-irregolare.html': ['images/final/case-14-wardrobe-room-unique.svg', 'Camera irregolare con letto, percorso e zona guardaroba'],
+    'caso-bagno-lavatrice-dieci-centimetri.html': ['images/final/case-13-bath-laundry-unique.svg', 'Bagno compatto con lavanderia e apertura da verificare']
   };
 
   const hero = heroMap[page];
@@ -111,7 +115,7 @@
         image = document.createElement('img');
         figure.appendChild(image);
       }
-      image.src = `images/final/${hero[0]}?v=${version}`;
+      image.src = `${hero[0]}?v=${version}`;
       image.alt = hero[1];
       image.removeAttribute('srcset');
     }
@@ -119,8 +123,8 @@
 
   if (page === 'casi-analizzati.html') {
     const cardMap = {
-      'caso-cabina-armadio-camera-irregolare.html': ['case-14-wardrobe-room-unique.svg', 'Camera irregolare con possibile zona guardaroba'],
-      'caso-bagno-lavatrice-dieci-centimetri.html': ['case-13-bath-laundry-unique.svg', 'Bagno compatto con lavanderia e apertura da verificare']
+      'caso-cabina-armadio-camera-irregolare.html': ['images/final/case-14-wardrobe-room-unique.svg', 'Camera irregolare con possibile zona guardaroba'],
+      'caso-bagno-lavatrice-dieci-centimetri.html': ['images/final/case-13-bath-laundry-unique.svg', 'Bagno compatto con lavanderia e apertura da verificare']
     };
 
     document.querySelectorAll('article').forEach(article => {
@@ -130,7 +134,7 @@
       const target = link.getAttribute('href').split('#')[0];
       const visual = cardMap[target];
       if (!visual) return;
-      image.src = `images/final/${visual[0]}?v=${version}`;
+      image.src = `${visual[0]}?v=${version}`;
       image.alt = visual[1];
       image.removeAttribute('srcset');
     });
