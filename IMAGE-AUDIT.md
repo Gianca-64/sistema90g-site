@@ -172,7 +172,7 @@ Nessun riferimento mancante.
 - `case-17-inject.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
-- `site-ui-clean.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
+- `site-ui-clean.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 
 ## Immagini disponibili ma non utilizzate
 
