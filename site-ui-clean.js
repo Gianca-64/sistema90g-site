@@ -68,21 +68,21 @@
     });
   }
 
-  const version = '20260704-final-reference1';
+  const version = '20260704-existing-assets1';
   const page = location.pathname.split('/').pop() || 'index.html';
 
   const visualMap = {
     'index.html': ['images/final/hero-home-reference.jpg', 'Analisi preventiva Sistema 90G'],
-    'chi-e-sistema90g.html': ['images/final/hero-who-reference.jpg', 'Analisi indipendente prima della decisione'],
+    'chi-e-sistema90g.html': ['images/hero-chi-sono-90g-2026.jpg', 'Analisi indipendente prima della decisione'],
     'casi-analizzati.html': ['images/final/hero-cases-reference.jpg', 'Raccolta dei casi analizzati Sistema 90G'],
-    'controllo-progetto-cucina.html': ['images/final/hero-kitchen-reference.jpg', 'Controllo preventivo del progetto cucina'],
-    'verifica-planimetria-distribuzione-casa.html': ['images/final/hero-plan-reference.jpg', 'Verifica preventiva della planimetria'],
-    'analisi-preventivo-cucina.html': ['images/final/hero-quote-reference.jpg', 'Analisi preventiva del preventivo cucina'],
-    'render-fotorealistici-interni.html': ['images/final/hero-render-reference.jpg', 'Render e verifica di materiali, luce e proporzioni'],
-    'agenzie-immobiliari.html': ['images/final/hero-agency-reference.jpg', 'Analisi preventiva per agenzie immobiliari'],
-    'controllo-mirato.html': ['images/final/hero-control-reference.jpg', 'Controllo mirato di un dubbio preciso'],
-    'analisi-completa.html': ['images/final/hero-analysis-reference.jpg', 'Analisi completa di progetto, uso reale e vincoli'],
-    'progetto-da-zero.html': ['images/final/hero-project-reference.jpg', 'Progetto da zero: esigenze, vincoli e proposta'],
+    'controllo-progetto-cucina.html': ['images/hero-cucina-conflitto-90g.jpg', 'Controllo preventivo del progetto cucina'],
+    'verifica-planimetria-distribuzione-casa.html': ['images/hero-planimetria-90g.jpg', 'Verifica preventiva della planimetria'],
+    'analisi-preventivo-cucina.html': ['images/hero-preventivo-90g.jpg', 'Analisi preventiva del preventivo cucina'],
+    'render-fotorealistici-interni.html': ['images/90g-style-finiture.svg', 'Render e verifica di materiali, luce e proporzioni'],
+    'agenzie-immobiliari.html': ['images/hero-agenzie-90g.jpg', 'Analisi preventiva per agenzie immobiliari'],
+    'controllo-mirato.html': ['images/hero-analisi-90g.jpg', 'Controllo mirato di un dubbio preciso'],
+    'analisi-completa.html': ['images/hero-casa90g.jpg', 'Analisi completa di progetto, uso reale e vincoli'],
+    'progetto-da-zero.html': ['images/hero-progetto-zero-90g.jpg', 'Progetto da zero: esigenze, vincoli e proposta'],
 
     'caso-lavastoviglie-passaggio-cucina.html': ['images/final/case-01-dishwasher.jpg', 'Lavastoviglie aperta e passaggio bloccato'],
     'caso-ingresso-tavolo-living.html': ['images/final/case-02-entry-living.jpg', 'Ingresso diretto su tavolo e soggiorno'],
@@ -101,6 +101,19 @@
     'caso-divano-letto-soggiorno-tre-persone.html': ['images/final/case-15-sofa-bed.jpg', 'Divano letto in soggiorno per tre persone']
   };
 
+  const fallback = 'images/final/hero-home-reference.jpg';
+
+  const setImage = (image, visual) => {
+    if (!image || !visual) return;
+    image.onerror = () => {
+      image.onerror = null;
+      image.src = `${fallback}?v=${version}`;
+    };
+    image.src = `${visual[0]}?v=${version}`;
+    image.alt = visual[1];
+    image.removeAttribute('srcset');
+  };
+
   const applyVisual = (container, visual) => {
     if (!container || !visual) return;
     let figure = container.querySelector('figure.premium-image');
@@ -114,9 +127,7 @@
       image = document.createElement('img');
       figure.appendChild(image);
     }
-    image.src = `${visual[0]}?v=${version}`;
-    image.alt = visual[1];
-    image.removeAttribute('srcset');
+    setImage(image, visual);
   };
 
   applyVisual(document.querySelector('main .premium-hero .container, main .professional-hero .container'), visualMap[page]);
@@ -127,11 +138,7 @@
       const image = article.querySelector('img.case-card-image');
       if (!link || !image) return;
       const target = link.getAttribute('href').split('#')[0];
-      const visual = visualMap[target];
-      if (!visual) return;
-      image.src = `${visual[0]}?v=${version}`;
-      image.alt = visual[1];
-      image.removeAttribute('srcset');
+      setImage(image, visualMap[target]);
     });
   }
 })();
