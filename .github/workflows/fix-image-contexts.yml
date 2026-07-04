@@ -43,3 +43,5 @@ jobs:
           fi
           git commit -m "site: abbina ogni immagine al contesto ed elimina i doppioni nelle card"
           git push
+
+# trigger audit immagini 2026-07-04
