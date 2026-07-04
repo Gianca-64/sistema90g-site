@@ -1,0 +1,45 @@
+name: Correggi abbinamento immagini
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - tools/fix_image_contexts.py
+      - .github/workflows/fix-image-contexts.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply contextual image map
+        run: python tools/fix_image_contexts.py
+
+      - name: Re-run image audit
+        run: python tools/audit_site_images.py
+
+      - name: Commit corrections and reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No image corrections to commit"
+            exit 0
+          fi
+          git commit -m "site: abbina ogni immagine al contesto ed elimina i doppioni nelle card"
+          git push
