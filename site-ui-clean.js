@@ -68,69 +68,73 @@
     });
   }
 
-  const version = '20260704-existing-assets1';
+  const version = '20260704-audit-images2';
   const page = location.pathname.split('/').pop() || 'index.html';
 
   const visualMap = {
-    'index.html': ['images/final/hero-home-reference.jpg', 'Analisi preventiva Sistema 90G'],
+    'index.html': ['images/hero-home-90g-2026.jpg', 'Analisi preventiva Sistema 90G'],
     'chi-e-sistema90g.html': ['images/hero-chi-sono-90g-2026.jpg', 'Analisi indipendente prima della decisione'],
-    'casi-analizzati.html': ['images/final/hero-cases-reference.jpg', 'Raccolta dei casi analizzati Sistema 90G'],
-    'controllo-progetto-cucina.html': ['images/hero-cucina-conflitto-90g.jpg', 'Controllo preventivo del progetto cucina'],
-    'verifica-planimetria-distribuzione-casa.html': ['images/hero-planimetria-90g.jpg', 'Verifica preventiva della planimetria'],
-    'analisi-preventivo-cucina.html': ['images/hero-preventivo-90g.jpg', 'Analisi preventiva del preventivo cucina'],
-    'render-fotorealistici-interni.html': ['images/90g-style-finiture.svg', 'Render e verifica di materiali, luce e proporzioni'],
-    'agenzie-immobiliari.html': ['images/hero-agenzie-90g.jpg', 'Analisi preventiva per agenzie immobiliari'],
-    'controllo-mirato.html': ['images/hero-analisi-90g.jpg', 'Controllo mirato di un dubbio preciso'],
-    'analisi-completa.html': ['images/hero-casa90g.jpg', 'Analisi completa di progetto, uso reale e vincoli'],
-    'progetto-da-zero.html': ['images/hero-progetto-zero-90g.jpg', 'Progetto da zero: esigenze, vincoli e proposta'],
+    'casi-analizzati.html': ['images/hero-casi-90g-2026.jpg', 'Raccolta dei casi analizzati Sistema 90G'],
+    'controllo-progetto-cucina.html': ['images/hero-cucina-90g-2026.jpg', 'Controllo preventivo del progetto cucina'],
+    'verifica-planimetria-distribuzione-casa.html': ['images/hero-planimetria-90g-2026.jpg', 'Verifica preventiva della planimetria'],
+    'analisi-preventivo-cucina.html': ['images/hero-preventivo-90g-2026.jpg', 'Analisi preventiva del preventivo cucina'],
 
-    'caso-lavastoviglie-passaggio-cucina.html': ['images/final/case-01-dishwasher.jpg', 'Lavastoviglie aperta e passaggio bloccato'],
-    'caso-ingresso-tavolo-living.html': ['images/final/case-02-entry-living.jpg', 'Ingresso diretto su tavolo e soggiorno'],
-    'caso-cucina-piccola-tre-lati.html': ['images/final/case-03-compact-kitchen.jpg', 'Cucina compatta su tre lati'],
-    'caso-preventivo-cucina-sconto-valore.html': ['images/final/case-04-quote.jpg', 'Preventivo cucina e valore reale'],
-    'caso-isola-passaggi-cucina.html': ['images/final/case-05-island-passages.jpg', 'Isola, sedute e aperture'],
-    'caso-secondo-bagno-impianti-spazio.html': ['images/final/case-06-second-bath.jpg', 'Secondo bagno e vincoli impiantistici'],
-    'caso-open-space-tv-divano-passaggi.html': ['images/final/case-07-tv-sofa-path.jpg', 'TV, divano e percorso principale'],
-    'caso-lavello-sotto-finestra-aperture.html': ['images/final/case-08-sink-window.jpg', 'Lavello sotto finestra e apertura dell’infisso'],
-    'caso-scala-interna-terrazzo-planimetria.html': ['images/final/case-09-stair-plan.jpg', 'Scala interna e distribuzione della casa'],
-    'caso-open-space-percorso-centrale.html': ['images/final/case-10-central-path.jpg', 'Open space con percorso centrale'],
-    'caso-terza-camera-zona-giorno.html': ['images/final/case-11-third-bedroom.jpg', 'Terza camera e zona giorno residua'],
-    'caso-cucina-profondita-75-angolo.html': ['images/final/case-12-deep-corner.jpg', 'Cucina profonda e accessibilità dell’angolo'],
-    'caso-bagno-lavatrice-dieci-centimetri.html': ['images/final/case-13-bath-laundry.jpg', 'Bagno compatto con lavanderia'],
-    'caso-cabina-armadio-camera-irregolare.html': ['images/final/case-14-wardrobe-room.jpg', 'Camera irregolare con cabina armadio'],
-    'caso-divano-letto-soggiorno-tre-persone.html': ['images/final/case-15-sofa-bed.jpg', 'Divano letto in soggiorno per tre persone']
+    'caso-lavastoviglie-passaggio-cucina.html': ['images/caso-lavastoviglie-passaggio-2026.jpg', 'Lavastoviglie aperta e passaggio bloccato'],
+    'caso-ingresso-tavolo-living.html': ['images/caso-ingresso-living-2026.jpg', 'Ingresso diretto su tavolo e soggiorno'],
+    'caso-cucina-piccola-tre-lati.html': ['images/caso-cucina-tre-lati-2026.jpg', 'Cucina compatta su tre lati'],
+    'caso-preventivo-cucina-sconto-valore.html': ['images/caso-preventivo-valore-2026.jpg', 'Preventivo cucina e valore reale'],
+    'caso-isola-passaggi-cucina.html': ['images/caso-isola-passaggi-2026.jpg', 'Isola, sedute e aperture'],
+    'caso-secondo-bagno-impianti-spazio.html': ['images/caso-secondo-bagno-2026.jpg', 'Secondo bagno e vincoli impiantistici'],
+    'caso-open-space-tv-divano-passaggi.html': ['images/caso-open-space-tv-2026.jpg', 'TV, divano e percorso principale'],
+    'caso-lavello-sotto-finestra-aperture.html': ['images/caso-lavello-finestra-2026.jpg', 'Lavello sotto finestra e apertura dell’infisso'],
+    'caso-scala-interna-terrazzo-planimetria.html': ['images/caso-scala-planimetria-2026.jpg', 'Scala interna e distribuzione della casa'],
+    'caso-open-space-percorso-centrale.html': ['images/caso-percorso-centrale-2026.jpg', 'Open space con percorso centrale'],
+    'caso-terza-camera-zona-giorno.html': ['images/caso-terza-camera-2026.jpg', 'Terza camera e zona giorno residua'],
+    'caso-cucina-profondita-75-angolo.html': ['images/caso-profondita-angolo-2026.jpg', 'Cucina profonda e accessibilità dell’angolo'],
+    'caso-bagno-lavatrice-dieci-centimetri.html': ['images/caso-bagno-lavatrice-2026.jpg', 'Bagno compatto con lavanderia'],
+    'caso-cabina-armadio-camera-irregolare.html': ['images/caso-cabina-armadio-2026.jpg', 'Camera irregolare con cabina armadio'],
+    'caso-divano-letto-soggiorno-tre-persone.html': ['images/caso-divano-letto-2026.jpg', 'Divano letto in soggiorno per tre persone']
   };
 
-  const fallback = 'images/final/hero-home-reference.jpg';
+  const pagesWithoutApprovedHero = new Set([
+    'render-fotorealistici-interni.html',
+    'agenzie-immobiliari.html',
+    'controllo-mirato.html',
+    'analisi-completa.html',
+    'progetto-da-zero.html'
+  ]);
 
   const setImage = (image, visual) => {
     if (!image || !visual) return;
     image.onerror = () => {
       image.onerror = null;
-      image.src = `${fallback}?v=${version}`;
+      image.closest('figure')?.remove();
+      document.body.classList.add('s90g-no-hero-image');
     };
     image.src = `${visual[0]}?v=${version}`;
     image.alt = visual[1];
     image.removeAttribute('srcset');
   };
 
-  const applyVisual = (container, visual) => {
-    if (!container || !visual) return;
-    let figure = container.querySelector('figure.premium-image');
+  const heroContainer = document.querySelector('main .premium-hero .container, main .professional-hero .container');
+
+  if (pagesWithoutApprovedHero.has(page)) {
+    heroContainer?.querySelector('figure.premium-image')?.remove();
+    document.body.classList.add('s90g-no-hero-image');
+  } else if (heroContainer && visualMap[page]) {
+    let figure = heroContainer.querySelector('figure.premium-image');
     if (!figure) {
       figure = document.createElement('figure');
       figure.className = 'premium-image';
-      container.prepend(figure);
+      heroContainer.prepend(figure);
     }
     let image = figure.querySelector('img');
     if (!image) {
       image = document.createElement('img');
       figure.appendChild(image);
     }
-    setImage(image, visual);
-  };
-
-  applyVisual(document.querySelector('main .premium-hero .container, main .professional-hero .container'), visualMap[page]);
+    setImage(image, visualMap[page]);
+  }
 
   if (page === 'casi-analizzati.html') {
     document.querySelectorAll('article').forEach(article => {
