@@ -4,7 +4,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **50**
+- Pagine HTML controllate: **51**
 - File immagine presenti: **83**
 - Immagini di contenuto pubblicate: **43**
 - File riutilizzati in più punti: **16**
