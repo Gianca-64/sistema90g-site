@@ -1,4 +1,22 @@
 (() => {
+  const OFFICIAL_EMAIL = 'sistema90g@icloud.com';
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.setAttribute('href', `mailto:${OFFICIAL_EMAIL}`);
+    if (link.textContent.includes('@')) {
+      link.textContent = OFFICIAL_EMAIL;
+    }
+  });
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  textNodes.forEach(node => {
+    node.nodeValue = node.nodeValue
+      .replace(/info@sistema90g\.it/gi, OFFICIAL_EMAIL)
+      .replace(/sistema90g@sistema90g\.it/gi, OFFICIAL_EMAIL);
+  });
+
   const header = document.querySelector('[data-s90g-header]');
   const button = header?.querySelector('.nav-toggle');
   const nav = header?.querySelector('.main-nav');
