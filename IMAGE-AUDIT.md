@@ -55,7 +55,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
 | `index.html` | `images/final/hero-home-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi preventiva di progetto, arredi e spazi prima dell |
 | `index.html` | `images/90g-style-conflitto.svg` | Adatto quando: non esiste ancora una soluzione definita o quella ricevuta non risponde alle esigenze. | Esempio di interferenza tra lavastoviglie aperta e passaggio in cucina |
-| `progetto-da-zero.html` | `images/final/hero-project-zero-unique.svg` | — | Tavolo di progettazione con planimetria, campioni e interno ancora da definire |
+| `progetto-da-zero.html` | `images/hero-progetto-zero-90g.jpg` | — | Tavolo di progettazione con planimetria, campioni e proposta ancora da definire |
 | `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
 
@@ -189,6 +189,7 @@ Nessun riferimento mancante.
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-cases-reference.jpg` — —
+- `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
 - `images/hero-analisi-90g.jpg` — —
@@ -208,7 +209,6 @@ Nessun riferimento mancante.
 - `images/hero-planimetria-90g.jpg` — —
 - `images/hero-preventivo-90g-2026.jpg` — —
 - `images/hero-preventivo-90g.jpg` — —
-- `images/hero-progetto-zero-90g.jpg` — —
 - `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
 - `images/hero-verifica-planimetria-casa.svg` — viewBox 0 0 1200 760
 - `images/homepage-approvata.svg` — viewBox 0 0 560 373
