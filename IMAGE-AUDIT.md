@@ -7,10 +7,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **49**
 - File immagine presenti: **81**
 - Immagini di contenuto pubblicate: **42**
-- File riutilizzati in più punti: **15**
+- File riutilizzati in più punti: **16**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **53**
+- Immagini non utilizzate: **54**
 
 ## Mappa pagina → immagine → contesto
 
@@ -34,7 +34,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/final/case-13-bath-laundry-unique.svg` | Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
 | `casi-analizzati.html` | `images/final/case-14-wardrobe-room-unique.svg` | Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari. | Camera irregolare con letto, guardaroba e percorso verso il balcone |
 | `casi-analizzati.html` | `images/final/case-15-sofa-bed.jpg` | La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone. | Soggiorno cucina usato ogni sera come spazio notte |
-| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema di un bagno compatto con lavatrice e porta più larga di dieci centimetri |
+| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
 | `caso-cucina-piccola-tre-lati.html` | `images/final/case-03-compact-kitchen.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina compatta con ante e cassetti aperti che occupano il centro stanza |
 | `caso-cucina-profondita-75-angolo.html` | `images/final/case-12-deep-corner.jpg` | Usiamo Google Analytics solo se accetti. | Cucina ad angolo con profondità 75 centimetri e mobile angolare aperto |
@@ -127,6 +127,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cucina-profondita-75-angolo.html` — Usiamo Google Analytics solo se accetti.
 
+### `images/final/case-13-bath-laundry-unique.svg` — 2 utilizzi
+
+- `casi-analizzati.html` — Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero.
+- `caso-bagno-lavatrice-dieci-centimetri.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
+
 ### `images/final/case-14-wardrobe-room-unique.svg` — 2 utilizzi
 
 - `casi-analizzati.html` — Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari.
@@ -181,6 +186,7 @@ Nessun riferimento mancante.
 - `images/caso-scala-planimetria-2026.jpg` — —
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
+- `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-cases-reference.jpg` — —
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
