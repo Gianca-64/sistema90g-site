@@ -154,6 +154,8 @@ Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
+- `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
+- `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 - `site-ui-clean.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 
 ## Immagini disponibili ma non utilizzate
