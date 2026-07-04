@@ -29,10 +29,116 @@ main figure > img {
   mix-blend-mode: multiply;
 }
 
-main .premium-hero .premium-image {
+body.s90g-unified .premium-hero .container,
+body.s90g-unified .professional-hero .container,
+body.s90g-unified .hero {
   padding: 0 !important;
-  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body.s90g-unified .premium-hero,
+body.s90g-unified .professional-hero,
+body.s90g-unified .hero {
+  padding-block: clamp(48px, 7vw, 112px) !important;
+}
+
+body.s90g-unified .premium-three,
+body.s90g-unified .case-grid,
+body.s90g-unified .cases-grid,
+body.s90g-unified .casi-grid,
+body.s90g-unified .problem-grid,
+body.s90g-unified .method-grid,
+body.s90g-unified .check-grid,
+body.s90g-unified .economic-value-grid,
+body.s90g-unified .compare-grid,
+body.s90g-unified .professional-target-grid,
+body.s90g-unified .audit-grid {
+  gap: clamp(36px, 4vw, 70px) !important;
+}
+
+body.s90g-unified .premium-three article,
+body.s90g-unified .case-card,
+body.s90g-unified .case-grid article,
+body.s90g-unified .cases-grid article,
+body.s90g-unified .casi-grid article,
+body.s90g-unified .problem,
+body.s90g-unified .method,
+body.s90g-unified .compare-grid article,
+body.s90g-unified .economic-value-grid article,
+body.s90g-unified .professional-target-grid article,
+body.s90g-unified .audit-grid article {
+  position: relative;
+  padding: 28px 0 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(49,81,59,.22) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.s90g-unified article > span,
+body.s90g-unified .case-card > span,
+body.s90g-unified .step {
+  min-height: 0 !important;
+  margin-bottom: 16px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-size: 11px !important;
+  letter-spacing: .15em !important;
+}
+
+body.s90g-unified .case-card-image,
+body.s90g-unified .case-card img,
+body.s90g-unified .premium-three article > img,
+body.s90g-unified .case-grid article > img,
+body.s90g-unified .cases-grid article > img,
+body.s90g-unified .casi-grid article > img,
+body.s90g-unified .professional-target-grid article > img {
+  width: 100% !important;
+  max-height: none !important;
+  margin: 0 0 26px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+}
+
+body.s90g-unified .quick-answer,
+body.s90g-unified .case-note,
+body.s90g-unified .case-limit,
+body.s90g-unified details {
+  padding: 26px 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(49,81,59,.24) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.s90g-unified .premium-cta .container,
+body.s90g-unified .final-cta .container {
+  padding: clamp(44px, 6vw, 88px) 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(49,81,59,.26) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.s90g-unified .brand-mark {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 @media (max-width: 820px) {
@@ -51,5 +157,17 @@ main .premium-hero .premium-image {
   main figure > img {
     width: 100% !important;
     height: auto !important;
+  }
+
+  body.s90g-unified .premium-hero .container,
+  body.s90g-unified .professional-hero .container {
+    gap: 34px !important;
+    padding: 0 !important;
+  }
+
+  body.s90g-unified .button,
+  body.s90g-unified .button-primary,
+  body.s90g-unified .button-secondary {
+    width: auto !important;
   }
 }
