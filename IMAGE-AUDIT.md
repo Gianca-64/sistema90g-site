@@ -213,6 +213,7 @@ Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
+- `site-ui-clean.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `visual-reference-fix.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 
 ## Immagini disponibili ma non utilizzate
