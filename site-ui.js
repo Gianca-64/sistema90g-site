@@ -1,1 +1,1 @@
-import('./site-ui-clean.js?v=20260704-editorial3').then(() => import('./s90g-visual-system.js?v=20260704-visual-system1'));
+import('./site-ui-clean.js?v=20260704-editorial4');
