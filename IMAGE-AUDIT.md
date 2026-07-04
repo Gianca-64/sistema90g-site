@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **51**
 - File immagine presenti: **83**
-- Immagini di contenuto pubblicate: **43**
+- Immagini di contenuto pubblicate: **44**
 - File riutilizzati in più punti: **16**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **55**
+- Immagini non utilizzate: **54**
 
 ## Mappa pagina → immagine → contesto
 
@@ -50,6 +50,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-preventivo-cucina-sconto-valore.html` | `images/final/case-04-quote.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Preventivo cucina con sconto evidente e voci da chiarire |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/final/case-09-stair-plan.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di una scala interna verso il terrazzo e dei suoi effetti sulla planimetria |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/final/case-06-second-bath.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi distributiva per ricavare un secondo bagno |
+| `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/final/case-17-living-piano.svg` | — | Soggiorno con tavolo, divano, TV e pianoforte verticale con spazio frontale evidenziato |
 | `caso-terza-camera-zona-giorno.html` | `images/final/case-11-third-bedroom.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale per ricavare una terza camera senza compromettere la zona giorno |
 | `chi-e-sistema90g.html` | `images/final/hero-about-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di un progetto casa prima della firma |
 | `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
@@ -192,7 +193,6 @@ Nessun riferimento mancante.
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
-- `images/final/case-17-living-piano.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
