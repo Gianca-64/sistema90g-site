@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **49**
 - File immagine presenti: **81**
-- Immagini di contenuto pubblicate: **41**
+- Immagini di contenuto pubblicate: **42**
 - File riutilizzati in più punti: **16**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **55**
+- Immagini non utilizzate: **54**
 
 ## Mappa pagina → immagine → contesto
 
@@ -55,6 +55,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
 | `index.html` | `images/final/hero-home-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi preventiva di progetto, arredi e spazi prima dell |
 | `index.html` | `images/90g-style-conflitto.svg` | Adatto quando: non esiste ancora una soluzione definita o quella ricevuta non risponde alle esigenze. | Esempio di interferenza tra lavastoviglie aperta e passaggio in cucina |
+| `progetto-da-zero.html` | `images/final/hero-project-zero-unique.svg` | — | Tavolo di progettazione con planimetria, campioni e interno ancora da definire |
 | `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
 
@@ -188,7 +189,6 @@ Nessun riferimento mancante.
 - `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
 - `images/hero-analisi-90g.jpg` — —
