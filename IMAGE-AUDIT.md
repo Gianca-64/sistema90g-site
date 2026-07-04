@@ -7,10 +7,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **49**
 - File immagine presenti: **81**
 - Immagini di contenuto pubblicate: **42**
-- File riutilizzati in più punti: **16**
+- File riutilizzati in più punti: **14**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **54**
+- Immagini non utilizzate: **52**
 
 ## Mappa pagina → immagine → contesto
 
@@ -18,7 +18,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 |---|---|---|---|
 | `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
 | `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
-| `casi-analizzati.html` | `images/final/hero-cases-reference.jpg` | Usiamo Google Analytics solo se accetti. | Raccolta dei casi analizzati da Sistema 90G |
+| `casi-analizzati.html` | `images/final/hero-cases-method-unique.svg` | Usiamo Google Analytics solo se accetti. | Un unico ambiente analizzato attraverso percorsi, aperture e funzioni in conflitto |
 | `casi-analizzati.html` | `images/final/case-01-dishwasher.jpg` | Quindici criticità diverse, ciascuna legata a una decisione reale. | Lavastoviglie aperta e passaggio ridotto |
 | `casi-analizzati.html` | `images/final/case-02-entry-living.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso sul tavolo e living compresso |
 | `casi-analizzati.html` | `images/final/case-03-compact-kitchen.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
@@ -31,8 +31,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/final/case-10-central-path.jpg` | Foro nel solaio, partenza e sbarco vanno verificati prima degli altri ambienti. | Open space attraversato dal percorso |
 | `casi-analizzati.html` | `images/final/case-11-third-bedroom.jpg` | Scala, ripostiglio e accesso alla zona notte possono continuare a dividere il living. | Terza camera ricavata dalla zona giorno |
 | `casi-analizzati.html` | `images/final/case-12-deep-corner.jpg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina con basi profonde e angolo |
-| `casi-analizzati.html` | `images/final/case-13-bath-laundry.jpg` | Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero. | Bagno compatto con lavatrice e porta più larga di dieci centimetri |
-| `casi-analizzati.html` | `images/final/case-14-wardrobe-room.jpg` | Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari. | Camera irregolare con possibile cabina armadio |
+| `casi-analizzati.html` | `images/final/case-13-bath-laundry-unique.svg` | Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
+| `casi-analizzati.html` | `images/final/case-14-wardrobe-room-unique.svg` | Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari. | Camera irregolare con letto, guardaroba e percorso verso il balcone |
 | `casi-analizzati.html` | `images/final/case-15-sofa-bed.jpg` | La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone. | Soggiorno cucina usato ogni sera come spazio notte |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema di un bagno compatto con lavatrice e porta più larga di dieci centimetri |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di una camera irregolare con cabina armadio, letto e accesso al balcone |
@@ -127,16 +127,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cucina-profondita-75-angolo.html` — Usiamo Google Analytics solo se accetti.
 
-### `images/final/case-13-bath-laundry.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero.
-- `caso-bagno-lavatrice-dieci-centimetri.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-14-wardrobe-room.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari.
-- `caso-cabina-armadio-camera-irregolare.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
 ### `images/final/case-15-sofa-bed.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone.
@@ -186,9 +176,7 @@ Nessun riferimento mancante.
 - `images/caso-scala-planimetria-2026.jpg` — —
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
-- `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
+- `images/final/hero-cases-reference.jpg` — —
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
 - `images/hero-analisi-90g.jpg` — —
