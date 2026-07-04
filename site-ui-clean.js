@@ -1,6 +1,30 @@
 (() => {
   const OFFICIAL_EMAIL = 'sistema90g@icloud.com';
 
+  const cleanResidualChat = () => {
+    document.querySelectorAll('a').forEach(link => {
+      const text = (link.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      const href = (link.getAttribute('href') || '').toLowerCase();
+      const isOfficialButton = link.classList.contains('s90g-chat-button');
+      const isWhatsapp = href.includes('wa.me') || href.includes('whatsapp');
+      const isResidualLabel = text.includes('domande rapide') || text === 'chat whatsapp' || text.includes('domande rapide chat whatsapp');
+
+      if ((isWhatsapp || isResidualLabel) && !isOfficialButton) {
+        link.remove();
+      }
+    });
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node => {
+      const value = node.nodeValue || '';
+      if (/domande\s+rapide/i.test(value)) {
+        node.nodeValue = value.replace(/domande\s+rapide/gi, '');
+      }
+    });
+  };
+
   document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
     link.setAttribute('href', `mailto:${OFFICIAL_EMAIL}`);
     if (link.textContent.includes('@')) {
@@ -16,6 +40,11 @@
       .replace(/info@sistema90g\.it/gi, OFFICIAL_EMAIL)
       .replace(/sistema90g@sistema90g\.it/gi, OFFICIAL_EMAIL);
   });
+
+  cleanResidualChat();
+
+  const observer = new MutationObserver(cleanResidualChat);
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
 
   const header = document.querySelector('[data-s90g-header]');
   const button = header?.querySelector('.nav-toggle');
