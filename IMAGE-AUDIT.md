@@ -153,7 +153,7 @@ Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
-Nessuno script modifica dinamicamente gli attributi `src` delle immagini.
+- `site-ui-clean.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 
 ## Immagini disponibili ma non utilizzate
 
