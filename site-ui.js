@@ -1,1 +1,1 @@
-import('./site-ui-clean.js');
+import('./site-ui-clean.js?v=20260704-chatfix2');
