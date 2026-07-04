@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **49**
-- File immagine presenti: **80**
+- File immagine presenti: **81**
 - Immagini di contenuto pubblicate: **41**
 - File riutilizzati in più punti: **16**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **54**
+- Immagini non utilizzate: **55**
 
 ## Mappa pagina → immagine → contesto
 
@@ -185,6 +185,7 @@ Nessuno script modifica dinamicamente gli attributi `src` delle immagini.
 - `images/caso-scala-planimetria-2026.jpg` — —
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
+- `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
