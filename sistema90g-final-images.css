@@ -24,8 +24,6 @@ main figure > img {
   background: transparent !important;
   box-shadow: none !important;
   clip-path: none !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
   mix-blend-mode: multiply;
 }
 
@@ -139,6 +137,43 @@ body.s90g-unified .brand-mark {
   border-radius: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+/* Audit immagini 04/07/2026: fusione del fondo incorporato nel JPG con la pagina. */
+main .premium-image,
+main figure.premium-image {
+  isolation: isolate;
+  overflow: visible !important;
+}
+
+main .premium-image img {
+  width: min(100%, 820px) !important;
+  margin-inline: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  -webkit-mask-image: radial-gradient(ellipse 96% 92% at center, #000 72%, rgba(0,0,0,.92) 82%, transparent 100%) !important;
+  mask-image: radial-gradient(ellipse 96% 92% at center, #000 72%, rgba(0,0,0,.92) 82%, transparent 100%) !important;
+}
+
+main img.case-card-image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  -webkit-mask-image: radial-gradient(ellipse 97% 94% at center, #000 76%, rgba(0,0,0,.94) 86%, transparent 100%) !important;
+  mask-image: radial-gradient(ellipse 97% 94% at center, #000 76%, rgba(0,0,0,.94) 86%, transparent 100%) !important;
+}
+
+body.s90g-no-hero-image .premium-hero .container,
+body.s90g-no-hero-image .professional-hero .container {
+  grid-template-columns: minmax(0, 760px) !important;
+  justify-content: start !important;
+}
+
+body.s90g-no-hero-image .premium-hero .premium-copy,
+body.s90g-no-hero-image .professional-hero .premium-copy {
+  max-width: 760px !important;
 }
 
 @media (max-width: 820px) {
