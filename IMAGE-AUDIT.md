@@ -214,6 +214,7 @@ Nessun riferimento mancante.
 ## Script che possono cambiare immagini nel browser
 
 - `site-ui-clean.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
+- `site-ui-clean.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 
 ## Immagini disponibili ma non utilizzate
 
