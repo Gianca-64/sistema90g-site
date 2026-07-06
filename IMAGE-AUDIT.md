@@ -4,13 +4,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **51**
+- Pagine HTML controllate: **52**
 - File immagine presenti: **84**
-- Immagini di contenuto pubblicate: **46**
+- Immagini di contenuto pubblicate: **47**
 - File riutilizzati in più punti: **18**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **55**
+- Immagini non utilizzate: **54**
 
 ## Mappa pagina → immagine → contesto
 
@@ -37,6 +37,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/final/case-16-two-apartments-access.svg` | Cucina, pranzo, passaggio e sonno si contendono lo stesso ambiente. | Planimetria divisa in due appartamenti con due cucine e tre bagni |
 | `casi-analizzati.html` | `images/final/case-17-living-piano.svg` | Due cucine e tre bagni possono decidere la distribuzione più dei metri apparentemente persi. | Soggiorno con tavolo, divano, TV e pianoforte verticale |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
+| `caso-cabina-armadio-125-cm-passaggio.html` | `images/final/case-18-wardrobe-125cm.svg` | — | Cabina armadio larga 125 centimetri con contenimento e passaggio residuo |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
 | `caso-cucina-piccola-tre-lati.html` | `images/final/case-03-compact-kitchen.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina compatta con ante e cassetti aperti che occupano il centro stanza |
 | `caso-cucina-profondita-75-angolo.html` | `images/final/case-12-deep-corner.jpg` | Usiamo Google Analytics solo se accetti. | Cucina ad angolo con profondità 75 centimetri e mobile angolare aperto |
@@ -206,7 +207,6 @@ Nessun riferimento mancante.
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
-- `images/final/case-18-wardrobe-125cm.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
