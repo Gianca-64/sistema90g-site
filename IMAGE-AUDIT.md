@@ -6,8 +6,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **84**
-- Immagini di contenuto pubblicate: **47**
-- File riutilizzati in più punti: **18**
+- Immagini di contenuto pubblicate: **48**
+- File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **54**
@@ -19,7 +19,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
 | `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
 | `casi-analizzati.html` | `images/final/hero-cases-method-unique.svg` | Usiamo Google Analytics solo se accetti. | Un unico ambiente analizzato attraverso percorsi, aperture e funzioni in conflitto |
-| `casi-analizzati.html` | `images/final/case-01-dishwasher.jpg` | Diciassette criticità diverse, ciascuna legata a una decisione reale. | Lavastoviglie aperta e passaggio ridotto |
+| `casi-analizzati.html` | `images/final/case-01-dishwasher.jpg` | Diciotto criticità diverse, ciascuna legata a una decisione reale. | Lavastoviglie aperta e passaggio ridotto |
 | `casi-analizzati.html` | `images/final/case-02-entry-living.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso sul tavolo e living compresso |
 | `casi-analizzati.html` | `images/final/case-03-compact-kitchen.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
 | `casi-analizzati.html` | `images/final/case-04-quote.jpg` | Ante ed elettrodomestici aperti occupano il centro stanza. | Preventivo cucina e voci da chiarire |
@@ -36,6 +36,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/final/case-15-sofa-bed.jpg` | La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone. | Soggiorno cucina usato ogni sera come spazio notte |
 | `casi-analizzati.html` | `images/final/case-16-two-apartments-access.svg` | Cucina, pranzo, passaggio e sonno si contendono lo stesso ambiente. | Planimetria divisa in due appartamenti con due cucine e tre bagni |
 | `casi-analizzati.html` | `images/final/case-17-living-piano.svg` | Due cucine e tre bagni possono decidere la distribuzione più dei metri apparentemente persi. | Soggiorno con tavolo, divano, TV e pianoforte verticale |
+| `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | In 4,35 × 3,80 metri tavolo, divano, TV e pianoforte possono contendersi la stessa fascia d'uso. | Cabina armadio larga 125 centimetri con passaggio residuo |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/final/case-18-wardrobe-125cm.svg` | — | Cabina armadio larga 125 centimetri con contenimento e passaggio residuo |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
@@ -74,7 +75,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ### `images/final/case-01-dishwasher.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — Diciassette criticità diverse, ciascuna legata a una decisione reale.
+- `casi-analizzati.html` — Diciotto criticità diverse, ciascuna legata a una decisione reale.
 - `caso-lavastoviglie-passaggio-cucina.html` — Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.
 
 ### `images/final/case-02-entry-living.jpg` — 2 utilizzi
@@ -156,6 +157,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Due cucine e tre bagni possono decidere la distribuzione più dei metri apparentemente persi.
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — —
+
+### `images/final/case-18-wardrobe-125cm.svg` — 2 utilizzi
+
+- `casi-analizzati.html` — In 4,35 × 3,80 metri tavolo, divano, TV e pianoforte possono contendersi la stessa fascia d'uso.
+- `caso-cabina-armadio-125-cm-passaggio.html` — —
 
 ## File differenti con contenuto identico
 
