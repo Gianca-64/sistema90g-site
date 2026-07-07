@@ -6,16 +6,21 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708a';
+  link.href='sistema90g-audit-fix-20260707.css?v=20260708g';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
+}
+function hasArticleType(item){
+  if(!item)return false;
+  const type=item['@type'];
+  return type==='Article'||(Array.isArray(type)&&type.includes('Article'));
 }
 function hasStaticArticleSchema(){
   return [...document.querySelectorAll('script[type="application/ld+json"]')].some(script=>{
     try{
       const data=JSON.parse(script.textContent||'{}');
       const items=Array.isArray(data)?data:(Array.isArray(data['@graph'])?data['@graph']:[data]);
-      return items.some(item=>item&&item['@type']==='Article');
+      return items.some(hasArticleType);
     }catch{return false;}
   });
 }
