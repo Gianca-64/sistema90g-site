@@ -77,8 +77,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
 | `caso-terza-camera-zona-giorno.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
-| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026 | Stanza ristrutturata con elemento metallico perimetrale e cavi a vista da identificare prima della copertura |
-| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Descrivi cosa è stato realizzato e allega fotografie, elaborati e documenti disponibili. | Analisi di una stanza con elementi perimetrali e impianto a vista |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/09_CHI_SONO_HERO.png` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Analisi indipendente di un progetto casa prima della firma |
 | `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
@@ -225,7 +225,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 21 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 22 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
@@ -244,6 +244,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-secondo-bagno-impianti-spazio.html` — Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere.
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Invia planimetria, misure e dimensioni reali degli arredi.
 - `caso-terza-camera-zona-giorno.html` — Invia planimetria, misure, aperture e posizione degli impianti esistenti.
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Invia fotografie, elaborati e documenti disponibili.
 - `contatti.html` — La prima valutazione non è una consulenza completa e non obbliga ad acquistare.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
@@ -264,11 +265,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — —
 
-### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 3 utilizzi
+### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
 
 - `casi-analizzati.html` — Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte.
-- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026
-- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Descrivi cosa è stato realizzato e allega fotografie, elaborati e documenti disponibili.
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
 ## File differenti con contenuto identico
 
