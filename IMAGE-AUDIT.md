@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **97**
+- Immagini di contenuto pubblicate: **98**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **83**
+- Immagini non utilizzate: **84**
 
 ## Mappa pagina → immagine → contesto
 
@@ -46,7 +46,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/final/case-18-wardrobe-125cm.svg` | — | Cabina armadio larga 125 centimetri con contenimento e passaggio residuo |
-| `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
+| `caso-cabina-armadio-camera-irregolare.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
+| `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
 | `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
 | `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
 | `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
@@ -193,9 +194,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
-### `images/20_CASI_DISTRIBUZIONE.png` — 4 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.png` — 5 utilizzi
 
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
+- `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
@@ -217,10 +219,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 17 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 18 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
+- `caso-cabina-armadio-camera-irregolare.html` — Invia planimetria, misure, fotografie e posizione di letto e aperture.
 - `caso-cucina-piccola-tre-lati.html` — Invia planimetria, misure e progetto della composizione.
 - `caso-cucina-profondita-75-angolo.html` — Invia progetto, misure e sistema di apertura previsto.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
@@ -331,6 +334,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-12-deep-corner.jpg` — —
 - `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-13-bath-laundry.jpg` — —
+- `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
