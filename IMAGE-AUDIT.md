@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **78**
+- Immagini di contenuto pubblicate: **80**
 - File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **76**
+- Immagini non utilizzate: **75**
 
 ## Mappa pagina → immagine → contesto
 
@@ -90,6 +90,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
 | `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute. | Materiali e dettagli di progetto |
+| `render-fotorealistici-interni.html` | `images/13_SERVIZI_HERO.png` | Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com | Visualizzazione di un ambiente interno con annotazioni progettuali |
+| `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.png` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
 | `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.png` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
@@ -143,9 +145,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
 - `progetto-da-zero.html` — €797
 
-### `images/17_SERVIZI_FINITURE.png` — 2 utilizzi
+### `images/17_SERVIZI_FINITURE.png` — 3 utilizzi
 
 - `progetto-da-zero.html` — Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute.
+- `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
 
 ### `images/19_CASI_CUCINA.png` — 2 utilizzi
@@ -233,7 +236,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_CHI_SONO_DETTAGLIO.png` — —
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
-- `images/13_SERVIZI_HERO.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/27_CONTATTI_HERO.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
