@@ -6,9 +6,18 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260707f';
+  link.href='sistema90g-audit-fix-20260707.css?v=20260708a';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
+}
+function hasStaticArticleSchema(){
+  return [...document.querySelectorAll('script[type="application/ld+json"]')].some(script=>{
+    try{
+      const data=JSON.parse(script.textContent||'{}');
+      const items=Array.isArray(data)?data:(Array.isArray(data['@graph'])?data['@graph']:[data]);
+      return items.some(item=>item&&item['@type']==='Article');
+    }catch{return false;}
+  });
 }
 function addStructuredData(){
   if(document.querySelector('script[data-s90g-structured-data]'))return;
@@ -22,7 +31,7 @@ function addStructuredData(){
     {'@type':'WebSite','@id':'https://sistema90g.it/#website','url':'https://sistema90g.it/','name':'Sistema 90G','publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'},
     {'@type':'WebPage','@id':canonical+'#webpage','url':canonical,'name':title,'description':description,'isPartOf':{'@id':'https://sistema90g.it/#website'},'about':{'@id':'https://sistema90g.it/#organization'},'primaryImageOfPage':{'@type':'ImageObject','url':image},'inLanguage':'it-IT'}
   ];
-  if(location.pathname.includes('caso-')){
+  if(location.pathname.includes('caso-')&&!hasStaticArticleSchema()){
     graph.push({'@type':'Article','headline':title,'description':description,'image':[image],'mainEntityOfPage':canonical,'author':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'});
   }
   const script=document.createElement('script');
