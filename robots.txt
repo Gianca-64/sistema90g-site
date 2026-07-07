@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sistema90g.it/sitemap.xml
+Sitemap: https://sistema90g.it/image-sitemap.xml
