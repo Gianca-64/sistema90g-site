@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **60**
-- File riutilizzati in più punti: **19**
+- Immagini di contenuto pubblicate: **64**
+- File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **83**
+- Immagini non utilizzate: **82**
 
 ## Mappa pagina → immagine → contesto
 
@@ -56,7 +56,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-secondo-bagno-impianti-spazio.html` | `images/final/case-06-second-bath.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi distributiva per ricavare un secondo bagno |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/final/case-17-living-piano.svg` | — | Soggiorno con tavolo, divano, TV e pianoforte verticale con spazio frontale evidenziato |
 | `caso-terza-camera-zona-giorno.html` | `images/final/case-11-third-bedroom.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale per ricavare una terza camera senza compromettere la zona giorno |
-| `chi-e-sistema90g.html` | `images/final/hero-about-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di un progetto casa prima della firma |
+| `chi-e-sistema90g.html` | `images/09_CHI_SONO_HERO.png` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Analisi indipendente di un progetto casa prima della firma |
+| `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
+| `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
+| `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
+| `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.png` | Descrivi il dubbio principale e allega il materiale in un unico invio. | Caso analizzato da Sistema 90G |
 | `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
 | `index.html` | `images/01_HOME_HERO.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
@@ -78,6 +82,21 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
 
 ## Doppioni pubblicati
+
+### `images/01_individuo_il_problema.svg` — 2 utilizzi
+
+- `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
+- `index.html` — Analizzo il progetto simulando l'uso reale degli spazi.
+
+### `images/02_valuto_la_conseguenza.svg` — 2 utilizzi
+
+- `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
+- `index.html` — Scopro conflitti, dubbi e criticità invisibili.
+
+### `images/03_definisco_le_priorita.svg` — 2 utilizzi
+
+- `chi-e-sistema90g.html` — Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova.
+- `index.html` — Cosa può costare, limitare o complicare.
 
 ### `images/90g-style-conflitto.svg` — 2 utilizzi
 
@@ -200,13 +219,11 @@ Nessun riferimento mancante.
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_analisi_completa.svg` — viewBox 0 0 64 64
 - `images/08_progetto_da_zero.svg` — viewBox 0 0 64 64
-- `images/09_CHI_SONO_HERO.png` — —
 - `images/09_finiture_dettagli.svg` — viewBox 0 0 64 64
 - `images/10_CHI_SONO_METODO.png` — —
 - `images/10_agenzie_collaborazione.svg` — viewBox 0 0 64 64
 - `images/11_CHI_SONO_DETTAGLIO.png` — —
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
-- `images/12_CHI_SONO_CASO.png` — —
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
 - `images/17_SERVIZI_FINITURE.png` — —
@@ -253,6 +270,7 @@ Nessun riferimento mancante.
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
+- `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-home-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
