@@ -6,8 +6,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **76**
-- File riutilizzati in più punti: **18**
+- Immagini di contenuto pubblicate: **78**
+- File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
 - Immagini non utilizzate: **76**
@@ -90,6 +90,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
 | `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute. | Materiali e dettagli di progetto |
+| `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.png` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
+| `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
 | `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.png` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
 | `verifica-planimetria-distribuzione-casa.html` | `images/03_HOME_METODO.png` | Invia il materiale disponibile e descrivi cosa devi decidere. La prima lettura serve a capire se il caso è adatto e quale livello è necessar | Planimetrie e percorsi analizzati da Sistema 90G |
 
@@ -141,6 +143,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
 - `progetto-da-zero.html` — €797
 
+### `images/17_SERVIZI_FINITURE.png` — 2 utilizzi
+
+- `progetto-da-zero.html` — Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute.
+- `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
+
 ### `images/19_CASI_CUCINA.png` — 2 utilizzi
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
@@ -156,11 +163,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
 - `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 3 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 4 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
+- `scelta-finiture-casa.html` — Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un
 
 ### `images/final/case-05-island-passages.jpg` — 2 utilizzi
 
