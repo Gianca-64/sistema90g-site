@@ -10,7 +10,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **87**
+- Immagini non utilizzate: **91**
 
 ## Mappa pagina → immagine → contesto
 
@@ -35,11 +35,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
 | `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.png` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Preventivo cucina |
-| `casi-analizzati.html` | `images/final/case-05-island-passages.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola e passaggi |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola cucina e passaggi |
 | `casi-analizzati.html` | `images/21_CASI_BAGNO.png` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
-| `casi-analizzati.html` | `images/final/case-07-tv-sofa-path.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
-| `casi-analizzati.html` | `images/final/case-08-sink-window.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
-| `casi-analizzati.html` | `images/final/case-11-third-bedroom.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Terza camera |
+| `casi-analizzati.html` | `images/06_HOME_CASO_2.png` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
+| `casi-analizzati.html` | `images/05_HOME_CASO_1.png` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Terza camera |
 | `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
@@ -145,8 +145,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Cosa può costare, limitare o complicare.
 - `progetto-da-zero.html` — Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali.
 
-### `images/05_HOME_CASO_1.png` — 3 utilizzi
+### `images/05_HOME_CASO_1.png` — 4 utilizzi
 
+- `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Esempi di situazioni analizzate ogni giorno.
@@ -157,8 +158,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Modifiche, lavori in più e compromessi.
 - `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
 
-### `images/06_HOME_CASO_2.png` — 5 utilizzi
+### `images/06_HOME_CASO_2.png` — 6 utilizzi
 
+- `casi-analizzati.html` — Impianti, accessi e qualità degli ambienti vanno letti insieme.
 - `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
@@ -191,17 +193,19 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
 
-### `images/19_CASI_CUCINA.png` — 5 utilizzi
+### `images/19_CASI_CUCINA.png` — 6 utilizzi
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
+- `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
-### `images/20_CASI_DISTRIBUZIONE.png` — 6 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.png` — 7 utilizzi
 
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
+- `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
 - `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
@@ -338,8 +342,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-02-entry-living.jpg` — —
 - `images/final/case-03-compact-kitchen.jpg` — —
 - `images/final/case-04-quote.jpg` — —
+- `images/final/case-05-island-passages.jpg` — —
 - `images/final/case-06-second-bath.jpg` — —
+- `images/final/case-07-tv-sofa-path.jpg` — —
+- `images/final/case-08-sink-window.jpg` — —
 - `images/final/case-10-central-path.jpg` — —
+- `images/final/case-11-third-bedroom.jpg` — —
 - `images/final/case-12-deep-corner.jpg` — —
 - `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-13-bath-laundry.jpg` — —
