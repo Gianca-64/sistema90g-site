@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **95**
+- Immagini di contenuto pubblicate: **96**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **81**
+- Immagini non utilizzate: **82**
 
 ## Mappa pagina → immagine → contesto
 
@@ -48,7 +48,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
 | `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
 | `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
-| `caso-cucina-profondita-75-angolo.html` | `images/final/case-12-deep-corner.jpg` | Usiamo Google Analytics solo se accetti. | Cucina ad angolo con profondità 75 centimetri e mobile angolare aperto |
+| `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
+| `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/final/case-15-sofa-bed.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema di soggiorno cucina trasformato ogni sera in spazio notte con divano letto |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/final/case-16-two-apartments-access.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di due appartamenti con due cucine, tre bagni e impianti da verificare |
 | `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
@@ -183,10 +184,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
 
-### `images/19_CASI_CUCINA.png` — 4 utilizzi
+### `images/19_CASI_CUCINA.png` — 5 utilizzi
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
@@ -213,10 +215,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 15 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 16 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-cucina-piccola-tre-lati.html` — Invia planimetria, misure e progetto della composizione.
+- `caso-cucina-profondita-75-angolo.html` — Invia progetto, misure e sistema di apertura previsto.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
 - `caso-isola-passaggi-cucina.html` — Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack.
 - `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
@@ -322,6 +325,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-04-quote.jpg` — —
 - `images/final/case-06-second-bath.jpg` — —
 - `images/final/case-10-central-path.jpg` — —
+- `images/final/case-12-deep-corner.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
