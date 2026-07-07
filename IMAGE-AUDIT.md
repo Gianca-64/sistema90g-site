@@ -4,13 +4,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **52**
+- Pagine HTML controllate: **53**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **73**
-- File riutilizzati in più punti: **13**
+- Immagini di contenuto pubblicate: **75**
+- File riutilizzati in più punti: **14**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **72**
+- Immagini non utilizzate: **71**
 
 ## Mappa pagina → immagine → contesto
 
@@ -59,6 +59,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-secondo-bagno-impianti-spazio.html` | `images/final/case-06-second-bath.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi distributiva per ricavare un secondo bagno |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/final/case-17-living-piano.svg` | — | Soggiorno con tavolo, divano, TV e pianoforte verticale con spazio frontale evidenziato |
 | `caso-terza-camera-zona-giorno.html` | `images/final/case-11-third-bedroom.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale per ricavare una terza camera senza compromettere la zona giorno |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026 | Stanza ristrutturata con elemento metallico perimetrale e cavi a vista da identificare prima della copertura |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Descrivi cosa è stato realizzato e allega fotografie, elaborati e documenti disponibili. | Analisi di una stanza con elementi perimetrali e impianto a vista |
 | `chi-e-sistema90g.html` | `images/09_CHI_SONO_HERO.png` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Analisi indipendente di un progetto casa prima della firma |
 | `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
@@ -163,6 +165,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — —
 
+### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
+
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Descrivi cosa è stato realizzato e allega fotografie, elaborati e documenti disponibili.
+
 ## File differenti con contenuto identico
 
 - `images/12_CHI_SONO_CASO.png`, `images/21_CASI_BAGNO.png`
@@ -227,7 +234,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
-- `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
