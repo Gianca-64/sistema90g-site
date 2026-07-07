@@ -10,7 +10,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - File riutilizzati in più punti: **23**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **74**
+- Immagini non utilizzate: **76**
 
 ## Mappa pagina → immagine → contesto
 
@@ -52,8 +52,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/final/case-16-two-apartments-access.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di due appartamenti con due cucine, tre bagni e impianti da verificare |
 | `caso-ingresso-tavolo-living.html` | `images/final/case-02-entry-living.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Ingresso che apre sulla zona pranzo con filtro che restringe il living |
 | `caso-isola-passaggi-cucina.html` | `images/final/case-05-island-passages.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di un |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/final/case-01-dishwasher.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Lavastoviglie aperta che riduce il passaggio in una cucina |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/90g-style-conflitto.svg` | Limite dell'analisi pubblica: senza le misure definitive del locale, la profondità reale dell'elettrodomestico e la posizione precisa dei fr | Analisi del passaggio davanti alla lavastoviglie in cucina |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/final/case-08-sink-window.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di lavello, rubinetto e apertura della finestra |
 | `caso-open-space-percorso-centrale.html` | `images/final/case-10-central-path.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema semplificato di un open space attraversato dal percorso verso camere e bagno |
 | `caso-open-space-tv-divano-passaggi.html` | `images/final/case-07-tv-sofa-path.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di TV, divano e passaggi in un open space |
@@ -162,9 +162,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
 
-### `images/19_CASI_CUCINA.png` — 2 utilizzi
+### `images/19_CASI_CUCINA.png` — 3 utilizzi
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
+- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
 ### `images/20_CASI_DISTRIBUZIONE.png` — 2 utilizzi
@@ -182,9 +183,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 5 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 6 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
+- `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
 - `contatti.html` — La prima valutazione non è una consulenza completa e non obbliga ad acquistare.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
@@ -268,6 +270,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-agenzie.svg` — viewBox 0 0 1600 1000
+- `images/90g-style-conflitto.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-finiture.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-hero.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
@@ -294,6 +297,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/caso-scala-planimetria-2026.jpg` — —
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
+- `images/final/case-01-dishwasher.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
