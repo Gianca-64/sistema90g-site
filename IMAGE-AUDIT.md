@@ -44,7 +44,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio con larghezza totale di 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
-| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
+| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
@@ -226,7 +226,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/21_CASI_BAGNO.png` — 3 utilizzi
 
 - `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
-- `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
 ### `images/22_CASI_PREVENTIVO.png` — 3 utilizzi
