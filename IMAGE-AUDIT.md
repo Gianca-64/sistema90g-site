@@ -7,10 +7,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
 - Immagini di contenuto pubblicate: **76**
-- File riutilizzati in più punti: **17**
+- File riutilizzati in più punti: **18**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **74**
+- Immagini non utilizzate: **76**
 
 ## Mappa pagina → immagine → contesto
 
@@ -27,8 +27,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `analisi-completa.html` | `images/02_valuto_la_conseguenza.svg` | Che cosa può non funzionare o restare poco chiaro. |  |
 | `analisi-completa.html` | `images/03_definisco_le_priorita.svg` | Che cosa potrebbe accadere nell'uso o dopo l'ordine. |  |
 | `analisi-completa.html` | `images/29_PORTALE_HERO.png` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
-| `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
-| `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
+| `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.png` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
+| `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Casi anonimizzati e semplificati, con una criticità precisa, una conseguenza concreta e i limiti dichiarati. | Archivio dei casi analizzati Sistema 90G |
 | `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
@@ -151,8 +151,14 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 2 utilizzi
+### `images/22_CASI_PREVENTIVO.png` — 2 utilizzi
 
+- `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
+- `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
+
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 3 utilizzi
+
+- `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 
@@ -229,6 +235,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/90g-style-finiture.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-hero.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
+- `images/90g-style-preventivo.svg` — viewBox 0 0 1600 1000
 - `images/caso-bagno-lavatrice-10cm-90g.svg` — viewBox 0 0 1600 1000
 - `images/caso-bagno-lavatrice-2026.jpg` — —
 - `images/caso-cabina-armadio-2026.jpg` — —
@@ -260,6 +267,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/hero-kitchen-reference.jpg` — —
 - `images/final/hero-plan-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
+- `images/final/hero-quote-reference.jpg` — —
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
 - `images/hero-analisi-90g.jpg` — —
