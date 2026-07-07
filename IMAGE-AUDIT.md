@@ -6,8 +6,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **91**
-- File riutilizzati in più punti: **24**
+- Immagini di contenuto pubblicate: **92**
+- File riutilizzati in più punti: **23**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
 - Immagini non utilizzate: **79**
@@ -52,7 +52,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/final/case-16-two-apartments-access.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di due appartamenti con due cucine, tre bagni e impianti da verificare |
 | `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
-| `caso-isola-passaggi-cucina.html` | `images/final/case-05-island-passages.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di un |
+| `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
+| `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
@@ -135,8 +136,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Cosa può costare, limitare o complicare.
 - `progetto-da-zero.html` — Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali.
 
-### `images/05_HOME_CASO_1.png` — 2 utilizzi
+### `images/05_HOME_CASO_1.png` — 3 utilizzi
 
+- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Esempi di situazioni analizzate ogni giorno.
 
@@ -205,10 +207,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 11 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 12 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
+- `caso-isola-passaggi-cucina.html` — Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack.
 - `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
 - `caso-lavello-sotto-finestra-aperture.html` — Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina.
 - `caso-open-space-tv-divano-passaggi.html` — Invia planimetria, fotografie e dimensioni degli arredi che stai valutando.
@@ -228,11 +231,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Descrivi cosa devi decidere e allega il materiale nel portale pubblico.
 - `contatti.html` — Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn
-
-### `images/final/case-05-island-passages.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
-- `caso-isola-passaggi-cucina.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
 
 ### `images/final/case-11-third-bedroom.jpg` — 2 utilizzi
 
