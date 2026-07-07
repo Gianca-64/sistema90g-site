@@ -6,16 +6,22 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **64**
-- File riutilizzati in più punti: **22**
-- Riferimenti mancanti: **0**
+- Immagini di contenuto pubblicate: **70**
+- File riutilizzati in più punti: **23**
+- Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **82**
+- Immagini non utilizzate: **79**
 
 ## Mappa pagina → immagine → contesto
 
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
+| `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.png` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
+| `agenzie-immobiliari.html` | `images/10_agenzia_collaborazione.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
+| `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
+| `agenzie-immobiliari.html` | `images/05_decidere_meglio.svg` | Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate. |  |
+| `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.png` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
+| `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.png` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
 | `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
 | `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
 | `casi-analizzati.html` | `images/final/hero-cases-method-unique.svg` | Usiamo Google Analytics solo se accetti. | Un unico ambiente analizzato attraverso percorsi, aperture e funzioni in conflitto |
@@ -88,8 +94,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
 - `index.html` — Analizzo il progetto simulando l'uso reale degli spazi.
 
-### `images/02_valuto_la_conseguenza.svg` — 2 utilizzi
+### `images/02_valuto_la_conseguenza.svg` — 3 utilizzi
 
+- `agenzie-immobiliari.html` — Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa.
 - `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
 - `index.html` — Scopro conflitti, dubbi e criticità invisibili.
 
@@ -97,6 +104,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `chi-e-sistema90g.html` — Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova.
 - `index.html` — Cosa può costare, limitare o complicare.
+
+### `images/05_decidere_meglio.svg` — 2 utilizzi
+
+- `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
+- `index.html` — Modifiche, lavori in più e compromessi.
 
 ### `images/90g-style-conflitto.svg` — 2 utilizzi
 
@@ -202,7 +214,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-Nessun riferimento mancante.
+- `agenzie-immobiliari.html` → `images/10_agenzia_collaborazione.svg`
 
 ## Script che possono cambiare immagini nel browser
 
@@ -232,10 +244,7 @@ Nessun riferimento mancante.
 - `images/20_CASI_DISTRIBUZIONE.png` — —
 - `images/21_CASI_BAGNO.png` — —
 - `images/22_CASI_PREVENTIVO.png` — —
-- `images/23_PER_AGENZIE_HERO.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
-- `images/25_PER_AGENZIE_COLLABORAZIONE.png` — —
-- `images/26_PER_AGENZIE_CASO.png` — —
 - `images/27_CONTATTI_HERO.png` — —
 - `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
 - `images/29_PORTALE_HERO.png` — —
