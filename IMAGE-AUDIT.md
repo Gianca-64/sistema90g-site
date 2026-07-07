@@ -7,10 +7,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
 - Immagini di contenuto pubblicate: **76**
-- File riutilizzati in più punti: **14**
+- File riutilizzati in più punti: **15**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **71**
+- Immagini non utilizzate: **72**
 
 ## Mappa pagina → immagine → contesto
 
@@ -69,8 +69,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.png` | Descrivi il dubbio principale e allega il materiale in un unico invio. | Caso analizzato da Sistema 90G |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.png` | €127 | Controllo mirato di una criticità specifica |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
-| `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
-| `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
+| `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.png` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
+| `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
 | `index.html` | `images/01_HOME_HERO.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
 | `index.html` | `images/05_HOME_CASO_1.png` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
 | `index.html` | `images/06_HOME_CASO_2.png` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
@@ -136,10 +136,15 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
 - `progetto-da-zero.html` — €797
 
-### `images/90g-style-conflitto.svg` — 2 utilizzi
+### `images/19_CASI_CUCINA.png` — 2 utilizzi
 
-- `caso-lavastoviglie-passaggio-cucina.html` — Limite dell'analisi pubblica: senza le misure definitive del locale, la profondità reale dell'elettrodomestico e la posizione precisa dei fr
-- `controllo-progetto-cucina.html` — Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa.
+- `casi-analizzati.html` — Problemi diversi, decisioni reali.
+- `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
+
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 2 utilizzi
+
+- `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
+- `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 
 ### `images/final/case-05-island-passages.jpg` — 2 utilizzi
 
@@ -241,6 +246,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-home-reference.jpg` — —
+- `images/final/hero-kitchen-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
