@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **48**
+- Immagini di contenuto pubblicate: **60**
 - File riutilizzati in più punti: **19**
-- Riferimenti mancanti: **0**
+- Riferimenti mancanti: **7**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **96**
+- Immagini non utilizzate: **90**
 
 ## Mappa pagina → immagine → contesto
 
@@ -59,19 +59,30 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/final/hero-about-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di un progetto casa prima della firma |
 | `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
-| `index.html` | `images/final/hero-home-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi preventiva di progetto, arredi e spazi prima dell |
-| `index.html` | `images/90g-style-conflitto.svg` | Adatto quando: non esiste ancora una soluzione definita o quella ricevuta non risponde alle esigenze. | Esempio di interferenza tra lavastoviglie aperta e passaggio in cucina |
+| `index.html` | `images/01_CASA_EROE.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
+| `index.html` | `images/05_CASA_CASO_1.png` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
+| `index.html` | `images/06_CASA_CASO_2.png` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
+| `index.html` | `images/07_CASA_CASO_3.png` | Aggiungere una stanza può ridurre luce, spazio e qualità della zona giorno. | Caso bagno con criticità di distribuzione |
+| `index.html` | `images/01_individuo_il_problema.svg` | Analizzo il progetto simulando l'uso reale degli spazi. |  |
+| `index.html` | `images/02_valuto_la_conseguenza.svg` | Scopro conflitti, dubbi e criticità invisibili. |  |
+| `index.html` | `images/03_definisco_le_priorità.svg` | Cosa può costare, limitare o complicare. |  |
+| `index.html` | `images/04_evito_costi_tardivi.svg` | Cosa chiarire prima di decidere. |  |
+| `index.html` | `images/05_decidere_meglio.svg` | Modifiche, lavori in più e compromessi. |  |
+| `index.html` | `images/03_CASA_METODO.png` | Con consapevolezza e serenità. | Planimetria annotata con conflitto di apertura |
+| `index.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.png` | Scegli il livello di analisi più adatto alla decisione che devi proteggere. | Controllo mirato |
+| `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | Verifica del problema principale prima di una scelta. | Analisi completa |
+| `index.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Analisi approfondita di progetto, spazi, funzioni e costi. | Progetto da zero |
+| `index.html` | `images/08_CASA_CHIUSURA.png` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
 | `progetto-da-zero.html` | `images/hero-progetto-zero-90g.jpg` | — | Tavolo di progettazione con planimetria, campioni e proposta ancora da definire |
 | `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
 
 ## Doppioni pubblicati
 
-### `images/90g-style-conflitto.svg` — 3 utilizzi
+### `images/90g-style-conflitto.svg` — 2 utilizzi
 
 - `caso-lavastoviglie-passaggio-cucina.html` — Limite dell'analisi pubblica: senza le misure definitive del locale, la profondità reale dell'elettrodomestico e la posizione precisa dei fr
 - `controllo-progetto-cucina.html` — Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa.
-- `index.html` — Adatto quando: non esiste ancora una soluzione definita o quella ricevuta non risponde alle esigenze.
 
 ### `images/final/case-01-dishwasher.jpg` — 2 utilizzi
 
@@ -172,7 +183,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-Nessun riferimento mancante.
+- `index.html` → `images/01_CASA_EROE.png?v=20260707`
+- `index.html` → `images/05_CASA_CASO_1.png?v=20260707`
+- `index.html` → `images/06_CASA_CASO_2.png?v=20260707`
+- `index.html` → `images/07_CASA_CASO_3.png?v=20260707`
+- `index.html` → `images/03_definisco_le_priorità.svg`
+- `index.html` → `images/03_CASA_METODO.png?v=20260707`
+- `index.html` → `images/08_CASA_CHIUSURA.png?v=20260707`
 
 ## Script che possono cambiare immagini nel browser
 
@@ -185,15 +202,11 @@ Nessun riferimento mancante.
 ## Immagini disponibili ma non utilizzate
 
 - `images/01_HOME_HERO.png` — —
-- `images/01_individuo_il_problema.svg` — viewBox 0 0 64 64
 - `images/02_HOME_SCENA_PROBLEMA.png` — —
-- `images/02_valuto_la_conseguenza.svg` — viewBox 0 0 64 64
 - `images/03_HOME_METODO.png` — —
 - `images/03_definisco_le_priorita.svg` — viewBox 0 0 64 64
 - `images/04_HOME_COSTO_TARDIVO.png` — —
-- `images/04_evito_costi_tardivi.svg` — viewBox 0 0 64 64
 - `images/05_HOME_CASO_1.png` — —
-- `images/05_decidere_meglio.svg` — viewBox 0 0 64 64
 - `images/06_HOME_CASO_2.png` — —
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_HOME_CASO_3.png` — —
@@ -209,9 +222,6 @@ Nessun riferimento mancante.
 - `images/12_CHI_SONO_CASO.png` — —
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
-- `images/14_SERVIZI_CONTROLLO_MIRATO.png` — —
-- `images/15_SERVIZI_ANALISI_COMPLETA.png` — —
-- `images/16_SERVIZI_PROGETTO_DA_ZERO.png` — —
 - `images/17_SERVIZI_FINITURE.png` — —
 - `images/18_CASI_HERO_ARCHIVIO.png` — —
 - `images/19_CASI_CUCINA.png` — —
@@ -257,6 +267,7 @@ Nessun riferimento mancante.
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-cases-reference.jpg` — —
+- `images/final/hero-home-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
