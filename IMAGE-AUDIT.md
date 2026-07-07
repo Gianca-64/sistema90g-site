@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **52**
-- File immagine presenti: **114**
+- File immagine presenti: **126**
 - Immagini di contenuto pubblicate: **48**
 - File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **84**
+- Immagini non utilizzate: **96**
 
 ## Mappa pagina → immagine → contesto
 
@@ -185,17 +185,29 @@ Nessun riferimento mancante.
 ## Immagini disponibili ma non utilizzate
 
 - `images/01_HOME_HERO.png` — —
+- `images/01_individuo_il_problema.svg` — viewBox 0 0 64 64
 - `images/02_HOME_SCENA_PROBLEMA.png` — —
+- `images/02_valuto_la_conseguenza.svg` — viewBox 0 0 64 64
 - `images/03_HOME_METODO.png` — —
+- `images/03_definisco_le_priorita.svg` — viewBox 0 0 64 64
 - `images/04_HOME_COSTO_TARDIVO.png` — —
+- `images/04_evito_costi_tardivi.svg` — viewBox 0 0 64 64
 - `images/05_HOME_CASO_1.png` — —
+- `images/05_decidere_meglio.svg` — viewBox 0 0 64 64
 - `images/06_HOME_CASO_2.png` — —
+- `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_HOME_CASO_3.png` — —
+- `images/07_analisi_completa.svg` — viewBox 0 0 64 64
 - `images/08_HOME_CHIUSURA.png` — —
+- `images/08_progetto_da_zero.svg` — viewBox 0 0 64 64
 - `images/09_CHI_SONO_HERO.png` — —
+- `images/09_finiture_dettagli.svg` — viewBox 0 0 64 64
 - `images/10_CHI_SONO_METODO.png` — —
+- `images/10_agenzie_collaborazione.svg` — viewBox 0 0 64 64
 - `images/11_CHI_SONO_DETTAGLIO.png` — —
+- `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_CHI_SONO_CASO.png` — —
+- `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
 - `images/14_SERVIZI_CONTROLLO_MIRATO.png` — —
 - `images/15_SERVIZI_ANALISI_COMPLETA.png` — —
