@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **101**
+- Immagini di contenuto pubblicate: **102**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **91**
+- Immagini non utilizzate: **92**
 
 ## Mappa pagina → immagine → contesto
 
@@ -70,7 +70,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
-| `caso-scala-interna-terrazzo-planimetria.html` | `images/final/case-09-stair-plan.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di una scala interna verso il terrazzo e dei suoi effetti sulla planimetria |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Planimetria con scala interna verso il terrazzo |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
@@ -202,7 +203,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
-### `images/20_CASI_DISTRIBUZIONE.png` — 7 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.png` — 8 utilizzi
 
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
 - `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
@@ -210,6 +211,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
 ### `images/21_CASI_BAGNO.png` — 3 utilizzi
@@ -229,7 +231,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 22 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 23 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
@@ -245,6 +247,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-open-space-percorso-centrale.html` — Invia planimetria, fotografie e indicazione delle funzioni che devono convivere.
 - `caso-open-space-tv-divano-passaggi.html` — Invia planimetria, fotografie e dimensioni degli arredi che stai valutando.
 - `caso-preventivo-cucina-sconto-valore.html` — Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato.
+- `caso-scala-interna-terrazzo-planimetria.html` — Invia planimetrie dei livelli, fotografie e obiettivi principali.
 - `caso-secondo-bagno-impianti-spazio.html` — Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere.
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Invia planimetria, misure e dimensioni reali degli arredi.
 - `caso-terza-camera-zona-giorno.html` — Invia planimetria, misure, aperture e posizione degli impianti esistenti.
@@ -346,6 +349,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-06-second-bath.jpg` — —
 - `images/final/case-07-tv-sofa-path.jpg` — —
 - `images/final/case-08-sink-window.jpg` — —
+- `images/final/case-09-stair-plan.jpg` — —
 - `images/final/case-10-central-path.jpg` — —
 - `images/final/case-11-third-bedroom.jpg` — —
 - `images/final/case-12-deep-corner.jpg` — —
