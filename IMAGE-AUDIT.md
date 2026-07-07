@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **64**
-- File riutilizzati in più punti: **11**
+- Immagini di contenuto pubblicate: **69**
+- File riutilizzati in più punti: **12**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **73**
+- Immagini non utilizzate: **72**
 
 ## Mappa pagina → immagine → contesto
 
@@ -22,6 +22,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `agenzie-immobiliari.html` | `images/05_decidere_meglio.svg` | Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate. |  |
 | `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.png` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
 | `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.png` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
+| `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | €347 | Analisi completa di progetto, planimetrie e materiali |
+| `analisi-completa.html` | `images/01_individuo_il_problema.svg` | Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare  |  |
+| `analisi-completa.html` | `images/02_valuto_la_conseguenza.svg` | Che cosa può non funzionare o restare poco chiaro. |  |
+| `analisi-completa.html` | `images/03_definisco_le_priorita.svg` | Che cosa potrebbe accadere nell'uso o dopo l'ordine. |  |
+| `analisi-completa.html` | `images/29_PORTALE_HERO.png` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
 | `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
 | `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
 | `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Casi anonimizzati e semplificati, con una criticità precisa, una conseguenza concreta e i limiti dichiarati. | Archivio dei casi analizzati Sistema 90G |
@@ -83,19 +88,22 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Doppioni pubblicati
 
-### `images/01_individuo_il_problema.svg` — 2 utilizzi
+### `images/01_individuo_il_problema.svg` — 3 utilizzi
 
+- `analisi-completa.html` — Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare 
 - `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
 - `index.html` — Analizzo il progetto simulando l'uso reale degli spazi.
 
-### `images/02_valuto_la_conseguenza.svg` — 3 utilizzi
+### `images/02_valuto_la_conseguenza.svg` — 4 utilizzi
 
 - `agenzie-immobiliari.html` — Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa.
+- `analisi-completa.html` — Che cosa può non funzionare o restare poco chiaro.
 - `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
 - `index.html` — Scopro conflitti, dubbi e criticità invisibili.
 
-### `images/03_definisco_le_priorita.svg` — 2 utilizzi
+### `images/03_definisco_le_priorita.svg` — 3 utilizzi
 
+- `analisi-completa.html` — Che cosa potrebbe accadere nell'uso o dopo l'ordine.
 - `chi-e-sistema90g.html` — Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova.
 - `index.html` — Cosa può costare, limitare o complicare.
 
@@ -108,6 +116,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `controllo-mirato.html` — €127
 - `index.html` — Scegli il livello di analisi più adatto alla decisione che devi proteggere.
+
+### `images/15_SERVIZI_ANALISI_COMPLETA.png` — 2 utilizzi
+
+- `analisi-completa.html` — €347
+- `index.html` — Verifica del problema principale prima di una scelta.
 
 ### `images/90g-style-conflitto.svg` — 2 utilizzi
 
@@ -175,7 +188,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/17_SERVIZI_FINITURE.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/27_CONTATTI_HERO.png` — —
-- `images/29_PORTALE_HERO.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
