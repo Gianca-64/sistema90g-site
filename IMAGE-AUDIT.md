@@ -6,7 +6,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **75**
+- Immagini di contenuto pubblicate: **76**
 - File riutilizzati in più punti: **14**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
@@ -39,6 +39,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/final/case-08-sink-window.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
 | `casi-analizzati.html` | `images/final/case-11-third-bedroom.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Terza camera |
 | `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio 125 centimetri |
+| `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/final/case-18-wardrobe-125cm.svg` | — | Cabina armadio larga 125 centimetri con contenimento e passaggio residuo |
@@ -165,8 +166,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — —
 
-### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
+### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 3 utilizzi
 
+- `casi-analizzati.html` — Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Descrivi cosa è stato realizzato e allega fotografie, elaborati e documenti disponibili.
 
