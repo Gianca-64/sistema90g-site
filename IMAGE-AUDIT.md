@@ -94,7 +94,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
 | `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.png` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
 | `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
-| `index.html` | `images/01_HOME_HERO.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
+| `index.html` | `images/01_HOME_HERO.png` | Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
 | `index.html` | `images/05_HOME_CASO_1.png` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
 | `index.html` | `images/06_HOME_CASO_2.png` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
 | `index.html` | `images/07_HOME_CASO_3.png` | Aggiungere una stanza può ridurre luce, spazio e qualità della zona giorno. | Caso bagno con criticità di distribuzione |
