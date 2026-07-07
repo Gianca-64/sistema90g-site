@@ -8,9 +8,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - File immagine presenti: **126**
 - Immagini di contenuto pubblicate: **60**
 - File riutilizzati in più punti: **19**
-- Riferimenti mancanti: **7**
+- Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **90**
+- Immagini non utilizzate: **83**
 
 ## Mappa pagina → immagine → contesto
 
@@ -59,20 +59,20 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/final/hero-about-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di un progetto casa prima della firma |
 | `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
-| `index.html` | `images/01_CASA_EROE.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
-| `index.html` | `images/05_CASA_CASO_1.png` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
-| `index.html` | `images/06_CASA_CASO_2.png` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
-| `index.html` | `images/07_CASA_CASO_3.png` | Aggiungere una stanza può ridurre luce, spazio e qualità della zona giorno. | Caso bagno con criticità di distribuzione |
+| `index.html` | `images/01_HOME_HERO.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
+| `index.html` | `images/05_HOME_CASO_1.png` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
+| `index.html` | `images/06_HOME_CASO_2.png` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
+| `index.html` | `images/07_HOME_CASO_3.png` | Aggiungere una stanza può ridurre luce, spazio e qualità della zona giorno. | Caso bagno con criticità di distribuzione |
 | `index.html` | `images/01_individuo_il_problema.svg` | Analizzo il progetto simulando l'uso reale degli spazi. |  |
 | `index.html` | `images/02_valuto_la_conseguenza.svg` | Scopro conflitti, dubbi e criticità invisibili. |  |
-| `index.html` | `images/03_definisco_le_priorità.svg` | Cosa può costare, limitare o complicare. |  |
+| `index.html` | `images/03_definisco_le_priorita.svg` | Cosa può costare, limitare o complicare. |  |
 | `index.html` | `images/04_evito_costi_tardivi.svg` | Cosa chiarire prima di decidere. |  |
 | `index.html` | `images/05_decidere_meglio.svg` | Modifiche, lavori in più e compromessi. |  |
-| `index.html` | `images/03_CASA_METODO.png` | Con consapevolezza e serenità. | Planimetria annotata con conflitto di apertura |
+| `index.html` | `images/03_HOME_METODO.png` | Con consapevolezza e serenità. | Planimetria annotata con conflitto di apertura |
 | `index.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.png` | Scegli il livello di analisi più adatto alla decisione che devi proteggere. | Controllo mirato |
 | `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | Verifica del problema principale prima di una scelta. | Analisi completa |
 | `index.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Analisi approfondita di progetto, spazi, funzioni e costi. | Progetto da zero |
-| `index.html` | `images/08_CASA_CHIUSURA.png` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
+| `index.html` | `images/08_HOME_CHIUSURA.png` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
 | `progetto-da-zero.html` | `images/hero-progetto-zero-90g.jpg` | — | Tavolo di progettazione con planimetria, campioni e proposta ancora da definire |
 | `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
@@ -183,13 +183,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-- `index.html` → `images/01_CASA_EROE.png?v=20260707`
-- `index.html` → `images/05_CASA_CASO_1.png?v=20260707`
-- `index.html` → `images/06_CASA_CASO_2.png?v=20260707`
-- `index.html` → `images/07_CASA_CASO_3.png?v=20260707`
-- `index.html` → `images/03_definisco_le_priorità.svg`
-- `index.html` → `images/03_CASA_METODO.png?v=20260707`
-- `index.html` → `images/08_CASA_CHIUSURA.png?v=20260707`
+Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
@@ -201,17 +195,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Immagini disponibili ma non utilizzate
 
-- `images/01_HOME_HERO.png` — —
 - `images/02_HOME_SCENA_PROBLEMA.png` — —
-- `images/03_HOME_METODO.png` — —
-- `images/03_definisco_le_priorita.svg` — viewBox 0 0 64 64
 - `images/04_HOME_COSTO_TARDIVO.png` — —
-- `images/05_HOME_CASO_1.png` — —
-- `images/06_HOME_CASO_2.png` — —
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
-- `images/07_HOME_CASO_3.png` — —
 - `images/07_analisi_completa.svg` — viewBox 0 0 64 64
-- `images/08_HOME_CHIUSURA.png` — —
 - `images/08_progetto_da_zero.svg` — viewBox 0 0 64 64
 - `images/09_CHI_SONO_HERO.png` — —
 - `images/09_finiture_dettagli.svg` — viewBox 0 0 64 64
