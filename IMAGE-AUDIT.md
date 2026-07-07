@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **62**
-- File riutilizzati in più punti: **10**
+- Immagini di contenuto pubblicate: **64**
+- File riutilizzati in più punti: **11**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **74**
+- Immagini non utilizzate: **73**
 
 ## Mappa pagina → immagine → contesto
 
@@ -59,6 +59,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.png` | Descrivi il dubbio principale e allega il materiale in un unico invio. | Caso analizzato da Sistema 90G |
+| `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.png` | €127 | Controllo mirato di una criticità specifica |
+| `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
 | `controllo-progetto-cucina.html` | `images/final/hero-kitchen-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Cucina e zona giorno da controllare prima dell |
 | `controllo-progetto-cucina.html` | `images/90g-style-conflitto.svg` | Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa. | Esempio di lavastoviglie aperta che può ostacolare il passaggio in cucina |
 | `index.html` | `images/01_HOME_HERO.png` | 🔒 Servizio indipendente. Nessun legame con venditori o produttori. | Analisi preventiva di cucina, passaggi e aperture prima dell |
@@ -101,6 +103,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
 - `index.html` — Modifiche, lavori in più e compromessi.
+
+### `images/14_SERVIZI_CONTROLLO_MIRATO.png` — 2 utilizzi
+
+- `controllo-mirato.html` — €127
+- `index.html` — Scegli il livello di analisi più adatto alla decisione che devi proteggere.
 
 ### `images/90g-style-conflitto.svg` — 2 utilizzi
 
@@ -168,7 +175,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/17_SERVIZI_FINITURE.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/27_CONTATTI_HERO.png` — —
-- `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
 - `images/29_PORTALE_HERO.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
