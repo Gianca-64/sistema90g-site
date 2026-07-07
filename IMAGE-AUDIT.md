@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **70**
-- File riutilizzati in più punti: **23**
+- Immagini di contenuto pubblicate: **62**
+- File riutilizzati in più punti: **10**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **79**
+- Immagini non utilizzate: **74**
 
 ## Mappa pagina → immagine → contesto
 
@@ -24,25 +24,17 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.png` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
 | `analisi-preventivo-cucina.html` | `images/final/hero-quote-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Analisi indipendente di una proposta cucina prima della firma |
 | `analisi-preventivo-cucina.html` | `images/90g-style-preventivo.svg` | Scadenza del preventivo, caparra, saldo, tempi di consegna, gestione delle varianti e responsabilità in caso di misure o lavori non conformi | Cucina completa con mobili, top ed elettrodomestici da valutare nel preventivo |
-| `casi-analizzati.html` | `images/final/hero-cases-method-unique.svg` | Usiamo Google Analytics solo se accetti. | Un unico ambiente analizzato attraverso percorsi, aperture e funzioni in conflitto |
-| `casi-analizzati.html` | `images/final/case-01-dishwasher.jpg` | Diciotto criticità diverse, ciascuna legata a una decisione reale. | Lavastoviglie aperta e passaggio ridotto |
-| `casi-analizzati.html` | `images/final/case-02-entry-living.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso sul tavolo e living compresso |
-| `casi-analizzati.html` | `images/final/case-03-compact-kitchen.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
-| `casi-analizzati.html` | `images/final/case-04-quote.jpg` | Ante ed elettrodomestici aperti occupano il centro stanza. | Preventivo cucina e voci da chiarire |
-| `casi-analizzati.html` | `images/final/case-05-island-passages.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola cucina con sedute e passaggi |
-| `casi-analizzati.html` | `images/final/case-06-second-bath.jpg` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno e distribuzione interna |
-| `casi-analizzati.html` | `images/final/case-07-tv-sofa-path.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space con TV, divano e passaggi |
-| `casi-analizzati.html` | `images/final/case-08-sink-window.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra e apertura infisso |
-| `casi-analizzati.html` | `images/final/case-09-stair-plan.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Scala interna verso il terrazzo |
-| `casi-analizzati.html` | `images/final/case-10-central-path.jpg` | Foro nel solaio, partenza e sbarco vanno verificati prima degli altri ambienti. | Open space attraversato dal percorso |
-| `casi-analizzati.html` | `images/final/case-11-third-bedroom.jpg` | Scala, ripostiglio e accesso alla zona notte possono continuare a dividere il living. | Terza camera ricavata dalla zona giorno |
-| `casi-analizzati.html` | `images/final/case-12-deep-corner.jpg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina con basi profonde e angolo |
-| `casi-analizzati.html` | `images/final/case-13-bath-laundry-unique.svg` | Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
-| `casi-analizzati.html` | `images/final/case-14-wardrobe-room-unique.svg` | Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari. | Camera irregolare con letto, guardaroba e percorso verso il balcone |
-| `casi-analizzati.html` | `images/final/case-15-sofa-bed.jpg` | La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone. | Soggiorno cucina usato ogni sera come spazio notte |
-| `casi-analizzati.html` | `images/final/case-16-two-apartments-access.svg` | Cucina, pranzo, passaggio e sonno si contendono lo stesso ambiente. | Planimetria divisa in due appartamenti con due cucine e tre bagni |
-| `casi-analizzati.html` | `images/final/case-17-living-piano.svg` | Due cucine e tre bagni possono decidere la distribuzione più dei metri apparentemente persi. | Soggiorno con tavolo, divano, TV e pianoforte verticale |
-| `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | In 4,35 × 3,80 metri tavolo, divano, TV e pianoforte possono contendersi la stessa fascia d'uso. | Cabina armadio larga 125 centimetri con passaggio residuo |
+| `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Casi anonimizzati e semplificati, con una criticità precisa, una conseguenza concreta e i limiti dichiarati. | Archivio dei casi analizzati Sistema 90G |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
+| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.png` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Preventivo cucina |
+| `casi-analizzati.html` | `images/final/case-05-island-passages.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola e passaggi |
+| `casi-analizzati.html` | `images/21_CASI_BAGNO.png` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
+| `casi-analizzati.html` | `images/final/case-07-tv-sofa-path.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
+| `casi-analizzati.html` | `images/final/case-08-sink-window.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
+| `casi-analizzati.html` | `images/final/case-11-third-bedroom.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Terza camera |
+| `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio 125 centimetri |
+| `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/final/case-13-bath-laundry-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Bagno compatto con lavatrice, porta e spazio operativo da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/final/case-18-wardrobe-125cm.svg` | — | Cabina armadio larga 125 centimetri con contenimento e passaggio residuo |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/final/case-14-wardrobe-room-unique.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Camera irregolare con letto, guardaroba, ingresso e percorso verso il balcone |
@@ -115,35 +107,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-lavastoviglie-passaggio-cucina.html` — Limite dell'analisi pubblica: senza le misure definitive del locale, la profondità reale dell'elettrodomestico e la posizione precisa dei fr
 - `controllo-progetto-cucina.html` — Una persona apre la lavastoviglie, un'altra deve passare, il frigorifero è in uso e il piano libero non basta per appoggiare la spesa.
 
-### `images/final/case-01-dishwasher.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Diciotto criticità diverse, ciascuna legata a una decisione reale.
-- `caso-lavastoviglie-passaggio-cucina.html` — Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-02-entry-living.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
-- `caso-ingresso-tavolo-living.html` — Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-03-compact-kitchen.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
-- `caso-cucina-piccola-tre-lati.html` — Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-04-quote.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Ante ed elettrodomestici aperti occupano il centro stanza.
-- `caso-preventivo-cucina-sconto-valore.html` — Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare.
-
 ### `images/final/case-05-island-passages.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
 - `caso-isola-passaggi-cucina.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-06-second-bath.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
-- `caso-secondo-bagno-impianti-spazio.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
 
 ### `images/final/case-07-tv-sofa-path.jpg` — 2 utilizzi
 
@@ -155,54 +122,14 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
 - `caso-lavello-sotto-finestra-aperture.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
 
-### `images/final/case-09-stair-plan.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
-- `caso-scala-interna-terrazzo-planimetria.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-10-central-path.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Foro nel solaio, partenza e sbarco vanno verificati prima degli altri ambienti.
-- `caso-open-space-percorso-centrale.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
 ### `images/final/case-11-third-bedroom.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — Scala, ripostiglio e accesso alla zona notte possono continuare a dividere il living.
+- `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
 - `caso-terza-camera-zona-giorno.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-12-deep-corner.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
-- `caso-cucina-profondita-75-angolo.html` — Usiamo Google Analytics solo se accetti.
-
-### `images/final/case-13-bath-laundry-unique.svg` — 2 utilizzi
-
-- `casi-analizzati.html` — Lo spazio aggiunto conta solo se la parte interna del mobile si raggiunge davvero.
-- `caso-bagno-lavatrice-dieci-centimetri.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-14-wardrobe-room-unique.svg` — 2 utilizzi
-
-- `casi-analizzati.html` — Il passaggio migliora solo se l'anta non entra in conflitto con lavatrice e sanitari.
-- `caso-cabina-armadio-camera-irregolare.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-15-sofa-bed.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — La rientranza dei bagni può comprimere letto, ingresso e accesso al balcone.
-- `caso-divano-letto-soggiorno-tre-persone.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-16-two-apartments-access.svg` — 2 utilizzi
-
-- `casi-analizzati.html` — Cucina, pranzo, passaggio e sonno si contendono lo stesso ambiente.
-- `caso-due-appartamenti-accessi-disimpegni.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-17-living-piano.svg` — 2 utilizzi
-
-- `casi-analizzati.html` — Due cucine e tre bagni possono decidere la distribuzione più dei metri apparentemente persi.
-- `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — —
 
 ### `images/final/case-18-wardrobe-125cm.svg` — 2 utilizzi
 
-- `casi-analizzati.html` — In 4,35 × 3,80 metri tavolo, divano, TV e pianoforte possono contendersi la stessa fascia d'uso.
+- `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — —
 
 ## File differenti con contenuto identico
@@ -239,16 +166,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
 - `images/17_SERVIZI_FINITURE.png` — —
-- `images/18_CASI_HERO_ARCHIVIO.png` — —
-- `images/19_CASI_CUCINA.png` — —
-- `images/20_CASI_DISTRIBUZIONE.png` — —
-- `images/21_CASI_BAGNO.png` — —
-- `images/22_CASI_PREVENTIVO.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/27_CONTATTI_HERO.png` — —
 - `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
 - `images/29_PORTALE_HERO.png` — —
-- `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
@@ -280,6 +201,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
+- `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-home-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
