@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **88**
-- File riutilizzati in più punti: **23**
+- Immagini di contenuto pubblicate: **89**
+- File riutilizzati in più punti: **24**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **78**
+- Immagini non utilizzate: **79**
 
 ## Mappa pagina → immagine → contesto
 
@@ -61,7 +61,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/final/case-09-stair-plan.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di una scala interna verso il terrazzo e dei suoi effetti sulla planimetria |
-| `caso-secondo-bagno-impianti-spazio.html` | `images/final/case-06-second-bath.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi distributiva per ricavare un secondo bagno |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/final/case-17-living-piano.svg` | — | Soggiorno con tavolo, divano, TV e pianoforte verticale con spazio frontale evidenziato |
 | `caso-terza-camera-zona-giorno.html` | `images/final/case-11-third-bedroom.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale per ricavare una terza camera senza compromettere la zona giorno |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Pubblicato il 7 luglio 2026 | Stanza ristrutturata con elemento metallico perimetrale e cavi a vista da identificare prima della copertura |
@@ -176,6 +177,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
+### `images/21_CASI_BAGNO.png` — 2 utilizzi
+
+- `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
+- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
 ### `images/22_CASI_PREVENTIVO.png` — 3 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
@@ -187,12 +193,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 8 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 9 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
 - `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
 - `caso-preventivo-cucina-sconto-valore.html` — Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato.
+- `caso-secondo-bagno-impianti-spazio.html` — Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere.
 - `contatti.html` — La prima valutazione non è una consulenza completa e non obbliga ad acquistare.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
@@ -306,6 +313,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-01-dishwasher.jpg` — —
 - `images/final/case-02-entry-living.jpg` — —
 - `images/final/case-04-quote.jpg` — —
+- `images/final/case-06-second-bath.jpg` — —
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
