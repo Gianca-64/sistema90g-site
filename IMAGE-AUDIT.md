@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **98**
+- Immagini di contenuto pubblicate: **99**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **84**
+- Immagini non utilizzate: **85**
 
 ## Mappa pagina → immagine → contesto
 
@@ -52,7 +52,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
 | `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
 | `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
-| `caso-divano-letto-soggiorno-tre-persone.html` | `images/final/case-15-sofa-bed.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema di soggiorno cucina trasformato ogni sera in spazio notte con divano letto |
+| `caso-divano-letto-soggiorno-tre-persone.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
+| `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/final/case-16-two-apartments-access.svg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema concettuale di due appartamenti con due cucine, tre bagni e impianti da verificare |
 | `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
@@ -154,8 +155,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Modifiche, lavori in più e compromessi.
 - `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
 
-### `images/06_HOME_CASO_2.png` — 3 utilizzi
+### `images/06_HOME_CASO_2.png` — 4 utilizzi
 
+- `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno.
@@ -219,13 +221,14 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 18 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 19 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
 - `caso-cabina-armadio-camera-irregolare.html` — Invia planimetria, misure, fotografie e posizione di letto e aperture.
 - `caso-cucina-piccola-tre-lati.html` — Invia planimetria, misure e progetto della composizione.
 - `caso-cucina-profondita-75-angolo.html` — Invia progetto, misure e sistema di apertura previsto.
+- `caso-divano-letto-soggiorno-tre-persone.html` — Invia planimetria, misure e modello del divano letto che stai valutando.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
 - `caso-isola-passaggi-cucina.html` — Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack.
 - `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
@@ -336,6 +339,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-13-bath-laundry.jpg` — —
 - `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/case-14-wardrobe-room.jpg` — —
+- `images/final/case-15-sofa-bed.jpg` — —
 - `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
