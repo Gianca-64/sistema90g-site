@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **80**
-- File riutilizzati in più punti: **19**
+- Immagini di contenuto pubblicate: **82**
+- File riutilizzati in più punti: **20**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **75**
+- Immagini non utilizzate: **74**
 
 ## Mappa pagina → immagine → contesto
 
@@ -27,6 +27,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `analisi-completa.html` | `images/02_valuto_la_conseguenza.svg` | Che cosa può non funzionare o restare poco chiaro. |  |
 | `analisi-completa.html` | `images/03_definisco_le_priorita.svg` | Che cosa potrebbe accadere nell'uso o dopo l'ordine. |  |
 | `analisi-completa.html` | `images/29_PORTALE_HERO.png` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
+| `analisi-preventiva.html` | `images/13_SERVIZI_HERO.png` | Serve a individuare problemi, conflitti, dubbi e possibili costi tardivi prima di ordinare, firmare o iniziare i lavori. | Analisi preventiva di planimetria, progetto e materiali |
+| `analisi-preventiva.html` | `images/27_CONTATTI_HERO.png` | Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Invio di un caso al portale pubblico Sistema 90G |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.png` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Casi anonimizzati e semplificati, con una criticità precisa, una conseguenza concreta e i limiti dichiarati. | Archivio dei casi analizzati Sistema 90G |
@@ -129,6 +131,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
 - `index.html` — Modifiche, lavori in più e compromessi.
 - `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
+
+### `images/13_SERVIZI_HERO.png` — 2 utilizzi
+
+- `analisi-preventiva.html` — Serve a individuare problemi, conflitti, dubbi e possibili costi tardivi prima di ordinare, firmare o iniziare i lavori.
+- `render-fotorealistici-interni.html` — Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com
 
 ### `images/14_SERVIZI_CONTROLLO_MIRATO.png` — 2 utilizzi
 
@@ -237,7 +244,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
-- `images/27_CONTATTI_HERO.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
