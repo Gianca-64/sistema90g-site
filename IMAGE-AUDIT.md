@@ -6,7 +6,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **90**
+- Immagini di contenuto pubblicate: **91**
 - File riutilizzati in più punti: **24**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
@@ -55,7 +55,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-isola-passaggi-cucina.html` | `images/final/case-05-island-passages.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di un |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
-| `caso-lavello-sotto-finestra-aperture.html` | `images/final/case-08-sink-window.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Analisi di lavello, rubinetto e apertura della finestra |
+| `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
+| `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
 | `caso-open-space-percorso-centrale.html` | `images/final/case-10-central-path.jpg` | Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare. | Schema semplificato di un open space attraversato dal percorso verso camere e bagno |
 | `caso-open-space-tv-divano-passaggi.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Open space con TV, divano e passaggio centrale |
 | `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
@@ -134,6 +135,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Cosa può costare, limitare o complicare.
 - `progetto-da-zero.html` — Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali.
 
+### `images/05_HOME_CASO_1.png` — 2 utilizzi
+
+- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `index.html` — Esempi di situazioni analizzate ogni giorno.
+
 ### `images/05_decidere_meglio.svg` — 3 utilizzi
 
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
@@ -199,11 +205,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 10 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 11 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-ingresso-tavolo-living.html` — Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere.
 - `caso-lavastoviglie-passaggio-cucina.html` — Descrivi il dubbio e allega planimetria, render e immagini in un unico invio.
+- `caso-lavello-sotto-finestra-aperture.html` — Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina.
 - `caso-open-space-tv-divano-passaggi.html` — Invia planimetria, fotografie e dimensioni degli arredi che stai valutando.
 - `caso-preventivo-cucina-sconto-valore.html` — Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato.
 - `caso-secondo-bagno-impianti-spazio.html` — Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere.
@@ -226,11 +233,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
 - `caso-isola-passaggi-cucina.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
-
-### `images/final/case-08-sink-window.jpg` — 2 utilizzi
-
-- `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
-- `caso-lavello-sotto-finestra-aperture.html` — Usiamo Google Analytics solo se accetti. Puoi rifiutare e continuare a navigare.
 
 ### `images/final/case-11-third-bedroom.jpg` — 2 utilizzi
 
