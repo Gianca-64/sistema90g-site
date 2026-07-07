@@ -7,10 +7,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **53**
 - File immagine presenti: **127**
 - Immagini di contenuto pubblicate: **76**
-- File riutilizzati in più punti: **15**
+- File riutilizzati in più punti: **17**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **72**
+- Immagini non utilizzate: **74**
 
 ## Mappa pagina → immagine → contesto
 
@@ -90,8 +90,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
 | `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute. | Materiali e dettagli di progetto |
-| `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
-| `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
+| `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.png` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
+| `verifica-planimetria-distribuzione-casa.html` | `images/03_HOME_METODO.png` | Invia il materiale disponibile e descrivi cosa devi decidere. La prima lettura serve a capire se il caso è adatto e quale livello è necessar | Planimetrie e percorsi analizzati da Sistema 90G |
 
 ## Doppioni pubblicati
 
@@ -107,6 +107,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-completa.html` — Che cosa può non funzionare o restare poco chiaro.
 - `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
 - `index.html` — Scopro conflitti, dubbi e criticità invisibili.
+
+### `images/03_HOME_METODO.png` — 2 utilizzi
+
+- `index.html` — Con consapevolezza e serenità.
+- `verifica-planimetria-distribuzione-casa.html` — Invia il materiale disponibile e descrivi cosa devi decidere. La prima lettura serve a capire se il caso è adatto e quale livello è necessar
 
 ### `images/03_definisco_le_priorita.svg` — 4 utilizzi
 
@@ -140,6 +145,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
+
+### `images/20_CASI_DISTRIBUZIONE.png` — 2 utilizzi
+
+- `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
+- `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 2 utilizzi
 
@@ -218,6 +228,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/90g-style-agenzie.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-finiture.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-hero.svg` — viewBox 0 0 1600 1000
+- `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
 - `images/caso-bagno-lavatrice-10cm-90g.svg` — viewBox 0 0 1600 1000
 - `images/caso-bagno-lavatrice-2026.jpg` — —
 - `images/caso-cabina-armadio-2026.jpg` — —
@@ -247,6 +258,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-home-reference.jpg` — —
 - `images/final/hero-kitchen-reference.jpg` — —
+- `images/final/hero-plan-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
 - `images/hero-agenzie-90g.jpg` — —
