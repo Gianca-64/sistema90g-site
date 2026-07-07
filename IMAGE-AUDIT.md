@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **52**
-- File immagine presenti: **94**
+- File immagine presenti: **104**
 - Immagini di contenuto pubblicate: **48**
 - File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **64**
+- Immagini non utilizzate: **74**
 
 ## Mappa pagina → immagine → contesto
 
@@ -193,6 +193,16 @@ Nessun riferimento mancante.
 - `images/08_HOME_CHIUSURA.png` — —
 - `images/09_CHI_SONO_HERO.png` — —
 - `images/10_CHI_SONO_METODO.png` — —
+- `images/11_CHI_SONO_DETTAGLIO.png` — —
+- `images/12_CHI_SONO_CASO.png` — —
+- `images/13_SERVIZI_HERO.png` — —
+- `images/14_SERVIZI_CONTROLLO_MIRATO.png` — —
+- `images/15_SERVIZI_ANALISI_COMPLETA.png` — —
+- `images/16_SERVIZI_PROGETTO_DA_ZERO.png` — —
+- `images/17_SERVIZI_FINITURE.png` — —
+- `images/18_CASI_HERO_ARCHIVIO.png` — —
+- `images/19_CASI_CUCINA.png` — —
+- `images/20_CASI_DISTRIBUZIONE.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
