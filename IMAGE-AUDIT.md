@@ -64,7 +64,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
-| `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
+| `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
 | `caso-open-space-percorso-centrale.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Open space attraversato dal percorso verso la zona notte |
 | `caso-open-space-percorso-centrale.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazione delle funzioni che devono convivere. | Raccolta di planimetria e fotografie della zona giorno |
@@ -152,7 +152,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — Esempi di situazioni analizzate ogni giorno.
 
 ### `images/05_decidere_meglio.svg` — 3 utilizzi
