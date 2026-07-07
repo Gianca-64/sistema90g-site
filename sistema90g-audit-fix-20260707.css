@@ -1,0 +1,23 @@
+/* Correzioni emerse dal check-up visivo del 7 luglio 2026 */
+body.s90g-visual figure{margin:0}
+body.s90g-visual .s90g-hero,
+body.s90g-visual .s90g-inner-hero{background:#fff}
+body.s90g-visual .s90g-hero-grid,
+body.s90g-visual .s90g-inner-hero-grid{align-items:center;min-height:0}
+body.s90g-visual .s90g-hero-media,
+body.s90g-visual .s90g-inner-media{min-height:0;background:#fff;display:flex;align-items:center;justify-content:center;overflow:visible}
+body.s90g-visual .s90g-hero-media img,
+body.s90g-visual .s90g-inner-media img{width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;background:#fff}
+body.s90g-visual .s90g-method-visual,
+body.s90g-visual .s90g-final-media{background:#fff;overflow:hidden}
+body.s90g-visual .s90g-method-visual img,
+body.s90g-visual .s90g-final-media img{object-fit:contain;background:#fff}
+body.s90g-visual .s90g-service-card img,
+body.s90g-visual .s90g-case-card img,
+body.s90g-visual .s90g-archive-card img{object-position:center}
+@media(max-width:860px){
+ body.s90g-visual .s90g-hero-media,
+ body.s90g-visual .s90g-inner-media{min-height:0}
+ body.s90g-visual .s90g-hero-media img,
+ body.s90g-visual .s90g-inner-media img{height:auto}
+}
