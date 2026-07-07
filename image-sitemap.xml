@@ -1,53 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://sistema90g.it/</loc>
-    <image:image><image:loc>https://sistema90g.it/images/01_HOME_HERO.png</image:loc><image:title>Analisi preventiva Sistema 90G</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/02_HOME_SCENA_PROBLEMA.png</image:loc><image:title>Scena di un problema d'uso reale</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/03_HOME_METODO.png</image:loc><image:title>Metodo di analisi Sistema 90G</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/04_HOME_COSTO_TARDIVO.png</image:loc><image:title>Costo tardivo di una scelta non verificata</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/05_HOME_CASO_1.png</image:loc><image:title>Caso cucina: lavastoviglie e passaggio</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/06_HOME_CASO_2.png</image:loc><image:title>Caso distribuzione: terza camera e zona giorno</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/07_HOME_CASO_3.png</image:loc><image:title>Caso bagno e passaggi reali</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/08_HOME_CHIUSURA.png</image:loc><image:title>Controllo finale prima della decisione</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/chi-e-sistema90g.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/09_CHI_SONO_HERO.png</image:loc><image:title>Chi c'è dietro Sistema 90G</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/10_CHI_SONO_METODO.png</image:loc><image:title>Metodo di lavoro Sistema 90G</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/11_CHI_SONO_DETTAGLIO.png</image:loc><image:title>Dettaglio tecnico analizzato</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/12_CHI_SONO_CASO.png</image:loc><image:title>Caso analizzato da Sistema 90G</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/controllo-mirato.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/14_SERVIZI_CONTROLLO_MIRATO.png</image:loc><image:title>Controllo mirato di una criticità specifica</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/analisi-completa.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/15_SERVIZI_ANALISI_COMPLETA.png</image:loc><image:title>Analisi completa di progetto e distribuzione</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/progetto-da-zero.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/16_SERVIZI_PROGETTO_DA_ZERO.png</image:loc><image:title>Progetto da zero Sistema 90G</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/17_SERVIZI_FINITURE.png</image:loc><image:title>Materiali e finiture di progetto</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/casi-analizzati.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/18_CASI_HERO_ARCHIVIO.png</image:loc><image:title>Archivio dei casi analizzati</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/19_CASI_CUCINA.png</image:loc><image:title>Caso cucina analizzato</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.png</image:loc><image:title>Caso distribuzione interna</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/21_CASI_BAGNO.png</image:loc><image:title>Caso bagno analizzato</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/22_CASI_PREVENTIVO.png</image:loc><image:title>Caso preventivo analizzato</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/agenzie-immobiliari.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/23_PER_AGENZIE_HERO.png</image:loc><image:title>Collaborazione con agenzie immobiliari</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/24_PER_AGENZIE_BENEFICI.png</image:loc><image:title>Benefici dell'analisi preventiva per agenzie</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/25_PER_AGENZIE_COLLABORAZIONE.png</image:loc><image:title>Collaborazione professionale su planimetrie</image:title></image:image>
-    <image:image><image:loc>https://sistema90g.it/images/26_PER_AGENZIE_CASO.png</image:loc><image:title>Caso immobiliare analizzato</image:title></image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/analisi-preventiva.html</loc>
-    <image:image><image:loc>https://sistema90g.it/images/13_SERVIZI_HERO.png</image:loc><image:title>Servizi di analisi preventiva Sistema 90G</image:title></image:image>
-  </url>
+  <url><loc>https://sistema90g.it/</loc><image:image><image:loc>https://sistema90g.it/images/01_HOME_HERO.png</image:loc><image:title>Analisi preventiva Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/02_HOME_SCENA_PROBLEMA.png</image:loc><image:title>Scena di un problema d'uso reale</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/03_HOME_METODO.png</image:loc><image:title>Metodo di analisi Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/04_HOME_COSTO_TARDIVO.png</image:loc><image:title>Costo tardivo di una scelta non verificata</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/chi-e-sistema90g.html</loc><image:image><image:loc>https://sistema90g.it/images/09_CHI_SONO_HERO.png</image:loc><image:title>Chi c'è dietro Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/10_CHI_SONO_METODO.png</image:loc><image:title>Metodo di lavoro Sistema 90G</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/analisi-preventiva.html</loc><image:image><image:loc>https://sistema90g.it/images/13_SERVIZI_HERO.png</image:loc><image:title>Servizi di analisi preventiva Sistema 90G</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/controllo-mirato.html</loc><image:image><image:loc>https://sistema90g.it/images/14_SERVIZI_CONTROLLO_MIRATO.png</image:loc><image:title>Controllo mirato di una criticità specifica</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/analisi-completa.html</loc><image:image><image:loc>https://sistema90g.it/images/15_SERVIZI_ANALISI_COMPLETA.png</image:loc><image:title>Analisi completa di progetto e distribuzione</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/progetto-da-zero.html</loc><image:image><image:loc>https://sistema90g.it/images/16_SERVIZI_PROGETTO_DA_ZERO.png</image:loc><image:title>Progetto da zero Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/17_SERVIZI_FINITURE.png</image:loc><image:title>Materiali e finiture di progetto</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/casi-analizzati.html</loc><image:image><image:loc>https://sistema90g.it/images/18_CASI_HERO_ARCHIVIO.png</image:loc><image:title>Archivio dei casi analizzati</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/19_CASI_CUCINA.png</image:loc><image:title>Caso cucina analizzato</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.png</image:loc><image:title>Caso distribuzione interna</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/21_CASI_BAGNO.png</image:loc><image:title>Caso bagno analizzato</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/22_CASI_PREVENTIVO.png</image:loc><image:title>Caso preventivo analizzato</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/agenzie-immobiliari.html</loc><image:image><image:loc>https://sistema90g.it/images/23_PER_AGENZIE_HERO.png</image:loc><image:title>Collaborazione con agenzie immobiliari</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/24_PER_AGENZIE_BENEFICI.png</image:loc><image:title>Benefici dell'analisi preventiva per agenzie</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/contatti.html</loc><image:image><image:loc>https://sistema90g.it/images/27_CONTATTI_HERO.png</image:loc><image:title>Contatti e portale pubblico Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/28_CONTATTI_RACCOLTA_MATERIALI.png</image:loc><image:title>Raccolta ordinata di planimetrie, immagini e preventivi</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/29_PORTALE_HERO.png</image:loc><image:title>Portale cliente Sistema 90G</image:title></image:image><image:image><image:loc>https://sistema90g.it/images/30_PORTALE_CONSEGNA_DOCUMENTI.png</image:loc><image:title>Consegna documenti nel portale cliente</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-lavastoviglie-passaggio-cucina.html</loc><image:image><image:loc>https://sistema90g.it/images/19_CASI_CUCINA.png</image:loc><image:title>Lavastoviglie aperta e passaggio in cucina</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-ingresso-tavolo-living.html</loc><image:image><image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.png</image:loc><image:title>Ingresso, tavolo e living compresso</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-preventivo-cucina-sconto-valore.html</loc><image:image><image:loc>https://sistema90g.it/images/22_CASI_PREVENTIVO.png</image:loc><image:title>Preventivo cucina e valore reale</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-secondo-bagno-impianti-spazio.html</loc><image:image><image:loc>https://sistema90g.it/images/21_CASI_BAGNO.png</image:loc><image:title>Secondo bagno, impianti e spazio residuo</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-open-space-tv-divano-passaggi.html</loc><image:image><image:loc>https://sistema90g.it/images/06_HOME_CASO_2.png</image:loc><image:title>Open space con TV, divano e passaggi</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-lavello-sotto-finestra-aperture.html</loc><image:image><image:loc>https://sistema90g.it/images/05_HOME_CASO_1.png</image:loc><image:title>Lavello sotto finestra e apertura dell'infisso</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-cucina-profondita-75-angolo.html</loc><image:image><image:loc>https://sistema90g.it/images/19_CASI_CUCINA.png</image:loc><image:title>Cucina profonda e mobile d'angolo</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-bagno-lavatrice-dieci-centimetri.html</loc><image:image><image:loc>https://sistema90g.it/images/21_CASI_BAGNO.png</image:loc><image:title>Bagno con lavatrice e apertura della porta</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-soggiorno-pianoforte-tavolo-divano-tv.html</loc><image:image><image:loc>https://sistema90g.it/images/06_HOME_CASO_2.png</image:loc><image:title>Soggiorno con pianoforte, tavolo, divano e TV</image:title></image:image></url>
+  <url><loc>https://sistema90g.it/caso-tiranti-cavi-vista-impianto-ispezionabile.html</loc><image:image><image:loc>https://sistema90g.it/images/final/case-19-tiranti-cavi-ispezionabilita.svg</image:loc><image:title>Tiranti e cavi a vista dopo la ristrutturazione</image:title></image:image></url>
 </urlset>
