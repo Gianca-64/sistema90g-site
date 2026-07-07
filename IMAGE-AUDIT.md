@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **52**
-- File immagine presenti: **104**
+- File immagine presenti: **114**
 - Immagini di contenuto pubblicate: **48**
 - File riutilizzati in più punti: **19**
 - Riferimenti mancanti: **0**
-- Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **74**
+- Gruppi di file binari identici: **4**
+- Immagini non utilizzate: **84**
 
 ## Mappa pagina → immagine → contesto
 
@@ -165,6 +165,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## File differenti con contenuto identico
 
+- `images/12_CHI_SONO_CASO.png`, `images/21_CASI_BAGNO.png`
 - `images/final/case-06-second-bath.jpg`, `images/final/case-13-bath-laundry.jpg`
 - `images/final/case-10-central-path.jpg`, `images/final/case-15-sofa-bed.jpg`
 - `images/hero-analisi-90g.jpg`, `images/hero-casa90g.jpg`
@@ -203,6 +204,16 @@ Nessun riferimento mancante.
 - `images/18_CASI_HERO_ARCHIVIO.png` — —
 - `images/19_CASI_CUCINA.png` — —
 - `images/20_CASI_DISTRIBUZIONE.png` — —
+- `images/21_CASI_BAGNO.png` — —
+- `images/22_CASI_PREVENTIVO.png` — —
+- `images/23_PER_AGENZIE_HERO.png` — —
+- `images/24_PER_AGENZIE_BENEFICI.png` — —
+- `images/25_PER_AGENZIE_COLLABORAZIONE.png` — —
+- `images/26_PER_AGENZIE_CASO.png` — —
+- `images/27_CONTATTI_HERO.png` — —
+- `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
+- `images/29_PORTALE_HERO.png` — —
+- `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
