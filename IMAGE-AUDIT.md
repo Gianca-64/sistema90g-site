@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **52**
 - File immagine presenti: **126**
-- Immagini di contenuto pubblicate: **69**
-- File riutilizzati in più punti: **12**
+- Immagini di contenuto pubblicate: **73**
+- File riutilizzati in più punti: **13**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **72**
+- Immagini non utilizzate: **71**
 
 ## Mappa pagina → immagine → contesto
 
@@ -82,7 +82,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | Verifica del problema principale prima di una scelta. | Analisi completa |
 | `index.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Analisi approfondita di progetto, spazi, funzioni e costi. | Progetto da zero |
 | `index.html` | `images/08_HOME_CHIUSURA.png` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
-| `progetto-da-zero.html` | `images/hero-progetto-zero-90g.jpg` | — | Tavolo di progettazione con planimetria, campioni e proposta ancora da definire |
+| `progetto-da-zero.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | €797 | Progettazione da zero di un ambiente |
+| `progetto-da-zero.html` | `images/08_progetto_da_zero.svg` | Il lavoro non sostituisce rilievi, pratiche edilizie, calcoli strutturali, impiantistici o elaborati esecutivi non previsti. Questi passaggi |  |
+| `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
+| `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
+| `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute. | Materiali e dettagli di progetto |
 | `verifica-planimetria-distribuzione-casa.html` | `images/final/hero-plan-reference.jpg` | Usiamo Google Analytics solo se accetti, per capire come migliorare il sito. Puoi rifiutare e continuare a navigare. | Verifica della distribuzione di una casa prima della ristrutturazione |
 | `verifica-planimetria-distribuzione-casa.html` | `images/90g-style-planimetria.svg` | Rumore, privacy, uso simultaneo dei bagni, lavoro da casa e crescita dei figli possono cambiare il valore reale della distribuzione. | Zona giorno e cucina da valutare nella distribuzione complessiva della casa |
 
@@ -101,16 +105,18 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
 - `index.html` — Scopro conflitti, dubbi e criticità invisibili.
 
-### `images/03_definisco_le_priorita.svg` — 3 utilizzi
+### `images/03_definisco_le_priorita.svg` — 4 utilizzi
 
 - `analisi-completa.html` — Che cosa potrebbe accadere nell'uso o dopo l'ordine.
 - `chi-e-sistema90g.html` — Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova.
 - `index.html` — Cosa può costare, limitare o complicare.
+- `progetto-da-zero.html` — Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali.
 
-### `images/05_decidere_meglio.svg` — 2 utilizzi
+### `images/05_decidere_meglio.svg` — 3 utilizzi
 
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
 - `index.html` — Modifiche, lavori in più e compromessi.
+- `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
 
 ### `images/14_SERVIZI_CONTROLLO_MIRATO.png` — 2 utilizzi
 
@@ -121,6 +127,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `analisi-completa.html` — €347
 - `index.html` — Verifica del problema principale prima di una scelta.
+
+### `images/16_SERVIZI_PROGETTO_DA_ZERO.png` — 2 utilizzi
+
+- `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
+- `progetto-da-zero.html` — €797
 
 ### `images/90g-style-conflitto.svg` — 2 utilizzi
 
@@ -177,7 +188,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/04_HOME_COSTO_TARDIVO.png` — —
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_analisi_completa.svg` — viewBox 0 0 64 64
-- `images/08_progetto_da_zero.svg` — viewBox 0 0 64 64
 - `images/09_finiture_dettagli.svg` — viewBox 0 0 64 64
 - `images/10_CHI_SONO_METODO.png` — —
 - `images/10_agenzie_collaborazione.svg` — viewBox 0 0 64 64
@@ -185,7 +195,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
-- `images/17_SERVIZI_FINITURE.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/27_CONTATTI_HERO.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
@@ -242,6 +251,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/hero-planimetria-90g.jpg` — —
 - `images/hero-preventivo-90g-2026.jpg` — —
 - `images/hero-preventivo-90g.jpg` — —
+- `images/hero-progetto-zero-90g.jpg` — —
 - `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
 - `images/hero-verifica-planimetria-casa.svg` — viewBox 0 0 1200 760
 - `images/homepage-approvata.svg` — viewBox 0 0 560 373
