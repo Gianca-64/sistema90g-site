@@ -4,10 +4,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **53**
+- Pagine HTML controllate: **54**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **82**
-- File riutilizzati in più punti: **20**
+- Immagini di contenuto pubblicate: **86**
+- File riutilizzati in più punti: **23**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
 - Immagini non utilizzate: **74**
@@ -69,6 +69,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.png` | Descrivi il dubbio principale e allega il materiale in un unico invio. | Caso analizzato da Sistema 90G |
+| `contatti.html` | `images/27_CONTATTI_HERO.png` | Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide. | Accesso al portale pubblico Sistema 90G |
+| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | La prima valutazione non è una consulenza completa e non obbliga ad acquistare. | Raccolta ordinata di fotografie, planimetrie e preventivi |
+| `contatti.html` | `images/29_PORTALE_HERO.png` | Proposta, pagamento, materiali e consegna restano nello stesso percorso. | Portale cliente Sistema 90G |
+| `contatti.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn | Consegna dei documenti nel portale cliente |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.png` | €127 | Controllo mirato di una criticità specifica |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
 | `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.png` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
@@ -173,12 +177,28 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
 - `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 4 utilizzi
+### `images/27_CONTATTI_HERO.png` — 2 utilizzi
+
+- `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
+- `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
+
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 5 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
+- `contatti.html` — La prima valutazione non è una consulenza completa e non obbliga ad acquistare.
 - `controllo-mirato.html` — Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto.
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `scelta-finiture-casa.html` — Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un
+
+### `images/29_PORTALE_HERO.png` — 2 utilizzi
+
+- `analisi-completa.html` — L'analisi parte dopo conferma, pagamento e ricezione del materiale completo.
+- `contatti.html` — Proposta, pagamento, materiali e consegna restano nello stesso percorso.
+
+### `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — 2 utilizzi
+
+- `casi-analizzati.html` — Descrivi cosa devi decidere e allega il materiale nel portale pubblico.
+- `contatti.html` — Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn
 
 ### `images/final/case-05-island-passages.jpg` — 2 utilizzi
 
