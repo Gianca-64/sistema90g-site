@@ -10,7 +10,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - File riutilizzati in più punti: **21**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **92**
+- Immagini non utilizzate: **93**
 
 ## Mappa pagina → immagine → contesto
 
@@ -40,7 +40,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/06_HOME_CASO_2.png` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
 | `casi-analizzati.html` | `images/05_HOME_CASO_1.png` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Terza camera |
-| `casi-analizzati.html` | `images/final/case-18-wardrobe-125cm.svg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio 125 centimetri |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cabina armadio con larghezza totale di 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
@@ -204,10 +204,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
-### `images/20_CASI_DISTRIBUZIONE.png` — 9 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.png` — 10 utilizzi
 
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
 - `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
+- `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
@@ -358,6 +359,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-15-sofa-bed.jpg` — —
 - `images/final/case-16-two-apartments-access.svg` — viewBox 0 0 1600 1000
 - `images/final/case-17-living-piano.svg` — viewBox 0 0 1600 1000
+- `images/final/case-18-wardrobe-125cm.svg` — viewBox 0 0 1200 800
 - `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
