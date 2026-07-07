@@ -6,8 +6,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **55**
 - File immagine presenti: **127**
-- Immagini di contenuto pubblicate: **103**
-- File riutilizzati in più punti: **21**
+- Immagini di contenuto pubblicate: **104**
+- File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
 - Immagini non utilizzate: **93**
@@ -16,6 +16,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
+| `404.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.png` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
 | `agenzie-immobiliari.html` | `images/10_agenzia_collaborazione.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
 | `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
@@ -194,6 +195,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `progetto-da-zero.html` — Invia planimetria, fotografie, misure disponibili e descrivi ciò che non funziona nelle proposte ricevute.
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
+
+### `images/18_CASI_HERO_ARCHIVIO.png` — 2 utilizzi
+
+- `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
+- `casi-analizzati.html` — Casi anonimizzati e semplificati, con una criticità precisa, una conseguenza concreta e i limiti dichiarati.
 
 ### `images/19_CASI_CUCINA.png` — 6 utilizzi
 
