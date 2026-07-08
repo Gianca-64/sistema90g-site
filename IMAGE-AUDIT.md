@@ -87,7 +87,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
-| `caso-terza-camera-zona-giorno.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
+| `caso-terza-camera-zona-giorno.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
@@ -180,7 +180,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno.
 
 ### `images/13_SERVIZI_HERO.png` — 2 utilizzi
