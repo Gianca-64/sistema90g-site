@@ -60,7 +60,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
 | `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
-| `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
+| `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
 | `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
@@ -151,7 +151,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/05_HOME_CASO_1.png` — 4 utilizzi
 
 - `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
-- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — Esempi di situazioni analizzate ogni giorno.
 
