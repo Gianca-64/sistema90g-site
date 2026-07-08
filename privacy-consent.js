@@ -1,115 +1,38 @@
 const GA_ID='G-G5D6FNDR00';
 const CONSENT_KEY='s90g_cookie_consent';
 const WHATSAPP_CHAT_URL='https://wa.me/393275478485?text=Ciao%2C%20ho%20una%20domanda%20rapida%20su%20Sistema%2090G.';
-
-function loadAuditFix(){
-  if(document.querySelector('link[data-s90g-audit-fix]'))return;
-  const link=document.createElement('link');
-  link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708am';
-  link.dataset.s90gAuditFix='true';
-  document.head.appendChild(link);
-}
-function hasArticleType(item){
-  if(!item)return false;
-  const type=item['@type'];
-  return type==='Article'||(Array.isArray(type)&&type.includes('Article'));
-}
-function hasStaticArticleSchema(){
-  return [...document.querySelectorAll('script[type="application/ld+json"]')].some(script=>{
-    try{
-      const data=JSON.parse(script.textContent||'{}');
-      const items=Array.isArray(data)?data:(Array.isArray(data['@graph'])?data['@graph']:[data]);
-      return items.some(hasArticleType);
-    }catch{return false;}
-  });
-}
-function addStructuredData(){
-  if(document.querySelector('script[data-s90g-structured-data]'))return;
-  const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href;
-  const title=document.querySelector('h1')?.textContent.trim()||document.title;
-  const description=document.querySelector('meta[name="description"]')?.content||'';
-  const image=document.querySelector('main img')?.src||'https://sistema90g.it/images/01_HOME_HERO.png';
-  const graph=[
-    {'@type':'Organization','@id':'https://sistema90g.it/#organization','name':'Sistema 90G','url':'https://sistema90g.it/','logo':{'@type':'ImageObject','url':'https://sistema90g.it/images/favicon-512.png'},'founder':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'description':'Servizio indipendente di analisi preventiva per progetti casa, cucine, distribuzione interna e preventivi.'},
-    {'@type':'Person','@id':'https://sistema90g.it/chi-e-sistema90g.html#person','name':'Gian Carlo Primo','url':'https://sistema90g.it/chi-e-sistema90g.html','jobTitle':'Tecnico indipendente per analisi preventiva di progetti casa e cucina','worksFor':{'@id':'https://sistema90g.it/#organization'}},
-    {'@type':'WebSite','@id':'https://sistema90g.it/#website','url':'https://sistema90g.it/','name':'Sistema 90G','publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'},
-    {'@type':'WebPage','@id':canonical+'#webpage','url':canonical,'name':title,'description':description,'isPartOf':{'@id':'https://sistema90g.it/#website'},'about':{'@id':'https://sistema90g.it/#organization'},'primaryImageOfPage':{'@type':'ImageObject','url':image},'inLanguage':'it-IT'}
-  ];
-  if(location.pathname.includes('caso-')&&!hasStaticArticleSchema()){
-    graph.push({'@type':'Article','headline':title,'description':description,'image':[image],'mainEntityOfPage':canonical,'author':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'});
-  }
-  const script=document.createElement('script');
-  script.type='application/ld+json';
-  script.dataset.s90gStructuredData='true';
-  script.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});
-  document.head.appendChild(script);
-}
-function archiveFallback(img){
-  const card=img.closest('.s90g-archive-card');
-  const label=card?.querySelector('.s90g-archive-copy span')?.textContent.toLowerCase()||'';
-  if(label.includes('bagno'))return 'images/21_CASI_BAGNO.png?v=20260708am';
-  if(label.includes('cucina')||label.includes('preventivo'))return 'images/19_CASI_CUCINA.png?v=20260708am';
-  return 'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
-}
-function optimizeImages(){
-  const images=[...document.querySelectorAll('img')];
-  images.forEach((img,index)=>{
-    img.decoding='async';
-    const isArchive=Boolean(img.closest('.s90g-archive-card'));
-    if(img.getAttribute('src')?.includes('case-19-tiranti-cavi-ispezionabilita.svg')){
-      img.src='images/final/case-19-tiranti-cavi-ispezionabilita.svg?v=20260708am';
-    }
-    const applyFallback=()=>{
-      if(img.dataset.s90gFallbackApplied)return;
-      img.dataset.s90gFallbackApplied='true';
-      img.src=isArchive?archiveFallback(img):'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
-    };
-    img.addEventListener('error',applyFallback,{once:true});
-    if(isArchive){
-      img.loading='eager';
-      img.fetchPriority='auto';
-      requestAnimationFrame(()=>{
-        if(img.complete&&img.naturalWidth===0)applyFallback();
-      });
-    }else if(index===0||img.closest('.s90g-hero-media,.s90g-inner-media,.premium-hero')){
-      img.loading='eager';
-      img.fetchPriority='high';
-    }else{
-      img.loading='lazy';
-    }
-  });
-}
+const CASE_IMAGE_MAP={
+'caso-lavastoviglie-passaggio-cucina.html':'images/cases/lavastoviglie-passaggio.svg',
+'caso-ingresso-tavolo-living.html':'images/cases/ingresso-living.svg',
+'caso-cucina-piccola-tre-lati.html':'images/cases/cucina-tre-lati.svg',
+'caso-preventivo-cucina-sconto-valore.html':'images/cases/preventivo-valore.svg',
+'caso-isola-passaggi-cucina.html':'images/cases/isola-passaggi.svg',
+'caso-secondo-bagno-impianti-spazio.html':'images/cases/secondo-bagno.svg',
+'caso-open-space-tv-divano-passaggi.html':'images/cases/open-space-tv-divano.svg',
+'caso-lavello-sotto-finestra-aperture.html':'images/cases/lavello-finestra.svg',
+'caso-scala-interna-terrazzo-planimetria.html':'images/cases/scala-terrazzo.svg',
+'caso-open-space-percorso-centrale.html':'images/cases/open-space-percorso.svg',
+'caso-terza-camera-zona-giorno.html':'images/cases/terza-camera.svg',
+'caso-cucina-profondita-75-angolo.html':'images/cases/profondita-75.svg',
+'caso-bagno-lavatrice-dieci-centimetri.html':'images/cases/lavatrice-dieci-cm.svg',
+'caso-cabina-armadio-camera-irregolare.html':'images/cases/cabina-irregolare.svg',
+'caso-divano-letto-soggiorno-tre-persone.html':'images/cases/divano-letto.svg',
+'caso-due-appartamenti-accessi-disimpegni.html':'images/cases/due-appartamenti.svg',
+'caso-soggiorno-pianoforte-tavolo-divano-tv.html':'images/cases/pianoforte-living.svg',
+'caso-cabina-armadio-125-cm-passaggio.html':'images/cases/cabina-125.svg',
+'caso-tiranti-cavi-vista-impianto-ispezionabile.html':'images/final/case-19-tiranti-cavi-ispezionabilita.svg'
+};
+function loadAuditFix(){if(document.querySelector('link[data-s90g-audit-fix]'))return;const l=document.createElement('link');l.rel='stylesheet';l.href='sistema90g-audit-fix-20260707.css?v=20260708an';l.dataset.s90gAuditFix='true';document.head.appendChild(l)}
+function hasArticleType(i){if(!i)return false;const t=i['@type'];return t==='Article'||Array.isArray(t)&&t.includes('Article')}
+function hasStaticArticleSchema(){return [...document.querySelectorAll('script[type="application/ld+json"]')].some(s=>{try{const d=JSON.parse(s.textContent||'{}');const a=Array.isArray(d)?d:Array.isArray(d['@graph'])?d['@graph']:[d];return a.some(hasArticleType)}catch{return false}})}
+function addStructuredData(){if(document.querySelector('script[data-s90g-structured-data]'))return;const c=document.querySelector('link[rel="canonical"]')?.href||location.href,t=document.querySelector('h1')?.textContent.trim()||document.title,d=document.querySelector('meta[name="description"]')?.content||'',i=document.querySelector('main img')?.src||'https://sistema90g.it/images/01_HOME_HERO.png';const g=[{'@type':'Organization','@id':'https://sistema90g.it/#organization','name':'Sistema 90G','url':'https://sistema90g.it/','logo':{'@type':'ImageObject','url':'https://sistema90g.it/images/favicon-512.png'},'founder':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'}},{'@type':'Person','@id':'https://sistema90g.it/chi-e-sistema90g.html#person','name':'Gian Carlo Primo','url':'https://sistema90g.it/chi-e-sistema90g.html','worksFor':{'@id':'https://sistema90g.it/#organization'}},{'@type':'WebSite','@id':'https://sistema90g.it/#website','url':'https://sistema90g.it/','name':'Sistema 90G','publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'},{'@type':'WebPage','@id':c+'#webpage','url':c,'name':t,'description':d,'isPartOf':{'@id':'https://sistema90g.it/#website'},'primaryImageOfPage':{'@type':'ImageObject','url':i},'inLanguage':'it-IT'}];if(location.pathname.includes('caso-')&&!hasStaticArticleSchema())g.push({'@type':'Article','headline':t,'description':d,'image':[i],'mainEntityOfPage':c,'author':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'});const s=document.createElement('script');s.type='application/ld+json';s.dataset.s90gStructuredData='true';s.textContent=JSON.stringify({'@context':'https://schema.org','@graph':g});document.head.appendChild(s)}
+function assignArchiveImages(){document.querySelectorAll('.s90g-archive-card').forEach(card=>{const link=card.querySelector('a[href]');const img=card.querySelector('img');if(!link||!img)return;const file=link.getAttribute('href').split('/').pop();const mapped=CASE_IMAGE_MAP[file];if(mapped)img.src=mapped+'?v=20260708an'})}
+function optimizeImages(){const images=[...document.querySelectorAll('img')];images.forEach((img,index)=>{img.decoding='async';const archive=Boolean(img.closest('.s90g-archive-card'));img.addEventListener('error',()=>{if(img.dataset.s90gFallbackApplied)return;img.dataset.s90gFallbackApplied='true';img.src='images/20_CASI_DISTRIBUZIONE.png?v=20260708an'},{once:true});if(archive){img.loading='eager';img.fetchPriority='auto'}else if(index===0||img.closest('.s90g-hero-media,.s90g-inner-media,.premium-hero')){img.loading='eager';img.fetchPriority='high'}else img.loading='lazy'})}
 function loadAnalytics(){if(window.s90gAnalyticsLoaded)return;window.s90gAnalyticsLoaded=true;if(typeof window.gtag!=='function')return;window.gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});window.gtag('config',GA_ID)}
 function denyAnalytics(){if(typeof window.gtag!=='function')return;window.gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})}
 function hideCookieBanner(b){if(b)b.setAttribute('hidden','')}
 function showCookieBanner(b){if(b)b.removeAttribute('hidden')}
-function saveConsent(c){window.localStorage.setItem(CONSENT_KEY,c)}
-function trackLead(name,link){if(window.localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),transport_type:'beacon'})}
-function addWhatsAppChat(){
-  if(document.querySelector('.s90g-chat-launcher'))return;
-  const wrapper=document.createElement('div');
-  wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per inviare foto, planimetrie o preventivi usa invece il portale pubblico.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener" data-track-portal>Invia un caso</a></div></section>`;
-  document.body.appendChild(wrapper);
-  const launcher=wrapper.querySelector('.s90g-chat-launcher');
-  const popup=wrapper.querySelector('.s90g-chat-popup');
-  const close=wrapper.querySelector('.s90g-chat-close');
-  const setOpen=open=>{popup.hidden=!open;launcher.setAttribute('aria-expanded',String(open));wrapper.classList.toggle('is-open',open)};
-  launcher.addEventListener('click',()=>setOpen(popup.hidden));
-  close.addEventListener('click',()=>setOpen(false));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false)});
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-  loadAuditFix();
-  addStructuredData();
-  optimizeImages();
-  addWhatsAppChat();
-  const b=document.getElementById('cookie-banner'),c=localStorage.getItem(CONSENT_KEY);
-  if(c==='accepted'){hideCookieBanner(b);loadAnalytics()}else if(c==='rejected'){hideCookieBanner(b);denyAnalytics()}else showCookieBanner(b);
-  document.querySelectorAll('[data-cookie-choice]').forEach(x=>x.addEventListener('click',()=>{const ok=x.dataset.cookieChoice==='accept';saveConsent(ok?'accepted':'rejected');hideCookieBanner(b);ok?loadAnalytics():denyAnalytics()}));
-  document.querySelectorAll('[data-cookie-settings]').forEach(x=>x.addEventListener('click',e=>{e.preventDefault();showCookieBanner(b)}));
-  document.querySelectorAll('[data-track-whatsapp]').forEach(x=>x.addEventListener('click',()=>trackLead('whatsapp_chat_open',x)));
-  document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>trackLead('public_portal_open',x)));
-});
+function saveConsent(c){localStorage.setItem(CONSENT_KEY,c)}
+function trackLead(name,link){if(localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),transport_type:'beacon'})}
+function addWhatsAppChat(){if(document.querySelector('.s90g-chat-launcher'))return;const w=document.createElement('div');w.className='s90g-chat-widget';w.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per inviare foto, planimetrie o preventivi usa invece il portale pubblico.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener" data-track-portal>Invia un caso</a></div></section>`;document.body.appendChild(w);const b=w.querySelector('.s90g-chat-launcher'),p=w.querySelector('.s90g-chat-popup'),x=w.querySelector('.s90g-chat-close');const open=v=>{p.hidden=!v;b.setAttribute('aria-expanded',String(v));w.classList.toggle('is-open',v)};b.addEventListener('click',()=>open(p.hidden));x.addEventListener('click',()=>open(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')open(false)})}
+document.addEventListener('DOMContentLoaded',()=>{loadAuditFix();assignArchiveImages();addStructuredData();optimizeImages();addWhatsAppChat();const b=document.getElementById('cookie-banner'),c=localStorage.getItem(CONSENT_KEY);if(c==='accepted'){hideCookieBanner(b);loadAnalytics()}else if(c==='rejected'){hideCookieBanner(b);denyAnalytics()}else showCookieBanner(b);document.querySelectorAll('[data-cookie-choice]').forEach(x=>x.addEventListener('click',()=>{const ok=x.dataset.cookieChoice==='accept';saveConsent(ok?'accepted':'rejected');hideCookieBanner(b);ok?loadAnalytics():denyAnalytics()}));document.querySelectorAll('[data-cookie-settings]').forEach(x=>x.addEventListener('click',e=>{e.preventDefault();showCookieBanner(b)}));document.querySelectorAll('[data-track-whatsapp]').forEach(x=>x.addEventListener('click',()=>trackLead('whatsapp_chat_open',x)));document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>trackLead('public_portal_open',x)))})
