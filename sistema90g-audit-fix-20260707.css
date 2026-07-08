@@ -15,6 +15,8 @@ body.s90g-visual .s90g-final-media img{object-fit:contain;background:#fff}
 body.s90g-visual .s90g-service-card img,
 body.s90g-visual .s90g-case-card img,
 body.s90g-visual .s90g-archive-card img{object-position:center}
+body.s90g-visual .s90g-archive-card{overflow:hidden}
+body.s90g-visual .s90g-archive-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#f3efe8;color:transparent;font-size:0;line-height:0;overflow:hidden}
 .s90g-chat-widget{position:fixed;right:22px;bottom:22px;z-index:9998;font-family:inherit}
 .s90g-chat-launcher{border:0;border-radius:999px;background:#171717;color:#fff;display:flex;align-items:center;gap:9px;padding:13px 18px;font:700 14px/1 inherit;box-shadow:0 12px 34px rgba(0,0,0,.2);cursor:pointer;-webkit-appearance:none;appearance:none}
 .s90g-chat-launcher:hover,.s90g-chat-launcher:focus-visible{transform:translateY(-1px);outline:3px solid rgba(173,126,74,.35);outline-offset:3px}
