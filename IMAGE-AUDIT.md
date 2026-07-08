@@ -72,7 +72,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
-| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Planimetria con scala interna verso il terrazzo |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria con scala interna verso il terrazzo |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
@@ -220,7 +220,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
 ### `images/21_CASI_BAGNO.png` — 3 utilizzi
