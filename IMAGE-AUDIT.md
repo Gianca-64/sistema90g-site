@@ -56,7 +56,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
-| `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
+| `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
 | `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
@@ -217,7 +217,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
