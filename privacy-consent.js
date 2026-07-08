@@ -6,7 +6,7 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708ag';
+  link.href='sistema90g-audit-fix-20260707.css?v=20260708aj';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
 }
@@ -64,7 +64,7 @@ function showCookieBanner(b){if(b)b.removeAttribute('hidden')}
 function saveConsent(c){window.localStorage.setItem(CONSENT_KEY,c)}
 function trackLead(name,link){if(window.localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),transport_type:'beacon'})}
 function addWhatsAppChat(){
-  if(document.body.dataset.disableGlobalChat==='true'||document.querySelector('.s90g-chat-launcher'))return;
+  if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
   wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per inviare foto, planimetrie o preventivi usa invece il portale pubblico.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener" data-track-portal>Invia un caso</a></div></section>`;
