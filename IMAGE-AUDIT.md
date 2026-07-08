@@ -315,6 +315,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `case-16-inject-v2.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `case-17-inject.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
+- `privacy-consent.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `privacy-consent.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 - `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `\.src\s*=`
 - `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
