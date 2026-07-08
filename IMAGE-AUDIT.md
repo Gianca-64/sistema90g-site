@@ -74,7 +74,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Planimetria con scala interna verso il terrazzo |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
-| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/06_HOME_CASO_2.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
@@ -227,7 +227,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/22_CASI_PREVENTIVO.png` — 3 utilizzi
 
