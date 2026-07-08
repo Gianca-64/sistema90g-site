@@ -6,7 +6,7 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708aj';
+  link.href='sistema90g-audit-fix-20260707.css?v=20260708al';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
 }
@@ -49,6 +49,14 @@ function optimizeImages(){
   const images=[...document.querySelectorAll('img')];
   images.forEach((img,index)=>{
     img.decoding='async';
+    if(img.getAttribute('src')?.includes('case-19-tiranti-cavi-ispezionabilita.svg')){
+      img.src='images/20_CASI_DISTRIBUZIONE.png?v=20260708al';
+    }
+    img.addEventListener('error',()=>{
+      if(img.dataset.s90gFallbackApplied)return;
+      img.dataset.s90gFallbackApplied='true';
+      img.src='images/20_CASI_DISTRIBUZIONE.png?v=20260708al';
+    });
     if(index===0||img.closest('.s90g-hero-media,.s90g-inner-media,.premium-hero')){
       img.loading='eager';
       img.fetchPriority='high';
