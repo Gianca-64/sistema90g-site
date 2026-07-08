@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **55**
-- File immagine presenti: **144**
+- File immagine presenti: **145**
 - Immagini di contenuto pubblicate: **113**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **110**
+- Immagini non utilizzate: **111**
 
 ## Mappa pagina → immagine → contesto
 
@@ -343,6 +343,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/90g-style-hero.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-preventivo.svg` — viewBox 0 0 1600 1000
+- `images/cases/cabina-125.svg` — viewBox 0 0 1200 800
 - `images/cases/cabina-irregolare.svg` — viewBox 0 0 1200 800
 - `images/cases/cucina-tre-lati.svg` — viewBox 0 0 1200 800
 - `images/cases/divano-letto.svg` — viewBox 0 0 1200 800
