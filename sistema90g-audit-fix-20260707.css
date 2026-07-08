@@ -15,9 +15,25 @@ body.s90g-visual .s90g-final-media img{object-fit:contain;background:#fff}
 body.s90g-visual .s90g-service-card img,
 body.s90g-visual .s90g-case-card img,
 body.s90g-visual .s90g-archive-card img{object-position:center}
+.s90g-chat-widget{position:fixed;right:22px;bottom:22px;z-index:9998;font-family:inherit}
+.s90g-chat-launcher{border:0;border-radius:999px;background:#171717;color:#fff;display:flex;align-items:center;gap:9px;padding:13px 18px;font:700 14px/1 inherit;box-shadow:0 12px 34px rgba(0,0,0,.2);cursor:pointer}
+.s90g-chat-launcher:hover,.s90g-chat-launcher:focus-visible{transform:translateY(-1px);outline:3px solid rgba(173,126,74,.35);outline-offset:3px}
+.s90g-chat-popup{position:absolute;right:0;bottom:62px;width:min(360px,calc(100vw - 32px));background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:18px;padding:24px;box-shadow:0 22px 60px rgba(0,0,0,.24)}
+.s90g-chat-popup[hidden]{display:none}
+.s90g-chat-popup h2{margin:3px 32px 10px 0;font-size:24px;line-height:1.15}
+.s90g-chat-popup p{margin:0 0 16px;color:#555;line-height:1.55}
+.s90g-chat-kicker{font-size:12px!important;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ad7e4a!important;margin-bottom:4px!important}
+.s90g-chat-close{position:absolute;top:12px;right:14px;border:0;background:transparent;font-size:28px;line-height:1;color:#333;cursor:pointer}
+.s90g-chat-actions{display:grid;gap:10px}
+.s90g-chat-actions a{display:block;text-align:center;text-decoration:none;border-radius:10px;padding:12px 14px;font-weight:800}
+.s90g-chat-primary{background:#171717;color:#fff}
+.s90g-chat-secondary{border:1px solid #171717;color:#171717;background:#fff}
+.s90g-chat-actions a:focus-visible,.s90g-chat-close:focus-visible{outline:3px solid rgba(173,126,74,.4);outline-offset:2px}
 @media(max-width:860px){
  body.s90g-visual .s90g-hero-media,
  body.s90g-visual .s90g-inner-media{min-height:0}
  body.s90g-visual .s90g-hero-media img,
  body.s90g-visual .s90g-inner-media img{height:auto}
+ .s90g-chat-widget{right:16px;bottom:16px}
+ .s90g-chat-popup{position:fixed;right:16px;left:16px;bottom:76px;width:auto}
 }
