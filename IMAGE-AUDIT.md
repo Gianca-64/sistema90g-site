@@ -50,7 +50,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
-| `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
+| `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
 | `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
 | `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
 | `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
@@ -205,7 +205,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
 - `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
-- `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
