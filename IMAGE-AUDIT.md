@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **55**
-- File immagine presenti: **130**
+- File immagine presenti: **131**
 - Immagini di contenuto pubblicate: **113**
 - File riutilizzati in più punti: **22**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **96**
+- Immagini non utilizzate: **97**
 
 ## Mappa pagina → immagine → contesto
 
@@ -346,6 +346,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/cases/cucina-tre-lati.svg` — viewBox 0 0 1200 800
 - `images/cases/ingresso-living.svg` — viewBox 0 0 1200 800
 - `images/cases/lavastoviglie-passaggio.svg` — viewBox 0 0 1200 800
+- `images/cases/preventivo-valore.svg` — viewBox 0 0 1200 800
 - `images/caso-bagno-lavatrice-10cm-90g.svg` — viewBox 0 0 1600 1000
 - `images/caso-bagno-lavatrice-2026.jpg` — —
 - `images/caso-cabina-armadio-2026.jpg` — —
