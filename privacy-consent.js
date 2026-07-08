@@ -6,7 +6,7 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708al';
+  link.href='sistema90g-audit-fix-20260707.css?v=20260708am';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
 }
@@ -45,19 +45,34 @@ function addStructuredData(){
   script.textContent=JSON.stringify({'@context':'https://schema.org','@graph':graph});
   document.head.appendChild(script);
 }
+function archiveFallback(img){
+  const card=img.closest('.s90g-archive-card');
+  const label=card?.querySelector('.s90g-archive-copy span')?.textContent.toLowerCase()||'';
+  if(label.includes('bagno'))return 'images/21_CASI_BAGNO.png?v=20260708am';
+  if(label.includes('cucina')||label.includes('preventivo'))return 'images/19_CASI_CUCINA.png?v=20260708am';
+  return 'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
+}
 function optimizeImages(){
   const images=[...document.querySelectorAll('img')];
   images.forEach((img,index)=>{
     img.decoding='async';
+    const isArchive=Boolean(img.closest('.s90g-archive-card'));
     if(img.getAttribute('src')?.includes('case-19-tiranti-cavi-ispezionabilita.svg')){
-      img.src='images/20_CASI_DISTRIBUZIONE.png?v=20260708al';
+      img.src='images/final/case-19-tiranti-cavi-ispezionabilita.svg?v=20260708am';
     }
-    img.addEventListener('error',()=>{
+    const applyFallback=()=>{
       if(img.dataset.s90gFallbackApplied)return;
       img.dataset.s90gFallbackApplied='true';
-      img.src='images/20_CASI_DISTRIBUZIONE.png?v=20260708al';
-    });
-    if(index===0||img.closest('.s90g-hero-media,.s90g-inner-media,.premium-hero')){
+      img.src=isArchive?archiveFallback(img):'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
+    };
+    img.addEventListener('error',applyFallback,{once:true});
+    if(isArchive){
+      img.loading='eager';
+      img.fetchPriority='auto';
+      requestAnimationFrame(()=>{
+        if(img.complete&&img.naturalWidth===0)applyFallback();
+      });
+    }else if(index===0||img.closest('.s90g-hero-media,.s90g-inner-media,.premium-hero')){
       img.loading='eager';
       img.fetchPriority='high';
     }else{
