@@ -62,7 +62,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
 | `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
 | `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
@@ -207,7 +207,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
 ### `images/20_CASI_DISTRIBUZIONE.png` — 10 utilizzi
