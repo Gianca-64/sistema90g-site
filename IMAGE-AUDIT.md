@@ -6,7 +6,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **62**
 - File immagine presenti: **147**
-- Immagini di contenuto pubblicate: **142**
+- Immagini di contenuto pubblicate: **141**
 - File riutilizzati in più punti: **23**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
@@ -153,7 +153,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci. | Materiali e dettagli di progetto |
 | `render-fotorealistici-interni.html` | `images/13_SERVIZI_HERO.png` | Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com | Visualizzazione di un ambiente interno con annotazioni progettuali |
 | `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
-| `richiesta.html` | `images/27_CONTATTI_HERO.png` | Descrivi il dubbio principale e allega foto, planimetrie, render o preventivi. La richiesta entra nell'archivio Sistema 90G e viene qualific | Invio materiali al portale pubblico Sistema 90G |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.png` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
 | `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.png` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
@@ -305,12 +304,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Angoli, aperture e piano di lavoro devono restare compatibili.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
-### `images/27_CONTATTI_HERO.png` — 4 utilizzi
+### `images/27_CONTATTI_HERO.png` — 3 utilizzi
 
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 - `professionisti.html` — Invia una cucina, una planimetria, un progetto o una situazione da chiarire. La prima valutazione serve a capire se Sistema 90G può essere d
-- `richiesta.html` — Descrivi il dubbio principale e allega foto, planimetrie, render o preventivi. La richiesta entra nell'archivio Sistema 90G e viene qualific
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 32 utilizzi
 
