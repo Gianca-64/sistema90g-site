@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **147**
+- File immagine presenti: **148**
 - Immagini di contenuto pubblicate: **141**
 - File riutilizzati in più punti: **23**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **4**
-- Immagini non utilizzate: **113**
+- Immagini non utilizzate: **114**
 
 ## Mappa pagina → immagine → contesto
 
@@ -115,7 +115,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
-| `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO.jpg` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Gian Carlo Primo, tecnico indipendente di Sistema 90G |
+| `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Gian Carlo Primo, tecnico indipendente di Sistema 90G, al lavoro nel controllo di una planimetria quotata |
 | `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
@@ -394,6 +394,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_CHI_SONO_DETTAGLIO.png` — —
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
+- `images/18_CHI_SONO_GIANCARLO.jpg` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
