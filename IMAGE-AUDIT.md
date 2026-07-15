@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **173**
+- File immagine presenti: **188**
 - Immagini di contenuto pubblicate: **141**
-- File riutilizzati in più punti: **31**
+- File riutilizzati in più punti: **42**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **131**
+- Immagini non utilizzate: **132**
 
 ## Mappa pagina → immagine → contesto
 
@@ -33,23 +33,23 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 180+ casi analizzati con il Metodo | Archivio dei casi analizzati Sistema 90G |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
+| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
+| `casi-analizzati.html` | `images/caso-ingresso-tavolo-living.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
+| `casi-analizzati.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
 | `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Angoli, aperture e piano di lavoro devono restare compatibili. | Preventivo cucina |
-| `casi-analizzati.html` | `images/05_HOME_CASO_1.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola cucina e passaggi |
-| `casi-analizzati.html` | `images/21_CASI_BAGNO.jpg` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
-| `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
-| `casi-analizzati.html` | `images/05_HOME_CASO_1.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Scala interna verso il terrazzo |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Partenza, arrivo e ingombro devono essere definiti prima delle stanze. | Open space attraversato dal percorso centrale |
-| `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno. | Terza camera ricavata dalla zona giorno |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina profonda 75 centimetri in angolo |
-| `casi-analizzati.html` | `images/21_CASI_BAGNO.jpg` | Una profondità maggiore modifica spazio residuo e uso dei moduli vicini. | Lavatrice in bagno con dieci centimetri disponibili |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Lavatrice, sanitari e passaggio devono essere verificati insieme. | Cabina armadio in camera irregolare |
-| `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Contenimento, letto e passaggi devono restare leggibili insieme. | Divano letto in soggiorno per tre persone |
+| `casi-analizzati.html` | `images/caso-isola-passaggi-cucina.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola cucina e passaggi |
+| `casi-analizzati.html` | `images/caso-secondo-bagno-impianti-spazio.jpg` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
+| `casi-analizzati.html` | `images/caso-open-space-tv-divano-passaggi.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
+| `casi-analizzati.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
+| `casi-analizzati.html` | `images/caso-scala-interna-terrazzo-planimetria.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Scala interna verso il terrazzo |
+| `casi-analizzati.html` | `images/caso-open-space-percorso-centrale.jpg` | Partenza, arrivo e ingombro devono essere definiti prima delle stanze. | Open space attraversato dal percorso centrale |
+| `casi-analizzati.html` | `images/caso-terza-camera-zona-giorno.jpg` | Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno. | Terza camera ricavata dalla zona giorno |
+| `casi-analizzati.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina profonda 75 centimetri in angolo |
+| `casi-analizzati.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | Una profondità maggiore modifica spazio residuo e uso dei moduli vicini. | Lavatrice in bagno con dieci centimetri disponibili |
+| `casi-analizzati.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | Lavatrice, sanitari e passaggio devono essere verificati insieme. | Cabina armadio in camera irregolare |
+| `casi-analizzati.html` | `images/caso-divano-letto-soggiorno-tre-persone.jpg` | Contenimento, letto e passaggi devono restare leggibili insieme. | Divano letto in soggiorno per tre persone |
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
-| `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Disimpegni e percorsi comuni incidono sulla superficie realmente utile. | Soggiorno con pianoforte tavolo divano e TV |
+| `casi-analizzati.html` | `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` | Disimpegni e percorsi comuni incidono sulla superficie realmente utile. | Soggiorno con pianoforte tavolo divano e TV |
 | `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/caso-camera-bambini-crescita.jpg` | La finitura può nascondere ciò che deve restare accessibile. | Cameretta con letto a castello e armadio |
@@ -61,57 +61,57 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/caso-garage-apertura-portiere.jpg` | Altezza utile reale e accesso decidono lo spazio davvero sfruttabile. | Garage per un |
 | `casi-analizzati.html` | `images/caso-corridoio-porte-aperte.jpg` | Apertura portiere e manovra vanno verificate insieme allo spazio residuo. | Corridoio con più porte |
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
-| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
+| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
-| `caso-cabina-armadio-camera-irregolare.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
+| `caso-cabina-armadio-camera-irregolare.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
 | `caso-camera-bambini-crescita.html` | `images/caso-camera-bambini-crescita.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Cameretta con letto a castello, armadio e scrivania da verificare |
 | `caso-camera-bambini-crescita.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure della stanza e disposizione prevista di letto, armadio e scrivania. | Raccolta di planimetria e misure per una cameretta |
 | `caso-corridoio-porte-aperte.html` | `images/caso-corridoio-porte-aperte.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Corridoio di distribuzione con più porte da verificare |
 | `caso-corridoio-porte-aperte.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria quotata e verso di apertura previsto per ogni porta. | Raccolta di planimetria e misure per un corridoio |
-| `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
+| `caso-cucina-piccola-tre-lati.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
 | `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
-| `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
+| `caso-cucina-profondita-75-angolo.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
 | `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
-| `caso-divano-letto-soggiorno-tre-persone.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
+| `caso-divano-letto-soggiorno-tre-persone.html` | `images/caso-divano-letto-soggiorno-tre-persone.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
 | `caso-garage-apertura-portiere.html` | `images/caso-garage-apertura-portiere.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Garage per un |
 | `caso-garage-apertura-portiere.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del garage e modello dell'auto. | Raccolta di planimetria e misure per un garage |
-| `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
+| `caso-ingresso-tavolo-living.html` | `images/caso-ingresso-tavolo-living.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
 | `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
-| `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
+| `caso-isola-passaggi-cucina.html` | `images/caso-isola-passaggi-cucina.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
 | `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
 | `caso-lavanderia-oblo-porta.html` | `images/caso-lavanderia-oblo-porta.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Vano lavanderia con lavatrice e asciugatrice da verificare |
 | `caso-lavanderia-oblo-porta.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del vano e modello previsto di lavatrice e asciugatrice. | Raccolta di planimetria e misure per una lavanderia |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
-| `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
+| `caso-lavello-sotto-finestra-aperture.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
-| `caso-open-space-percorso-centrale.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Open space attraversato dal percorso verso la zona notte |
+| `caso-open-space-percorso-centrale.html` | `images/caso-open-space-percorso-centrale.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Open space attraversato dal percorso verso la zona notte |
 | `caso-open-space-percorso-centrale.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e indicazione delle funzioni che devono convivere. | Raccolta di planimetria e fotografie della zona giorno |
-| `caso-open-space-tv-divano-passaggi.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Open space con TV, divano e passaggio centrale |
+| `caso-open-space-tv-divano-passaggi.html` | `images/caso-open-space-tv-divano-passaggi.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Open space con TV, divano e passaggio centrale |
 | `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
 | `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
 | `caso-ripostiglio-profondita-scaffali.html` | `images/caso-ripostiglio-profondita-scaffali.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Ripostiglio con scaffalature profonde da verificare |
 | `caso-ripostiglio-profondita-scaffali.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del vano e verso di apertura della porta. | Raccolta di planimetria e misure per un ripostiglio |
-| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria con scala interna verso il terrazzo |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/caso-scala-interna-terrazzo-planimetria.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria con scala interna verso il terrazzo |
 | `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
-| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/caso-secondo-bagno-impianti-spazio.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
 | `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
 | `caso-soffitta-altezza-utile.html` | `images/caso-soffitta-altezza-utile.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Soffitta sotto falda con altezza utile da verificare |
 | `caso-soffitta-altezza-utile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, sezione della falda e misure dell'accesso. | Raccolta di planimetria e misure per una soffitta |
-| `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
+| `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
 | `caso-studio-postazione-lavoro.html` | `images/caso-studio-postazione-lavoro.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Studio ricavato in casa con postazione di lavoro da verificare |
 | `caso-studio-postazione-lavoro.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, orientamento delle finestre e posizione prevista della postazione. | Raccolta di planimetria e misure per uno studio in casa |
 | `caso-terrazzo-passaggio-arredi.html` | `images/caso-terrazzo-passaggio-arredi.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Terrazzo con tavolo, sedie e fioriere da verificare |
 | `caso-terrazzo-passaggio-arredi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere. | Raccolta di planimetria e misure per un terrazzo |
-| `caso-terza-camera-zona-giorno.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
+| `caso-terza-camera-zona-giorno.html` | `images/caso-terza-camera-zona-giorno.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
@@ -186,31 +186,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Cosa può costare, limitare o complicare.
 - `progetto-da-zero.html` — Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali.
 
-### `images/05_HOME_CASO_1.jpg` — 5 utilizzi
-
-- `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
-- `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
-- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `index.html` — Esempi di situazioni analizzate ogni giorno.
-
 ### `images/05_decidere_meglio.svg` — 3 utilizzi
 
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
 - `index.html` — Modifiche, lavori in più e compromessi.
 - `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
-
-### `images/06_HOME_CASO_2.jpg` — 9 utilizzi
-
-- `casi-analizzati.html` — Impianti, accessi e qualità degli ambienti vanno letti insieme.
-- `casi-analizzati.html` — Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno.
-- `casi-analizzati.html` — Contenimento, letto e passaggi devono restare leggibili insieme.
-- `casi-analizzati.html` — Disimpegni e percorsi comuni incidono sulla superficie realmente utile.
-- `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `index.html` — Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno.
 
 ### `images/08_HOME_CHIUSURA.jpg` — 2 utilizzi
 
@@ -248,39 +228,14 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
 - `casi-analizzati.html` — 180+ casi analizzati con il Metodo
 
-### `images/19_CASI_CUCINA.jpg` — 7 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.jpg` — 6 utilizzi
 
-- `casi-analizzati.html` — Problemi diversi, decisioni reali.
-- `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
-- `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
-- `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
-
-### `images/20_CASI_DISTRIBUZIONE.jpg` — 14 utilizzi
-
-- `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
-- `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
-- `casi-analizzati.html` — Partenza, arrivo e ingombro devono essere definiti prima delle stanze.
-- `casi-analizzati.html` — Lavatrice, sanitari e passaggio devono essere verificati insieme.
 - `casi-analizzati.html` — Passaggi e uso quotidiano devono funzionare anche in configurazione notte.
 - `casi-analizzati.html` — Le funzioni entrano tutte, ma non necessariamente convivono bene.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `professionisti.html` — Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
-
-### `images/21_CASI_BAGNO.jpg` — 4 utilizzi
-
-- `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
-- `casi-analizzati.html` — Una profondità maggiore modifica spazio residuo e uso dei moduli vicini.
-- `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/22_CASI_PREVENTIVO.jpg` — 3 utilizzi
 
@@ -339,6 +294,16 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Descrivi cosa devi decidere e allega il materiale nel portale pubblico.
 - `contatti.html` — Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn
 
+### `images/caso-bagno-lavatrice-dieci-centimetri.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Una profondità maggiore modifica spazio residuo e uso dei moduli vicini.
+- `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-cabina-armadio-camera-irregolare.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Lavatrice, sanitari e passaggio devono essere verificati insieme.
+- `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
 ### `images/caso-camera-bambini-crescita.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — La finitura può nascondere ciò che deve restare accessibile.
@@ -349,25 +314,85 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Apertura portiere e manovra vanno verificate insieme allo spazio residuo.
 - `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
+### `images/caso-cucina-piccola-tre-lati.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
+- `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-cucina-profondita-75-angolo.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
+- `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-divano-letto-soggiorno-tre-persone.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Contenimento, letto e passaggi devono restare leggibili insieme.
+- `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
 ### `images/caso-garage-apertura-portiere.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Altezza utile reale e accesso decidono lo spazio davvero sfruttabile.
 - `caso-garage-apertura-portiere.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-ingresso-tavolo-living.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
+- `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
+### `images/caso-isola-passaggi-cucina.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Materiali, codici, accessori e lavorazioni devono essere chiariti.
+- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Luce, acustica e impianti decidono se la postazione è vivibile.
 - `caso-lavanderia-oblo-porta.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
+### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Problemi diversi, decisioni reali.
+- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-lavello-sotto-finestra-aperture.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — La disposizione va verificata insieme a percorsi e luce.
+- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-open-space-percorso-centrale.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Partenza, arrivo e ingombro devono essere definiti prima delle stanze.
+- `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-open-space-tv-divano-passaggi.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Impianti, accessi e qualità degli ambienti vanno letti insieme.
+- `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
 ### `images/caso-ripostiglio-profondita-scaffali.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Apertura oblò, ventilazione e spazio operativo vanno letti insieme.
 - `caso-ripostiglio-profondita-scaffali.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
+### `images/caso-scala-interna-terrazzo-planimetria.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
+- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-secondo-bagno-impianti-spazio.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
+- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
 ### `images/caso-soffitta-altezza-utile.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Passaggio residuo, carico e drenaggio vanno verificati insieme.
 - `caso-soffitta-altezza-utile.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Disimpegni e percorsi comuni incidono sulla superficie realmente utile.
+- `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/caso-studio-postazione-lavoro.jpg` — 2 utilizzi
 
@@ -378,6 +403,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Profondità scaffali e ingombro porta decidono la capienza reale.
 - `caso-terrazzo-passaggio-arredi.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-terza-camera-zona-giorno.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno.
+- `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
 
@@ -426,6 +456,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/18_CHI_SONO_GIANCARLO.jpg` — —
 - `images/19_CASI_CUCINA.png` — —
 - `images/20_CASI_DISTRIBUZIONE.png` — —
+- `images/21_CASI_BAGNO.jpg` — —
 - `images/21_CASI_BAGNO.png` — —
 - `images/22_CASI_PREVENTIVO.png` — —
 - `images/23_PER_AGENZIE_HERO.png` — —
