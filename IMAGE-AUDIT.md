@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **190**
+- File immagine presenti: **191**
 - Immagini di contenuto pubblicate: **141**
 - File riutilizzati in più punti: **44**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **132**
+- Immagini non utilizzate: **133**
 
 ## Mappa pagina → immagine → contesto
 
@@ -51,7 +51,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/caso-due-appartamenti-accessi-disimpegni.jpg` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
 | `casi-analizzati.html` | `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` | Disimpegni e percorsi comuni incidono sulla superficie realmente utile. | Soggiorno con pianoforte tavolo divano e TV |
 | `casi-analizzati.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
-| `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
+| `casi-analizzati.html` | `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/caso-camera-bambini-crescita.jpg` | La finitura può nascondere ciò che deve restare accessibile. | Cameretta con letto a castello e armadio |
 | `casi-analizzati.html` | `images/caso-studio-postazione-lavoro.jpg` | Porta, armadio e margine di crescita vanno verificati insieme. | Studio ricavato in casa |
 | `casi-analizzati.html` | `images/caso-lavanderia-oblo-porta.jpg` | Luce, acustica e impianti decidono se la postazione è vivibile. | Lavanderia con lavatrice e asciugatrice |
@@ -113,7 +113,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-terrazzo-passaggio-arredi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere. | Raccolta di planimetria e misure per un terrazzo |
 | `caso-terza-camera-zona-giorno.html` | `images/caso-terza-camera-zona-giorno.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
-| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Gian Carlo Primo, tecnico indipendente di Sistema 90G, al lavoro nel controllo di una planimetria quotata |
 | `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
@@ -415,7 +415,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno.
 - `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
+### `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
@@ -543,6 +543,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/final/case-16-two-apartments-access.svg` — viewBox 0 0 1600 1000
 - `images/final/case-17-living-piano.svg` — viewBox 0 0 1600 1000
 - `images/final/case-18-wardrobe-125cm.svg` — viewBox 0 0 1200 800
+- `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — viewBox 0 0 1200 800
 - `images/final/hero-about-reference.jpg` — —
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
