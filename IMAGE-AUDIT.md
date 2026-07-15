@@ -5,9 +5,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **188**
+- File immagine presenti: **190**
 - Immagini di contenuto pubblicate: **141**
-- File riutilizzati in più punti: **42**
+- File riutilizzati in più punti: **44**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **132**
@@ -48,9 +48,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | Una profondità maggiore modifica spazio residuo e uso dei moduli vicini. | Lavatrice in bagno con dieci centimetri disponibili |
 | `casi-analizzati.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | Lavatrice, sanitari e passaggio devono essere verificati insieme. | Cabina armadio in camera irregolare |
 | `casi-analizzati.html` | `images/caso-divano-letto-soggiorno-tre-persone.jpg` | Contenimento, letto e passaggi devono restare leggibili insieme. | Divano letto in soggiorno per tre persone |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
+| `casi-analizzati.html` | `images/caso-due-appartamenti-accessi-disimpegni.jpg` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
 | `casi-analizzati.html` | `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` | Disimpegni e percorsi comuni incidono sulla superficie realmente utile. | Soggiorno con pianoforte tavolo divano e TV |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
+| `casi-analizzati.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
 | `casi-analizzati.html` | `images/caso-camera-bambini-crescita.jpg` | La finitura può nascondere ciò che deve restare accessibile. | Cameretta con letto a castello e armadio |
 | `casi-analizzati.html` | `images/caso-studio-postazione-lavoro.jpg` | Porta, armadio e margine di crescita vanno verificati insieme. | Studio ricavato in casa |
@@ -63,7 +63,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
-| `caso-cabina-armadio-125-cm-passaggio.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
+| `caso-cabina-armadio-125-cm-passaggio.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
 | `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
 | `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
@@ -77,7 +77,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/caso-divano-letto-soggiorno-tre-persone.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
-| `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
+| `caso-due-appartamenti-accessi-disimpegni.html` | `images/caso-due-appartamenti-accessi-disimpegni.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
 | `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
 | `caso-garage-apertura-portiere.html` | `images/caso-garage-apertura-portiere.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Garage per un |
 | `caso-garage-apertura-portiere.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del garage e modello dell'auto. | Raccolta di planimetria e misure per un garage |
@@ -228,12 +228,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
 - `casi-analizzati.html` — 180+ casi analizzati con il Metodo
 
-### `images/20_CASI_DISTRIBUZIONE.jpg` — 6 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — Passaggi e uso quotidiano devono funzionare anche in configurazione notte.
-- `casi-analizzati.html` — Le funzioni entrano tutte, ma non necessariamente convivono bene.
-- `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `professionisti.html` — Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
@@ -299,6 +295,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Una profondità maggiore modifica spazio residuo e uso dei moduli vicini.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
+### `images/caso-cabina-armadio-125-cm-passaggio.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Le funzioni entrano tutte, ma non necessariamente convivono bene.
+- `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
 ### `images/caso-cabina-armadio-camera-irregolare.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Lavatrice, sanitari e passaggio devono essere verificati insieme.
@@ -328,6 +329,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `casi-analizzati.html` — Contenimento, letto e passaggi devono restare leggibili insieme.
 - `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-due-appartamenti-accessi-disimpegni.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Passaggi e uso quotidiano devono funzionare anche in configurazione notte.
+- `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/caso-garage-apertura-portiere.jpg` — 2 utilizzi
 
