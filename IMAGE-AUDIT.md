@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **174**
+- File immagine presenti: **175**
 - Immagini di contenuto pubblicate: **141**
 - File riutilizzati in più punti: **44**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **116**
+- Immagini non utilizzate: **117**
 
 ## Mappa pagina → immagine → contesto
 
@@ -24,10 +24,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.jpg` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
 | `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | €347 | Analisi completa di progetto, planimetrie e materiali |
-| `analisi-completa.html` | `images/01_individuo_il_problema.svg` | Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare  |  |
+| `analisi-completa.html` | `images/01_individuo_il_problema.svg` | Il risultato viene caricato nel tuo portale privato, dove resta consultabile insieme al materiale che hai inviato. È incluso un giro di chia |  |
 | `analisi-completa.html` | `images/02_valuto_la_conseguenza.svg` | Che cosa può non funzionare o restare poco chiaro. |  |
 | `analisi-completa.html` | `images/03_definisco_le_priorita.svg` | Che cosa potrebbe accadere nell'uso o dopo l'ordine. |  |
-| `analisi-completa.html` | `images/29_PORTALE_HERO.jpg` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
+| `analisi-completa.html` | `images/29_PORTALE_HERO.jpg` | Invia il materiale e descrivi il dubbio principale. L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
 | `analisi-preventiva.html` | `images/13_SERVIZI_HERO.jpg` | Serve a individuare problemi, conflitti, dubbi e possibili costi tardivi prima di ordinare, firmare o iniziare i lavori. | Analisi preventiva di planimetria, progetto e materiali |
 | `analisi-preventiva.html` | `images/27_CONTATTI_HERO.jpg` | Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Invio di un caso al portale pubblico Sistema 90G |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
@@ -124,7 +124,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La prima valutazione non è una consulenza completa e non obbliga ad acquistare. | Raccolta ordinata di fotografie, planimetrie e preventivi |
 | `contatti.html` | `images/29_PORTALE_HERO.jpg` | Proposta, pagamento, materiali e consegna restano nello stesso percorso. | Portale cliente Sistema 90G |
 | `contatti.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` | Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn | Consegna dei documenti nel portale cliente |
-| `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | €127 | Controllo mirato di una criticità specifica |
+| `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | €127 Risposta entro 72 ore lavorative | Controllo mirato di una criticità specifica |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
 | `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.jpg` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
 | `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
@@ -146,8 +146,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Invia planimetria, foto, render o preventivo e descrivi il dubbio principale. Riceverai una prima valutazione e l'indicazione del livello pi | Raccolta materiali e analisi preventiva |
 | `professionisti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri | Lettura tecnica di distribuzione e criticità di un progetto |
 | `professionisti.html` | `images/27_CONTATTI_HERO.jpg` | Invia una cucina, una planimetria, un progetto o una situazione da chiarire. La prima valutazione serve a capire se Sistema 90G può essere d | Invio di un caso professionale al portale pubblico Sistema 90G |
-| `progetto-da-zero.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | €797 | Analisi preventiva di un ambiente da impostare da zero |
-| `progetto-da-zero.html` | `images/08_progetto_da_zero.svg` | Il lavoro non produce un progetto esecutivo né una proposta distributiva definitiva: costruisce il quadro con cui affrontare la progettazion |  |
+| `progetto-da-zero.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | €797 Prima lettura entro 5 giorni lavorativi | Analisi preventiva di un ambiente da impostare da zero |
+| `progetto-da-zero.html` | `images/08_progetto_da_zero.svg` | Il risultato viene caricato nel tuo portale privato, dove resta consultabile insieme al materiale che hai inviato. È incluso un giro di chia |  |
 | `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
 | `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.jpg` | Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci. | Materiali e dettagli di progetto |
@@ -163,7 +163,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/01_individuo_il_problema.svg` — 4 utilizzi
 
 - `agenzie-immobiliari.html` — Non una brochure più bella. Una lettura più credibile dell'immobile.
-- `analisi-completa.html` — Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare 
+- `analisi-completa.html` — Il risultato viene caricato nel tuo portale privato, dove resta consultabile insieme al materiale che hai inviato. È incluso un giro di chia
 - `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
 - `index.html` — Analizzo il progetto simulando l'uso reale degli spazi.
 
@@ -205,7 +205,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ### `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` — 2 utilizzi
 
-- `controllo-mirato.html` — €127
+- `controllo-mirato.html` — €127 Risposta entro 72 ore lavorative
 - `index.html` — Scegli il livello di analisi più adatto alla decisione che devi proteggere.
 
 ### `images/15_SERVIZI_ANALISI_COMPLETA.jpg` — 2 utilizzi
@@ -216,7 +216,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/16_SERVIZI_PROGETTO_DA_ZERO.png` — 2 utilizzi
 
 - `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
-- `progetto-da-zero.html` — €797
+- `progetto-da-zero.html` — €797 Prima lettura entro 5 giorni lavorativi
 
 ### `images/17_SERVIZI_FINITURE.jpg` — 3 utilizzi
 
@@ -283,7 +283,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ### `images/29_PORTALE_HERO.jpg` — 2 utilizzi
 
-- `analisi-completa.html` — L'analisi parte dopo conferma, pagamento e ricezione del materiale completo.
+- `analisi-completa.html` — Invia il materiale e descrivi il dubbio principale. L'analisi parte dopo conferma, pagamento e ricezione del materiale completo.
 - `contatti.html` — Proposta, pagamento, materiali e consegna restano nello stesso percorso.
 
 ### `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` — 2 utilizzi
@@ -455,6 +455,7 @@ Nessun riferimento mancante.
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/18_CHI_SONO_GIANCARLO.jpg` — —
+- `images/18_CHI_SONO_GIANCARLO_METODO 2.jpg` — —
 - `images/21_CASI_BAGNO.jpg` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
