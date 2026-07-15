@@ -5,129 +5,129 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **151**
+- File immagine presenti: **173**
 - Immagini di contenuto pubblicate: **141**
-- File riutilizzati in più punti: **23**
+- File riutilizzati in più punti: **31**
 - Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **117**
+- Immagini non utilizzate: **131**
 
 ## Mappa pagina → immagine → contesto
 
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
-| `404.html` | `images/18_CASI_HERO_ARCHIVIO.png` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
-| `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.png` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
+| `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
+| `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
 | `agenzie-immobiliari.html` | `images/10_agenzia_collaborazione.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
 | `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
 | `agenzie-immobiliari.html` | `images/05_decidere_meglio.svg` | Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate. |  |
-| `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.png` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
-| `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.png` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
-| `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | €347 | Analisi completa di progetto, planimetrie e materiali |
+| `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.jpg` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
+| `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
+| `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | €347 | Analisi completa di progetto, planimetrie e materiali |
 | `analisi-completa.html` | `images/01_individuo_il_problema.svg` | Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare  |  |
 | `analisi-completa.html` | `images/02_valuto_la_conseguenza.svg` | Che cosa può non funzionare o restare poco chiaro. |  |
 | `analisi-completa.html` | `images/03_definisco_le_priorita.svg` | Che cosa potrebbe accadere nell'uso o dopo l'ordine. |  |
-| `analisi-completa.html` | `images/29_PORTALE_HERO.png` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
+| `analisi-completa.html` | `images/29_PORTALE_HERO.jpg` | L'analisi parte dopo conferma, pagamento e ricezione del materiale completo. | Portale pubblico Sistema 90G |
 | `analisi-preventiva.html` | `images/13_SERVIZI_HERO.jpg` | Serve a individuare problemi, conflitti, dubbi e possibili costi tardivi prima di ordinare, firmare o iniziare i lavori. | Analisi preventiva di planimetria, progetto e materiali |
-| `analisi-preventiva.html` | `images/27_CONTATTI_HERO.png` | Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Invio di un caso al portale pubblico Sistema 90G |
-| `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.png` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
-| `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
-| `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.png` | 180+ casi analizzati con il Metodo | Archivio dei casi analizzati Sistema 90G |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
-| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.png` | Angoli, aperture e piano di lavoro devono restare compatibili. | Preventivo cucina |
+| `analisi-preventiva.html` | `images/27_CONTATTI_HERO.jpg` | Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Invio di un caso al portale pubblico Sistema 90G |
+| `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
+| `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
+| `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 180+ casi analizzati con il Metodo | Archivio dei casi analizzati Sistema 90G |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Problemi diversi, decisioni reali. | Lavastoviglie e passaggio |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Il corridoio sembra sufficiente finché lo sportello non viene aperto. | Ingresso e zona giorno |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno. | Cucina piccola su tre lati |
+| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Angoli, aperture e piano di lavoro devono restare compatibili. | Preventivo cucina |
 | `casi-analizzati.html` | `images/05_HOME_CASO_1.jpg` | Materiali, codici, accessori e lavorazioni devono essere chiariti. | Isola cucina e passaggi |
-| `casi-analizzati.html` | `images/21_CASI_BAGNO.png` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
+| `casi-analizzati.html` | `images/21_CASI_BAGNO.jpg` | Lo spazio va verificato con persone sedute e moduli aperti. | Secondo bagno |
 | `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Impianti, accessi e qualità degli ambienti vanno letti insieme. | Open space TV e divano |
 | `casi-analizzati.html` | `images/05_HOME_CASO_1.jpg` | La disposizione va verificata insieme a percorsi e luce. | Lavello sotto finestra |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Scala interna verso il terrazzo |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Partenza, arrivo e ingombro devono essere definiti prima delle stanze. | Open space attraversato dal percorso centrale |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Davanzale, piano, miscelatore e infisso devono essere compatibili. | Scala interna verso il terrazzo |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Partenza, arrivo e ingombro devono essere definiti prima delle stanze. | Open space attraversato dal percorso centrale |
 | `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno. | Terza camera ricavata dalla zona giorno |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina profonda 75 centimetri in angolo |
-| `casi-analizzati.html` | `images/21_CASI_BAGNO.png` | Una profondità maggiore modifica spazio residuo e uso dei moduli vicini. | Lavatrice in bagno con dieci centimetri disponibili |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Lavatrice, sanitari e passaggio devono essere verificati insieme. | Cabina armadio in camera irregolare |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Aperture, cucina e forma residua decidono se la casa continua a funzionare. | Cucina profonda 75 centimetri in angolo |
+| `casi-analizzati.html` | `images/21_CASI_BAGNO.jpg` | Una profondità maggiore modifica spazio residuo e uso dei moduli vicini. | Lavatrice in bagno con dieci centimetri disponibili |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Lavatrice, sanitari e passaggio devono essere verificati insieme. | Cabina armadio in camera irregolare |
 | `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Contenimento, letto e passaggi devono restare leggibili insieme. | Divano letto in soggiorno per tre persone |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Passaggi e uso quotidiano devono funzionare anche in configurazione notte. | Due appartamenti con accessi e disimpegni |
 | `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | Disimpegni e percorsi comuni incidono sulla superficie realmente utile. | Soggiorno con pianoforte tavolo divano e TV |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
+| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Le funzioni entrano tutte, ma non necessariamente convivono bene. | Cabina armadio con larghezza totale di 125 centimetri |
 | `casi-analizzati.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte. | Tiranti e cavi a vista lungo il soffitto |
-| `casi-analizzati.html` | `images/06_HOME_CASO_2.jpg` | La finitura può nascondere ciò che deve restare accessibile. | Cameretta con letto a castello e armadio |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Porta, armadio e margine di crescita vanno verificati insieme. | Studio ricavato in casa |
-| `casi-analizzati.html` | `images/21_CASI_BAGNO.png` | Luce, acustica e impianti decidono se la postazione è vivibile. | Lavanderia con lavatrice e asciugatrice |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.png` | Apertura oblò, ventilazione e spazio operativo vanno letti insieme. | Ripostiglio con scaffalature profonde |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Profondità scaffali e ingombro porta decidono la capienza reale. | Terrazzo con tavolo e fioriere |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Passaggio residuo, carico e drenaggio vanno verificati insieme. | Soffitta sotto falda |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Altezza utile reale e accesso decidono lo spazio davvero sfruttabile. | Garage per un |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.png` | Apertura portiere e manovra vanno verificate insieme allo spazio residuo. | Corridoio con più porte |
-| `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
-| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
-| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
-| `caso-cabina-armadio-125-cm-passaggio.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
-| `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
-| `caso-cabina-armadio-camera-irregolare.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
-| `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
-| `caso-camera-bambini-crescita.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Cameretta con letto a castello, armadio e scrivania da verificare |
-| `caso-camera-bambini-crescita.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure della stanza e disposizione prevista di letto, armadio e scrivania. | Raccolta di planimetria e misure per una cameretta |
-| `caso-corridoio-porte-aperte.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Corridoio di distribuzione con più porte da verificare |
-| `caso-corridoio-porte-aperte.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria quotata e verso di apertura previsto per ogni porta. | Raccolta di planimetria e misure per un corridoio |
-| `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
-| `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
-| `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
-| `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
+| `casi-analizzati.html` | `images/caso-camera-bambini-crescita.jpg` | La finitura può nascondere ciò che deve restare accessibile. | Cameretta con letto a castello e armadio |
+| `casi-analizzati.html` | `images/caso-studio-postazione-lavoro.jpg` | Porta, armadio e margine di crescita vanno verificati insieme. | Studio ricavato in casa |
+| `casi-analizzati.html` | `images/caso-lavanderia-oblo-porta.jpg` | Luce, acustica e impianti decidono se la postazione è vivibile. | Lavanderia con lavatrice e asciugatrice |
+| `casi-analizzati.html` | `images/caso-ripostiglio-profondita-scaffali.jpg` | Apertura oblò, ventilazione e spazio operativo vanno letti insieme. | Ripostiglio con scaffalature profonde |
+| `casi-analizzati.html` | `images/caso-terrazzo-passaggio-arredi.jpg` | Profondità scaffali e ingombro porta decidono la capienza reale. | Terrazzo con tavolo e fioriere |
+| `casi-analizzati.html` | `images/caso-soffitta-altezza-utile.jpg` | Passaggio residuo, carico e drenaggio vanno verificati insieme. | Soffitta sotto falda |
+| `casi-analizzati.html` | `images/caso-garage-apertura-portiere.jpg` | Altezza utile reale e accesso decidono lo spazio davvero sfruttabile. | Garage per un |
+| `casi-analizzati.html` | `images/caso-corridoio-porte-aperte.jpg` | Apertura portiere e manovra vanno verificate insieme allo spazio residuo. | Corridoio con più porte |
+| `casi-analizzati.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` | Descrivi cosa devi decidere e allega il materiale nel portale pubblico. | Consegna documenti Sistema 90G |
+| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/21_CASI_BAGNO.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
+| `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
+| `caso-cabina-armadio-125-cm-passaggio.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Cabina armadio stretta con spazio di passaggio da verificare |
+| `caso-cabina-armadio-125-cm-passaggio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure nette e sistema di apertura previsto. | Raccolta di misure e planimetria per una cabina armadio |
+| `caso-cabina-armadio-camera-irregolare.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Camera irregolare con cabina armadio e passaggi da verificare |
+| `caso-cabina-armadio-camera-irregolare.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, fotografie e posizione di letto e aperture. | Raccolta di planimetria e misure della camera |
+| `caso-camera-bambini-crescita.html` | `images/caso-camera-bambini-crescita.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Cameretta con letto a castello, armadio e scrivania da verificare |
+| `caso-camera-bambini-crescita.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure della stanza e disposizione prevista di letto, armadio e scrivania. | Raccolta di planimetria e misure per una cameretta |
+| `caso-corridoio-porte-aperte.html` | `images/caso-corridoio-porte-aperte.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Corridoio di distribuzione con più porte da verificare |
+| `caso-corridoio-porte-aperte.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria quotata e verso di apertura previsto per ogni porta. | Raccolta di planimetria e misure per un corridoio |
+| `caso-cucina-piccola-tre-lati.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina piccola su tre lati con passaggi e aperture da verificare |
+| `caso-cucina-piccola-tre-lati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e progetto della composizione. | Raccolta di planimetria e misure della cucina |
+| `caso-cucina-profondita-75-angolo.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
+| `caso-cucina-profondita-75-angolo.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia progetto, misure e sistema di apertura previsto. | Raccolta di progetto e misure della cucina ad angolo |
 | `caso-divano-letto-soggiorno-tre-persone.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con divano letto usato come spazio notte |
-| `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
-| `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
-| `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
-| `caso-garage-apertura-portiere.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Garage per un |
-| `caso-garage-apertura-portiere.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure del garage e modello dell'auto. | Raccolta di planimetria e misure per un garage |
-| `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
-| `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
+| `caso-divano-letto-soggiorno-tre-persone.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e modello del divano letto che stai valutando. | Raccolta di planimetria e misure del soggiorno |
+| `caso-due-appartamenti-accessi-disimpegni.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria da dividere in due appartamenti con cucine e bagni |
+| `caso-due-appartamenti-accessi-disimpegni.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, posizione degli ingressi, bagni e cucine esistenti e ogni informazione sugli impianti. | Raccolta di planimetria e dati impiantistici per la divisione in due appartamenti |
+| `caso-garage-apertura-portiere.html` | `images/caso-garage-apertura-portiere.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Garage per un |
+| `caso-garage-apertura-portiere.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del garage e modello dell'auto. | Raccolta di planimetria e misure per un garage |
+| `caso-ingresso-tavolo-living.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Ingresso vicino al tavolo e zona giorno compressa |
+| `caso-ingresso-tavolo-living.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e disposizione proposta. Descrivi quale problema vuoi risolvere. | Raccolta di planimetria e fotografie della zona giorno |
 | `caso-isola-passaggi-cucina.html` | `images/05_HOME_CASO_1.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Isola cucina con passaggi, sedute e aperture da verificare |
-| `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
-| `caso-lavanderia-oblo-porta.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Vano lavanderia con lavatrice e asciugatrice da verificare |
-| `caso-lavanderia-oblo-porta.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure del vano e modello previsto di lavatrice e asciugatrice. | Raccolta di planimetria e misure per una lavanderia |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
-| `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
+| `caso-isola-passaggi-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, progetto della cucina e dimensioni previste dello snack. | Raccolta di planimetria e misure per un |
+| `caso-lavanderia-oblo-porta.html` | `images/caso-lavanderia-oblo-porta.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Vano lavanderia con lavatrice e asciugatrice da verificare |
+| `caso-lavanderia-oblo-porta.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del vano e modello previsto di lavatrice e asciugatrice. | Raccolta di planimetria e misure per una lavanderia |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/19_CASI_CUCINA.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `caso-lavastoviglie-passaggio-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Descrivi il dubbio e allega planimetria, render e immagini in un unico invio. | Raccolta di planimetria, render e fotografie della cucina |
 | `caso-lavello-sotto-finestra-aperture.html` | `images/05_HOME_CASO_1.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
-| `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
-| `caso-open-space-percorso-centrale.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Open space attraversato dal percorso verso la zona notte |
-| `caso-open-space-percorso-centrale.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazione delle funzioni che devono convivere. | Raccolta di planimetria e fotografie della zona giorno |
+| `caso-lavello-sotto-finestra-aperture.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia foto, misure, tipo di apertura dell'infisso e progetto della cucina. | Raccolta di fotografie e misure della finestra e del lavello |
+| `caso-open-space-percorso-centrale.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Open space attraversato dal percorso verso la zona notte |
+| `caso-open-space-percorso-centrale.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e indicazione delle funzioni che devono convivere. | Raccolta di planimetria e fotografie della zona giorno |
 | `caso-open-space-tv-divano-passaggi.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Open space con TV, divano e passaggio centrale |
-| `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
-| `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.png` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
-| `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
-| `caso-ripostiglio-profondita-scaffali.html` | `images/19_CASI_CUCINA.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Ripostiglio con scaffalature profonde da verificare |
-| `caso-ripostiglio-profondita-scaffali.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure del vano e verso di apertura della porta. | Raccolta di planimetria e misure per un ripostiglio |
-| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria con scala interna verso il terrazzo |
-| `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
-| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.png` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
-| `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
-| `caso-soffitta-altezza-utile.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Soffitta sotto falda con altezza utile da verificare |
-| `caso-soffitta-altezza-utile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, sezione della falda e misure dell'accesso. | Raccolta di planimetria e misure per una soffitta |
+| `caso-open-space-tv-divano-passaggi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e dimensioni degli arredi che stai valutando. | Raccolta di planimetria e misure della zona giorno |
+| `caso-preventivo-cucina-sconto-valore.html` | `images/22_CASI_PREVENTIVO.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026 | Preventivo cucina con voci e materiali da verificare |
+| `caso-preventivo-cucina-sconto-valore.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e allegati |
+| `caso-ripostiglio-profondita-scaffali.html` | `images/caso-ripostiglio-profondita-scaffali.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Ripostiglio con scaffalature profonde da verificare |
+| `caso-ripostiglio-profondita-scaffali.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del vano e verso di apertura della porta. | Raccolta di planimetria e misure per un ripostiglio |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Planimetria con scala interna verso il terrazzo |
+| `caso-scala-interna-terrazzo-planimetria.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetrie dei livelli, fotografie e obiettivi principali. | Raccolta di planimetrie e fotografie per una scala interna |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/21_CASI_BAGNO.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Secondo bagno ricavato vicino agli ambienti esistenti |
+| `caso-secondo-bagno-impianti-spazio.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, fotografie e indicazioni sugli impianti disponibili. Descrivi quale ambiente non vuoi compromettere. | Raccolta di planimetria e informazioni sugli impianti |
+| `caso-soffitta-altezza-utile.html` | `images/caso-soffitta-altezza-utile.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Soffitta sotto falda con altezza utile da verificare |
+| `caso-soffitta-altezza-utile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, sezione della falda e misure dell'accesso. | Raccolta di planimetria e misure per una soffitta |
 | `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Soggiorno con tavolo, divano, TV e pianoforte verticale |
-| `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
-| `caso-studio-postazione-lavoro.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Studio ricavato in casa con postazione di lavoro da verificare |
-| `caso-studio-postazione-lavoro.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, orientamento delle finestre e posizione prevista della postazione. | Raccolta di planimetria e misure per uno studio in casa |
-| `caso-terrazzo-passaggio-arredi.html` | `images/20_CASI_DISTRIBUZIONE.png` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Terrazzo con tavolo, sedie e fioriere da verificare |
-| `caso-terrazzo-passaggio-arredi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere. | Raccolta di planimetria e misure per un terrazzo |
+| `caso-soggiorno-pianoforte-tavolo-divano-tv.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure e dimensioni reali degli arredi. | Raccolta di planimetria e misure della zona giorno |
+| `caso-studio-postazione-lavoro.html` | `images/caso-studio-postazione-lavoro.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Studio ricavato in casa con postazione di lavoro da verificare |
+| `caso-studio-postazione-lavoro.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, orientamento delle finestre e posizione prevista della postazione. | Raccolta di planimetria e misure per uno studio in casa |
+| `caso-terrazzo-passaggio-arredi.html` | `images/caso-terrazzo-passaggio-arredi.jpg` | Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026 | Terrazzo con tavolo, sedie e fioriere da verificare |
+| `caso-terrazzo-passaggio-arredi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere. | Raccolta di planimetria e misure per un terrazzo |
 | `caso-terza-camera-zona-giorno.html` | `images/06_HOME_CASO_2.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Redistribuzione della zona giorno per ricavare una terza camera |
-| `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
+| `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/final/case-19-tiranti-cavi-ispezionabilita.svg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
-| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
+| `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Gian Carlo Primo, tecnico indipendente di Sistema 90G, al lavoro nel controllo di una planimetria quotata |
 | `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Descrivi il dubbio principale e allega il materiale in un unico invio. | Caso analizzato da Sistema 90G |
-| `contatti.html` | `images/27_CONTATTI_HERO.png` | Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide. | Accesso al portale pubblico Sistema 90G |
-| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | La prima valutazione non è una consulenza completa e non obbliga ad acquistare. | Raccolta ordinata di fotografie, planimetrie e preventivi |
-| `contatti.html` | `images/29_PORTALE_HERO.png` | Proposta, pagamento, materiali e consegna restano nello stesso percorso. | Portale cliente Sistema 90G |
-| `contatti.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` | Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn | Consegna dei documenti nel portale cliente |
+| `contatti.html` | `images/27_CONTATTI_HERO.jpg` | Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide. | Accesso al portale pubblico Sistema 90G |
+| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La prima valutazione non è una consulenza completa e non obbliga ad acquistare. | Raccolta ordinata di fotografie, planimetrie e preventivi |
+| `contatti.html` | `images/29_PORTALE_HERO.jpg` | Proposta, pagamento, materiali e consegna restano nello stesso percorso. | Portale cliente Sistema 90G |
+| `contatti.html` | `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` | Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn | Consegna dei documenti nel portale cliente |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | €127 | Controllo mirato di una criticità specifica |
-| `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
-| `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.png` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
-| `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
+| `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale e descrivi il dubbio principale. La prima valutazione serve a confermare che il Controllo mirato sia il livello corretto. | Raccolta dei materiali per il controllo |
+| `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.jpg` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
+| `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
 | `index.html` | `images/01_HOME_HERO.jpg` | 180+ casi analizzati con il Metodo | Analisi preventiva di cucina, passaggi e aperture prima dell |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
 | `index.html` | `images/06_HOME_CASO_2.jpg` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
@@ -139,23 +139,23 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/05_decidere_meglio.svg` | Modifiche, lavori in più e compromessi. |  |
 | `index.html` | `images/03_HOME_METODO.jpg` | Con consapevolezza e serenità. | Planimetria annotata con conflitto di apertura |
 | `index.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Scegli il livello di analisi più adatto alla decisione che devi proteggere. | Controllo mirato |
-| `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.png` | Verifica del problema principale prima di una scelta. | Analisi completa |
+| `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Verifica del problema principale prima di una scelta. | Analisi completa |
 | `index.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Analisi approfondita di progetto, spazi, funzioni e costi. | Progetto da zero |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu | Planimetria annotata con conflitto di apertura |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Invia planimetria, foto, render o preventivo e descrivi il dubbio principale. Riceverai una prima valutazione e l'indicazione del livello pi | Raccolta materiali e analisi preventiva |
-| `professionisti.html` | `images/20_CASI_DISTRIBUZIONE.png` | Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri | Lettura tecnica di distribuzione e criticità di un progetto |
-| `professionisti.html` | `images/27_CONTATTI_HERO.png` | Invia una cucina, una planimetria, un progetto o una situazione da chiarire. La prima valutazione serve a capire se Sistema 90G può essere d | Invio di un caso professionale al portale pubblico Sistema 90G |
+| `professionisti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri | Lettura tecnica di distribuzione e criticità di un progetto |
+| `professionisti.html` | `images/27_CONTATTI_HERO.jpg` | Invia una cucina, una planimetria, un progetto o una situazione da chiarire. La prima valutazione serve a capire se Sistema 90G può essere d | Invio di un caso professionale al portale pubblico Sistema 90G |
 | `progetto-da-zero.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | €797 | Analisi preventiva di un ambiente da impostare da zero |
 | `progetto-da-zero.html` | `images/08_progetto_da_zero.svg` | Il lavoro non produce un progetto esecutivo né una proposta distributiva definitiva: costruisce il quadro con cui affrontare la progettazion |  |
 | `progetto-da-zero.html` | `images/03_definisco_le_priorita.svg` | Definizione delle funzioni, dei rapporti tra gli ambienti e dei vincoli principali. |  |
 | `progetto-da-zero.html` | `images/05_decidere_meglio.svg` | Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale. |  |
-| `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.png` | Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci. | Materiali e dettagli di progetto |
+| `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.jpg` | Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci. | Materiali e dettagli di progetto |
 | `render-fotorealistici-interni.html` | `images/13_SERVIZI_HERO.jpg` | Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com | Visualizzazione di un ambiente interno con annotazioni progettuali |
-| `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.png` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
-| `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.png` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
-| `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.png` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
-| `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.png` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
+| `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.jpg` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
+| `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
+| `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
+| `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
 | `verifica-planimetria-distribuzione-casa.html` | `images/03_HOME_METODO.jpg` | Invia il materiale disponibile e descrivi cosa devi decidere. La prima lettura serve a capire se il caso è adatto e quale livello è necessar | Planimetrie e percorsi analizzati da Sistema 90G |
 
 ## Doppioni pubblicati
@@ -200,14 +200,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Modifiche, lavori in più e compromessi.
 - `progetto-da-zero.html` — Le esigenze vengono ordinate per evitare che una scelta secondaria comprometta quella principale.
 
-### `images/06_HOME_CASO_2.jpg` — 11 utilizzi
+### `images/06_HOME_CASO_2.jpg` — 9 utilizzi
 
 - `casi-analizzati.html` — Impianti, accessi e qualità degli ambienti vanno letti insieme.
 - `casi-analizzati.html` — Camere, bagno, scala e ripostiglio continuano a dividere la zona giorno.
 - `casi-analizzati.html` — Contenimento, letto e passaggi devono restare leggibili insieme.
 - `casi-analizzati.html` — Disimpegni e percorsi comuni incidono sulla superficie realmente utile.
-- `casi-analizzati.html` — La finitura può nascondere ciò che deve restare accessibile.
-- `caso-camera-bambini-crescita.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
@@ -229,7 +227,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `controllo-mirato.html` — €127
 - `index.html` — Scegli il livello di analisi più adatto alla decisione che devi proteggere.
 
-### `images/15_SERVIZI_ANALISI_COMPLETA.png` — 2 utilizzi
+### `images/15_SERVIZI_ANALISI_COMPLETA.jpg` — 2 utilizzi
 
 - `analisi-completa.html` — €347
 - `index.html` — Verifica del problema principale prima di una scelta.
@@ -239,30 +237,28 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `index.html` — Analisi approfondita di progetto, spazi, funzioni e costi.
 - `progetto-da-zero.html` — €797
 
-### `images/17_SERVIZI_FINITURE.png` — 3 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 3 utilizzi
 
 - `progetto-da-zero.html` — Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci.
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i
 
-### `images/18_CASI_HERO_ARCHIVIO.png` — 2 utilizzi
+### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
 
 - `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
 - `casi-analizzati.html` — 180+ casi analizzati con il Metodo
 
-### `images/19_CASI_CUCINA.png` — 9 utilizzi
+### `images/19_CASI_CUCINA.jpg` — 7 utilizzi
 
 - `casi-analizzati.html` — Problemi diversi, decisioni reali.
 - `casi-analizzati.html` — Separare l'ingresso può migliorare la privacy e togliere spazio al soggiorno.
 - `casi-analizzati.html` — Aperture, cucina e forma residua decidono se la casa continua a funzionare.
-- `casi-analizzati.html` — Apertura oblò, ventilazione e spazio operativo vanno letti insieme.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-ripostiglio-profondita-scaffali.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `controllo-progetto-cucina.html` — Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano.
 
-### `images/20_CASI_DISTRIBUZIONE.png` — 24 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.jpg` — 14 utilizzi
 
 - `casi-analizzati.html` — Il corridoio sembra sufficiente finché lo sportello non viene aperto.
 - `casi-analizzati.html` — Davanzale, piano, miscelatore e infisso devono essere compatibili.
@@ -270,47 +266,35 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Lavatrice, sanitari e passaggio devono essere verificati insieme.
 - `casi-analizzati.html` — Passaggi e uso quotidiano devono funzionare anche in configurazione notte.
 - `casi-analizzati.html` — Le funzioni entrano tutte, ma non necessariamente convivono bene.
-- `casi-analizzati.html` — Porta, armadio e margine di crescita vanno verificati insieme.
-- `casi-analizzati.html` — Profondità scaffali e ingombro porta decidono la capienza reale.
-- `casi-analizzati.html` — Passaggio residuo, carico e drenaggio vanno verificati insieme.
-- `casi-analizzati.html` — Altezza utile reale e accesso decidono lo spazio davvero sfruttabile.
-- `casi-analizzati.html` — Apertura portiere e manovra vanno verificate insieme allo spazio residuo.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-garage-apertura-portiere.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-soffitta-altezza-utile.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
-- `caso-studio-postazione-lavoro.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
-- `caso-terrazzo-passaggio-arredi.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `professionisti.html` — Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri
 - `verifica-planimetria-distribuzione-casa.html` — Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto.
 
-### `images/21_CASI_BAGNO.png` — 6 utilizzi
+### `images/21_CASI_BAGNO.jpg` — 4 utilizzi
 
 - `casi-analizzati.html` — Lo spazio va verificato con persone sedute e moduli aperti.
 - `casi-analizzati.html` — Una profondità maggiore modifica spazio residuo e uso dei moduli vicini.
-- `casi-analizzati.html` — Luce, acustica e impianti decidono se la postazione è vivibile.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `caso-lavanderia-oblo-porta.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 - `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/22_CASI_PREVENTIVO.png` — 3 utilizzi
+### `images/22_CASI_PREVENTIVO.jpg` — 3 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
 - `casi-analizzati.html` — Angoli, aperture e piano di lavoro devono restare compatibili.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
-### `images/27_CONTATTI_HERO.png` — 3 utilizzi
+### `images/27_CONTATTI_HERO.jpg` — 3 utilizzi
 
 - `analisi-preventiva.html` — Descrivi il dubbio principale e allega ciò che hai già. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `contatti.html` — Il portale pubblico raccoglie descrizione, immagini, planimetrie, render e preventivi nello stesso invio. WhatsApp resta per domande rapide.
 - `professionisti.html` — Invia una cucina, una planimetria, un progetto o una situazione da chiarire. La prima valutazione serve a capire se Sistema 90G può essere d
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — 32 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 32 utilizzi
 
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
@@ -345,15 +329,55 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `controllo-progetto-cucina.html` — Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto.
 - `scelta-finiture-casa.html` — Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un
 
-### `images/29_PORTALE_HERO.png` — 2 utilizzi
+### `images/29_PORTALE_HERO.jpg` — 2 utilizzi
 
 - `analisi-completa.html` — L'analisi parte dopo conferma, pagamento e ricezione del materiale completo.
 - `contatti.html` — Proposta, pagamento, materiali e consegna restano nello stesso percorso.
 
-### `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — 2 utilizzi
+### `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` — 2 utilizzi
 
 - `casi-analizzati.html` — Descrivi cosa devi decidere e allega il materiale nel portale pubblico.
 - `contatti.html` — Quando il servizio viene confermato, ricevi un link personale per accettare la proposta, pagare, aggiungere materiali e scaricare la consegn
+
+### `images/caso-camera-bambini-crescita.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — La finitura può nascondere ciò che deve restare accessibile.
+- `caso-camera-bambini-crescita.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-corridoio-porte-aperte.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Apertura portiere e manovra vanno verificate insieme allo spazio residuo.
+- `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-garage-apertura-portiere.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Altezza utile reale e accesso decidono lo spazio davvero sfruttabile.
+- `caso-garage-apertura-portiere.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Luce, acustica e impianti decidono se la postazione è vivibile.
+- `caso-lavanderia-oblo-porta.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-ripostiglio-profondita-scaffali.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Apertura oblò, ventilazione e spazio operativo vanno letti insieme.
+- `caso-ripostiglio-profondita-scaffali.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-soffitta-altezza-utile.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Passaggio residuo, carico e drenaggio vanno verificati insieme.
+- `caso-soffitta-altezza-utile.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-studio-postazione-lavoro.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Porta, armadio e margine di crescita vanno verificati insieme.
+- `caso-studio-postazione-lavoro.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-terrazzo-passaggio-arredi.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — Profondità scaffali e ingombro porta decidono la capienza reale.
+- `caso-terrazzo-passaggio-arredi.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
 ### `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — 2 utilizzi
 
@@ -396,8 +420,22 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
 - `images/13_SERVIZI_HERO.png` — —
+- `images/15_SERVIZI_ANALISI_COMPLETA.png` — —
+- `images/17_SERVIZI_FINITURE.png` — —
+- `images/18_CASI_HERO_ARCHIVIO.png` — —
 - `images/18_CHI_SONO_GIANCARLO.jpg` — —
+- `images/19_CASI_CUCINA.png` — —
+- `images/20_CASI_DISTRIBUZIONE.png` — —
+- `images/21_CASI_BAGNO.png` — —
+- `images/22_CASI_PREVENTIVO.png` — —
+- `images/23_PER_AGENZIE_HERO.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
+- `images/25_PER_AGENZIE_COLLABORAZIONE.png` — —
+- `images/26_PER_AGENZIE_CASO.png` — —
+- `images/27_CONTATTI_HERO.png` — —
+- `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
+- `images/29_PORTALE_HERO.png` — —
+- `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
