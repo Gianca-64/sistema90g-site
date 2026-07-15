@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **62**
-- File immagine presenti: **191**
+- File immagine presenti: **174**
 - Immagini di contenuto pubblicate: **141**
 - File riutilizzati in più punti: **44**
-- Riferimenti mancanti: **1**
+- Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **133**
+- Immagini non utilizzate: **116**
 
 ## Mappa pagina → immagine → contesto
 
@@ -18,7 +18,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
-| `agenzie-immobiliari.html` | `images/10_agenzia_collaborazione.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
+| `agenzie-immobiliari.html` | `images/01_individuo_il_problema.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
 | `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
 | `agenzie-immobiliari.html` | `images/05_decidere_meglio.svg` | Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate. |  |
 | `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.jpg` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
@@ -129,7 +129,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `controllo-progetto-cucina.html` | `images/19_CASI_CUCINA.jpg` | Un render può sembrare corretto e lasciare nascosti conflitti tra aperture, passaggi, piano di lavoro, contenimento e uso quotidiano. | Analisi preventiva di un progetto cucina prima dell |
 | `controllo-progetto-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica ciò che hai e descrivi il dubbio principale. La prima lettura serve a capire se il caso è adatto e quale livello è corretto. | Raccolta di progetto, misure e fotografie della cucina |
 | `index.html` | `images/01_HOME_HERO.jpg` | 180+ casi analizzati con il Metodo | Analisi preventiva di cucina, passaggi e aperture prima dell |
-| `index.html` | `images/05_HOME_CASO_1.jpg` | Esempi di situazioni analizzate ogni giorno. | Caso lavastoviglie e passaggio in cucina |
+| `index.html` | `images/05_HOME_CASO_1.jpg` | Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono diventare costi, compr | Caso lavastoviglie e passaggio in cucina |
 | `index.html` | `images/06_HOME_CASO_2.jpg` | Un'apertura che invade il passaggio rende l'uso scomodo ogni giorno. | Caso terza camera e zona giorno |
 | `index.html` | `images/07_HOME_CASO_3.jpg` | Aggiungere una stanza può ridurre luce, spazio e qualità della zona giorno. | Caso bagno con criticità di distribuzione |
 | `index.html` | `images/01_individuo_il_problema.svg` | Analizzo il progetto simulando l'uso reale degli spazi. |  |
@@ -160,8 +160,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Doppioni pubblicati
 
-### `images/01_individuo_il_problema.svg` — 3 utilizzi
+### `images/01_individuo_il_problema.svg` — 4 utilizzi
 
+- `agenzie-immobiliari.html` — Non una brochure più bella. Una lettura più credibile dell'immobile.
 - `analisi-completa.html` — Ricevi i problemi sostenuti dal materiale, le conseguenze pratiche, le priorità e i punti da chiarire prima di ordinare, firmare o iniziare 
 - `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
 - `index.html` — Analizzo il progetto simulando l'uso reale degli spazi.
@@ -428,7 +429,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-- `agenzie-immobiliari.html` → `images/10_agenzia_collaborazione.svg`
+Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
@@ -443,9 +444,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Immagini disponibili ma non utilizzate
 
 - `images/02_HOME_SCENA_PROBLEMA.png` — —
-- `images/03_HOME_METODO.png` — —
 - `images/04_HOME_COSTO_TARDIVO.png` — —
-- `images/05_HOME_CASO_1.png` — —
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_analisi_completa.svg` — viewBox 0 0 64 64
 - `images/09_CHI_SONO_HERO.png` — —
@@ -455,24 +454,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/11_CHI_SONO_DETTAGLIO.png` — —
 - `images/11_invia_materiali.svg` — viewBox 0 0 64 64
 - `images/12_portale_documenti.svg` — viewBox 0 0 64 64
-- `images/13_SERVIZI_HERO.png` — —
-- `images/15_SERVIZI_ANALISI_COMPLETA.png` — —
-- `images/17_SERVIZI_FINITURE.png` — —
-- `images/18_CASI_HERO_ARCHIVIO.png` — —
 - `images/18_CHI_SONO_GIANCARLO.jpg` — —
-- `images/19_CASI_CUCINA.png` — —
-- `images/20_CASI_DISTRIBUZIONE.png` — —
 - `images/21_CASI_BAGNO.jpg` — —
-- `images/21_CASI_BAGNO.png` — —
-- `images/22_CASI_PREVENTIVO.png` — —
-- `images/23_PER_AGENZIE_HERO.png` — —
 - `images/24_PER_AGENZIE_BENEFICI.png` — —
-- `images/25_PER_AGENZIE_COLLABORAZIONE.png` — —
-- `images/26_PER_AGENZIE_CASO.png` — —
-- `images/27_CONTATTI_HERO.png` — —
-- `images/28_CONTATTI_RACCOLTA_MATERIALI.png` — —
-- `images/29_PORTALE_HERO.png` — —
-- `images/30_PORTALE_CONSEGNA_DOCUMENTI.png` — —
 - `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
 - `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
