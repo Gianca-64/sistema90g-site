@@ -29,7 +29,7 @@ function addStructuredData(){
   const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href;
   const title=document.querySelector('h1')?.textContent.trim()||document.title;
   const description=document.querySelector('meta[name="description"]')?.content||'';
-  const image=document.querySelector('main img')?.src||'https://sistema90g.it/images/01_HOME_HERO.png';
+  const image=document.querySelector('main img')?.src||'https://sistema90g.it/images/01_HOME_HERO.jpg';
   const graph=[
     {'@type':'Organization','@id':'https://sistema90g.it/#organization','name':'Sistema 90G','url':'https://sistema90g.it/','logo':{'@type':'ImageObject','url':'https://sistema90g.it/images/favicon-512.png'},'founder':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'description':'Servizio indipendente di analisi preventiva per progetti casa, cucine, distribuzione interna e preventivi.'},
     {'@type':'Person','@id':'https://sistema90g.it/chi-e-sistema90g.html#person','name':'Gian Carlo Primo','url':'https://sistema90g.it/chi-e-sistema90g.html','jobTitle':'Tecnico indipendente per analisi preventiva di progetti casa e cucina','worksFor':{'@id':'https://sistema90g.it/#organization'}},
@@ -48,22 +48,19 @@ function addStructuredData(){
 function archiveFallback(img){
   const card=img.closest('.s90g-archive-card');
   const label=card?.querySelector('.s90g-archive-copy span')?.textContent.toLowerCase()||'';
-  if(label.includes('bagno'))return 'images/21_CASI_BAGNO.png?v=20260708am';
-  if(label.includes('cucina')||label.includes('preventivo'))return 'images/19_CASI_CUCINA.png?v=20260708am';
-  return 'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
+  if(label.includes('bagno'))return 'images/21_CASI_BAGNO.jpg?v=20260715a';
+  if(label.includes('cucina')||label.includes('preventivo'))return 'images/19_CASI_CUCINA.jpg?v=20260715a';
+  return 'images/20_CASI_DISTRIBUZIONE.jpg?v=20260715a';
 }
 function optimizeImages(){
   const images=[...document.querySelectorAll('img')];
   images.forEach((img,index)=>{
     img.decoding='async';
     const isArchive=Boolean(img.closest('.s90g-archive-card'));
-    if(img.getAttribute('src')?.includes('case-19-tiranti-cavi-ispezionabilita.svg')){
-      img.src='images/final/case-19-tiranti-cavi-ispezionabilita.svg?v=20260708am';
-    }
     const applyFallback=()=>{
       if(img.dataset.s90gFallbackApplied)return;
       img.dataset.s90gFallbackApplied='true';
-      img.src=isArchive?archiveFallback(img):'images/20_CASI_DISTRIBUZIONE.png?v=20260708am';
+      img.src=isArchive?archiveFallback(img):'images/20_CASI_DISTRIBUZIONE.jpg?v=20260715a';
     };
     img.addEventListener('error',applyFallback,{once:true});
     if(isArchive){
