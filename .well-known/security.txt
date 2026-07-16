@@ -1,0 +1,5 @@
+Contact: mailto:sistema90g@icloud.com
+Preferred-Languages: it, en
+Canonical: https://sistema90g.it/.well-known/security.txt
+Policy: https://sistema90g.it/privacy-policy.html
+Expires: 2027-07-08T23:59:59Z

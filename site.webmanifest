@@ -1,0 +1,23 @@
+{
+  "id": "/",
+  "name": "Sistema 90G",
+  "short_name": "Sistema 90G",
+  "description": "Analisi preventiva indipendente per arredamento, cucine, distribuzione interna, ristrutturazioni e preventivi.",
+  "lang": "it-IT",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f1e8",
+  "theme_color": "#1f1f1f",
+  "categories": ["business", "productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "/images/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

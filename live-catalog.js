@@ -105,24 +105,27 @@ function s90gRenderCatalog(levels) {
   const section = document.getElementById('servizi');
   if (!section) return;
 
-  section.innerHTML = `<div class="container">
-    <div class="premium-copy wide">
-      <p class="eyebrow">Cinque livelli chiari</p>
+  section.className = 's90g-services s90g-live-services';
+  section.innerHTML = `<div class="s90g-shell">
+    <div class="s90g-section-head s90g-live-services-intro">
+      <div>
+      <p class="s90g-kicker">Cinque livelli chiari</p>
       <h2>Parti dalla decisione che devi proteggere, non da un pacchetto generico.</h2>
       <p>Invia il materiale disponibile. Dopo una prima lettura ricevi l’indicazione del livello adatto, con prezzo, tempi, contenuti e limiti dichiarati.</p>
+      </div>
     </div>
-    <aside class="live-proof-panel" aria-label="Casi analizzati da Sistema 90G" aria-live="polite">
-      <strong class="live-proof-number" data-public-cases-count>${s90gCasesAnalyzed}</strong>
-      <div class="live-proof-copy">
+    <aside class="s90g-live-proof" aria-label="Casi analizzati da Sistema 90G" aria-live="polite">
+      <strong class="s90g-live-proof-number" data-public-cases-count>${s90gCasesAnalyzed}</strong>
+      <div class="s90g-live-proof-copy">
         <span>casi reali raccolti e analizzati</span>
         <p>Cucine, preventivi, finiture, arredi e distribuzioni interne letti prima che la scelta diventi difficile da correggere.</p>
       </div>
-      <a href="casi-analizzati.html">Scopri i casi pubblicati <span aria-hidden="true">→</span></a>
+      <a class="s90g-link" href="casi-analizzati.html">Scopri i casi pubblicati <span aria-hidden="true">→</span></a>
     </aside>
-    <div class="service-level-grid">
+    <div class="s90g-live-level-grid">
       ${levels.map(s90gLevelCard).join('')}
     </div>
-    <div class="service-catalog-note">
+    <div class="s90g-service-catalog-note">
       <strong>La prima lettura è gratuita.</strong>
       <span>Serve a capire se il caso è adatto e quale profondità è davvero necessaria. Il lavoro parte solo dopo conferma.</span>
     </div>
@@ -136,6 +139,8 @@ function s90gUpdateCounters(value) {
   document.querySelectorAll('[data-public-cases-count]').forEach((element) => {
     element.textContent = new Intl.NumberFormat('it-IT').format(count);
   });
+  const heroCounter = document.getElementById('casi-analizzati-90g');
+  if (heroCounter) heroCounter.textContent = `${new Intl.NumberFormat('it-IT').format(count)}+`;
 }
 
 function s90gAlignLegacyOffer() {
@@ -155,7 +160,7 @@ function s90gAlignLegacyOffer() {
     </div>`;
   }
 
-  const footer = document.querySelector('.footer-links');
+  const footer = document.querySelector('.footer-links, .s90g-footer-links');
   if (!footer) return;
   ['controllo-mirato.html', 'analisi-completa.html', 'progetto-da-zero.html'].forEach((href) => {
     footer.querySelectorAll(`a[href="${href}"]`).forEach((link) => link.remove());
