@@ -1,5 +1,13 @@
 const S90G_CONSOLE_URL = 'https://sistema90g-console.sistema90g.workers.dev';
 
+const S90G_LEVEL_IMAGES = {
+  finiture: 'images/17_SERVIZI_FINITURE.jpg?v=20260716b',
+  'check-up-progetto': 'images/14_SERVIZI_CONTROLLO_MIRATO.jpg?v=20260716b',
+  restyling: 'images/16_SERVIZI_PROGETTO_DA_ZERO.png?v=20260716b',
+  redistribuzione: 'images/15_SERVIZI_ANALISI_COMPLETA.jpg?v=20260716b',
+  'progetto-completo': 'images/03_HOME_METODO.jpg?v=20260716b',
+};
+
 const S90G_FALLBACK_LEVELS = [
   {
     slug: 'finiture',
@@ -76,28 +84,34 @@ function s90gEscape(value) {
 
 function s90gLevelCard(level, index) {
   const number = String(index + 1).padStart(2, '0');
+  const image = S90G_LEVEL_IMAGES[level.slug] || 'images/13_SERVIZI_HERO.jpg?v=20260716b';
   return `<article class="service-level-card" data-service-level="${s90gEscape(level.slug)}">
-    <div class="service-level-heading">
+    <figure class="service-level-media">
+      <img src="${s90gEscape(image)}" alt="${s90gEscape(level.name)}: esempio di analisi Sistema 90G" loading="lazy">
       <span>${number}</span>
-      <small>${s90gEscape(level.short_label)}</small>
+    </figure>
+    <div class="service-level-body">
+      <div class="service-level-heading">
+        <small>${s90gEscape(level.short_label)}</small>
+      </div>
+      <h3>${s90gEscape(level.name)}</h3>
+      <div class="service-level-commercial">
+        <strong>${s90gEscape(level.price_label)}</strong>
+        <span>Consegna: ${s90gEscape(level.delivery_time)}</span>
+      </div>
+      <p class="service-level-purpose">${s90gEscape(level.problem)}</p>
+      <div class="service-level-output">
+        <strong>Cosa ricevi</strong>
+        <p>${s90gEscape(level.deliverable)}</p>
+      </div>
+      <details>
+        <summary>Cosa serve, cosa include e limiti</summary>
+        <p><strong>Da inviare:</strong> ${s90gEscape(level.required_inputs)}</p>
+        <p><strong>Include:</strong> ${s90gEscape(level.includes)}</p>
+        <p><strong>Non include:</strong> ${s90gEscape(level.excludes)}</p>
+      </details>
+      <a class="s90g-link service-card-link" data-track-portal href="${S90G_CONSOLE_URL}/richiesta" target="_blank" rel="noopener">Sottoponi il caso <span aria-hidden="true">→</span></a>
     </div>
-    <h3>${s90gEscape(level.name)}</h3>
-    <div class="service-level-commercial">
-      <strong>${s90gEscape(level.price_label)}</strong>
-      <span>Consegna: ${s90gEscape(level.delivery_time)}</span>
-    </div>
-    <p class="service-level-purpose">${s90gEscape(level.problem)}</p>
-    <div class="service-level-output">
-      <strong>Cosa ricevi</strong>
-      <p>${s90gEscape(level.deliverable)}</p>
-    </div>
-    <details>
-      <summary>Materiali, contenuti e limiti</summary>
-      <p><strong>Da inviare:</strong> ${s90gEscape(level.required_inputs)}</p>
-      <p><strong>Include:</strong> ${s90gEscape(level.includes)}</p>
-      <p><strong>Non include:</strong> ${s90gEscape(level.excludes)}</p>
-    </details>
-    <a class="text-link service-card-link" data-track-portal href="${S90G_CONSOLE_URL}/richiesta" target="_blank" rel="noopener">Sottoponi il caso</a>
   </article>`;
 }
 
@@ -110,8 +124,8 @@ function s90gRenderCatalog(levels) {
     <div class="s90g-section-head s90g-live-services-intro">
       <div>
       <p class="s90g-kicker">Cinque livelli chiari</p>
-      <h2>Parti dalla decisione che devi proteggere, non da un pacchetto generico.</h2>
-      <p>Invia il materiale disponibile. Dopo una prima lettura ricevi l’indicazione del livello adatto, con prezzo, tempi, contenuti e limiti dichiarati.</p>
+      <h2>Cinque profondità, una sola logica: vedere prima ciò che può diventare un problema.</h2>
+      <p>Il livello dipende dalla decisione da proteggere e dal materiale disponibile. Prezzo, tempi, risultato e limiti restano dichiarati prima di iniziare.</p>
       </div>
     </div>
     <aside class="s90g-live-proof" aria-label="Casi analizzati da Sistema 90G" aria-live="polite">
