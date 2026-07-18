@@ -4,19 +4,21 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **63**
+- Pagine HTML controllate: **65**
 - File immagine presenti: **176**
-- Immagini di contenuto pubblicate: **142**
-- File riutilizzati in più punti: **44**
+- Immagini di contenuto pubblicate: **146**
+- File riutilizzati in più punti: **46**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **117**
+- Immagini non utilizzate: **115**
 
 ## Mappa pagina → immagine → contesto
 
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
+| `acquisto-assistito-cucina.html` | `images/final/hero-kitchen-reference.jpg` | 390 € finali · operazione non soggetta a IVA in regime forfettario. | Cucina sviluppata a partire da una planimetria |
+| `acquisto-assistito-cucina.html` | `images/hero-cucina-conflitto-90g.jpg` | Racconta l'esigenza e allega il materiale disponibile. La prima lettura serve a capire se il percorso è adatto: non crea alcun incarico né o | Planimetria e sviluppo di una cucina |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
 | `agenzie-immobiliari.html` | `images/01_individuo_il_problema.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
 | `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
@@ -154,6 +156,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `progetto-da-zero.html` | `images/17_SERVIZI_FINITURE.jpg` | Descrivi cosa devi ancora decidere, invia planimetria e misure se le hai già, insieme ai vincoli che conosci. | Materiali e dettagli di progetto |
 | `render-fotorealistici-interni.html` | `images/13_SERVIZI_HERO.jpg` | Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com | Visualizzazione di un ambiente interno con annotazioni progettuali |
 | `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.jpg` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
+| `rivenditori-veneta-cucine.html` | `images/final/hero-kitchen-reference.jpg` | Il cliente può ricevere una segnalazione facoltativa dopo il percorso Acquisto Assistito Cucina 90G. Sistema90G non riceve commissioni sulla | Progetto cucina preliminare |
+| `rivenditori-veneta-cucine.html` | `images/hero-cucina-conflitto-90g.jpg` | Contattaci indicando sede, referente cucina e area servita. La verifica iniziale riguarda la qualità del percorso offerto al cliente, non un | Sviluppo preliminare di una cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Una finitura non va valutata soltanto da un campione. Luce, superfici vicine, manutenzione e uso quotidiano possono cambiare completamente i | Campioni di finiture, colori e materiali analizzati insieme |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale disponibile e descrivi il dubbio principale. La prima lettura serve a capire se il caso richiede un controllo mirato o un | Raccolta di campioni e fotografie per la scelta delle finiture |
 | `verifica-planimetria-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Una planimetria può contenere tutte le stanze richieste e lasciare comunque percorsi scomodi, ambienti compressi o funzioni in conflitto. | Verifica della distribuzione interna e dei percorsi della casa |
@@ -422,6 +426,16 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
+### `images/final/hero-kitchen-reference.jpg` — 2 utilizzi
+
+- `acquisto-assistito-cucina.html` — 390 € finali · operazione non soggetta a IVA in regime forfettario.
+- `rivenditori-veneta-cucine.html` — Il cliente può ricevere una segnalazione facoltativa dopo il percorso Acquisto Assistito Cucina 90G. Sistema90G non riceve commissioni sulla
+
+### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
+
+- `acquisto-assistito-cucina.html` — Racconta l'esigenza e allega il materiale disponibile. La prima lettura serve a capire se il percorso è adatto: non crea alcun incarico né o
+- `rivenditori-veneta-cucine.html` — Contattaci indicando sede, referente cucina e area servita. La verifica iniziale riguarda la qualità del percorso offerto al cliente, non un
+
 ## File differenti con contenuto identico
 
 - `images/final/case-06-second-bath.jpg`, `images/final/case-13-bath-laundry.jpg`
@@ -534,7 +548,6 @@ Nessun riferimento mancante.
 - `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-cases-reference.jpg` — —
 - `images/final/hero-home-reference.jpg` — —
-- `images/final/hero-kitchen-reference.jpg` — —
 - `images/final/hero-plan-reference.jpg` — —
 - `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
 - `images/final/hero-quote-reference.jpg` — —
@@ -548,7 +561,6 @@ Nessun riferimento mancante.
 - `images/hero-controllo-passaggio.svg` — viewBox 0 0 1200 760
 - `images/hero-controllo-progetto-cucina.svg` — viewBox 0 0 1200 760
 - `images/hero-cucina-90g-2026.jpg` — —
-- `images/hero-cucina-conflitto-90g.jpg` — —
 - `images/hero-finiture-90g.jpg` — —
 - `images/hero-home-90g-2026.jpg` — —
 - `images/hero-livelli-90g.jpg` — —
