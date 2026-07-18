@@ -139,6 +139,11 @@ function s90gRenderCatalog(levels) {
     <div class="s90g-live-level-grid">
       ${levels.map(s90gLevelCard).join('')}
     </div>
+    <aside class="s90g-service-catalog-note" aria-label="Acquisto Assistito Cucina 90G">
+      <strong>Stai partendo da zero con una cucina?</strong>
+      <span>Acquisto Assistito Cucina 90G è un percorso preliminare separato dai cinque livelli: definisce sviluppo, ingombri e finiture prima del preventivo, senza obbligo di acquisto né provvigioni sulla vendita.</span>
+      <a class="s90g-link" href="acquisto-assistito-cucina.html">Scopri Acquisto Assistito Cucina <span aria-hidden="true">→</span></a>
+    </aside>
     <div class="s90g-service-catalog-note">
       <strong>La prima lettura è gratuita.</strong>
       <span>Serve a capire se il caso è adatto e quale profondità è davvero necessaria. Il lavoro parte solo dopo conferma.</span>
@@ -184,6 +189,12 @@ function s90gAlignLegacyOffer() {
     link.href = 'index.html#servizi';
     link.textContent = 'I cinque livelli';
     footer.prepend(link);
+  }
+  if (!footer.querySelector('a[href="acquisto-assistito-cucina.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'acquisto-assistito-cucina.html';
+    link.textContent = 'Acquisto assistito cucina';
+    footer.append(link);
   }
 }
 
