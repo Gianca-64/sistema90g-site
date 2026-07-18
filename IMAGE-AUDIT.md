@@ -4,9 +4,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **62**
-- File immagine presenti: **175**
-- Immagini di contenuto pubblicate: **141**
+- Pagine HTML controllate: **63**
+- File immagine presenti: **176**
+- Immagini di contenuto pubblicate: **142**
 - File riutilizzati in più punti: **44**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -142,6 +142,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Verifica del problema principale prima di una scelta. | Analisi completa |
 | `index.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Analisi approfondita di progetto, spazi, funzioni e costi. | Progetto da zero |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Invia il materiale e descrivi il dubbio principale. Riceverai una prima valutazione del caso e l'indicazione del livello più adatto. | Raccolta materiali e analisi preventiva |
+| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Soluzioni che possono prevenire problemi concreti nella progettazione degli arredi e migliorare l’uso quotidiano della casa. Ogni contenuto  | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu | Planimetria annotata con conflitto di apertura |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Invia planimetria, foto, render o preventivo e descrivi il dubbio principale. Riceverai una prima valutazione e l'indicazione del livello pi | Raccolta materiali e analisi preventiva |
 | `professionisti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Sistema 90G affianca studi tecnici, architetti, mobilifici e imprese nella lettura critica di progetti, cucine e distribuzioni prima che cri | Lettura tecnica di distribuzione e criticità di un progetto |
