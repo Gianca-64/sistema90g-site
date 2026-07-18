@@ -5,20 +5,19 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **65**
-- File immagine presenti: **176**
-- Immagini di contenuto pubblicate: **146**
-- File riutilizzati in più punti: **45**
+- File immagine presenti: **177**
+- Immagini di contenuto pubblicate: **145**
+- File riutilizzati in più punti: **44**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **114**
+- Immagini non utilizzate: **115**
 
 ## Mappa pagina → immagine → contesto
 
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
-| `acquisto-assistito-cucina.html` | `images/final/hero-kitchen-reference.jpg` | 390 € | Cucina sviluppata a partire da una planimetria |
-| `acquisto-assistito-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Racconta l'esigenza e allega il materiale disponibile. La prima lettura serve a capire se il percorso è adatto: non crea alcun incarico né o | Schema preliminare di una cucina con aperture e passaggi da verificare |
+| `acquisto-assistito-cucina.html` | `images/final/hero-kitchen-white-90g.png` | 390 € | Cucina sviluppata a partire da una planimetria |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
 | `agenzie-immobiliari.html` | `images/01_individuo_il_problema.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
 | `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
@@ -426,11 +425,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-analizzati.html` — Il contenimento e lo spazio davanti devono essere letti come due esigenze distinte.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/final/hero-kitchen-reference.jpg` — 2 utilizzi
-
-- `acquisto-assistito-cucina.html` — 390 €
-- `rivenditori-veneta-cucine.html` — Il cliente può ricevere una segnalazione facoltativa dopo il percorso Acquisto Assistito Cucina 90G. Sistema90G non riceve commissioni sulla
-
 ## File differenti con contenuto identico
 
 - `images/final/case-06-second-bath.jpg`, `images/final/case-13-bath-laundry.jpg`
@@ -555,6 +549,7 @@ Nessun riferimento mancante.
 - `images/hero-chi-sono-90g-2026.jpg` — —
 - `images/hero-controllo-passaggio.svg` — viewBox 0 0 1200 760
 - `images/hero-controllo-progetto-cucina.svg` — viewBox 0 0 1200 760
+- `images/hero-cucina-90g-2026.jpg` — —
 - `images/hero-finiture-90g.jpg` — —
 - `images/hero-home-90g-2026.jpg` — —
 - `images/hero-livelli-90g.jpg` — —
