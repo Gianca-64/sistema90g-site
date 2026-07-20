@@ -5,7 +5,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **75**
-- File immagine presenti: **178**
+- File immagine presenti: **179**
 - Immagini di contenuto pubblicate: **153**
 - File riutilizzati in più punti: **17**
 - Riferimenti mancanti: **0**
@@ -162,7 +162,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.jpg` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Il fascicolo Sistema 90G ordina esigenze e direzione preliminare; il rivenditore conserva il pieno controllo del progetto commerciale, del p | Fascicolo preliminare per rivenditori di cucine |
+| `rivenditori-cucine.html` | `images/hero-rivenditori-processo-90g.webp` | Il fascicolo Sistema 90G ordina esigenze e direzione preliminare; il rivenditore conserva il pieno controllo del progetto commerciale, del p | Flusso di collaborazione: raccolta delle informazioni, analisi preliminare Sistema 90G, progettazione e vendita del rivenditore |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Riceverai idoneità, materiale necessario, condizioni professionali e prima disponibilità prima di qualsiasi avvio. | Collaborazione tra rivenditore e Sistema 90G |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -331,12 +331,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 
-### `images/hero-cucina-90g-2026.jpg` — 4 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
 
 - `acquisto-assistito-cucina.html` — Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo.
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
-- `rivenditori-cucine.html` — Il fascicolo Sistema 90G ordina esigenze e direzione preliminare; il rivenditore conserva il pieno controllo del progetto commerciale, del p
 
 ## File differenti con contenuto identico
 
