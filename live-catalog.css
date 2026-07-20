@@ -251,3 +251,23 @@ body.s90g-visual #casi-analizzati-90g {
   .service-level-commercial { align-items: flex-start; flex-direction: column; }
   .service-level-commercial span { text-align: left; }
 }
+
+
+/* Orientamento per situazione, prima del catalogo. */
+.s90g-service-choice {
+  margin: 0 0 30px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.06);
+}
+.s90g-service-choice-head { max-width: 860px; margin-bottom: 22px; }
+.s90g-service-choice-head h3 { margin: 0; color: #fff; font-size: clamp(24px,2.4vw,36px); line-height: 1.12; }
+.s90g-service-choice-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.s90g-service-choice-grid a { display: flex; flex-direction: column; min-height: 122px; padding: 19px; border: 1px solid rgba(255,255,255,.18); background: #fff; color: var(--ink); transition: transform .2s ease,border-color .2s ease; }
+.s90g-service-choice-grid a:hover { transform: translateY(-2px); border-color: var(--gold); }
+.s90g-service-choice-grid strong { margin-bottom: 8px; color: var(--gold-dark); font-size: 17px; }
+.s90g-service-choice-grid span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+.service-level-card { scroll-margin-top: 110px; }
+.s90g-service-catalog-note .s90g-link { margin-left: auto; color: #fff; white-space: nowrap; }
+@media(max-width:860px){.s90g-service-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.s90g-service-catalog-note .s90g-link{margin-left:0}}
+@media(max-width:560px){.s90g-service-choice{padding:22px 18px}.s90g-service-choice-grid{grid-template-columns:1fr}}

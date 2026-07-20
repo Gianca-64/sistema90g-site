@@ -2,6 +2,15 @@ const GA_ID='G-G5D6FNDR00';
 const CONSENT_KEY='s90g_cookie_consent';
 const WHATSAPP_CHAT_URL='https://wa.me/393275478485?text=Ciao%2C%20ho%20una%20domanda%20rapida%20su%20Sistema%2090G.';
 
+window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+window.gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied'
+});
+
 function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
@@ -25,7 +34,7 @@ function hasStaticArticleSchema(){
   });
 }
 function addStructuredData(){
-  if(document.querySelector('script[data-s90g-structured-data]'))return;
+  if(document.querySelector('script[type="application/ld+json"]'))return;
   const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href;
   const title=document.querySelector('h1')?.textContent.trim()||document.title;
   const description=document.querySelector('meta[name="description"]')?.content||'';
@@ -64,8 +73,8 @@ function optimizeImages(){
     };
     img.addEventListener('error',applyFallback,{once:true});
     if(isArchive){
-      img.loading='eager';
-      img.fetchPriority='auto';
+      img.loading='lazy';
+      img.fetchPriority='low';
       requestAnimationFrame(()=>{
         if(img.complete&&img.naturalWidth===0)applyFallback();
       });
@@ -77,17 +86,76 @@ function optimizeImages(){
     }
   });
 }
-function loadAnalytics(){if(window.s90gAnalyticsLoaded)return;window.s90gAnalyticsLoaded=true;if(typeof window.gtag!=='function')return;window.gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});window.gtag('config',GA_ID)}
-function denyAnalytics(){if(typeof window.gtag!=='function')return;window.gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})}
+function loadAnalytics(){
+  window.gtag('consent','update',{
+    analytics_storage:'granted',
+    ad_storage:'denied',
+    ad_user_data:'denied',
+    ad_personalization:'denied'
+  });
+  if(window.s90gAnalyticsLoaded)return;
+  window.s90gAnalyticsLoaded=true;
+  const script=document.createElement('script');
+  script.async=true;
+  script.src=`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_ID)}`;
+  script.dataset.s90gAnalytics='true';
+  document.head.appendChild(script);
+  window.gtag('js',new Date());
+  window.gtag('config',GA_ID,{send_page_view:true});
+}
+function denyAnalytics(){
+  window.gtag('consent','update',{
+    analytics_storage:'denied',
+    ad_storage:'denied',
+    ad_user_data:'denied',
+    ad_personalization:'denied'
+  });
+}
 function hideCookieBanner(b){if(b)b.setAttribute('hidden','')}
 function showCookieBanner(b){if(b)b.removeAttribute('hidden')}
 function saveConsent(c){window.localStorage.setItem(CONSENT_KEY,c)}
-function trackLead(name,link){if(window.localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),transport_type:'beacon'})}
+function s90gPageSlug(){
+  const name=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
+  return name==='index'?'home':name;
+}
+function s90gInferContentType(){
+  const slug=s90gPageSlug();
+  if(slug.startsWith('caso-'))return 'case';
+  if(slug.startsWith('casi-'))return 'case-category';
+  if(['professionisti','rivenditori-cucine','agenzie-immobiliari','analisi-unita-varianti'].includes(slug))return 'professional';
+  if(['controllo-mirato','analisi-completa','progetto-da-zero','scelta-finiture-casa','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina','verifica-planimetria-distribuzione-casa'].includes(slug))return 'service';
+  return 'page';
+}
+
+function s90gPrepareGuidedPathLinks(){
+  const campaignKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  const current=new URL(location.href);
+  document.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
+    const target=new URL(link.getAttribute('href')||'analisi-preventiva.html#percorso',location.href);
+    target.searchParams.set('source_page',link.dataset.sourcePage||s90gPageSlug());
+    target.searchParams.set('content_type',link.dataset.contentType||s90gInferContentType());
+    target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
+    if(link.dataset.service)target.searchParams.set('service_hint',link.dataset.service);
+    if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
+    campaignKeys.forEach(key=>{if(current.searchParams.get(key))target.searchParams.set(key,current.searchParams.get(key));});
+    link.href=target.toString();
+  });
+}
+function s90gPreparePortalLinks(){
+  document.querySelectorAll('a[data-final-portal]').forEach(link=>{
+    link.dataset.trackPortal='true';
+  });
+}
+function trackLead(name,link){
+  if(window.localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;
+  const url=new URL(link.href);
+  window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),source_page:url.searchParams.get('source_page')||s90gPageSlug(),content_type:url.searchParams.get('content_type')||s90gInferContentType(),service:url.searchParams.get('service')||'',cta_position:url.searchParams.get('cta_position')||'',case_id:url.searchParams.get('case_id')||'',transport_type:'beacon'});
+}
 function addWhatsAppChat(){
   if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per inviare foto, planimetrie o preventivi usa invece il portale pubblico.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="https://sistema90g-console.sistema90g.workers.dev/richiesta" target="_blank" rel="noopener" data-track-portal>Invia un caso</a></div></section>`;
+  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per sottoporre foto, planimetrie o preventivi usa il percorso guidato, che mostra prima servizio e prezzo.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#percorso" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Valuta un caso</a></div></section>`;
   document.body.appendChild(wrapper);
   const launcher=wrapper.querySelector('.s90g-chat-launcher');
   const popup=wrapper.querySelector('.s90g-chat-popup');
@@ -103,10 +171,15 @@ document.addEventListener('DOMContentLoaded',()=>{
   addStructuredData();
   optimizeImages();
   addWhatsAppChat();
+  s90gPrepareGuidedPathLinks();
+  s90gPreparePortalLinks();
   const b=document.getElementById('cookie-banner'),c=localStorage.getItem(CONSENT_KEY);
   if(c==='accepted'){hideCookieBanner(b);loadAnalytics()}else if(c==='rejected'){hideCookieBanner(b);denyAnalytics()}else showCookieBanner(b);
   document.querySelectorAll('[data-cookie-choice]').forEach(x=>x.addEventListener('click',()=>{const ok=x.dataset.cookieChoice==='accept';saveConsent(ok?'accepted':'rejected');hideCookieBanner(b);ok?loadAnalytics():denyAnalytics()}));
   document.querySelectorAll('[data-cookie-settings]').forEach(x=>x.addEventListener('click',e=>{e.preventDefault();showCookieBanner(b)}));
   document.querySelectorAll('[data-track-whatsapp]').forEach(x=>x.addEventListener('click',()=>trackLead('whatsapp_chat_open',x)));
-  document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>trackLead('public_portal_open',x)));
+  document.querySelectorAll('[data-start-path]').forEach(x=>x.addEventListener('click',()=>trackLead('guided_path_open',x)));
+  document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>{if(x.dataset.portalEnabled==='true')trackLead('public_portal_open',x)}));
+  document.addEventListener('s90g:path-result',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','guided_path_result',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',units:event.detail?.units||'',transport_type:'beacon'});});
+  document.addEventListener('s90g:portal-paused',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','portal_pending_notice',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',transport_type:'beacon'});});
 });
