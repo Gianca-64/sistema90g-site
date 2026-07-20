@@ -2,12 +2,14 @@
   const page = location.pathname.split('/').pop() || 'index.html';
   if (page !== 'index.html') return;
 
-  const portal = 'https://sistema90g-console.sistema90g.workers.dev/richiesta';
+  const portal = 'analisi-preventiva.html#percorso';
   document.querySelectorAll('a[href="#contatto"]').forEach(link => {
     link.href = portal;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = 'Sottoponi il caso';
+    link.textContent = 'Valuta il caso';
+    link.dataset.startPath = 'true';
+    link.dataset.contentType = 'home';
+    link.dataset.ctaPosition = 'legacy-home';
+    link.dataset.service = '';
   });
 
   if (document.querySelector('#prove-concrete')) return;
