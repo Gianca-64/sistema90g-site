@@ -17,3 +17,19 @@
 .s90g-prof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.s90g-prof-card{border:1px solid var(--line);padding:26px;background:#fff}.s90g-prof-card h3{font-size:24px;margin:0 0 12px}.s90g-prof-card p{color:var(--muted)}
 @media(max-width:1000px){.s90g-route-grid,.s90g-offer-grid,.s90g-category-grid,.s90g-prof-grid{grid-template-columns:1fr 1fr}.s90g-content-grid{grid-template-columns:1fr}.s90g-sticky-summary{position:static}.s90g-nav{gap:14px}}
 @media(max-width:680px){.s90g-route-grid,.s90g-offer-grid,.s90g-category-grid,.s90g-prof-grid,.s90g-step-grid,.s90g-mini-links{grid-template-columns:1fr}.s90g-comparison{font-size:14px}.s90g-comparison th,.s90g-comparison td{padding:11px}.cookie-banner{align-items:flex-start;flex-direction:column}.cookie-actions{width:100%}.cookie-actions button{flex:1}}
+
+.s90g-process-media {
+  background: #f7f3eb;
+}
+
+.s90g-process-media img {
+  object-fit: contain;
+  box-sizing: border-box;
+  padding: 18px;
+}
+
+@media (max-width: 760px) {
+  .s90g-process-media img {
+    padding: 8px;
+  }
+}
