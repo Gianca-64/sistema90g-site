@@ -7,7 +7,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - Pagine HTML controllate: **75**
 - File immagine presenti: **179**
 - Immagini di contenuto pubblicate: **153**
-- File riutilizzati in più punti: **17**
+- File riutilizzati in più punti: **41**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **121**
@@ -33,47 +33,47 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `analisi-unita-varianti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og | Confronto coordinato di più unità immobiliari o varianti |
 | `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Le pagine mostrano come misure, aperture, funzioni, documenti e uso quotidiano cambiano il modo di leggere una decisione. | Archivio dei casi analizzati Sistema 90G |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione. | Lavastoviglie e passaggio |
-| `casi-analizzati.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Terza camera e zona giorno |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Una camera in più modifica la qualità degli spazi comuni. | Sconto e valore reale |
-| `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il totale non spiega da solo che cosa viene fornito. | Cabina armadio e passaggio |
+| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione. | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `casi-analizzati.html` | `images/caso-terza-camera-zona-giorno.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Redistribuzione della zona giorno per ricavare una terza camera |
+| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Una camera in più modifica la qualità degli spazi comuni. | Preventivo cucina con voci e materiali da verificare |
+| `casi-analizzati.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | Il totale non spiega da solo che cosa viene fornito. | Cabina armadio stretta con spazio di passaggio da verificare |
 | `casi-analizzati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La pratica viene registrata nella Console; la valutazione proposta viene verificata personalmente prima dell’invio. | Materiali per sottoporre un caso |
 | `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Camere, studio e contenimento |
-| `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Cabina armadio e passaggio |
-| `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | La misura nominale deve includere uso e apertura. | Cabina in camera irregolare |
-| `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | La forma dell’ambiente incide più della superficie totale. | Cameretta e crescita |
-| `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | La soluzione deve reggere usi diversi nel tempo. | Postazione di lavoro in casa |
-| `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | La scrivania deve convivere con luce, passaggi e contenimento. | Ripostiglio e scaffali |
+| `casi-camere-contenimento.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Cabina armadio stretta con spazio di passaggio da verificare |
+| `casi-camere-contenimento.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | La misura nominale deve includere uso e apertura. | Camera irregolare con cabina armadio e passaggi da verificare |
+| `casi-camere-contenimento.html` | `images/caso-camera-bambini-crescita.jpg` | La forma dell’ambiente incide più della superficie totale. | Cameretta con letto a castello, armadio e scrivania da verificare |
+| `casi-camere-contenimento.html` | `images/caso-studio-postazione-lavoro.jpg` | La soluzione deve reggere usi diversi nel tempo. | Studio ricavato in casa con postazione di lavoro da verificare |
+| `casi-camere-contenimento.html` | `images/caso-ripostiglio-profondita-scaffali.jpg` | La scrivania deve convivere con luce, passaggi e contenimento. | Ripostiglio con scaffalature profonde da verificare |
 | `casi-camere-contenimento.html` | `images/08_HOME_CHIUSURA.jpg` | La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale. | Invio di un nuovo caso |
 | `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Cucina e preventivi |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Lavastoviglie e passaggio |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola e passaggi in cucina |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | La composizione deve funzionare anche durante l’uso simultaneo. | Cucina piccola su tre lati |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | Più mobili non significano automaticamente maggiore funzionalità. | Profondità 75 cm e angolo |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | Una profondità particolare modifica raccordi, aperture e spazio. | Lavello sotto finestra |
-| `casi-cucina.html` | `images/19_CASI_CUCINA.jpg` | Finestra, rubinetto e piano devono essere verificati insieme. | Sconto e valore reale |
+| `casi-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Lavastoviglie aperta che riduce il passaggio in cucina |
+| `casi-cucina.html` | `images/caso-isola-passaggi-cucina.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola cucina con passaggi, sedute e aperture da verificare |
+| `casi-cucina.html` | `images/caso-cucina-piccola-tre-lati.jpg` | La composizione deve funzionare anche durante l’uso simultaneo. | Cucina piccola su tre lati con passaggi e aperture da verificare |
+| `casi-cucina.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Più mobili non significano automaticamente maggiore funzionalità. | Cucina ad angolo con profondità maggiorata e contenimento da verificare |
+| `casi-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Una profondità particolare modifica raccordi, aperture e spazio. | Lavello sotto finestra con possibile conflitto tra rubinetto e infisso |
+| `casi-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Finestra, rubinetto e piano devono essere verificati insieme. | Preventivo cucina con voci e materiali da verificare |
 | `casi-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale. | Invio di un nuovo caso |
 | `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Distribuzione e trasformazioni della casa |
-| `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Due appartamenti e accessi |
-| `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Dividere gli spazi modifica accessi, privacy e disimpegni. | Scala interna verso il terrazzo |
-| `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | La scala occupa spazio e condiziona i percorsi. | Secondo bagno |
-| `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Lo spazio disponibile non basta senza impianti e passaggi. | Terza camera e zona giorno |
-| `casi-distribuzione-casa.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Una camera in più modifica la qualità degli spazi comuni. | Corridoio e porte aperte |
+| `casi-distribuzione-casa.html` | `images/caso-due-appartamenti-accessi-disimpegni.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Planimetria da dividere in due appartamenti con cucine e bagni |
+| `casi-distribuzione-casa.html` | `images/caso-scala-interna-terrazzo-planimetria.jpg` | Dividere gli spazi modifica accessi, privacy e disimpegni. | Planimetria con scala interna verso il terrazzo |
+| `casi-distribuzione-casa.html` | `images/caso-secondo-bagno-impianti-spazio.jpg` | La scala occupa spazio e condiziona i percorsi. | Secondo bagno ricavato vicino agli ambienti esistenti |
+| `casi-distribuzione-casa.html` | `images/caso-terza-camera-zona-giorno.jpg` | Lo spazio disponibile non basta senza impianti e passaggi. | Redistribuzione della zona giorno per ricavare una terza camera |
+| `casi-distribuzione-casa.html` | `images/caso-corridoio-porte-aperte.jpg` | Una camera in più modifica la qualità degli spazi comuni. | Corridoio di distribuzione con più porte da verificare |
 | `casi-distribuzione-casa.html` | `images/08_HOME_CHIUSURA.jpg` | La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale. | Invio di un nuovo caso |
 | `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Soggiorno e open space |
-| `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Ingresso sul tavolo |
-| `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Il tavolo può comprimere l’ingresso e il living. | Percorso centrale nell’open space |
-| `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Il percorso principale può dividere le funzioni. | TV, divano e passaggi |
-| `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Le distanze devono funzionare insieme, non separatamente. | Divano letto in soggiorno |
-| `casi-soggiorno-open-space.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | L’apertura modifica il funzionamento dell’intero ambiente. | Pianoforte, tavolo, divano e TV |
+| `casi-soggiorno-open-space.html` | `images/caso-ingresso-tavolo-living.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Ingresso vicino al tavolo e zona giorno compressa |
+| `casi-soggiorno-open-space.html` | `images/caso-open-space-percorso-centrale.jpg` | Il tavolo può comprimere l’ingresso e il living. | Open space attraversato dal percorso verso la zona notte |
+| `casi-soggiorno-open-space.html` | `images/caso-open-space-tv-divano-passaggi.jpg` | Il percorso principale può dividere le funzioni. | Open space con TV, divano e passaggio centrale |
+| `casi-soggiorno-open-space.html` | `images/caso-divano-letto-soggiorno-tre-persone.jpg` | Le distanze devono funzionare insieme, non separatamente. | Soggiorno con divano letto usato come spazio notte |
+| `casi-soggiorno-open-space.html` | `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` | L’apertura modifica il funzionamento dell’intero ambiente. | Soggiorno con tavolo, divano, TV e pianoforte verticale |
 | `casi-soggiorno-open-space.html` | `images/08_HOME_CHIUSURA.jpg` | La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale. | Invio di un nuovo caso |
 | `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Bagno, lavanderia e spazi di servizio |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Bagno con lavatrice |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | Pochi centimetri possono cambiare accesso e utilizzo. | Lavanderia e oblò |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | Porte e oblò devono poter funzionare contemporaneamente. | Soffitta e altezza utile |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | La superficie non coincide con lo spazio realmente utilizzabile. | Garage e portiere |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | L’auto entra, ma bisogna poter aprire e muoversi. | Terrazzo, tavolo e fioriere |
-| `casi-spazi-servizio.html` | `images/21_CASI_BAGNO.jpg` | Arredi e verde non devono interrompere il percorso. | Tiranti e cavi a vista |
+| `casi-spazi-servizio.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Bagno con lavatrice e apertura della porta da verificare |
+| `casi-spazi-servizio.html` | `images/caso-lavanderia-oblo-porta.jpg` | Pochi centimetri possono cambiare accesso e utilizzo. | Vano lavanderia con lavatrice e asciugatrice da verificare |
+| `casi-spazi-servizio.html` | `images/caso-soffitta-altezza-utile.jpg` | Porte e oblò devono poter funzionare contemporaneamente. | Soffitta sotto falda con altezza utile da verificare |
+| `casi-spazi-servizio.html` | `images/caso-garage-apertura-portiere.jpg` | La superficie non coincide con lo spazio realmente utilizzabile. | Garage per un'auto con apertura portiere da verificare |
+| `casi-spazi-servizio.html` | `images/caso-terrazzo-passaggio-arredi.jpg` | L’auto entra, ma bisogna poter aprire e muoversi. | Terrazzo con tavolo, sedie e fioriere da verificare |
+| `casi-spazi-servizio.html` | `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` | Arredi e verde non devono interrompere il percorso. | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `casi-spazi-servizio.html` | `images/08_HOME_CHIUSURA.jpg` | La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale. | Invio di un nuovo caso |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/caso-bagno-lavatrice-dieci-centimetri.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Bagno con lavatrice e apertura della porta da verificare |
 | `caso-bagno-lavatrice-dieci-centimetri.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico. | Raccolta di misure e fotografie del bagno con lavatrice |
@@ -229,60 +229,23 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 
-### `images/18_CASI_HERO_ARCHIVIO.jpg` — 9 utilizzi
+### `images/18_CASI_HERO_ARCHIVIO.jpg` — 3 utilizzi
 
 - `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
 - `casi-analizzati.html` — Le pagine mostrano come misure, aperture, funzioni, documenti e uso quotidiano cambiano il modo di leggere una decisione.
-- `casi-analizzati.html` — Il totale non spiega da solo che cosa viene fornito.
 - `casi-camere-contenimento.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-camere-contenimento.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-camere-contenimento.html` — La misura nominale deve includere uso e apertura.
-- `casi-camere-contenimento.html` — La forma dell’ambiente incide più della superficie totale.
-- `casi-camere-contenimento.html` — La soluzione deve reggere usi diversi nel tempo.
-- `casi-camere-contenimento.html` — La scrivania deve convivere con luce, passaggi e contenimento.
 
-### `images/19_CASI_CUCINA.jpg` — 9 utilizzi
-
-- `casi-analizzati.html` — Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione.
-- `casi-analizzati.html` — Una camera in più modifica la qualità degli spazi comuni.
-- `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
-- `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
-- `casi-cucina.html` — Più mobili non significano automaticamente maggiore funzionalità.
-- `casi-cucina.html` — Una profondità particolare modifica raccordi, aperture e spazio.
-- `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
-
-### `images/20_CASI_DISTRIBUZIONE.jpg` — 14 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.jpg` — 3 utilizzi
 
 - `analisi-unita-varianti.html` — Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og
-- `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-distribuzione-casa.html` — Dividere gli spazi modifica accessi, privacy e disimpegni.
-- `casi-distribuzione-casa.html` — La scala occupa spazio e condiziona i percorsi.
-- `casi-distribuzione-casa.html` — Lo spazio disponibile non basta senza impianti e passaggi.
-- `casi-distribuzione-casa.html` — Una camera in più modifica la qualità degli spazi comuni.
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-soggiorno-open-space.html` — Il tavolo può comprimere l’ingresso e il living.
-- `casi-soggiorno-open-space.html` — Il percorso principale può dividere le funzioni.
-- `casi-soggiorno-open-space.html` — Le distanze devono funzionare insieme, non separatamente.
-- `casi-soggiorno-open-space.html` — L’apertura modifica il funzionamento dell’intero ambiente.
 
-### `images/21_CASI_BAGNO.jpg` — 7 utilizzi
-
-- `casi-spazi-servizio.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-spazi-servizio.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
-- `casi-spazi-servizio.html` — Pochi centimetri possono cambiare accesso e utilizzo.
-- `casi-spazi-servizio.html` — Porte e oblò devono poter funzionare contemporaneamente.
-- `casi-spazi-servizio.html` — La superficie non coincide con lo spazio realmente utilizzabile.
-- `casi-spazi-servizio.html` — L’auto entra, ma bisogna poter aprire e muoversi.
-- `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
-
-### `images/22_CASI_PREVENTIVO.jpg` — 3 utilizzi
+### `images/22_CASI_PREVENTIVO.jpg` — 5 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
+- `casi-analizzati.html` — Una camera in più modifica la qualità degli spazi comuni.
+- `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Una stanza in più modifica luce, passaggi e qualità dello spazio comune.
 
@@ -330,6 +293,139 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `progetto-da-zero.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
+
+### `images/caso-bagno-lavatrice-dieci-centimetri.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+- `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-cabina-armadio-125-cm-passaggio.jpg` — 3 utilizzi
+
+- `casi-analizzati.html` — Il totale non spiega da solo che cosa viene fornito.
+- `casi-camere-contenimento.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+- `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
+### `images/caso-cabina-armadio-camera-irregolare.jpg` — 2 utilizzi
+
+- `casi-camere-contenimento.html` — La misura nominale deve includere uso e apertura.
+- `caso-cabina-armadio-camera-irregolare.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-camera-bambini-crescita.jpg` — 2 utilizzi
+
+- `casi-camere-contenimento.html` — La forma dell’ambiente incide più della superficie totale.
+- `caso-camera-bambini-crescita.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-corridoio-porte-aperte.jpg` — 2 utilizzi
+
+- `casi-distribuzione-casa.html` — Una camera in più modifica la qualità degli spazi comuni.
+- `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-cucina-piccola-tre-lati.jpg` — 2 utilizzi
+
+- `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
+- `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-cucina-profondita-75-angolo.jpg` — 2 utilizzi
+
+- `casi-cucina.html` — Più mobili non significano automaticamente maggiore funzionalità.
+- `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-divano-letto-soggiorno-tre-persone.jpg` — 2 utilizzi
+
+- `casi-soggiorno-open-space.html` — Le distanze devono funzionare insieme, non separatamente.
+- `caso-divano-letto-soggiorno-tre-persone.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-due-appartamenti-accessi-disimpegni.jpg` — 2 utilizzi
+
+- `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+- `caso-due-appartamenti-accessi-disimpegni.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-garage-apertura-portiere.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — La superficie non coincide con lo spazio realmente utilizzabile.
+- `caso-garage-apertura-portiere.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-ingresso-tavolo-living.jpg` — 2 utilizzi
+
+- `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+- `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
+### `images/caso-isola-passaggi-cucina.jpg` — 2 utilizzi
+
+- `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
+- `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — Pochi centimetri possono cambiare accesso e utilizzo.
+- `caso-lavanderia-oblo-porta.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 3 utilizzi
+
+- `casi-analizzati.html` — Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione.
+- `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+- `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-lavello-sotto-finestra-aperture.jpg` — 2 utilizzi
+
+- `casi-cucina.html` — Una profondità particolare modifica raccordi, aperture e spazio.
+- `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-open-space-percorso-centrale.jpg` — 2 utilizzi
+
+- `casi-soggiorno-open-space.html` — Il tavolo può comprimere l’ingresso e il living.
+- `caso-open-space-percorso-centrale.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-open-space-tv-divano-passaggi.jpg` — 2 utilizzi
+
+- `casi-soggiorno-open-space.html` — Il percorso principale può dividere le funzioni.
+- `caso-open-space-tv-divano-passaggi.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
+
+### `images/caso-ripostiglio-profondita-scaffali.jpg` — 2 utilizzi
+
+- `casi-camere-contenimento.html` — La scrivania deve convivere con luce, passaggi e contenimento.
+- `caso-ripostiglio-profondita-scaffali.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-scala-interna-terrazzo-planimetria.jpg` — 2 utilizzi
+
+- `casi-distribuzione-casa.html` — Dividere gli spazi modifica accessi, privacy e disimpegni.
+- `caso-scala-interna-terrazzo-planimetria.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-secondo-bagno-impianti-spazio.jpg` — 2 utilizzi
+
+- `casi-distribuzione-casa.html` — La scala occupa spazio e condiziona i percorsi.
+- `caso-secondo-bagno-impianti-spazio.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-soffitta-altezza-utile.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — Porte e oblò devono poter funzionare contemporaneamente.
+- `caso-soffitta-altezza-utile.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg` — 2 utilizzi
+
+- `casi-soggiorno-open-space.html` — L’apertura modifica il funzionamento dell’intero ambiente.
+- `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-studio-postazione-lavoro.jpg` — 2 utilizzi
+
+- `casi-camere-contenimento.html` — La soluzione deve reggere usi diversi nel tempo.
+- `caso-studio-postazione-lavoro.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-terrazzo-passaggio-arredi.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — L’auto entra, ma bisogna poter aprire e muoversi.
+- `caso-terrazzo-passaggio-arredi.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
+
+### `images/caso-terza-camera-zona-giorno.jpg` — 3 utilizzi
+
+- `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
+- `casi-distribuzione-casa.html` — Lo spazio disponibile non basta senza impianti e passaggi.
+- `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+
+### `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` — 2 utilizzi
+
+- `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
 ### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
 
