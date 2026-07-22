@@ -5,7 +5,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **75**
-- File immagine presenti: **179**
+- File immagine presenti: **180**
 - Immagini di contenuto pubblicate: **153**
 - File riutilizzati in più punti: **41**
 - Riferimenti mancanti: **0**
@@ -17,7 +17,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
-| `acquisto-assistito-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Proposta preliminare indipendente per cucina nuova |
+| `acquisto-assistito-cucina.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Confronto tra schizzo tecnico e visualizzazione realistica di una cucina per verificare funzioni, ingombri e passaggi |
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
 | `agenzie-immobiliari.html` | `images/01_individuo_il_problema.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
@@ -427,9 +427,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 2 utilizzi
 
-- `acquisto-assistito-cucina.html` — Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo.
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
 
