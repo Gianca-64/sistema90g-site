@@ -15,9 +15,12 @@ body.s90g-visual .s90g-archive-card > img {
   object-position: center;
 }
 
-@media (max-width: 1180px) {
+@media (min-width: 681px) and (max-width: 1180px) {
   body.s90g-visual .s90g-archive-card > img {
-    height: 270px;
+    height: clamp(340px, 40vw, 440px);
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #f3efe8;
   }
 }
 
