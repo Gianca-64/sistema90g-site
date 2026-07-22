@@ -5,8 +5,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **75**
-- File immagine presenti: **180**
-- Immagini di contenuto pubblicate: **153**
+- File immagine presenti: **181**
+- Immagini di contenuto pubblicate: **154**
 - File riutilizzati in più punti: **41**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -150,7 +150,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/05_decidere_meglio.svg` | Prima del pagamento, in base alla capacità. |  |
 | `index.html` | `images/03_HOME_METODO.jpg` | Con limiti e verifiche da svolgere. | Planimetria descrittiva e analisi |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Riceverai il servizio suggerito, il costo, gli eventuali documenti mancanti e la prima data realmente disponibile. La risposta viene verific | Invio dei materiali per una prima valutazione |
-| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Soluzioni che possono prevenire problemi concreti nella progettazione degli arredi e migliorare l’uso quotidiano della casa. Ogni contenuto  | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
+| `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Quando una novità può migliorare davvero un progetto | Studio preliminare di una lavanderia con soluzioni per accessibilità, organizzazione e manutenzione |
+| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Analisi indipendenti di prodotti, materiali e soluzioni, con benefici possibili, condizioni di installazione e limiti d’uso. | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu | Planimetria annotata con conflitto di apertura |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Invia planimetria, foto, render o preventivo e descrivi la decisione. La Console prepara la valutazione; la risposta viene inviata solo dopo | Raccolta materiali e analisi preventiva |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 20 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
