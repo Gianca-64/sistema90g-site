@@ -157,6 +157,23 @@ function addWhatsAppChat(){
   wrapper.className='s90g-chat-widget';
   wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per sottoporre foto, planimetrie o preventivi usa il percorso guidato, che mostra prima servizio e prezzo.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#percorso" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Valuta un caso</a></div></section>`;
   document.body.appendChild(wrapper);
+
+  /* Nasconde la Chat finché il banner cookie richiede una scelta. */
+  const cookieBanner = document.getElementById('cookie-banner');
+
+  const syncChatVisibility = () => {
+    const bannerIsVisible = cookieBanner && !cookieBanner.hidden;
+    wrapper.style.display = bannerIsVisible ? 'none' : '';
+  };
+
+  if (cookieBanner) {
+    new MutationObserver(syncChatVisibility).observe(cookieBanner, {
+      attributes: true,
+      attributeFilter: ['hidden']
+    });
+  }
+
+  syncChatVisibility();
   const launcher=wrapper.querySelector('.s90g-chat-launcher');
   const popup=wrapper.querySelector('.s90g-chat-popup');
   const close=wrapper.querySelector('.s90g-chat-close');
