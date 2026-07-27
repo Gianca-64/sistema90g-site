@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-OFFICIAL_EMAIL = "sistema90g@icloud.com"
+OFFICIAL_EMAIL = "info@sistema90g.it"
 
 changed = []
 for path in sorted(ROOT.glob("*.html")):

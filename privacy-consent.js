@@ -197,6 +197,5 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-track-whatsapp]').forEach(x=>x.addEventListener('click',()=>trackLead('whatsapp_chat_open',x)));
   document.querySelectorAll('[data-start-path]').forEach(x=>x.addEventListener('click',()=>trackLead('guided_path_open',x)));
   document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>{if(x.dataset.portalEnabled==='true')trackLead('public_portal_open',x)}));
-  document.addEventListener('s90g:path-result',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','guided_path_result',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',units:event.detail?.units||'',transport_type:'beacon'});});
-  document.addEventListener('s90g:portal-paused',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','portal_pending_notice',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',transport_type:'beacon'});});
+  document.addEventListener('s90g:path-result',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','guided_path_result',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',units:event.detail?.units||'',transport_type:'beacon'});});});
 });

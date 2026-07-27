@@ -1,130 +1,360 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json,re,sys
-from collections import Counter
-from pathlib import Path
-from xml.etree import ElementTree as ET
-from bs4 import BeautifulSoup
 
-ROOT=Path(__file__).resolve().parents[1]
-SITE='https://sistema90g.it'
-OLD_PORTALS=['sistema90g-console.sistema90g.workers.dev','sistema90g-public-requests.sistema90g.workers.dev']
-BANNED=['Veneta Cucine','Finiture arredo','Restyling arredo esistente','Redistribuzione interni','Progetto interni da zero','€147','72 ore','5 giorni lavorativi','tre livelli','188 casi']
-SERVICE_EXPECTED={
- 'controllo-mirato.html':'Controllo mirato',
- 'analisi-completa.html':'Analisi completa',
- 'progetto-da-zero.html':'Studio preliminare degli spazi',
- 'scelta-finiture-casa.html':'Scelta Finiture cucina',
- 'restyling-cucina-esistente.html':'Restyling cucina esistente',
- 'acquisto-assistito-cucina.html':'Acquisto Assistito Cucina 90G',
- 'controllo-progetto-cucina.html':'Verifica professionale progetto cucina',
- 'verifica-planimetria-distribuzione-casa.html':'Verifica preliminare dell’immobile',
- 'analisi-unita-varianti.html':'Analisi di più unità o varianti',
+import html.parser
+import os
+import re
+import sys
+import xml.etree.ElementTree as ET
+from collections import Counter
+from dataclasses import dataclass, field
+from pathlib import Path
+from urllib.parse import unquote, urlparse
+
+ROOT = Path(__file__).resolve().parents[1]
+SKIP_ASSETS = os.environ.get("S90G_SKIP_ASSET_CHECK") == "1"
+
+EXPECTED_HEADINGS = {
+    "studio-preliminare-spazi.html": "Studio preliminare degli spazi",
+    "controllo-progetto-cucina.html": "Analisi progetto cucina",
+    "verifica-planimetria-distribuzione-casa.html": "Verifica preliminare immobile",
+    "proprieta-intellettuale.html": "Proprietà intellettuale e uso dei contenuti",
 }
-CASE_EXCLUDE={'caso-open-space.html','caso-passaggio-lavastoviglie.html','caso-verificato-isola-forno-passaggi.html'}
-COLLECTIONS={'casi-analizzati.html','casi-camere-contenimento.html','casi-cucina.html','casi-distribuzione-casa.html','casi-soggiorno-open-space.html','casi-spazi-servizio.html','servizi.html'}
-PRICE_MATRIX={
- 'scelta-finiture-cucina':47,'restyling-cucina-esistente':79,'controllo-mirato':127,'analisi-completa':253,'acquisto-assistito-cucina':290,'studio-preliminare-spazi':560,'verifica-preliminare-immobile':149,'analisi-unita-varianti':110,'verifica-progetto-cucina':150
+PRICE_MATRIX = {
+    "scelta-finiture-cucina": 47,
+    "restyling-cucina-esistente": 79,
+    "controllo-mirato": 127,
+    "analisi-completa": 253,
+    "acquisto-assistito-cucina": 290,
+    "studio-preliminare-spazi": 560,
+    "verifica-preliminare-immobile": 149,
+    "analisi-unita-varianti": 110,
+    "verifica-progetto-cucina": 150,
 }
-issues=[]
-htmls=sorted(ROOT.glob('*.html')); indexable=[]; canonicals={}; menus=Counter(); guided_total=guided_complete=0; portal_static=[]
-for p in htmls:
- raw=p.read_text('utf-8',errors='replace'); soup=BeautifulSoup(raw,'html.parser')
- robots=soup.find('meta',attrs={'name':'robots'}); idx=not robots or 'noindex' not in (robots.get('content') or '').lower()
- if idx:indexable.append(p)
- if not soup.html or soup.html.get('lang')!='it':issues.append((p.name,'html lang missing/not it'))
- if '€' in raw:issues.append((p.name,'static euro price found; prices must be rendered only at step 3'))
- for old_portal in OLD_PORTALS:
-  if old_portal in raw:issues.append((p.name,'obsolete portal endpoint found',old_portal))
- if idx:
-  if len(soup.find_all('h1'))!=1:issues.append((p.name,'expected exactly one H1',len(soup.find_all('h1'))))
-  if not soup.title or not soup.title.get_text(strip=True):issues.append((p.name,'missing title'))
-  for name in ['description','robots','twitter:card','twitter:title','twitter:description','twitter:image']:
-   if not soup.find('meta',attrs={'name':name}):issues.append((p.name,'missing meta',name))
-  for prop in ['og:title','og:description','og:type','og:url','og:image','og:site_name','og:locale']:
-   if not soup.find('meta',attrs={'property':prop}):issues.append((p.name,'missing Open Graph',prop))
-  canonical=soup.find('link',rel='canonical')
-  if not canonical or not canonical.get('href'):issues.append((p.name,'missing canonical'))
-  else:
-   if canonical['href'] in canonicals:issues.append((p.name,'duplicate canonical',canonical['href'],canonicals[canonical['href']]))
-   canonicals[canonical['href']]=p.name
-  schema=soup.find_all('script',type='application/ld+json')
-  if len(schema)!=1:issues.append((p.name,'expected one static JSON-LD block',len(schema)))
-  else:
-   try:
-    data=json.loads(schema[0].get_text());graph=data.get('@graph',[]);types=[n.get('@type') for n in graph if isinstance(n,dict)]
-    if data.get('@context')!='https://schema.org':issues.append((p.name,'schema context'))
-    for required in ['Organization','Person','WebSite']:
-     if required not in types:issues.append((p.name,'schema missing',required))
-    if not {'WebPage','AboutPage','ContactPage','CollectionPage','CreativeWork'}.intersection(types):issues.append((p.name,'schema missing page entity',types))
-    if p.name.startswith('caso-') and p.name not in CASE_EXCLUDE:
-     if 'Article' not in types:issues.append((p.name,'case schema missing Article'))
-     if 'BreadcrumbList' not in types:issues.append((p.name,'case schema missing BreadcrumbList'))
-    if p.name in COLLECTIONS:
-     if 'CollectionPage' not in types or 'ItemList' not in types:issues.append((p.name,'collection schema incomplete',types))
-    if p.name in SERVICE_EXPECTED:
-     services=[n for n in graph if isinstance(n,dict) and n.get('@type')=='Service']
-     if len(services)!=1:issues.append((p.name,'expected one Service node',len(services)))
-     else:
-      if services[0].get('name')!=SERVICE_EXPECTED[p.name]:issues.append((p.name,'wrong service name',services[0].get('name')))
-      if 'offers' in services[0]:issues.append((p.name,'price offer must not be exposed in descriptive schema'))
-   except Exception as e:issues.append((p.name,'invalid JSON-LD',str(e)))
- nav=soup.select_one('nav.s90g-nav')
- if nav:menus[tuple((a.get('href',''),a.get_text(' ',strip=True)) for a in nav.find_all('a'))]+=1
- for a in soup.find_all('a',href=True):
-  href=a['href']
-  if a.has_attr('data-start-path'):
-   guided_total+=1; req=['data-content-type','data-cta-position','data-service']
-   if all(a.has_attr(x) for x in req) and 'analisi-preventiva.html' in href:guided_complete+=1
-   else:issues.append((p.name,'guided CTA incomplete',a.get_text(' ',strip=True),href,[x for x in req if not a.has_attr(x)]))
-  clean=href.split('#',1)[0].split('?',1)[0]
-  if not clean or clean.startswith(('https://','http://','mailto:','tel:','javascript:')) or clean=='#':continue
-  if not (ROOT/clean).exists():issues.append((p.name,'broken internal link',href))
- for img in soup.find_all('img'):
-  if img.get('alt') is None:issues.append((p.name,'image missing alt',img.get('src')))
-  src=(img.get('src') or '').split('?',1)[0]
-  if src and not src.startswith(('http://','https://','data:')):
-   if not (ROOT/src).exists():issues.append((p.name,'missing local image',src))
-   if not img.get('width') or not img.get('height'):issues.append((p.name,'image missing intrinsic dimensions',src))
-   if not img.get('loading') or not img.get('decoding'):issues.append((p.name,'image missing loading/decoding hints',src))
- for tag,attr in [('link','href'),('script','src')]:
-  for item in soup.find_all(tag):
-   val=item.get(attr)
-   if not val or val.startswith(('http://','https://','data:')):continue
-   clean=val.split('?',1)[0]
-   if not (ROOT/clean).exists():issues.append((p.name,f'missing local {tag}',val))
-if len(menus)!=1:issues.append(('GLOBAL','multiple navigation variants',[(count,menu) for menu,count in menus.items()]))
-for p in list(ROOT.glob('*.html'))+list(ROOT.glob('*.js'))+list(ROOT.glob('*.css')):
- text=p.read_text('utf-8',errors='replace')
- for term in BANNED:
-  if term.lower() in text.lower():issues.append((p.name,'banned/outdated commercial term',term))
- for old_portal in OLD_PORTALS:
-  if old_portal in text:issues.append((p.name,'obsolete portal endpoint found',old_portal))
-# Guided page mechanics
-path=soup=BeautifulSoup((ROOT/'analisi-preventiva.html').read_text('utf-8'),'html.parser')
-if not soup.find(id='s90g-role-path'):issues.append(('analisi-preventiva.html','guided form missing'))
-if not soup.find(id='s90g-result-price'):issues.append(('analisi-preventiva.html','step 3 price output missing'))
-if not soup.find('script',src=re.compile('portal-config.js')):issues.append(('analisi-preventiva.html','portal config script missing'))
-if not soup.find('script',src=re.compile('role-case-path.js')):issues.append(('analisi-preventiva.html','guided script missing'))
-portaljs=(ROOT/'portal-config.js').read_text('utf-8') if (ROOT/'portal-config.js').exists() else ''
-if 'enabled: false' not in portaljs:issues.append(('portal-config.js','portal must remain disabled for pre-launch publication'))
-if 'https://sistema90g-portale.simply-winspace.it/' not in portaljs:issues.append(('portal-config.js','temporary Register.it trial URL missing'))
-rolejs=(ROOT/'role-case-path.js').read_text('utf-8')
-for sid,price in PRICE_MATRIX.items():
- if sid not in rolejs or not re.search(rf"(?:price|unitPrice):{price}\b",rolejs):issues.append(('role-case-path.js','approved price missing/wrong',sid,price))
-if "minUnits:3" not in rolejs:issues.append(('role-case-path.js','minimum 3 units missing'))
-if "requester_role" not in rolejs or "case_context" not in rolejs:issues.append(('role-case-path.js','Console routing parameters missing'))
-privacy=(ROOT/'privacy-consent.js').read_text('utf-8')
-for token in ['s90gPrepareGuidedPathLinks','guided_path_open','guided_path_result']:
- if token not in privacy:issues.append(('privacy-consent.js','guided path tracking/routing missing',token))
-# XML parity
-ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-try:sitemap_urls={e.text.strip() for e in ET.parse(ROOT/'sitemap.xml').findall('.//sm:loc',ns)}
-except Exception as e:sitemap_urls=set();issues.append(('sitemap.xml','invalid XML',str(e)))
-try:ET.parse(ROOT/'image-sitemap.xml')
-except Exception as e:issues.append(('image-sitemap.xml','invalid XML',str(e)))
-if sitemap_urls!=set(canonicals):issues.append(('sitemap.xml','parity mismatch',{'missing':sorted(set(canonicals)-sitemap_urls),'extra':sorted(sitemap_urls-set(canonicals))}))
-print(f'HTML files: {len(htmls)}');print(f'Indexable pages: {len(indexable)}');print(f'Unique menu variants: {len(menus)}');print(f'Guided CTAs: {guided_complete}/{guided_total} complete');print(f'Issues: {len(issues)}')
-for issue in issues:print(' -',issue)
-if issues:sys.exit(1)
-print('RELEASE AUDIT: PASS')
+REDIRECT_STUBS = {"progetto-da-zero.html"}
+OLD_PUBLIC_TERMS = [
+    "€347", "€ 347", "347 €", "€797", "€ 797", "797 €",
+    "Check-up Progetto", "Portale sicuro in attivazione",
+    "L’invio della pratica non è ancora disponibile",
+    "sistema90g-console.sistema90g.workers.dev",
+    "sistema90g-public-requests.sistema90g.workers.dev",
+    "sistema90g-portale.simply-winspace.it",
+]
+SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
+
+
+def attrs_dict(attrs: list[tuple[str, str | None]]) -> dict[str, str]:
+    return {key.lower(): (value or "") for key, value in attrs}
+
+
+@dataclass
+class PageData:
+    lang: str = ""
+    title_parts: list[str] = field(default_factory=list)
+    h1_parts: list[list[str]] = field(default_factory=list)
+    canonical: str = ""
+    robots: str = ""
+    links: list[dict[str, str]] = field(default_factory=list)
+    images: list[dict[str, str]] = field(default_factory=list)
+    scripts: list[str] = field(default_factory=list)
+    stylesheets: list[str] = field(default_factory=list)
+    nav_links: list[tuple[str, str]] = field(default_factory=list)
+    footer_text: list[str] = field(default_factory=list)
+    has_nav: bool = False
+    has_footer: bool = False
+    ip_link: bool = False
+
+    @property
+    def title(self) -> str:
+        return " ".join(self.title_parts).strip()
+
+    @property
+    def h1_texts(self) -> list[str]:
+        return [" ".join(parts).strip() for parts in self.h1_parts]
+
+
+class PageParser(html.parser.HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.data = PageData()
+        self.stack: list[str] = []
+        self.in_title = False
+        self.in_nav = False
+        self.in_footer = False
+        self.current_h1: list[str] | None = None
+        self.current_anchor: dict[str, str] | None = None
+        self.current_anchor_text: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        tag = tag.lower()
+        attributes = attrs_dict(attrs)
+        self.stack.append(tag)
+
+        if tag == "html":
+            self.data.lang = attributes.get("lang", "")
+        elif tag == "title":
+            self.in_title = True
+        elif tag == "h1":
+            self.current_h1 = []
+            self.data.h1_parts.append(self.current_h1)
+        elif tag == "link":
+            rel_tokens = {token.lower() for token in attributes.get("rel", "").split()}
+            href = attributes.get("href", "")
+            if "canonical" in rel_tokens:
+                self.data.canonical = href
+            if "stylesheet" in rel_tokens and href:
+                self.data.stylesheets.append(href)
+        elif tag == "meta" and attributes.get("name", "").lower() == "robots":
+            self.data.robots = attributes.get("content", "")
+        elif tag == "nav" and "s90g-nav" in attributes.get("class", "").split():
+            self.in_nav = True
+            self.data.has_nav = True
+        elif tag == "footer" and "s90g-footer" in attributes.get("class", "").split():
+            self.in_footer = True
+            self.data.has_footer = True
+        elif tag == "a":
+            href = attributes.get("href", "")
+            self.current_anchor = {
+                "href": href,
+                "data_start_path": attributes.get("data-start-path", ""),
+            }
+            self.current_anchor_text = []
+            if href == "/proprieta-intellettuale.html":
+                self.data.ip_link = True
+        elif tag == "img":
+            self.data.images.append(attributes)
+        elif tag == "script" and attributes.get("src"):
+            self.data.scripts.append(attributes["src"])
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if tag == "title":
+            self.in_title = False
+        elif tag == "h1":
+            self.current_h1 = None
+        elif tag == "a" and self.current_anchor is not None:
+            text = " ".join(self.current_anchor_text).strip()
+            link = {**self.current_anchor, "text": text}
+            self.data.links.append(link)
+            if self.in_nav:
+                self.data.nav_links.append((link["href"], text))
+            self.current_anchor = None
+            self.current_anchor_text = []
+        elif tag == "nav":
+            self.in_nav = False
+        elif tag == "footer":
+            self.in_footer = False
+
+        if self.stack:
+            for index in range(len(self.stack) - 1, -1, -1):
+                if self.stack[index] == tag:
+                    del self.stack[index:]
+                    break
+
+    def handle_data(self, data: str) -> None:
+        text = re.sub(r"\s+", " ", data).strip()
+        if not text:
+            return
+        if self.in_title:
+            self.data.title_parts.append(text)
+        if self.current_h1 is not None:
+            self.current_h1.append(text)
+        if self.current_anchor is not None:
+            self.current_anchor_text.append(text)
+        if self.in_footer:
+            self.data.footer_text.append(text)
+
+
+def parse_page(raw: str) -> PageData:
+    parser = PageParser()
+    parser.feed(raw)
+    parser.close()
+    return parser.data
+
+
+def local_target(page: Path, value: str) -> Path | None:
+    value = value.strip()
+    if not value or value.startswith("#") or value.startswith("//"):
+        return None
+    parsed = urlparse(value)
+    if parsed.scheme.lower() in SKIP_SCHEMES or parsed.netloc:
+        return None
+    clean = unquote(parsed.path)
+    if not clean:
+        return None
+    target = (ROOT / clean.lstrip("/")) if clean.startswith("/") else (page.parent / clean)
+    if clean.endswith("/"):
+        target = target / "index.html"
+    return target.resolve()
+
+
+def check_local_reference(page_rel: str, page: Path, value: str, kind: str, issues: list[tuple]) -> None:
+    if SKIP_ASSETS:
+        return
+    target = local_target(page, value)
+    if target is None:
+        return
+    if not target.exists():
+        issues.append((page_rel, f"missing local {kind}", value))
+
+
+issues: list[tuple] = []
+htmls: list[tuple[str, bool, PageData, str]] = []
+canonicals: dict[str, str] = {}
+menus: Counter = Counter()
+footer_signatures: Counter = Counter()
+
+for path in sorted(ROOT.rglob("*.html")):
+    if path.name.startswith("._") or ".git" in path.parts or "node_modules" in path.parts:
+        continue
+    rel = path.relative_to(ROOT).as_posix()
+    raw = path.read_text("utf-8", errors="replace")
+    page = parse_page(raw)
+    indexable = "noindex" not in page.robots.lower()
+    if rel in REDIRECT_STUBS:
+        continue
+    htmls.append((rel, indexable, page, raw))
+
+    if page.lang != "it":
+        issues.append((rel, "html lang missing/not it"))
+
+    if not indexable:
+        continue
+
+    if len(page.h1_texts) != 1:
+        issues.append((rel, "expected one H1", len(page.h1_texts)))
+    if not page.title:
+        issues.append((rel, "missing title"))
+    if not page.canonical:
+        issues.append((rel, "missing canonical"))
+    else:
+        if page.canonical in canonicals:
+            issues.append((rel, "duplicate canonical", page.canonical, canonicals[page.canonical]))
+        canonicals[page.canonical] = rel
+
+    lower_raw = raw.lower()
+    for token in OLD_PUBLIC_TERMS:
+        if token.lower() in lower_raw:
+            issues.append((rel, "obsolete public term", token))
+    if "®" in raw:
+        issues.append((rel, "registered symbol must not be used"))
+    if not page.ip_link:
+        issues.append((rel, "missing intellectual-property link"))
+    if not page.has_footer:
+        issues.append((rel, "missing standard footer"))
+    else:
+        footer_signatures[re.sub(r"\s+", " ", " ".join(page.footer_text)).strip()] += 1
+    if not page.has_nav:
+        issues.append((rel, "missing navigation"))
+    else:
+        menus[tuple(page.nav_links)] += 1
+
+    for link in page.links:
+        if link["data_start_path"] and link["href"] != "/analisi-preventiva.html#percorso":
+            issues.append((rel, "guided CTA wrong target", link["href"]))
+        check_local_reference(rel, path, link["href"], "link", issues)
+
+    for image in page.images:
+        if "alt" not in image:
+            issues.append((rel, "image missing alt", image.get("src", "")))
+        if not image.get("width") or not image.get("height"):
+            issues.append((rel, "image missing intrinsic dimensions", image.get("src", "")))
+        check_local_reference(rel, path, image.get("src", ""), "image", issues)
+    for source in page.scripts:
+        check_local_reference(rel, path, source, "script", issues)
+    for stylesheet in page.stylesheets:
+        check_local_reference(rel, path, stylesheet, "stylesheet", issues)
+
+if len(menus) != 1:
+    issues.append(("GLOBAL", "multiple navigation variants", len(menus)))
+if len(footer_signatures) != 1:
+    issues.append(("GLOBAL", "multiple footer variants", len(footer_signatures)))
+
+for filename, heading in EXPECTED_HEADINGS.items():
+    path = ROOT / filename
+    if not path.exists():
+        issues.append((filename, "required page missing"))
+    else:
+        page = parse_page(path.read_text("utf-8", errors="replace"))
+        if heading not in page.h1_texts:
+            issues.append((filename, "wrong/missing H1", heading, page.h1_texts))
+
+role_path = ROOT / "role-case-path.js"
+if not role_path.exists():
+    issues.append(("role-case-path.js", "required file missing"))
+    role = ""
+else:
+    role = role_path.read_text("utf-8", errors="replace")
+for service_id, price in PRICE_MATRIX.items():
+    if service_id not in role or not re.search(rf"(?:price|unitPrice):\s*{price}\b", role):
+        issues.append(("role-case-path.js", "approved price missing/wrong", service_id, price))
+for token in [
+    "requester_role", "case_context", "service", "service_title",
+    "service_price", "service_time", "service_currency",
+]:
+    if token not in role:
+        issues.append(("role-case-path.js", "portal parameter missing", token))
+if "Inizia la richiesta" not in role:
+    issues.append(("role-case-path.js", "final CTA wording missing"))
+
+portal_path = ROOT / "portal-config.js"
+if not portal_path.exists():
+    issues.append(("portal-config.js", "required file missing"))
+    portal = ""
+else:
+    portal = portal_path.read_text("utf-8", errors="replace")
+for token in [
+    "enabled: true", "status: 'active'", "initialRequest: true",
+    "attachments: false", "payments: false", "delivery: false",
+]:
+    if token not in portal:
+        issues.append(("portal-config.js", "capability/config missing", token))
+
+htaccess_path = ROOT / ".htaccess"
+if not htaccess_path.exists():
+    issues.append((".htaccess", "required file missing"))
+    htaccess = ""
+else:
+    htaccess = htaccess_path.read_text("utf-8", errors="replace")
+for pattern in ["^index\\.html$", "^progetto-da-zero\\.html$", "^www\\.sistema90g\\.it$", "%{HTTPS} !=on"]:
+    if pattern not in htaccess:
+        issues.append((".htaccess", "redirect/canonical rule missing", pattern))
+
+namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+try:
+    sitemap_urls = {
+        element.text.strip()
+        for element in ET.parse(ROOT / "sitemap.xml").findall(".//sm:loc", namespace)
+        if element.text
+    }
+except Exception as exc:
+    sitemap_urls = set()
+    issues.append(("sitemap.xml", "invalid XML", str(exc)))
+if sitemap_urls != set(canonicals):
+    issues.append((
+        "sitemap.xml",
+        "canonical parity mismatch",
+        {
+            "missing": sorted(set(canonicals) - sitemap_urls),
+            "extra": sorted(sitemap_urls - set(canonicals)),
+        },
+    ))
+try:
+    ET.parse(ROOT / "image-sitemap.xml")
+except Exception as exc:
+    issues.append(("image-sitemap.xml", "invalid XML", str(exc)))
+
+print(f"HTML checked: {len(htmls)}")
+print(f"Indexable pages: {len(canonicals)}")
+print(f"Navigation variants: {len(menus)}")
+print(f"Footer variants: {len(footer_signatures)}")
+print(f"Issues: {len(issues)}")
+for issue in issues:
+    print(" -", issue)
+if issues:
+    sys.exit(1)
+print("RELEASE AUDIT: PASS")

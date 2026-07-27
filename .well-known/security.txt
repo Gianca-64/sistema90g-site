@@ -1,4 +1,4 @@
-Contact: mailto:sistema90g@icloud.com
+Contact: mailto:info@sistema90g.it
 Preferred-Languages: it, en
 Canonical: https://sistema90g.it/.well-known/security.txt
 Policy: https://sistema90g.it/privacy-policy.html

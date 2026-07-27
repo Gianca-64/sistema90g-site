@@ -1,5 +1,5 @@
 (() => {
-  const OFFICIAL_EMAIL = 'sistema90g@icloud.com';
+  const OFFICIAL_EMAIL = 'info@sistema90g.it';
 
   const cleanResidualChat = () => {
     document.querySelectorAll('a').forEach(link => {

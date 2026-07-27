@@ -6,6 +6,12 @@
     trialHosting: false,
     url: 'https://portale.sistema90g.it/portal.html',
     displayHost: 'portale.sistema90g.it',
-    message: 'Il portale sicuro per l’invio della richiesta è attivo. Gli allegati saranno aggiunti in una fase successiva.'
+    message: 'Il portale raccoglie la richiesta iniziale. Allegati, pagamento e consegna saranno gestiti separatamente finché le relative funzioni non saranno attive.',
+    capabilities: Object.freeze({
+      initialRequest: true,
+      attachments: false,
+      payments: false,
+      delivery: false
+    })
   });
 })();

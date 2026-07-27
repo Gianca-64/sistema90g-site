@@ -1,17 +1,43 @@
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE "application/atom+xml" "application/javascript" "application/json" "application/ld+json" "application/manifest+json" "application/rdf+xml" "application/rss+xml" "application/schema+json" "application/vnd.geo+json" "application/vnd.ms-fontobject" "application/x-font-ttf" "application/x-javascript" "application/x-web-app-manifest+json" "application/xhtml+xml" "application/xml" "font/eot" "font/opentype" "image/bmp" "image/svg+xml" "image/vnd.microsoft.icon" "image/x-icon" "text/cache-manifest" "text/css" "text/html" "text/javascript" "text/plain" "text/vcard" "text/vnd.rim.location.xloc" "text/vtt" "text/x-component" "text/x-cross-domain-policy" "text/xml"
 
-# SECTION BEGIN GIT PROTECTION
-RedirectMatch 404 /\.git
-# SECTION END GIT PROTECTION
+# Protezione di file e strumenti non destinati alla pubblicazione.
+RedirectMatch 404 ^/\.git(?:/|$)
+RedirectMatch 404 ^/tools(?:/|$)
+RedirectMatch 404 ^/(?:README\.md|(?:AUDIT|AGGIORNAMENTO|VERIFICA|VISUAL|IMAGE|BRIEF|BASE)[^/]*\.(?:md|txt))$
 
-# SISTEMA90G BEGIN PREVIEW-SAFE REDIRECTS
 ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Un solo dominio canonico: HTTPS senza www.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.sistema90g\.it$ [NC]
+RewriteRule ^ https://sistema90g.it%{REQUEST_URI} [R=301,L]
+
+# Homepage canonica.
 RewriteRule ^index\.html$ / [R=301,L]
+
+# Servizio rinominato: conserva il traffico del vecchio URL.
+RewriteRule ^progetto-da-zero\.html$ /studio-preliminare-spazi.html [R=301,L]
+
+# Vecchie rotte e contenuti sostituiti.
 RewriteRule ^rivenditori-veneta-cucine\.html$ /rivenditori-cucine.html [R=301,L]
+RewriteRule ^richiesta\.html$ /analisi-preventiva.html#percorso [R=301,NE,L]
+RewriteRule ^caso-open-space\.html$ /caso-open-space-tv-divano-passaggi.html [R=301,L]
+RewriteRule ^caso-passaggio-lavastoviglie\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
+RewriteRule ^caso-verificato-isola-forno-passaggi\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
+RewriteRule ^centro-casi-reali\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^cosa-cambia-dopo-il-controllo\.html$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^dubbi-reali-cucina\.html$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^errori-trovati-davvero\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^micro-caso-frigo-apertura\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^micro-caso-passaggio-bloccato\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
+RewriteRule ^quando-il-render-inganna\.html$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^scena-frigo-vicino-parete\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^scena-isola-sgabelli-passaggio\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
+RewriteRule ^scena-lavastoviglie-aperta-passaggio\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
+RewriteRule ^scene-reali-cucina\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^tutto-sembrava-corretto-finche\.html$ /casi-analizzati.html [R=301,L]
 </IfModule>
-# SISTEMA90G END PREVIEW-SAFE REDIRECTS
