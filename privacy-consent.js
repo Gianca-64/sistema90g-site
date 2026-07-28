@@ -11,6 +11,14 @@ window.gtag('consent','default',{
   ad_personalization:'denied'
 });
 
+function loadNavigationConversion(){
+  if(document.querySelector('script[data-s90g-navigation-conversion]'))return;
+  const script=document.createElement('script');
+  script.src='/navigation-conversion.js?v=20260728e';
+  script.defer=true;
+  script.dataset.s90gNavigationConversion='true';
+  document.head.appendChild(script);
+}
 function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
@@ -123,7 +131,7 @@ function s90gInferContentType(){
   if(slug.startsWith('caso-'))return 'case';
   if(slug.startsWith('casi-'))return 'case-category';
   if(['professionisti','rivenditori-cucine','agenzie-immobiliari','analisi-unita-varianti'].includes(slug))return 'professional';
-  if(['controllo-mirato','analisi-completa','progetto-da-zero','scelta-finiture-casa','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina','verifica-planimetria-distribuzione-casa'].includes(slug))return 'service';
+  if(['controllo-mirato','analisi-completa','progetto-da-zero','scelta-finiture-casa','restyling-cucina-esistente','acquisto-assistito-cucina','studio-preliminare-spazi','servizi','controllo-progetto-cucina','verifica-planimetria-distribuzione-casa'].includes(slug))return 'service';
   return 'page';
 }
 
@@ -136,6 +144,7 @@ function s90gPrepareGuidedPathLinks(){
     target.searchParams.set('content_type',link.dataset.contentType||s90gInferContentType());
     target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
     if(link.dataset.service)target.searchParams.set('service_hint',link.dataset.service);
+    if(link.dataset.roleHint)target.searchParams.set('role_hint',link.dataset.roleHint);
     if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
     campaignKeys.forEach(key=>{if(current.searchParams.get(key))target.searchParams.set(key,current.searchParams.get(key));});
     link.href=target.toString();
@@ -184,6 +193,7 @@ function addWhatsAppChat(){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
+  loadNavigationConversion();
   loadAuditFix();
   addStructuredData();
   optimizeImages();
@@ -197,5 +207,5 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-track-whatsapp]').forEach(x=>x.addEventListener('click',()=>trackLead('whatsapp_chat_open',x)));
   document.querySelectorAll('[data-start-path]').forEach(x=>x.addEventListener('click',()=>trackLead('guided_path_open',x)));
   document.querySelectorAll('[data-track-portal]').forEach(x=>x.addEventListener('click',()=>{if(x.dataset.portalEnabled==='true')trackLead('public_portal_open',x)}));
-  document.addEventListener('s90g:path-result',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','guided_path_result',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',units:event.detail?.units||'',transport_type:'beacon'});});});
+  document.addEventListener('s90g:path-result',event=>{if(localStorage.getItem(CONSENT_KEY)==='accepted'&&typeof window.gtag==='function')window.gtag('event','guided_path_result',{event_category:'lead',requester_role:event.detail?.role||'',service:event.detail?.service||'',units:event.detail?.units||'',transport_type:'beacon'});});
 });

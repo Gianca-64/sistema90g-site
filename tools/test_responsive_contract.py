@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 root = Path(__file__).resolve().parents[1]
-version = "20260728b"
+version = "20260728e"
 errors = []
 css = (root / "sistema90g-visual-2026.css").read_text(encoding="utf-8", errors="replace")
 required = [
