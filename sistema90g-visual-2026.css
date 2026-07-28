@@ -6,3 +6,145 @@
 .s90g-portal-banner{margin:0 0 1.5rem;padding:1rem 1.1rem;border:1px solid rgba(183,155,119,.45);background:rgba(183,155,119,.08)}
 .s90g-portal-banner strong{display:block;margin-bottom:.35rem}
 .s90g-portal-banner p{margin:.25rem 0}
+
+/* SEZIONE C — responsive hardening 2026-07-28 */
+html,
+body.s90g-visual {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.s90g-shell,
+.s90g-header-inner,
+.s90g-header-inner > *,
+.s90g-hero-grid,
+.s90g-inner-hero-grid,
+.s90g-hero-copy,
+.s90g-inner-copy,
+.s90g-hero-media,
+.s90g-inner-media,
+.s90g-method-grid,
+.s90g-method-steps,
+.s90g-services-grid,
+.s90g-service-card,
+.s90g-final,
+.s90g-content-grid {
+  min-width: 0;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body.s90g-visual {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 860px) {
+  .s90g-header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 16px;
+    row-gap: 10px;
+    align-items: center;
+  }
+
+  .s90g-logo {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .s90g-logo small {
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .s90g-header-cta {
+    margin-left: 0;
+    min-width: 0;
+    max-width: 100%;
+    gap: 10px;
+    padding: 13px 14px;
+    white-space: nowrap;
+  }
+
+  .s90g-nav {
+    grid-column: 1 / -1;
+    order: initial;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .s90g-hero-grid,
+  .s90g-inner-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .s90g-hero-copy,
+  .s90g-inner-copy,
+  .s90g-hero h1,
+  .s90g-inner-hero h1,
+  .s90g-lead,
+  .s90g-trust,
+  .s90g-actions {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .s90g-shell {
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+  }
+
+  .s90g-header-inner {
+    column-gap: 10px;
+  }
+
+  .s90g-logo strong {
+    font-size: 21px;
+  }
+
+  .s90g-logo small {
+    max-width: 190px;
+    font-size: 9px;
+    letter-spacing: .08em;
+  }
+
+  .s90g-header-cta {
+    padding: 12px 11px;
+    font-size: 11px;
+  }
+
+  .s90g-header-cta span[aria-hidden="true"] {
+    display: none;
+  }
+
+  .s90g-hero h1,
+  .s90g-inner-hero h1 {
+    font-size: clamp(36px, 11vw, 42px);
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .s90g-lead,
+  .s90g-trust {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 360px) {
+  .s90g-header-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .s90g-header-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
