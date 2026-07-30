@@ -5,8 +5,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **78**
-- File immagine presenti: **186**
-- Immagini di contenuto pubblicate: **157**
+- File immagine presenti: **187**
+- Immagini di contenuto pubblicate: **158**
 - File riutilizzati in più punti: **41**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -153,7 +153,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/03_HOME_METODO.jpg` | Non sono ancora gestiti nel portale pubblico. | Planimetria descrittiva e analisi |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo; il portale raccoglie la richiesta iniziale. Allegati, pagamento e consegna verranno gestiti sep | Invio dei materiali per una prima valutazione |
 | `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Quando una novità può migliorare davvero un progetto | Studio preliminare di una lavanderia con soluzioni per accessibilità, organizzazione e manutenzione |
-| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Analisi indipendenti di prodotti, materiali e soluzioni, con benefici possibili, condizioni di installazione e limiti d’uso. | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
+| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Analisi indipendenti di prodotti, materiali e soluzioni, con benefici possibili, condizioni di installazione e limiti d’uso. | Lavastoviglie con microbolle, vapore e asciugatura attiva: che cosa cambia davvero |
+| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Microbolle, vapore, sensori e asciugatura attiva affrontano lavaggio, aloni e umidità residua; le prestazioni dichiarate vanno però verifica | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu | Planimetria annotata con conflitto di apertura |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Descrivi la decisione nel portale. Se servono planimetrie, foto, render o preventivi, riceverai le istruzioni per completarli dopo la richie | Raccolta materiali e analisi preventiva |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
