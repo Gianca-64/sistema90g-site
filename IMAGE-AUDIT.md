@@ -4,13 +4,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riepilogo
 
-- Pagine HTML controllate: **77**
-- File immagine presenti: **181**
-- Immagini di contenuto pubblicate: **155**
+- Pagine HTML controllate: **78**
+- File immagine presenti: **186**
+- Immagini di contenuto pubblicate: **157**
 - File riutilizzati in più punti: **41**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **121**
+- Immagini non utilizzate: **124**
 
 ## Mappa pagina → immagine → contesto
 
@@ -134,6 +134,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Descrivi il dubbio principale e inizia la richiesta. Se servono immagini o documenti, riceverai le istruzioni per completarli. | Caso analizzato da Sistema 90G |
+| `come-sistema90g-utilizza-intelligenza-artificiale.html` | `images/ai/metodo-90g-ai-controllo-umano-1536.webp` | La versione pubblicata o consegnata è sempre quella esatta approvata dopo il controllo umano. | Schema del Metodo 90G: i materiali del cliente vengono organizzati con il supporto dell’intelligenza artificiale e verificati attraverso il controllo umano. |
+| `come-sistema90g-utilizza-intelligenza-artificiale.html` | `images/ai/conoscenza-metodo-90g-1122.webp` | Comprende materiali selezionati e governati all’interno del Sistema: | Schema delle due fonti di conoscenza: conoscenza generale del modello e conoscenza strutturata 90G, entrambe sottoposte al controllo umano obbligatorio. |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -486,6 +488,9 @@ Nessun riferimento mancante.
 - `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
 - `images/90g-style-preventivo.svg` — viewBox 0 0 1600 1000
 - `images/IMG_0417.jpg` — —
+- `images/ai/come-sistema90g-usa-ai-og.jpg` — —
+- `images/ai/conoscenza-metodo-90g-720.webp` — —
+- `images/ai/metodo-90g-ai-controllo-umano-768.webp` — —
 - `images/cases/cabina-125.svg` — viewBox 0 0 1200 800
 - `images/cases/cabina-irregolare.svg` — viewBox 0 0 1200 800
 - `images/cases/cucina-tre-lati.svg` — viewBox 0 0 1200 800
