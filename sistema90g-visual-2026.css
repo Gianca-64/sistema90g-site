@@ -165,3 +165,17 @@ body.s90g-visual {
  .s90g-header.s90g-nav-ready .s90g-nav{display:none}.s90g-header.s90g-nav-ready.is-nav-open .s90g-nav{display:grid}
 }
 @media (max-width:700px){.s90g-related-grid{grid-template-columns:1fr}.s90g-header-inner{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"logo toggle" "cta cta" "nav nav"}.s90g-header-cta{width:100%;justify-content:center}.s90g-nav{grid-template-columns:1fr}.s90g-nav a{min-height:48px}}
+
+/* Sistema 90G — sticky footer per pagine corte 2026-07-30 */
+html{min-height:100%}
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+body>main{
+  flex:1 0 auto;
+}
+body>.s90g-footer{
+  margin-top:auto;
+}
