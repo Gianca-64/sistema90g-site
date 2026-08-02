@@ -5,12 +5,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ## Riepilogo
 
 - Pagine HTML controllate: **78**
-- File immagine presenti: **187**
-- Immagini di contenuto pubblicate: **158**
-- File riutilizzati in più punti: **41**
+- File immagine presenti: **188**
+- Immagini di contenuto pubblicate: **156**
+- File riutilizzati in più punti: **39**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **124**
+- Immagini non utilizzate: **127**
 
 ## Mappa pagina → immagine → contesto
 
@@ -134,14 +134,14 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
 | `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Descrivi il dubbio principale e inizia la richiesta. Se servono immagini o documenti, riceverai le istruzioni per completarli. | Caso analizzato da Sistema 90G |
-| `come-sistema90g-utilizza-intelligenza-artificiale.html` | `images/ai/metodo-90g-ai-controllo-umano-1536.webp` | La versione pubblicata o consegnata è sempre quella esatta approvata dopo il controllo umano. | Schema del Metodo 90G: i materiali del cliente vengono organizzati con il supporto dell’intelligenza artificiale e verificati attraverso il controllo umano. |
-| `come-sistema90g-utilizza-intelligenza-artificiale.html` | `images/ai/conoscenza-metodo-90g-1122.webp` | Comprende materiali selezionati e governati all’interno del Sistema: | Schema delle due fonti di conoscenza: conoscenza generale del modello e conoscenza strutturata 90G, entrambe sottoposte al controllo umano obbligatorio. |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
-| `index.html` | `images/01_HOME_HERO.jpg` | Oltre 180 casi analizzati. Una selezione è pubblicata in forma anonima. | Analisi preventiva di spazi e cucina prima della decisione |
+| `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
+| `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
+| `index.html` | `images/01_HOME_HERO.jpg` | Una selezione di casi analizzati è pubblicata in forma anonima e semplificata. | Analisi preventiva di spazi e cucina prima della decisione |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Non per creare allarme, ma per capire che cosa deve essere chiarito prima della decisione. | Lavastoviglie aperta e passaggio |
 | `index.html` | `images/06_HOME_CASO_2.jpg` | La distanza sembra sufficiente finché l’elettrodomestico rimane chiuso. | Terza camera e zona giorno |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una stanza in più modifica luce, passaggi e qualità dello spazio comune. | Preventivo cucina |
@@ -155,18 +155,16 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Quando una novità può migliorare davvero un progetto | Studio preliminare di una lavanderia con soluzioni per accessibilità, organizzazione e manutenzione |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Analisi indipendenti di prodotti, materiali e soluzioni, con benefici possibili, condizioni di installazione e limiti d’uso. | Lavastoviglie con microbolle, vapore e asciugatura attiva: che cosa cambia davvero |
 | `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Microbolle, vapore, sensori e asciugatura attiva affrontano lavaggio, aloni e umidità residua; le prestazioni dichiarate vanno però verifica | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
-| `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu | Planimetria annotata con conflitto di apertura |
-| `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Descrivi la decisione nel portale. Se servono planimetrie, foto, render o preventivi, riceverai le istruzioni per completarli dopo la richie | Raccolta materiali e analisi preventiva |
+| `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Analisi preventiva di una planimetria con annotazioni essenziali |
+| `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell’invio dei dati personali. | Raccolta dei materiali per una verifica preventiva |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/03_HOME_METODO.jpg` | Organizza e verifica casi concreti senza sostituire chi mantiene l’incarico, la responsabilità tecnica o il rapporto commerciale con il clie | Supporto Sistema 90G per professionisti dell’immobile |
 | `professionisti.html` | `images/08_HOME_CHIUSURA.jpg` | Il cliente finale rimane associato al soggetto che presenta il caso. | Gestione coordinata della pratica professionale |
-| `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Metodo, criteri e documentazione Sistema 90G |
-| `render-fotorealistici-interni.html` | `images/13_SERVIZI_HERO.jpg` | Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com | Visualizzazione di un ambiente interno con annotazioni progettuali |
-| `render-fotorealistici-interni.html` | `images/17_SERVIZI_FINITURE.jpg` | Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora | Materiali e riferimenti per un render fotorealistico |
+| `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `rivenditori-cucine.html` | `images/hero-rivenditori-processo-90g.webp` | Il fascicolo Sistema 90G ordina esigenze e direzione preliminare; il rivenditore conserva il pieno controllo del progetto commerciale, del p | Flusso di collaborazione: raccolta delle informazioni, analisi preliminare Sistema 90G, progettazione e vendita del rivenditore |
-| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Riceverai idoneità, materiale necessario, condizioni professionali e prima disponibilità prima di qualsiasi avvio. | Collaborazione tra rivenditore e Sistema 90G |
+| `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ | Confronto tra analisi indipendente e progetto commerciale del rivenditore |
+| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio. | Collaborazione tra rivenditore e controllo indipendente |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Questa pagina descrive perimetro, risultato e limiti. Il prezzo compare nel percorso guidato dopo la scelta del ruolo e della situazione, pr | Servizi Sistema 90G per privati e professionisti |
@@ -180,7 +178,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/01_HOME_HERO.jpg` — 2 utilizzi
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
-- `index.html` — Oltre 180 casi analizzati. Una selezione è pubblicata in forma anonima.
+- `index.html` — Una selezione di casi analizzati è pubblicata in forma anonima e semplificata.
 
 ### `images/01_individuo_il_problema.svg` — 3 utilizzi
 
@@ -198,9 +196,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - `analisi-preventiva.html` — Indica da quale ruolo lo stai affrontando e che cosa devi chiarire. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere
 - `index.html` — Non sono ancora gestiti nel portale pubblico.
-- `metodo-sistema90g.html` — Ogni caso viene confrontato con una biblioteca di regole e riferimenti tracciati: manuali tecnici, normative, standard dimensionali. Il risu
+- `metodo-sistema90g.html` — Ultimo aggiornamento: 2 agosto 2026
 - `professionisti.html` — Organizza e verifica casi concreti senza sostituire chi mantiene l’incarico, la responsabilità tecnica o il rapporto commerciale con il clie
-- `proprieta-intellettuale.html` — Ultimo aggiornamento: 28 luglio 2026
+- `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
 ### `images/03_definisco_le_priorita.svg` — 2 utilizzi
 
@@ -212,7 +210,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
 - `index.html` — Dopo il controllo del materiale completo.
 
-### `images/08_HOME_CHIUSURA.jpg` — 10 utilizzi
+### `images/08_HOME_CHIUSURA.jpg` — 11 utilizzi
 
 - `analisi-preventiva.html` — Scegli ruolo e situazione, guarda il servizio e il prezzo, poi decidi liberamente se sottoporre il caso reale.
 - `casi-camere-contenimento.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
@@ -220,20 +218,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-distribuzione-casa.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-soggiorno-open-space.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
+- `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
 - `index.html` — Il percorso mostra servizio, prezzo e tempo; il portale raccoglie la richiesta iniziale. Allegati, pagamento e consegna verranno gestiti sep
-- `metodo-sistema90g.html` — Descrivi la decisione nel portale. Se servono planimetrie, foto, render o preventivi, riceverai le istruzioni per completarli dopo la richie
+- `metodo-sistema90g.html` — Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell’invio dei dati personali.
 - `professionisti.html` — Il cliente finale rimane associato al soggetto che presenta il caso.
 - `servizi.html` — Dopo il terzo passaggio potrai decidere se aprire la pratica e inviare il materiale. Il servizio viene confermato soltanto dopo il controllo
-
-### `images/13_SERVIZI_HERO.jpg` — 2 utilizzi
-
-- `render-fotorealistici-interni.html` — Il render aiuta a vedere colori, materiali, proporzioni e atmosfera. Non dimostra da solo che il progetto sia funzionale, realizzabile o com
-- `servizi.html` — Questa pagina descrive perimetro, risultato e limiti. Il prezzo compare nel percorso guidato dopo la scelta del ruolo e della situazione, pr
-
-### `images/17_SERVIZI_FINITURE.jpg` — 2 utilizzi
-
-- `render-fotorealistici-interni.html` — Invia planimetria, misure, riferimenti e materiali. La prima valutazione serve a capire se serve davvero un render o se il problema è ancora
-- `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 3 utilizzi
 
@@ -258,7 +247,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
 - `agenzie-immobiliari.html` — Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto.
-- `rivenditori-cucine.html` — Riceverai idoneità, materiale necessario, condizioni professionali e prima disponibilità prima di qualsiasi avvio.
+- `rivenditori-cucine.html` — Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio.
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 37 utilizzi
 
@@ -433,10 +422,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 2 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
+- `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
 
 ## File differenti con contenuto identico
 
@@ -490,7 +480,9 @@ Nessun riferimento mancante.
 - `images/90g-style-preventivo.svg` — viewBox 0 0 1600 1000
 - `images/IMG_0417.jpg` — —
 - `images/ai/come-sistema90g-usa-ai-og.jpg` — —
+- `images/ai/conoscenza-metodo-90g-1122.webp` — —
 - `images/ai/conoscenza-metodo-90g-720.webp` — —
+- `images/ai/metodo-90g-ai-controllo-umano-1536.webp` — —
 - `images/ai/metodo-90g-ai-controllo-umano-768.webp` — —
 - `images/cases/cabina-125.svg` — viewBox 0 0 1200 800
 - `images/cases/cabina-irregolare.svg` — viewBox 0 0 1200 800
@@ -581,6 +573,7 @@ Nessun riferimento mancante.
 - `images/hero-preventivo-90g-2026.jpg` — —
 - `images/hero-preventivo-90g.jpg` — —
 - `images/hero-progetto-zero-90g.jpg` — —
+- `images/hero-rivenditori-processo-90g.webp` — —
 - `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
 - `images/hero-verifica-planimetria-casa.svg` — viewBox 0 0 1200 760
 - `images/homepage-approvata.svg` — viewBox 0 0 560 373
