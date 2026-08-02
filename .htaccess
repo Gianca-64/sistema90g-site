@@ -22,6 +22,15 @@ RewriteRule ^index\.html$ / [R=301,L]
 # Servizio rinominato: conserva il traffico del vecchio URL.
 RewriteRule ^progetto-da-zero\.html$ /studio-preliminare-spazi.html [R=301,L]
 
+# Bonifica MKT-02: una sola fonte Metodo/AI e nessun servizio non vigente.
+RewriteRule ^come-sistema90g-utilizza-intelligenza-artificiale\.html$ /metodo-sistema90g.html [R=301,L]
+RewriteRule ^render-fotorealistici-interni\.html$ /acquisto-assistito-cucina.html [R=301,L]
+RewriteRule ^servizi/add-on-capitolato(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
+RewriteRule ^blog/capitolato-cucina-cosa-controllare(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
+RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /acquisto-assistito-cucina.html [R=301,L]
+RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^contatti/?$ /contatti.html [R=301,L]
+
 # Vecchie rotte e contenuti sostituiti.
 RewriteRule ^rivenditori-veneta-cucine\.html$ /rivenditori-cucine.html [R=301,L]
 RewriteRule ^richiesta\.html$ /analisi-preventiva.html#percorso [R=301,NE,L]

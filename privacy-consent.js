@@ -194,56 +194,19 @@ function addWhatsAppChat(){
 
 
 function s90gIntegrateAiTransparencyPage(){
-  const href='/come-sistema90g-utilizza-intelligenza-artificiale.html';
-  const isAiPage=location.pathname.endsWith(href);
+  const href='/metodo-sistema90g.html';
+  const isPage=location.pathname.endsWith(href);
   const nav=document.querySelector('.s90g-nav');
-
   if(nav){
-    let link=nav.querySelector(`a[href$="${href}"]`);
-
-    if(!link){
-      link=document.createElement('a');
-      link.href=href;
-      link.textContent='Uso dell’AI';
-      link.dataset.navKey='ai';
-
-      const method=nav.querySelector(
-        'a[data-nav-key="method"],' +
-        'a[href$="/metodo-sistema90g.html"],' +
-        'a[href$="metodo-sistema90g.html"]'
-      );
-
-      if(method) method.after(link);
-      else nav.appendChild(link);
-    }
-
-    if(isAiPage){
-      nav.querySelectorAll('a[aria-current="page"]')
-        .forEach(item=>item.removeAttribute('aria-current'));
-      link.setAttribute('aria-current','page');
-    }
+    let link=nav.querySelector('a[data-nav-key="method"],a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
+    if(!link){link=document.createElement('a');link.href=href;link.dataset.navKey='method';nav.appendChild(link);}
+    link.textContent='Metodo e AI';
+    if(isPage){nav.querySelectorAll('a[aria-current="page"]').forEach(item=>item.removeAttribute('aria-current'));link.setAttribute('aria-current','page');}
   }
-
   document.querySelectorAll('.s90g-footer-links').forEach(footerLinks=>{
-    if(footerLinks.querySelector(`a[href$="${href}"]`)) return;
-
-    const link=document.createElement('a');
-    link.href=href;
-    link.textContent='Uso dell’AI';
-
-    const method=footerLinks.querySelector(
-      'a[href$="/metodo-sistema90g.html"],' +
-      'a[href$="metodo-sistema90g.html"]'
-    );
-
-    const intellectualProperty=footerLinks.querySelector(
-      'a[href$="/proprieta-intellettuale.html"],' +
-      'a[href$="proprieta-intellettuale.html"]'
-    );
-
-    if(method) method.after(link);
-    else if(intellectualProperty) intellectualProperty.before(link);
-    else footerLinks.appendChild(link);
+    let link=footerLinks.querySelector('a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
+    if(!link){link=document.createElement('a');link.href=href;const ip=footerLinks.querySelector('a[href$="/proprieta-intellettuale.html"],a[href$="proprieta-intellettuale.html"]');if(ip)ip.before(link);else footerLinks.appendChild(link);}
+    link.textContent='Metodo e AI';
   });
 }
 document.addEventListener(
