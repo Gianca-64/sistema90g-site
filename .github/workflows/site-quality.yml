@@ -1,0 +1,74 @@
+name: Site quality
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - main
+      - privacy/allineamento-portale-2026-08-04
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Audit release
+        id: release_audit
+        continue-on-error: true
+        run: python tools/audit_release.py
+
+      - name: Guided pricing tests
+        if: always()
+        run: node tools/test_guided_pricing.js
+
+      - name: Privacy and portal consistency
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          portal = Path('portal-config.js').read_text(encoding='utf-8')
+          privacy = Path('privacy-policy.html').read_text(encoding='utf-8')
+
+          checks = {
+              "portale disabilitato": "enabled: false" in portal,
+              "richiesta iniziale disabilitata": "initialRequest: false" in portal,
+              "stato verifica": "status: 'verification'" in portal,
+              "privacy aggiornata": "Ultimo aggiornamento: 4 agosto 2026" in privacy,
+              "modulo professionale dichiarato non attivo": "Il modulo dedicato alle manifestazioni d’interesse professionale non è attivo" in privacy,
+              "ancora interessi professionali presente": 'id="interessi-professionali"' in privacy,
+              "controllo umano dichiarato": "Nessuna risposta, accettazione o decisione sul servizio viene inviata automaticamente" in privacy,
+          }
+
+          failed = [name for name, ok in checks.items() if not ok]
+          for name, ok in checks.items():
+              print(f"{'OK' if ok else 'ERRORE'}: {name}")
+
+          if failed:
+              raise SystemExit("Controlli non superati: " + ", ".join(failed))
+          PY
+
+      - name: Release audit gate
+        if: always()
+        run: |
+          if [ "${{ steps.release_audit.outcome }}" != "success" ]; then
+            echo "L'audit generale del sito non è superato. Consultare il log e correggere le anomalie prima del merge."
+            exit 1
+          fi
