@@ -4,7 +4,8 @@
   if(!form)return;
   const feedback=form.querySelector("[data-s90g-interest-feedback]");
   const submit=form.querySelector("button[type=submit]");
-  const endpoint=form.getAttribute("data-endpoint")||"https://portale.sistema90g.it/api/public/v1/professional-interests";
+  const active=form.getAttribute("data-active")==="true";
+  const endpoint=active?String(form.getAttribute("data-endpoint")||"").trim():"";
   let startedAt=Date.now();
   let attemptKey=null;
   const params=new URLSearchParams(location.search);
@@ -21,11 +22,28 @@
     feedback.dataset.kind=kind||"success";
     feedback.focus({preventScroll:true});
   }
+  function analyticsAllowed(){
+    try{return window.localStorage.getItem("s90g_cookie_consent")==="accepted";}catch{return false;}
+  }
   function track(name,extra){
-    if(typeof window.gtag==="function")window.gtag("event",name,Object.assign({event_category:"professional_interest",source_content:sourceContent},extra||{}));
+    if(!analyticsAllowed()||typeof window.gtag!=="function")return;
+    window.gtag("event",name,Object.assign({event_category:"professional_interest",source_content:sourceContent},extra||{}));
   }
   function clearAttemptKey(){
     if(!submit.disabled)attemptKey=null;
+  }
+  function applyInactiveState(){
+    const robots=document.querySelector('meta[name="robots"]');
+    if(robots)robots.setAttribute("content","noindex,nofollow,noarchive");
+    form.setAttribute("aria-disabled","true");
+    submit.disabled=true;
+    submit.textContent="Modulo in preparazione";
+    show("Il modulo non è ancora attivo. La pagina resta disponibile soltanto per il collaudo prima della pubblicazione.","info");
+  }
+
+  if(!active||!endpoint){
+    applyInactiveState();
+    return;
   }
 
   form.addEventListener("input",clearAttemptKey);
@@ -63,7 +81,7 @@
       website:String(data.get("website")||""),
       form_started_at:startedAt,
       idempotency_key:attemptKey,
-      source_page:location.href,
+      source_page:location.pathname,
       source_content:sourceContent,
       utm_source:params.get("utm_source")||"",
       utm_medium:params.get("utm_medium")||"",
@@ -75,14 +93,14 @@
     try{
       const response=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Idempotency-Key":attemptKey},body:JSON.stringify(payload),mode:"cors",credentials:"omit"});
       const body=await response.json().catch(function(){return{};});
-      if(!response.ok||body.ok!==true)throw new Error(body.error||"Invio non riuscito.");
-      show(body.message||"La manifestazione di interesse è stata registrata.","success");
+      if(!response.ok||body.ok!==true)throw new Error("submission_failed");
+      show("La manifestazione di interesse è stata registrata.","success");
       track("professional_interest_submitted",{professional_role:payload.professional_role,desired_action:payload.desired_action,reply_expected:Boolean(body.replyExpected)});
       form.reset();
       attemptKey=null;
       startedAt=Date.now();
-    }catch(error){
-      show(error&&error.message?error.message:"Invio non riuscito. Riprova più tardi.","error");
+    }catch{
+      show("Invio non riuscito. Riprova più tardi oppure usa i contatti indicati nel sito.","error");
       track("professional_interest_error");
     }finally{
       submit.disabled=false;
