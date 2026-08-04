@@ -31,7 +31,8 @@
     const email=String(data.get("email")||"").trim();
     const consentReply=data.get("consent_reply")==="on";
     const consentUpdates=data.get("consent_updates")==="on";
-    if(email&&!consentReply){show("Per ricevere una risposta scritta, seleziona il consenso dedicato.","error");return;}
+    if(email&&!consentReply&&!consentUpdates){show("Se indichi l’email, seleziona almeno una finalità autorizzata.","error");return;}
+    if(!email&&consentReply){show("Indica un’email per ricevere la risposta scritta.","error");return;}
     if(!email&&consentUpdates){show("Indica un’email per ricevere eventuali aggiornamenti.","error");return;}
     const payload={
       professional_role:String(data.get("professional_role")||""),
