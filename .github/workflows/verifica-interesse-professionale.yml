@@ -1,0 +1,38 @@
+name: Verifica interesse professionale
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [sviluppo/interesse-professionale-inbound]
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica file obbligatori
+        run: |
+          test -f interesse-professionale.html
+          test -f professional-interest.js
+          test -f s90g-professional-interest-2026.css
+          test -f privacy-interessi-professionali.html
+          test -f sitemap-professionisti.xml
+      - name: Verifica contratto modulo
+        run: |
+          grep -q 'data-s90g-professional-interest-form' interesse-professionale.html
+          grep -q '/api/public/v1/professional-interests' interesse-professionale.html
+          grep -q 'privacy-interessi-professionali.html' interesse-professionale.html
+          grep -q 'Idempotency-Key' professional-interest.js
+          grep -q 'sitemap-professionisti.xml' robots.txt
+      - name: Verifica confini operativi
+        run: |
+          ! grep -qi 'telefono' interesse-professionale.html || grep -qi 'Nessun telefono' interesse-professionale.html
+          ! grep -q '/api/public/v1/requests' professional-interest.js
+          ! grep -qi 'crea.*caso' professional-interest.js
+      - name: Verifica XML sitemap
+        run: python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ET.parse('sitemap-professionisti.xml')
+          print('sitemap professionisti: OK')
+          PY
