@@ -32,6 +32,8 @@ jobs:
           grep -q 'privacy-interessi-professionali.html' interesse-professionale.html
           grep -q 'Idempotency-Key' professional-interest.js
           ! grep -q 'sitemap-professionisti.xml' robots.txt
+          ! grep -q 'href="/interesse-professionale.html' professionisti.html
+          grep -q 'data-s90g-professional-interest-status="inactive"' professionisti.html
       - name: Verifica confini operativi
         run: |
           ! grep -qi 'telefono' interesse-professionale.html || grep -qi 'Nessun telefono' interesse-professionale.html
