@@ -5,7 +5,8 @@
   const feedback=form.querySelector("[data-s90g-interest-feedback]");
   const submit=form.querySelector("button[type=submit]");
   const endpoint=form.getAttribute("data-endpoint")||"https://portale.sistema90g.it/api/public/v1/professional-interests";
-  const startedAt=Date.now();
+  let startedAt=Date.now();
+  let attemptKey=null;
   const params=new URLSearchParams(location.search);
   const sourceContent=params.get("source_content")||params.get("utm_content")||"pagina-professionisti";
 
@@ -23,10 +24,22 @@
   function track(name,extra){
     if(typeof window.gtag==="function")window.gtag("event",name,Object.assign({event_category:"professional_interest",source_content:sourceContent},extra||{}));
   }
+  function clearAttemptKey(){
+    if(!submit.disabled)attemptKey=null;
+  }
+
+  form.addEventListener("input",clearAttemptKey);
+  form.addEventListener("change",clearAttemptKey);
   track("professional_interest_form_view");
 
   form.addEventListener("submit",async function(event){
     event.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      show("Completa i campi obbligatori e verifica i dati inseriti.","error");
+      return;
+    }
+
     const data=new FormData(form);
     const email=String(data.get("email")||"").trim();
     const consentReply=data.get("consent_reply")==="on";
@@ -34,6 +47,8 @@
     if(email&&!consentReply&&!consentUpdates){show("Se indichi l’email, seleziona almeno una finalità autorizzata.","error");return;}
     if(!email&&consentReply){show("Indica un’email per ricevere la risposta scritta.","error");return;}
     if(!email&&consentUpdates){show("Indica un’email per ricevere eventuali aggiornamenti.","error");return;}
+
+    attemptKey=attemptKey||uuid();
     const payload={
       professional_role:String(data.get("professional_role")||""),
       recognized_situation:String(data.get("recognized_situation")||""),
@@ -47,7 +62,7 @@
       privacy_accepted:data.get("privacy_accepted")==="on",
       website:String(data.get("website")||""),
       form_started_at:startedAt,
-      idempotency_key:uuid(),
+      idempotency_key:attemptKey,
       source_page:location.href,
       source_content:sourceContent,
       utm_source:params.get("utm_source")||"",
@@ -58,12 +73,14 @@
     submit.disabled=true;
     submit.textContent="Invio in corso…";
     try{
-      const response=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Idempotency-Key":payload.idempotency_key},body:JSON.stringify(payload),mode:"cors",credentials:"omit"});
+      const response=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Idempotency-Key":attemptKey},body:JSON.stringify(payload),mode:"cors",credentials:"omit"});
       const body=await response.json().catch(function(){return{};});
       if(!response.ok||body.ok!==true)throw new Error(body.error||"Invio non riuscito.");
       show(body.message||"La manifestazione di interesse è stata registrata.","success");
       track("professional_interest_submitted",{professional_role:payload.professional_role,desired_action:payload.desired_action,reply_expected:Boolean(body.replyExpected)});
       form.reset();
+      attemptKey=null;
+      startedAt=Date.now();
     }catch(error){
       show(error&&error.message?error.message:"Invio non riuscito. Riprova più tardi.","error");
       track("professional_interest_error");
