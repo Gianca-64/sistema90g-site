@@ -6,6 +6,14 @@ RedirectMatch 404 ^/\.git(?:/|$)
 RedirectMatch 404 ^/tools(?:/|$)
 RedirectMatch 404 ^/(?:README\.md|(?:AUDIT|AGGIORNAMENTO|VERIFICA|VISUAL|IMAGE|BRIEF|BASE)[^/]*\.(?:md|txt))$
 
+# Le pagine professionali restano fuori dall'indicizzazione finché modulo,
+# backend, privacy e Console non sono approvati e collaudati insieme.
+<IfModule mod_headers.c>
+<FilesMatch "^(interesse-professionale|privacy-interessi-professionali)\.html$">
+Header set X-Robots-Tag "noindex, nofollow, noarchive"
+</FilesMatch>
+</IfModule>
+
 ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
