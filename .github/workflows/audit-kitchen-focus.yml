@@ -1,0 +1,41 @@
+name: Audit kitchen focus
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'servizi.html'
+      - 'analisi-preventiva.html'
+      - 'controllo-mirato.html'
+      - 'analisi-completa.html'
+      - 'acquisto-assistito-cucina.html'
+      - 'analisi-preventivo-cucina.html'
+      - 'problemi-errori-cucina.html'
+      - 'casi-cucina.html'
+      - 'role-case-path.js'
+      - 'sitemap.xml'
+      - 'tools/audit-kitchen-focus.py'
+      - '.github/workflows/audit-kitchen-focus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python version
+        run: python3 --version
+
+      - name: Node version
+        run: node --version
+
+      - name: Check JavaScript syntax
+        run: node --check role-case-path.js
+
+      - name: Run kitchen focus audit
+        run: python3 tools/audit-kitchen-focus.py
