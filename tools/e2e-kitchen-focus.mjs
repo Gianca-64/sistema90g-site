@@ -87,8 +87,26 @@ try {
         fail(scope, `overflow orizzontale ${overflow.documentWidth - overflow.viewportWidth}px`);
       }
 
+      await page.evaluate(async () => {
+        const images = [...document.images];
+        images.forEach(image => { image.loading = 'eager'; });
+        for (let y = 0; y < document.documentElement.scrollHeight; y += Math.max(300, window.innerHeight * 0.8)) {
+          window.scrollTo(0, y);
+          await new Promise(resolve => setTimeout(resolve, 40));
+        }
+        window.scrollTo(0, 0);
+        await Promise.all(images.map(image => {
+          if (image.complete) return Promise.resolve();
+          return new Promise(resolve => {
+            image.addEventListener('load', resolve, { once: true });
+            image.addEventListener('error', resolve, { once: true });
+            setTimeout(resolve, 3000);
+          });
+        }));
+      });
+
       const brokenImages = await page.locator('img').evaluateAll(images => images
-        .filter(image => !image.complete || image.naturalWidth === 0)
+        .filter(image => image.complete && image.naturalWidth === 0)
         .map(image => image.getAttribute('src') || '(src assente)'));
       if (brokenImages.length) fail(scope, `immagini non caricate: ${brokenImages.join(', ')}`);
 
