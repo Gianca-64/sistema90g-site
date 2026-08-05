@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+      - docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
       - docs/INTEGRAZIONE_CUCINA_PROFESSIONISTI_INFOMANIAK_V1.md
       - .github/workflows/verifica-contratto-collaudo-infomaniak.yml
   push:
@@ -13,6 +14,7 @@ on:
       - integrazione/cucina-professionisti-infomaniak-v1
     paths:
       - docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+      - docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
       - docs/INTEGRAZIONE_CUCINA_PROFESSIONISTI_INFOMANIAK_V1.md
       - .github/workflows/verifica-contratto-collaudo-infomaniak.yml
   workflow_dispatch:
@@ -78,9 +80,23 @@ jobs:
           grep -q 'eliminare tutti i record sintetici' "$DOC"
           grep -q 'ripristinare il database MariaDB di collaudo' "$DOC"
 
+      - name: Verifica checklist Gate 1
+        run: |
+          set -euo pipefail
+          GATE=docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
+          test -f "$GATE"
+          grep -q 'non creare risorse' "$GATE"
+          grep -q 'Disponibilità sito Node.js' "$GATE"
+          grep -q 'Versioni Node.js disponibili' "$GATE"
+          grep -q 'Directory persistente privata' "$GATE"
+          grep -q 'Un solo processo applicativo' "$GATE"
+          grep -q 'Backend PHP e MariaDB isolati' "$GATE"
+          grep -q 'Esito Gate 1' "$GATE"
+          grep -q 'Solo dopo il rapporto Gate 1' "$GATE"
+
       - name: Vincolo operativo
         run: |
           cat <<'EOF'
-          Questo workflow verifica soltanto la completezza del contratto.
+          Questo workflow verifica soltanto contratto e checklist preliminare.
           Non crea risorse, non usa segreti, non applica migrazioni e non esegue deploy.
           EOF
