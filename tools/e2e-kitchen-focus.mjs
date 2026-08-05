@@ -175,11 +175,25 @@ try {
 
     const target = new URL(href, baseURL);
     if (target.hostname !== 'portale.sistema90g.it') fail(scope, `host portale inatteso: ${target.hostname}`);
+    if (target.searchParams.get('requester_role') !== 'private') fail(scope, 'requester_role non coerente');
     if (target.searchParams.get('service') !== service.code) fail(scope, 'parametro service non coerente');
-    if (target.searchParams.get('service_slug') !== service.slug) fail(scope, 'parametro service_slug non coerente');
-    if (target.searchParams.get('service_price') !== service.price) fail(scope, 'parametro service_price non coerente');
-    if (target.searchParams.get('service_currency') !== 'EUR') fail(scope, 'valuta non coerente');
+    if (target.searchParams.get('units') !== '1') fail(scope, 'quantità non coerente');
     if (target.searchParams.get('source_page') !== 'analisi-preventiva') fail(scope, 'source_page non coerente');
+    if (target.searchParams.get('content_type') !== 'guided-path') fail(scope, 'content_type non coerente');
+    if (target.searchParams.get('cta_position') !== 'result') fail(scope, 'cta_position non coerente');
+
+    for (const clientAuthorityKey of [
+      'case_context',
+      'service_slug',
+      'service_title',
+      'service_price',
+      'service_currency',
+      'service_time'
+    ]) {
+      if (target.searchParams.has(clientAuthorityKey)) {
+        fail(scope, `parametro non autorevole ancora presente: ${clientAuthorityKey}`);
+      }
+    }
   }
 
   await context.close();
