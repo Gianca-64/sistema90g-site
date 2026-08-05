@@ -52,7 +52,7 @@ jobs:
           grep -q 'S90G_LEGACY_ONLINE_ADAPTERS=0' "$DOC"
           grep -q 'S90G_PUBLIC_CLIENT_PORTAL=0' "$DOC"
           grep -q 'Processi applicativi: 1' "$DOC"
-          grep -q 'database MariaDB vuoto e dedicato' "$DOC"
+          grep -q 'MariaDB vuoto e dedicato' "$DOC"
           grep -q 'non copiare il SQLite canonico del Mac' "$DOC"
 
       - name: Verifica sicurezza e dati sintetici
