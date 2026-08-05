@@ -1,7 +1,7 @@
 # Integrazione sito cucina, professionisti e Infomaniak — v1
 
 Data: 5 agosto 2026
-Stato: integrazione tecnica completata nei rami separati; rilascio non autorizzato
+Stato: integrazione tecnica e pacchetti di collaudo completati nei rami separati; rilascio non autorizzato
 
 ## Obiettivo
 
@@ -21,7 +21,8 @@ Consolidare senza cambiare priorità:
 4. Il passaggio da interesse professionale a caso richiede una richiesta concreta e una decisione umana esplicita nella Console.
 5. Il backend resta la fonte autorevole per catalogo, prezzi, tempi, versioni Privacy e idempotenza.
 6. Sito e browser inviano soltanto identificativi e dati dichiarati dall’utente; non sono fonte autorevole per prezzo o perimetro.
-7. Nessun merge, migrazione o deploy senza verifica integrata e approvazione esplicita.
+7. La Console online resta privata e in modalità fail-closed quando `APP_PASSWORD` non è configurata.
+8. Nessun merge, migrazione o deploy senza verifica integrata e approvazione esplicita.
 
 ## Stato dei blocchi
 
@@ -59,7 +60,39 @@ Consolidare senza cambiare priorità:
 - archivio `Interessi professionali` distinto dai casi;
 - origine, consensi, stato, prossima azione e cronologia conservati;
 - conversione in caso consentita soltanto dopo lo stato `Richiesta concreta ricevuta` e comando umano esplicito;
-- nessuna creazione automatica di casi durante l’importazione.
+- nessuna creazione automatica di casi durante l’importazione;
+- build Next.js standalone per Infomaniak verificata;
+- pacchetto privo di database operativi, import CSV, seed desktop e configurazioni private;
+- vecchio intake `/richiesta` e `/api/public-request` archiviato con HTTP 410;
+- portali cliente con token non pubblici per impostazione predefinita;
+- eventuale apertura dei portali cliente subordinata al flag esplicito `S90G_PUBLIC_CLIENT_PORTAL=1`.
+
+### 5. Pacchetti di collaudo — completati nei rami
+
+#### Backend
+
+- workflow manuale vincolato al ramo integrato;
+- lint e test prima del confezionamento;
+- manifesto SHA-256 generato sul contenuto effettivo;
+- esclusione di `.env`, configurazioni private e workflow;
+- nessun accesso a Infomaniak e nessun deploy.
+
+#### Sito
+
+- pacchetto statico cucina verificabile;
+- percorso professionale non approvato escluso integralmente;
+- manifesto SHA-256 generato e verificato;
+- artefatto disponibile soltanto con avvio manuale e conferma esplicita;
+- nessun deploy automatico.
+
+#### Console
+
+- build standalone con `S90G_INFOMANIAK_BUILD=1`;
+- modelli, regole e schemi statici versionati ammessi;
+- dati operativi, casi, CSV, database e segreti esclusi;
+- manifesto e archivio verificati;
+- artefatto disponibile soltanto con avvio manuale e conferma esplicita;
+- nessun deploy automatico.
 
 ## Verifiche automatiche correnti
 
@@ -67,50 +100,60 @@ Consolidare senza cambiare priorità:
 
 - `Integration contract`: superato;
 - `Verifica backend`: superato;
-- lint PHP, test, MariaDB e HTTP end-to-end: superati.
+- lint PHP, test, MariaDB, HTTP end-to-end e confezionamento CI: superati.
 
 ### Sito
 
 - `Audit kitchen focus`: superato;
 - `E2E kitchen focus`: superato;
 - `Verifica interesse professionale`: superato;
+- `Prepara rilascio sito Infomaniak`: superato;
 - desktop, mobile e accessibilità inclusi.
 
 ### Console
 
 - `Verifica contratto cucina`: superato;
 - `Verifica interessi professionali`: superato;
-- build completa inclusa.
+- `Prepara Console standalone Infomaniak`: superato;
+- `Verifica confine Console privata`: superato;
+- build completa e standalone incluse.
 
 ## Blocchi ancora necessari prima di qualsiasi rilascio
 
 1. approvare il testo definitivo dell’informativa Privacy professionisti;
 2. decidere se e quando rendere attivo il percorso professionale secondario;
 3. predisporre un ambiente di collaudo Infomaniak senza dati reali;
-4. applicare le migrazioni soltanto nell’ambiente di collaudo autorizzato;
-5. collaudare sul runtime reale:
+4. confermare il runtime Node supportato per la Console standalone;
+5. definire dominio o sottodominio privato, terminazione HTTPS e gestione delle credenziali Basic Auth;
+6. applicare le migrazioni soltanto nell’ambiente di collaudo autorizzato;
+7. collaudare sul runtime reale:
    `sito → portale → backend → Console → ACK`;
-6. verificare autenticazione, backup, rollback, log e persistenza della Console privata;
-7. preparare pacchetti di rilascio verificabili senza pubblicarli;
-8. sottoporre esito e piano di rollback all’approvazione esplicita;
-9. solo dopo l’approvazione: merge coordinato e rilascio Infomaniak.
+8. verificare autenticazione, backup, rollback, log e persistenza della Console privata;
+9. verificare che i portali cliente restino chiusi, salvo futura autorizzazione specifica;
+10. sottoporre esito e piano di rollback all’approvazione esplicita;
+11. solo dopo l’approvazione: merge coordinato e rilascio Infomaniak.
 
 ## Stato di pubblicazione
 
 - PR sito #23: aperta, bozza, non unita;
 - PR backend #6: aperta, bozza, non unita;
 - PR Console #20: aperta, bozza, non unita;
+- nessun artefatto manuale di rilascio avviato;
 - nessun deploy o migrazione remota eseguiti;
-- percorso professionale non attivo e non indicizzato.
+- percorso professionale non attivo e non indicizzato;
+- Console online non attivata.
 
 ## Prossimo macro-blocco del programma
 
-Preparare il **collaudo integrato su ambiente Infomaniak isolato**, con:
+Preparare il **contratto di collaudo dell’ambiente Infomaniak isolato**, con:
 
 - inventario delle configurazioni necessarie;
+- requisiti del runtime Node della Console;
+- domini, HTTPS e confini pubblici/privati;
 - procedura di backup e rollback;
 - dati sintetici di prova;
 - sequenza di migrazione controllata;
 - test HTTP e browser end-to-end;
 - verifica importazione e ACK nella Console;
-- rapporto finale per l’approvazione, senza attivazione pubblica.
+- criteri di accettazione e rapporto finale per l’approvazione;
+- nessuna attivazione pubblica.
