@@ -1,0 +1,111 @@
+name: Prepara rilascio sito Infomaniak
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Scrivere esattamente PREPARA-SITO"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Verifica e prepara sito statico
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verifica conferma e ramo
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          test "$CONFIRMATION" = "PREPARA-SITO"
+          test "$REF_NAME" = "integrazione/cucina-professionisti-infomaniak-v1"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verifica sito cucina
+        run: |
+          set -euo pipefail
+          node --check role-case-path.js
+          node --check professional-interest.js
+          python3 tools/audit-kitchen-focus.py
+          grep -q 'data-active="false"' interesse-professionale.html
+          ! grep -q 'data-endpoint=' interesse-professionale.html
+          ! grep -q 'interesse-professionale.html' sitemap.xml
+          ! grep -q 'sitemap-professionisti.xml' robots.txt
+
+      - name: Prepara pacchetto pubblico prudenziale
+        run: |
+          set -euo pipefail
+          rm -rf release-site
+          mkdir -p release-site
+          while IFS= read -r path; do
+            case "$path" in
+              .github/*|docs/*|tools/*|artifacts/*|node_modules/*|package.json|package-lock.json|*.md|*.zip|*.tar.gz|.deploy-trigger*)
+                continue
+                ;;
+              interesse-professionale.html|privacy-interessi-professionali.html|professional-interest.js|s90g-professional-interest-2026.css|sitemap-professionisti.xml)
+                continue
+                ;;
+            esac
+            mkdir -p "release-site/$(dirname "$path")"
+            cp -p "$path" "release-site/$path"
+          done < <(git ls-files)
+          printf '%s\n' "${GITHUB_SHA}" > release-site/RELEASE_COMMIT.txt
+
+      - name: Verifica esclusioni e file obbligatori
+        run: |
+          set -euo pipefail
+          test -f release-site/index.html
+          test -f release-site/servizi.html
+          test -f release-site/analisi-preventiva.html
+          test -f release-site/portal-config.js
+          test -f release-site/.htaccess
+          test -f release-site/robots.txt
+          test -f release-site/sitemap.xml
+          test ! -e release-site/interesse-professionale.html
+          test ! -e release-site/privacy-interessi-professionali.html
+          test ! -e release-site/professional-interest.js
+          test ! -e release-site/sitemap-professionisti.xml
+          test ! -e release-site/.github
+          test ! -e release-site/docs
+          test ! -e release-site/tools
+
+      - name: Genera manifesto e archivio
+        run: |
+          set -euo pipefail
+          (
+            cd release-site
+            find . -type f ! -name 'MANIFEST.sha256' -print0 \
+              | sort -z \
+              | xargs -0 sha256sum > MANIFEST.sha256
+            sha256sum -c MANIFEST.sha256
+          )
+          tar -C release-site -czf sistema90g-site-release.tar.gz .
+          test -s sistema90g-site-release.tar.gz
+          sha256sum sistema90g-site-release.tar.gz > sistema90g-site-release.tar.gz.sha256
+
+      - name: Pubblica artefatto verificato
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-release-assisted-${{ github.run_id }}
+          path: |
+            sistema90g-site-release.tar.gz
+            sistema90g-site-release.tar.gz.sha256
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Vincolo operativo
+        run: |
+          cat <<'EOF'
+          Il workflow prepara soltanto un archivio verificato.
+          Non accede a Infomaniak e non pubblica il sito.
+          Il percorso professionale resta escluso dal pacchetto fino
+          all'approvazione Privacy e all'autorizzazione esplicita.
+          EOF
