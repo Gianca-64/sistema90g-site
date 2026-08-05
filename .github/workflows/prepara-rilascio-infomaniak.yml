@@ -1,6 +1,38 @@
 name: Prepara rilascio sito Infomaniak
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - '**/*.xml'
+      - '**/*.webmanifest'
+      - images/**
+      - fonts/**
+      - assets/**
+      - robots.txt
+      - .htaccess
+      - tools/audit-kitchen-focus.py
+      - .github/workflows/prepara-rilascio-infomaniak.yml
+  push:
+    branches:
+      - integrazione/cucina-professionisti-infomaniak-v1
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - '**/*.xml'
+      - '**/*.webmanifest'
+      - images/**
+      - fonts/**
+      - assets/**
+      - robots.txt
+      - .htaccess
+      - tools/audit-kitchen-focus.py
+      - .github/workflows/prepara-rilascio-infomaniak.yml
   workflow_dispatch:
     inputs:
       confirmation:
@@ -17,14 +49,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Verifica conferma e ramo
+      - name: Verifica evento, conferma e ramo
         env:
+          EVENT_NAME: ${{ github.event_name }}
           CONFIRMATION: ${{ inputs.confirmation }}
           REF_NAME: ${{ github.ref_name }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
           set -euo pipefail
-          test "$CONFIRMATION" = "PREPARA-SITO"
-          test "$REF_NAME" = "integrazione/cucina-professionisti-infomaniak-v1"
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            test "$CONFIRMATION" = "PREPARA-SITO"
+            test "$REF_NAME" = "integrazione/cucina-professionisti-infomaniak-v1"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            test "$REF_NAME" = "integrazione/cucina-professionisti-infomaniak-v1"
+          else
+            test "$HEAD_REF" = "integrazione/cucina-professionisti-infomaniak-v1"
+          fi
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -92,6 +132,7 @@ jobs:
           sha256sum sistema90g-site-release.tar.gz > sistema90g-site-release.tar.gz.sha256
 
       - name: Pubblica artefatto verificato
+        if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: site-release-assisted-${{ github.run_id }}
@@ -105,6 +146,7 @@ jobs:
         run: |
           cat <<'EOF'
           Il workflow prepara soltanto un archivio verificato.
+          Su push e pull request controlla il pacchetto senza pubblicare artefatti.
           Non accede a Infomaniak e non pubblica il sito.
           Il percorso professionale resta escluso dal pacchetto fino
           all'approvazione Privacy e all'autorizzazione esplicita.
