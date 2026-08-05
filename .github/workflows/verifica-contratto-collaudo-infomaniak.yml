@@ -67,7 +67,7 @@ jobs:
           grep -q 'HTTP 201' "$DOC"
           grep -q 'HTTP 200' "$DOC"
           grep -q 'HTTP 409' "$DOC"
-          grep -q 'nessuna creazione automatica di casi' "$DOC"
+          grep -q 'senza creazione automatica di casi' "$DOC"
           grep -q 'revocare il token API di collaudo' "$DOC"
 
       - name: Verifica backup, rollback e pulizia
