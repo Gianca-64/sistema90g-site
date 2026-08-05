@@ -15,7 +15,8 @@ const pages = [
   '/analisi-preventivo-cucina.html',
   '/problemi-errori-cucina.html',
   '/casi-cucina.html',
-  '/analisi-preventiva.html'
+  '/analisi-preventiva.html',
+  '/interesse-professionale.html'
 ];
 
 const viewports = {
@@ -196,6 +197,33 @@ try {
     }
   }
 
+  const professionalScope = 'percorso professionale prudenziale';
+  await page.goto(`${baseURL}/interesse-professionale.html`, {
+    waitUntil: 'networkidle',
+    timeout: 30_000
+  });
+  const professionalForm = page.locator('[data-s90g-professional-interest-form]');
+  if ((await professionalForm.getAttribute('data-active')) !== 'false') {
+    fail(professionalScope, 'modulo non bloccato');
+  }
+  if (await professionalForm.getAttribute('data-endpoint')) {
+    fail(professionalScope, 'endpoint pubblico presente prima dell’approvazione');
+  }
+  if ((await professionalForm.getAttribute('aria-disabled')) !== 'true') {
+    fail(professionalScope, 'stato disabilitato non applicato dal client');
+  }
+  if (!(await page.locator('.s90g-interest-submit').isDisabled())) {
+    fail(professionalScope, 'pulsante invio ancora attivo');
+  }
+  const robots = await page.locator('meta[name="robots"]').getAttribute('content');
+  if (!robots?.includes('noindex') || !robots.includes('nofollow')) {
+    fail(professionalScope, 'direttiva robots prudenziale assente');
+  }
+  const feedback = (await page.locator('[data-s90g-interest-feedback]').textContent()) || '';
+  if (!feedback.includes('non è ancora attivo')) {
+    fail(professionalScope, 'messaggio di blocco non mostrato');
+  }
+
   await context.close();
 } finally {
   await browser.close();
@@ -223,4 +251,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Audit browser superato: ${pages.length} pagine, ${Object.keys(viewports).length} viewport, ${services.length} percorsi servizio.`);
+console.log(`Audit browser superato: ${pages.length} pagine, ${Object.keys(viewports).length} viewport, ${services.length} percorsi servizio e 1 percorso professionale prudenziale.`);
