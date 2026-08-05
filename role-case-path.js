@@ -103,23 +103,22 @@ function init() {
 
   const buildTarget = service => {
     if (!portalConfig.enabled || !portalConfig.url) return '/contatti.html';
+
     const target = new URL(portalConfig.url);
     const source = new URL(window.location.href);
+
     target.searchParams.set('requester_role', 'private');
-    target.searchParams.set('case_context', service.serviceId);
     target.searchParams.set('service', service.serviceId);
-    target.searchParams.set('service_slug', options.find(x => x.checked)?.value || '');
-    target.searchParams.set('service_title', service.title);
-    target.searchParams.set('service_price', String(service.price));
-    target.searchParams.set('service_currency', 'EUR');
-    target.searchParams.set('service_time', service.time);
+    target.searchParams.set('units', '1');
     target.searchParams.set('source_page', 'analisi-preventiva');
     target.searchParams.set('content_type', 'guided-path');
     target.searchParams.set('cta_position', 'result');
+
     ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','case_id'].forEach(key => {
       const value = source.searchParams.get(key);
       if (value) target.searchParams.set(key, value);
     });
+
     return target.toString();
   };
 
