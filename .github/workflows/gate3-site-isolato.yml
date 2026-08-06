@@ -109,18 +109,16 @@ jobs:
           import re
 
           meta = '<meta name="robots" content="noindex, nofollow, noarchive">'
+          robots_meta = re.compile(
+              r"""<meta\b(?=[^>]*\bname\s*=\s*(?:"robots"|'robots'|robots))[^>]*>""",
+              re.IGNORECASE,
+          )
+
           for path in Path('gate3-site').rglob('*.html'):
               text = path.read_text(encoding='utf-8')
-              if 'name="robots"' in text.lower():
-                  text = re.sub(
-                      r'<meta\s+name=["\']robots["\'][^>]*>',
-                      meta,
-                      text,
-                      count=1,
-                      flags=re.IGNORECASE,
-                  )
-              else:
-                  updated, count = re.subn(
+              text, count = robots_meta.subn(meta, text, count=1)
+              if count == 0:
+                  text, count = re.subn(
                       r'</head>',
                       meta + '\n</head>',
                       text,
@@ -129,7 +127,6 @@ jobs:
                   )
                   if count != 1:
                       raise SystemExit(f'Elemento </head> non trovato in {path}')
-                  text = updated
               path.write_text(text, encoding='utf-8')
           PY
 
