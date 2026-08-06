@@ -262,7 +262,9 @@ try {
       timeout: 30_000
     });
 
-    const link = page.locator(`a[data-start-path][data-service="${entry.serviceSlug}"]`).first();
+    const link = page.locator(
+      `a[data-start-path][data-service="${entry.serviceSlug}"][data-content-type="service"]`
+    ).first();
     const href = await link.getAttribute('href');
     if (!href) {
       fail(scope, 'CTA di ingresso senza href');
