@@ -14,7 +14,7 @@ window.gtag('consent','default',{
 function loadNavigationConversion(){
   if(document.querySelector('script[data-s90g-navigation-conversion]'))return;
   const script=document.createElement('script');
-  script.src='/navigation-conversion.js?v=20260728e';
+  script.src='/navigation-conversion.js?v=20260806a';
   script.defer=true;
   script.dataset.s90gNavigationConversion='true';
   document.head.appendChild(script);
@@ -48,9 +48,9 @@ function addStructuredData(){
   const description=document.querySelector('meta[name="description"]')?.content||'';
   const image=document.querySelector('main img')?.src||'https://sistema90g.it/images/01_HOME_HERO.jpg';
   const graph=[
-    {'@type':'Organization','@id':'https://sistema90g.it/#organization','name':'Sistema 90G','url':'https://sistema90g.it/','logo':{'@type':'ImageObject','url':'https://sistema90g.it/images/favicon-512.png'},'founder':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'description':'Servizio indipendente di analisi preventiva per progetti casa, cucine, distribuzione interna e preventivi.'},
-    {'@type':'Person','@id':'https://sistema90g.it/chi-e-sistema90g.html#person','name':'Gian Carlo Primo','url':'https://sistema90g.it/chi-e-sistema90g.html','jobTitle':'Tecnico indipendente per analisi preventiva di progetti casa e cucina','worksFor':{'@id':'https://sistema90g.it/#organization'}},
-    {'@type':'WebSite','@id':'https://sistema90g.it/#website','url':'https://sistema90g.it/','name':'Sistema 90G','publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'},
+    {'@type':'Organization','@id':'https://sistema90g.it/#organization','name':'Sistema 90G','url':'https://sistema90g.it/','logo':{'@type':'ImageObject','url':'https://sistema90g.it/images/favicon-512.png'},'founder':{'@id':'https://sistema90g.it/chi-e-sistema90g.html#person'},'description':'Servizio indipendente di verifica preventiva per progetti, preventivi e scelte cucina.'},
+    {'@type':'Person','@id':'https://sistema90g.it/chi-e-sistema90g.html#person','name':'Gian Carlo Primo','url':'https://sistema90g.it/chi-e-sistema90g.html','jobTitle':'Specialista indipendente nella verifica preventiva di progetti e preventivi cucina','worksFor':{'@id':'https://sistema90g.it/#organization'}},
+    {'@type':'WebSite','@id':'https://sistema90g.it/#website','url':'https://sistema90g.it/','name':'Sistema 90G','description':'Verifica preventiva indipendente di progetti e preventivi cucina.','publisher':{'@id':'https://sistema90g.it/#organization'},'inLanguage':'it-IT'},
     {'@type':'WebPage','@id':canonical+'#webpage','url':canonical,'name':title,'description':description,'isPartOf':{'@id':'https://sistema90g.it/#website'},'about':{'@id':'https://sistema90g.it/#organization'},'primaryImageOfPage':{'@type':'ImageObject','url':image},'inLanguage':'it-IT'}
   ];
   if(location.pathname.includes('caso-')&&!hasStaticArticleSchema()){
@@ -77,7 +77,7 @@ function optimizeImages(){
     const applyFallback=()=>{
       if(img.dataset.s90gFallbackApplied)return;
       img.dataset.s90gFallbackApplied='true';
-      img.src=isArchive?archiveFallback(img):'images/20_CASI_DISTRIBUZIONE.jpg?v=20260715a';
+      img.src=isArchive?archiveFallback(img):'images/19_CASI_CUCINA.jpg?v=20260715a';
     };
     img.addEventListener('error',applyFallback,{once:true});
     if(isArchive){
@@ -129,9 +129,9 @@ function s90gPageSlug(){
 function s90gInferContentType(){
   const slug=s90gPageSlug();
   if(slug.startsWith('caso-'))return 'case';
-  if(slug.startsWith('casi-'))return 'case-category';
-  if(['professionisti','rivenditori-cucine','agenzie-immobiliari','analisi-unita-varianti'].includes(slug))return 'professional';
-  if(['controllo-mirato','analisi-completa','progetto-da-zero','scelta-finiture-casa','restyling-cucina-esistente','acquisto-assistito-cucina','studio-preliminare-spazi','servizi','controllo-progetto-cucina','verifica-planimetria-distribuzione-casa'].includes(slug))return 'service';
+  if(slug==='casi-cucina')return 'case-category';
+  if(['controllo-mirato','analisi-completa','scelta-finiture-casa','restyling-cucina-esistente','acquisto-assistito-cucina','servizi'].includes(slug))return 'service';
+  if(['analisi-preventivo-cucina','problemi-errori-cucina'].includes(slug))return 'guide';
   return 'page';
 }
 
@@ -158,31 +158,28 @@ function s90gPreparePortalLinks(){
 function trackLead(name,link){
   if(window.localStorage.getItem(CONSENT_KEY)!=='accepted'||typeof window.gtag!=='function')return;
   const url=new URL(link.href);
-  window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),source_page:url.searchParams.get('source_page')||s90gPageSlug(),content_type:url.searchParams.get('content_type')||s90gInferContentType(),service:url.searchParams.get('service')||'',cta_position:url.searchParams.get('cta_position')||'',case_id:url.searchParams.get('case_id')||'',transport_type:'beacon'});
+  window.gtag('event',name,{event_category:'lead',link_url:link.href,link_text:link.textContent.trim(),source_page:url.searchParams.get('source_page')||s90gPageSlug(),content_type:url.searchParams.get('content_type')||s90gInferContentType(),service:url.searchParams.get('service')||url.searchParams.get('service_hint')||'',cta_position:url.searchParams.get('cta_position')||'',case_id:url.searchParams.get('case_id')||'',transport_type:'beacon'});
 }
 function addWhatsAppChat(){
   if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per sottoporre foto, planimetrie o preventivi usa il percorso guidato, che mostra prima servizio e prezzo.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#percorso" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Valuta un caso</a></div></section>`;
+  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per sottoporre foto, progetto o preventivo usa il percorso guidato, che mostra prima servizio e prezzo.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#percorso" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Individua il servizio</a></div></section>`;
   document.body.appendChild(wrapper);
 
-  /* Nasconde la Chat finché il banner cookie richiede una scelta. */
-  const cookieBanner = document.getElementById('cookie-banner');
-
-  const syncChatVisibility = () => {
-    const bannerIsVisible = cookieBanner && !cookieBanner.hidden;
-    wrapper.style.display = bannerIsVisible ? 'none' : '';
+  const cookieBanner=document.getElementById('cookie-banner');
+  const syncChatVisibility=()=>{
+    const bannerIsVisible=cookieBanner&&!cookieBanner.hidden;
+    wrapper.style.display=bannerIsVisible?'none':'';
   };
-
-  if (cookieBanner) {
-    new MutationObserver(syncChatVisibility).observe(cookieBanner, {
-      attributes: true,
-      attributeFilter: ['hidden']
+  if(cookieBanner){
+    new MutationObserver(syncChatVisibility).observe(cookieBanner,{
+      attributes:true,
+      attributeFilter:['hidden']
     });
   }
-
   syncChatVisibility();
+
   const launcher=wrapper.querySelector('.s90g-chat-launcher');
   const popup=wrapper.querySelector('.s90g-chat-popup');
   const close=wrapper.querySelector('.s90g-chat-close');
@@ -192,27 +189,30 @@ function addWhatsAppChat(){
   document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false)});
 }
 
-
 function s90gIntegrateAiTransparencyPage(){
   const href='/metodo-sistema90g.html';
   const isPage=location.pathname.endsWith(href);
   const nav=document.querySelector('.s90g-nav');
-  if(nav){
-    let link=nav.querySelector('a[data-nav-key="method"],a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
-    if(!link){link=document.createElement('a');link.href=href;link.dataset.navKey='method';nav.appendChild(link);}
-    link.textContent='Metodo e AI';
-    if(isPage){nav.querySelectorAll('a[aria-current="page"]').forEach(item=>item.removeAttribute('aria-current'));link.setAttribute('aria-current','page');}
+  const existingNavLink=nav?.querySelector('a[data-nav-key="method"],a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
+  if(existingNavLink){
+    existingNavLink.textContent='Metodo e AI';
+    if(isPage){
+      nav.querySelectorAll('a[aria-current="page"]').forEach(item=>item.removeAttribute('aria-current'));
+      existingNavLink.setAttribute('aria-current','page');
+    }
   }
   document.querySelectorAll('.s90g-footer-links').forEach(footerLinks=>{
     let link=footerLinks.querySelector('a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
-    if(!link){link=document.createElement('a');link.href=href;const ip=footerLinks.querySelector('a[href$="/proprieta-intellettuale.html"],a[href$="proprieta-intellettuale.html"]');if(ip)ip.before(link);else footerLinks.appendChild(link);}
+    if(!link){
+      link=document.createElement('a');
+      link.href=href;
+      const ip=footerLinks.querySelector('a[href$="/proprieta-intellettuale.html"],a[href$="proprieta-intellettuale.html"]');
+      if(ip)ip.before(link);else footerLinks.appendChild(link);
+    }
     link.textContent='Metodo e AI';
   });
 }
-document.addEventListener(
-  's90g:navigation-ready',
-  s90gIntegrateAiTransparencyPage
-);
+document.addEventListener('s90g:navigation-ready',s90gIntegrateAiTransparencyPage);
 
 document.addEventListener('DOMContentLoaded',()=>{
   loadNavigationConversion();
