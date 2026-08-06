@@ -12,6 +12,8 @@ const pages = [
   '/controllo-mirato.html',
   '/analisi-completa.html',
   '/acquisto-assistito-cucina.html',
+  '/scelta-finiture-casa.html',
+  '/restyling-cucina-esistente.html',
   '/analisi-preventivo-cucina.html',
   '/problemi-errori-cucina.html',
   '/casi-cucina.html',
@@ -25,9 +27,24 @@ const viewports = {
 };
 
 const services = [
-  { slug: 'controllo-mirato', code: 'S90G-K01', price: '127' },
-  { slug: 'analisi-completa', code: 'S90G-K02', price: '253' },
-  { slug: 'acquisto-assistito-cucina', code: 'S90G-K03', price: '290' }
+  { slug: 'controllo-mirato', code: 'S90G-K01', price: '127', requesterRole: 'private' },
+  { slug: 'analisi-completa', code: 'S90G-K02', price: '253', requesterRole: 'private' },
+  { slug: 'acquisto-assistito-cucina', code: 'S90G-K03', price: '290', requesterRole: 'private' },
+  { slug: 'scelta-finiture-cucina', code: 'S90G-K11', price: '47', requesterRole: 'private' },
+  { slug: 'restyling-cucina-esistente', code: 'S90G-K12', price: '79', requesterRole: 'private' }
+];
+
+const secondaryEntryPoints = [
+  {
+    path: '/scelta-finiture-casa.html',
+    pageSlug: 'scelta-finiture-casa',
+    serviceSlug: 'scelta-finiture-cucina'
+  },
+  {
+    path: '/restyling-cucina-esistente.html',
+    pageSlug: 'restyling-cucina-esistente',
+    serviceSlug: 'restyling-cucina-esistente'
+  }
 ];
 
 const failures = [];
@@ -176,7 +193,7 @@ try {
 
     const target = new URL(href, baseURL);
     if (target.hostname !== 'portale.sistema90g.it') fail(scope, `host portale inatteso: ${target.hostname}`);
-    if (target.searchParams.get('requester_role') !== 'private') fail(scope, 'requester_role non coerente');
+    if (target.searchParams.get('requester_role') !== service.requesterRole) fail(scope, 'requester_role non coerente');
     if (target.searchParams.get('service') !== service.code) fail(scope, 'parametro service non coerente');
     if (target.searchParams.get('units') !== '1') fail(scope, 'quantità non coerente');
     if (target.searchParams.get('source_page') !== 'analisi-preventiva') fail(scope, 'source_page non coerente');
@@ -195,6 +212,29 @@ try {
         fail(scope, `parametro non autorevole ancora presente: ${clientAuthorityKey}`);
       }
     }
+  }
+
+  for (const entry of secondaryEntryPoints) {
+    const scope = `ingresso ${entry.serviceSlug}`;
+    await page.goto(`${baseURL}${entry.path}?utm_source=e2e`, {
+      waitUntil: 'networkidle',
+      timeout: 30_000
+    });
+
+    const link = page.locator(`a[data-start-path][data-service="${entry.serviceSlug}"]`).first();
+    const href = await link.getAttribute('href');
+    if (!href) {
+      fail(scope, 'CTA di ingresso senza href');
+      continue;
+    }
+
+    const target = new URL(href, baseURL);
+    if (target.pathname !== '/analisi-preventiva.html') fail(scope, `destinazione inattesa: ${target.pathname}`);
+    if (target.searchParams.get('service_hint') !== entry.serviceSlug) fail(scope, 'service_hint non coerente');
+    if (target.searchParams.get('source_page') !== entry.pageSlug) fail(scope, 'source_page non conservata');
+    if (target.searchParams.get('content_type') !== 'service') fail(scope, 'content_type non coerente');
+    if (!target.searchParams.get('cta_position')) fail(scope, 'cta_position assente');
+    if (target.searchParams.get('utm_source') !== 'e2e') fail(scope, 'utm_source non conservato');
   }
 
   const professionalScope = 'percorso professionale prudenziale';
@@ -234,6 +274,8 @@ const report = {
   baseURL,
   pages,
   viewports,
+  services,
+  secondaryEntryPoints,
   failures,
   observations
 };
@@ -251,4 +293,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Audit browser superato: ${pages.length} pagine, ${Object.keys(viewports).length} viewport, ${services.length} percorsi servizio e 1 percorso professionale prudenziale.`);
+console.log(`Audit browser superato: ${pages.length} pagine, ${Object.keys(viewports).length} viewport, ${services.length} percorsi servizio, ${secondaryEntryPoints.length} ingressi secondari e 1 percorso professionale prudenziale.`);
