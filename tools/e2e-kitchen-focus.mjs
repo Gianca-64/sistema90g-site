@@ -47,6 +47,24 @@ const secondaryEntryPoints = [
   }
 ];
 
+const requiredNavigation = [
+  '/servizi.html',
+  '/analisi-completa.html',
+  '/analisi-preventivo-cucina.html',
+  '/acquisto-assistito-cucina.html',
+  '/problemi-errori-cucina.html',
+  '/casi-cucina.html',
+  '/analisi-preventiva.html'
+];
+
+const forbiddenNavigation = [
+  '/casi-analizzati.html',
+  '/professionisti.html',
+  '/rivenditori-cucine.html',
+  '/agenzie-immobiliari.html',
+  '/innovazioni.html'
+];
+
 const failures = [];
 const observations = [];
 
@@ -85,6 +103,29 @@ try {
         fail(scope, `risposta HTTP non valida: ${response?.status() ?? 'nessuna risposta'}`);
         await page.close();
         continue;
+      }
+
+      await page.waitForFunction(
+        () => document.querySelector('.s90g-header')?.classList.contains('s90g-nav-ready'),
+        { timeout: 5_000 }
+      ).catch(() => fail(scope, 'navigazione dinamica non inizializzata'));
+
+      const navigationPaths = await page.locator('.s90g-nav a').evaluateAll(links => links.map(link => {
+        try {
+          return new URL(link.href).pathname;
+        } catch {
+          return link.getAttribute('href') || '';
+        }
+      }));
+
+      const missingNavigation = requiredNavigation.filter(item => !navigationPaths.includes(item));
+      if (missingNavigation.length) {
+        fail(scope, `navigazione cucina incompleta: ${missingNavigation.join(', ')}`);
+      }
+
+      const forbiddenFound = forbiddenNavigation.filter(item => navigationPaths.includes(item));
+      if (forbiddenFound.length) {
+        fail(scope, `navigazione generalista riattivata: ${forbiddenFound.join(', ')}`);
       }
 
       const title = await page.title();
@@ -276,6 +317,8 @@ const report = {
   viewports,
   services,
   secondaryEntryPoints,
+  requiredNavigation,
+  forbiddenNavigation,
   failures,
   observations
 };
