@@ -136,8 +136,10 @@ def local_target(page: Path, value: str) -> Path | None:
     path = unquote(parsed.path)
     if not path:
         return None
+    if path == "/":
+        return (ROOT / "index.html").resolve()
     if parsed.netloc or path.startswith("/"):
-        target = ROOT / (path.lstrip("/") or "index.html")
+        target = ROOT / path.lstrip("/")
     else:
         target = page.parent / path
     if path.endswith("/"):
