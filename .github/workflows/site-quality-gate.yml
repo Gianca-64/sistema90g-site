@@ -1,0 +1,49 @@
+name: Site quality gate
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Audit sito e contratti pubblici
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Audit release
+        run: python tools/audit_release.py
+
+      - name: Contratto responsive
+        run: python tools/test_responsive_contract.py
+
+      - name: Audit navigazione e collegamenti
+        run: python tools/audit_section_d_navigation.py .
+
+      - name: Test prezzi e contratto portale
+        run: node tools/test_guided_pricing.js
+
+      - name: Contratto sezione D
+        run: node tools/test_section_d_contract.js
