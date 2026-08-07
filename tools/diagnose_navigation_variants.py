@@ -57,3 +57,5 @@ for index, (nav, files) in enumerate(variants.items(), 1):
     print("Pages:")
     for filename in files:
         print(f"  - {filename}")
+
+# Diagnostic only: this script never changes repository files.
