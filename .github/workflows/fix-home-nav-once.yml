@@ -1,0 +1,49 @@
+name: Fix home navigation once
+
+on:
+  push:
+    branches:
+      - sviluppo/site-quality-gate-20260807
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: sviluppo/site-quality-gate-20260807
+          fetch-depth: 0
+
+      - name: Remove duplicate Innovazioni item
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('index.html')
+          raw = path.read_text(encoding='utf-8')
+          bad = '<a href="/innovazioni.html">Innovazioni</a><a href="innovazioni.html">Innovazioni</a>'
+          good = '<a href="/innovazioni.html">Innovazioni</a>'
+          count = raw.count(bad)
+          if count == 0:
+              print('Home navigation already normalized.')
+          elif count == 1:
+              path.write_text(raw.replace(bad, good), encoding='utf-8')
+              print('Removed duplicate Innovazioni navigation item.')
+          else:
+              raise SystemExit(f'Unexpected duplicate pattern count: {count}')
+          PY
+
+      - name: Commit fix if needed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No fix to commit."
+            exit 0
+          fi
+          git config user.name "Gianca-64"
+          git config user.email "progettazionecucine@icloud.com"
+          git add index.html
+          git commit -m "fix: normalize home navigation"
+          git push origin HEAD:sviluppo/site-quality-gate-20260807
