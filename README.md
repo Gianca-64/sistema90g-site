@@ -1,14 +1,7 @@
-# sistema90g-site
+# Sistema 90G — sito pubblico
 
-Connessione GitHub attiva.
-## Percorso guidato ruolo, situazione e prezzo — 2026-07-20
+Repository del sito pubblico Sistema 90G.
 
-Il sito pubblico instrada ora le richieste attraverso `analisi-preventiva.html#percorso`.
-I prezzi vengono visualizzati dinamicamente soltanto al terzo passaggio e non sono pubblicati nelle pagine descrittive o nei dati strutturati.
+Lo sviluppo corrente è focalizzato sulla verifica indipendente della cucina prima dell’ordine, con percorso commerciale collegato al portale, casi reali e contenuti editoriali di approfondimento.
 
-Verifiche locali:
-
-```bash
-python tools/audit_release.py
-node tools/test_guided_pricing.js
-```
+Le modifiche principali vengono validate tramite GitHub Actions prima di qualsiasi merge o pubblicazione.
