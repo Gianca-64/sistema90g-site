@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Qualità sito pubblico
+    name: Audit sito, cucina e contratti pubblici
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -33,11 +33,30 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Audit percorso cucina
-        run: python3 tools/audit-kitchen-focus.py
+      - name: Audit release generale
+        run: |
+          if ! python tools/audit_release.py; then
+            python tools/diagnose_navigation_variants.py
+            exit 1
+          fi
 
-      - name: Audit navigazione statica delle pagine indicizzate
-        run: python3 tools/audit-public-navigation.py
+      - name: Contratto responsive
+        run: python tools/test_responsive_contract.py
+
+      - name: Audit navigazione e collegamenti
+        run: python tools/audit_section_d_navigation.py .
+
+      - name: Test prezzi e contratto portale
+        run: node tools/test_guided_pricing.js
+
+      - name: Contratto sezione D
+        run: node tools/test_section_d_contract.js
+
+      - name: Audit focalizzazione cucina
+        run: python tools/audit-kitchen-focus.py
+
+      - name: Audit navigazione pubblica cucina
+        run: python tools/audit-public-navigation.py
 
       - name: Sintassi JavaScript percorso commerciale
         run: node --check role-case-path.js
