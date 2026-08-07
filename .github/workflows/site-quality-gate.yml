@@ -34,7 +34,11 @@ jobs:
           node-version: '20'
 
       - name: Audit release
-        run: python tools/audit_release.py
+        run: |
+          if ! python tools/audit_release.py; then
+            python tools/diagnose_navigation_variants.py
+            exit 1
+          fi
 
       - name: Contratto responsive
         run: python tools/test_responsive_contract.py
