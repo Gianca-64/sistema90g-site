@@ -1,0 +1,220 @@
+name: Gate 3 sito isolato
+
+on:
+  push:
+    branches:
+      - integrazione/cucina-professionisti-infomaniak-v1
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - '**/*.xml'
+      - '**/*.webmanifest'
+      - images/**
+      - fonts/**
+      - assets/**
+      - robots.txt
+      - .htaccess
+      - tools/audit-kitchen-focus.py
+      - tools/audit-gate3-site-package.py
+      - docs/GATE3_SITO_ISOLATO_V1.md
+      - .github/workflows/gate3-site-isolato.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - '**/*.xml'
+      - '**/*.webmanifest'
+      - images/**
+      - fonts/**
+      - assets/**
+      - robots.txt
+      - .htaccess
+      - tools/audit-kitchen-focus.py
+      - tools/audit-gate3-site-package.py
+      - docs/GATE3_SITO_ISOLATO_V1.md
+      - .github/workflows/gate3-site-isolato.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Verifica e prepara sito Gate 3
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verifica base sito cucina
+        run: |
+          set -euo pipefail
+          node --check role-case-path.js
+          node --check professional-interest.js
+          python3 tools/audit-kitchen-focus.py
+          python3 tools/audit-gate3-site-package.py
+
+      - name: Prepara copia isolata
+        run: |
+          set -euo pipefail
+          rm -rf gate3-site
+          mkdir -p gate3-site
+
+          while IFS= read -r path; do
+            case "$path" in
+              .github/*|docs/*|tools/*|artifacts/*|node_modules/*|package.json|package-lock.json|*.md|*.zip|*.tar.gz|.deploy-trigger*)
+                continue
+                ;;
+              interesse-professionale.html|privacy-interessi-professionali.html|professional-interest.js|s90g-professional-interest-2026.css|sitemap-professionisti.xml)
+                continue
+                ;;
+            esac
+            mkdir -p "gate3-site/$(dirname "$path")"
+            cp -p "$path" "gate3-site/$path"
+          done < <(git ls-files)
+
+          cat > gate3-site/portal-config.js <<'EOF'
+          /* Sistema 90G — configurazione isolata Gate 3 */
+          (() => {
+            window.S90G_PORTAL_CONFIG = Object.freeze({
+              enabled: true,
+              status: 'gate3-test',
+              trialHosting: false,
+              url: 'https://portale-test.sistema90g.it/portal.html',
+              displayHost: 'portale-test.sistema90g.it',
+              message: 'Ambiente di collaudo isolato. Usare esclusivamente richieste sintetiche chiaramente riconoscibili.',
+              capabilities: Object.freeze({
+                initialRequest: true,
+                attachments: false,
+                payments: false,
+                delivery: false
+              })
+            });
+          })();
+          EOF
+
+          cat > gate3-site/robots.txt <<'EOF'
+          User-agent: *
+          Disallow: /
+          EOF
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          meta = '<meta name="robots" content="noindex, nofollow, noarchive">'
+          robots_meta = re.compile(
+              r"""<meta\b(?=[^>]*\bname\s*=\s*(?:"robots"|'robots'|robots))[^>]*>""",
+              re.IGNORECASE,
+          )
+
+          for path in Path('gate3-site').rglob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              text, count = robots_meta.subn(meta, text, count=1)
+              if count == 0:
+                  text, count = re.subn(
+                      r'</head>',
+                      meta + '\n</head>',
+                      text,
+                      count=1,
+                      flags=re.IGNORECASE,
+                  )
+                  if count != 1:
+                      raise SystemExit(f'Elemento </head> non trovato in {path}')
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          cat > gate3-site/GATE3_SITE.txt <<EOF
+          environment=gate3-test
+          portal=https://portale-test.sistema90g.it/portal.html
+          source_commit=${GITHUB_SHA}
+          real_data=forbidden
+          public_deploy=forbidden
+          EOF
+
+      - name: Verifica isolamento
+        run: |
+          set -euo pipefail
+          test -f gate3-site/index.html
+          test -f gate3-site/servizi.html
+          test -f gate3-site/analisi-preventiva.html
+          test -f gate3-site/portal-config.js
+          test -f gate3-site/GATE3_SITE.txt
+          grep -q "https://portale-test.sistema90g.it/portal.html" gate3-site/portal-config.js
+          ! grep -q "https://portale.sistema90g.it/portal.html" gate3-site/portal-config.js
+          grep -q '^Disallow: /$' gate3-site/robots.txt
+          grep -q '^real_data=forbidden$' gate3-site/GATE3_SITE.txt
+          grep -q '^public_deploy=forbidden$' gate3-site/GATE3_SITE.txt
+          test ! -e gate3-site/interesse-professionale.html
+          test ! -e gate3-site/privacy-interessi-professionali.html
+          test ! -e gate3-site/professional-interest.js
+          test ! -e gate3-site/sitemap-professionisti.xml
+          test ! -e gate3-site/.github
+          test ! -e gate3-site/docs
+          test ! -e gate3-site/tools
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          missing = []
+          for path in Path('gate3-site').rglob('*.html'):
+              text = path.read_text(encoding='utf-8').lower()
+              if 'name="robots" content="noindex, nofollow, noarchive"' not in text:
+                  missing.append(str(path))
+          if missing:
+              raise SystemExit('Noindex Gate 3 assente: ' + ', '.join(missing))
+          PY
+
+      - name: Smoke test statico
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory gate3-site > /tmp/s90g-gate3-site.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4173/ | grep -qi 'Sistema 90G'
+          curl -fsS http://127.0.0.1:4173/portal-config.js | grep -q 'portale-test.sistema90g.it'
+          curl -fsS http://127.0.0.1:4173/robots.txt | grep -q 'Disallow: /'
+
+      - name: Genera manifesto e archivio
+        run: |
+          set -euo pipefail
+          (
+            cd gate3-site
+            find . -type f ! -name 'MANIFEST.sha256' -print0 \
+              | sort -z \
+              | xargs -0 sha256sum > MANIFEST.sha256
+            sha256sum -c MANIFEST.sha256
+          )
+          tar -C gate3-site -czf sistema90g-site-gate3-isolato.tar.gz .
+          sha256sum sistema90g-site-gate3-isolato.tar.gz \
+            > sistema90g-site-gate3-isolato.tar.gz.sha256
+
+      - name: Pubblica artefatto Gate 3
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-gate3-isolato-${{ github.run_id }}
+          path: |
+            sistema90g-site-gate3-isolato.tar.gz
+            sistema90g-site-gate3-isolato.tar.gz.sha256
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Vincolo operativo
+        run: |
+          cat <<'EOF'
+          Pacchetto di collaudo isolato.
+          Nessun accesso a Infomaniak, nessun deploy, nessun merge,
+          nessuna attivazione pubblica e nessun uso di dati reali.
+          EOF

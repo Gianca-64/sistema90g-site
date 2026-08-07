@@ -1,0 +1,60 @@
+name: E2E kitchen focus
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'images/**'
+      - 'tools/e2e-kitchen-focus.mjs'
+      - '.github/workflows/e2e-kitchen-focus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install browser test dependencies
+        run: |
+          npm init -y
+          npm install --no-save playwright @axe-core/playwright
+          npx playwright install --with-deps chromium
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/s90g-static-server.log 2>&1 &
+          echo $! > /tmp/s90g-static-server.pid
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/s90g-static-server.log
+          exit 1
+
+      - name: Run browser, responsive and accessibility audit
+        run: node tools/e2e-kitchen-focus.mjs
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kitchen-focus-browser-audit
+          path: artifacts/kitchen-focus
+          if-no-files-found: warn
+          retention-days: 14

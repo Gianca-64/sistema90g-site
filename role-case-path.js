@@ -1,58 +1,291 @@
 (() => {
 'use strict';
-const portalConfig=window.S90G_PORTAL_CONFIG||{enabled:false,status:'unconfigured',url:'',message:'Il collegamento alla richiesta non è configurato.'};
-const euro=value=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(value);
-const roleLabels={private:'Privato',retailer:'Rivenditore di cucine',interior:'Interior designer',technician:'Architetto o geometra',company:'Impresa di costruzioni',agency:'Agenzia immobiliare',other:'Altro professionista'};
-const privateBase={relationship:'La valutazione riguarda direttamente il richiedente. Il servizio viene confermato dopo il controllo del materiale.'};
-const professionalBase={relationship:'Il cliente finale resta associato al soggetto che presenta il caso. Sistema 90G non lo contatta autonomamente e condivide la valutazione soltanto con i destinatari autorizzati.'};
-const catalog={
- private:[
-  {id:'scelta-finiture-cucina',label:'Devo confrontare due finiture per la cucina',title:'Scelta Finiture cucina',price:47,time:'Entro 1 giorno lavorativo',description:'Confronto tra un massimo di due alternative già selezionate.',checks:['coerenza delle alternative con ambiente e luce','uso quotidiano e manutenzione','differenze percepibili tra le due scelte'],deliverables:['confronto motivato tra le alternative','indicazione dei compromessi principali','punti da verificare prima della scelta'],limits:['massimo due alternative','non comprende lo sviluppo di nuove combinazioni'],...privateBase},
-  {id:'restyling-cucina-esistente',label:'Voglio aggiornare una cucina già installata',title:'Restyling',price:79,time:'Entro 1 giorno lavorativo',description:'Direzione di intervento per una cucina esistente, partendo da vincoli ed elementi da mantenere.',checks:['stato e ruolo degli elementi esistenti','vincoli di impianti, misure e aperture','coerenza delle modifiche ipotizzate'],deliverables:['priorità di intervento','elementi da conservare o modificare','indicazioni da far verificare al fornitore'],limits:['non è un progetto esecutivo','non comprende preventivi o codici prodotto'],...privateBase},
-  {id:'controllo-mirato',label:'Ho un solo dubbio preciso',title:'Controllo mirato',price:127,time:'Entro 2 giorni lavorativi',description:'Verifica concentrata su una domanda principale e circoscritta.',checks:['il dubbio principale dichiarato','le conseguenze visibili nell’uso','le misure o informazioni decisive'],deliverables:['risposta motivata al dubbio','criticità e conseguenze osservabili','punti da chiarire prima di decidere'],limits:['un problema principale','non comprende una nuova proposta completa'],...privateBase},
-  {id:'analisi-completa',label:'Devo controllare un progetto o preventivo nel suo insieme',title:'Analisi completa',price:253,time:'Entro 2 giorni lavorativi',description:'Lettura di più aspetti collegati di una proposta già esistente.',checks:['rapporti tra misure, passaggi e aperture','coerenza tra progetto, uso e preventivo','criticità collegate e informazioni mancanti'],deliverables:['mappa ordinata delle criticità','priorità e conseguenze','aspetti da verificare con i soggetti competenti'],limits:['richiede una proposta esistente','non comprende una nuova progettazione'],...privateBase},
-  {id:'acquisto-assistito-cucina',label:'Devo sviluppare la direzione di una cucina nuova',title:'Acquisto Assistito Cucina 90G',price:290,time:'Entro 3 giorni lavorativi',description:'Proposta preliminare indipendente in due fasi, prima dell’adattamento del rivenditore.',checks:['funzioni, vincoli e priorità della cucina','rapporti tra composizione, passaggi e aperture','coerenza della soluzione principale e della variante'],deliverables:['proposta funzionale e viste preliminari','cinque render della soluzione principale e una vista della variante finitura','spiegazione delle scelte, punti da verificare e una revisione'],limits:['non include codici, ordine o progetto esecutivo','il rivenditore verifica e adatta al marchio'],...privateBase},
-  {id:'studio-preliminare-spazi',label:'Devo organizzare gli spazi senza una proposta definita',title:'Studio preliminare degli spazi',price:560,time:'Entro 3 giorni lavorativi',description:'Organizzazione preliminare di funzioni, vincoli e priorità con planimetria descrittiva.',checks:['esigenze, funzioni e relazioni tra ambienti','vincoli visibili e dati mancanti','conseguenze delle principali scelte distributive'],deliverables:['sintesi delle esigenze','organizzazione preliminare delle funzioni','planimetria descrittiva e verifiche da affidare al professionista'],limits:['non è un progetto architettonico definitivo','richiede verifiche del professionista incaricato'],...privateBase}
- ],
- retailer:[
-  {id:'verifica-progetto-cucina',label:'Ho già sviluppato un progetto cucina da verificare',title:'Analisi progetto cucina',price:150,time:'Consegna standard definita dopo il controllo del materiale',description:'Lettura indipendente di un progetto già sviluppato per individuare criticità visibili, coerenza e dati mancanti.',checks:['passaggi, aperture e interferenze','uso, piano di lavoro e accessibilità','coerenza tra elaborati e dati disponibili'],deliverables:['documento sintetico destinato al rivenditore','criticità ordinate per priorità','dati mancanti e verifiche da completare'],limits:['non comprende nuova composizione o alternative','un progetto, un referente, una consegna'],...professionalBase},
-  {id:'manual-review',label:'Il caso non ha ancora un progetto cucina definito',title:'Qualificazione manuale del caso',price:null,time:'Definito dopo la prima valutazione',description:'Il servizio standard del rivenditore richiede un progetto già sviluppato. Il caso verrà qualificato prima di proporre un perimetro.',checks:['idoneità del caso al servizio standard','materiale già disponibile','rapporto tra richiedente e cliente finale'],deliverables:['indicazione del materiale mancante','eventuale servizio alternativo','perimetro proposto prima di qualsiasi costo'],limits:['nessun prezzo automatico senza perimetro','nessun contatto al cliente senza autorizzazione'],...professionalBase}
- ],
- professional:[
-  {id:'verifica-preliminare-immobile',label:'Devo verificare un singolo immobile',title:'Verifica preliminare immobile',price:149,time:'Consegna standard definita dopo il controllo del materiale',description:'Lettura preliminare di documenti, esigenze, limiti visibili e verifiche necessarie.',checks:['documenti e informazioni disponibili','potenzialità e limiti visibili','dati mancanti e responsabilità di verifica'],deliverables:['sintesi leggibile dell’immobile','elenco delle informazioni mancanti','punti da affidare ai tecnici competenti'],limits:['non certifica fattibilità o conformità','non sostituisce il professionista incaricato'],...professionalBase},
-  {id:'analisi-unita-varianti',label:'Devo analizzare almeno tre unità o varianti collegate',title:'Analisi di più unità o varianti',unitPrice:110,minUnits:3,time:'Consegna definita in base al numero di unità',description:'Analisi uniforme di unità o varianti collegate con un referente e documentazione organizzata.',checks:['coerenza dei dati tra le unità','elementi comuni, differenze e criticità','completezza uniforme del materiale'],deliverables:['scheda per ogni unità o variante','quadro comparativo degli elementi comuni e differenti','criticità e dati mancanti'],limits:['minimo tre unità o varianti','materiale uniforme e un solo ciclo di integrazioni'],...professionalBase}
- ],
- other:[
-  {id:'manual-review',label:'Desidero descrivere il mio ruolo e il caso',title:'Valutazione professionale personalizzata',price:null,time:'Definito dopo la prima valutazione',description:'Il ruolo o il perimetro non rientrano nei percorsi standard e devono essere verificati prima di indicare condizioni e prezzo.',checks:['ruolo e rapporto con il cliente','materiale disponibile','compatibilità con i servizi standard'],deliverables:['qualificazione del ruolo','proposta del perimetro corretto','condizioni comunicate prima di qualsiasi costo'],limits:['nessun prezzo automatico senza perimetro','nessun contatto al cliente senza autorizzazione'],...professionalBase}
- ]
+
+const portalConfig = window.S90G_PORTAL_CONFIG || {
+  enabled: false,
+  url: '',
+  message: 'Il collegamento alla richiesta non è configurato.'
 };
-const calculatePrice=(selection,units=0)=>{if(selection.unitPrice){const unitCount=Math.max(selection.minUnits,Number(units)||selection.minUnits);return {unitCount,price:selection.unitPrice*unitCount,priceText:euro(selection.unitPrice*unitCount),priceNote:`${euro(selection.unitPrice)} × ${unitCount} unità o varianti`};}if(selection.price!==null)return {unitCount:null,price:selection.price,priceText:euro(selection.price),priceNote:'Il prezzo viene confermato dopo il controllo del materiale.'};return {unitCount:null,price:null,priceText:'Da definire dopo la qualificazione',priceNote:'Nessun costo viene applicato senza una proposta preventiva.'};};
-const group=role=>role==='private'?'private':role==='retailer'?'retailer':role==='other'?'other':'professional';
-const findSelection=(role,id)=>catalog[group(role)]?.find(x=>x.id===id)||null;
-if(typeof window!=='undefined')window.S90G_PATH={catalog,calculatePrice,findSelection};
-function init(){
- const form=document.getElementById('s90g-role-path');if(!form)return;
- const steps=[...form.querySelectorAll('[data-step]')],progress=[...document.querySelectorAll('[data-progress]')];
- const roleOptions=document.getElementById('s90g-role-options'),situationOptions=document.getElementById('s90g-situation-options');
- const roleValue=document.getElementById('s90g-role-value'),unitControl=document.getElementById('s90g-unit-control'),units=document.getElementById('s90g-units');
- const result=document.querySelector('[data-step="3"]');if(result)result.tabIndex=-1;
- let role='',selection=null,restoring=false;
- const selectedInput=name=>form.querySelector(`input[name="${name}"]:checked`);
- const updateProgress=n=>progress.forEach(x=>{const active=Number(x.dataset.progress)===n;x.classList.toggle('is-active',Number(x.dataset.progress)<=n);if(active)x.setAttribute('aria-current','step');else x.removeAttribute('aria-current')});
- const setUrl=(n,mode='push')=>{if(restoring)return;const url=new URL(location.href);url.searchParams.set('path_step',String(n));if(role)url.searchParams.set('requester_role',role);else url.searchParams.delete('requester_role');if(selection)url.searchParams.set('service_hint',selection.id);else if(n<2)url.searchParams.delete('service_hint');if(selection?.unitPrice)url.searchParams.set('units',String(Math.max(selection.minUnits,Number(units.value)||selection.minUnits)));else url.searchParams.delete('units');url.hash='percorso';history[mode==='replace'?'replaceState':'pushState']({s90gPath:true,step:n},'',url)};
- const show=(n,{historyMode='',focus=true,scroll=true}={})=>{steps.forEach(x=>x.hidden=Number(x.dataset.step)!==n);updateProgress(n);if(historyMode)setUrl(n,historyMode);if(focus){const target=n===3?result:form.querySelector(`[data-step="${n}"] legend`)||form.querySelector(`[data-step="${n}"]`);target?.focus?.({preventScroll:true})}if(scroll)document.getElementById('percorso')?.scrollIntoView({behavior:'smooth',block:'start'})};
- const buildSituations=()=>{situationOptions.innerHTML='';catalog[group(role)].forEach(item=>{const label=document.createElement('label');label.className='s90g-choice';label.innerHTML=`<input type="radio" name="situation" value="${item.id}"><span><strong>${item.label}</strong><small>${item.description}</small></span>`;situationOptions.appendChild(label)});roleValue.textContent=`Percorso per: ${roleLabels[role]}. Seleziona la situazione più vicina al caso reale.`};
- const renderResult=()=>{if(!selection)return;const calculated=calculatePrice(selection,units.value);if(calculated.unitCount)units.value=calculated.unitCount;document.getElementById('s90g-result-title').textContent=selection.title;document.getElementById('s90g-result-description').textContent=selection.description;document.getElementById('s90g-result-price').textContent=calculated.priceText;document.getElementById('s90g-result-price-note').textContent=calculated.priceNote;document.getElementById('s90g-result-time').textContent=selection.time;document.getElementById('s90g-result-checks').innerHTML=selection.checks.map(x=>`<li>${x}</li>`).join('');document.getElementById('s90g-result-deliverables').innerHTML=selection.deliverables.map(x=>`<li>${x}</li>`).join('');document.getElementById('s90g-result-limits').innerHTML=selection.limits.map(x=>`<li>${x}</li>`).join('');document.getElementById('s90g-result-relationship').textContent=selection.relationship;const source=new URL(location.href),cta=document.getElementById('s90g-result-cta');cta.dataset.service=selection.id;if(portalConfig.enabled&&portalConfig.url){const target=new URL(portalConfig.url);target.searchParams.set('requester_role',role);target.searchParams.set('case_context',selection.id);target.searchParams.set('service',selection.id);target.searchParams.set('service_title',selection.title);target.searchParams.set('service_time',selection.time);if(calculated.price!==null){target.searchParams.set('service_price',String(calculated.price));target.searchParams.set('service_currency','EUR')}if(selection.unitPrice)target.searchParams.set('unit_price',String(selection.unitPrice));target.searchParams.set('source_page',source.searchParams.get('source_page')||'analisi-preventiva');target.searchParams.set('content_type',source.searchParams.get('content_type')||'guided-path');target.searchParams.set('cta_position','step-3-result');['utm_source','utm_medium','utm_campaign','utm_content','utm_term','case_id'].forEach(k=>{const v=source.searchParams.get(k);if(v)target.searchParams.set(k,v)});if(calculated.unitCount)target.searchParams.set('units',String(calculated.unitCount));cta.href=target.toString();cta.dataset.portalEnabled='true';cta.querySelector('span').textContent='Inizia la richiesta';document.getElementById('s90g-result-disclaimer').textContent='Il servizio viene confermato dopo il controllo del materiale. Nel modulo successivo inserirai i dati iniziali; immagini, planimetrie e PDF saranno richiesti successivamente. Pagamento e consegna non sono ancora gestiti nel portale.'}else{cta.href='/contatti.html';cta.dataset.portalEnabled='false';cta.querySelector('span').textContent='Contatta Sistema 90G';document.getElementById('s90g-result-disclaimer').textContent='Servizio, prezzo e condizioni restano visibili. Il collegamento alla richiesta non è al momento configurato.'}document.dispatchEvent(new CustomEvent('s90g:path-result',{detail:{role,service:selection.id,units:calculated.unitCount||''}}))};
- roleOptions.addEventListener('change',()=>{role=selectedInput('role')?.value||'';form.querySelector('[data-next="2"]').disabled=!role});
- form.querySelector('[data-next="2"]').addEventListener('click',()=>{role=selectedInput('role')?.value||'';if(!role)return;selection=null;buildSituations();unitControl.hidden=true;form.querySelector('[data-next="3"]').disabled=true;show(2,{historyMode:'push'})});
- situationOptions.addEventListener('change',()=>{selection=findSelection(role,selectedInput('situation')?.value);unitControl.hidden=!(selection&&selection.unitPrice);form.querySelector('[data-next="3"]').disabled=!selection});
- units.addEventListener('input',()=>{if(Number(units.value)<3)units.setCustomValidity('Il minimo è 3 unità o varianti.');else units.setCustomValidity('')});
- form.querySelector('[data-next="3"]').addEventListener('click',()=>{if(!selection)return;renderResult();show(3,{historyMode:'push'})});
- form.querySelectorAll('[data-back]').forEach(btn=>btn.addEventListener('click',()=>{const n=Number(btn.dataset.back);if(n===1){selection=null;show(1,{historyMode:'push'})}else show(n,{historyMode:'push'})}));
- const restore=({scroll=true}={})=>{restoring=true;const params=new URL(location.href).searchParams;role=params.get('requester_role')||params.get('role_hint')||'';let step=Math.max(1,Math.min(3,Number(params.get('path_step'))||1));const roleInput=role&&form.querySelector(`input[name="role"][value="${role}"]`);if(roleInput){roleInput.checked=true;form.querySelector('[data-next="2"]').disabled=false;buildSituations();const hinted=params.get('service_hint');selection=findSelection(role,hinted);if(selection){const si=form.querySelector(`input[name="situation"][value="${selection.id}"]`);if(si)si.checked=true;unitControl.hidden=!selection.unitPrice;form.querySelector('[data-next="3"]').disabled=false;if(params.get('units'))units.value=params.get('units');if(step===3)renderResult()}else if(step===3)step=2}else if(step>1)step=1;show(step,{focus:false,scroll});restoring=false};
- window.addEventListener('popstate',()=>restore({scroll:true}));
- const params=new URL(location.href).searchParams;const initialPathIntent=location.hash==='#percorso'||['path_step','requester_role','role_hint','service_hint','source_page','content_type','cta_position'].some(key=>params.has(key));const hinted=params.get('service_hint');let hintedRole=params.get('role_hint')||params.get('requester_role')||'';if(!hintedRole&&hinted){const g=Object.keys(catalog).find(k=>catalog[k].some(x=>x.id===hinted));hintedRole=g==='private'?'private':g==='retailer'?'retailer':''}if(!hintedRole){const source=params.get('source_page');hintedRole=source==='rivenditori-cucine'?'retailer':source==='agenzie-immobiliari'?'agency':''}if(hintedRole&&!params.get('requester_role')){const url=new URL(location.href);url.searchParams.set('requester_role',hintedRole);url.searchParams.set('path_step',params.get('path_step')||'1');history.replaceState({s90gPath:true,step:Number(url.searchParams.get('path_step'))},'',url)}else if(initialPathIntent&&!params.get('path_step')){const url=new URL(location.href);url.searchParams.set('path_step','1');history.replaceState({s90gPath:true,step:1},'',url)}restore({scroll:initialPathIntent});
- const portalBanner=document.getElementById('s90g-portal-banner');if(portalBanner&&portalConfig.message){const message=portalBanner.querySelector('p');if(message)message.textContent=portalConfig.message}
+
+const services = {
+  'controllo-mirato': {
+    serviceId: 'S90G-K01',
+    requesterRole: 'private',
+    title: 'Controllo mirato cucina',
+    price: 127,
+    time: 'Entro 2 giorni lavorativi',
+    description: 'Per una sola domanda determinante su un progetto, una misura, un’apertura, un’interferenza, un elettrodomestico o una voce del preventivo.',
+    checks: [
+      'il dubbio principale dichiarato',
+      'le misure e i documenti pertinenti',
+      'le conseguenze visibili nell’uso quotidiano',
+      'i dati mancanti e le verifiche da richiedere'
+    ],
+    deliverables: [
+      'risposta strutturata sul problema concordato',
+      'criticità, conseguenze e condizioni da verificare',
+      'domande da rivolgere al soggetto competente',
+      'un chiarimento sul documento consegnato'
+    ],
+    limits: [
+      'una domanda principale',
+      'nessuna verifica completa dell’intero progetto',
+      'nessuna nuova composizione, Configuratore o render'
+    ]
+  },
+  'analisi-completa': {
+    serviceId: 'S90G-K02',
+    requesterRole: 'private',
+    title: 'Verifica completa progetto e preventivo cucina',
+    price: 253,
+    time: 'Entro 2 giorni lavorativi',
+    description: 'Per controllare nel loro insieme una cucina già progettata, le misure, le immagini, gli elettrodomestici e il preventivo prima dell’ordine.',
+    checks: [
+      'coerenza tra ambiente, misure e progetto',
+      'passaggi, aperture e interferenze leggibili',
+      'uso quotidiano e coordinamento tra mobili ed elettrodomestici',
+      'voci, esclusioni e dati da chiarire nel preventivo'
+    ],
+    deliverables: [
+      'report strutturato con criticità ordinate per priorità',
+      'conseguenze possibili e dati mancanti',
+      'verifiche da svolgere prima dell’ordine',
+      'un chiarimento scritto sul report'
+    ],
+    limits: [
+      'una cucina, una soluzione principale e un preventivo',
+      'nessuna nuova progettazione o ricostruzione nel Configuratore',
+      'nessun render, progetto esecutivo o seconda soluzione completa'
+    ]
+  },
+  'acquisto-assistito-cucina': {
+    serviceId: 'S90G-K03',
+    requesterRole: 'private',
+    title: 'Acquisto Assistito Cucina 90G',
+    price: 290,
+    time: 'Prima fase entro 3 giorni lavorativi',
+    description: 'Per sviluppare una direzione indipendente e una proposta preliminare prima del progetto commerciale definitivo del rivenditore.',
+    checks: [
+      'esigenze, funzioni e vincoli documentati',
+      'rapporti tra composizione, passaggi e aperture',
+      'coerenza della proposta principale',
+      'punti da affidare al rivenditore per l’adattamento definitivo'
+    ],
+    deliverables: [
+      'una proposta funzionale principale',
+      'sviluppo nel Configuratore con viste preliminari',
+      'cinque render della soluzione principale e una vista della variante di finitura',
+      'fascicolo conclusivo e una revisione circoscritta'
+    ],
+    limits: [
+      'nessun rilievo o progetto esecutivo',
+      'nessun preventivo, ordine, montaggio o collaudo',
+      'nessuna seconda composizione completa o revisione illimitata'
+    ]
+  },
+  'scelta-finiture-cucina': {
+    serviceId: 'S90G-K11',
+    requesterRole: 'private',
+    title: 'Scelta finiture cucina',
+    price: 47,
+    time: 'Entro 1 giorno lavorativo',
+    description: 'Per confrontare un massimo di due alternative già individuate, quando la composizione della cucina è definita.',
+    checks: [
+      'rapporto tra ante, top, schienale, pavimento e pareti',
+      'coerenza delle due alternative con luce e ambiente',
+      'uso quotidiano, manutenzione e punti da verificare dal vivo',
+      'differenze rilevanti tra le combinazioni proposte'
+    ],
+    deliverables: [
+      'confronto motivato tra le due alternative',
+      'punti di forza e possibili incoerenze',
+      'indicazione della direzione più equilibrata',
+      'verifiche da effettuare su campioni e materiali reali'
+    ],
+    limits: [
+      'massimo due alternative già selezionate',
+      'nessuna ricerca illimitata di materiali o prodotti',
+      'nessun render, campione fisico o garanzia cromatica dello schermo'
+    ]
+  },
+  'restyling-cucina-esistente': {
+    serviceId: 'S90G-K12',
+    requesterRole: 'private',
+    title: 'Restyling cucina esistente',
+    price: 79,
+    time: 'Entro 1 giorno lavorativo',
+    description: 'Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al fornitore prima di intervenire su una cucina esistente.',
+    checks: [
+      'stato documentabile degli elementi esistenti',
+      'coordinamento tra parti conservate e parti nuove',
+      'criticità visibili di ante, top, schienale e ferramenta',
+      'dati e compatibilità da verificare con rivenditore o artigiano'
+    ],
+    deliverables: [
+      'direzione principale del restyling',
+      'elenco ordinato degli elementi da conservare o modificare',
+      'criticità e richieste da sottoporre al fornitore',
+      'limiti e controlli necessari prima dell’ordine'
+    ],
+    limits: [
+      'nessun rilievo o certificazione di compatibilità',
+      'nessun progetto esecutivo, render, preventivo o ordine',
+      'i casi che richiedono una nuova composizione vengono riclassificati'
+    ]
+  }
+};
+
+const choiceDefinitions = [
+  {
+    slug: 'controllo-mirato',
+    title: 'Ho un solo dubbio preciso',
+    description: 'Una misura, un passaggio, un’apertura, un elettrodomestico, un’interferenza o una voce del preventivo.'
+  },
+  {
+    slug: 'analisi-completa',
+    title: 'Ho un progetto o un preventivo da controllare nel suo insieme',
+    description: 'Voglio verificare la cucina prima di firmare o confermare l’ordine.'
+  },
+  {
+    slug: 'acquisto-assistito-cucina',
+    title: 'Non ho ancora una soluzione soddisfacente',
+    description: 'Voglio sviluppare una direzione indipendente prima del progetto commerciale definitivo.'
+  },
+  {
+    slug: 'scelta-finiture-cucina',
+    title: 'Devo scegliere tra due finiture cucina',
+    description: 'La composizione è definita e voglio confrontare due alternative già individuate.'
+  },
+  {
+    slug: 'restyling-cucina-esistente',
+    title: 'Voglio aggiornare una cucina esistente',
+    description: 'Devo capire che cosa conservare, che cosa modificare e quali compatibilità verificare.'
+  }
+];
+
+const euro = value => new Intl.NumberFormat('it-IT', {
+  style: 'currency',
+  currency: 'EUR',
+  maximumFractionDigits: 0
+}).format(value);
+
+function ensureChoices(form) {
+  const grid = form.querySelector('.s90g-choice-grid');
+  if (!grid) return;
+
+  choiceDefinitions.forEach(choice => {
+    if (grid.querySelector(`input[value="${choice.slug}"]`)) return;
+
+    const label = document.createElement('label');
+    label.className = 's90g-choice';
+
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'kitchen_situation';
+    input.value = choice.slug;
+
+    const copy = document.createElement('span');
+    const title = document.createElement('strong');
+    const description = document.createElement('small');
+    title.textContent = choice.title;
+    description.textContent = choice.description;
+    copy.append(title, description);
+    label.append(input, copy);
+    grid.appendChild(label);
+  });
 }
-document.addEventListener('DOMContentLoaded',init);
+
+function init() {
+  const form = document.getElementById('s90g-kitchen-path');
+  if (!form) return;
+
+  ensureChoices(form);
+
+  const options = [...form.querySelectorAll('input[name="kitchen_situation"]')];
+  const result = document.getElementById('s90g-path-result');
+  const cta = document.getElementById('s90g-result-cta');
+
+  const renderList = (id, items) => {
+    const node = document.getElementById(id);
+    node.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+  };
+
+  const buildTarget = service => {
+    if (!portalConfig.enabled || !portalConfig.url) return '/contatti.html';
+
+    const target = new URL(portalConfig.url);
+    const source = new URL(window.location.href);
+
+    target.searchParams.set('requester_role', service.requesterRole || 'private');
+    target.searchParams.set('service', service.serviceId);
+    target.searchParams.set('units', '1');
+    target.searchParams.set('source_page', source.searchParams.get('source_page') || 'analisi-preventiva');
+    target.searchParams.set('content_type', source.searchParams.get('content_type') || 'guided-path');
+    target.searchParams.set('cta_position', source.searchParams.get('cta_position') || 'result');
+
+    [
+      'utm_source',
+      'utm_medium',
+      'utm_campaign',
+      'utm_content',
+      'utm_term',
+      'case_id',
+      'problem'
+    ].forEach(key => {
+      const value = source.searchParams.get(key);
+      if (value) target.searchParams.set(key, value);
+    });
+
+    return target.toString();
+  };
+
+  const showResult = slug => {
+    const service = services[slug];
+    if (!service) return;
+
+    document.getElementById('s90g-result-code').textContent = service.serviceId;
+    document.getElementById('s90g-result-title').textContent = service.title;
+    document.getElementById('s90g-result-description').textContent = service.description;
+    document.getElementById('s90g-result-price').textContent = euro(service.price);
+    document.getElementById('s90g-result-time').textContent = service.time;
+    renderList('s90g-result-checks', service.checks);
+    renderList('s90g-result-deliverables', service.deliverables);
+    renderList('s90g-result-limits', service.limits);
+
+    cta.href = buildTarget(service);
+    cta.dataset.service = service.serviceId;
+    cta.dataset.finalPortal = 'true';
+    cta.dataset.portalEnabled = String(Boolean(portalConfig.enabled && portalConfig.url));
+    cta.querySelector('span').textContent = portalConfig.enabled && portalConfig.url ? 'Inizia la richiesta' : 'Contatta Sistema 90G';
+
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('service_hint', slug);
+    url.hash = 'risultato';
+    history.replaceState({}, '', url);
+
+    document.dispatchEvent(new CustomEvent('s90g:path-result', {
+      detail: {
+        role: service.requesterRole || 'private',
+        service: service.serviceId,
+        units: '1'
+      }
+    }));
+  };
+
+  options.forEach(option => option.addEventListener('change', () => showResult(option.value)));
+
+  const initial = new URL(window.location.href).searchParams.get('service_hint');
+  if (initial && services[initial]) {
+    const input = options.find(option => option.value === initial);
+    if (input) {
+      input.checked = true;
+      showResult(initial);
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
 })();

@@ -1,0 +1,102 @@
+name: Verifica contratto collaudo Infomaniak
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+      - docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
+      - docs/INTEGRAZIONE_CUCINA_PROFESSIONISTI_INFOMANIAK_V1.md
+      - .github/workflows/verifica-contratto-collaudo-infomaniak.yml
+  push:
+    branches:
+      - integrazione/cucina-professionisti-infomaniak-v1
+    paths:
+      - docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+      - docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
+      - docs/INTEGRAZIONE_CUCINA_PROFESSIONISTI_INFOMANIAK_V1.md
+      - .github/workflows/verifica-contratto-collaudo-infomaniak.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verifica documento e stato non autorizzato
+        run: |
+          set -euo pipefail
+          DOC=docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+          test -f "$DOC"
+          grep -q 'nessuna risorsa creata e nessun rilascio autorizzato' "$DOC"
+          grep -q 'non autorizza:' "$DOC"
+          grep -q 'Gate 1 — creazione ambiente' "$DOC"
+          grep -q 'Gate 2 — migrazioni e test remoto' "$DOC"
+          grep -q 'Gate 3 — merge e rilascio' "$DOC"
+
+      - name: Verifica architettura isolata
+        run: |
+          set -euo pipefail
+          DOC=docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+          grep -q 'Console privata Node.js di collaudo' "$DOC"
+          grep -q 'SQLite isolato' "$DOC"
+          grep -q 'S90G_DATA_DIR' "$DOC"
+          grep -q 'DATA_BACKEND=sqlite' "$DOC"
+          grep -q 'DATA_WRITE_MODE=sqlite' "$DOC"
+          grep -q 'S90G_LEGACY_ONLINE_ADAPTERS=0' "$DOC"
+          grep -q 'S90G_PUBLIC_CLIENT_PORTAL=0' "$DOC"
+          grep -q 'Processi applicativi: 1' "$DOC"
+          grep -q 'MariaDB vuoto e dedicato' "$DOC"
+          grep -q 'non copiare il SQLite canonico del Mac' "$DOC"
+
+      - name: Verifica sicurezza e dati sintetici
+        run: |
+          set -euo pipefail
+          DOC=docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+          grep -q 'Basic Auth' "$DOC"
+          grep -q 'fail-closed' "$DOC"
+          grep -q 'nessun dato reale' "$DOC"
+          grep -q 'example.test' "$DOC"
+          grep -q 'HTTP 410' "$DOC"
+          grep -q 'HTTP 201' "$DOC"
+          grep -q 'HTTP 200' "$DOC"
+          grep -q 'HTTP 409' "$DOC"
+          grep -q 'senza creazione automatica di casi' "$DOC"
+          grep -q 'revocare il token API di collaudo' "$DOC"
+
+      - name: Verifica backup, rollback e pulizia
+        run: |
+          set -euo pipefail
+          DOC=docs/CONTRATTO_COLLAUDO_INFOMANIAK_ISOLATO_V1.md
+          grep -q 'db.backup' "$DOC"
+          grep -q 'PRAGMA integrity_check' "$DOC"
+          grep -q 'Rollback' "$DOC"
+          grep -q 'eliminare tutti i record sintetici' "$DOC"
+          grep -q 'ripristinare il database MariaDB di collaudo' "$DOC"
+
+      - name: Verifica checklist Gate 1
+        run: |
+          set -euo pipefail
+          GATE=docs/GATE1_VERIFICA_CAPACITA_INFOMANIAK_V1.md
+          test -f "$GATE"
+          grep -q 'non creare risorse' "$GATE"
+          grep -q 'Disponibilità sito Node.js' "$GATE"
+          grep -q 'Versioni Node.js disponibili' "$GATE"
+          grep -q 'Directory persistente privata' "$GATE"
+          grep -q 'Un solo processo applicativo' "$GATE"
+          grep -q 'Backend PHP e MariaDB isolati' "$GATE"
+          grep -q 'Esito Gate 1' "$GATE"
+          grep -q 'Solo dopo il rapporto Gate 1' "$GATE"
+
+      - name: Vincolo operativo
+        run: |
+          cat <<'EOF'
+          Questo workflow verifica soltanto contratto e checklist preliminare.
+          Non crea risorse, non usa segreti, non applica migrazioni e non esegue deploy.
+          EOF

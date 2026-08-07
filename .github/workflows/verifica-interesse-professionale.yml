@@ -1,0 +1,88 @@
+name: Verifica interesse professionale
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - interesse-professionale.html
+      - privacy-interessi-professionali.html
+      - professional-interest.js
+      - s90g-professional-interest-2026.css
+      - sitemap-professionisti.xml
+      - professionisti.html
+      - robots.txt
+      - sitemap.xml
+      - .htaccess
+      - .github/workflows/verifica-interesse-professionale.yml
+  push:
+    branches:
+      - integrazione/cucina-professionisti-infomaniak-v1
+    paths:
+      - interesse-professionale.html
+      - privacy-interessi-professionali.html
+      - professional-interest.js
+      - s90g-professional-interest-2026.css
+      - sitemap-professionisti.xml
+      - professionisti.html
+      - robots.txt
+      - sitemap.xml
+      - .htaccess
+      - .github/workflows/verifica-interesse-professionale.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verifica file obbligatori
+        run: |
+          set -euo pipefail
+          test -f interesse-professionale.html
+          test -f professional-interest.js
+          test -f s90g-professional-interest-2026.css
+          test -f privacy-interessi-professionali.html
+          test -f sitemap-professionisti.xml
+
+      - name: Verifica stato prudenziale
+        run: |
+          set -euo pipefail
+          grep -q 'data-s90g-professional-interest-form' interesse-professionale.html
+          grep -q 'data-active="false"' interesse-professionale.html
+          grep -q 'data-privacy-version="2026-08-04"' interesse-professionale.html
+          ! grep -q 'data-endpoint=' interesse-professionale.html
+          grep -q 'noindex,nofollow,noarchive' interesse-professionale.html
+          grep -q 'noindex,nofollow,noarchive' privacy-interessi-professionali.html
+          grep -q 'privacy-interessi-professionali.html' interesse-professionale.html
+          grep -Eq 'interesse-professionale|privacy-interessi-professionali' .htaccess
+          ! grep -q 'href="/interesse-professionale.html' professionisti.html
+          ! grep -q 'interesse-professionale.html' sitemap.xml
+          ! grep -q 'sitemap-professionisti.xml' robots.txt
+
+      - name: Verifica confini operativi
+        run: |
+          set -euo pipefail
+          grep -q 'Idempotency-Key' professional-interest.js
+          grep -q 'privacy_policy_version: privacyVersion' professional-interest.js
+          grep -q 'source_page: window.location.pathname' professional-interest.js
+          grep -q 's90g_cookie_consent' professional-interest.js
+          ! grep -q '/api/public/v1/requests' professional-interest.js
+          ! grep -Eqi 'insert into cases|createCase|crea.*caso' professional-interest.js
+          ! grep -q 'body.error' professional-interest.js
+          grep -q 'record Marketing' interesse-professionale.html
+          grep -q 'non trasforma automaticamente' interesse-professionale.html
+
+      - name: Verifica sitemap vuota
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse('sitemap-professionisti.xml').getroot()
+          assert len(list(root)) == 0, 'La sitemap non deve pubblicare pagine ancora bloccate'
+          print('sitemap professionisti prudenziale: OK')
+          PY
