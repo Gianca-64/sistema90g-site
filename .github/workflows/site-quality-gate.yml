@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: site-quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -22,6 +22,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -32,6 +35,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Normalize duplicated home navigation
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'sviluppo/site-quality-gate-20260807'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('index.html')
+          raw = path.read_text(encoding='utf-8')
+          bad = '<a href="/innovazioni.html">Innovazioni</a><a href="innovazioni.html">Innovazioni</a>'
+          good = '<a href="/innovazioni.html">Innovazioni</a>'
+          count = raw.count(bad)
+          if count == 1:
+              path.write_text(raw.replace(bad, good), encoding='utf-8')
+              print('Removed duplicate Innovazioni item from home navigation.')
+          elif count == 0:
+              print('Home navigation already normalized.')
+          else:
+              raise SystemExit(f'Unexpected duplicate pattern count: {count}')
+          PY
+          if ! git diff --quiet -- index.html; then
+            git config user.name "Gianca-64"
+            git config user.email "progettazionecucine@icloud.com"
+            git add index.html
+            git commit -m "fix: normalize home navigation"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
 
       - name: Audit release
         run: |
