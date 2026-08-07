@@ -16,6 +16,9 @@ const pages = [
   '/restyling-cucina-esistente.html',
   '/analisi-preventivo-cucina.html',
   '/problemi-errori-cucina.html',
+  '/cosa-controllare-prima-di-ordinare-cucina.html',
+  '/come-capire-se-progetto-cucina-funziona.html',
+  '/come-leggere-preventivo-cucina.html',
   '/casi-cucina.html',
   '/analisi-preventiva.html',
   '/interesse-professionale.html'
