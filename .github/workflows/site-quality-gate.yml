@@ -1,0 +1,46 @@
+name: Site quality gate
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Qualità sito pubblico
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Audit percorso cucina
+        run: python3 tools/audit-kitchen-focus.py
+
+      - name: Audit navigazione statica delle pagine indicizzate
+        run: python3 tools/audit-public-navigation.py
+
+      - name: Sintassi JavaScript percorso commerciale
+        run: node --check role-case-path.js
+
+      - name: Sintassi JavaScript navigazione
+        run: node --check navigation-conversion.js
