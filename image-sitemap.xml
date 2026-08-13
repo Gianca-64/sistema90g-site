@@ -1,5 +1,26 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://sistema90g.it/</loc>
+    <image:image>
+      <image:loc>https://sistema90g.it/images/01_HOME_HERO.jpg</image:loc>
+      <image:caption>Analisi indipendente di una cucina prima dell'ordine</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sistema90g.it/servizi.html</loc>
+    <image:image>
+      <image:loc>https://sistema90g.it/images/13_SERVIZI_HERO.jpg</image:loc>
+      <image:caption>Servizi di analisi indipendente dedicati alla cucina</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sistema90g.it/analisi-preventiva.html</loc>
+    <image:image>
+      <image:loc>https://sistema90g.it/images/03_HOME_METODO.jpg</image:loc>
+      <image:caption>Percorso guidato Sistema 90G per valutare la cucina</image:caption>
+    </image:image>
+  </url>
   <url>
     <loc>https://sistema90g.it/acquisto-assistito-cucina.html</loc>
     <image:image>
@@ -8,24 +29,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sistema90g.it/agenzie-immobiliari.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/23_PER_AGENZIE_HERO.jpg</image:loc>
-      <image:caption>Collaborazione tra agenzia immobiliare e Sistema 90G</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://sistema90g.it/analisi-completa.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/15_SERVIZI_ANALISI_COMPLETA.jpg</image:loc>
-      <image:caption>Analisi completa di progetto e preventivo</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/analisi-preventiva.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/03_HOME_METODO.jpg</image:loc>
-      <image:caption>Percorso guidato Sistema 90G per privati e professionisti</image:caption>
+      <image:caption>Analisi completa di progetto e preventivo cucina</image:caption>
     </image:image>
   </url>
   <url>
@@ -36,87 +43,31 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sistema90g.it/analisi-unita-varianti.html</loc>
+    <loc>https://sistema90g.it/controllo-progetto-cucina.html</loc>
     <image:image>
-      <image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.jpg</image:loc>
-      <image:caption>Confronto coordinato di più unità immobiliari o varianti</image:caption>
+      <image:loc>https://sistema90g.it/images/hero-controllo-progetto-cucina.svg</image:loc>
+      <image:caption>Controllo indipendente del progetto cucina prima della conferma</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sistema90g.it/restyling-cucina-esistente.html</loc>
+    <image:image>
+      <image:loc>https://sistema90g.it/images/hero-finiture-90g.jpg</image:loc>
+      <image:caption>Restyling e aggiornamento di una cucina esistente</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://sistema90g.it/casi-analizzati.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/18_CASI_HERO_ARCHIVIO.jpg</image:loc>
-      <image:caption>Archivio dei casi analizzati Sistema 90G</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/casi-camere-contenimento.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/18_CASI_HERO_ARCHIVIO.jpg</image:loc>
-      <image:caption>Camere, studio e contenimento</image:caption>
+      <image:caption>Archivio dei casi cucina analizzati da Sistema 90G</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://sistema90g.it/casi-cucina.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/19_CASI_CUCINA.jpg</image:loc>
-      <image:caption>Cucina e preventivi</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/casi-distribuzione-casa.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.jpg</image:loc>
-      <image:caption>Distribuzione e trasformazioni della casa</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/casi-soggiorno-open-space.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/20_CASI_DISTRIBUZIONE.jpg</image:loc>
-      <image:caption>Soggiorno e open space</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/casi-spazi-servizio.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/21_CASI_BAGNO.jpg</image:loc>
-      <image:caption>Bagno, lavanderia e spazi di servizio</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-bagno-lavatrice-dieci-centimetri.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-bagno-lavatrice-dieci-centimetri.jpg</image:loc>
-      <image:caption>Bagno con lavatrice e apertura della porta da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-cabina-armadio-125-cm-passaggio.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-cabina-armadio-125-cm-passaggio.jpg</image:loc>
-      <image:caption>Cabina armadio stretta con spazio di passaggio da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-cabina-armadio-camera-irregolare.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-cabina-armadio-camera-irregolare.jpg</image:loc>
-      <image:caption>Camera irregolare con cabina armadio e passaggi da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-camera-bambini-crescita.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-camera-bambini-crescita.jpg</image:loc>
-      <image:caption>Cameretta con letto a castello, armadio e scrivania da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-corridoio-porte-aperte.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-corridoio-porte-aperte.jpg</image:loc>
-      <image:caption>Corridoio di distribuzione con più porte da verificare</image:caption>
+      <image:caption>Casi reali relativi a cucina e preventivi</image:caption>
     </image:image>
   </url>
   <url>
@@ -130,49 +81,14 @@
     <loc>https://sistema90g.it/caso-cucina-profondita-75-angolo.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/caso-cucina-profondita-75-angolo.jpg</image:loc>
-      <image:caption>Cucina ad angolo con profondità maggiorata e contenimento da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-divano-letto-soggiorno-tre-persone.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-divano-letto-soggiorno-tre-persone.jpg</image:loc>
-      <image:caption>Soggiorno con divano letto usato come spazio notte</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-due-appartamenti-accessi-disimpegni.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-due-appartamenti-accessi-disimpegni.jpg</image:loc>
-      <image:caption>Planimetria da dividere in due appartamenti con cucine e bagni</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-garage-apertura-portiere.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-garage-apertura-portiere.jpg</image:loc>
-      <image:caption>Garage per un'auto con apertura portiere da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-ingresso-tavolo-living.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-ingresso-tavolo-living.jpg</image:loc>
-      <image:caption>Ingresso vicino al tavolo e zona giorno compressa</image:caption>
+      <image:caption>Cucina ad angolo con profondità maggiorata da verificare</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://sistema90g.it/caso-isola-passaggi-cucina.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/caso-isola-passaggi-cucina.jpg</image:loc>
-      <image:caption>Isola cucina con passaggi, sedute e aperture da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-lavanderia-oblo-porta.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-lavanderia-oblo-porta.jpg</image:loc>
-      <image:caption>Vano lavanderia con lavatrice e asciugatrice da verificare</image:caption>
+      <image:caption>Isola cucina con passaggi sedute e aperture da verificare</image:caption>
     </image:image>
   </url>
   <url>
@@ -190,213 +106,31 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sistema90g.it/caso-open-space-percorso-centrale.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-open-space-percorso-centrale.jpg</image:loc>
-      <image:caption>Open space attraversato dal percorso verso la zona notte</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-open-space-tv-divano-passaggi.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-open-space-tv-divano-passaggi.jpg</image:loc>
-      <image:caption>Open space con TV, divano e passaggio centrale</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://sistema90g.it/caso-preventivo-cucina-sconto-valore.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/22_CASI_PREVENTIVO.jpg</image:loc>
-      <image:caption>Preventivo cucina con voci e materiali da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-ripostiglio-profondita-scaffali.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-ripostiglio-profondita-scaffali.jpg</image:loc>
-      <image:caption>Ripostiglio con scaffalature profonde da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-scala-interna-terrazzo-planimetria.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-scala-interna-terrazzo-planimetria.jpg</image:loc>
-      <image:caption>Planimetria con scala interna verso il terrazzo</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-secondo-bagno-impianti-spazio.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-secondo-bagno-impianti-spazio.jpg</image:loc>
-      <image:caption>Secondo bagno ricavato vicino agli ambienti esistenti</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-soffitta-altezza-utile.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-soffitta-altezza-utile.jpg</image:loc>
-      <image:caption>Soffitta sotto falda con altezza utile da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-soggiorno-pianoforte-tavolo-divano-tv.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-soggiorno-pianoforte-tavolo-divano-tv.jpg</image:loc>
-      <image:caption>Soggiorno con tavolo, divano, TV e pianoforte verticale</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-studio-postazione-lavoro.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-studio-postazione-lavoro.jpg</image:loc>
-      <image:caption>Studio ricavato in casa con postazione di lavoro da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-terrazzo-passaggio-arredi.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-terrazzo-passaggio-arredi.jpg</image:loc>
-      <image:caption>Terrazzo con tavolo, sedie e fioriere da verificare</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-terza-camera-zona-giorno.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-terza-camera-zona-giorno.jpg</image:loc>
-      <image:caption>Redistribuzione della zona giorno per ricavare una terza camera</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/caso-tiranti-cavi-vista-impianto-ispezionabile.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg</image:loc>
-      <image:caption>Stanza ristrutturata con elementi metallici e cavi a vista</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/chi-e-sistema90g.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/18_CHI_SONO_GIANCARLO_METODO.jpg</image:loc>
-      <image:caption>Gian Carlo Primo, tecnico indipendente di Sistema 90G, al lavoro nel controllo di una planimetria quotata</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/contatti.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/28_CONTATTI_RACCOLTA_MATERIALI.jpg</image:loc>
-      <image:caption>Raccolta di immagini, PDF e planimetrie</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/controllo-mirato.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/14_SERVIZI_CONTROLLO_MIRATO.jpg</image:loc>
-      <image:caption>Controllo mirato su progetto e misure</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/controllo-progetto-cucina.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/hero-cucina-90g-2026.jpg</image:loc>
-      <image:caption>Verifica professionale di un progetto cucina già sviluppato</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/cookie-policy.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/01_HOME_HERO.jpg</image:loc>
-      <image:caption>Misurazione delle visite al sito Sistema 90G</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/esempio-fascicolo-cucina.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/esempio-acquisto-assistito-90g-20260802.jpg</image:loc>
-      <image:caption>Illustrazione del risultato di Acquisto Assistito Cucina 90G, senza misure o soluzione esecutiva</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/01_HOME_HERO.jpg</image:loc>
-      <image:caption>Analisi preventiva di spazi e cucina prima della decisione</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/innovazioni.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png</image:loc>
-      <image:caption>Colonna lavanderia a piena capacità con comandi ad altezza accessibile</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/metodo-sistema90g.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/03_HOME_METODO.jpg</image:loc>
-      <image:caption>Analisi preventiva indipendente con supporto AI e approvazione umana</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/privacy-policy.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/28_CONTATTI_RACCOLTA_MATERIALI.jpg</image:loc>
-      <image:caption>Dati e documenti associati a una richiesta Sistema 90G</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/professionisti.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/24_PROFESSIONISTI_HERO.jpg</image:loc>
-      <image:caption>Supporto Sistema 90G per professionisti dell’immobile</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/studio-preliminare-spazi.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/16_SERVIZI_PROGETTO_DA_ZERO.png</image:loc>
-      <image:caption>Studio preliminare degli spazi con planimetria descrittiva</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/restyling-cucina-esistente.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/hero-cucina-90g-2026.jpg</image:loc>
-      <image:caption>Restyling di una cucina esistente</image:caption>
+      <image:caption>Preventivo cucina con voci materiali e valore da verificare</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://sistema90g.it/rivenditori-cucine.html</loc>
     <image:image>
-      <image:loc>https://sistema90g.it/images/hero-cucina-90g-2026.jpg</image:loc>
-      <image:caption>Analisi indipendente di un progetto cucina già sviluppato</image:caption>
+      <image:loc>https://sistema90g.it/images/hero-rivenditori-processo-90g.webp</image:loc>
+      <image:caption>Analisi indipendente dei progetti cucina per rivenditori</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://sistema90g.it/scelta-finiture-casa.html</loc>
+    <loc>https://sistema90g.it/innovazioni.html</loc>
     <image:image>
-      <image:loc>https://sistema90g.it/images/17_SERVIZI_FINITURE.jpg</image:loc>
-      <image:caption>Confronto tra due alternative di finitura cucina</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/servizi.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/13_SERVIZI_HERO.jpg</image:loc>
-      <image:caption>Servizi Sistema 90G per privati e professionisti</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sistema90g.it/verifica-planimetria-distribuzione-casa.html</loc>
-    <image:image>
-      <image:loc>https://sistema90g.it/images/hero-planimetria-90g-2026.jpg</image:loc>
-      <image:caption>Verifica preliminare di planimetria e possibilità visibili dell’immobile</image:caption>
+      <image:loc>https://sistema90g.it/images/editoriale/innovazioni-sistema90g.webp</image:loc>
+      <image:caption>Innovazioni di prodotto materiali ed elettrodomestici per la cucina</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://sistema90g.it/approfondimenti/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.html</loc>
     <image:image>
       <image:loc>https://sistema90g.it/images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg</image:loc>
-      <image:caption>Lavastoviglie con microbolle, vapore e asciugatura attiva: che cosa cambia davvero</image:caption>
+      <image:caption>Lavastoviglie con microbolle vapore e asciugatura attiva</image:caption>
     </image:image>
   </url>
 </urlset>
