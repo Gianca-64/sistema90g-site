@@ -27,6 +27,16 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
+# Guard rail semantico: il sito pubblico deve comunicare esclusivamente cucina.
+# Ripulisce residui storici nei metadati/schema di pagine ancora utili e indicizzabili.
+find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
+  sed -i.bak \
+    -e 's/Tecnico indipendente per analisi preventiva di progetti casa e cucina/Tecnico indipendente per analisi preventiva di progetti cucina/g' \
+    -e 's/Analisi preventiva indipendente per progetti, spazi, preventivi e cucine\./Analisi preventiva indipendente per progetti, preventivi, spazi e scelte della cucina./g' \
+    "$file"
+  rm -f "$file.bak"
+done
+
 # Guard rail: i materiali operativi non devono comparire nell'output Pages.
 for forbidden in \
   '.git' '.github' 'tools' '.htaccess' 'CNAME' 'README.md' \
@@ -38,7 +48,7 @@ for forbidden in \
 done
 
 # Requisiti minimi del sito pubblico.
-for required in index.html robots.txt sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html; do
+for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html; do
   test -f "$DIST/$required" || { echo "ERRORE: manca $required in dist" >&2; exit 1; }
 done
 
