@@ -16,3 +16,50 @@ https://:version.:project.pages.dev/*
 # Questa regola copre anche l'URL corrente sistema90g-site.sistema90g.workers.dev.
 https://:worker.:subdomain.workers.dev/*
   X-Robots-Tag: noindex, nofollow
+
+# Archivio storico extra-cucina: resta tecnicamente disponibile ma non deve
+# continuare a costruire segnali di indicizzazione sul vecchio perimetro.
+/caso-bagno-lavatrice-dieci-centimetri.html
+  X-Robots-Tag: noindex, follow
+/caso-cabina-armadio-125-cm-passaggio.html
+  X-Robots-Tag: noindex, follow
+/caso-cabina-armadio-camera-irregolare.html
+  X-Robots-Tag: noindex, follow
+/caso-camera-bambini-crescita.html
+  X-Robots-Tag: noindex, follow
+/caso-corridoio-porte-aperte.html
+  X-Robots-Tag: noindex, follow
+/caso-divano-letto-soggiorno-tre-persone.html
+  X-Robots-Tag: noindex, follow
+/caso-due-appartamenti-accessi-disimpegni.html
+  X-Robots-Tag: noindex, follow
+/caso-garage-apertura-portiere.html
+  X-Robots-Tag: noindex, follow
+/caso-ingresso-tavolo-living.html
+  X-Robots-Tag: noindex, follow
+/caso-lavanderia-oblo-porta.html
+  X-Robots-Tag: noindex, follow
+/caso-open-space-percorso-centrale.html
+  X-Robots-Tag: noindex, follow
+/caso-open-space-tv-divano-passaggi.html
+  X-Robots-Tag: noindex, follow
+/caso-ripostiglio-profondita-scaffali.html
+  X-Robots-Tag: noindex, follow
+/caso-scala-interna-terrazzo-planimetria.html
+  X-Robots-Tag: noindex, follow
+/caso-secondo-bagno-impianti-spazio.html
+  X-Robots-Tag: noindex, follow
+/caso-soffitta-altezza-utile.html
+  X-Robots-Tag: noindex, follow
+/caso-soggiorno-pianoforte-tavolo-divano-tv.html
+  X-Robots-Tag: noindex, follow
+/caso-studio-postazione-lavoro.html
+  X-Robots-Tag: noindex, follow
+/caso-terrazzo-passaggio-arredi.html
+  X-Robots-Tag: noindex, follow
+/caso-terza-camera-zona-giorno.html
+  X-Robots-Tag: noindex, follow
+/caso-tiranti-cavi-vista-impianto-ispezionabile.html
+  X-Robots-Tag: noindex, follow
+/approfondimenti/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.html
+  X-Robots-Tag: noindex, follow
