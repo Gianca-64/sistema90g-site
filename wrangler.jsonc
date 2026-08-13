@@ -5,5 +5,15 @@
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "sistema90g.it/*",
+      "zone_name": "sistema90g.it"
+    },
+    {
+      "pattern": "www.sistema90g.it/*",
+      "zone_name": "sistema90g.it"
+    }
+  ]
 }
