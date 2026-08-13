@@ -27,6 +27,41 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
+# Perimetro pubblico: esclusivamente cucina.
+# Manteniamo solo i sei casi reali cucina attualmente approvati; tutti gli altri
+# vecchi casi casa/soggiorno/camere/bagno/garage/terrazzo vengono esclusi dal deploy.
+case_keep='^(caso-cucina-piccola-tre-lati|caso-cucina-profondita-75-angolo|caso-isola-passaggi-cucina|caso-lavastoviglie-passaggio-cucina|caso-lavello-sotto-finestra-aperture|caso-preventivo-cucina-sconto-valore)\.html$'
+find "$DIST" -maxdepth 1 -type f -name 'caso-*.html' -print0 | while IFS= read -r -d '' file; do
+  base="$(basename "$file")"
+  if ! printf '%s\n' "$base" | grep -Eq "$case_keep"; then
+    rm -f "$file"
+  fi
+done
+
+# Le vecchie raccolte extra-cucina non devono essere pubblicate come pagine autonome.
+rm -f \
+  "$DIST/casi-camere-contenimento.html" \
+  "$DIST/casi-distribuzione-casa.html" \
+  "$DIST/casi-soggiorno-open-space.html" \
+  "$DIST/casi-spazi-servizio.html" \
+  "$DIST/verifica-planimetria-distribuzione-casa.html" \
+  "$DIST/scelta-finiture-casa.html" \
+  "$DIST/agenzie-immobiliari.html" \
+  "$DIST/analisi-unita-varianti.html" \
+  "$DIST/studio-preliminare-spazi.html"
+
+# Se un vecchio URL HTML ha gia un redirect 301 esplicito, rimuoviamo il file fisico
+# dall'output cosi il redirect non puo essere mascherato da una risorsa statica omonima.
+while read -r source target status rest; do
+  [ "${status:-}" = "301" ] || continue
+  case "$source" in
+    /*.html)
+      legacy="${source#/}"
+      rm -f "$DIST/$legacy"
+      ;;
+  esac
+done < "$DIST/_redirects"
+
 # Guard rail semantico: il sito pubblico deve comunicare esclusivamente cucina.
 # Ripulisce residui storici nei metadati/schema di pagine ancora utili e indicizzabili.
 find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
@@ -35,6 +70,17 @@ find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
     -e 's/Analisi preventiva indipendente per progetti, spazi, preventivi e cucine\./Analisi preventiva indipendente per progetti, preventivi, spazi e scelte della cucina./g' \
     "$file"
   rm -f "$file.bak"
+done
+
+# Guard rail: nessuna pagina extra-cucina nota puo rientrare accidentalmente nel deploy.
+for forbidden_public in \
+  'casi-camere-contenimento.html' 'casi-distribuzione-casa.html' \
+  'casi-soggiorno-open-space.html' 'casi-spazi-servizio.html' \
+  'verifica-planimetria-distribuzione-casa.html' 'scelta-finiture-casa.html'; do
+  if [ -e "$DIST/$forbidden_public" ]; then
+    echo "ERRORE: pagina extra-cucina presente in dist: $forbidden_public" >&2
+    exit 1
+  fi
 done
 
 # Guard rail: i materiali operativi non devono comparire nell'output Pages.
@@ -51,5 +97,12 @@ done
 for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html; do
   test -f "$DIST/$required" || { echo "ERRORE: manca $required in dist" >&2; exit 1; }
 done
+
+# Verifica finale dei casi pubblicati: devono essere esattamente i sei casi cucina approvati.
+case_count="$(find "$DIST" -maxdepth 1 -type f -name 'caso-*.html' | wc -l | tr -d ' ')"
+if [ "$case_count" -ne 6 ]; then
+  echo "ERRORE: attesi 6 casi cucina pubblici, trovati $case_count" >&2
+  exit 1
+fi
 
 echo "Cloudflare Pages dist pronta: $(find "$DIST" -type f | wc -l | tr -d ' ') file pubblici"
