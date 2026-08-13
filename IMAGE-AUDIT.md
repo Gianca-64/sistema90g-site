@@ -8,9 +8,9 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - File immagine presenti: **188**
 - Immagini di contenuto pubblicate: **144**
 - File riutilizzati in più punti: **36**
-- Riferimenti mancanti: **1**
+- Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **132**
+- Immagini non utilizzate: **131**
 
 ## Mappa pagina → immagine → contesto
 
@@ -144,7 +144,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
-| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.webp` | Ogni approfondimento considera benefici possibili, ingombri reali, condizioni di installazione, impianti necessari, manutenzione, compatibil | Tecnologie di lavaggio e asciugatura per lavastoviglie |
+| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
@@ -404,7 +404,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-- `innovazioni.html` → `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.webp`
+Nessun riferimento mancante.
 
 ## Script che possono cambiare immagini nel browser
 
@@ -497,7 +497,6 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` — —
 - `images/editoriale/innovazioni-sistema90g.webp` — —
-- `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` — —
 - `images/final/case-01-dishwasher.jpg` — —
 - `images/final/case-02-entry-living.jpg` — —
 - `images/final/case-03-compact-kitchen.jpg` — —
