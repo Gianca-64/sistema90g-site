@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **78**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **156**
-- File riutilizzati in più punti: **39**
-- Riferimenti mancanti: **0**
+- Immagini di contenuto pubblicate: **144**
+- File riutilizzati in più punti: **36**
+- Riferimenti mancanti: **1**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **127**
+- Immagini non utilizzate: **132**
 
 ## Mappa pagina → immagine → contesto
 
@@ -27,17 +27,18 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Per leggere insieme progetto, funzioni, passaggi, documenti e preventivo prima della conferma. | Analisi completa di progetto e preventivo |
 | `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Indica da quale ruolo lo stai affrontando e che cosa devi chiarire. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere | Percorso guidato Sistema 90G per privati e professionisti |
-| `analisi-preventiva.html` | `images/08_HOME_CHIUSURA.jpg` | Scegli ruolo e situazione, guarda il servizio e il prezzo, poi decidi liberamente se sottoporre il caso reale. | Valutazione verificata prima della condivisione |
+| `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali. | Percorso di analisi per una cucina |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `analisi-unita-varianti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og | Confronto coordinato di più unità immobiliari o varianti |
-| `casi-analizzati.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Le pagine mostrano come misure, aperture, funzioni, documenti e uso quotidiano cambiano il modo di leggere una decisione. | Archivio dei casi analizzati Sistema 90G |
-| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione. | Lavastoviglie aperta che riduce il passaggio in cucina |
-| `casi-analizzati.html` | `images/caso-terza-camera-zona-giorno.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Redistribuzione della zona giorno per ricavare una terza camera |
-| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Una camera in più modifica la qualità degli spazi comuni. | Preventivo cucina con voci e materiali da verificare |
-| `casi-analizzati.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | Il totale non spiega da solo che cosa viene fornito. | Cabina armadio stretta con spazio di passaggio da verificare |
-| `casi-analizzati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La pratica viene registrata nella Console; la valutazione proposta viene verificata personalmente prima dell’invio. | Materiali per sottoporre un caso |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano  | Archivio casi cucina Sistema 90G |
+| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo. | Lavastoviglie e passaggio |
+| `casi-analizzati.html` | `images/caso-isola-passaggi-cucina.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola e passaggi |
+| `casi-analizzati.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Le distanze vanno lette durante l'uso, non solo a elementi chiusi. | Lavello sotto finestra |
+| `casi-analizzati.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Rubinetto, anta e serramento devono poter convivere realmente. | Cucina piccola su tre lati |
+| `casi-analizzati.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Più contenimento non significa automaticamente più funzionalità. | Profondità 75 e angolo |
+| `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Una variazione di profondità modifica accessibilità, raccordi e spazio utile. | Preventivo cucina |
+| `casi-analizzati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Valuta il tuo caso cucina prima di confermare. | Materiali per analisi cucina |
 | `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Camere, studio e contenimento |
 | `casi-camere-contenimento.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Cabina armadio stretta con spazio di passaggio da verificare |
 | `casi-camere-contenimento.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | La misura nominale deve includere uso e apertura. | Camera irregolare con cabina armadio e passaggi da verificare |
@@ -129,11 +130,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `caso-terza-camera-zona-giorno.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia planimetria, misure, aperture e posizione degli impianti esistenti. | Raccolta di planimetria e dati per ricavare una terza camera |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/caso-tiranti-cavi-vista-impianto-ispezionabile.jpg` | Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026 | Stanza ristrutturata con elementi metallici e cavi a vista |
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
-| `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Leggo progetti, planimetrie, preventivi e immagini con un obiettivo preciso: individuare prima i problemi che possono | Gian Carlo Primo, tecnico indipendente di Sistema 90G, al lavoro nel controllo di una planimetria quotata |
-| `chi-e-sistema90g.html` | `images/01_individuo_il_problema.svg` | Prima si cerca il problema invisibile. Poi si valuta la scelta. |  |
-| `chi-e-sistema90g.html` | `images/02_valuto_la_conseguenza.svg` | Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard. |  |
-| `chi-e-sistema90g.html` | `images/03_definisco_le_priorita.svg` | Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova. |  |
-| `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Descrivi il dubbio principale e inizia la richiesta. Se servono immagini o documenti, riceverai le istruzioni per completarli. | Caso analizzato da Sistema 90G |
+| `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Oggi Sistema 90G concentra tutta la propria attività sulle cucine: progetto, preventivo, misure, aperture, passaggi,  | Gian Carlo Primo, fondatore di Sistema 90G |
+| `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -141,25 +139,16 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
-| `index.html` | `images/01_HOME_HERO.jpg` | Una selezione di casi analizzati è pubblicata in forma anonima e semplificata. | Analisi preventiva di spazi e cucina prima della decisione |
-| `index.html` | `images/05_HOME_CASO_1.jpg` | Non per creare allarme, ma per capire che cosa deve essere chiarito prima della decisione. | Lavastoviglie aperta e passaggio |
-| `index.html` | `images/06_HOME_CASO_2.jpg` | La distanza sembra sufficiente finché l’elettrodomestico rimane chiuso. | Terza camera e zona giorno |
-| `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una stanza in più modifica luce, passaggi e qualità dello spazio comune. | Preventivo cucina |
-| `index.html` | `images/01_individuo_il_problema.svg` | Il sistema organizza i dati; ogni valutazione viene verificata personalmente prima dell’invio. |  |
-| `index.html` | `images/02_valuto_la_conseguenza.svg` | Il portale raccoglie ruolo, servizio e dati iniziali. |  |
-| `index.html` | `images/03_definisco_le_priorita.svg` | Immagini e PDF vengono richiesti con istruzioni dedicate. |  |
-| `index.html` | `images/04_evito_costi_tardivi.svg` | Nessuna valutazione parte automaticamente. |  |
-| `index.html` | `images/05_decidere_meglio.svg` | Dopo il controllo del materiale completo. |  |
-| `index.html` | `images/03_HOME_METODO.jpg` | Non sono ancora gestiti nel portale pubblico. | Planimetria descrittiva e analisi |
-| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo; il portale raccoglie la richiesta iniziale. Allegati, pagamento e consegna verranno gestiti sep | Invio dei materiali per una prima valutazione |
-| `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Quando una novità può migliorare davvero un progetto | Studio preliminare di una lavanderia con soluzioni per accessibilità, organizzazione e manutenzione |
-| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Analisi indipendenti di prodotti, materiali e soluzioni, con benefici possibili, condizioni di installazione e limiti d’uso. | Lavastoviglie con microbolle, vapore e asciugatura attiva: che cosa cambia davvero |
-| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Microbolle, vapore, sensori e asciugatura attiva affrontano lavaggio, aloni e umidità residua; le prestazioni dichiarate vanno però verifica | Colonna lavanderia a piena capacità con comandi ad altezza accessibile |
-| `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Analisi preventiva di una planimetria con annotazioni essenziali |
-| `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell’invio dei dati personali. | Raccolta dei materiali per una verifica preventiva |
+| `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
+| `index.html` | `images/05_HOME_CASO_1.jpg` | Interferenze, aperture, passaggi e preventivi: esempi anonimi per capire cosa conviene verificare prima. | Lavastoviglie aperta e passaggio |
+| `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
+| `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
+| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
+| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.webp` | Ogni approfondimento considera benefici possibili, ingombri reali, condizioni di installazione, impianti necessari, manutenzione, compatibil | Tecnologie di lavaggio e asciugatura per lavastoviglie |
+| `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
+| `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
-| `professionisti.html` | `images/03_HOME_METODO.jpg` | Organizza e verifica casi concreti senza sostituire chi mantiene l’incarico, la responsabilità tecnica o il rapporto commerciale con il clie | Supporto Sistema 90G per professionisti dell’immobile |
-| `professionisti.html` | `images/08_HOME_CHIUSURA.jpg` | Il cliente finale rimane associato al soggetto che presenta il caso. | Gestione coordinata della pratica professionale |
+| `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -167,8 +156,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio. | Collaborazione tra rivenditore e controllo indipendente |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Questa pagina descrive perimetro, risultato e limiti. Il prezzo compare nel percorso guidato dopo la scelta del ruolo e della situazione, pr | Servizi Sistema 90G per privati e professionisti |
-| `servizi.html` | `images/08_HOME_CHIUSURA.jpg` | Dopo il terzo passaggio potrai decidere se aprire la pratica e inviare il materiale. Il servizio viene confermato soltanto dopo il controllo | Scelta del percorso prima dell’invio della pratica |
+| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G non si occupa più di ambienti generici della casa: tutti i servizi pubblici sono oggi concentrati sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
@@ -178,57 +166,34 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/01_HOME_HERO.jpg` — 2 utilizzi
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
-- `index.html` — Una selezione di casi analizzati è pubblicata in forma anonima e semplificata.
+- `index.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
 
-### `images/01_individuo_il_problema.svg` — 3 utilizzi
+### `images/03_HOME_METODO.jpg` — 3 utilizzi
 
-- `agenzie-immobiliari.html` — Non una brochure più bella. Una lettura più credibile dell'immobile.
-- `chi-e-sistema90g.html` — Prima si cerca il problema invisibile. Poi si valuta la scelta.
-- `index.html` — Il sistema organizza i dati; ogni valutazione viene verificata personalmente prima dell’invio.
-
-### `images/02_valuto_la_conseguenza.svg` — 3 utilizzi
-
-- `agenzie-immobiliari.html` — Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa.
-- `chi-e-sistema90g.html` — Planimetrie, render, preventivi, foto e dubbi vengono letti insieme, senza risposte standard.
-- `index.html` — Il portale raccoglie ruolo, servizio e dati iniziali.
-
-### `images/03_HOME_METODO.jpg` — 5 utilizzi
-
-- `analisi-preventiva.html` — Indica da quale ruolo lo stai affrontando e che cosa devi chiarire. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere
-- `index.html` — Non sono ancora gestiti nel portale pubblico.
-- `metodo-sistema90g.html` — Ultimo aggiornamento: 2 agosto 2026
-- `professionisti.html` — Organizza e verifica casi concreti senza sostituire chi mantiene l’incarico, la responsabilità tecnica o il rapporto commerciale con il clie
+- `analisi-preventiva.html` — Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali.
+- `metodo-sistema90g.html` — Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell'
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
-### `images/03_definisco_le_priorita.svg` — 2 utilizzi
+### `images/08_HOME_CHIUSURA.jpg` — 8 utilizzi
 
-- `chi-e-sistema90g.html` — Passaggi, aperture, manutenzione, uso contemporaneo e gesti quotidiani vengono messi alla prova.
-- `index.html` — Immagini e PDF vengono richiesti con istruzioni dedicate.
-
-### `images/05_decidere_meglio.svg` — 2 utilizzi
-
-- `agenzie-immobiliari.html` — Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate.
-- `index.html` — Dopo il controllo del materiale completo.
-
-### `images/08_HOME_CHIUSURA.jpg` — 11 utilizzi
-
-- `analisi-preventiva.html` — Scegli ruolo e situazione, guarda il servizio e il prezzo, poi decidi liberamente se sottoporre il caso reale.
 - `casi-camere-contenimento.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-cucina.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-distribuzione-casa.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-soggiorno-open-space.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
-- `index.html` — Il percorso mostra servizio, prezzo e tempo; il portale raccoglie la richiesta iniziale. Allegati, pagamento e consegna verranno gestiti sep
-- `metodo-sistema90g.html` — Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell’invio dei dati personali.
-- `professionisti.html` — Il cliente finale rimane associato al soggetto che presenta il caso.
-- `servizi.html` — Dopo il terzo passaggio potrai decidere se aprire la pratica e inviare il materiale. Il servizio viene confermato soltanto dopo il controllo
+- `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
+- `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/18_CASI_HERO_ARCHIVIO.jpg` — 3 utilizzi
+### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
 
 - `404.html` — Il collegamento può essere cambiato oppure la pagina può essere stata rimossa.
-- `casi-analizzati.html` — Le pagine mostrano come misure, aperture, funzioni, documenti e uso quotidiano cambiano il modo di leggere una decisione.
 - `casi-camere-contenimento.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
+
+### `images/19_CASI_CUCINA.jpg` — 2 utilizzi
+
+- `casi-analizzati.html` — L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano 
+- `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
 ### `images/20_CASI_DISTRIBUZIONE.jpg` — 3 utilizzi
 
@@ -239,10 +204,10 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 ### `images/22_CASI_PREVENTIVO.jpg` — 5 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
-- `casi-analizzati.html` — Una camera in più modifica la qualità degli spazi comuni.
+- `casi-analizzati.html` — Una variazione di profondità modifica accessibilità, raccordi e spazio utile.
 - `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `index.html` — Una stanza in più modifica luce, passaggi e qualità dello spazio comune.
+- `index.html` — Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento.
 
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
@@ -254,7 +219,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-completa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
-- `casi-analizzati.html` — La pratica viene registrata nella Console; la valutazione proposta viene verificata personalmente prima dell’invio.
+- `casi-analizzati.html` — Valuta il tuo caso cucina prima di confermare.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Invia planimetria, misure nette e sistema di apertura previsto.
 - `caso-cabina-armadio-camera-irregolare.html` — Invia planimetria, misure, fotografie e posizione di letto e aperture.
@@ -294,9 +259,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-spazi-servizio.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/caso-cabina-armadio-125-cm-passaggio.jpg` — 3 utilizzi
+### `images/caso-cabina-armadio-125-cm-passaggio.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — Il totale non spiega da solo che cosa viene fornito.
 - `casi-camere-contenimento.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
@@ -315,13 +279,15 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-distribuzione-casa.html` — Una camera in più modifica la qualità degli spazi comuni.
 - `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
-### `images/caso-cucina-piccola-tre-lati.jpg` — 2 utilizzi
+### `images/caso-cucina-piccola-tre-lati.jpg` — 3 utilizzi
 
+- `casi-analizzati.html` — Rubinetto, anta e serramento devono poter convivere realmente.
 - `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/caso-cucina-profondita-75-angolo.jpg` — 2 utilizzi
+### `images/caso-cucina-profondita-75-angolo.jpg` — 3 utilizzi
 
+- `casi-analizzati.html` — Più contenimento non significa automaticamente più funzionalità.
 - `casi-cucina.html` — Più mobili non significano automaticamente maggiore funzionalità.
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
@@ -345,10 +311,12 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
-### `images/caso-isola-passaggi-cucina.jpg` — 2 utilizzi
+### `images/caso-isola-passaggi-cucina.jpg` — 4 utilizzi
 
+- `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+- `index.html` — La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso.
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
 
@@ -357,12 +325,13 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 3 utilizzi
 
-- `casi-analizzati.html` — Un caso pubblico aiuta a riconoscere il problema, non a copiare la soluzione.
+- `casi-analizzati.html` — I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo.
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/caso-lavello-sotto-finestra-aperture.jpg` — 2 utilizzi
+### `images/caso-lavello-sotto-finestra-aperture.jpg` — 3 utilizzi
 
+- `casi-analizzati.html` — Le distanze vanno lette durante l'uso, non solo a elementi chiusi.
 - `casi-cucina.html` — Una profondità particolare modifica raccordi, aperture e spazio.
 - `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
@@ -411,9 +380,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `casi-spazi-servizio.html` — L’auto entra, ma bisogna poter aprire e muoversi.
 - `caso-terrazzo-passaggio-arredi.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
-### `images/caso-terza-camera-zona-giorno.jpg` — 3 utilizzi
+### `images/caso-terza-camera-zona-giorno.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-distribuzione-casa.html` — Lo spazio disponibile non basta senza impianti e passaggi.
 - `caso-terza-camera-zona-giorno.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
@@ -436,7 +404,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 ## Riferimenti mancanti
 
-Nessun riferimento mancante.
+- `innovazioni.html` → `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.webp`
 
 ## Script che possono cambiare immagini nel browser
 
@@ -451,7 +419,10 @@ Nessun riferimento mancante.
 ## Immagini disponibili ma non utilizzate
 
 - `images/02_HOME_SCENA_PROBLEMA.png` — —
+- `images/03_definisco_le_priorita.svg` — viewBox 0 0 64 64
 - `images/04_HOME_COSTO_TARDIVO.png` — —
+- `images/04_evito_costi_tardivi.svg` — viewBox 0 0 64 64
+- `images/06_HOME_CASO_2.jpg` — —
 - `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
 - `images/07_HOME_CASO_3.jpg` — —
 - `images/07_analisi_completa.svg` — viewBox 0 0 64 64
@@ -524,6 +495,9 @@ Nessun riferimento mancante.
 - `images/caso-scala-planimetria-2026.jpg` — —
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
+- `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` — —
+- `images/editoriale/innovazioni-sistema90g.webp` — —
+- `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` — —
 - `images/final/case-01-dishwasher.jpg` — —
 - `images/final/case-02-entry-living.jpg` — —
 - `images/final/case-03-compact-kitchen.jpg` — —
@@ -573,7 +547,6 @@ Nessun riferimento mancante.
 - `images/hero-preventivo-90g-2026.jpg` — —
 - `images/hero-preventivo-90g.jpg` — —
 - `images/hero-progetto-zero-90g.jpg` — —
-- `images/hero-rivenditori-processo-90g.webp` — —
 - `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
 - `images/hero-verifica-planimetria-casa.svg` — viewBox 0 0 1200 760
 - `images/homepage-approvata.svg` — viewBox 0 0 560 373
