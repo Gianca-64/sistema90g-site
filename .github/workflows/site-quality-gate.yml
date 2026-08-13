@@ -33,12 +33,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Audit release
+      - name: Audit release diagnostico
+        id: release_audit
+        shell: bash
         run: |
-          if ! python tools/audit_release.py; then
-            python tools/diagnose_navigation_variants.py
-            exit 1
+          set +e
+          python tools/audit_release.py 2>&1 | tee audit-release.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            python tools/diagnose_navigation_variants.py 2>&1 | tee -a audit-release.log
           fi
+          echo "$status" > audit-release.status
+          exit 0
 
       - name: Contratto responsive
         run: python tools/test_responsive_contract.py
@@ -51,3 +57,37 @@ jobs:
 
       - name: Contratto sezione D
         run: node tools/test_section_d_contract.js
+
+      - name: Build Cloudflare Pages
+        run: bash tools/build_cloudflare.sh
+
+      - name: Verifica confine output Cloudflare
+        run: |
+          test -f dist/index.html
+          test -f dist/_headers
+          test -f dist/_redirects
+          test ! -e dist/tools
+          test ! -e dist/.github
+          test ! -e dist/.htaccess
+          test ! -e dist/CNAME
+          ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
+
+      - name: Pubblica diagnostica audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-audit-diagnostics
+          path: |
+            audit-release.log
+            audit-release.status
+          retention-days: 7
+
+      - name: Applica esito audit release
+        if: always()
+        shell: bash
+        run: |
+          status="$(cat audit-release.status 2>/dev/null || echo 1)"
+          if [ "$status" -ne 0 ]; then
+            echo "Audit release non superato. Consultare l'artifact site-audit-diagnostics."
+            exit "$status"
+          fi
