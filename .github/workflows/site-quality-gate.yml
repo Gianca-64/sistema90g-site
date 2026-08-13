@@ -51,3 +51,17 @@ jobs:
 
       - name: Contratto sezione D
         run: node tools/test_section_d_contract.js
+
+      - name: Build Cloudflare Pages
+        run: bash tools/build_cloudflare.sh
+
+      - name: Verifica confine output Cloudflare
+        run: |
+          test -f dist/index.html
+          test -f dist/_headers
+          test -f dist/_redirects
+          test ! -e dist/tools
+          test ! -e dist/.github
+          test ! -e dist/.htaccess
+          test ! -e dist/CNAME
+          ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
