@@ -5,9 +5,14 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Cache-Control: public, max-age=0, must-revalidate
 
-# Evita che gli URL tecnici e di preview di Cloudflare Pages creino duplicati SEO.
+# Evita che gli URL tecnici di Cloudflare creino duplicati SEO.
 https://:project.pages.dev/*
   X-Robots-Tag: noindex, nofollow
 
 https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Workers Static Assets usa workers.dev per il collaudo tecnico.
+# Questa regola copre anche l'URL corrente sistema90g-site.sistema90g.workers.dev.
+https://:worker.:subdomain.workers.dev/*
   X-Robots-Tag: noindex, nofollow
