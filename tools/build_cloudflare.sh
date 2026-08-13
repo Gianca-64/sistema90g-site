@@ -63,11 +63,12 @@ while read -r source target status rest; do
 done < "$DIST/_redirects"
 
 # Guard rail semantico: il sito pubblico deve comunicare esclusivamente cucina.
-# Ripulisce residui storici nei metadati/schema di pagine ancora utili e indicizzabili.
+# Ripulisce residui storici nei metadati/schema e collega direttamente all'hub casi canonico.
 find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
   sed -i.bak \
     -e 's/Tecnico indipendente per analisi preventiva di progetti casa e cucina/Tecnico indipendente per analisi preventiva di progetti cucina/g' \
     -e 's/Analisi preventiva indipendente per progetti, spazi, preventivi e cucine\./Analisi preventiva indipendente per progetti, preventivi, spazi e scelte della cucina./g' \
+    -e 's/casi-cucina\.html/casi-analizzati.html/g' \
     "$file"
   rm -f "$file.bak"
 done
