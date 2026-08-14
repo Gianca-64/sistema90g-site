@@ -6,7 +6,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **144**
+- Immagini di contenuto pubblicate: **145**
 - File riutilizzati in più punti: **36**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -149,6 +149,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
+| `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di  | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -168,10 +169,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `index.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
 
-### `images/03_HOME_METODO.jpg` — 3 utilizzi
+### `images/03_HOME_METODO.jpg` — 4 utilizzi
 
 - `analisi-preventiva.html` — Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali.
 - `metodo-sistema90g.html` — Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell'
+- `progettare-cucina-guide.html` — Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di 
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
 ### `images/08_HOME_CHIUSURA.jpg` — 8 utilizzi
