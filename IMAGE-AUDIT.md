@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **167**
+- Immagini di contenuto pubblicate: **168**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **33**
+- Pagine senza immagini di contenuto (informativo): **32**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -142,6 +142,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
 | `cucina-ad-angolo-guida.html` | `images/caso-cucina-profondita-75-angolo.jpg` | L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti. | Cucina ad angolo con profondità maggiorata e verifica dei raccordi e dello spazio accessibile |
+| `cucina-chiara-scura-luce.html` | `images/17_SERVIZI_FINITURE.jpg` | Il colore va letto insieme a luce naturale, dimensioni, pavimento, top e superfici circostanti. | Studio Sistema 90G di finiture cucina chiare e scure in relazione alla luce |
 | `cucina-open-space-tavolo-passaggi.html` | `images/hero-open-space-90g.jpg` | In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone  | Open space con cucina e zona pranzo analizzato secondo il metodo Sistema 90G |
 | `cucina-piccola-come-progettarla.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Negli spazi ridotti il rischio è aumentare il contenimento sacrificando passaggi, aperture e piano di lavoro. Una buona composizione deve re | Cucina piccola su tre lati con verifica di passaggi e aperture |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Elettrodomestici e impianti devono essere verificati insieme al progetto: misure, aperture, ventilazione, alimentazioni e percorsi tecnici p | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
@@ -213,9 +214,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 6 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 7 utilizzi
 
 - `ante-cucina-materiali-manutenzione.html` — Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta.
+- `cucina-chiara-scura-luce.html` — Il colore va letto insieme a luce naturale, dimensioni, pavimento, top e superfici circostanti.
 - `finiture-opache-lucide-cucina.html` — La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso.
 - `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
@@ -465,7 +467,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `come-sistema90g-utilizza-intelligenza-artificiale.html`
 - `confrontare-due-preventivi-cucina.html`
 - `cosa-cambia-dopo-il-controllo.html`
-- `cucina-chiara-scura-luce.html`
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
 - `errori-trovati-davvero.html`
