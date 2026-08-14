@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **145**
+- Immagini di contenuto pubblicate: **146**
 - File riutilizzati in più punti: **36**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **131**
+- Immagini non utilizzate: **130**
 
 ## Mappa pagina → immagine → contesto
 
@@ -147,6 +147,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
+| `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di  | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
@@ -545,7 +546,6 @@ Nessun riferimento mancante.
 - `images/hero-livelli-90g.jpg` — —
 - `images/hero-open-space-90g.jpg` — —
 - `images/hero-planimetria-90g.jpg` — —
-- `images/hero-preventivo-90g-2026.jpg` — —
 - `images/hero-preventivo-90g.jpg` — —
 - `images/hero-progetto-zero-90g.jpg` — —
 - `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
