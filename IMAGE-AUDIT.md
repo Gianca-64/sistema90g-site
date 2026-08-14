@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **160**
+- Immagini di contenuto pubblicate: **161**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **40**
+- Pagine senza immagini di contenuto (informativo): **39**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -140,6 +140,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
+| `cucina-ad-angolo-guida.html` | `images/caso-cucina-profondita-75-angolo.jpg` | L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti. | Cucina ad angolo con profondità maggiorata e verifica dei raccordi e dello spazio accessibile |
 | `cucina-open-space-tavolo-passaggi.html` | `images/hero-open-space-90g.jpg` | In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone  | Open space con cucina e zona pranzo analizzato secondo il metodo Sistema 90G |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Elettrodomestici e impianti devono essere verificati insieme al progetto: misure, aperture, ventilazione, alimentazioni e percorsi tecnici p | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
 | `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
@@ -312,11 +313,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/caso-cucina-profondita-75-angolo.jpg` — 3 utilizzi
+### `images/caso-cucina-profondita-75-angolo.jpg` — 4 utilizzi
 
 - `casi-analizzati.html` — Più contenimento non significa automaticamente più funzionalità.
 - `casi-cucina.html` — Più mobili non significano automaticamente maggiore funzionalità.
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+- `cucina-ad-angolo-guida.html` — L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti.
 
 ### `images/caso-divano-letto-soggiorno-tre-persone.jpg` — 2 utilizzi
 
@@ -448,7 +450,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `come-sistema90g-utilizza-intelligenza-artificiale.html`
 - `confrontare-due-preventivi-cucina.html`
 - `cosa-cambia-dopo-il-controllo.html`
-- `cucina-ad-angolo-guida.html`
 - `cucina-chiara-scura-luce.html`
 - `cucina-piccola-come-progettarla.html`
 - `dubbi-reali-cucina.html`
