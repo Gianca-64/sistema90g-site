@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **165**
+- Immagini di contenuto pubblicate: **166**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **35**
+- Pagine senza immagini di contenuto (informativo): **34**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -34,6 +34,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `analisi-unita-varianti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og | Confronto coordinato di più unità immobiliari o varianti |
+| `ante-cucina-materiali-manutenzione.html` | `images/17_SERVIZI_FINITURE.jpg` | Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta. | Confronto progettuale Sistema 90G tra superfici e finiture cucina |
 | `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano  | Archivio casi cucina Sistema 90G |
 | `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo. | Lavastoviglie e passaggio |
 | `casi-analizzati.html` | `images/caso-isola-passaggi-cucina.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola e passaggi |
@@ -211,8 +212,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 4 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 5 utilizzi
 
+- `ante-cucina-materiali-manutenzione.html` — Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta.
 - `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 - `scelta-finiture-cucina.html` — Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera
@@ -452,7 +454,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `abbinare-cucina-pavimento.html`
 - `altezza-pensili-spazio-top-cucina.html`
-- `ante-cucina-materiali-manutenzione.html`
 - `cappa-aspirazione-cucina.html`
 - `caso-open-space.html`
 - `caso-passaggio-lavastoviglie.html`
