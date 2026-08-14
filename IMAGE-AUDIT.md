@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **166**
+- Immagini di contenuto pubblicate: **167**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **34**
+- Pagine senza immagini di contenuto (informativo): **33**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -149,6 +149,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
+| `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Interferenze, aperture, passaggi e preventivi: esempi anonimi per capire cosa conviene verificare prima. | Lavastoviglie aperta e passaggio |
@@ -212,9 +213,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 5 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 6 utilizzi
 
 - `ante-cucina-materiali-manutenzione.html` — Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta.
+- `finiture-opache-lucide-cucina.html` — La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso.
 - `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 - `scelta-finiture-cucina.html` — Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera
@@ -467,7 +469,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
 - `errori-trovati-davvero.html`
-- `finiture-opache-lucide-cucina.html`
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
 - `piano-induzione-cucina.html`
