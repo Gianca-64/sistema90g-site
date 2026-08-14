@@ -9,10 +9,7 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "IMAGE-AUDIT.md"
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".svg", ".gif", ".avif"}
-IGNORED_NAMES = {
-    "logo-90g.jpg",
-    "favicon-512.png",
-}
+IGNORED_NAMES = {"logo-90g.jpg", "favicon-512.png"}
 
 
 def strip_query(src: str) -> str:
@@ -83,16 +80,7 @@ for page in html_files:
         classes = class_match.group(1).strip() if class_match else ""
         context = context_before(text, match.start())
         role = "brand" if "brand" in classes or Path(local).name in IGNORED_NAMES else "content"
-        refs.append({
-            "page": page.name,
-            "title": page_title,
-            "src": src,
-            "local": local,
-            "alt": alt,
-            "classes": classes,
-            "context": context,
-            "role": role,
-        })
+        refs.append({"page": page.name, "title": page_title, "src": src, "local": local, "alt": alt, "classes": classes, "context": context, "role": role})
         if local and not (ROOT / local).exists():
             missing.append((page.name, src))
 
@@ -104,10 +92,14 @@ for script in sorted(ROOT.glob("*.js")):
 
 content_refs = [r for r in refs if r["role"] == "content" and r["local"]]
 by_image: dict[str, list[dict[str, str]]] = defaultdict(list)
+by_page: dict[str, list[dict[str, str]]] = defaultdict(list)
 for ref in content_refs:
     by_image[ref["local"]].append(ref)
+    by_page[ref["page"]].append(ref)
 
-duplicates = {image: uses for image, uses in by_image.items() if len(uses) > 1}
+reused = {image: uses for image, uses in by_image.items() if len(uses) > 1}
+pages_without_images = [page.name for page in html_files if page.name not in by_page]
+pages_with_multiple = {page: uses for page, uses in by_page.items() if len(uses) > 1}
 
 hashes: dict[str, list[Path]] = defaultdict(list)
 for path in image_files:
@@ -117,93 +109,67 @@ for path in image_files:
     except OSError:
         pass
 binary_duplicates = [paths for paths in hashes.values() if len(paths) > 1]
-
 used = {r["local"] for r in refs if r["local"]}
 unused = [p for p in image_files if p.relative_to(ROOT).as_posix() not in used and p.name not in IGNORED_NAMES]
 
-lines: list[str] = []
-lines.append("# Audit immagini — Sistema 90G")
-lines.append("")
-lines.append("Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali script che le sostituiscono nel browser.")
-lines.append("")
-lines.append("## Riepilogo")
-lines.append("")
-lines.append(f"- Pagine HTML controllate: **{len(html_files)}**")
-lines.append(f"- File immagine presenti: **{len(image_files)}**")
-lines.append(f"- Immagini di contenuto pubblicate: **{len(content_refs)}**")
-lines.append(f"- File riutilizzati in più punti: **{len(duplicates)}**")
-lines.append(f"- Riferimenti mancanti: **{len(missing)}**")
-lines.append(f"- Gruppi di file binari identici: **{len(binary_duplicates)}**")
-lines.append(f"- Immagini non utilizzate: **{len(unused)}**")
-lines.append("")
-
-lines.append("## Mappa pagina → immagine → contesto")
-lines.append("")
-lines.append("| Pagina | Immagine | Contesto vicino | Alt |")
-lines.append("|---|---|---|---|")
+lines: list[str] = [
+    "# Audit immagini — Sistema 90G", "",
+    "Audit automatico secondo il criterio funzionale definito in `STANDARD_IMMAGINI_SISTEMA90G.md`.",
+    "Il numero di immagini per pagina non è un vincolo numerico: zero, una o più immagini sono ammesse se coerenti con la funzione editoriale.", "",
+    "## Riepilogo", "",
+    f"- Pagine HTML controllate: **{len(html_files)}**",
+    f"- File immagine presenti: **{len(image_files)}**",
+    f"- Immagini di contenuto pubblicate: **{len(content_refs)}**",
+    f"- Asset riutilizzati in più punti (da valutare, non errore): **{len(reused)}**",
+    f"- Pagine senza immagini di contenuto (informativo): **{len(pages_without_images)}**",
+    f"- Pagine con più immagini di contenuto (informativo): **{len(pages_with_multiple)}**",
+    f"- Riferimenti mancanti: **{len(missing)}**",
+    f"- Gruppi di file binari identici: **{len(binary_duplicates)}**",
+    f"- Immagini non utilizzate: **{len(unused)}**", "",
+    "## Mappa pagina → immagine → contesto", "",
+    "| Pagina | Immagine | Contesto vicino | Alt |", "|---|---|---|---|"
+]
 for ref in content_refs:
-    lines.append(
-        f"| `{ref['page']}` | `{ref['local']}` | {ref['context'].replace('|', '/')} | {ref['alt'].replace('|', '/')} |"
-    )
-lines.append("")
-
-lines.append("## Doppioni pubblicati")
-lines.append("")
-if duplicates:
-    for image, uses in sorted(duplicates.items()):
+    lines.append(f"| `{ref['page']}` | `{ref['local']}` | {ref['context'].replace('|', '/')} | {ref['alt'].replace('|', '/')} |")
+lines += ["", "## Asset riutilizzati — verifica editoriale", ""]
+if reused:
+    for image, uses in sorted(reused.items()):
         lines.append(f"### `{image}` — {len(uses)} utilizzi")
         lines.append("")
         for use in uses:
             lines.append(f"- `{use['page']}` — {use['context']}")
         lines.append("")
 else:
-    lines.append("Nessun file immagine di contenuto è riutilizzato in più punti.")
-    lines.append("")
+    lines += ["Nessun asset riutilizzato in più punti.", ""]
 
-lines.append("## File differenti con contenuto identico")
-lines.append("")
-if binary_duplicates:
-    for group in binary_duplicates:
-        lines.append("- " + ", ".join(f"`{p.relative_to(ROOT).as_posix()}`" for p in group))
+lines += ["## Pagine senza immagini — informativo", ""]
+lines += [f"- `{page}`" for page in pages_without_images] if pages_without_images else ["Nessuna."]
+lines += ["", "## Pagine con più immagini — informativo", ""]
+if pages_with_multiple:
+    for page, uses in sorted(pages_with_multiple.items()):
+        lines.append(f"- `{page}` — {len(uses)} immagini")
 else:
-    lines.append("Nessun duplicato binario rilevato.")
-lines.append("")
+    lines.append("Nessuna.")
 
-lines.append("## Riferimenti mancanti")
-lines.append("")
+lines += ["", "## Riferimenti mancanti", ""]
 if missing:
-    for page, src in missing:
-        lines.append(f"- `{page}` → `{src}`")
+    lines += [f"- `{page}` → `{src}`" for page, src in missing]
 else:
     lines.append("Nessun riferimento mancante.")
-lines.append("")
 
-lines.append("## Script che possono cambiare immagini nel browser")
-lines.append("")
+lines += ["", "## Script che possono cambiare immagini nel browser", ""]
 if runtime_overrides:
     for script, pattern in runtime_overrides:
         lines.append(f"- `{script}` contiene un pattern di sostituzione immagini: `{pattern}`")
 else:
     lines.append("Nessuno script modifica dinamicamente gli attributi `src` delle immagini.")
-lines.append("")
 
-lines.append("## Immagini disponibili ma non utilizzate")
-lines.append("")
-if unused:
-    for path in unused:
-        rel = path.relative_to(ROOT).as_posix()
-        lines.append(f"- `{rel}` — {image_dimensions(path)}")
+lines += ["", "## Esito automatico", ""]
+if missing or runtime_overrides:
+    lines.append("**NON CONFORME** — esistono riferimenti mancanti o override runtime da verificare.")
 else:
-    lines.append("Nessuna.")
-lines.append("")
-
-lines.append("## Esito automatico")
-lines.append("")
-if duplicates or missing or runtime_overrides:
-    lines.append("**NON CONFORME** — servono correzioni prima di considerare concluso l'audit immagini.")
-else:
-    lines.append("**CONFORME** — nessun doppione pubblicato, riferimento mancante o override runtime rilevato.")
+    lines.append("**CONFORME** — nessun riferimento mancante o override runtime. Quantità e riusi restano valutazioni editoriali, non errori numerici.")
 
 REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 print(f"Report creato: {REPORT}")
-print(f"duplicates={len(duplicates)} missing={len(missing)} runtime_overrides={len(runtime_overrides)}")
+print(f"reused={len(reused)} pages_without_images={len(pages_without_images)} pages_with_multiple={len(pages_with_multiple)} missing={len(missing)} runtime_overrides={len(runtime_overrides)}")
