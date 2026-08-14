@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **164**
+- Immagini di contenuto pubblicate: **165**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **36**
+- Pagine senza immagini di contenuto (informativo): **35**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -177,6 +177,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio. | Collaborazione tra rivenditore e controllo indipendente |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G concentra analisi, verifiche e supporto decisionale esclusivamente sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -210,10 +211,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 3 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 4 utilizzi
 
 - `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
+- `scelta-finiture-cucina.html` — Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera
 - `top-cucina-materiali-guida.html` — Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
@@ -476,7 +478,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `render-fotorealistici-interni.html`
 - `richiesta.html`
 - `rivenditori-veneta-cucine.html`
-- `scelta-finiture-cucina.html`
 - `scena-frigo-vicino-parete.html`
 - `scena-isola-sgabelli-passaggio.html`
 - `scena-lavastoviglie-aperta-passaggio.html`
