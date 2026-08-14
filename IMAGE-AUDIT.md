@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **169**
-- Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **31**
+- Immagini di contenuto pubblicate: **170**
+- Asset riutilizzati in più punti (da valutare, non errore): **40**
+- Pagine senza immagini di contenuto (informativo): **30**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -137,6 +137,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Oggi Sistema 90G concentra tutta la propria attività sulle cucine: progetto, preventivo, misure, aperture, passaggi,  | Gian Carlo Primo, fondatore di Sistema 90G |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
+| `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da | Confronto tecnico Sistema 90G tra preventivi cucina e componenti della fornitura |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -456,6 +457,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
+### `images/hero-preventivo-90g-2026.jpg` — 2 utilizzi
+
+- `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
+- `preventivo-acquisto-cucina-guide.html` — Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti
+
 ## Pagine senza immagini — informativo
 
 - `altezza-pensili-spazio-top-cucina.html`
@@ -466,7 +472,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `centro-casi-reali.html`
 - `colonna-forno-microonde-cucina.html`
 - `come-sistema90g-utilizza-intelligenza-artificiale.html`
-- `confrontare-due-preventivi-cucina.html`
 - `cosa-cambia-dopo-il-controllo.html`
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
