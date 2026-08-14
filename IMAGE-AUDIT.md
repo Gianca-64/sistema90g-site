@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **162**
+- Immagini di contenuto pubblicate: **163**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **38**
+- Pagine senza immagini di contenuto (informativo): **37**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -142,6 +142,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
 | `cucina-ad-angolo-guida.html` | `images/caso-cucina-profondita-75-angolo.jpg` | L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti. | Cucina ad angolo con profondità maggiorata e verifica dei raccordi e dello spazio accessibile |
 | `cucina-open-space-tavolo-passaggi.html` | `images/hero-open-space-90g.jpg` | In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone  | Open space con cucina e zona pranzo analizzato secondo il metodo Sistema 90G |
+| `cucina-piccola-come-progettarla.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Negli spazi ridotti il rischio è aumentare il contenimento sacrificando passaggi, aperture e piano di lavoro. Una buona composizione deve re | Cucina piccola su tre lati con verifica di passaggi e aperture |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Elettrodomestici e impianti devono essere verificati insieme al progetto: misure, aperture, ventilazione, alimentazioni e percorsi tecnici p | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
 | `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
@@ -308,11 +309,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-distribuzione-casa.html` — Una camera in più modifica la qualità degli spazi comuni.
 - `caso-corridoio-porte-aperte.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
-### `images/caso-cucina-piccola-tre-lati.jpg` — 3 utilizzi
+### `images/caso-cucina-piccola-tre-lati.jpg` — 4 utilizzi
 
 - `casi-analizzati.html` — Rubinetto, anta e serramento devono poter convivere realmente.
 - `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+- `cucina-piccola-come-progettarla.html` — Negli spazi ridotti il rischio è aumentare il contenimento sacrificando passaggi, aperture e piano di lavoro. Una buona composizione deve re
 
 ### `images/caso-cucina-profondita-75-angolo.jpg` — 5 utilizzi
 
@@ -453,7 +455,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `confrontare-due-preventivi-cucina.html`
 - `cosa-cambia-dopo-il-controllo.html`
 - `cucina-chiara-scura-luce.html`
-- `cucina-piccola-come-progettarla.html`
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
 - `errori-trovati-davvero.html`
