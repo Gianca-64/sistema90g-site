@@ -5,11 +5,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **112**
+- Pagine HTML controllate: **113**
 - File immagine presenti: **188**
 - Immagini di contenuto pubblicate: **173**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
-- Pagine senza immagini di contenuto (informativo): **27**
+- Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -478,6 +478,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `centro-casi-reali.html`
 - `colonna-forno-microonde-cucina.html`
 - `come-sistema90g-utilizza-intelligenza-artificiale.html`
+- `consent-bridge.html`
 - `cosa-cambia-dopo-il-controllo.html`
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
