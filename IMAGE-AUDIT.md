@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **146**
+- Immagini di contenuto pubblicate: **147**
 - File riutilizzati in più punti: **36**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **130**
+- Immagini non utilizzate: **129**
 
 ## Mappa pagina → immagine → contesto
 
@@ -137,6 +137,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
+| `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Elettrodomestici e impianti devono essere verificati insieme al progetto: misure, aperture, ventilazione, alimentazioni e percorsi tecnici p | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
 | `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
@@ -540,7 +541,6 @@ Nessun riferimento mancante.
 - `images/hero-chi-sono-90g-2026.jpg` — —
 - `images/hero-controllo-passaggio.svg` — viewBox 0 0 1200 760
 - `images/hero-controllo-progetto-cucina.svg` — viewBox 0 0 1200 760
-- `images/hero-cucina-conflitto-90g.jpg` — —
 - `images/hero-finiture-90g.jpg` — —
 - `images/hero-home-90g-2026.jpg` — —
 - `images/hero-livelli-90g.jpg` — —
