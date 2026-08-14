@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **170**
+- Immagini di contenuto pubblicate: **171**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
-- Pagine senza immagini di contenuto (informativo): **30**
+- Pagine senza immagini di contenuto (informativo): **29**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -189,6 +189,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
 | `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
+| `voci-escluse-preventivo-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar | Lettura tecnica Sistema 90G delle voci incluse ed escluse in un preventivo cucina |
 
 ## Asset riutilizzati — verifica editoriale
 
@@ -457,10 +458,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
-### `images/hero-preventivo-90g-2026.jpg` — 2 utilizzi
+### `images/hero-preventivo-90g-2026.jpg` — 3 utilizzi
 
 - `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
 - `preventivo-acquisto-cucina-guide.html` — Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti
+- `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
 
 ## Pagine senza immagini — informativo
 
@@ -493,7 +495,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scene-reali-cucina.html`
 - `sconto-cucina-valore-reale.html`
 - `tutto-sembrava-corretto-finche.html`
-- `voci-escluse-preventivo-cucina.html`
 
 ## Pagine con più immagini — informativo
 
