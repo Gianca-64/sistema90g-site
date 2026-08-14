@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **157**
+- Immagini di contenuto pubblicate: **158**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **43**
+- Pagine senza immagini di contenuto (informativo): **42**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -160,6 +160,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
+| `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
@@ -335,13 +336,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
-### `images/caso-isola-passaggi-cucina.jpg` — 5 utilizzi
+### `images/caso-isola-passaggi-cucina.jpg` — 6 utilizzi
 
 - `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso.
 - `isola-cucina-distanze-passaggi.html` — La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici
+- `penisola-cucina-distanze-passaggi.html` — Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
 
@@ -452,7 +454,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `lavello-sotto-finestra-cucina.html`
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
-- `penisola-cucina-distanze-passaggi.html`
 - `piano-induzione-cucina.html`
 - `prese-impianti-cucina.html`
 - `preventivo-cucina-guida.html`
