@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **156**
+- Immagini di contenuto pubblicate: **157**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **44**
+- Pagine senza immagini di contenuto (informativo): **43**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -174,6 +174,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G concentra analisi, verifiche e supporto decisionale esclusivamente sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
 
 ## Asset riutilizzati — verifica editoriale
@@ -202,10 +203,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 2 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 3 utilizzi
 
 - `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
+- `top-cucina-materiali-guida.html` — Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
 
@@ -469,7 +471,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scene-reali-cucina.html`
 - `sconto-cucina-valore-reale.html`
 - `tavolo-vicino-cucina-spazi-sedute.html`
-- `top-cucina-materiali-guida.html`
 - `tutto-sembrava-corretto-finche.html`
 - `voci-escluse-preventivo-cucina.html`
 
