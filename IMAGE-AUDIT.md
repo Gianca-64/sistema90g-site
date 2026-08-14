@@ -6,11 +6,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **148**
+- Immagini di contenuto pubblicate: **149**
 - File riutilizzati in più punti: **37**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **129**
+- Immagini non utilizzate: **128**
 
 ## Mappa pagina → immagine → contesto
 
@@ -145,6 +145,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
+| `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Non una vetrina di novità, ma una raccolta di soluzioni da capire prima di inserirle in un progetto. Sistema 90G guarda a ciò che cambia dav | Innovazioni cucina lette con approccio tecnico e progettuale Sistema 90G |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
 | `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
@@ -506,7 +507,6 @@ Nessun riferimento mancante.
 - `images/caso-secondo-bagno-2026.jpg` — —
 - `images/caso-terza-camera-2026.jpg` — —
 - `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` — —
-- `images/editoriale/innovazioni-sistema90g.webp` — —
 - `images/final/case-01-dishwasher.jpg` — —
 - `images/final/case-02-entry-living.jpg` — —
 - `images/final/case-03-compact-kitchen.jpg` — —
