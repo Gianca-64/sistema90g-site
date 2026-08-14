@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **163**
-- Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **37**
+- Immagini di contenuto pubblicate: **164**
+- Asset riutilizzati in più punti (da valutare, non errore): **39**
+- Pagine senza immagini di contenuto (informativo): **36**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -180,6 +180,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G concentra analisi, verifiche e supporto decisionale esclusivamente sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
 | `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
 
@@ -434,6 +435,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
 - `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
 
+### `images/hero-open-space-90g.jpg` — 2 utilizzi
+
+- `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
+- `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
+
 ### `images/hero-planimetria-90g-2026.jpg` — 3 utilizzi
 
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
@@ -476,7 +482,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scena-lavastoviglie-aperta-passaggio.html`
 - `scene-reali-cucina.html`
 - `sconto-cucina-valore-reale.html`
-- `tavolo-vicino-cucina-spazi-sedute.html`
 - `tutto-sembrava-corretto-finche.html`
 - `voci-escluse-preventivo-cucina.html`
 
