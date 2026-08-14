@@ -7,13 +7,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **154**
+- Immagini di contenuto pubblicate: **155**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **46**
+- Pagine senza immagini di contenuto (informativo): **45**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **128**
+- Immagini non utilizzate: **127**
 
 ## Mappa pagina → immagine → contesto
 
@@ -145,6 +145,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
+| `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Interferenze, aperture, passaggi e preventivi: esempi anonimi per capire cosa conviene verificare prima. | Lavastoviglie aperta e passaggio |
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
@@ -446,7 +447,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `elettrodomestici-incasso-misure-cucina.html`
 - `errori-trovati-davvero.html`
 - `finiture-opache-lucide-cucina.html`
-- `frigorifero-cucina-vicino-parete.html`
 - `lavello-sotto-finestra-cucina.html`
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
