@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **159**
+- Immagini di contenuto pubblicate: **160**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **41**
+- Pagine senza immagini di contenuto (informativo): **40**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -162,6 +162,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
+| `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
@@ -427,9 +428,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
 - `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
 
-### `images/hero-planimetria-90g-2026.jpg` — 2 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 3 utilizzi
 
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
+- `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
 ## Pagine senza immagini — informativo
@@ -456,7 +458,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
 - `piano-induzione-cucina.html`
-- `prese-impianti-cucina.html`
 - `preventivo-cucina-guida.html`
 - `prima-di-firmare-ordine-cucina.html`
 - `profondita-cucina-75-cm.html`
