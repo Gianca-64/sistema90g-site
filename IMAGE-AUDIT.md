@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **152**
+- Immagini di contenuto pubblicate: **153**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **48**
+- Pagine senza immagini di contenuto (informativo): **47**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -152,6 +152,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
 | `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Non una vetrina di novità, ma una raccolta di soluzioni da capire prima di inserirle in un progetto. Sistema 90G guarda a ciò che cambia dav | Innovazioni cucina lette con approccio tecnico e progettuale Sistema 90G |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
+| `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
 | `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
@@ -329,12 +330,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-ingresso-tavolo-living.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 
-### `images/caso-isola-passaggi-cucina.jpg` — 4 utilizzi
+### `images/caso-isola-passaggi-cucina.jpg` — 5 utilizzi
 
 - `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso.
+- `isola-cucina-distanze-passaggi.html` — La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
 
@@ -443,7 +445,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `errori-trovati-davvero.html`
 - `finiture-opache-lucide-cucina.html`
 - `frigorifero-cucina-vicino-parete.html`
-- `isola-cucina-distanze-passaggi.html`
 - `lavastoviglie-cucina-aperture-passaggi.html`
 - `lavello-sotto-finestra-cucina.html`
 - `micro-caso-frigo-apertura.html`
