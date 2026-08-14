@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **168**
+- Immagini di contenuto pubblicate: **169**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
-- Pagine senza immagini di contenuto (informativo): **32**
+- Pagine senza immagini di contenuto (informativo): **31**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -20,6 +20,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | Pagina | Immagine | Contesto vicino | Alt |
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
+| `abbinare-cucina-pavimento.html` | `images/17_SERVIZI_FINITURE.jpg` | Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme. | Confronto Sistema 90G tra finiture della cucina e pavimento |
 | `acquisto-assistito-cucina.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Confronto tra schizzo tecnico e visualizzazione realistica di una cucina per verificare funzioni, ingombri e passaggi |
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
@@ -214,8 +215,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 7 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 8 utilizzi
 
+- `abbinare-cucina-pavimento.html` — Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme.
 - `ante-cucina-materiali-manutenzione.html` — Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta.
 - `cucina-chiara-scura-luce.html` — Il colore va letto insieme a luce naturale, dimensioni, pavimento, top e superfici circostanti.
 - `finiture-opache-lucide-cucina.html` — La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso.
@@ -456,7 +458,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Pagine senza immagini — informativo
 
-- `abbinare-cucina-pavimento.html`
 - `altezza-pensili-spazio-top-cucina.html`
 - `cappa-aspirazione-cucina.html`
 - `caso-open-space.html`
