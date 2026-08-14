@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **161**
+- Immagini di contenuto pubblicate: **162**
 - Asset riutilizzati in più punti (da valutare, non errore): **38**
-- Pagine senza immagini di contenuto (informativo): **39**
+- Pagine senza immagini di contenuto (informativo): **38**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -167,6 +167,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
+| `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di  | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
@@ -313,12 +314,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-cucina.html` — La composizione deve funzionare anche durante l’uso simultaneo.
 - `caso-cucina-piccola-tre-lati.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/caso-cucina-profondita-75-angolo.jpg` — 4 utilizzi
+### `images/caso-cucina-profondita-75-angolo.jpg` — 5 utilizzi
 
 - `casi-analizzati.html` — Più contenimento non significa automaticamente più funzionalità.
 - `casi-cucina.html` — Più mobili non significano automaticamente maggiore funzionalità.
 - `caso-cucina-profondita-75-angolo.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `cucina-ad-angolo-guida.html` — L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti.
+- `profondita-cucina-75-cm.html` — Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac
 
 ### `images/caso-divano-letto-soggiorno-tre-persone.jpg` — 2 utilizzi
 
@@ -461,7 +463,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `piano-induzione-cucina.html`
 - `preventivo-cucina-guida.html`
 - `prima-di-firmare-ordine-cucina.html`
-- `profondita-cucina-75-cm.html`
 - `progetto-da-zero.html`
 - `quando-il-render-inganna.html`
 - `quando-verifica-indipendente-cucina.html`
