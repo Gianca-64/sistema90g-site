@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **172**
+- Immagini di contenuto pubblicate: **173**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
-- Pagine senza immagini di contenuto (informativo): **28**
+- Pagine senza immagini di contenuto (informativo): **27**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -171,6 +171,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
+| `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e  | Verifica Sistema 90G di progetto e preventivo cucina prima della firma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
@@ -459,10 +460,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
-### `images/hero-preventivo-90g-2026.jpg` — 4 utilizzi
+### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
 
 - `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
 - `preventivo-acquisto-cucina-guide.html` — Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti
+- `prima-di-firmare-ordine-cucina.html` — La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
 
@@ -484,7 +486,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `micro-caso-passaggio-bloccato.html`
 - `piano-induzione-cucina.html`
 - `preventivo-cucina-guida.html`
-- `prima-di-firmare-ordine-cucina.html`
 - `progetto-da-zero.html`
 - `quando-il-render-inganna.html`
 - `quando-verifica-indipendente-cucina.html`
