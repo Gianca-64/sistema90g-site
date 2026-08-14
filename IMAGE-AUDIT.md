@@ -6,8 +6,8 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **147**
-- File riutilizzati in più punti: **36**
+- Immagini di contenuto pubblicate: **148**
+- File riutilizzati in più punti: **37**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **129**
@@ -146,6 +146,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
+| `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
@@ -188,6 +189,11 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
 - `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
+
+### `images/17_SERVIZI_FINITURE.jpg` — 2 utilizzi
+
+- `materiali-finiture-cucina-guide.html` — Materiali, colori e superfici vanno scelti considerando luce, pavimento, manutenzione e uso reale, non soltanto il campione visto in showroo
+- `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
 
