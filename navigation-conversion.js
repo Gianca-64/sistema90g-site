@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const CAMPAIGN_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  const CONSENT_KEY='s90g_cookie_consent';
   const PRIVATE_SERVICES=new Set(['scelta-finiture-casa','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina','studio-preliminare-spazi']);
   const NAV_LINKS=[
     ['home','Home','/'],
@@ -18,6 +19,12 @@
     const name=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
     return name==='index'?'home':name;
   };
+  function syncConsentCookie(){
+    const consent=window.localStorage.getItem(CONSENT_KEY);
+    if(consent!=='accepted'&&consent!=='rejected')return;
+    const secure=location.protocol==='https:'?'; Secure':'';
+    document.cookie=`${CONSENT_KEY}=${encodeURIComponent(consent)}; Path=/; Domain=.sistema90g.it; Max-Age=31536000; SameSite=Lax${secure}`;
+  }
   const activeKey=slug=>{
     if(slug==='home')return 'home';
     if(slug==='analisi-preventiva')return 'process';
@@ -125,6 +132,10 @@
     if(role)document.querySelectorAll('a[data-start-path]').forEach(link=>{if(!link.dataset.roleHint)link.dataset.roleHint=role});
   }
   function init(){
+    syncConsentCookie();
+    document.addEventListener('click',event=>{
+      if(event.target.closest('[data-cookie-choice],a[data-start-path],a[data-final-portal]'))queueMicrotask(syncConsentCookie);
+    },true);
     addSkipLink();buildNavigation();enhancePathLinks();normalizeActionLabels();preparePathLinks();preserveCampaignParams();
     document.dispatchEvent(new CustomEvent('s90g:navigation-ready'));
   }
