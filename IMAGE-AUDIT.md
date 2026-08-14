@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **149**
+- Immagini di contenuto pubblicate: **151**
 - Asset riutilizzati in più punti (da valutare, non errore): **37**
-- Pagine senza immagini di contenuto (informativo): **50**
-- Pagine con più immagini di contenuto (informativo): **47**
+- Pagine senza immagini di contenuto (informativo): **49**
+- Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **128**
@@ -141,6 +141,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Elettrodomestici e impianti devono essere verificati insieme al progetto: misure, aperture, ventilazione, alimentazioni e percorsi tecnici p | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
+| `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
+| `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina descrive il tipo di risultato consegnato. Non mostra procedure interne, non rappresenta un progetto reale e non sostituisce il | Illustrazione sintetica del risultato di Acquisto Assistito, senza misure o soluzione esecutiva |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
 | `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
@@ -171,9 +173,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Asset riutilizzati — verifica editoriale
 
-### `images/01_HOME_HERO.jpg` — 2 utilizzi
+### `images/01_HOME_HERO.jpg` — 3 utilizzi
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
+- `errori-progetto-cucina.html` — Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici
 - `index.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
 
 ### `images/03_HOME_METODO.jpg` — 4 utilizzi
@@ -337,11 +340,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Pochi centimetri possono cambiare accesso e utilizzo.
 - `caso-lavanderia-oblo-porta.html` — Analisi di Gian Carlo Primo · Aggiornato il 13 luglio 2026
 
-### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 3 utilizzi
+### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 4 utilizzi
 
 - `casi-analizzati.html` — I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo.
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
+- `errori-progetto-cucina.html` — Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp
 
 ### `images/caso-lavello-sotto-finestra-aperture.jpg` — 3 utilizzi
 
@@ -430,7 +434,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-piccola-come-progettarla.html`
 - `dubbi-reali-cucina.html`
 - `elettrodomestici-incasso-misure-cucina.html`
-- `errori-progetto-cucina.html`
 - `errori-trovati-davvero.html`
 - `finiture-opache-lucide-cucina.html`
 - `frigorifero-cucina-vicino-parete.html`
@@ -504,6 +507,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — 2 immagini
 - `chi-e-sistema90g.html` — 2 immagini
 - `controllo-mirato.html` — 2 immagini
+- `errori-progetto-cucina.html` — 2 immagini
 - `esempio-fascicolo-cucina.html` — 2 immagini
 - `index.html` — 5 immagini
 - `innovazioni.html` — 2 immagini
