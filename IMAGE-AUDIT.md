@@ -7,9 +7,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **171**
+- Immagini di contenuto pubblicate: **172**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
-- Pagine senza immagini di contenuto (informativo): **29**
+- Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -183,6 +183,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
+| `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G concentra analisi, verifiche e supporto decisionale esclusivamente sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -458,10 +459,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
-### `images/hero-preventivo-90g-2026.jpg` — 3 utilizzi
+### `images/hero-preventivo-90g-2026.jpg` — 4 utilizzi
 
 - `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
 - `preventivo-acquisto-cucina-guide.html` — Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti
+- `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
 
 ## Pagine senza immagini — informativo
@@ -493,7 +495,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scena-isola-sgabelli-passaggio.html`
 - `scena-lavastoviglie-aperta-passaggio.html`
 - `scene-reali-cucina.html`
-- `sconto-cucina-valore-reale.html`
 - `tutto-sembrava-corretto-finche.html`
 
 ## Pagine con più immagini — informativo
