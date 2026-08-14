@@ -217,6 +217,21 @@ body.s90g-unified .brand-mark {
   box-shadow: none !important;
 }
 
+/* Continuità editoriale degli approfondimenti */
+.s90g-related-section{margin:76px 0 30px;padding:46px 0 0;border-top:1px solid rgba(49,81,59,.24)}
+.s90g-related-section .s90g-shell{width:100%;max-width:none;padding:0}
+.s90g-related-section h2{font-size:clamp(28px,4vw,42px);line-height:1.08;margin:8px 0 30px}
+.s90g-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.s90g-related-link{display:flex;min-height:150px;flex-direction:column;justify-content:space-between;padding:22px 0 18px;border-top:2px solid #a66f12;text-decoration:none;color:inherit}
+.s90g-related-link span{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#756d60}
+.s90g-related-link strong{font-size:19px;line-height:1.35}
+.s90g-related-link:hover strong{text-decoration:underline}
+.s90g-article + .s90g-footer,.s90g-footer{clear:both}
+.s90g-footer-inner{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:48px;align-items:start}
+.s90g-footer-links{display:flex;flex-wrap:wrap;gap:10px 18px;line-height:1.5}
+.s90g-footer-links a{white-space:normal}
+.s90g-footer-notice{max-width:900px;margin-top:32px;font-size:13px;line-height:1.6;opacity:.78}
+
 @media (max-width: 820px) {
   body.s90g-unified .premium-hero,
   body.s90g-unified .professional-hero,
@@ -249,4 +264,7 @@ body.s90g-unified .brand-mark {
   body.s90g-unified .button-secondary {
     width: auto !important;
   }
+  .s90g-related-grid{grid-template-columns:1fr}
+  .s90g-related-link{min-height:0}
+  .s90g-footer-inner{grid-template-columns:1fr;gap:26px}
 }
