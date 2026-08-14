@@ -1,13 +1,16 @@
 # Audit immagini — Sistema 90G
 
-Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali script che le sostituiscono nel browser.
+Audit automatico secondo il criterio funzionale definito in `STANDARD_IMMAGINI_SISTEMA90G.md`.
+Il numero di immagini per pagina non è un vincolo numerico: zero, una o più immagini sono ammesse se coerenti con la funzione editoriale.
 
 ## Riepilogo
 
 - Pagine HTML controllate: **112**
 - File immagine presenti: **188**
 - Immagini di contenuto pubblicate: **149**
-- File riutilizzati in più punti: **37**
+- Asset riutilizzati in più punti (da valutare, non errore): **37**
+- Pagine senza immagini di contenuto (informativo): **50**
+- Pagine con più immagini di contenuto (informativo): **47**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **128**
@@ -166,7 +169,7 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
 
-## Doppioni pubblicati
+## Asset riutilizzati — verifica editoriale
 
 ### `images/01_HOME_HERO.jpg` — 2 utilizzi
 
@@ -407,11 +410,108 @@ Audit automatico limitato alle immagini, ai riferimenti HTML e agli eventuali sc
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
 - `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
 
-## File differenti con contenuto identico
+## Pagine senza immagini — informativo
 
-- `images/final/case-06-second-bath.jpg`, `images/final/case-13-bath-laundry.jpg`
-- `images/final/case-10-central-path.jpg`, `images/final/case-15-sofa-bed.jpg`
-- `images/hero-analisi-90g.jpg`, `images/hero-casa90g.jpg`
+- `abbinare-cucina-pavimento.html`
+- `altezza-pensili-spazio-top-cucina.html`
+- `ante-cucina-materiali-manutenzione.html`
+- `cappa-aspirazione-cucina.html`
+- `caso-open-space.html`
+- `caso-passaggio-lavastoviglie.html`
+- `caso-verificato-isola-forno-passaggi.html`
+- `centro-casi-reali.html`
+- `colonna-forno-microonde-cucina.html`
+- `come-sistema90g-utilizza-intelligenza-artificiale.html`
+- `confrontare-due-preventivi-cucina.html`
+- `cosa-cambia-dopo-il-controllo.html`
+- `cucina-ad-angolo-guida.html`
+- `cucina-chiara-scura-luce.html`
+- `cucina-open-space-tavolo-passaggi.html`
+- `cucina-piccola-come-progettarla.html`
+- `dubbi-reali-cucina.html`
+- `elettrodomestici-incasso-misure-cucina.html`
+- `errori-progetto-cucina.html`
+- `errori-trovati-davvero.html`
+- `finiture-opache-lucide-cucina.html`
+- `frigorifero-cucina-vicino-parete.html`
+- `isola-cucina-distanze-passaggi.html`
+- `lavastoviglie-cucina-aperture-passaggi.html`
+- `lavello-sotto-finestra-cucina.html`
+- `micro-caso-frigo-apertura.html`
+- `micro-caso-passaggio-bloccato.html`
+- `misure-passaggi-cucina.html`
+- `penisola-cucina-distanze-passaggi.html`
+- `piano-induzione-cucina.html`
+- `prese-impianti-cucina.html`
+- `preventivo-cucina-guida.html`
+- `prima-di-firmare-ordine-cucina.html`
+- `profondita-cucina-75-cm.html`
+- `progetto-da-zero.html`
+- `quando-il-render-inganna.html`
+- `quando-verifica-indipendente-cucina.html`
+- `render-fotorealistici-interni.html`
+- `richiesta.html`
+- `rivenditori-veneta-cucine.html`
+- `scelta-finiture-cucina.html`
+- `scena-frigo-vicino-parete.html`
+- `scena-isola-sgabelli-passaggio.html`
+- `scena-lavastoviglie-aperta-passaggio.html`
+- `scene-reali-cucina.html`
+- `sconto-cucina-valore-reale.html`
+- `tavolo-vicino-cucina-spazi-sedute.html`
+- `top-cucina-materiali-guida.html`
+- `tutto-sembrava-corretto-finche.html`
+- `voci-escluse-preventivo-cucina.html`
+
+## Pagine con più immagini — informativo
+
+- `acquisto-assistito-cucina.html` — 2 immagini
+- `agenzie-immobiliari.html` — 6 immagini
+- `analisi-completa.html` — 2 immagini
+- `analisi-preventivo-cucina.html` — 2 immagini
+- `casi-analizzati.html` — 8 immagini
+- `casi-camere-contenimento.html` — 7 immagini
+- `casi-cucina.html` — 8 immagini
+- `casi-distribuzione-casa.html` — 7 immagini
+- `casi-soggiorno-open-space.html` — 7 immagini
+- `casi-spazi-servizio.html` — 8 immagini
+- `caso-bagno-lavatrice-dieci-centimetri.html` — 2 immagini
+- `caso-cabina-armadio-125-cm-passaggio.html` — 2 immagini
+- `caso-cabina-armadio-camera-irregolare.html` — 2 immagini
+- `caso-camera-bambini-crescita.html` — 2 immagini
+- `caso-corridoio-porte-aperte.html` — 2 immagini
+- `caso-cucina-piccola-tre-lati.html` — 2 immagini
+- `caso-cucina-profondita-75-angolo.html` — 2 immagini
+- `caso-divano-letto-soggiorno-tre-persone.html` — 2 immagini
+- `caso-due-appartamenti-accessi-disimpegni.html` — 2 immagini
+- `caso-garage-apertura-portiere.html` — 2 immagini
+- `caso-ingresso-tavolo-living.html` — 2 immagini
+- `caso-isola-passaggi-cucina.html` — 2 immagini
+- `caso-lavanderia-oblo-porta.html` — 2 immagini
+- `caso-lavastoviglie-passaggio-cucina.html` — 2 immagini
+- `caso-lavello-sotto-finestra-aperture.html` — 2 immagini
+- `caso-open-space-percorso-centrale.html` — 2 immagini
+- `caso-open-space-tv-divano-passaggi.html` — 2 immagini
+- `caso-preventivo-cucina-sconto-valore.html` — 2 immagini
+- `caso-ripostiglio-profondita-scaffali.html` — 2 immagini
+- `caso-scala-interna-terrazzo-planimetria.html` — 2 immagini
+- `caso-secondo-bagno-impianti-spazio.html` — 2 immagini
+- `caso-soffitta-altezza-utile.html` — 2 immagini
+- `caso-soggiorno-pianoforte-tavolo-divano-tv.html` — 2 immagini
+- `caso-studio-postazione-lavoro.html` — 2 immagini
+- `caso-terrazzo-passaggio-arredi.html` — 2 immagini
+- `caso-terza-camera-zona-giorno.html` — 2 immagini
+- `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — 2 immagini
+- `chi-e-sistema90g.html` — 2 immagini
+- `controllo-mirato.html` — 2 immagini
+- `esempio-fascicolo-cucina.html` — 2 immagini
+- `index.html` — 5 immagini
+- `innovazioni.html` — 2 immagini
+- `metodo-sistema90g.html` — 2 immagini
+- `restyling-cucina-esistente.html` — 2 immagini
+- `rivenditori-cucine.html` — 2 immagini
+- `scelta-finiture-casa.html` — 2 immagini
+- `studio-preliminare-spazi.html` — 2 immagini
 
 ## Riferimenti mancanti
 
@@ -427,137 +527,6 @@ Nessun riferimento mancante.
 - `s90g-visual-system.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 - `site-ui-clean.js` contiene un pattern di sostituzione immagini: `querySelectorAll\([^\n]*img`
 
-## Immagini disponibili ma non utilizzate
-
-- `images/02_HOME_SCENA_PROBLEMA.png` — —
-- `images/03_definisco_le_priorita.svg` — viewBox 0 0 64 64
-- `images/04_HOME_COSTO_TARDIVO.png` — —
-- `images/04_evito_costi_tardivi.svg` — viewBox 0 0 64 64
-- `images/06_HOME_CASO_2.jpg` — —
-- `images/06_controllo_mirato.svg` — viewBox 0 0 64 64
-- `images/07_HOME_CASO_3.jpg` — —
-- `images/07_analisi_completa.svg` — viewBox 0 0 64 64
-- `images/08_progetto_da_zero.svg` — viewBox 0 0 64 64
-- `images/09_CHI_SONO_HERO.png` — —
-- `images/09_finiture_dettagli.svg` — viewBox 0 0 64 64
-- `images/10_CHI_SONO_METODO.png` — —
-- `images/10_agenzie_collaborazione.svg` — viewBox 0 0 64 64
-- `images/11_CHI_SONO_DETTAGLIO.png` — —
-- `images/11_invia_materiali.svg` — viewBox 0 0 64 64
-- `images/12_portale_documenti.svg` — viewBox 0 0 64 64
-- `images/18_CHI_SONO_GIANCARLO.jpg` — —
-- `images/18_CHI_SONO_GIANCARLO_METODO 2.jpg` — —
-- `images/24_PER_AGENZIE_BENEFICI.png` — —
-- `images/27_CONTATTI_HERO.jpg` — —
-- `images/29_PORTALE_HERO.jpg` — —
-- `images/30_PORTALE_CONSEGNA_DOCUMENTI.jpg` — —
-- `images/90g-real-kitchen.svg` — viewBox 0 0 1600 1000
-- `images/90g-real-open-space.svg` — viewBox 0 0 1600 1000
-- `images/90g-real-preventivo.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-agenzie.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-conflitto.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-finiture.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-hero.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-planimetria.svg` — viewBox 0 0 1600 1000
-- `images/90g-style-preventivo.svg` — viewBox 0 0 1600 1000
-- `images/IMG_0417.jpg` — —
-- `images/ai/come-sistema90g-usa-ai-og.jpg` — —
-- `images/ai/conoscenza-metodo-90g-1122.webp` — —
-- `images/ai/conoscenza-metodo-90g-720.webp` — —
-- `images/ai/metodo-90g-ai-controllo-umano-1536.webp` — —
-- `images/ai/metodo-90g-ai-controllo-umano-768.webp` — —
-- `images/cases/cabina-125.svg` — viewBox 0 0 1200 800
-- `images/cases/cabina-irregolare.svg` — viewBox 0 0 1200 800
-- `images/cases/cucina-tre-lati.svg` — viewBox 0 0 1200 800
-- `images/cases/divano-letto.svg` — viewBox 0 0 1200 800
-- `images/cases/due-appartamenti.svg` — viewBox 0 0 1200 800
-- `images/cases/ingresso-living.svg` — viewBox 0 0 1200 800
-- `images/cases/isola-passaggi.svg` — viewBox 0 0 1200 800
-- `images/cases/lavastoviglie-passaggio.svg` — viewBox 0 0 1200 800
-- `images/cases/lavatrice-dieci-cm.svg` — viewBox 0 0 1200 800
-- `images/cases/lavello-finestra.svg` — viewBox 0 0 1200 800
-- `images/cases/open-space-percorso.svg` — viewBox 0 0 1200 800
-- `images/cases/open-space-tv-divano.svg` — viewBox 0 0 1200 800
-- `images/cases/pianoforte-living.svg` — viewBox 0 0 1200 800
-- `images/cases/preventivo-valore.svg` — viewBox 0 0 1200 800
-- `images/cases/profondita-75.svg` — viewBox 0 0 1200 800
-- `images/cases/scala-terrazzo.svg` — viewBox 0 0 1200 800
-- `images/cases/secondo-bagno.svg` — viewBox 0 0 1200 800
-- `images/cases/terza-camera.svg` — viewBox 0 0 1200 800
-- `images/caso-bagno-lavatrice-10cm-90g.svg` — viewBox 0 0 1600 1000
-- `images/caso-bagno-lavatrice-2026.jpg` — —
-- `images/caso-cabina-armadio-2026.jpg` — —
-- `images/caso-cabina-armadio-camera-irregolare-90g.svg` — viewBox 0 0 1600 1000
-- `images/caso-cucina-piccola-tre-lati.svg` — viewBox 0 0 1200 760
-- `images/caso-cucina-tre-lati-2026.jpg` — —
-- `images/caso-divano-letto-2026.jpg` — —
-- `images/caso-divano-letto-soggiorno-tre-persone-90g.svg` — viewBox 0 0 1600 900
-- `images/caso-ingresso-living-2026.jpg` — —
-- `images/caso-ingresso-tavolo-living.svg` — viewBox 0 0 1200 760
-- `images/caso-isola-passaggi-2026.jpg` — —
-- `images/caso-lavastoviglie-passaggio-2026.jpg` — —
-- `images/caso-lavastoviglie-passaggio.svg` — viewBox 0 0 1200 760
-- `images/caso-lavello-finestra-2026.jpg` — —
-- `images/caso-open-space-tv-2026.jpg` — —
-- `images/caso-percorso-centrale-2026.jpg` — —
-- `images/caso-preventivo-sconto-valore.svg` — viewBox 0 0 1200 760
-- `images/caso-preventivo-valore-2026.jpg` — —
-- `images/caso-profondita-angolo-2026.jpg` — —
-- `images/caso-scala-planimetria-2026.jpg` — —
-- `images/caso-secondo-bagno-2026.jpg` — —
-- `images/caso-terza-camera-2026.jpg` — —
-- `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` — —
-- `images/final/case-01-dishwasher.jpg` — —
-- `images/final/case-02-entry-living.jpg` — —
-- `images/final/case-03-compact-kitchen.jpg` — —
-- `images/final/case-04-quote.jpg` — —
-- `images/final/case-05-island-passages.jpg` — —
-- `images/final/case-06-second-bath.jpg` — —
-- `images/final/case-07-tv-sofa-path.jpg` — —
-- `images/final/case-08-sink-window.jpg` — —
-- `images/final/case-09-stair-plan.jpg` — —
-- `images/final/case-10-central-path.jpg` — —
-- `images/final/case-11-third-bedroom.jpg` — —
-- `images/final/case-12-deep-corner.jpg` — —
-- `images/final/case-13-bath-laundry-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/case-13-bath-laundry.jpg` — —
-- `images/final/case-14-wardrobe-room-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/case-14-wardrobe-room.jpg` — —
-- `images/final/case-15-sofa-bed.jpg` — —
-- `images/final/case-16-two-apartments-access.svg` — viewBox 0 0 1600 1000
-- `images/final/case-17-living-piano.svg` — viewBox 0 0 1600 1000
-- `images/final/case-18-wardrobe-125cm.svg` — viewBox 0 0 1200 800
-- `images/final/case-19-tiranti-cavi-ispezionabilita.svg` — viewBox 0 0 1200 800
-- `images/final/hero-about-reference.jpg` — —
-- `images/final/hero-cases-method-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/hero-cases-reference.jpg` — —
-- `images/final/hero-home-reference.jpg` — —
-- `images/final/hero-kitchen-reference.jpg` — —
-- `images/final/hero-kitchen-white-90g.png` — —
-- `images/final/hero-plan-reference.jpg` — —
-- `images/final/hero-project-zero-unique.svg` — viewBox 0 0 1600 1000
-- `images/final/hero-quote-reference.jpg` — —
-- `images/final/hero-rivenditori-veneta-90g.png` — —
-- `images/frigo-apertura-insufficiente.svg` — viewBox 0 0 1200 760
-- `images/hero-agenzie-90g.jpg` — —
-- `images/hero-analisi-90g.jpg` — —
-- `images/hero-analisi-preventivo-cucina.svg` — viewBox 0 0 1200 760
-- `images/hero-casa90g.jpg` — —
-- `images/hero-casi-90g-2026.jpg` — —
-- `images/hero-chi-sono-90g-2026.jpg` — —
-- `images/hero-controllo-passaggio.svg` — viewBox 0 0 1200 760
-- `images/hero-controllo-progetto-cucina.svg` — viewBox 0 0 1200 760
-- `images/hero-finiture-90g.jpg` — —
-- `images/hero-home-90g-2026.jpg` — —
-- `images/hero-livelli-90g.jpg` — —
-- `images/hero-open-space-90g.jpg` — —
-- `images/hero-planimetria-90g.jpg` — —
-- `images/hero-preventivo-90g.jpg` — —
-- `images/hero-progetto-zero-90g.jpg` — —
-- `images/hero-scelta-finiture-casa.svg` — viewBox 0 0 1200 760
-- `images/hero-verifica-planimetria-casa.svg` — viewBox 0 0 1200 760
-- `images/homepage-approvata.svg` — viewBox 0 0 560 373
-
 ## Esito automatico
 
-**NON CONFORME** — servono correzioni prima di considerare concluso l'audit immagini.
+**NON CONFORME** — esistono riferimenti mancanti o override runtime da verificare.
