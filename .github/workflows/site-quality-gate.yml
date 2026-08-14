@@ -52,6 +52,9 @@ jobs:
       - name: Audit navigazione e collegamenti
         run: python tools/audit_section_d_navigation.py .
 
+      - name: Audit SEO guide cucina
+        run: python tools/check_guide_seo.py
+
       - name: Test prezzi e contratto portale
         run: node tools/test_guided_pricing.js
 
