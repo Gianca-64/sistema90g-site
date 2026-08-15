@@ -42,6 +42,14 @@ jobs:
           test -f dist/_headers
           test -f dist/cucina-ad-angolo-guida.html
           test -f dist/guide-cucina-sitemap.xml
+          test -f dist/innovazioni.html
+          test -f dist/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html
+          test -f dist/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html
+          test -f dist/images/editoriale/forno-ai-telecamera-editoriale.webp
+          test -f dist/images/editoriale/piano-induzione-opaco-editoriale.webp
+          grep -q 'Novità, tecnologie e soluzioni che migliorano la cucina di ogni giorno' dist/innovazioni.html
+          grep -q 'forno-ai-telecamera-editoriale.webp' dist/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html
+          grep -q 'piano-induzione-opaco-editoriale.webp' dist/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html
           grep -q '^/index.html / 301$' dist/_redirects
           ! test -e dist/casi-camere-contenimento.html
           ! test -e dist/casi-distribuzione-casa.html
@@ -69,7 +77,12 @@ jobs:
         run: |
           set -euo pipefail
           sleep 5
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 https://sistema90g.it/ > /tmp/home.html
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 https://sistema90g.it/cucina-ad-angolo-guida.html > /tmp/guide.html
+          stamp="$(date +%s)"
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/?verify=$stamp" > /tmp/home.html
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/innovazioni.html?verify=$stamp" > /tmp/innovazioni.html
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html?verify=$stamp" > /tmp/forno.html
+          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html?verify=$stamp" > /tmp/induzione.html
           grep -qi 'Sistema 90G' /tmp/home.html
-          grep -qi 'cucina' /tmp/guide.html
+          grep -q 'Novità, tecnologie e soluzioni che migliorano la cucina di ogni giorno' /tmp/innovazioni.html
+          grep -q 'forno-ai-telecamera-editoriale.webp' /tmp/forno.html
+          grep -q 'piano-induzione-opaco-editoriale.webp' /tmp/induzione.html
