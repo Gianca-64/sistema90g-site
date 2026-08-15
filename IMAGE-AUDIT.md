@@ -5,15 +5,15 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **113**
+- Pagine HTML controllate: **112**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **175**
-- Asset riutilizzati in più punti (da valutare, non errore): **40**
+- Immagini di contenuto pubblicate: **169**
+- Asset riutilizzati in più punti (da valutare, non errore): **39**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **48**
+- Pagine con più immagini di contenuto (informativo): **47**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **128**
+- Immagini non utilizzate: **133**
 
 ## Mappa pagina → immagine → contesto
 
@@ -23,12 +23,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `abbinare-cucina-pavimento.html` | `images/17_SERVIZI_FINITURE.jpg` | Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme. | Confronto Sistema 90G tra finiture della cucina e pavimento |
 | `acquisto-assistito-cucina.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Confronto tra schizzo tecnico e visualizzazione realistica di una cucina per verificare funzioni, ingombri e passaggi |
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `agenzie-immobiliari.html` | `images/23_PER_AGENZIE_HERO.jpg` | Un supporto indipendente per chiarire potenziale, vincoli, obiezioni e margini di intervento prima dell'acquisizione o durante la vendita. | Collaborazione tra agenzia immobiliare e Sistema 90G |
-| `agenzie-immobiliari.html` | `images/01_individuo_il_problema.svg` | Non una brochure più bella. Una lettura più credibile dell'immobile. |  |
-| `agenzie-immobiliari.html` | `images/02_valuto_la_conseguenza.svg` | Si individuano prima i punti che potrebbero generare dubbi durante la visita o la trattativa. |  |
-| `agenzie-immobiliari.html` | `images/05_decidere_meglio.svg` | Le possibilità dell'immobile vengono raccontate senza promettere trasformazioni non verificate. |  |
-| `agenzie-immobiliari.html` | `images/26_PER_AGENZIE_CASO.jpg` | Quando una distribuzione apparentemente semplice nasconde un compromesso importante. | Caso immobiliare analizzato |
-| `agenzie-immobiliari.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto. | Collaborazione professionale su una planimetria |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Per leggere insieme progetto, funzioni, passaggi, documenti e preventivo prima della conferma. | Analisi completa di progetto e preventivo |
 | `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali. | Percorso di analisi per una cucina |
@@ -255,11 +249,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento.
-
-### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
-
-- `agenzie-immobiliari.html` — Invia planimetria, fotografie e dubbio principale. La prima valutazione serve a capire se il caso è adatto.
-- `rivenditori-cucine.html` — Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio.
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 37 utilizzi
 
@@ -504,7 +493,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ## Pagine con più immagini — informativo
 
 - `acquisto-assistito-cucina.html` — 2 immagini
-- `agenzie-immobiliari.html` — 6 immagini
 - `analisi-completa.html` — 2 immagini
 - `analisi-preventivo-cucina.html` — 2 immagini
 - `casi-analizzati.html` — 8 immagini
