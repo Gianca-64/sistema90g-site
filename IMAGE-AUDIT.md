@@ -29,7 +29,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `ante-cucina-materiali-manutenzione.html` | `images/17_SERVIZI_FINITURE.jpg` | Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta. | Confronto progettuale Sistema 90G tra superfici e finiture cucina |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano  | Archivio casi cucina Sistema 90G |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano poss | Archivio casi cucina Sistema 90G |
 | `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo. | Lavastoviglie e passaggio |
 | `casi-analizzati.html` | `images/caso-isola-passaggi-cucina.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola e passaggi |
 | `casi-analizzati.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Le distanze vanno lette durante l'uso, non solo a elementi chiusi. | Lavello sotto finestra |
@@ -232,7 +232,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/19_CASI_CUCINA.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano 
+- `casi-analizzati.html` — L'archivio pubblico è dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano poss
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
 ### `images/20_CASI_DISTRIBUZIONE.jpg` — 2 utilizzi
