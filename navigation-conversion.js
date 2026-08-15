@@ -2,7 +2,7 @@
   'use strict';
   const CAMPAIGN_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const CONSENT_KEY='s90g_cookie_consent';
-  const PRIVATE_SERVICES=new Set(['scelta-finiture-casa','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina','studio-preliminare-spazi']);
+  const PRIVATE_SERVICES=new Set(['scelta-finiture-cucina','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina']);
   const NAV_LINKS=[
     ['home','Home','/'],
     ['services','Servizi','/servizi.html'],
@@ -30,26 +30,25 @@
     if(slug==='analisi-preventiva')return 'process';
     if(slug==='casi-analizzati'||slug.startsWith('casi-')||slug.startsWith('caso-'))return 'cases';
     if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailers';
-    if(['professionisti','agenzie-immobiliari','verifica-planimetria-distribuzione-casa','analisi-unita-varianti'].includes(slug))return 'professionals';
+    if(slug==='professionisti')return 'professionals';
     if(slug==='metodo-sistema90g')return 'method';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'innovation';
     if(slug==='chi-e-sistema90g')return 'about';
     if(slug==='contatti')return 'contacts';
-    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='analisi-preventivo-cucina'||slug==='render-fotorealistici-interni')return 'services';
+    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='analisi-preventivo-cucina')return 'services';
     return '';
   };
   const inferRoleHint=slug=>{
     if(PRIVATE_SERVICES.has(slug))return 'private';
     if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailer';
-    if(slug==='agenzie-immobiliari')return 'agency';
     return '';
   };
   const inferContentType=slug=>{
     if(slug.startsWith('caso-'))return 'case';
     if(slug.startsWith('casi-'))return 'case-category';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'article';
-    if(['professionisti','rivenditori-cucine','agenzie-immobiliari'].includes(slug))return 'professional';
-    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||['controllo-progetto-cucina','verifica-planimetria-distribuzione-casa','analisi-unita-varianti'].includes(slug))return 'service';
+    if(['professionisti','rivenditori-cucine'].includes(slug))return 'professional';
+    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='controllo-progetto-cucina')return 'service';
     return 'page';
   };
   function campaignParams(){
