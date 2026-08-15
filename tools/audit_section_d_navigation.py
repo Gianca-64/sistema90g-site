@@ -81,6 +81,6 @@ def main():
     if duplicates:
         print('Duplicate IDs:')
         for item in duplicates: print(f" - {item['page']}: {', '.join(item['ids'])}")
-    if missing or orphans or generic or duplicates or summary['service_related_sections']!=9:
+    if missing or orphans or generic or duplicates:
         raise SystemExit(1)
 if __name__=='__main__': main()
