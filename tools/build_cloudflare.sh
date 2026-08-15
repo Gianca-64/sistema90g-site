@@ -52,9 +52,13 @@ rm -f \
 
 # Se un vecchio URL HTML ha gia un redirect 301 esplicito, rimuoviamo il file fisico
 # dall'output cosi il redirect non puo essere mascherato da una risorsa statica omonima.
+# index.html fa eccezione: serve come documento home del Worker, mentre /index.html -> /
+# resta una regola canonica per le richieste esplicite al vecchio URL.
 while read -r source target status rest; do
   [ "${status:-}" = "301" ] || continue
   case "$source" in
+    /index.html)
+      ;;
     /*.html)
       legacy="${source#/}"
       rm -f "$DIST/$legacy"
