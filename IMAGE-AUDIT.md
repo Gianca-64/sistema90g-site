@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **112**
+- Pagine HTML controllate: **111**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **169**
+- Immagini di contenuto pubblicate: **168**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **47**
@@ -28,7 +28,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali. | Percorso di analisi per una cucina |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
-| `analisi-unita-varianti.html` | `images/20_CASI_DISTRIBUZIONE.jpg` | Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og | Confronto coordinato di più unità immobiliari o varianti |
 | `ante-cucina-materiali-manutenzione.html` | `images/17_SERVIZI_FINITURE.jpg` | Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta. | Confronto progettuale Sistema 90G tra superfici e finiture cucina |
 | `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano  | Archivio casi cucina Sistema 90G |
 | `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo. | Lavastoviglie e passaggio |
@@ -236,9 +235,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-analizzati.html` — L'archivio pubblico è ora dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano 
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
-### `images/20_CASI_DISTRIBUZIONE.jpg` — 3 utilizzi
+### `images/20_CASI_DISTRIBUZIONE.jpg` — 2 utilizzi
 
-- `analisi-unita-varianti.html` — Un processo uniforme per almeno tre unità o varianti collegate, utile quando le informazioni devono essere confrontate senza ricominciare og
 - `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
