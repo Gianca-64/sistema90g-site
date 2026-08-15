@@ -69,6 +69,18 @@ def main():
         for name,data in [('summary.json',summary),('orphans.json',orphans),('missing-links.json',missing),('generic-labels.json',generic),('duplicate-ids.json',duplicates)]:
             (out/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(summary,ensure_ascii=False,indent=2))
+    if orphans:
+        print('Indexable orphans:')
+        for rel in orphans: print(f' - {rel}')
+    if missing:
+        print('Missing internal targets:')
+        for item in missing: print(f" - {item['page']}: {item['href']} -> {item['target']}")
+    if generic:
+        print('Generic CTA labels:')
+        for item in generic: print(f" - {item['page']}: {item['text']} -> {item['href']}")
+    if duplicates:
+        print('Duplicate IDs:')
+        for item in duplicates: print(f" - {item['page']}: {', '.join(item['ids'])}")
     if missing or orphans or generic or duplicates or summary['service_related_sections']!=9:
         raise SystemExit(1)
 if __name__=='__main__': main()
