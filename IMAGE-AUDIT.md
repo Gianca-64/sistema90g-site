@@ -8,12 +8,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - Pagine HTML controllate: **113**
 - File immagine presenti: **190**
 - Immagini di contenuto pubblicate: **176**
-- Asset riutilizzati in più punti (da valutare, non errore): **41**
+- Asset riutilizzati in più punti (da valutare, non errore): **40**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **127**
+- Immagini non utilizzate: **125**
 
 ## Mappa pagina → immagine → contesto
 
@@ -160,8 +160,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
 | `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Non una vetrina di novità, ma una raccolta di soluzioni da capire prima di inserirle in un progetto. Sistema 90G guarda a ciò che cambia dav | Innovazioni cucina lette con approccio tecnico e progettuale Sistema 90G |
-| `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Quando il vantaggio promesso si riduce o scompare? | Forno connesso e tecnologie intelligenti per la cottura |
-| `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Ricette importate dal web, riconoscimento del piatto e preferenze di cottura: dove l'AI può essere utile e quali dipendenze introduce. | Superfici e tecnologie per la cucina |
+| `innovazioni.html` | `images/editoriale/forno-ai-telecamera-sistema90g.svg` | Quando il vantaggio promesso si riduce o scompare? | Forno da incasso con telecamera e funzioni di intelligenza artificiale |
+| `innovazioni.html` | `images/editoriale/piano-induzione-opaco-sistema90g.svg` | Ricette importate dal web, riconoscimento del piatto e preferenze di cottura: dove l'AI può essere utile e quali dipendenze introduce. | Piano a induzione nero opaco con superficie a ridotta visibilità dei segni |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Opaco non significa automaticamente antigraffio: come distinguere resistenza, visibilità dei segni, manutenzione e implicazioni progettuali. | Tecnologie di lavaggio e asciugatura per lavastoviglie |
 | `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Colonna lavatrice e asciugatrice con comandi centrali |
 | `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
@@ -445,12 +445,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-
-### `images/editoriale/innovazioni-sistema90g.webp` — 3 utilizzi
-
-- `innovazioni.html` — Non una vetrina di novità, ma una raccolta di soluzioni da capire prima di inserirle in un progetto. Sistema 90G guarda a ciò che cambia dav
-- `innovazioni.html` — Quando il vantaggio promesso si riduce o scompare?
-- `innovazioni.html` — Ricette importate dal web, riconoscimento del piatto e preferenze di cottura: dove l'AI può essere utile e quali dipendenze introduce.
 
 ### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
 
