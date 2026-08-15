@@ -7,13 +7,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **113**
 - File immagine presenti: **188**
-- Immagini di contenuto pubblicate: **173**
+- Immagini di contenuto pubblicate: **174**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **126**
+- Immagini non utilizzate: **125**
 
 ## Mappa pagina → immagine → contesto
 
@@ -161,6 +161,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
 | `innovazioni.html` | `images/editoriale/innovazioni-sistema90g.webp` | Non una vetrina di novità, ma una raccolta di soluzioni da capire prima di inserirle in un progetto. Sistema 90G guarda a ciò che cambia dav | Innovazioni cucina lette con approccio tecnico e progettuale Sistema 90G |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Quando il vantaggio promesso si riduce o scompare? | Tecnologie di lavaggio e asciugatura per lavastoviglie |
+| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Colonna lavatrice e asciugatrice con comandi centrali |
 | `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
 | `lavastoviglie-cucina-aperture-passaggi.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Una lavastoviglie chiusa occupa poco spazio visivo. Aperta, invece, può cambiare completamente il passaggio e interferire con altri elementi | Lavastoviglie aperta in cucina con passaggio ridotto |
 | `lavello-sotto-finestra-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | La posizione può funzionare bene, ma va verificata insieme a quota del piano, davanzale, rubinetto e movimento dell'infisso. | Lavello sotto finestra con verifica dell |
@@ -543,7 +544,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `errori-progetto-cucina.html` — 2 immagini
 - `esempio-fascicolo-cucina.html` — 2 immagini
 - `index.html` — 5 immagini
-- `innovazioni.html` — 2 immagini
+- `innovazioni.html` — 3 immagini
 - `metodo-sistema90g.html` — 2 immagini
 - `restyling-cucina-esistente.html` — 2 immagini
 - `rivenditori-cucine.html` — 2 immagini
