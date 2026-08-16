@@ -170,7 +170,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
-| `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di  | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
+| `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
 | `progetto-cucina-sistema90g.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Progetto indipendente di una cucina con planimetria e visualizzazione tridimensionale |
 | `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Descrivi lo spazio e ciò che vuoi ottenere. Il percorso ti mostra come iniziare e il prezzo prima dell'invio della richiesta. | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
@@ -203,7 +203,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `analisi-preventiva.html` — Se parti da zero puoi definire prima una base progettuale indipendente. Se hai già un progetto o un preventivo, puoi invece scegliere il liv
 - `metodo-sistema90g.html` — Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell'
-- `progettare-cucina-guide.html` — Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di 
+- `progettare-cucina-guide.html` — Scopri Progetto Cucina Sistema 90G →
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
 ### `images/08_HOME_CHIUSURA.jpg` — 8 utilizzi
