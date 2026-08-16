@@ -181,8 +181,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Il progetto preliminare serve a decidere la cucina. Il rilievo serve a verificare che quella cucina possa essere ordinata sulle misure reali | Rilievo misure cucina con quote, pareti e impianti |
-| `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ | Confronto tra analisi indipendente e progetto commerciale del rivenditore |
-| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio. | Collaborazione tra rivenditore e controllo indipendente |
+| `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Sistema 90G non si propone come alternativa al punto vendita. Può aiutare a chiarire esigenze e dubbi sulla cucina prima che diventino revis | Collaborazione tra supporto specialistico e rivenditore di cucine |
+| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Se vuoi capire in quali casi Sistema 90G può affiancare il tuo showroom, il punto di partenza è il progetto o il dubbio concreto da approfon | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
@@ -261,7 +261,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
 - `agenzie-immobiliari-cucina.html` — Sistema 90G può aiutare a leggere in via preliminare le possibilità dello spazio cucina, così da rendere più comprensibile un ambiente che p
-- `rivenditori-cucine.html` — Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio.
+- `rivenditori-cucine.html` — Se vuoi capire in quali casi Sistema 90G può affiancare il tuo showroom, il punto di partenza è il progetto o il dubbio concreto da approfon
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
 
@@ -452,7 +452,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
-- `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
+- `rivenditori-cucine.html` — Sistema 90G non si propone come alternativa al punto vendita. Può aiutare a chiarire esigenze e dubbi sulla cucina prima che diventino revis
 
 ### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
 
