@@ -175,8 +175,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
-| `progetto-cucina-sistema90g.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Progetto indipendente di una cucina con planimetria e visualizzazione tridimensionale |
-| `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Descrivi lo spazio e ciò che vuoi ottenere. Il percorso ti mostra come iniziare e il prezzo prima dell'invio della richiesta. | Raccolta di planimetrie e informazioni per progettare una cucina |
+| `progetto-cucina-sistema90g.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
+| `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Indica chi sei e la situazione della cucina. Il percorso conferma il servizio, il prezzo e ciò che verrà valutato prima di chiederti di proc | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -299,7 +299,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `contatti.html` — Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo
 - `controllo-mirato.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
-- `progetto-cucina-sistema90g.html` — Descrivi lo spazio e ciò che vuoi ottenere. Il percorso ti mostra come iniziare e il prezzo prima dell'invio della richiesta.
+- `progetto-cucina-sistema90g.html` — Indica chi sei e la situazione della cucina. Il percorso conferma il servizio, il prezzo e ciò che verrà valutato prima di chiederti di proc
 - `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `studio-preliminare-spazi.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
@@ -486,7 +486,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/servizi/acquisto-assistito-cucina-90g.webp` — 2 utilizzi
 
 - `acquisto-assistito-cucina.html` — Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo.
-- `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
+- `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio
 
 ## Pagine senza immagini — informativo
 
