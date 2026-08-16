@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **119**
 - File immagine presenti: **193**
-- Immagini di contenuto pubblicate: **181**
+- Immagini di contenuto pubblicate: **182**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **52**
+- Pagine con più immagini di contenuto (informativo): **53**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **133**
@@ -23,7 +23,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `abbinare-cucina-pavimento.html` | `images/17_SERVIZI_FINITURE.jpg` | Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme. | Confronto Sistema 90G tra finiture della cucina e pavimento |
 | `acquisto-assistito-cucina.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Confronto tra schizzo tecnico e visualizzazione realistica di una cucina per verificare funzioni, ingombri e passaggi |
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `agenzie-immobiliari-cucina.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Sistema 90G può aiutare a leggere in via preliminare le possibilità dello spazio cucina, così da rendere più comprensibile un ambiente che p | Collaborazione con agenzia immobiliare per comprendere le possibilità della cucina in un immobile |
+| `agenzie-immobiliari-cucina.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che  | Collaborazione con agenzia immobiliare per comprendere le possibilità della cucina in un immobile |
+| `agenzie-immobiliari-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il punto di partenza è la domanda concreta del cliente e il materiale disponibile. | Materiale per valutare il potenziale cucina di un immobile |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Per leggere insieme progetto, funzioni, passaggi, documenti e preventivo prima della conferma. | Analisi completa di progetto e preventivo |
 | `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Se parti da zero puoi definire prima una base progettuale indipendente. Se hai già un progetto o un preventivo, puoi invece scegliere il liv | Percorso indipendente per progettare o controllare una cucina |
@@ -273,12 +274,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
-- `agenzie-immobiliari-cucina.html` — Sistema 90G può aiutare a leggere in via preliminare le possibilità dello spazio cucina, così da rendere più comprensibile un ambiente che p
+- `agenzie-immobiliari-cucina.html` — Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che 
 - `rivenditori-cucine.html` — La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 39 utilizzi
 
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
+- `agenzie-immobiliari-cucina.html` — Il punto di partenza è la domanda concreta del cliente e il materiale disponibile.
 - `analisi-completa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `casi-analizzati.html` — Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta.
@@ -536,6 +538,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ## Pagine con più immagini — informativo
 
 - `acquisto-assistito-cucina.html` — 2 immagini
+- `agenzie-immobiliari-cucina.html` — 2 immagini
 - `analisi-completa.html` — 2 immagini
 - `analisi-preventivo-cucina.html` — 2 immagini
 - `casi-analizzati.html` — 8 immagini
