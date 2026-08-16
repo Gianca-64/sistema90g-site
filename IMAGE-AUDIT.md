@@ -5,12 +5,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **112**
+- Pagine HTML controllate: **113**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **169**
-- Asset riutilizzati in più punti (da valutare, non errore): **39**
+- Immagini di contenuto pubblicate: **171**
+- Asset riutilizzati in più punti (da valutare, non errore): **40**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **47**
+- Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **133**
@@ -171,6 +171,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di  | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
+| `progetto-cucina-sistema90g.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Progetto indipendente di una cucina con planimetria e visualizzazione tridimensionale |
+| `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Descrivi lo spazio e ciò che vuoi ottenere. Il percorso ti mostra come iniziare e il prezzo prima dell'invio della richiesta. | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -250,7 +252,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento.
 - `seconda-opinione-cucina.html` — Nessun vincolo di marchio · nessuna vendita di cucine · valutazione indipendente.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 37 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
 
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-completa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
@@ -286,6 +288,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `contatti.html` — Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo
 - `controllo-mirato.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
+- `progetto-cucina-sistema90g.html` — Descrivi lo spazio e ciò che vuoi ottenere. Il percorso ti mostra come iniziare e il prezzo prima dell'invio della richiesta.
 - `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `studio-preliminare-spazi.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
@@ -459,6 +462,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
 
+### `images/servizi/acquisto-assistito-cucina-90g.webp` — 2 utilizzi
+
+- `acquisto-assistito-cucina.html` — Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo.
+- `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
+
 ## Pagine senza immagini — informativo
 
 - `altezza-pensili-spazio-top-cucina.html`
@@ -535,6 +543,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — 5 immagini
 - `innovazioni.html` — 4 immagini
 - `metodo-sistema90g.html` — 2 immagini
+- `progetto-cucina-sistema90g.html` — 2 immagini
 - `restyling-cucina-esistente.html` — 2 immagini
 - `rivenditori-cucine.html` — 2 immagini
 - `scelta-finiture-casa.html` — 2 immagini
