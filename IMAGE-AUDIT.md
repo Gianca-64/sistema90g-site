@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **111**
+- Pagine HTML controllate: **112**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **168**
+- Immagini di contenuto pubblicate: **169**
 - Asset riutilizzati in più punti (da valutare, non errore): **39**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **47**
@@ -180,6 +180,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
+| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Nessun vincolo di marchio · nessuna vendita di cucine · valutazione indipendente. | Seconda opinione indipendente su progetto e preventivo cucina |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Sistema 90G concentra analisi, verifiche e supporto decisionale esclusivamente sulla cucina. | Servizi di analisi indipendente per cucine |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -240,13 +241,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
-### `images/22_CASI_PREVENTIVO.jpg` — 5 utilizzi
+### `images/22_CASI_PREVENTIVO.jpg` — 6 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
 - `casi-analizzati.html` — Una variazione di profondità modifica accessibilità, raccordi e spazio utile.
 - `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento.
+- `seconda-opinione-cucina.html` — Nessun vincolo di marchio · nessuna vendita di cucine · valutazione indipendente.
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 37 utilizzi
 
