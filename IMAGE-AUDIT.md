@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **114**
+- Pagine HTML controllate: **115**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **172**
+- Immagini di contenuto pubblicate: **173**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
@@ -177,6 +177,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Il progetto preliminare serve a decidere la cucina. Il rilievo serve a verificare che quella cucina possa essere ordinata sulle misure reali | Rilievo misure cucina con quote, pareti e impianti |
 | `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ | Confronto tra analisi indipendente e progetto commerciale del rivenditore |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Il servizio, il materiale necessario, il prezzo e la prima disponibilità vengono confermati prima di qualsiasi avvio. | Collaborazione tra rivenditore e controllo indipendente |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
@@ -450,10 +451,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
 - `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
 
-### `images/hero-planimetria-90g-2026.jpg` — 3 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 4 utilizzi
 
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
+- `rilievo-misure-cucina-prima-ordine.html` — Il progetto preliminare serve a decidere la cucina. Il rilievo serve a verificare che quella cucina possa essere ordinata sulle misure reali
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
