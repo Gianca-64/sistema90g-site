@@ -149,7 +149,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina mostra la funzione del fascicolo del servizio più articolato. Non rappresenta un progetto reale, non espone procedure interne  | Esempio illustrativo del fascicolo Acquisto Assistito Cucina 90G |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Se stai iniziando prima del rivenditore, parti dal servizio da €145. Se la situazione richiede più sviluppo, consulta Acquisto Assistito. | Cucina sviluppata attraverso un percorso progettuale indipendente |
 | `esempio-progetto-cucina-90g.html` | `images/hero-planimetria-90g-2026.jpg` | Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi | Planimetria cucina usata come esempio di lettura progettuale |
-| `esempio-progetto-cucina-90g.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta il perimetro completo del servizio oppure invia direttamente una richiesta. | Cucina come risultato di una direzione progettuale indipendente |
+| `esempio-progetto-cucina-90g.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale. | Cucina come risultato di una direzione progettuale indipendente |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
@@ -225,7 +225,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `contatti.html` — Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni.
 - `esempio-fascicolo-cucina.html` — Se stai iniziando prima del rivenditore, parti dal servizio da €145. Se la situazione richiede più sviluppo, consulta Acquisto Assistito.
-- `esempio-progetto-cucina-90g.html` — Consulta il perimetro completo del servizio oppure invia direttamente una richiesta.
+- `esempio-progetto-cucina-90g.html` — Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale.
 - `index.html` — Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 - `servizi.html` — Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale.
