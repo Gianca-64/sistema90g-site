@@ -30,14 +30,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `ante-cucina-materiali-manutenzione.html` | `images/17_SERVIZI_FINITURE.jpg` | Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta. | Confronto progettuale Sistema 90G tra superfici e finiture cucina |
-| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | L'archivio pubblico è dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano poss | Archivio casi cucina Sistema 90G |
-| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo. | Lavastoviglie e passaggio |
+| `casi-analizzati.html` | `images/19_CASI_CUCINA.jpg` | Qui non trovi esempi costruiti per vendere un servizio. Trovi situazioni reali, rese anonime, che mostrano come misure, aperture, elettrodom | Archivio casi cucina Sistema 90G |
+| `casi-analizzati.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | L'archivio pubblico attivo è concentrato esclusivamente sulle cucine e sui preventivi. I precedenti casi su camere, bagni, soggiorni e distr | Lavastoviglie e passaggio |
 | `casi-analizzati.html` | `images/caso-isola-passaggi-cucina.jpg` | La porta aperta riduce lo spazio realmente utilizzabile. | Isola e passaggi |
 | `casi-analizzati.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Le distanze vanno lette durante l'uso, non solo a elementi chiusi. | Lavello sotto finestra |
 | `casi-analizzati.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Rubinetto, anta e serramento devono poter convivere realmente. | Cucina piccola su tre lati |
 | `casi-analizzati.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Più contenimento non significa automaticamente più funzionalità. | Profondità 75 e angolo |
 | `casi-analizzati.html` | `images/22_CASI_PREVENTIVO.jpg` | Una variazione di profondità modifica accessibilità, raccordi e spazio utile. | Preventivo cucina |
-| `casi-analizzati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Valuta il tuo caso cucina prima di confermare. | Materiali per analisi cucina |
+| `casi-analizzati.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta. | Materiali per analisi cucina |
 | `casi-camere-contenimento.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Camere, studio e contenimento |
 | `casi-camere-contenimento.html` | `images/caso-cabina-armadio-125-cm-passaggio.jpg` | 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti. | Cabina armadio stretta con spazio di passaggio da verificare |
 | `casi-camere-contenimento.html` | `images/caso-cabina-armadio-camera-irregolare.jpg` | La misura nominale deve includere uso e apertura. | Camera irregolare con cabina armadio e passaggi da verificare |
@@ -248,7 +248,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/19_CASI_CUCINA.jpg` — 2 utilizzi
 
-- `casi-analizzati.html` — L'archivio pubblico è dedicato esclusivamente alle cucine e mostra come misure, aperture, elettrodomestici, preventivi e uso quotidiano poss
+- `casi-analizzati.html` — Qui non trovi esempi costruiti per vendere un servizio. Trovi situazioni reali, rese anonime, che mostrano come misure, aperture, elettrodom
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
 ### `images/20_CASI_DISTRIBUZIONE.jpg` — 2 utilizzi
@@ -275,7 +275,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-completa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
-- `casi-analizzati.html` — Valuta il tuo caso cucina prima di confermare.
+- `casi-analizzati.html` — Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
 - `caso-cabina-armadio-125-cm-passaggio.html` — Invia planimetria, misure nette e sistema di apertura previsto.
 - `caso-cabina-armadio-camera-irregolare.html` — Invia planimetria, misure, fotografie e posizione di letto e aperture.
@@ -387,7 +387,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/caso-lavastoviglie-passaggio-cucina.jpg` — 5 utilizzi
 
-- `casi-analizzati.html` — I precedenti casi su camere, bagni, soggiorni e distribuzione generale della casa non fanno più parte del perimetro pubblico attivo.
+- `casi-analizzati.html` — L'archivio pubblico attivo è concentrato esclusivamente sulle cucine e sui preventivi. I precedenti casi su camere, bagni, soggiorni e distr
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `errori-progetto-cucina.html` — Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp
