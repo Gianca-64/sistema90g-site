@@ -194,7 +194,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
 | `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
-| `voci-escluse-preventivo-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar | Lettura tecnica Sistema 90G delle voci incluse ed escluse in un preventivo cucina |
+| `voci-escluse-preventivo-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Non tutti i rivenditori organizzano la fornitura nello stesso modo. Per confrontare due offerte è quindi utile capire quali attività e servi | Preventivo cucina con servizi inclusi ed esclusi riletti in modo chiaro |
 
 ## Asset riutilizzati — verifica editoriale
 
@@ -476,7 +476,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `preventivo-acquisto-cucina-guide.html` — Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e 
 - `prima-di-firmare-ordine-cucina.html` — La firma è il momento in cui molte decisioni sviluppate nelle settimane precedenti vengono riunite in un unico ordine. Una rilettura finale 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
-- `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
+- `voci-escluse-preventivo-cucina.html` — Non tutti i rivenditori organizzano la fornitura nello stesso modo. Per confrontare due offerte è quindi utile capire quali attività e servi
 
 ### `images/hero-rivenditori-processo-90g.webp` — 2 utilizzi
 
