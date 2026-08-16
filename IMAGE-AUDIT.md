@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **113**
+- Pagine HTML controllate: **114**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **171**
+- Immagini di contenuto pubblicate: **172**
 - Asset riutilizzati in più punti (da valutare, non errore): **40**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
@@ -140,6 +140,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `cucina-chiara-scura-luce.html` | `images/17_SERVIZI_FINITURE.jpg` | Il colore va letto insieme a luce naturale, dimensioni, pavimento, top e superfici circostanti. | Studio Sistema 90G di finiture cucina chiare e scure in relazione alla luce |
 | `cucina-open-space-tavolo-passaggi.html` | `images/hero-open-space-90g.jpg` | In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone  | Open space con cucina e zona pranzo analizzato secondo il metodo Sistema 90G |
 | `cucina-piccola-come-progettarla.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Negli spazi ridotti il rischio è aumentare il contenimento sacrificando passaggi, aperture e piano di lavoro. Una buona composizione deve re | Cucina piccola su tre lati con verifica di passaggi e aperture |
+| `domande-cucina-faq.html` | `images/03_HOME_METODO.jpg` | Non una raccolta generica di FAQ: un percorso tra i dubbi che cambiano davvero una decisione, dal primo progetto fino alla firma dell'ordine | Progetto cucina con quote e verifiche prima dell |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Misure reali, aperture, ventilazione, prese, scarichi e percorsi tecnici devono essere compatibili con la composizione. Una scelta corretta  | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
 | `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
@@ -199,9 +200,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `errori-progetto-cucina.html` — Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici
 - `index.html` — Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni.
 
-### `images/03_HOME_METODO.jpg` — 4 utilizzi
+### `images/03_HOME_METODO.jpg` — 5 utilizzi
 
 - `analisi-preventiva.html` — Se parti da zero puoi definire prima una base progettuale indipendente. Se hai già un progetto o un preventivo, puoi invece scegliere il liv
+- `domande-cucina-faq.html` — Non una raccolta generica di FAQ: un percorso tra i dubbi che cambiano davvero una decisione, dal primo progetto fino alla firma dell'ordine
 - `metodo-sistema90g.html` — Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell'
 - `progettare-cucina-guide.html` — Scopri Progetto Cucina Sistema 90G →
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
