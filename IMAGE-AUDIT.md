@@ -25,7 +25,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Per leggere insieme progetto, funzioni, passaggi, documenti e preventivo prima della conferma. | Analisi completa di progetto e preventivo |
 | `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali. | Percorso di analisi per una cucina |
+| `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Se parti da zero puoi definire prima una base progettuale indipendente. Se hai già un progetto o un preventivo, puoi invece scegliere il liv | Percorso indipendente per progettare o controllare una cucina |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
 | `ante-cucina-materiali-manutenzione.html` | `images/17_SERVIZI_FINITURE.jpg` | Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta. | Confronto progettuale Sistema 90G tra superfici e finiture cucina |
@@ -201,7 +201,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/03_HOME_METODO.jpg` — 4 utilizzi
 
-- `analisi-preventiva.html` — Indica il tuo ruolo e la situazione. Il percorso mostra il servizio e il prezzo applicabile prima di chiedere dati personali.
+- `analisi-preventiva.html` — Se parti da zero puoi definire prima una base progettuale indipendente. Se hai già un progetto o un preventivo, puoi invece scegliere il liv
 - `metodo-sistema90g.html` — Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell'
 - `progettare-cucina-guide.html` — Una cucina funziona quando misure, passaggi, aperture e funzioni sono coerenti tra loro. Qui trovi le verifiche principali da fare prima di 
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
