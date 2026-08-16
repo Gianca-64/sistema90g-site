@@ -147,11 +147,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
-| `index.html` | `images/01_HOME_HERO.jpg` | Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio. | Analisi indipendente di una cucina prima dell |
-| `index.html` | `images/05_HOME_CASO_1.jpg` | Interferenze, aperture, passaggi e preventivi: esempi anonimi per capire cosa conviene verificare prima. | Lavastoviglie aperta e passaggio |
+| `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
+| `index.html` | `images/05_HOME_CASO_1.jpg` | Una selezione anonima di situazioni incontrate nelle cucine: non per creare allarme, ma per mostrare quali domande conviene porsi prima di d | Lavastoviglie aperta e passaggio |
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
-| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta. | Verifica di una cucina prima dell |
+| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Scopri il Progetto Cucina Sistema 90G e parti da una base indipendente. | Progettazione di una cucina prima della scelta del rivenditore |
 | `innovazioni.html` | `images/editoriale/forno-ai-telecamera-editoriale.webp` | Approfondimenti indipendenti e verificati su prodotti, materiali, impianti e tecnologie: informazioni chiare per capire cosa cambia davvero  | Forno da incasso in cucina contemporanea |
 | `innovazioni.html` | `images/editoriale/piano-induzione-opaco-editoriale.webp` | Ricette dal web, riconoscimento del piatto e cottura assistita: a cosa servono davvero queste funzioni e quali dipendenze introducono. | Piano a induzione nero opaco integrato nel top |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Differenze reali tra opaco, resistenza ai graffi e minore visibilità dei segni, con le verifiche utili prima della scelta. | Lavastoviglie integrata nella cucina |
@@ -197,7 +197,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `errori-progetto-cucina.html` — Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici
-- `index.html` — Nessuna vendita di cucine, nessuna provvigione, nessun vincolo di marchio.
+- `index.html` — Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni.
 
 ### `images/03_HOME_METODO.jpg` — 4 utilizzi
 
@@ -214,7 +214,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-soggiorno-open-space.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
-- `index.html` — Individua il livello di verifica più adatto e scopri prezzo e tempi prima di inviare la richiesta.
+- `index.html` — Scopri il Progetto Cucina Sistema 90G e parti da una base indipendente.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
 ### `images/17_SERVIZI_FINITURE.jpg` — 8 utilizzi
