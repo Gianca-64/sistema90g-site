@@ -184,8 +184,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta | Rilievo misure cucina con quote, pareti e impianti |
-| `rivenditori-cucine.html` | `images/hero-rivenditori-collaborazione.svg` | Sistema 90G non si propone come alternativa al punto vendita. Può aiutare a chiarire esigenze e dubbi sulla cucina prima che diventino revis | Schema di collaborazione tra Sistema 90G e rivenditore: esigenze, passaggi e coordinamento prima dell |
-| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Se vuoi capire in quali casi Sistema 90G può affiancare il tuo showroom, il punto di partenza è il progetto o il dubbio concreto da approfon | Collaborazione professionale nel processo di acquisto della cucina |
+| `rivenditori-cucine.html` | `images/hero-rivenditori-collaborazione.svg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Schema di collaborazione tra Sistema 90G e rivenditore: esigenze, passaggi e coordinamento prima dell |
+| `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
@@ -268,7 +268,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
 - `agenzie-immobiliari-cucina.html` — Sistema 90G può aiutare a leggere in via preliminare le possibilità dello spazio cucina, così da rendere più comprensibile un ambiente che p
-- `rivenditori-cucine.html` — Se vuoi capire in quali casi Sistema 90G può affiancare il tuo showroom, il punto di partenza è il progetto o il dubbio concreto da approfon
+- `rivenditori-cucine.html` — La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale.
 
 ### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
 
