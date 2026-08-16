@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **118**
 - File immagine presenti: **193**
-- Immagini di contenuto pubblicate: **177**
+- Immagini di contenuto pubblicate: **178**
 - Asset riutilizzati in più punti (da valutare, non errore): **43**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **49**
+- Pagine con più immagini di contenuto (informativo): **50**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **133**
@@ -189,7 +189,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Nessun vincolo di marchio · nessuna provvigione sulla vendita · ruoli complementari. | Seconda opinione complementare su progetto e preventivo cucina |
-| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Il percorso cambia in base al momento in cui ti trovi: cucina ancora da impostare, proposta già ricevuta o scelta specifica da verificare. | Servizi indipendenti di progettazione e analisi cucina |
+| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | A 145 € costruisci una base progettuale indipendente prima di scegliere il rivenditore. Se hai già una proposta o un preventivo, il percorso | Servizi indipendenti di progettazione e analisi cucina |
+| `servizi.html` | `images/08_HOME_CHIUSURA.jpg` | Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale. | Cucina definita prima della scelta del rivenditore |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
@@ -213,7 +214,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `progettare-cucina-guide.html` — Scopri Progetto Cucina Sistema 90G →
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
-### `images/08_HOME_CHIUSURA.jpg` — 9 utilizzi
+### `images/08_HOME_CHIUSURA.jpg` — 10 utilizzi
 
 - `casi-camere-contenimento.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-cucina.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
@@ -224,6 +225,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
 - `index.html` — Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
+- `servizi.html` — Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale.
 
 ### `images/17_SERVIZI_FINITURE.jpg` — 8 utilizzi
 
@@ -571,6 +573,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `restyling-cucina-esistente.html` — 2 immagini
 - `rivenditori-cucine.html` — 2 immagini
 - `scelta-finiture-casa.html` — 2 immagini
+- `servizi.html` — 2 immagini
 - `studio-preliminare-spazi.html` — 2 immagini
 
 ## Riferimenti mancanti
