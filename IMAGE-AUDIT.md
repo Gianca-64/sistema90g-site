@@ -5,10 +5,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **115**
+- Pagine HTML controllate: **116**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **173**
-- Asset riutilizzati in più punti (da valutare, non errore): **40**
+- Immagini di contenuto pubblicate: **174**
+- Asset riutilizzati in più punti (da valutare, non errore): **41**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
@@ -164,6 +164,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
+| `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | Una cucina può essere consegnata e montata correttamente ma non essere ancora pronta all'uso. Il punto è distinguere in anticipo tutte le at | Montaggio cucina con verifica di mobili, elettrodomestici e impianti |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Due preventivi possono avere totali simili e contenuti molto diversi. Per confrontarli bisogna rendere leggibili progetto, materiali, elettr | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
@@ -445,6 +446,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
 - `rivenditori-cucine.html` — Il servizio professionale da 150 euro analizza un progetto cucina già sviluppato. L’Acquisto Assistito Cucina 90G è invece un servizio separ
+
+### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
+
+- `elettrodomestici-impianti-cucina-guide.html` — Misure reali, aperture, ventilazione, prese, scarichi e percorsi tecnici devono essere compatibili con la composizione. Una scelta corretta 
+- `montaggio-allacciamenti-cucina-cosa-chiarire.html` — Una cucina può essere consegnata e montata correttamente ma non essere ancora pronta all'uso. Il punto è distinguere in anticipo tutte le at
 
 ### `images/hero-open-space-90g.jpg` — 2 utilizzi
 
