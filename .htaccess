@@ -19,34 +19,44 @@ RewriteRule ^ https://sistema90g.it%{REQUEST_URI} [R=301,L]
 # Homepage canonica.
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Servizio rinominato: conserva il traffico del vecchio URL.
-RewriteRule ^progetto-da-zero\.html$ /studio-preliminare-spazi.html [R=301,L]
+# Vecchi servizi generalisti riallineati al solo settore cucina.
+RewriteRule ^progetto-da-zero\.html$ /progetto-cucina-sistema90g.html [R=301,L]
+RewriteRule ^studio-preliminare-spazi\.html$ /progetto-cucina-sistema90g.html [R=301,L]
+RewriteRule ^scelta-finiture-casa\.html$ /scelta-finiture-cucina.html [R=301,L]
+RewriteRule ^agenzie-immobiliari\.html$ /agenzie-immobiliari-cucina.html [R=301,L]
+RewriteRule ^analisi-unita-varianti\.html$ /agenzie-immobiliari-cucina.html [R=301,L]
+RewriteRule ^render-fotorealistici-interni\.html$ /progetto-cucina-sistema90g.html [R=301,L]
 
-# Bonifica MKT-02: una sola fonte Metodo/AI e nessun servizio non vigente.
+# Una sola fonte Metodo/AI e servizi cucina vigenti.
 RewriteRule ^come-sistema90g-utilizza-intelligenza-artificiale\.html$ /metodo-sistema90g.html [R=301,L]
-RewriteRule ^render-fotorealistici-interni\.html$ /acquisto-assistito-cucina.html [R=301,L]
 RewriteRule ^servizi/add-on-capitolato(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
 RewriteRule ^blog/capitolato-cucina-cosa-controllare(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
-RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /acquisto-assistito-cucina.html [R=301,L]
-RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /progetto-cucina-sistema90g.html [R=301,L]
+RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /progettare-cucina-guide.html [R=301,L]
 RewriteRule ^contatti/?$ /contatti.html [R=301,L]
 
-# Vecchie rotte e contenuti sostituiti.
+# Vecchie rotte sostituite da contenuti cucina coerenti.
 RewriteRule ^rivenditori-veneta-cucine\.html$ /rivenditori-cucine.html [R=301,L]
 RewriteRule ^richiesta\.html$ /analisi-preventiva.html#percorso [R=301,NE,L]
-RewriteRule ^caso-open-space\.html$ /caso-open-space-tv-divano-passaggi.html [R=301,L]
 RewriteRule ^caso-passaggio-lavastoviglie\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
 RewriteRule ^caso-verificato-isola-forno-passaggi\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
 RewriteRule ^centro-casi-reali\.html$ /casi-analizzati.html [R=301,L]
-RewriteRule ^cosa-cambia-dopo-il-controllo\.html$ /analisi-preventiva.html [R=301,L]
-RewriteRule ^dubbi-reali-cucina\.html$ /analisi-preventiva.html [R=301,L]
+RewriteRule ^cosa-cambia-dopo-il-controllo\.html$ /seconda-opinione-cucina.html [R=301,L]
+RewriteRule ^dubbi-reali-cucina\.html$ /domande-cucina-faq.html [R=301,L]
 RewriteRule ^errori-trovati-davvero\.html$ /casi-analizzati.html [R=301,L]
-RewriteRule ^micro-caso-frigo-apertura\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^micro-caso-frigo-apertura\.html$ /frigorifero-cucina-vicino-parete.html [R=301,L]
 RewriteRule ^micro-caso-passaggio-bloccato\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
-RewriteRule ^quando-il-render-inganna\.html$ /analisi-preventiva.html [R=301,L]
-RewriteRule ^scena-frigo-vicino-parete\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^quando-il-render-inganna\.html$ /errori-progetto-cucina.html [R=301,L]
+RewriteRule ^scena-frigo-vicino-parete\.html$ /frigorifero-cucina-vicino-parete.html [R=301,L]
 RewriteRule ^scena-isola-sgabelli-passaggio\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
 RewriteRule ^scena-lavastoviglie-aperta-passaggio\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
 RewriteRule ^scene-reali-cucina\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^tutto-sembrava-corretto-finche\.html$ /casi-analizzati.html [R=301,L]
+
+# Contenuti storici fuori dal perimetro cucina: consolidano verso il centro casi.
+RewriteRule ^casi-spazi-servizio\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^casi-distribuzione-casa\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-open-space-tv-divano-passaggi\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-camera-bambini-crescita\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-garage-apertura-portiere\.html$ /casi-analizzati.html [R=301,L]
 </IfModule>
