@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **118**
 - File immagine presenti: **193**
-- Immagini di contenuto pubblicate: **176**
+- Immagini di contenuto pubblicate: **177**
 - Asset riutilizzati in più punti (da valutare, non errore): **43**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **48**
+- Pagine con più immagini di contenuto (informativo): **49**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **133**
@@ -132,7 +132,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Oggi Sistema 90G concentra tutta la propria attività sulle cucine: progetto, preventivo, misure, aperture, passaggi,  | Gian Carlo Primo, fondatore di Sistema 90G |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
 | `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
-| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
+| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Se devi ancora progettare la cucina, hai già ricevuto una proposta oppure vuoi verificare un dubbio prima dell'ordine, puoi partire dal perc | Planimetrie e informazioni per avviare un progetto cucina |
+| `contatti.html` | `images/08_HOME_CHIUSURA.jpg` | Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni. | Cucina progettata con criteri funzionali e indipendenti |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
@@ -212,13 +213,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `progettare-cucina-guide.html` — Scopri Progetto Cucina Sistema 90G →
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
-### `images/08_HOME_CHIUSURA.jpg` — 8 utilizzi
+### `images/08_HOME_CHIUSURA.jpg` — 9 utilizzi
 
 - `casi-camere-contenimento.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-cucina.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-distribuzione-casa.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-soggiorno-open-space.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
+- `contatti.html` — Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni.
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
 - `index.html` — Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
@@ -296,7 +298,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-terrazzo-passaggio-arredi.html` — Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere.
 - `caso-terza-camera-zona-giorno.html` — Invia planimetria, misure, aperture e posizione degli impianti esistenti.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Invia fotografie, elaborati e documenti disponibili.
-- `contatti.html` — Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo
+- `contatti.html` — Se devi ancora progettare la cucina, hai già ricevuto una proposta oppure vuoi verificare un dubbio prima dell'ordine, puoi partire dal perc
 - `controllo-mirato.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `progetto-cucina-sistema90g.html` — Indica chi sei e la situazione della cucina. Il percorso conferma il servizio, il prezzo e ciò che verrà valutato prima di chiederti di proc
@@ -558,6 +560,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-terza-camera-zona-giorno.html` — 2 immagini
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — 2 immagini
 - `chi-e-sistema90g.html` — 2 immagini
+- `contatti.html` — 2 immagini
 - `controllo-mirato.html` — 2 immagini
 - `errori-progetto-cucina.html` — 2 immagini
 - `esempio-fascicolo-cucina.html` — 2 immagini
