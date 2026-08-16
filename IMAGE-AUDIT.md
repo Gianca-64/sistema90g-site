@@ -165,7 +165,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
-| `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
+| `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Due preventivi possono avere totali simili e contenuti molto diversi. Per confrontarli bisogna rendere leggibili progetto, materiali, elettr | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e  | Verifica Sistema 90G di progetto e preventivo cucina prima della firma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Rivenditori, interior designer, architetti, geometri, imprese e altri professionisti possono sottoporre casi quando il perimetro riguarda es | Analisi professionale di un progetto cucina |
@@ -457,7 +457,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
 
 - `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
-- `preventivo-acquisto-cucina-guide.html` — Il prezzo da solo non basta. Per valutare un acquisto bisogna capire cosa comprende l'offerta, cosa esclude e se progetto e fornitura giusti
+- `preventivo-acquisto-cucina-guide.html` — Due preventivi possono avere totali simili e contenuti molto diversi. Per confrontarli bisogna rendere leggibili progetto, materiali, elettr
 - `prima-di-firmare-ordine-cucina.html` — La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
