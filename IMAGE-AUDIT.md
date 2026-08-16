@@ -180,7 +180,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Il progetto preliminare serve a decidere la cucina. Il rilievo serve a verificare che quella cucina possa essere ordinata sulle misure reali | Rilievo misure cucina con quote, pareti e impianti |
+| `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta | Rilievo misure cucina con quote, pareti e impianti |
 | `rivenditori-cucine.html` | `images/hero-cucina-90g-2026.jpg` | Sistema 90G non si propone come alternativa al punto vendita. Può aiutare a chiarire esigenze e dubbi sulla cucina prima che diventino revis | Collaborazione tra supporto specialistico e rivenditore di cucine |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Se vuoi capire in quali casi Sistema 90G può affiancare il tuo showroom, il punto di partenza è il progetto o il dubbio concreto da approfon | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
@@ -468,7 +468,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
-- `rilievo-misure-cucina-prima-ordine.html` — Il progetto preliminare serve a decidere la cucina. Il rilievo serve a verificare che quella cucina possa essere ordinata sulle misure reali
+- `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
