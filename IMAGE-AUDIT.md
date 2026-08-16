@@ -5,10 +5,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **116**
+- Pagine HTML controllate: **117**
 - File immagine presenti: **192**
-- Immagini di contenuto pubblicate: **174**
-- Asset riutilizzati in più punti (da valutare, non errore): **41**
+- Immagini di contenuto pubblicate: **175**
+- Asset riutilizzati in più punti (da valutare, non errore): **42**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
@@ -170,6 +170,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Due preventivi possono avere totali simili e contenuti molto diversi. Prima dell'ordine bisogna rendere leggibili progetto, fornitura, rilie | Preventivo cucina con annotazioni tecniche e verifiche Sistema 90G |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e  | Verifica Sistema 90G di progetto e preventivo cucina prima della firma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
+| `professionisti-progetto-cucina.html` | `images/hero-rivenditori-processo-90g.webp` | Quando la cucina richiede un approfondimento verticale, Sistema 90G può lavorare sul perimetro concordato lasciando al professionista la reg | Approfondimento specialistico di un progetto cucina a supporto del professionista |
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
@@ -471,6 +472,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `prima-di-firmare-ordine-cucina.html` — La firma arriva spesso quando molte scelte sembrano già definite. È invece l'ultimo momento utile per controllare che progetto, fornitura e 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Un prezzo può sembrare competitivo perché alcune attività non sono comprese. Le esclusioni vanno lette prima di confrontare offerte o firmar
+
+### `images/hero-rivenditori-processo-90g.webp` — 2 utilizzi
+
+- `professionisti-progetto-cucina.html` — Quando la cucina richiede un approfondimento verticale, Sistema 90G può lavorare sul perimetro concordato lasciando al professionista la reg
+- `professionisti.html` — Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon
 
 ### `images/servizi/acquisto-assistito-cucina-90g.webp` — 2 utilizzi
 
