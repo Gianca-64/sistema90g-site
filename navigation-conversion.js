@@ -2,7 +2,7 @@
   'use strict';
   const CAMPAIGN_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const CONSENT_KEY='s90g_cookie_consent';
-  const PRIVATE_SERVICES=new Set(['scelta-finiture-cucina','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina']);
+  const PRIVATE_SERVICES=new Set(['progetto-cucina-sistema90g','scelta-finiture-cucina','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina']);
   const NAV_LINKS=[
     ['home','Home','/'],
     ['services','Servizi','/servizi.html'],
@@ -30,7 +30,7 @@
     if(slug==='analisi-preventiva')return 'process';
     if(slug==='casi-analizzati'||slug.startsWith('casi-')||slug.startsWith('caso-'))return 'cases';
     if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailers';
-    if(slug==='professionisti')return 'professionals';
+    if(slug==='professionisti'||slug==='professionisti-progetto-cucina'||slug==='agenzie-immobiliari-cucina')return 'professionals';
     if(slug==='metodo-sistema90g')return 'method';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'innovation';
     if(slug==='chi-e-sistema90g')return 'about';
@@ -47,8 +47,9 @@
     if(slug.startsWith('caso-'))return 'case';
     if(slug.startsWith('casi-'))return 'case-category';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'article';
-    if(['professionisti','rivenditori-cucine'].includes(slug))return 'professional';
+    if(['professionisti','professionisti-progetto-cucina','agenzie-immobiliari-cucina','rivenditori-cucine'].includes(slug))return 'professional';
     if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='controllo-progetto-cucina')return 'service';
+    if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
     return 'page';
   };
   function campaignParams(){
