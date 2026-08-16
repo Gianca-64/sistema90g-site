@@ -6,14 +6,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ## Riepilogo
 
 - Pagine HTML controllate: **118**
-- File immagine presenti: **192**
+- File immagine presenti: **193**
 - Immagini di contenuto pubblicate: **176**
 - Asset riutilizzati in più punti (da valutare, non errore): **43**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **48**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **133**
+- Immagini non utilizzate: **134**
 
 ## Mappa pagina → immagine → contesto
 
