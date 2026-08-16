@@ -149,11 +149,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio. | Materiali preliminari per il confronto con il rivenditore |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
-| `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
-| `index.html` | `images/05_HOME_CASO_1.jpg` | Una selezione anonima di situazioni incontrate nelle cucine: non per creare allarme, ma per mostrare quali domande conviene porsi prima di d | Lavastoviglie aperta e passaggio |
-| `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso. | Isola cucina e passaggi |
-| `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento. | Preventivo cucina |
-| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Scopri il Progetto Cucina Sistema 90G e parti da una base indipendente. | Progettazione di una cucina prima della scelta del rivenditore |
+| `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
+| `index.html` | `images/05_HOME_CASO_1.jpg` | Le situazioni raccolte da Sistema 90G mostrano quali domande possono cambiare una decisione prima dell'ordine. | Lavastoviglie aperta e passaggio |
+| `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso. | Isola cucina e passaggi |
+| `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione deve funzionare anche con ante, sgabelli e persone in movimento. | Confronto di un preventivo cucina |
+| `index.html` | `images/08_HOME_CHIUSURA.jpg` | Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo. | Progettazione di una cucina prima della scelta del rivenditore |
 | `innovazioni.html` | `images/editoriale/forno-ai-telecamera-editoriale.webp` | Approfondimenti indipendenti e verificati su prodotti, materiali, impianti e tecnologie: informazioni chiare per capire cosa cambia davvero  | Forno da incasso in cucina contemporanea |
 | `innovazioni.html` | `images/editoriale/piano-induzione-opaco-editoriale.webp` | Ricette dal web, riconoscimento del piatto e cottura assistita: a cosa servono davvero queste funzioni e quali dipendenze introducono. | Piano a induzione nero opaco integrato nel top |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Differenze reali tra opaco, resistenza ai graffi e minore visibilità dei segni, con le verifiche utili prima della scelta. | Lavastoviglie integrata nella cucina |
@@ -202,7 +202,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `errori-progetto-cucina.html` — Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici
-- `index.html` — Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni.
+- `index.html` — Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita.
 
 ### `images/03_HOME_METODO.jpg` — 5 utilizzi
 
@@ -220,7 +220,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-soggiorno-open-space.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-spazi-servizio.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `esempio-fascicolo-cucina.html` — Consulta perimetro, prezzo, tempo e limiti nella pagina ufficiale del servizio.
-- `index.html` — Scopri il Progetto Cucina Sistema 90G e parti da una base indipendente.
+- `index.html` — Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
 
 ### `images/17_SERVIZI_FINITURE.jpg` — 8 utilizzi
@@ -255,7 +255,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-analizzati.html` — Una variazione di profondità modifica accessibilità, raccordi e spazio utile.
 - `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
-- `index.html` — Una composizione convincente deve funzionare anche con ante, sgabelli e persone in movimento.
+- `index.html` — Una composizione deve funzionare anche con ante, sgabelli e persone in movimento.
 - `seconda-opinione-cucina.html` — Nessun vincolo di marchio · nessuna provvigione sulla vendita · ruoli complementari.
 
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
@@ -369,7 +369,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-analizzati.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `index.html` — La distanza sembra sufficiente finché l'elettrodomestico rimane chiuso.
+- `index.html` — La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso.
 - `isola-cucina-distanze-passaggi.html` — La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici
 - `penisola-cucina-distanze-passaggi.html` — Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata
 
