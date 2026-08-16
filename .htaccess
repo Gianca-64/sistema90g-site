@@ -16,28 +16,24 @@ RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.sistema90g\.it$ [NC]
 RewriteRule ^ https://sistema90g.it%{REQUEST_URI} [R=301,L]
 
-# Homepage canonica.
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Vecchi servizi generalisti riallineati al solo settore cucina.
+# Vecchi servizi riallineati al solo perimetro cucina.
+RewriteRule ^scelta-finiture-casa\.html$ /scelta-finiture-cucina.html [R=301,L]
 RewriteRule ^progetto-da-zero\.html$ /progetto-cucina-sistema90g.html [R=301,L]
 RewriteRule ^studio-preliminare-spazi\.html$ /progetto-cucina-sistema90g.html [R=301,L]
-RewriteRule ^scelta-finiture-casa\.html$ /scelta-finiture-cucina.html [R=301,L]
 RewriteRule ^agenzie-immobiliari\.html$ /agenzie-immobiliari-cucina.html [R=301,L]
 RewriteRule ^analisi-unita-varianti\.html$ /agenzie-immobiliari-cucina.html [R=301,L]
-RewriteRule ^render-fotorealistici-interni\.html$ /progetto-cucina-sistema90g.html [R=301,L]
-
-# Una sola fonte Metodo/AI e servizi cucina vigenti.
 RewriteRule ^come-sistema90g-utilizza-intelligenza-artificiale\.html$ /metodo-sistema90g.html [R=301,L]
+RewriteRule ^render-fotorealistici-interni\.html$ /progetto-cucina-sistema90g.html [R=301,L]
 RewriteRule ^servizi/add-on-capitolato(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
 RewriteRule ^blog/capitolato-cucina-cosa-controllare(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
 RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /progetto-cucina-sistema90g.html [R=301,L]
 RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /progettare-cucina-guide.html [R=301,L]
 RewriteRule ^contatti/?$ /contatti.html [R=301,L]
-
-# Vecchie rotte sostituite da contenuti cucina coerenti.
 RewriteRule ^rivenditori-veneta-cucine\.html$ /rivenditori-cucine.html [R=301,L]
 RewriteRule ^richiesta\.html$ /analisi-preventiva.html#percorso [R=301,NE,L]
+RewriteRule ^casi-cucina\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^caso-passaggio-lavastoviglie\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
 RewriteRule ^caso-verificato-isola-forno-passaggi\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
 RewriteRule ^centro-casi-reali\.html$ /casi-analizzati.html [R=301,L]
@@ -53,10 +49,20 @@ RewriteRule ^scena-lavastoviglie-aperta-passaggio\.html$ /caso-lavastoviglie-pas
 RewriteRule ^scene-reali-cucina\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^tutto-sembrava-corretto-finche\.html$ /casi-analizzati.html [R=301,L]
 
-# Contenuti storici fuori dal perimetro cucina: consolidano verso il centro casi.
+# Ritiro del vecchio perimetro casa.
 RewriteRule ^casi-spazi-servizio\.html$ /casi-analizzati.html [R=301,L]
-RewriteRule ^casi-distribuzione-casa\.html$ /casi-analizzati.html [R=301,L]
-RewriteRule ^caso-open-space-tv-divano-passaggi\.html$ /casi-analizzati.html [R=301,L]
-RewriteRule ^caso-camera-bambini-crescita\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-bagno-lavatrice-dieci-centimetri\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-lavanderia-oblo-porta\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-soffitta-altezza-utile\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^caso-garage-apertura-portiere\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-terrazzo-passaggio-arredi\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-tiranti-cavi-vista-impianto-ispezionabile\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^casi-distribuzione-casa\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-camera-bambini-crescita\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^casi-camere-contenimento\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-cabina-armadio-125-cm-passaggio\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-cabina-armadio-camera-irregolare\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-studio-postazione-lavoro\.html$ /casi-analizzati.html [R=301,L]
+RewriteRule ^caso-open-space-tv-divano-passaggi\.html$ /cucina-open-space-tavolo-passaggi.html [R=301,L]
+RewriteRule ^verifica-planimetria-distribuzione-casa\.html$ /progetto-cucina-sistema90g.html [R=301,L]
 </IfModule>
