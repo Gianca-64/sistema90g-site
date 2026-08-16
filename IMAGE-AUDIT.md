@@ -131,7 +131,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sono Gian Carlo Primo. Oggi Sistema 90G concentra tutta la propria attività sulle cucine: progetto, preventivo, misure, aperture, passaggi,  | Gian Carlo Primo, fondatore di Sistema 90G |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
-| `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da | Confronto tecnico Sistema 90G tra preventivi cucina e componenti della fornitura |
+| `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il portale raccoglie la richiesta iniziale e i dati essenziali. La valutazione viene preparata dal sistema e inviata soltanto dopo controllo | Raccolta di immagini, PDF e planimetrie |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -472,7 +472,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
 
-- `confrontare-due-preventivi-cucina.html` — Due offerte con totali diversi non sono necessariamente una più conveniente dell'altra. Prima del prezzo bisogna verificare se descrivono da
+- `confrontare-due-preventivi-cucina.html` — Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i
 - `preventivo-acquisto-cucina-guide.html` — Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e 
 - `prima-di-firmare-ordine-cucina.html` — La firma è il momento in cui molte decisioni sviluppate nelle settimane precedenti vengono riunite in un unico ordine. Una rilettura finale 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
