@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **119**
+- Pagine HTML controllate: **120**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **185**
+- Immagini di contenuto pubblicate: **186**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -171,6 +171,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità  | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | No. Trasporto, montaggio dei mobili, posa del top, installazione degli elettrodomestici e collegamenti agli impianti possono essere compresi | Montaggio cucina con mobili, elettrodomestici e impianti |
+| `pareti-fuori-squadra-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Può cambiare il modo in cui basi, colonne e soprattutto top si avvicinano alle pareti. In una composizione ad angolo, una differenza geometr | Planimetria cucina con verifica delle pareti e degli angoli reali prima dell |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
@@ -481,9 +482,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
 - `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
 
-### `images/hero-planimetria-90g-2026.jpg` — 4 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 5 utilizzi
 
 - `misure-passaggi-cucina.html` — Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità 
+- `pareti-fuori-squadra-cucina.html` — Può cambiare il modo in cui basi, colonne e soprattutto top si avvicinano alle pareti. In una composizione ad angolo, una differenza geometr
 - `prese-impianti-cucina.html` — Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z
 - `rilievo-misure-cucina-prima-ordine.html` — Va fatto quando l’ambiente è abbastanza definito da poter misurare ciò che inciderà davvero sulla fornitura e comunque prima dell’ordine ese
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
