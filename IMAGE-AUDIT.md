@@ -201,7 +201,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
-| `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta va verificata sulla composizione reale: dimensioni delle lastre, posizione di lavello e piano cottura, fori, giunzioni, alzatine e | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
+| `top-cucina-materiali-guida.html` | `images/17_SERVIZI_FINITURE.jpg` | Se la cucina è ancora in fase di definizione, il Progetto Cucina 90G permette di leggere il top insieme a composizione e funzioni; l’add-on  | Campioni di materiali e finiture cucina analizzati secondo il metodo Sistema 90G |
 | `verifica-planimetria-distribuzione-casa.html` | `images/hero-planimetria-90g-2026.jpg` | Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr | Verifica preliminare di planimetria e possibilità visibili dell’immobile |
 | `voci-escluse-preventivo-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Non tutti i rivenditori organizzano la fornitura nello stesso modo. Per confrontare due offerte è quindi utile capire quali attività e servi | Preventivo cucina con servizi inclusi ed esclusi riletti in modo chiaro |
 
@@ -249,7 +249,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
 - `scelta-finiture-cucina.html` — Aggiungi al tuo Progetto Cucina 90G un confronto motivato tra massimo due alternative già selezionate. Non è un servizio separato: completa 
 - `scelta-finiture-cucina.html` — Nel portale puoi mantenere solo il Progetto Cucina da 145 € oppure aggiungere questo approfondimento e arrivare a 192 €.
-- `top-cucina-materiali-guida.html` — La scelta va verificata sulla composizione reale: dimensioni delle lastre, posizione di lavello e piano cottura, fori, giunzioni, alzatine e
+- `top-cucina-materiali-guida.html` — Se la cucina è ancora in fase di definizione, il Progetto Cucina 90G permette di leggere il top insieme a composizione e funzioni; l’add-on 
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
 
