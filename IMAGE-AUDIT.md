@@ -25,8 +25,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `agenzie-immobiliari-cucina.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che  | Collaborazione con agenzia immobiliare per comprendere le possibilità della cucina in un immobile |
 | `agenzie-immobiliari-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il punto di partenza è la domanda concreta del cliente e il materiale disponibile. | Materiale per valutare il potenziale cucina di un immobile |
-| `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | Per leggere insieme progetto, funzioni, passaggi, documenti e preventivo prima della conferma. | Analisi completa di progetto e preventivo |
-| `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | L’Analisi completa mette in relazione progetto, misure, funzioni, passaggi e preventivo per evidenziare ciò che merita una verifica prima de | Analisi completa di progetto e preventivo cucina |
+| `analisi-completa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia progetto, preventivo e materiale disponibile. Prima della conferma viene verificato che ci siano gli elementi necessari per svolgere c | Materiale per analisi indipendente del progetto cucina |
 | `analisi-preventiva.html` | `images/03_HOME_METODO.jpg` | Nessun acquisto alla cieca · prezzo e tempi visibili prima della richiesta. | Percorso guidato per individuare il servizio cucina Sistema 90G |
 | `analisi-preventivo-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r | Analisi indipendente di un preventivo cucina |
 | `analisi-preventivo-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato. | Raccolta di preventivo, progetto e documenti da analizzare |
@@ -284,7 +284,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `agenzie-immobiliari-cucina.html` — Il punto di partenza è la domanda concreta del cliente e il materiale disponibile.
-- `analisi-completa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
+- `analisi-completa.html` — Invia progetto, preventivo e materiale disponibile. Prima della conferma viene verificato che ci siano gli elementi necessari per svolgere c
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
 - `casi-analizzati.html` — Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta.
 - `caso-bagno-lavatrice-dieci-centimetri.html` — Invia planimetria, misure, verso di apertura e modello dell'elettrodomestico.
