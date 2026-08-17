@@ -13,7 +13,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - Pagine con più immagini di contenuto (informativo): **55**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **138**
+- Immagini non utilizzate: **139**
 
 ## Mappa pagina → immagine → contesto
 
@@ -21,8 +21,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 |---|---|---|---|
 | `404.html` | `images/18_CASI_HERO_ARCHIVIO.jpg` | Il collegamento può essere cambiato oppure la pagina può essere stata rimossa. | Archivio dei casi analizzati Sistema 90G |
 | `abbinare-cucina-pavimento.html` | `images/17_SERVIZI_FINITURE.jpg` | Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme. | Confronto Sistema 90G tra finiture della cucina e pavimento |
-| `acquisto-assistito-cucina.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo. | Confronto tra schizzo tecnico e visualizzazione realistica di una cucina per verificare funzioni, ingombri e passaggi |
-| `acquisto-assistito-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `acquisto-assistito-cucina.html` | `images/progetto-cucina-90g-report-20260817.png` | Quando vuoi portare più avanti lo stesso Progetto Cucina 90G, questo add-on aggiunge una revisione, più visualizzazioni e un fascicolo concl | Sviluppo avanzato del Progetto Cucina Sistema 90G |
+| `acquisto-assistito-cucina.html` | `images/progetto-cucina-90g-report-20260817.png` | Nel portale puoi mantenere il progetto base da 145 € oppure aggiungere lo Sviluppo avanzato e arrivare a 290 €. | Elaborati e visualizzazioni del Progetto Cucina 90G |
 | `agenzie-immobiliari-cucina.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che  | Collaborazione con agenzia immobiliare per comprendere le possibilità della cucina in un immobile |
 | `agenzie-immobiliari-cucina.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Il punto di partenza è la domanda concreta del cliente e il materiale disponibile. | Materiale per valutare il potenziale cucina di un immobile |
 | `analisi-completa.html` | `images/15_SERVIZI_ANALISI_COMPLETA.jpg` | L’Analisi completa mette in relazione progetto, misure, funzioni, passaggi e preventivo per evidenziare ciò che merita una verifica prima de | Analisi completa di progetto e preventivo cucina |
@@ -281,9 +281,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `agenzie-immobiliari-cucina.html` — Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che 
 - `rivenditori-cucine.html` — La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 37 utilizzi
 
-- `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `agenzie-immobiliari-cucina.html` — Il punto di partenza è la domanda concreta del cliente e il materiale disponibile.
 - `analisi-completa.html` — Invia progetto, preventivo e materiale disponibile. Prima della conferma viene verificato che ci siano gli elementi necessari per svolgere c
 - `analisi-preventivo-cucina.html` — Carica preventivo, progetto e allegati. Descrivi il dubbio principale e indica se devi ancora firmare o hai già confermato.
@@ -502,8 +501,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `professionisti-progetto-cucina.html` — Sistema 90G può lavorare su un dubbio o su una lettura complessiva della cucina lasciando al professionista la regia del progetto, le respon
 - `professionisti.html` — Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon
 
-### `images/progetto-cucina-90g-report-20260817.png` — 4 utilizzi
+### `images/progetto-cucina-90g-report-20260817.png` — 6 utilizzi
 
+- `acquisto-assistito-cucina.html` — Quando vuoi portare più avanti lo stesso Progetto Cucina 90G, questo add-on aggiunge una revisione, più visualizzazioni e un fascicolo concl
+- `acquisto-assistito-cucina.html` — Nel portale puoi mantenere il progetto base da 145 € oppure aggiungere lo Sviluppo avanzato e arrivare a 290 €.
 - `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
 - `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `progetto-cucina-sistema90g.html` — Progetto base completo nel suo perimetro · add-on opzionali · nessun vincolo di marchio
