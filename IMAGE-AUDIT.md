@@ -154,7 +154,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
-| `index.html` | `images/hero-planimetria-90g-2026.jpg` | Prezzo 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
+| `index.html` | `images/hero-planimetria-90g-2026.jpg` | 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Le situazioni raccolte da Sistema 90G mostrano quali domande possono cambiare una decisione prima dell'ordine. | Lavastoviglie aperta e passaggio |
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione deve funzionare anche con ante, sgabelli e persone in movimento. | Confronto di un preventivo cucina |
@@ -482,7 +482,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/hero-planimetria-90g-2026.jpg` — 6 utilizzi
 
 - `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
-- `index.html` — Prezzo 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
+- `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
