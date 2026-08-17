@@ -165,14 +165,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `innovazioni.html` | `images/editoriale/colonna-lavanderia-20260817.jpg` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Lavatrice e asciugatrice sovrapposte in colonna |
 | `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
 | `lavastoviglie-cucina-aperture-passaggi.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Una lavastoviglie chiusa occupa poco spazio visivo. Aperta, invece, può cambiare completamente il passaggio e interferire con altri elementi | Lavastoviglie aperta in cucina con passaggio ridotto |
-| `lavello-sotto-finestra-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | La posizione può funzionare bene, ma va verificata insieme a quota del piano, davanzale, rubinetto e movimento dell'infisso. | Lavello sotto finestra con verifica dell |
+| `lavello-sotto-finestra-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Prima dell’ordine conviene controllare la traiettoria dell’anta, l’altezza del rubinetto, eventuali maniglie, la quota del davanzale e lo sp | Lavello sotto finestra con verifica dell |
 | `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Luce, pavimento, top, dimensione dei frontali, manutenzione e uso quotidiano cambiano la percezione e la praticità dei materiali. Per questo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità  | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | Ogni rivenditore può organizzare servizi e figure coinvolte in modo diverso. Per questo è utile leggere ciò che è compreso nella propria off | Montaggio cucina con mobili, elettrodomestici e impianti |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
-| `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
+| `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi,  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
@@ -408,7 +408,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-analizzati.html` — Le distanze vanno lette durante l'uso, non solo a elementi chiusi.
 - `casi-cucina.html` — Una profondità particolare modifica raccordi, aperture e spazio.
 - `caso-lavello-sotto-finestra-aperture.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
-- `lavello-sotto-finestra-cucina.html` — La posizione può funzionare bene, ma va verificata insieme a quota del piano, davanzale, rubinetto e movimento dell'infisso.
+- `lavello-sotto-finestra-cucina.html` — Prima dell’ordine conviene controllare la traiettoria dell’anta, l’altezza del rubinetto, eventuali maniglie, la quota del davanzale e lo sp
 
 ### `images/caso-open-space-percorso-centrale.jpg` — 2 utilizzi
 
@@ -484,7 +484,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/hero-planimetria-90g-2026.jpg` — 4 utilizzi
 
 - `misure-passaggi-cucina.html` — Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità 
-- `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
+- `prese-impianti-cucina.html` — Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z
 - `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
