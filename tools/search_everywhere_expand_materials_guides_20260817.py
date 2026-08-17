@@ -18,8 +18,8 @@ PATCHES = {
         "insert": '<div class="s90g-prose"><h2>In breve: meglio una cucina opaca o lucida?</h2><p>Dipende dall’effetto visivo desiderato e dall’uso reale. Il lucido riflette maggiormente luce e ambiente, mentre l’opaco produce superfici più uniformi e meno specchianti. Impronte, micrograffi e facilità di pulizia variano però molto in base al materiale e al trattamento specifico, non soltanto alla categoria “opaco” o “lucido”.</p><h2>Cosa significa in pratica</h2><p>Prima di decidere conviene osservare campioni abbastanza grandi sotto luce naturale e artificiale e verificare la manutenzione prevista dal produttore. La stessa tonalità può cambiare sensibilmente tra opaco e lucido, soprattutto accanto a top, pavimento e pareti.</p></div>',
     },
     "top-cucina-materiali-guida.html": {
-        "marker": '<div class="s90g-prose">',
-        "insert": '<div class="s90g-prose"><h2>In breve: come scegliere il materiale del top cucina?</h2><p>Il top va scelto in base a uso, manutenzione, resistenza, spessore possibile e lavorazioni richieste. Nessun materiale offre il massimo in ogni aspetto: alcuni sopportano meglio calore e graffi, altri permettono giunzioni o bordi più discreti, altri ancora richiedono maggiore attenzione alle macchie o agli urti.</p><h2>Cosa significa in pratica</h2><p>La scelta va verificata sulla composizione reale: dimensioni delle lastre, posizione di lavello e piano cottura, fori, giunzioni, alzatine e spessori influenzano sia estetica sia fattibilità. Prima dell’ordine è utile controllare anche condizioni di garanzia, manutenzione e tolleranze di posa.</p></div>',
+        "marker": '<p class="s90g-lead">Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e piano cottura.</p>',
+        "insert": '<h2>In breve: come scegliere il materiale del top cucina?</h2><p>Il top va scelto in base a uso, manutenzione, resistenza, spessore possibile e lavorazioni richieste. Nessun materiale offre il massimo in ogni aspetto: alcuni sopportano meglio calore e graffi, altri permettono giunzioni o bordi più discreti, altri ancora richiedono maggiore attenzione alle macchie o agli urti.</p><h2>Cosa significa in pratica</h2><p>La scelta va verificata sulla composizione reale: dimensioni delle lastre, posizione di lavello e piano cottura, fori, giunzioni, alzatine e spessori influenzano sia estetica sia fattibilità. Prima dell’ordine è utile controllare anche condizioni di garanzia, manutenzione e tolleranze di posa.</p>',
     },
     "tavolo-vicino-cucina-spazi-sedute.html": {
         "marker": '<div class="s90g-prose">',
@@ -30,12 +30,16 @@ PATCHES = {
 for filename, spec in PATCHES.items():
     path = Path(filename)
     text = path.read_text()
-    if spec["insert"] in text:
+    heading = spec["insert"].split("</h2>", 1)[0].split("<h2>", 1)[-1]
+    if heading in text:
         print(f"SKIP {filename}: già aggiornato")
         continue
     if spec["marker"] not in text:
         raise SystemExit(f"Marker non trovato in {filename}")
-    text = text.replace(spec["marker"], spec["insert"] + spec["marker"], 1)
+    if filename == "top-cucina-materiali-guida.html":
+        text = text.replace(spec["marker"], spec["marker"] + spec["insert"], 1)
+    else:
+        text = text.replace(spec["marker"], spec["insert"] + spec["marker"], 1)
     path.write_text(text)
     print(f"OK {filename}")
 
