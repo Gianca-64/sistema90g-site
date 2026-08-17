@@ -2,7 +2,19 @@
   'use strict';
   const CAMPAIGN_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const CONSENT_KEY='s90g_cookie_consent';
+  const PORTAL_ORIGIN='https://portale.sistema90g.it';
   const PRIVATE_SERVICES=new Set(['progetto-cucina-sistema90g','scelta-finiture-cucina','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina']);
+  const SERVICE_PRICES={
+    'progetto-cucina-sistema90g':'145',
+    'controllo-mirato':'127',
+    'analisi-completa':'253',
+    'acquisto-assistito-cucina':'290',
+    'acquisto-assistito-cucina-90g':'290',
+    'scelta-finiture-cucina':'47',
+    'restyling-cucina-esistente':'79',
+    'verifica-progetto-cucina':'150',
+    'analisi-progetto-cucina-rivenditore':'150'
+  };
   const NAV_LINKS=[
     ['home','Home','/'],
     ['services','Servizi','/servizi.html'],
@@ -83,6 +95,27 @@
       link.href=target.toString();
     });
   }
+  function preparePortalLinks(scope=document){
+    const current=new URL(location.href), slug=pageSlug(), defaultRole=inferRoleHint(slug);
+    const selector='a[data-final-portal],a[href^="https://portale.sistema90g.it/"]';
+    scope.querySelectorAll(selector).forEach((link,index)=>{
+      const raw=link.getAttribute('href')||'';
+      let target;try{target=new URL(raw,location.href)}catch{return}
+      if(target.origin!==PORTAL_ORIGIN)return;
+      if(!target.searchParams.get('source_page'))target.searchParams.set('source_page',link.dataset.sourcePage||slug);
+      if(!target.searchParams.get('content_type'))target.searchParams.set('content_type',link.dataset.contentType||inferContentType(slug));
+      if(!target.searchParams.get('cta_position'))target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`portal-${index+1}`)));
+      const role=target.searchParams.get('requester_role')||link.dataset.roleHint||defaultRole;
+      if(role&&!target.searchParams.get('requester_role'))target.searchParams.set('requester_role',role);
+      const service=target.searchParams.get('service')||link.dataset.service||'';
+      if(service&&!target.searchParams.get('service'))target.searchParams.set('service',service);
+      if(service&&!target.searchParams.get('service_price')&&SERVICE_PRICES[service])target.searchParams.set('service_price',SERVICE_PRICES[service]);
+      if(!target.searchParams.get('case_id')&&current.searchParams.get('case_id'))target.searchParams.set('case_id',current.searchParams.get('case_id'));
+      CAMPAIGN_KEYS.forEach(k=>{const v=current.searchParams.get(k);if(v&&!target.searchParams.get(k))target.searchParams.set(k,v)});
+      link.href=target.toString();
+      link.dataset.finalPortal='true';
+    });
+  }
   function normalizeActionLabels(scope=document){
     scope.querySelectorAll('a[data-start-path]').forEach(link=>{
       const text=(link.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
@@ -136,7 +169,7 @@
     document.addEventListener('click',event=>{
       if(event.target.closest('[data-cookie-choice],a[data-start-path],a[data-final-portal]'))queueMicrotask(syncConsentCookie);
     },true);
-    addSkipLink();buildNavigation();enhancePathLinks();normalizeActionLabels();preparePathLinks();preserveCampaignParams();
+    addSkipLink();buildNavigation();enhancePathLinks();normalizeActionLabels();preparePathLinks();preparePortalLinks();preserveCampaignParams();
     document.dispatchEvent(new CustomEvent('s90g:navigation-ready'));
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
