@@ -1,1 +1,1 @@
-data,canale,origine,soggetto,tipo_problema,servizio,stato,ricavo_euro,costo_diretto_euro,ore_impiegate,motivo_perdita,note
+data,request_code,canale,origine,source_page,content_type,utm_source,utm_medium,utm_campaign,soggetto,ruolo,tipo_problema,servizio,valore_servizio_euro,stato,ricavo_euro,costo_diretto_euro,ore_impiegate,motivo_perdita,note
