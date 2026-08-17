@@ -6,14 +6,14 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ## Riepilogo
 
 - Pagine HTML controllate: **119**
-- File immagine presenti: **193**
+- File immagine presenti: **198**
 - Immagini di contenuto pubblicate: **182**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **53**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
-- Immagini non utilizzate: **133**
+- Immagini non utilizzate: **138**
 
 ## Mappa pagina → immagine → contesto
 
@@ -158,10 +158,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione deve funzionare anche con ante, sgabelli e persone in movimento. | Confronto di un preventivo cucina |
 | `index.html` | `images/08_HOME_CHIUSURA.jpg` | Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo. | Progettazione di una cucina prima della scelta del rivenditore |
-| `innovazioni.html` | `images/editoriale/forno-ai-telecamera-editoriale.webp` | Approfondimenti indipendenti e verificati su prodotti, materiali, impianti e tecnologie: informazioni chiare per capire cosa cambia davvero  | Forno da incasso in cucina contemporanea |
-| `innovazioni.html` | `images/editoriale/piano-induzione-opaco-editoriale.webp` | Ricette dal web, riconoscimento del piatto e cottura assistita: a cosa servono davvero queste funzioni e quali dipendenze introducono. | Piano a induzione nero opaco integrato nel top |
-| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-vapore-asciugatura-attiva-eurocucina-2026.jpg` | Differenze reali tra opaco, resistenza ai graffi e minore visibilità dei segni, con le verifiche utili prima della scelta. | Lavastoviglie integrata nella cucina |
-| `innovazioni.html` | `images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Lavatrice e asciugatrice sovrapposte in colonna |
+| `innovazioni.html` | `images/editoriale/forno-ai-telecamera-20260817.jpg` | Approfondimenti indipendenti e verificati su prodotti, materiali, impianti e tecnologie: informazioni chiare per capire cosa cambia davvero  | Forno da incasso in cucina contemporanea |
+| `innovazioni.html` | `images/editoriale/piano-induzione-opaco-20260817.jpg` | Ricette dal web, riconoscimento del piatto e cottura assistita: a cosa servono davvero queste funzioni e quali dipendenze introducono. | Piano a induzione nero opaco integrato nel top |
+| `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-20260817.jpg` | Differenze reali tra opaco, resistenza ai graffi e minore visibilità dei segni, con le verifiche utili prima della scelta. | Lavastoviglie integrata nella cucina |
+| `innovazioni.html` | `images/editoriale/colonna-lavanderia-20260817.jpg` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Lavatrice e asciugatrice sovrapposte in colonna |
 | `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
 | `lavastoviglie-cucina-aperture-passaggi.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Una lavastoviglie chiusa occupa poco spazio visivo. Aperta, invece, può cambiare completamente il passaggio e interferire con altri elementi | Lavastoviglie aperta in cucina con passaggio ridotto |
 | `lavello-sotto-finestra-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | La posizione può funzionare bene, ma va verificata insieme a quota del piano, davanzale, rubinetto e movimento dell'infisso. | Lavello sotto finestra con verifica dell |
@@ -186,7 +186,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta | Rilievo misure cucina con quote, pareti e impianti |
-| `rivenditori-cucine.html` | `images/hero-rivenditori-collaborazione.svg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Schema di collaborazione tra Sistema 90G e rivenditore: esigenze, passaggi e coordinamento prima dell |
+| `rivenditori-cucine.html` | `images/hero-rivenditori-seconda-lettura-20260817.jpg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Cucina contemporanea oggetto di una seconda lettura specialistica prima dell’ordine |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
