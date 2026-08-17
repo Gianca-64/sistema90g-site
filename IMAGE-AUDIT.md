@@ -133,7 +133,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sistema 90G nasce dall'esperienza maturata tra progettazione, vendita, montaggio e post-vendita nel settore arredamento. Oggi quella conosce | Gian Carlo Primo, fondatore di Sistema 90G |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
 | `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
-| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Se devi ancora progettare la cucina, hai già ricevuto una proposta oppure vuoi verificare un dubbio prima dell'ordine, puoi partire dal perc | Planimetrie e informazioni per avviare un progetto cucina |
+| `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi | Planimetrie e informazioni per avviare un progetto cucina |
 | `contatti.html` | `images/08_HOME_CHIUSURA.jpg` | Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni. | Cucina progettata con criteri funzionali e indipendenti |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -311,7 +311,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-terrazzo-passaggio-arredi.html` — Invia planimetria, misure del terrazzo e disposizione prevista di arredi e fioriere.
 - `caso-terza-camera-zona-giorno.html` — Invia planimetria, misure, aperture e posizione degli impianti esistenti.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Invia fotografie, elaborati e documenti disponibili.
-- `contatti.html` — Se devi ancora progettare la cucina, hai già ricevuto una proposta oppure vuoi verificare un dubbio prima dell'ordine, puoi partire dal perc
+- `contatti.html` — Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi
 - `controllo-mirato.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `progetto-cucina-sistema90g.html` — Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato 
