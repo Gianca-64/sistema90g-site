@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **119**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **183**
+- Immagini di contenuto pubblicate: **184**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **53**
+- Pagine con più immagini di contenuto (informativo): **54**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **138**
@@ -193,7 +193,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
-| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Nessun vincolo di marchio · nessuna provvigione sulla vendita · ruoli complementari. | Seconda opinione complementare su progetto e preventivo cucina |
+| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione. | Controllo indipendente di progetto e preventivo cucina prima dell |
+| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa. | Progetto e preventivo cucina da controllare prima dell |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | A 145 € costruisci una base progettuale indipendente prima di scegliere il rivenditore. Se hai già una proposta o un preventivo, il percorso | Servizi indipendenti di progettazione e analisi cucina |
 | `servizi.html` | `images/08_HOME_CHIUSURA.jpg` | Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale. | Cucina definita prima della scelta del rivenditore |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
@@ -264,14 +265,15 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-distribuzione-casa.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `casi-soggiorno-open-space.html` — 5 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 
-### `images/22_CASI_PREVENTIVO.jpg` — 6 utilizzi
+### `images/22_CASI_PREVENTIVO.jpg` — 7 utilizzi
 
 - `analisi-preventivo-cucina.html` — Un totale alto o basso non basta per capire se il preventivo è chiaro. Bisogna leggere materiali, codici, lavorazioni, esclusioni e valore r
 - `casi-analizzati.html` — Una variazione di profondità modifica accessibilità, raccordi e spazio utile.
 - `casi-cucina.html` — Finestra, rubinetto e piano devono essere verificati insieme.
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Una composizione deve funzionare anche con ante, sgabelli e persone in movimento.
-- `seconda-opinione-cucina.html` — Nessun vincolo di marchio · nessuna provvigione sulla vendita · ruoli complementari.
+- `seconda-opinione-cucina.html` — Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione.
+- `seconda-opinione-cucina.html` — Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa.
 
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
@@ -589,6 +591,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `restyling-cucina-esistente.html` — 2 immagini
 - `rivenditori-cucine.html` — 2 immagini
 - `scelta-finiture-casa.html` — 2 immagini
+- `seconda-opinione-cucina.html` — 2 immagini
 - `servizi.html` — 2 immagini
 - `studio-preliminare-spazi.html` — 2 immagini
 
