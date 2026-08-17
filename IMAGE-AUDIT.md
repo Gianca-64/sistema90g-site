@@ -6,7 +6,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ## Riepilogo
 
 - Pagine HTML controllate: **119**
-- File immagine presenti: **198**
+- File immagine presenti: **199**
 - Immagini di contenuto pubblicate: **183**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
@@ -154,7 +154,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
-| `index.html` | `images/hero-planimetria-90g-2026.jpg` | 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
+| `index.html` | `images/progetto-cucina-90g-report-20260817.png` | 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Le situazioni raccolte da Sistema 90G mostrano quali domande possono cambiare una decisione prima dell'ordine. | Lavastoviglie aperta e passaggio |
 | `index.html` | `images/caso-isola-passaggi-cucina.jpg` | La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso. | Isola cucina e passaggi |
 | `index.html` | `images/22_CASI_PREVENTIVO.jpg` | Una composizione deve funzionare anche con ante, sgabelli e persone in movimento. | Confronto di un preventivo cucina |
@@ -181,7 +181,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
-| `progetto-cucina-sistema90g.html` | `images/servizi/acquisto-assistito-cucina-90g.webp` | Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
+| `progetto-cucina-sistema90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
 | `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato  | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
@@ -479,10 +479,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
 - `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
 
-### `images/hero-planimetria-90g-2026.jpg` — 6 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 5 utilizzi
 
 - `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
-- `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
@@ -501,9 +500,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `professionisti-progetto-cucina.html` — Sistema 90G può lavorare su un dubbio o su una lettura complessiva della cucina lasciando al professionista la regia del progetto, le respon
 - `professionisti.html` — Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon
 
-### `images/servizi/acquisto-assistito-cucina-90g.webp` — 2 utilizzi
+### `images/progetto-cucina-90g-report-20260817.png` — 2 utilizzi
 
-- `acquisto-assistito-cucina.html` — Chiarisci sviluppo, funzioni, ingombri e direzione estetica prima del progetto commerciale e del preventivo definitivo.
+- `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio
 
 ## Pagine senza immagini — informativo
