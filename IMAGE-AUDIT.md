@@ -135,8 +135,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi | Planimetrie e informazioni per avviare un progetto cucina |
 | `contatti.html` | `images/08_HOME_CHIUSURA.jpg` | Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni. | Cucina progettata con criteri funzionali e indipendenti |
-| `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Per verificare una domanda circoscritta senza estendere automaticamente il lavoro all’intero progetto. | Controllo mirato su progetto e misure |
-| `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Il Controllo mirato verifica una domanda circoscritta senza trasformarla in un’analisi dell’intero progetto. È adatto quando sai già qual è  | Controllo mirato su progetto e misure della cucina |
+| `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale e indica il punto preciso che vuoi controllare. La richiesta viene verificata prima della conferma del servizio. | Materiale per il controllo indipendente della cucina |
 | `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Misurazione delle visite al sito Sistema 90G |
 | `cucina-ad-angolo-guida.html` | `images/caso-cucina-profondita-75-angolo.jpg` | L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti. | Cucina ad angolo con profondità maggiorata e verifica dei raccordi e dello spazio accessibile |
@@ -315,7 +315,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-terza-camera-zona-giorno.html` — Invia planimetria, misure, aperture e posizione degli impianti esistenti.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Invia fotografie, elaborati e documenti disponibili.
 - `contatti.html` — Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi
-- `controllo-mirato.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
+- `controllo-mirato.html` — Invia il materiale e indica il punto preciso che vuoi controllare. La richiesta viene verificata prima della conferma del servizio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `progetto-cucina-sistema90g.html` — Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato 
 - `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
