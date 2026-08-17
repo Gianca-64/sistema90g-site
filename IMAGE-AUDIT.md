@@ -132,7 +132,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `caso-tiranti-cavi-vista-impianto-ispezionabile.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia fotografie, elaborati e documenti disponibili. | Raccolta di fotografie e documenti di fine lavori |
 | `chi-e-sistema90g.html` | `images/18_CHI_SONO_GIANCARLO_METODO.jpg` | Sistema 90G nasce dall'esperienza maturata tra progettazione, vendita, montaggio e post-vendita nel settore arredamento. Oggi quella conosce | Gian Carlo Primo, fondatore di Sistema 90G |
 | `chi-e-sistema90g.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta. | Analisi di un caso cucina |
-| `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
+| `confrontare-due-preventivi-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Prima si rende comparabile ciò che viene fornito: composizione, materiali, elettrodomestici, top, lavorazioni, trasporto, montaggio, servizi | Confronto tra due preventivi cucina resi comparabili per contenuti e servizi |
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi | Planimetrie e informazioni per avviare un progetto cucina |
 | `contatti.html` | `images/08_HOME_CHIUSURA.jpg` | Progettazione e analisi indipendente, senza vendita di cucine, marchi rappresentati o provvigioni. | Cucina progettata con criteri funzionali e indipendenti |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Il Controllo mirato verifica una domanda circoscritta senza trasformarla in un’analisi dell’intero progetto. È adatto quando sai già qual è  | Controllo mirato su progetto e misure della cucina |
@@ -145,7 +145,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `cucina-piccola-come-progettarla.html` | `images/caso-cucina-piccola-tre-lati.jpg` | Negli spazi ridotti il rischio è aumentare il contenimento sacrificando passaggi, aperture e piano di lavoro. Una buona composizione deve re | Cucina piccola su tre lati con verifica di passaggi e aperture |
 | `domande-cucina-faq.html` | `images/03_HOME_METODO.jpg` | Non una raccolta generica di FAQ: un percorso tra i dubbi che cambiano davvero una decisione, dal primo progetto fino alla firma dell'ordine | Progetto cucina con quote e verifiche prima dell |
 | `elettrodomestici-impianti-cucina-guide.html` | `images/hero-cucina-conflitto-90g.jpg` | Misure reali, aperture, ventilazione, prese, scarichi e percorsi tecnici devono essere compatibili con la composizione. Una scelta corretta  | Cucina con verifica tecnica di aperture e interferenze tra elettrodomestici e passaggi |
-| `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
+| `errori-progetto-cucina.html` | `images/01_HOME_HERO.jpg` | I controlli più importanti riguardano misure reali, passaggi con ante ed elettrodomestici aperti, isole e penisole, installazione degli elet | Cucina Sistema 90G letta con quote, aperture e verifica preventiva dei passaggi |
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina mostra la funzione del fascicolo del servizio più articolato. Non rappresenta un progetto reale, non espone procedure interne  | Esempio illustrativo del fascicolo Acquisto Assistito Cucina 90G |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Se stai iniziando prima del rivenditore, parti dal servizio da €145. Se la situazione richiede più sviluppo, consulta Acquisto Assistito. | Cucina sviluppata attraverso un percorso progettuale indipendente |
@@ -169,12 +169,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Luce, pavimento, top, dimensione dei frontali, manutenzione e uso quotidiano cambiano la percezione e la praticità dei materiali. Per questo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
-| `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
+| `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità  | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | Ogni rivenditore può organizzare servizi e figure coinvolte in modo diverso. Per questo è utile leggere ciò che è compreso nella propria off | Montaggio cucina con mobili, elettrodomestici e impianti |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Impianti e progetto devono essere letti insieme prima delle opere definitive. | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
-| `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | La firma è il momento in cui molte decisioni sviluppate nelle settimane precedenti vengono riunite in un unico ordine. Una rilettura finale  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
+| `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi,  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 28 luglio 2026 | Dati e documenti associati a una richiesta Sistema 90G |
 | `professionisti-progetto-cucina.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può lavorare su un dubbio o su una lettura complessiva della cucina lasciando al professionista la regia del progetto, le respon | Approfondimento specialistico di un progetto cucina a supporto del professionista |
 | `professionisti-progetto-cucina.html` | `images/12_CHI_SONO_CASO.jpg` | Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta. | Analisi specialistica di un caso cucina per un professionista |
@@ -210,7 +210,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/01_HOME_HERO.jpg` — 3 utilizzi
 
 - `cookie-policy.html` — Ultimo aggiornamento: 28 luglio 2026
-- `errori-progetto-cucina.html` — Un progetto può apparire corretto nel render e mostrare problemi solo quando si considerano aperture, persone in movimento, elettrodomestici
+- `errori-progetto-cucina.html` — I controlli più importanti riguardano misure reali, passaggi con ante ed elettrodomestici aperti, isole e penisole, installazione degli elet
 - `index.html` — Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita.
 
 ### `images/03_HOME_METODO.jpg` — 5 utilizzi
@@ -483,16 +483,16 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/hero-planimetria-90g-2026.jpg` — 4 utilizzi
 
-- `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
+- `misure-passaggi-cucina.html` — Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità 
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
 
-- `confrontare-due-preventivi-cucina.html` — Due rivenditori possono proporre soluzioni diverse perché lavorano con prodotti, modularità, servizi e impostazioni differenti. Per questo i
+- `confrontare-due-preventivi-cucina.html` — Prima si rende comparabile ciò che viene fornito: composizione, materiali, elettrodomestici, top, lavorazioni, trasporto, montaggio, servizi
 - `preventivo-acquisto-cucina-guide.html` — Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e 
-- `prima-di-firmare-ordine-cucina.html` — La firma è il momento in cui molte decisioni sviluppate nelle settimane precedenti vengono riunite in un unico ordine. Una rilettura finale 
+- `prima-di-firmare-ordine-cucina.html` — Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi, 
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Non tutti i rivenditori organizzano la fornitura nello stesso modo. Per confrontare due offerte è quindi utile capire quali attività e servi
 
