@@ -196,8 +196,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione. | Controllo indipendente di progetto e preventivo cucina prima dell |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa. | Progetto e preventivo cucina da controllare prima dell |
-| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | A 145 € costruisci una base progettuale indipendente prima di scegliere il rivenditore. Se hai già una proposta o un preventivo, puoi invece | Servizi indipendenti di progettazione e analisi cucina |
-| `servizi.html` | `images/08_HOME_CHIUSURA.jpg` | Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale. | Cucina definita prima della scelta del rivenditore |
+| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Se la cucina è nuova, parti da Progetto Cucina 90G. Se hai già progetto o preventivo, chiedi una Seconda Opinione. Se vuoi rinnovare quella  | Percorsi indipendenti di progettazione e analisi cucina |
+| `servizi.html` | `images/progetto-cucina-90g-report-20260817.png` | Gli add-on sono opzionali e li scegli nel portale. Il totale si aggiorna prima dell’invio della richiesta. | Progetto Cucina Sistema 90G con elaborati e visualizzazione |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
@@ -221,7 +221,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `progettare-cucina-guide.html` — Scopri Progetto Cucina Sistema 90G →
 - `proprieta-intellettuale.html` — Ultimo aggiornamento: 2 agosto 2026
 
-### `images/08_HOME_CHIUSURA.jpg` — 11 utilizzi
+### `images/08_HOME_CHIUSURA.jpg` — 10 utilizzi
 
 - `casi-camere-contenimento.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
 - `casi-cucina.html` — La prima valutazione serve a stabilire materiali, servizio e disponibilità in base alla situazione reale.
@@ -233,7 +233,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `esempio-progetto-cucina-90g.html` — Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale.
 - `index.html` — Progetto Cucina Sistema 90G: una base indipendente da €145 da portare poi al rivenditore scelto per lo sviluppo definitivo.
 - `metodo-sistema90g.html` — Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali.
-- `servizi.html` — Prima costruisci la base. Poi scegli il rivenditore che la trasformerà nella fornitura reale.
 
 ### `images/12_CHI_SONO_CASO.jpg` — 2 utilizzi
 
@@ -503,11 +502,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `professionisti-progetto-cucina.html` — Sistema 90G può lavorare su un dubbio o su una lettura complessiva della cucina lasciando al professionista la regia del progetto, le respon
 - `professionisti.html` — Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon
 
-### `images/progetto-cucina-90g-report-20260817.png` — 3 utilizzi
+### `images/progetto-cucina-90g-report-20260817.png` — 4 utilizzi
 
 - `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
 - `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `progetto-cucina-sistema90g.html` — Progetto base completo nel suo perimetro · add-on opzionali · nessun vincolo di marchio
+- `servizi.html` — Gli add-on sono opzionali e li scegli nel portale. Il totale si aggiorna prima dell’invio della richiesta.
 
 ## Pagine senza immagini — informativo
 
