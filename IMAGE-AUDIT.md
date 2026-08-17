@@ -7,10 +7,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - Pagine HTML controllate: **119**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **184**
+- Immagini di contenuto pubblicate: **185**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
-- Pagine con più immagini di contenuto (informativo): **54**
+- Pagine con più immagini di contenuto (informativo): **55**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
 - Immagini non utilizzate: **138**
@@ -191,7 +191,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
 | `scelta-finiture-casa.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
-| `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
+| `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Il confronto non riguarda solo il colore. Vengono considerate insieme luce, pavimento, top, pareti, elementi esistenti, uso quotidiano e man | Campioni di materiali e finiture cucina con annotazioni di verifica Sistema 90G |
+| `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Invia le immagini e i riferimenti delle finiture già selezionate. Il materiale viene controllato prima della conferma del servizio. | Confronto materiali e finiture cucina |
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione. | Controllo indipendente di progetto e preventivo cucina prima dell |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa. | Progetto e preventivo cucina da controllare prima dell |
@@ -239,7 +240,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `chi-e-sistema90g.html` — Il percorso mostra il servizio, il prezzo e il tempo applicabili prima dell'invio della richiesta.
 - `professionisti-progetto-cucina.html` — Il percorso guidato mostra il servizio pertinente, il prezzo e il tempo prima dell'invio della richiesta.
 
-### `images/17_SERVIZI_FINITURE.jpg` — 8 utilizzi
+### `images/17_SERVIZI_FINITURE.jpg` — 9 utilizzi
 
 - `abbinare-cucina-pavimento.html` — Cucina e pavimento occupano grandi superfici visive: tono, contrasto e venature vanno valutati insieme.
 - `ante-cucina-materiali-manutenzione.html` — Il materiale dell'anta va valutato insieme a finitura, bordo, colore, frequenza d'uso e manutenzione richiesta.
@@ -247,7 +248,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `finiture-opache-lucide-cucina.html` — La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso.
 - `materiali-finiture-cucina-guide.html` — Luce, pavimento, top, dimensione dei frontali, manutenzione e uso quotidiano cambiano la percezione e la praticità dei materiali. Per questo
 - `scelta-finiture-casa.html` — Per confrontare due combinazioni già individuate quando la composizione della cucina è definita.
-- `scelta-finiture-cucina.html` — Per confrontare alternative già selezionate quando il dubbio riguarda colore, materiale o abbinamento della cucina. La valutazione considera
+- `scelta-finiture-cucina.html` — Il confronto non riguarda solo il colore. Vengono considerate insieme luce, pavimento, top, pareti, elementi esistenti, uso quotidiano e man
+- `scelta-finiture-cucina.html` — Invia le immagini e i riferimenti delle finiture già selezionate. Il materiale viene controllato prima della conferma del servizio.
 - `top-cucina-materiali-guida.html` — Aspetto, resistenza e manutenzione contano, ma il risultato dipende anche da spessore, lavorazioni, giunzioni e inserimento di lavello e pia
 
 ### `images/18_CASI_HERO_ARCHIVIO.jpg` — 2 utilizzi
@@ -591,6 +593,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `restyling-cucina-esistente.html` — 2 immagini
 - `rivenditori-cucine.html` — 2 immagini
 - `scelta-finiture-casa.html` — 2 immagini
+- `scelta-finiture-cucina.html` — 2 immagini
 - `seconda-opinione-cucina.html` — 2 immagini
 - `servizi.html` — 2 immagini
 - `studio-preliminare-spazi.html` — 2 immagini
