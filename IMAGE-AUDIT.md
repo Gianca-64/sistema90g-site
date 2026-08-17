@@ -170,7 +170,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
 | `metodo-sistema90g.html` | `images/08_HOME_CHIUSURA.jpg` | Il percorso mostra servizio, prezzo e tempo applicabili prima dell'invio dei dati personali. | Raccolta materiali per verifica cucina |
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità  | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
-| `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | Ogni rivenditore può organizzare servizi e figure coinvolte in modo diverso. Per questo è utile leggere ciò che è compreso nella propria off | Montaggio cucina con mobili, elettrodomestici e impianti |
+| `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | No. Trasporto, montaggio dei mobili, posa del top, installazione degli elettrodomestici e collegamenti agli impianti possono essere compresi | Montaggio cucina con mobili, elettrodomestici e impianti |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
@@ -186,7 +186,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio. | Cucina esistente da aggiornare |
-| `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta | Rilievo misure cucina con quote, pareti e impianti |
+| `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Va fatto quando l’ambiente è abbastanza definito da poter misurare ciò che inciderà davvero sulla fornitura e comunque prima dell’ordine ese | Rilievo misure cucina con quote, pareti e impianti |
 | `rivenditori-cucine.html` | `images/hero-rivenditori-seconda-lettura-20260817.jpg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Cucina contemporanea oggetto di una seconda lettura specialistica prima dell’ordine |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
@@ -474,7 +474,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 ### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
 
 - `elettrodomestici-impianti-cucina-guide.html` — Misure reali, aperture, ventilazione, prese, scarichi e percorsi tecnici devono essere compatibili con la composizione. Una scelta corretta 
-- `montaggio-allacciamenti-cucina-cosa-chiarire.html` — Ogni rivenditore può organizzare servizi e figure coinvolte in modo diverso. Per questo è utile leggere ciò che è compreso nella propria off
+- `montaggio-allacciamenti-cucina-cosa-chiarire.html` — No. Trasporto, montaggio dei mobili, posa del top, installazione degli elettrodomestici e collegamenti agli impianti possono essere compresi
 
 ### `images/hero-open-space-90g.jpg` — 2 utilizzi
 
@@ -485,7 +485,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `misure-passaggi-cucina.html` — Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità 
 - `prese-impianti-cucina.html` — Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z
-- `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
+- `rilievo-misure-cucina-prima-ordine.html` — Va fatto quando l’ambiente è abbastanza definito da poter misurare ciò che inciderà davvero sulla fornitura e comunque prima dell’ordine ese
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
 ### `images/hero-preventivo-90g-2026.jpg` — 5 utilizzi
