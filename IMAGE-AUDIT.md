@@ -195,7 +195,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `scelta-finiture-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | Nel portale puoi mantenere solo il Progetto Cucina da 145 € oppure aggiungere questo approfondimento e arrivare a 192 €. | Confronto materiali e finiture cucina |
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione. | Controllo indipendente di progetto e preventivo cucina prima dell |
-| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa. | Progetto e preventivo cucina da controllare prima dell |
+| `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Se hai una domanda circoscritta scegli il livello “dubbio preciso”. Se vuoi rileggere l’intera proposta, scegli il controllo completo. | Progetto e preventivo cucina da controllare prima dell |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Se la cucina è nuova, parti da Progetto Cucina 90G. Se hai già progetto o preventivo, chiedi una Seconda Opinione. Se vuoi rinnovare quella  | Percorsi indipendenti di progettazione e analisi cucina |
 | `servizi.html` | `images/progetto-cucina-90g-report-20260817.png` | Gli add-on sono opzionali e li scegli nel portale. Il totale si aggiorna prima dell’invio della richiesta. | Progetto Cucina Sistema 90G con elaborati e visualizzazione |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
@@ -274,7 +274,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-preventivo-cucina-sconto-valore.html` — Analisi di Gian Carlo Primo · Aggiornato il 7 luglio 2026
 - `index.html` — Una composizione deve funzionare anche con ante, sgabelli e persone in movimento.
 - `seconda-opinione-cucina.html` — Entro 2 giorni lavorativi dal materiale completo · nessun vincolo di marchio · nessuna provvigione.
-- `seconda-opinione-cucina.html` — Un dubbio preciso può richiedere solo un controllo mirato. Se invece vuoi rileggere l'intera proposta, scegli la verifica completa.
+- `seconda-opinione-cucina.html` — Se hai una domanda circoscritta scegli il livello “dubbio preciso”. Se vuoi rileggere l’intera proposta, scegli il controllo completo.
 
 ### `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` — 2 utilizzi
 
