@@ -181,8 +181,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
-| `progetto-cucina-sistema90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
-| `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato  | Raccolta di planimetrie e informazioni per progettare una cucina |
+| `progetto-cucina-sistema90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Progetto base completo nel suo perimetro · add-on opzionali · nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
+| `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Nel portale scegli gli add-on e vedi subito il totale. Prima della conferma viene controllato che il materiale e le estensioni richieste sia | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio. | Cucina esistente da aggiornare |
@@ -319,7 +319,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `contatti.html` — Per avviare un servizio usa il percorso guidato o il portale: in questo modo ruolo, servizio e materiale restano collegati alla stessa richi
 - `controllo-mirato.html` — Invia il materiale e indica il punto preciso che vuoi controllare. La richiesta viene verificata prima della conferma del servizio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
-- `progetto-cucina-sistema90g.html` — Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato 
+- `progetto-cucina-sistema90g.html` — Nel portale scegli gli add-on e vedi subito il totale. Prima della conferma viene controllato che il materiale e le estensioni richieste sia
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `studio-preliminare-spazi.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 
@@ -507,7 +507,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
 - `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
-- `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio
+- `progetto-cucina-sistema90g.html` — Progetto base completo nel suo perimetro · add-on opzionali · nessun vincolo di marchio
 
 ## Pagine senza immagini — informativo
 
