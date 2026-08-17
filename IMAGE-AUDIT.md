@@ -149,7 +149,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `errori-progetto-cucina.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp | Lavastoviglie aperta che riduce il passaggio in cucina |
 | `esempio-fascicolo-cucina.html` | `images/esempio-acquisto-assistito-90g-20260802.jpg` | Questa pagina mostra la funzione del fascicolo del servizio più articolato. Non rappresenta un progetto reale, non espone procedure interne  | Esempio illustrativo del fascicolo Acquisto Assistito Cucina 90G |
 | `esempio-fascicolo-cucina.html` | `images/08_HOME_CHIUSURA.jpg` | Se stai iniziando prima del rivenditore, parti dal servizio da €145. Se la situazione richiede più sviluppo, consulta Acquisto Assistito. | Cucina sviluppata attraverso un percorso progettuale indipendente |
-| `esempio-progetto-cucina-90g.html` | `images/hero-planimetria-90g-2026.jpg` | Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi | Planimetria cucina usata come esempio di lettura progettuale |
+| `esempio-progetto-cucina-90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi | Esempio illustrativo di un progetto cucina con visualizzazione tridimensionale, elaborati e punti da verificare |
 | `esempio-progetto-cucina-90g.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale. | Cucina come risultato di una direzione progettuale indipendente |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
@@ -479,9 +479,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
 - `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
 
-### `images/hero-planimetria-90g-2026.jpg` — 5 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 4 utilizzi
 
-- `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
 - `misure-passaggi-cucina.html` — Una cucina non si valuta soltanto dalla somma delle larghezze dei mobili. Le misure devono descrivere anche ciò che succede quando si apre u
 - `prese-impianti-cucina.html` — Impianti e progetto devono essere letti insieme prima delle opere definitive.
 - `rilievo-misure-cucina-prima-ordine.html` — Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta
@@ -500,8 +499,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `professionisti-progetto-cucina.html` — Sistema 90G può lavorare su un dubbio o su una lettura complessiva della cucina lasciando al professionista la regia del progetto, le respon
 - `professionisti.html` — Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon
 
-### `images/progetto-cucina-90g-report-20260817.png` — 2 utilizzi
+### `images/progetto-cucina-90g-report-20260817.png` — 3 utilizzi
 
+- `esempio-progetto-cucina-90g.html` — Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi
 - `index.html` — 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale
 - `progetto-cucina-sistema90g.html` — Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio
 
