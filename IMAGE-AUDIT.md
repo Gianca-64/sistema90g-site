@@ -184,8 +184,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `progetto-cucina-sistema90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Nessuna vendita di cucine · Nessuna provvigione · Nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
 | `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato  | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
-| `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano. | Restyling di una cucina esistente |
-| `restyling-cucina-esistente.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
+| `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver | Restyling di una cucina esistente |
+| `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio. | Cucina esistente da aggiornare |
 | `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Una base progettuale può essere sviluppata su quote disponibili o indicative. Prima dell'ordine, il rivenditore verifica l'ambiente e adatta | Rilievo misure cucina con quote, pareti e impianti |
 | `rivenditori-cucine.html` | `images/hero-rivenditori-seconda-lettura-20260817.jpg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Cucina contemporanea oggetto di una seconda lettura specialistica prima dell’ordine |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
@@ -282,7 +282,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `agenzie-immobiliari-cucina.html` — Sistema 90G può leggere in via preliminare le possibilità dello spazio cucina per aiutare agenzia e cliente a capire meglio un ambiente che 
 - `rivenditori-cucine.html` — La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale.
 
-### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 39 utilizzi
+### `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` — 38 utilizzi
 
 - `acquisto-assistito-cucina.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `agenzie-immobiliari-cucina.html` — Il punto di partenza è la domanda concreta del cliente e il materiale disponibile.
@@ -320,7 +320,6 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `controllo-mirato.html` — Invia il materiale e indica il punto preciso che vuoi controllare. La richiesta viene verificata prima della conferma del servizio.
 - `privacy-policy.html` — Ultimo aggiornamento: 28 luglio 2026
 - `progetto-cucina-sistema90g.html` — Scrivici indicando che vuoi richiedere Progetto Cucina Sistema 90G e descrivi brevemente la situazione. Prima di procedere viene verificato 
-- `restyling-cucina-esistente.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `scelta-finiture-casa.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 - `studio-preliminare-spazi.html` — La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio.
 
@@ -468,10 +467,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 2 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
-- `restyling-cucina-esistente.html` — Per ordinare che cosa conservare, che cosa modificare e quali verifiche chiedere al rivenditore o all’artigiano.
+- `restyling-cucina-esistente.html` — Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver
+- `restyling-cucina-esistente.html` — Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio.
 
 ### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
 
