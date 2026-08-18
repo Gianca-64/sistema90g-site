@@ -4,15 +4,18 @@ import re
 
 DIST = Path('dist')
 
+# Ogni intento contiene:
+# slug, etichetta, termini di scoring, termini distintivi che devono comparire
+# in title/H1/H2-H3 perché la pagina possa essere considerata realmente pertinente.
 INTENTS = [
     ('pensili-soffitto', 'Conviene portare i pensili della cucina fino al soffitto?', ['pensili', 'soffitto', 'cucina'], ['pensili', 'soffitto']),
     ('spazio-sopra-pensili', 'Quanto spazio lasciare sopra i pensili della cucina?', ['spazio', 'pensili', 'soffitto'], ['pensili', 'soffitto']),
-    ('chiusura-colonne', 'Conviene chiudere sopra colonne e pensili con veletta o cartongesso?', ['colonne', 'pensili', 'cartongesso'], ['colonne', 'cartongesso']),
-    ('cassonetto-colonna', 'Cosa fare se il cassonetto della tapparella interferisce con una colonna cucina?', ['cassonetto', 'tapparella', 'colonna'], ['cassonetto', 'colonna']),
-    ('controsoffitto-cucina', 'Come coordinare controsoffitto e cucina prima del montaggio?', ['controsoffitto', 'cucina', 'colonne'], ['controsoffitto', 'cucina']),
+    ('chiusura-colonne', 'Conviene chiudere sopra colonne e pensili con veletta o cartongesso?', ['colonne', 'pensili', 'cartongesso', 'veletta'], ['cartongesso', 'veletta']),
+    ('cassonetto-colonna', 'Cosa fare se il cassonetto della tapparella interferisce con una colonna cucina?', ['cassonetto', 'tapparella', 'colonna'], ['cassonetto']),
+    ('controsoffitto-cucina', 'Come coordinare controsoffitto e cucina prima del montaggio?', ['controsoffitto', 'cucina', 'colonne'], ['controsoffitto']),
     ('pensili-sopra-finestra', 'Si possono mettere pensili sopra una finestra in cucina?', ['pensili', 'finestra', 'cucina'], ['pensili', 'finestra']),
     ('finestra-tra-basi-pensili', 'Come progettare una finestra tra basi e pensili della cucina?', ['finestra', 'basi', 'pensili'], ['finestra', 'pensili']),
-    ('colonna-vicino-finestra', 'Cosa verificare se una colonna cucina è vicino a finestra o portafinestra?', ['colonna', 'finestra', 'cucina'], ['colonna', 'finestra']),
+    ('colonna-vicino-finestra', 'Cosa verificare se una colonna cucina è vicino a finestra o portafinestra?', ['colonna', 'finestra', 'portafinestra', 'cucina'], ['colonna', 'finestra']),
 ]
 
 TAG_RE = re.compile(r'<[^>]+>')
@@ -55,7 +58,9 @@ for slug, label, terms, signatures in INTENTS:
         hh = sum(1 for t in terms if t in p['h1'])
         sh = sum(1 for t in terms if t in p['h23'])
         tx = sum(1 for t in terms if t in p['text'])
-        signature_structured = any(s in p['title'] or s in p['h1'] or s in p['h23'] for s in signatures)
+        structured = ' '.join([p['title'], p['h1'], p['h23']])
+        # Tutti i termini distintivi devono essere presenti nella struttura.
+        signature_structured = all(s in structured for s in signatures)
         score = th * 5 + hh * 4 + sh * 3 + tx
         if score:
             ranked.append((score, signature_structured, p))
@@ -81,8 +86,8 @@ else:
     for status, label, ranked in weak:
         print(f'[{status}] {label}')
         if ranked:
-            for score, structured, p in ranked:
-                marker = 'struttura-ok' if structured else 'solo-corpo'
+            for score, structured_ok, p in ranked:
+                marker = 'struttura-ok' if structured_ok else 'solo-corpo/parziale'
                 print(f"  - {p['file']} | score {score} | {marker} | TITLE: {p['title']}")
         else:
             print('  - nessuna pagina candidata')
