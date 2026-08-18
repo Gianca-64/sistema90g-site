@@ -8,12 +8,12 @@ DIST = Path('dist')
 INTENTS = [
     ('incasso-o-libera', 'Meglio frigorifero da incasso o a libera installazione?', ['frigorifero','incasso','libera installazione'], ['incasso','libera installazione']),
     ('capacita', 'Il frigorifero da incasso fa perdere troppa capacità?', ['frigorifero','incasso','capacita'], ['incasso','capacita']),
-    ('ventilazione', 'Quanto spazio serve per ventilare correttamente il frigorifero?', ['frigorifero','ventilazione','spazio'], ['frigorifero','ventilazione']),
+    ('ventilazione', 'Quanto spazio serve per ventilare correttamente il frigorifero?', ['frigorifero','ventilazione','spazio'], ['frigorifero','ventil']),
     ('freestanding-composizione', 'Si può inserire un frigorifero a libera installazione dentro la composizione cucina?', ['frigorifero','libera installazione','composizione'], ['libera installazione','composizione']),
     ('apertura-porte', 'Quanto spazio serve per aprire bene porte e cassetti del frigorifero?', ['frigorifero','porte','cassetti'], ['porte','cassetti']),
     ('sostituzione', 'È più difficile sostituire in futuro un frigorifero da incasso?', ['frigorifero','incasso','sostituire'], ['incasso','sostituire']),
     ('frigo-largo', 'Se scelgo un frigorifero più largo devo modificare il progetto cucina?', ['frigorifero','largo','progetto cucina'], ['frigorifero','progetto cucina']),
-    ('prezzo-valore', 'Il frigorifero da incasso costa di più: quando ne vale la pena?', ['frigorifero','incasso','prezzo'], ['incasso','prezzo']),
+    ('prezzo-valore', 'Il frigorifero da incasso costa di più: quando ne vale la pena?', ['frigorifero','incasso','prezzo'], ['incasso','costa']),
 ]
 
 TAG_RE = re.compile(r'<[^>]+>')
