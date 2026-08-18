@@ -11,8 +11,8 @@ INTENTS = [
     ('gocciolatoio', 'Serve davvero il gocciolatoio nel lavello cucina?', ['lavello','gocciolatoio'], ['gocciolatoio']),
     ('lavastoviglie', 'Con la lavastoviglie servono ancora due vasche?', ['lavastoviglie','due vasche'], ['lavastoviglie','due vasche']),
     ('piano-lavoro', 'Meglio rinunciare al gocciolatoio per avere più piano di lavoro?', ['gocciolatoio','piano di lavoro'], ['gocciolatoio','piano di lavoro']),
-    ('pentole-grandi', 'Una vasca grande è più comoda per pentole e teglie?', ['vasca grande','pentole'], ['vasca grande','pentole']),
-    ('base-mobile', 'Quanto incide la dimensione della base lavello sulla scelta?', ['base lavello','dimensione'], ['base lavello']),
+    ('pentole-grandi', 'Una vasca grande è più comoda per pentole e teglie?', ['lavello','vasca grande','pentole'], ['vasca grande','pentole']),
+    ('base-mobile', 'Quanto incide la dimensione della base lavello sulla scelta?', ['lavello','base lavello','dimensione'], ['base lavello']),
     ('scelta-uso-reale', 'Come scegliere il lavello in base a uso reale e abitudini?', ['lavello','abitudini','uso'], ['lavello','abitudini']),
 ]
 
