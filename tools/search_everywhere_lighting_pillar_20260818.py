@@ -52,7 +52,7 @@ link = '<p><a href="/illuminazione-cucina-progetto.html">Illuminazione cucina: p
 if link in s:
     print("SKIP pre-cantiere: link già presente")
 else:
-    marker = '<p><a href="/prese-impianti-cucina.html">Prese e impianti cucina →</a></p>'
+    marker = '<p><a href="/prese-impianti-cucina.html">Prese, acqua e scarichi: cosa verificare →</a></p>'
     if marker not in s:
         raise SystemExit("Marker pre-cantiere non trovato")
     s = s.replace(marker, marker + link, 1)
