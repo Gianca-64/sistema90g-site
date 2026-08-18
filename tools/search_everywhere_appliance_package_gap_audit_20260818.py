@@ -1,6 +1,7 @@
 from pathlib import Path
 from html import unescape
 import re
+import unicodedata
 
 DIST = Path('dist')
 
@@ -25,6 +26,7 @@ CANON_RE = re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+
 def clean_html(s):
     s = TAG_RE.sub(' ', s)
     s = unescape(s)
+    s = ''.join(ch for ch in unicodedata.normalize('NFD', s) if unicodedata.category(ch) != 'Mn')
     return SPACE_RE.sub(' ', s).strip().lower()
 
 pages=[]
