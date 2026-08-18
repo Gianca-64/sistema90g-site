@@ -5,11 +5,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **129**
+- Pagine HTML controllate: **130**
 - File immagine presenti: **199**
 - Immagini di contenuto pubblicate: **191**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
-- Pagine senza immagini di contenuto (informativo): **32**
+- Pagine senza immagini di contenuto (informativo): **33**
 - Pagine con più immagini di contenuto (informativo): **55**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -542,6 +542,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `lavello-una-o-due-vasche-gocciolatoio.html`
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
+- `piano-induzione-aspirazione-integrata-o-cappa.html`
 - `piano-induzione-cucina.html`
 - `preventivo-cucina-guida.html`
 - `progetto-da-zero.html`
