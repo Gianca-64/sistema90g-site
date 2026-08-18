@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **120**
+- Pagine HTML controllate: **121**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **186**
+- Immagini di contenuto pubblicate: **187**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -188,6 +188,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver | Restyling di una cucina esistente |
 | `restyling-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio. | Cucina esistente da aggiornare |
 | `rilievo-misure-cucina-prima-ordine.html` | `images/hero-planimetria-90g-2026.jpg` | Va fatto quando l’ambiente è abbastanza definito da poter misurare ciò che inciderà davvero sulla fornitura e comunque prima dell’ordine ese | Rilievo misure cucina con quote, pareti e impianti |
+| `rinnovare-cucina-senza-cambiarla.html` | `images/hero-cucina-90g-2026.jpg` | Prima di scegliere colori o materiali conviene separare ciò che funziona ancora da ciò che crea davvero il problema. Ante, maniglie, top, sc | Cucina esistente da valutare per un intervento di restyling |
 | `rivenditori-cucine.html` | `images/hero-rivenditori-seconda-lettura-20260817.jpg` | Nessuna provvigione · nessuna esclusiva · nessun vincolo di marchio | Cucina contemporanea oggetto di una seconda lettura specialistica prima dell’ordine |
 | `rivenditori-cucine.html` | `images/25_PER_AGENZIE_COLLABORAZIONE.jpg` | La richiesta parte dal progetto o dal dubbio reale, non da un contratto di collaborazione generale. | Collaborazione professionale nel processo di acquisto della cucina |
 | `scelta-finiture-casa.html` | `images/17_SERVIZI_FINITURE.jpg` | Per confrontare due combinazioni già individuate quando la composizione della cucina è definita. | Confronto tra due alternative di finitura cucina |
@@ -466,11 +467,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 3 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 4 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver
 - `restyling-cucina-esistente.html` — Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio.
+- `rinnovare-cucina-senza-cambiarla.html` — Prima di scegliere colori o materiali conviene separare ciò che funziona ancora da ciò che crea davvero il problema. Ante, maniglie, top, sc
 
 ### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
 
