@@ -152,7 +152,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `esempio-progetto-cucina-90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Questo esempio non rappresenta un progetto reale e non promette un numero fisso di elaborati. Serve a mostrare come il risultato rende leggi | Esempio illustrativo di un progetto cucina con visualizzazione tridimensionale, elaborati e punti da verificare |
 | `esempio-progetto-cucina-90g.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale. | Cucina come risultato di una direzione progettuale indipendente |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
-| `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Una colonna frigo può sembrare corretta in pianta ma diventare scomoda se la parete limita l'angolo di apertura o impedisce di estrarre comp | Schema Sistema 90G dell |
+| `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Non esiste una distanza valida per tutti i modelli. Lo spazio laterale deve permettere l’angolo di apertura richiesto dal frigorifero e l’es | Schema Sistema 90G dell |
 | `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
 | `index.html` | `images/progetto-cucina-90g-report-20260817.png` | 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Le situazioni raccolte da Sistema 90G mostrano quali domande possono cambiare una decisione prima dell'ordine. | Lavastoviglie aperta e passaggio |
@@ -163,8 +163,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `innovazioni.html` | `images/editoriale/piano-induzione-opaco-20260817.jpg` | Ricette dal web, riconoscimento del piatto e cottura assistita: a cosa servono davvero queste funzioni e quali dipendenze introducono. | Piano a induzione nero opaco integrato nel top |
 | `innovazioni.html` | `images/editoriale/lavastoviglie-microbolle-20260817.jpg` | Differenze reali tra opaco, resistenza ai graffi e minore visibilità dei segni, con le verifiche utili prima della scelta. | Lavastoviglie integrata nella cucina |
 | `innovazioni.html` | `images/editoriale/colonna-lavanderia-20260817.jpg` | Quali vantaggi possono avere e quali condizioni vanno verificate prima di considerarli un beneficio reale. | Lavatrice e asciugatrice sovrapposte in colonna |
-| `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
-| `lavastoviglie-cucina-aperture-passaggi.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Una lavastoviglie chiusa occupa poco spazio visivo. Aperta, invece, può cambiare completamente il passaggio e interferire con altri elementi | Lavastoviglie aperta in cucina con passaggio ridotto |
+| `isola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Possono bastare in alcune configurazioni, ma la misura da sola non è sufficiente per decidere. Bisogna verificare cosa si apre sui due lati, | Isola cucina Sistema 90G con verifica dei passaggi e degli ingombri d |
+| `lavastoviglie-cucina-aperture-passaggi.html` | `images/caso-lavastoviglie-passaggio-cucina.jpg` | Non basta lo spazio necessario ad abbassare l’anta. Va considerato anche il corpo della persona che carica o scarica, l’eventuale passaggio  | Lavastoviglie aperta in cucina con passaggio ridotto |
 | `lavello-sotto-finestra-cucina.html` | `images/caso-lavello-sotto-finestra-aperture.jpg` | Prima dell’ordine conviene controllare la traiettoria dell’anta, l’altezza del rubinetto, eventuali maniglie, la quota del davanzale e lo sp | Lavello sotto finestra con verifica dell |
 | `materiali-finiture-cucina-guide.html` | `images/17_SERVIZI_FINITURE.jpg` | Luce, pavimento, top, dimensione dei frontali, manutenzione e uso quotidiano cambiano la percezione e la praticità dei materiali. Per questo | Campioni di materiali cucina con annotazioni tecniche Sistema 90G |
 | `metodo-sistema90g.html` | `images/03_HOME_METODO.jpg` | Sistema 90G legge insieme progetto, preventivo, planimetria, misure e immagini per individuare criticità e informazioni mancanti prima dell' | Analisi preventiva di una cucina |
@@ -388,7 +388,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-cucina.html` — La porta aperta riduce lo spazio realmente utilizzabile.
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso.
-- `isola-cucina-distanze-passaggi.html` — La domanda utile non è soltanto se l'isola entra nella stanza, ma se la cucina continua a funzionare quando ante, cassetti, elettrodomestici
+- `isola-cucina-distanze-passaggi.html` — Possono bastare in alcune configurazioni, ma la misura da sola non è sufficiente per decidere. Bisogna verificare cosa si apre sui due lati,
 - `penisola-cucina-distanze-passaggi.html` — Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
@@ -402,7 +402,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-cucina.html` — 6 casi pubblicati per riconoscere problemi, verifiche e servizi pertinenti.
 - `caso-lavastoviglie-passaggio-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `errori-progetto-cucina.html` — Il passaggio libero a cucina ferma non descrive l'uso reale. Lavastoviglie, forno, cassettoni e frigorifero modificano temporaneamente lo sp
-- `lavastoviglie-cucina-aperture-passaggi.html` — Una lavastoviglie chiusa occupa poco spazio visivo. Aperta, invece, può cambiare completamente il passaggio e interferire con altri elementi
+- `lavastoviglie-cucina-aperture-passaggi.html` — Non basta lo spazio necessario ad abbassare l’anta. Va considerato anche il corpo della persona che carica o scarica, l’eventuale passaggio 
 
 ### `images/caso-lavello-sotto-finestra-aperture.jpg` — 4 utilizzi
 
