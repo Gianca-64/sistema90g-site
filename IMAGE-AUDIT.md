@@ -172,7 +172,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `misure-passaggi-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità  | Planimetria cucina Sistema 90G con quote e verifica dei passaggi |
 | `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | No. Trasporto, montaggio dei mobili, posa del top, installazione degli elettrodomestici e collegamenti agli impianti possono essere compresi | Montaggio cucina con mobili, elettrodomestici e impianti |
 | `pareti-fuori-squadra-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Può cambiare il modo in cui basi, colonne e soprattutto top si avvicinano alle pareti. In una composizione ad angolo, una differenza geometr | Planimetria cucina con verifica delle pareti e degli angoli reali prima dell |
-| `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
+| `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Non basta misurare il corridoio con gli sgabelli vuoti. Devi considerare una persona seduta, lo spazio per alzarsi, il passaggio alle spalle | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi,  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
@@ -389,7 +389,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `caso-isola-passaggi-cucina.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 - `index.html` — La distanza può sembrare sufficiente finché l'elettrodomestico resta chiuso.
 - `isola-cucina-distanze-passaggi.html` — Possono bastare in alcune configurazioni, ma la misura da sola non è sufficiente per decidere. Bisogna verificare cosa si apre sui due lati,
-- `penisola-cucina-distanze-passaggi.html` — Una penisola può aumentare piano di lavoro e contenimento, ma può anche restringere il passaggio o creare interferenze se viene dimensionata
+- `penisola-cucina-distanze-passaggi.html` — Non basta misurare il corridoio con gli sgabelli vuoti. Devi considerare una persona seduta, lo spazio per alzarsi, il passaggio alle spalle
 
 ### `images/caso-lavanderia-oblo-porta.jpg` — 2 utilizzi
 
