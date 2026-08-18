@@ -64,7 +64,10 @@ for slug, label, terms, signatures in INTENTS:
             s in p['title'] or s in p['h1'] or s in p['h23']
             for s in signatures
         )
-        score = th * 5 + hh * 4 + sh * 2 + tx
+        # Gli H2/H3 rappresentano sotto-intenti centrali nelle pagine pilastro:
+        # un heading che contiene tutti i termini distintivi deve poter raggiungere
+        # la soglia FORTE senza costringere title/H1 al keyword stuffing.
+        score = th * 5 + hh * 4 + sh * 3 + tx
         if score:
             ranked.append((score, signature_structured, p))
 
