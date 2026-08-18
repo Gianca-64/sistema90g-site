@@ -9,7 +9,7 @@ else:
 
 link = '/piano-induzione-aspirazione-integrata-o-cappa.html'
 for filename, marker, label in [
-    ('piano-induzione-cucina.html', '<p><a href="/cappa-aspirazione-cucina.html">Approfondisci il piano a induzione →</a></p>', 'Piano aspirante o cappa tradizionale →'),
+    ('piano-induzione-cucina.html', '<p><a href="/innovazioni.html">Innovazioni per la cucina →</a></p>', 'Piano aspirante o cappa tradizionale →'),
     ('cappa-aspirazione-cucina.html', '<p><a href="/piano-induzione-cucina.html">Approfondisci il piano a induzione →</a></p>', 'Piano a induzione con aspirazione integrata o cappa →')
 ]:
     p = Path(filename)
