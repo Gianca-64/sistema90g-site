@@ -4,9 +4,10 @@ import re
 
 DIST = Path('dist')
 
-# signature: termine distintivo che deve comparire in TITLE/H1 per poter
-# classificare una pagina come FORTE. Evita falsi positivi prodotti da parole
-# generiche presenti accidentalmente nel corpo di altre guide.
+# signature: termine distintivo che deve comparire in un elemento strutturale
+# (TITLE/H1/H2/H3) per poter classificare una pagina come FORTE. In una pagina
+# pilastro i sotto-intenti possono correttamente vivere negli H2/H3 senza
+# dover essere forzati tutti nel TITLE o nell'H1.
 INTENTS = [
     ('rinnovare-senza-cambiarla', 'Come rinnovare la cucina senza cambiarla', ['rinnovare', 'cucina', 'senza cambiarla'], ['rinnovare']),
     ('quando-conviene-restyling', 'Quando conviene rinnovare invece di sostituire la cucina', ['conviene', 'restyling', 'sostituire'], ['restyling', 'rinnovare']),
@@ -24,6 +25,7 @@ TAG_RE = re.compile(r'<[^>]+>')
 SPACE_RE = re.compile(r'\s+')
 TITLE_RE = re.compile(r'<title>(.*?)</title>', re.I | re.S)
 H1_RE = re.compile(r'<h1[^>]*>(.*?)</h1>', re.I | re.S)
+H23_RE = re.compile(r'<h[23][^>]*>(.*?)</h[23]>', re.I | re.S)
 CANON_RE = re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)', re.I)
 
 
@@ -41,10 +43,12 @@ for path in sorted(DIST.glob('*.html')):
         continue
     title_m = TITLE_RE.search(raw)
     h1_m = H1_RE.search(raw)
+    h23 = ' '.join(clean_html(x) for x in H23_RE.findall(raw))
     pages.append({
         'file': path.name,
         'title': clean_html(title_m.group(1)) if title_m else '',
         'h1': clean_html(h1_m.group(1)) if h1_m else '',
+        'h23': h23,
         'text': clean_html(raw),
     })
 
@@ -56,14 +60,18 @@ for slug, label, terms, signatures in INTENTS:
     ranked = []
     for p in pages:
         th = sum(1 for t in terms if t in p['title'])
-        hh = sum(1 for t in terms if t in p['h1'])
+        h1h = sum(1 for t in terms if t in p['h1'])
+        h23h = sum(1 for t in terms if t in p['h23'])
         tx = sum(1 for t in terms if t in p['text'])
-        signature_head = any(s in p['title'] or s in p['h1'] for s in signatures)
-        score = th * 4 + hh * 3 + tx
+        signature_structured = any(
+            s in p['title'] or s in p['h1'] or s in p['h23']
+            for s in signatures
+        )
+        score = th * 4 + h1h * 3 + h23h * 2 + tx
         if score:
-            ranked.append((score, signature_head, p))
+            ranked.append((score, signature_structured, p))
 
-    # Prima la pertinenza semantica nell'head, poi il punteggio lessicale.
+    # Prima la pertinenza in elementi strutturali, poi il punteggio lessicale.
     ranked.sort(key=lambda x: (-int(x[1]), -x[0], x[2]['file']))
     best = ranked[0] if ranked else None
 
@@ -89,8 +97,8 @@ else:
     for status, label, ranked in weak:
         print(f'[{status}] {label}')
         if ranked:
-            for score, signature_head, p in ranked:
-                marker = 'head-ok' if signature_head else 'solo-corpo'
+            for score, signature_structured, p in ranked:
+                marker = 'struttura-ok' if signature_structured else 'solo-corpo'
                 print(f"  - {p['file']} | score {score} | {marker} | TITLE: {p['title']}")
         else:
             print('  - nessuna pagina candidata')
