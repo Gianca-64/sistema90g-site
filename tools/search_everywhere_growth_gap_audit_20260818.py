@@ -25,7 +25,7 @@ INTENTS = [
     ('ante-materiale', 'Come scegliere il materiale delle ante cucina', ['ante cucina', 'materiale', 'manutenzione']),
     ('finiture-luce', 'Come scegliere finiture e colori in base alla luce', ['finiture', 'luce', 'pavimento', 'opaca', 'lucida']),
     ('montaggio-allacciamenti', 'Cosa comprende montaggio e chi fa gli allacciamenti', ['montaggio', 'allacciamenti', 'compreso']),
-    ('seconda-opinione', 'Quando serve una seconda opinione sulla cucina', ['seconda opinione', 'verifica indipendente', 'prima dell ordine']),
+    ('seconda-opinione', 'Quando serve una seconda opinione sulla cucina', ['seconda opinione', 'dubbio concreto', 'prima della decisione']),
 ]
 
 TAG_RE = re.compile(r'<[^>]+>')
