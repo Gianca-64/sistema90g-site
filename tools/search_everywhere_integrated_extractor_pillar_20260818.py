@@ -1,0 +1,39 @@
+from pathlib import Path
+
+NEW = Path('piano-induzione-aspirazione-integrata-o-cappa.html')
+if not NEW.exists():
+    NEW.write_text('''<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Piano a induzione con aspirazione integrata o cappa? | Sistema 90G</title><meta name="description" content="Piano a induzione con aspirazione integrata o cappa tradizionale: prestazioni, scarico, spazio sotto il piano, manutenzione, rumore, isola e convenienza da valutare nel progetto reale."><link rel="canonical" href="https://sistema90g.it/piano-induzione-aspirazione-integrata-o-cappa.html"><link rel="stylesheet" href="sistema90g-visual-2026.css?v=20260730a"></head><body class="s90g-visual"><main><section class="s90g-section"><div class="s90g-shell"><p class="s90g-eyebrow">Guida cucina · induzione e aspirazione</p><h1>Piano a induzione con aspirazione integrata o cappa tradizionale: cosa cambia davvero</h1><p class="s90g-lead">La scelta non riguarda solo estetica e prezzo. Prestazioni reali, percorso dello scarico, spazio nei mobili, manutenzione, rumore, configurazione dell isola e uso quotidiano possono cambiare molto il risultato.</p><section class="s90g-callout"><h2>Meglio piano a induzione con aspirazione integrata o cappa tradizionale?</h2><p>Dipende dal progetto. L aspirazione integrata può liberare il soffitto e semplificare alcune composizioni, soprattutto su isole e penisole, ma richiede spazio sotto il piano e un percorso dell aria compatibile. La cappa tradizionale può essere più semplice da dimensionare o mantenere in altre configurazioni. Il confronto va fatto sul sistema completo.</p></section><div class="s90g-prose"><h2>La cappa integrata nel piano a induzione funziona davvero bene?</h2><p>Può funzionare bene se il modello è adeguato e installazione, scarico o ricircolo, percorso dell aria e uso reale sono coerenti. Non basta il dato di portata dichiarato: bisogna verificare come il sistema lavora nella cucina concreta e quali perdite introduce il percorso previsto.</p><h2>Su un isola conviene la cappa integrata per lasciare libero il soffitto?</h2><p>Può essere un vantaggio importante quando si vuole evitare una cappa sospesa o un controsoffitto invasivo, ma non è automaticamente la soluzione migliore. Va verificato dove passa lo scarico, quanto spazio resta nel mobile dell isola, come viene gestito il ricircolo se non c è espulsione esterna e se la posizione del piano resta funzionale.</p><h2>Con aspirazione integrata quanto conta il percorso dello scarico?</h2><p>Conta molto. Lunghezza, curve, sezione e punto di uscita possono influire sulle prestazioni reali e sugli ingombri. Un sistema valido sulla carta può diventare meno efficace se il percorso dell aria è troppo penalizzante. Prima dell ordine va quindi verificata la soluzione di installazione completa, non soltanto il piano.</p><h2>Quanto spazio si perde sotto il piano con la cappa integrata?</h2><p>Dipende dal modello e dal sistema di canalizzazione. Motore, filtri, raccordi e tubazioni possono ridurre profondità o volume utile di cassetti e basi sottostanti. Nelle cucine piccole questo costo di spazio può essere più importante del vantaggio estetico, quindi va misurato sul mobile reale.</p><h2>La manutenzione di un piano con aspirazione integrata è più impegnativa?</h2><p>Può richiedere più attenzione perché filtri, vasche di raccolta, griglie e parti interne devono essere accessibili e pulibili. Nei sistemi a ricircolo conta anche la manutenzione dei filtri specifici. Conviene verificare frequenza, accessibilità e costo dei ricambi prima dell acquisto.</p><h2>Rumore e prestazioni: la cappa integrata è davvero migliore?</h2><p>Non in assoluto. Rumore e prestazioni dipendono dal modello, dalla velocità usata, dal percorso dell aria e dalla modalità di scarico o ricircolo. Il confronto utile è tra dati e condizioni equivalenti, non tra una cappa tradizionale generica e un piano aspirante di fascia diversa.</p><h2>Il piano a induzione con cappa integrata costa di più: quando ne vale la pena?</h2><p>Il sovrapprezzo può essere giustificato quando risolve un problema reale del progetto: per esempio liberare il soffitto di un isola, evitare una cappa visivamente invasiva o rendere possibile una configurazione altrimenti complessa. Se invece introduce perdita di contenimento, canalizzazioni difficili o manutenzione non desiderata, il vantaggio può ridursi. La domanda corretta è quale beneficio concreto produce nella cucina specifica.</p><h2>La verifica prima dell ordine</h2><p>Controlla modello effettivo, modalità aspirante o filtrante, percorso e sezione dei condotti, ingombri nel mobile, accessibilità per manutenzione, spazio residuo nei cassetti, requisiti elettrici e compatibilità con isola o composizione. Solo così il confronto con una cappa tradizionale diventa realmente utile.</p><p><a href="/piano-induzione-cucina.html">Piano a induzione: verifiche tecniche →</a></p><p><a href="/cappa-aspirazione-cucina.html">Cappa cucina: aspirazione, scarico e condensa →</a></p><p><a href="/isola-cucina-distanze-passaggi.html">Isola cucina: distanze e passaggi →</a></p><p>Se il dubbio riguarda una proposta già ricevuta, puoi usare la <a href="/seconda-opinione-cucina.html#livelli-seconda-opinione">Seconda Opinione · dubbio preciso</a>; se la scelta coinvolge isola, mobili, impianti e aspirazione, è più utile una lettura completa del progetto.</p></div></div></section></main></body></html>''', encoding='utf-8')
+    print('OK piano-induzione-aspirazione-integrata-o-cappa.html')
+else:
+    print('SKIP nuova pagina: già presente')
+
+link = '/piano-induzione-aspirazione-integrata-o-cappa.html'
+for filename, marker, label in [
+    ('piano-induzione-cucina.html', '<p><a href="/cappa-aspirazione-cucina.html">Approfondisci il piano a induzione →</a></p>', 'Piano aspirante o cappa tradizionale →'),
+    ('cappa-aspirazione-cucina.html', '<p><a href="/piano-induzione-cucina.html">Approfondisci il piano a induzione →</a></p>', 'Piano a induzione con aspirazione integrata o cappa →')
+]:
+    p = Path(filename)
+    s = p.read_text(encoding='utf-8')
+    if link not in s:
+        if marker not in s:
+            raise SystemExit(f'Marker non trovato in {filename}')
+        s = s.replace(marker, f'<p><a href="{link}">{label}</a></p>' + marker, 1)
+        p.write_text(s, encoding='utf-8')
+        print('OK', filename)
+    else:
+        print('SKIP', filename, ': link già presente')
+
+site = Path('sitemap.xml')
+s = site.read_text(encoding='utf-8')
+url = 'https://sistema90g.it/piano-induzione-aspirazione-integrata-o-cappa.html'
+if url not in s:
+    marker = '</urlset>'
+    if marker not in s:
+        raise SystemExit('Marker sitemap non trovato')
+    s = s.replace(marker, '  <url><loc>'+url+'</loc><lastmod>2026-08-18</lastmod></url>\n'+marker, 1)
+    site.write_text(s, encoding='utf-8')
+    print('OK sitemap.xml')
+else:
+    print('SKIP sitemap: URL già presente')
+
+print('Search Everywhere: pilastro aspirazione integrata creato e collegato.')
