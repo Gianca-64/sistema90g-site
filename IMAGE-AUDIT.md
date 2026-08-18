@@ -5,11 +5,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **125**
+- Pagine HTML controllate: **126**
 - File immagine presenti: **199**
 - Immagini di contenuto pubblicate: **191**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
-- Pagine senza immagini di contenuto (informativo): **28**
+- Pagine senza immagini di contenuto (informativo): **29**
 - Pagine con più immagini di contenuto (informativo): **55**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -552,6 +552,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `scena-lavastoviglie-aperta-passaggio.html`
 - `scene-reali-cucina.html`
 - `tutto-sembrava-corretto-finche.html`
+- `vincoli-verticali-cucina-pensili-colonne-finestre.html`
 
 ## Pagine con più immagini — informativo
 
