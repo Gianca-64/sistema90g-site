@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **124**
+- Pagine HTML controllate: **125**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **190**
+- Immagini di contenuto pubblicate: **191**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -174,6 +174,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `montaggio-allacciamenti-cucina-cosa-chiarire.html` | `images/hero-cucina-conflitto-90g.jpg` | No. Trasporto, montaggio dei mobili, posa del top, installazione degli elettrodomestici e collegamenti agli impianti possono essere compresi | Montaggio cucina con mobili, elettrodomestici e impianti |
 | `pareti-fuori-squadra-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Può cambiare il modo in cui basi, colonne e soprattutto top si avvicinano alle pareti. In una composizione ad angolo, una differenza geometr | Planimetria cucina con verifica delle pareti e degli angoli reali prima dell |
 | `penisola-cucina-distanze-passaggi.html` | `images/caso-isola-passaggi-cucina.jpg` | Non basta misurare il corridoio con gli sgabelli vuoti. Devi considerare una persona seduta, lo spazio per alzarsi, il passaggio alle spalle | Schema Sistema 90G su passaggi, sedute e aperture attorno a un elemento centrale della cucina |
+| `piano-lavoro-colonne-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Non esiste una misura unica valida per tutti. Il piano deve essere sufficiente per preparare, appoggiare, usare gli elettrodomestici abitual | Cucina da valutare nel rapporto tra colonne e superficie di lavoro |
 | `prese-impianti-cucina.html` | `images/hero-planimetria-90g-2026.jpg` | Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z | Planimetria tecnica Sistema 90G con quote e verifiche per predisposizioni della cucina |
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi,  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
@@ -470,10 +471,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 6 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 7 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `illuminazione-cucina-progetto.html` — Quando la disposizione è abbastanza chiara da sapere dove saranno piano di lavoro, lavello, cottura, colonne, isola o penisola. In questo mo
+- `piano-lavoro-colonne-cucina.html` — Non esiste una misura unica valida per tutti. Il piano deve essere sufficiente per preparare, appoggiare, usare gli elettrodomestici abitual
 - `restyling-cucina-esistente.html` — Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver
 - `restyling-cucina-esistente.html` — Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio.
 - `rinnovare-cucina-senza-cambiarla.html` — Prima di scegliere colori o materiali conviene separare ciò che funziona ancora da ciò che crea davvero il problema. Ante, maniglie, top, sc
