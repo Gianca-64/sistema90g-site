@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **123**
+- Pagine HTML controllate: **124**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **189**
+- Immagini di contenuto pubblicate: **190**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -153,6 +153,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `esempio-progetto-cucina-90g.html` | `images/08_HOME_CHIUSURA.jpg` | Consulta il perimetro completo del servizio oppure avvia direttamente la richiesta nel portale. | Cucina come risultato di una direzione progettuale indipendente |
 | `finiture-opache-lucide-cucina.html` | `images/17_SERVIZI_FINITURE.jpg` | La scelta non e solo estetica: cambia il modo in cui si leggono luce, impronte, riflessi e piccoli segni d'uso. | Superfici cucina confrontate alla luce per valutare finiture opache e lucide |
 | `frigorifero-cucina-vicino-parete.html` | `images/frigo-apertura-insufficiente.svg` | Non esiste una distanza valida per tutti i modelli. Lo spazio laterale deve permettere l’angolo di apertura richiesto dal frigorifero e l’es | Schema Sistema 90G dell |
+| `illuminazione-cucina-progetto.html` | `images/hero-cucina-90g-2026.jpg` | Quando la disposizione è abbastanza chiara da sapere dove saranno piano di lavoro, lavello, cottura, colonne, isola o penisola. In questo mo | Cucina da coordinare con punti luce e illuminazione funzionale |
 | `index.html` | `images/01_HOME_HERO.jpg` | Sistema 90G non vende cucine, non rappresenta marchi e non riceve provvigioni sulla vendita. | Progettazione indipendente di una cucina prima della scelta del rivenditore |
 | `index.html` | `images/progetto-cucina-90g-report-20260817.png` | 145 € · Nessun vincolo di marchio · Conferma dopo il controllo del materiale | Esempio illustrativo di una base progettuale cucina Sistema 90G |
 | `index.html` | `images/05_HOME_CASO_1.jpg` | Le situazioni raccolte da Sistema 90G mostrano quali domande possono cambiare una decisione prima dell'ordine. | Lavastoviglie aperta e passaggio |
@@ -469,9 +470,10 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 5 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 6 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
+- `illuminazione-cucina-progetto.html` — Quando la disposizione è abbastanza chiara da sapere dove saranno piano di lavoro, lavello, cottura, colonne, isola o penisola. In questo mo
 - `restyling-cucina-esistente.html` — Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver
 - `restyling-cucina-esistente.html` — Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio.
 - `rinnovare-cucina-senza-cambiarla.html` — Prima di scegliere colori o materiali conviene separare ciò che funziona ancora da ciò che crea davvero il problema. Ante, maniglie, top, sc
