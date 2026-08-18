@@ -10,10 +10,10 @@ INTENTS = [
     ('funziona-davvero', 'La cappa integrata nel piano a induzione funziona davvero bene?', ['cappa integrata','induzione','funziona'], ['cappa integrata','induzione']),
     ('isola-estetica', 'Su un isola conviene la cappa integrata per lasciare libero il soffitto?', ['isola','cappa integrata','soffitto'], ['isola','cappa integrata']),
     ('scarico-percorso', 'Con aspirazione integrata quanto conta il percorso dello scarico?', ['aspirazione integrata','scarico','percorso'], ['aspirazione integrata','scarico']),
-    ('spazio-sottostante', 'Quanto spazio si perde sotto il piano con la cappa integrata?', ['cappa integrata','spazio','cassetti'], ['cappa integrata','spazio']),
+    ('spazio-sottostante', 'Quanto spazio si perde sotto il piano con la cappa integrata?', ['cappa integrata','spazio','piano'], ['cappa integrata','spazio']),
     ('manutenzione', 'La manutenzione di un piano con aspirazione integrata è più impegnativa?', ['aspirazione integrata','manutenzione'], ['aspirazione integrata','manutenzione']),
     ('rumore-prestazioni', 'Rumore e prestazioni: la cappa integrata è davvero migliore?', ['cappa integrata','rumore','prestazioni'], ['cappa integrata','prestazioni']),
-    ('sovrapprezzo', 'Il piano a induzione con cappa integrata costa di più: quando ne vale la pena?', ['induzione','cappa integrata','prezzo'], ['cappa integrata','prezzo']),
+    ('sovrapprezzo', 'Il piano a induzione con cappa integrata costa di più: quando ne vale la pena?', ['induzione','cappa integrata','costa di piu'], ['cappa integrata','costa di piu']),
 ]
 
 TAG_RE = re.compile(r'<[^>]+>')
