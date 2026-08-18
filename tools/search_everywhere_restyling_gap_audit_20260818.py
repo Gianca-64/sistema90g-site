@@ -4,17 +4,20 @@ import re
 
 DIST = Path('dist')
 
+# signature: termine distintivo che deve comparire in TITLE/H1 per poter
+# classificare una pagina come FORTE. Evita falsi positivi prodotti da parole
+# generiche presenti accidentalmente nel corpo di altre guide.
 INTENTS = [
-    ('rinnovare-senza-cambiarla', 'Come rinnovare la cucina senza cambiarla', ['rinnovare', 'cucina', 'senza cambiarla']),
-    ('quando-conviene-restyling', 'Quando conviene rinnovare invece di sostituire la cucina', ['conviene', 'restyling', 'sostituire']),
-    ('cambiare-ante', 'Cambiare o sostituire le ante della cucina', ['ante', 'cucina', 'sostituire']),
-    ('cambiare-colore-ante', 'Cambiare colore alle ante della cucina', ['colore', 'ante', 'cucina']),
-    ('cambiare-top', 'Cambiare il top senza sostituire la cucina', ['top', 'cucina', 'sostituire']),
-    ('cambiare-maniglie', 'Cambiare le maniglie per rinnovare la cucina', ['maniglie', 'cucina', 'rinnovare']),
-    ('rinnovare-schienale', 'Rinnovare lo schienale della cucina', ['schienale', 'cucina', 'rinnovare']),
-    ('cucina-legno-datata', 'Rinnovare una cucina in legno datata', ['cucina', 'legno', 'rinnovare']),
-    ('riutilizzare-struttura', 'Mantenere la struttura e cambiare solo alcune parti', ['struttura', 'mantenere', 'cucina']),
-    ('restyling-elettrodomestici', 'Aggiornare elettrodomestici in una cucina esistente', ['elettrodomestici', 'cucina esistente', 'aggiornare']),
+    ('rinnovare-senza-cambiarla', 'Come rinnovare la cucina senza cambiarla', ['rinnovare', 'cucina', 'senza cambiarla'], ['rinnovare']),
+    ('quando-conviene-restyling', 'Quando conviene rinnovare invece di sostituire la cucina', ['conviene', 'restyling', 'sostituire'], ['restyling', 'rinnovare']),
+    ('cambiare-ante', 'Cambiare o sostituire le ante della cucina', ['ante', 'cucina', 'sostituire'], ['ante']),
+    ('cambiare-colore-ante', 'Cambiare colore alle ante della cucina', ['colore', 'ante', 'cucina'], ['ante']),
+    ('cambiare-top', 'Cambiare il top senza sostituire la cucina', ['top', 'cucina', 'sostituire'], ['top']),
+    ('cambiare-maniglie', 'Cambiare le maniglie per rinnovare la cucina', ['maniglie', 'cucina', 'rinnovare'], ['maniglie']),
+    ('rinnovare-schienale', 'Rinnovare lo schienale della cucina', ['schienale', 'cucina', 'rinnovare'], ['schienale']),
+    ('cucina-legno-datata', 'Rinnovare una cucina in legno datata', ['cucina', 'legno', 'rinnovare'], ['legno']),
+    ('riutilizzare-struttura', 'Mantenere la struttura e cambiare solo alcune parti', ['struttura', 'mantenere', 'cucina'], ['struttura', 'mantenere']),
+    ('restyling-elettrodomestici', 'Aggiornare elettrodomestici in una cucina esistente', ['elettrodomestici', 'cucina esistente', 'aggiornare'], ['elettrodomestici']),
 ]
 
 TAG_RE = re.compile(r'<[^>]+>')
@@ -49,27 +52,33 @@ print(f'Pagine indicizzabili analizzate: {len(pages)}')
 print('\n=== RESTYLING: COPERTURA INTENTI ===')
 
 weak = []
-for slug, label, terms in INTENTS:
+for slug, label, terms, signatures in INTENTS:
     ranked = []
     for p in pages:
         th = sum(1 for t in terms if t in p['title'])
         hh = sum(1 for t in terms if t in p['h1'])
         tx = sum(1 for t in terms if t in p['text'])
+        signature_head = any(s in p['title'] or s in p['h1'] for s in signatures)
         score = th * 4 + hh * 3 + tx
         if score:
-            ranked.append((score, p))
-    ranked.sort(key=lambda x: (-x[0], x[1]['file']))
+            ranked.append((score, signature_head, p))
+
+    # Prima la pertinenza semantica nell'head, poi il punteggio lessicale.
+    ranked.sort(key=lambda x: (-int(x[1]), -x[0], x[2]['file']))
     best = ranked[0] if ranked else None
+
     if not best:
         status = 'SCOPERTO'
-    elif best[0] >= 10:
+    elif best[1] and best[0] >= 10:
         status = 'FORTE'
     elif best[0] >= 6:
         status = 'PARZIALE'
     else:
         status = 'DEBOLE'
-    best_txt = f"{best[1]['file']} (score {best[0]})" if best else '—'
+
+    best_txt = f"{best[2]['file']} (score {best[0]})" if best else '—'
     print(f'{status:8} | {label} | {best_txt}')
+
     if status != 'FORTE':
         weak.append((status, label, ranked[:3]))
 
@@ -80,8 +89,9 @@ else:
     for status, label, ranked in weak:
         print(f'[{status}] {label}')
         if ranked:
-            for score, p in ranked:
-                print(f"  - {p['file']} | score {score} | TITLE: {p['title']}")
+            for score, signature_head, p in ranked:
+                marker = 'head-ok' if signature_head else 'solo-corpo'
+                print(f"  - {p['file']} | score {score} | {marker} | TITLE: {p['title']}")
         else:
             print('  - nessuna pagina candidata')
 
