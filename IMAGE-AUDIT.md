@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **121**
+- Pagine HTML controllate: **122**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **187**
+- Immagini di contenuto pubblicate: **188**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -200,6 +200,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Se hai una domanda circoscritta scegli il livello “dubbio preciso”. Se vuoi rileggere l’intera proposta, scegli il controllo completo. | Progetto e preventivo cucina da controllare prima dell |
 | `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Se la cucina è nuova, parti da Progetto Cucina 90G. Se hai già progetto o preventivo, chiedi una Seconda Opinione. Se vuoi rinnovare quella  | Percorsi indipendenti di progettazione e analisi cucina |
 | `servizi.html` | `images/progetto-cucina-90g-report-20260817.png` | Gli add-on sono opzionali e li scegli nel portale. Il totale si aggiorna prima dell’invio della richiesta. | Progetto Cucina Sistema 90G con elaborati e visualizzazione |
+| `sostituire-elettrodomestici-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Prima di scegliere il nuovo modello bisogna verificare il vano reale e confrontarlo con la scheda tecnica dell'apparecchio. Larghezza nomina | Cucina esistente con elettrodomestici da verificare prima della sostituzione |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
 | `tavolo-vicino-cucina-spazi-sedute.html` | `images/hero-open-space-90g.jpg` | Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina | Open space cucina e tavolo con verifica dei passaggi tra zona operativa e sedute |
@@ -467,12 +468,13 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `casi-spazi-servizio.html` — Arredi e verde non devono interrompere il percorso.
 - `caso-tiranti-cavi-vista-impianto-ispezionabile.html` — Analisi di Gian Carlo Primo · Aggiornato l'8 luglio 2026
 
-### `images/hero-cucina-90g-2026.jpg` — 4 utilizzi
+### `images/hero-cucina-90g-2026.jpg` — 5 utilizzi
 
 - `controllo-progetto-cucina.html` — Una lettura indipendente di un progetto già sviluppato, prima di proseguire con il cliente o consolidare la proposta commerciale.
 - `restyling-cucina-esistente.html` — Il Restyling cucina esistente serve a mettere ordine tra ciò che conviene mantenere, ciò che può essere aggiornato e ciò che deve essere ver
 - `restyling-cucina-esistente.html` — Invia fotografie e informazioni sulla cucina esistente. Il caso viene controllato prima della conferma del servizio.
 - `rinnovare-cucina-senza-cambiarla.html` — Prima di scegliere colori o materiali conviene separare ciò che funziona ancora da ciò che crea davvero il problema. Ante, maniglie, top, sc
+- `sostituire-elettrodomestici-cucina-esistente.html` — Prima di scegliere il nuovo modello bisogna verificare il vano reale e confrontarlo con la scheda tecnica dell'apparecchio. Larghezza nomina
 
 ### `images/hero-cucina-conflitto-90g.jpg` — 2 utilizzi
 
