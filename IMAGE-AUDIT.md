@@ -5,11 +5,11 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **127**
+- Pagine HTML controllate: **128**
 - File immagine presenti: **199**
 - Immagini di contenuto pubblicate: **191**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
-- Pagine senza immagini di contenuto (informativo): **30**
+- Pagine senza immagini di contenuto (informativo): **31**
 - Pagine con più immagini di contenuto (informativo): **55**
 - Riferimenti mancanti: **0**
 - Gruppi di file binari identici: **3**
@@ -538,6 +538,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `elettrodomestici-incasso-misure-cucina.html`
 - `elettrodomestici-rivenditore-o-acquisto-separato.html`
 - `errori-trovati-davvero.html`
+- `frigorifero-incasso-o-libera-installazione.html`
 - `micro-caso-frigo-apertura.html`
 - `micro-caso-passaggio-bloccato.html`
 - `piano-induzione-cucina.html`
