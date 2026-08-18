@@ -5,9 +5,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ## Riepilogo
 
-- Pagine HTML controllate: **122**
+- Pagine HTML controllate: **123**
 - File immagine presenti: **199**
-- Immagini di contenuto pubblicate: **188**
+- Immagini di contenuto pubblicate: **189**
 - Asset riutilizzati in più punti (da valutare, non errore): **44**
 - Pagine senza immagini di contenuto (informativo): **28**
 - Pagine con più immagini di contenuto (informativo): **55**
@@ -182,6 +182,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Sistema 90G può affiancare architetti, geometri, interior designer, agenti immobiliari, imprese e altri professionisti quando serve approfon | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
+| `progettare-cucina-prima-impianti.html` | `images/hero-planimetria-90g-2026.jpg` | Quando il cantiere lo consente, conviene definire prima almeno la logica distributiva: posizione di lavello, lavastoviglie, cottura, colonne | Planimetria cucina con quote e predisposizioni da coordinare prima del cantiere |
 | `progetto-cucina-sistema90g.html` | `images/progetto-cucina-90g-report-20260817.png` | Progetto base completo nel suo perimetro · add-on opzionali · nessun vincolo di marchio | Progetto indipendente di una cucina con elaborati e visualizzazione tridimensionale |
 | `progetto-cucina-sistema90g.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Nel portale scegli gli add-on e vedi subito il totale. Prima della conferma viene controllato che il materiale e le estensioni richieste sia | Raccolta di planimetrie e informazioni per progettare una cucina |
 | `proprieta-intellettuale.html` | `images/03_HOME_METODO.jpg` | Ultimo aggiornamento: 2 agosto 2026 | Metodo, criteri e documentazione Sistema 90G |
@@ -486,11 +487,12 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `cucina-open-space-tavolo-passaggi.html` — In un open space non basta far entrare cucina e tavolo nella pianta: bisogna verificare cosa succede quando ante, cassetti, sedie e persone 
 - `tavolo-vicino-cucina-spazi-sedute.html` — Il tavolo non occupa solo la sua sagoma: serve spazio anche per sedersi, alzarsi e passare dietro alle sedie senza interferire con la cucina
 
-### `images/hero-planimetria-90g-2026.jpg` — 5 utilizzi
+### `images/hero-planimetria-90g-2026.jpg` — 6 utilizzi
 
 - `misure-passaggi-cucina.html` — Non conta una sola distanza standard: vanno letti insieme spazio libero, aperture di ante ed elettrodomestici, porte e finestre, profondità 
 - `pareti-fuori-squadra-cucina.html` — Può cambiare il modo in cui basi, colonne e soprattutto top si avvicinano alle pareti. In una composizione ad angolo, una differenza geometr
 - `prese-impianti-cucina.html` — Il controllo utile non riguarda soltanto la posizione sulla parete, ma anche ciò che occuperà quello spazio: cassetti, schienali, fianchi, z
+- `progettare-cucina-prima-impianti.html` — Quando il cantiere lo consente, conviene definire prima almeno la logica distributiva: posizione di lavello, lavastoviglie, cottura, colonne
 - `rilievo-misure-cucina-prima-ordine.html` — Va fatto quando l’ambiente è abbastanza definito da poter misurare ciò che inciderà davvero sulla fornitura e comunque prima dell’ordine ese
 - `verifica-planimetria-distribuzione-casa.html` — Organizza ciò che è visibile nella documentazione, ciò che manca e ciò che deve essere affidato a una verifica tecnica prima di formulare pr
 
