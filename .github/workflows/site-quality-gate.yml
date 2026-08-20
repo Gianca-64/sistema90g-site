@@ -1,19 +1,13 @@
 name: Site quality gate
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: site-quality-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: site-quality-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
