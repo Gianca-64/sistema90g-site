@@ -44,6 +44,11 @@ assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry n
 
 const consent=read('privacy-consent.js');
 assert.ok(consent.includes('/navigation-conversion.js?v=20260815a'));
+assert.ok(consent.includes('analisi-preventiva.html#richiedi'),'privacy-consent deve usare il Free Entry #richiedi');
+assert.equal(consent.includes('#percorso'),false,'privacy-consent non deve usare anchor legacy #percorso');
+for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina']){
+  assert.equal(consent.includes(obsolete),false,`privacy-consent contiene residuo servizio legacy ${obsolete}`);
+}
 assert.equal(consent.includes('progetti casa'),false,'dati strutturati non devono descrivere il vecchio perimetro casa');
 assert.equal(consent.includes('scelta-finiture-casa'),false,'privacy-consent non deve contenere il vecchio servizio finiture casa');
 console.log('SECTION D FREE ENTRY CONTRACT TEST: PASS');
