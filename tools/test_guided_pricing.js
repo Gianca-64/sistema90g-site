@@ -18,7 +18,8 @@ assert.ok(verify.includes('Verifica 90G · 127 €'),'prezzo verifica');
 
 assert.ok(intake.includes('id="richiedi"'),'sezione Free Entry #richiedi');
 assert.ok(intake.includes('service=valutazione-iniziale'),'servizio valutazione iniziale');
-assert.ok(intake.includes("L'invio non avvia alcun servizio a pagamento"),'nessun acquisto automatico');
+assert.ok(intake.includes("L'invio iniziale non avvia alcun acquisto"),'nessun acquisto automatico');
+assert.equal(intake.includes('service_price='),false,'la pagina Free Entry non deve trasmettere prezzi');
 const portalLinks=[...intake.matchAll(/https:\/\/portale\.sistema90g\.it\/portal\.html\?[^\"']+/g)].map(m=>m[0]);
 assert.ok(portalLinks.length>=7,'CTA gratuite per i ruoli');
 for(const href of portalLinks){
