@@ -1,9 +1,0 @@
-commit=b5f1b0acfa074e73a01e2e6aa092bc9481f48729
-release=success
-responsive=success
-navigation=success
-seo=success
-pricing=success
-free_entry=success
-build=success
-boundary=success
