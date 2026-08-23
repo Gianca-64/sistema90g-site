@@ -10,9 +10,11 @@ NS = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
 errors = []
 warnings = []
 
+
 def check(pattern, html, label, path):
     if not re.search(pattern, html, flags=re.I | re.S):
         errors.append(f"{path}: manca {label}")
+
 
 root = ET.parse(SITEMAP).getroot()
 urls = [el.text.strip() for el in root.findall("sm:url/sm:loc", NS) if el.text]
@@ -28,8 +30,10 @@ for url in urls:
     check(r"<meta[^>]+name=[\"']description[\"'][^>]+content=[\"'][^\"']+[\"']", html, "meta description", name)
     check(r"<link[^>]+rel=[\"']canonical[\"'][^>]+href=[\"']https://sistema90g\.it/[^\"']+[\"']", html, "canonical assoluto", name)
     check(r"<h1[^>]*>.*?</h1>", html, "H1", name)
-    if "/analisi-preventiva.html#percorso" not in html:
-        errors.append(f"{name}: manca CTA Valuta la tua cucina")
+    if "/analisi-preventiva.html#richiedi" not in html:
+        errors.append(f"{name}: manca ingresso Free Entry #richiedi")
+    if "/analisi-preventiva.html#percorso" in html:
+        errors.append(f"{name}: contiene CTA legacy #percorso")
     if "application/ld+json" not in html:
         warnings.append(f"{name}: schema JSON-LD non ancora presente")
 
