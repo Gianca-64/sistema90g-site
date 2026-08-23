@@ -1,7 +1,7 @@
 === RELEASE ===
 Public sitemap pages checked: 80
-Issues: 1
- - ('frigorifero-cucina-vicino-parete.html', 'image missing intrinsic dimensions', '/images/frigo-apertura-insufficiente.svg')
+Issues: 0
+RELEASE AUDIT: PASS
 
 === RESPONSIVE ===
 HTML checked: 137
@@ -14,15 +14,11 @@ RESPONSIVE CONTRACT TEST: PASS
   "public_html_pages": 80,
   "sitemap_missing_files": 0,
   "missing_internal_targets": 0,
-  "indexable_orphans": 3,
+  "indexable_orphans": 0,
   "generic_cta_labels": 0,
   "duplicate_ids": 0,
   "legacy_anchors": 0
 }
-Indexable public orphans:
- - controllo-progetto-cucina.html
- - esempio-fascicolo-cucina.html
- - restyling-cucina-esistente.html
 
 === SEO ===
 AVVISI SEO:
