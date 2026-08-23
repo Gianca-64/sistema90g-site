@@ -1,0 +1,116 @@
+=== RELEASE ===
+Public sitemap pages checked: 80
+Issues: 27
+ - ('pareti-fuori-squadra-cucina.html', 'legacy public term', '#livelli-seconda-opinione')
+ - ('prima-di-firmare-ordine-cucina.html', 'image missing intrinsic dimensions', '/images/hero-preventivo-90g-2026.jpg')
+ - ('voci-escluse-preventivo-cucina.html', 'legacy public term', '#percorso')
+ - ('sconto-cucina-valore-reale.html', 'legacy public term', '#percorso')
+ - ('quando-verifica-indipendente-cucina.html', 'legacy public term', '#percorso')
+ - ('frigorifero-cucina-vicino-parete.html', 'image missing intrinsic dimensions', '/images/frigo-apertura-insufficiente.svg')
+ - ('cucina-piccola-come-progettarla.html', 'image missing intrinsic dimensions', '/images/caso-cucina-piccola-tre-lati.jpg')
+ - ('cucina-open-space-tavolo-passaggi.html', 'image missing intrinsic dimensions', '/images/hero-open-space-90g.jpg')
+ - ('tavolo-vicino-cucina-spazi-sedute.html', 'image missing intrinsic dimensions', '/images/hero-open-space-90g.jpg')
+ - ('penisola-cucina-distanze-passaggi.html', 'image missing intrinsic dimensions', '/images/caso-isola-passaggi-cucina.jpg')
+ - ('lavastoviglie-cucina-aperture-passaggi.html', 'image missing intrinsic dimensions', '/images/caso-lavastoviglie-passaggio-cucina.jpg')
+ - ('elettrodomestici-incasso-misure-cucina.html', 'missing navigation')
+ - ('elettrodomestici-incasso-misure-cucina.html', 'missing footer')
+ - ('elettrodomestici-incasso-misure-cucina.html', 'legacy public term', '#percorso')
+ - ('prese-impianti-cucina.html', 'image missing intrinsic dimensions', '/images/hero-planimetria-90g-2026.jpg')
+ - ('top-cucina-materiali-guida.html', 'missing navigation')
+ - ('top-cucina-materiali-guida.html', 'missing footer')
+ - ('top-cucina-materiali-guida.html', 'legacy public term', '#percorso')
+ - ('top-cucina-materiali-guida.html', 'image missing intrinsic dimensions', '/images/17_SERVIZI_FINITURE.jpg')
+ - ('ante-cucina-materiali-manutenzione.html', 'image missing intrinsic dimensions', '/images/17_SERVIZI_FINITURE.jpg')
+ - ('finiture-opache-lucide-cucina.html', 'image missing intrinsic dimensions', '/images/17_SERVIZI_FINITURE.jpg')
+ - ('cucina-chiara-scura-luce.html', 'image missing intrinsic dimensions', '/images/17_SERVIZI_FINITURE.jpg')
+ - ('abbinare-cucina-pavimento.html', 'image missing intrinsic dimensions', '/images/17_SERVIZI_FINITURE.jpg')
+ - ('lavello-sotto-finestra-cucina.html', 'image missing intrinsic dimensions', '/images/caso-lavello-sotto-finestra-aperture.jpg')
+ - ('profondita-cucina-75-cm.html', 'image missing intrinsic dimensions', '/images/caso-cucina-profondita-75-angolo.jpg')
+ - ('cucina-ad-angolo-guida.html', 'image missing intrinsic dimensions', '/images/caso-cucina-profondita-75-angolo.jpg')
+ - ('innovazioni.html', 'legacy public term', '#percorso')
+
+=== RESPONSIVE ===
+HTML checked: 137
+Visual pages checked: 118
+Issues: 16
+ - acquisto-assistito-cucina.html: versione CSS non aggiornata
+ - acquisto-assistito-cucina.html: versione CSS incoerente ['20260817b']
+ - consulenza-90g.html: versione CSS non aggiornata
+ - consulenza-90g.html: versione CSS incoerente ['20260817b']
+ - index.html: versione CSS non aggiornata
+ - index.html: versione CSS incoerente ['20260817b']
+ - progetto-cucina-sistema90g.html: versione CSS non aggiornata
+ - progetto-cucina-sistema90g.html: versione CSS incoerente ['20260817b']
+ - scelta-finiture-cucina.html: versione CSS non aggiornata
+ - scelta-finiture-cucina.html: versione CSS incoerente ['20260817b']
+ - seconda-opinione-cucina.html: versione CSS non aggiornata
+ - seconda-opinione-cucina.html: versione CSS incoerente ['20260817b']
+ - servizi.html: versione CSS non aggiornata
+ - servizi.html: versione CSS incoerente ['20260817b']
+ - verifica-90g.html: versione CSS non aggiornata
+ - verifica-90g.html: versione CSS incoerente ['20260817b']
+
+=== NAVIGATION ===
+{
+  "public_html_pages": 80,
+  "sitemap_missing_files": 0,
+  "missing_internal_targets": 0,
+  "indexable_orphans": 3,
+  "generic_cta_labels": 0,
+  "duplicate_ids": 0,
+  "legacy_anchors": 7
+}
+Indexable public orphans:
+ - controllo-progetto-cucina.html
+ - esempio-fascicolo-cucina.html
+ - restyling-cucina-esistente.html
+Legacy anchors:
+ - elettrodomestici-incasso-misure-cucina.html
+ - innovazioni.html
+ - pareti-fuori-squadra-cucina.html
+ - quando-verifica-indipendente-cucina.html
+ - sconto-cucina-valore-reale.html
+ - top-cucina-materiali-guida.html
+ - voci-escluse-preventivo-cucina.html
+
+=== SEO ===
+AVVISI SEO:
+- montaggio-allacciamenti-cucina-cosa-chiarire.html: schema JSON-LD non ancora presente
+- voci-escluse-preventivo-cucina.html: schema JSON-LD non ancora presente
+- cucina-piccola-come-progettarla.html: schema JSON-LD non ancora presente
+- tavolo-vicino-cucina-spazi-sedute.html: schema JSON-LD non ancora presente
+- lavastoviglie-cucina-aperture-passaggi.html: schema JSON-LD non ancora presente
+- colonna-forno-microonde-cucina.html: schema JSON-LD non ancora presente
+- elettrodomestici-incasso-misure-cucina.html: schema JSON-LD non ancora presente
+- prese-impianti-cucina.html: schema JSON-LD non ancora presente
+- altezza-pensili-spazio-top-cucina.html: schema JSON-LD non ancora presente
+- top-cucina-materiali-guida.html: schema JSON-LD non ancora presente
+- ante-cucina-materiali-manutenzione.html: schema JSON-LD non ancora presente
+- finiture-opache-lucide-cucina.html: schema JSON-LD non ancora presente
+- cucina-chiara-scura-luce.html: schema JSON-LD non ancora presente
+- abbinare-cucina-pavimento.html: schema JSON-LD non ancora presente
+- lavello-sotto-finestra-cucina.html: schema JSON-LD non ancora presente
+- profondita-cucina-75-cm.html: schema JSON-LD non ancora presente
+- cucina-ad-angolo-guida.html: schema JSON-LD non ancora presente
+ERRORI SEO:
+- voci-escluse-preventivo-cucina.html: manca ingresso Free Entry #richiedi
+- voci-escluse-preventivo-cucina.html: contiene CTA legacy #percorso
+- sconto-cucina-valore-reale.html: manca ingresso Free Entry #richiedi
+- sconto-cucina-valore-reale.html: contiene CTA legacy #percorso
+- quando-verifica-indipendente-cucina.html: manca ingresso Free Entry #richiedi
+- quando-verifica-indipendente-cucina.html: contiene CTA legacy #percorso
+- elettrodomestici-incasso-misure-cucina.html: manca ingresso Free Entry #richiedi
+- elettrodomestici-incasso-misure-cucina.html: contiene CTA legacy #percorso
+- top-cucina-materiali-guida.html: manca ingresso Free Entry #richiedi
+- top-cucina-materiali-guida.html: contiene CTA legacy #percorso
+
+=== PRICING ===
+FREE ENTRY OFFER CONTRACT TEST: PASS
+
+=== FREE ENTRY ===
+SECTION D FREE ENTRY CONTRACT TEST: PASS
+
+=== BUILD ===
+Cloudflare Pages dist pronta: 327 file pubblici
+
+=== BOUNDARY ===
