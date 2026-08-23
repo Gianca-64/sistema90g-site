@@ -71,6 +71,15 @@ def image_size(path: Path):
         return struct.unpack('>II', data[16:24])
     if suffix in {'.jpg', '.jpeg'}:
         return jpeg_size(data)
+    if suffix == '.svg':
+        text = data.decode('utf-8', errors='ignore')[:4096]
+        width = re.search(r'\bwidth=["\']([0-9.]+)', text, re.I)
+        height = re.search(r'\bheight=["\']([0-9.]+)', text, re.I)
+        if width and height:
+            return int(float(width.group(1))), int(float(height.group(1)))
+        viewbox = re.search(r'\bviewBox=["\']\s*[-0-9.]+\s+[-0-9.]+\s+([0-9.]+)\s+([0-9.]+)', text, re.I)
+        if viewbox:
+            return int(float(viewbox.group(1))), int(float(viewbox.group(2)))
     return None
 
 
@@ -100,6 +109,20 @@ def add_dimensions(raw: str, page: Path):
     return re.sub(r'<img\b[^>]*>', repl, raw, flags=re.I)
 
 
+def add_orphan_links(path: Path, raw: str):
+    name = path.name
+    if name == 'rivenditori-cucine.html' and '/controllo-progetto-cucina.html' not in raw:
+        needle = '<p>Una lettura specialistica di un progetto già sviluppato, concentrata sul perimetro concordato e sulle informazioni che possono richiedere chiarimento prima di proseguire con il cliente.</p>'
+        raw = raw.replace(needle, needle + '<p><a href="/controllo-progetto-cucina.html">Vedi il dettaglio della verifica professionale →</a></p>', 1)
+    elif name == 'seconda-opinione-cucina.html' and '/esempio-fascicolo-cucina.html' not in raw:
+        needle = '<p>Non serve preparare materiale nuovo prima di contattarci. Controlliamo prima se ciò che hai permette una verifica utile.</p>'
+        raw = raw.replace(needle, needle + '<p><a href="/esempio-fascicolo-cucina.html">Guarda un esempio di fascicolo di verifica →</a></p>', 1)
+    elif name == 'rinnovare-cucina-senza-cambiarla.html' and '/restyling-cucina-esistente.html' not in raw:
+        needle = '<p>È utile definire una direzione: che cosa conservare, che cosa cambiare, quali elementi devono dialogare tra loro e quali compatibilità devono essere controllate dal fornitore. Se non sai se il tuo caso richiede una decisione circoscritta o un vero progetto, puoi sottoporlo prima gratuitamente a Sistema 90G.</p>'
+        raw = raw.replace(needle, needle + '<p><a href="/restyling-cucina-esistente.html">Come viene inquadrato un intervento di restyling →</a></p>', 1)
+    return raw
+
+
 def fix_page(path: Path):
     raw = path.read_text('utf-8', errors='replace')
     original = raw
@@ -107,6 +130,7 @@ def fix_page(path: Path):
     raw = raw.replace('/analisi-preventiva.html#percorso', '/analisi-preventiva.html#richiedi')
     raw = raw.replace('#livelli-seconda-opinione', '#richiedi')
     raw = add_dimensions(raw, path)
+    raw = add_orphan_links(path, raw)
     if 'class="s90g-nav"' not in raw:
         raw = re.sub(r'(<body\b[^>]*>)', r'\1' + HEADER, raw, count=1, flags=re.I)
     if 'class="s90g-footer"' not in raw:
