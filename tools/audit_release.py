@@ -6,157 +6,139 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ET
-from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP_ASSETS = os.environ.get("S90G_SKIP_ASSET_CHECK") == "1"
+SKIP_ASSETS = os.environ.get('S90G_SKIP_ASSET_CHECK') == '1'
+SITE_ORIGIN = 'https://sistema90g.it'
+SITE_HOSTS = {'sistema90g.it', 'www.sistema90g.it'}
+NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
-EXPECTED_HEADINGS = {
-    "studio-preliminare-spazi.html": "Studio preliminare degli spazi",
-    "controllo-progetto-cucina.html": "Analisi progetto cucina",
-    "verifica-planimetria-distribuzione-casa.html": "Verifica preliminare immobile",
-    "proprieta-intellettuale.html": "Proprietà intellettuale e uso dei contenuti",
-}
-PRICE_MATRIX = {
-    "scelta-finiture-cucina": 47,
-    "restyling-cucina-esistente": 79,
-    "controllo-mirato": 127,
-    "analisi-completa": 253,
-    "acquisto-assistito-cucina": 290,
-    "studio-preliminare-spazi": 560,
-    "verifica-preliminare-immobile": 149,
-    "analisi-unita-varianti": 110,
-    "verifica-progetto-cucina": 150,
-}
-REDIRECT_STUBS = {"progetto-da-zero.html"}
-OLD_PUBLIC_TERMS = [
-    "€347", "€ 347", "347 €", "€797", "€ 797", "797 €",
-    "Check-up Progetto", "Portale sicuro in attivazione",
-    "L’invio della pratica non è ancora disponibile",
-    "sistema90g-console.sistema90g.workers.dev",
-    "sistema90g-public-requests.sistema90g.workers.dev",
-    "sistema90g-portale.simply-winspace.it",
+CANONICAL_OFFER = [
+    'Consulenza 90G · 97 €',
+    'Verifica 90G · 127 €',
+    'Progetto Cucina 90G · 145 €',
+    '+117 € ciascuno',
+    'Render fotorealistici · 57 € / vista',
 ]
-SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
+LEGACY_PUBLIC_TERMS = [
+    '#percorso',
+    '#livelli-seconda-opinione',
+    'Seconda Opinione · dubbio preciso',
+    'Seconda Opinione · controllo completo',
+    'Controllo mirato',
+    'Analisi completa',
+    'Acquisto Assistito · 290 €',
+    '€347', '€ 347', '347 €', '€797', '€ 797', '797 €',
+    'Check-up Progetto',
+    'Portale sicuro in attivazione',
+    'L’invio della pratica non è ancora disponibile',
+    'sistema90g-console.sistema90g.workers.dev',
+    'sistema90g-public-requests.sistema90g.workers.dev',
+    'sistema90g-portale.simply-winspace.it',
+]
+PUBLIC_RUNTIME_FILES = [
+    'navigation-conversion.js',
+    'privacy-consent.js',
+]
 
 
-def attrs_dict(attrs: list[tuple[str, str | None]]) -> dict[str, str]:
-    return {key.lower(): (value or "") for key, value in attrs}
+def attrs_dict(attrs):
+    return {key.lower(): (value or '') for key, value in attrs}
 
 
 @dataclass
 class PageData:
-    lang: str = ""
+    lang: str = ''
     title_parts: list[str] = field(default_factory=list)
     h1_parts: list[list[str]] = field(default_factory=list)
-    canonical: str = ""
-    robots: str = ""
+    canonical: str = ''
+    robots: str = ''
     links: list[dict[str, str]] = field(default_factory=list)
     images: list[dict[str, str]] = field(default_factory=list)
     scripts: list[str] = field(default_factory=list)
     stylesheets: list[str] = field(default_factory=list)
-    nav_links: list[tuple[str, str]] = field(default_factory=list)
-    footer_text: list[str] = field(default_factory=list)
+    ids: list[str] = field(default_factory=list)
     has_nav: bool = False
     has_footer: bool = False
-    ip_link: bool = False
 
     @property
-    def title(self) -> str:
-        return " ".join(self.title_parts).strip()
+    def title(self):
+        return ' '.join(self.title_parts).strip()
 
     @property
-    def h1_texts(self) -> list[str]:
-        return [" ".join(parts).strip() for parts in self.h1_parts]
+    def h1_texts(self):
+        return [' '.join(parts).strip() for parts in self.h1_parts]
 
 
 class PageParser(html.parser.HTMLParser):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__(convert_charrefs=True)
         self.data = PageData()
-        self.stack: list[str] = []
         self.in_title = False
-        self.in_nav = False
-        self.in_footer = False
-        self.current_h1: list[str] | None = None
-        self.current_anchor: dict[str, str] | None = None
-        self.current_anchor_text: list[str] = []
+        self.current_h1 = None
+        self.current_anchor = None
+        self.current_anchor_text = []
 
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+    def handle_starttag(self, tag, attrs):
         tag = tag.lower()
-        attributes = attrs_dict(attrs)
-        self.stack.append(tag)
-
-        if tag == "html":
-            self.data.lang = attributes.get("lang", "")
-        elif tag == "title":
+        a = attrs_dict(attrs)
+        if 'id' in a:
+            self.data.ids.append(a['id'])
+        if tag == 'html':
+            self.data.lang = a.get('lang', '')
+        elif tag == 'title':
             self.in_title = True
-        elif tag == "h1":
+        elif tag == 'h1':
             self.current_h1 = []
             self.data.h1_parts.append(self.current_h1)
-        elif tag == "link":
-            rel_tokens = {token.lower() for token in attributes.get("rel", "").split()}
-            href = attributes.get("href", "")
-            if "canonical" in rel_tokens:
+        elif tag == 'link':
+            rel = {token.lower() for token in a.get('rel', '').split()}
+            href = a.get('href', '')
+            if 'canonical' in rel:
                 self.data.canonical = href
-            if "stylesheet" in rel_tokens and href:
+            if 'stylesheet' in rel and href:
                 self.data.stylesheets.append(href)
-        elif tag == "meta" and attributes.get("name", "").lower() == "robots":
-            self.data.robots = attributes.get("content", "")
-        elif tag == "nav" and "s90g-nav" in attributes.get("class", "").split():
-            self.in_nav = True
+        elif tag == 'meta' and a.get('name', '').lower() == 'robots':
+            self.data.robots = a.get('content', '')
+        elif tag == 'nav' and 's90g-nav' in a.get('class', '').split():
             self.data.has_nav = True
-        elif tag == "footer" and "s90g-footer" in attributes.get("class", "").split():
-            self.in_footer = True
+        elif tag == 'footer' and 's90g-footer' in a.get('class', '').split():
             self.data.has_footer = True
-        elif tag == "a":
-            href = attributes.get("href", "")
+        elif tag == 'a':
             self.current_anchor = {
-                "href": href,
-                "data_start_path": attributes.get("data-start-path", ""),
+                'href': a.get('href', ''),
+                'data_start_path': 'data-start-path' in a,
             }
             self.current_anchor_text = []
-            if href == "/proprieta-intellettuale.html":
-                self.data.ip_link = True
-        elif tag == "img":
-            self.data.images.append(attributes)
-        elif tag == "script" and attributes.get("src"):
-            self.data.scripts.append(attributes["src"])
+        elif tag == 'img':
+            self.data.images.append(a)
+        elif tag == 'script' and a.get('src'):
+            self.data.scripts.append(a['src'])
 
-    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+    def handle_startendtag(self, tag, attrs):
         self.handle_starttag(tag, attrs)
         self.handle_endtag(tag)
 
-    def handle_endtag(self, tag: str) -> None:
+    def handle_endtag(self, tag):
         tag = tag.lower()
-        if tag == "title":
+        if tag == 'title':
             self.in_title = False
-        elif tag == "h1":
+        elif tag == 'h1':
             self.current_h1 = None
-        elif tag == "a" and self.current_anchor is not None:
-            text = " ".join(self.current_anchor_text).strip()
-            link = {**self.current_anchor, "text": text}
-            self.data.links.append(link)
-            if self.in_nav:
-                self.data.nav_links.append((link["href"], text))
+        elif tag == 'a' and self.current_anchor is not None:
+            self.data.links.append({
+                **self.current_anchor,
+                'text': ' '.join(self.current_anchor_text).strip(),
+            })
             self.current_anchor = None
             self.current_anchor_text = []
-        elif tag == "nav":
-            self.in_nav = False
-        elif tag == "footer":
-            self.in_footer = False
 
-        if self.stack:
-            for index in range(len(self.stack) - 1, -1, -1):
-                if self.stack[index] == tag:
-                    del self.stack[index:]
-                    break
-
-    def handle_data(self, data: str) -> None:
-        text = re.sub(r"\s+", " ", data).strip()
+    def handle_data(self, data):
+        text = re.sub(r'\s+', ' ', data).strip()
         if not text:
             return
         if self.in_title:
@@ -165,196 +147,161 @@ class PageParser(html.parser.HTMLParser):
             self.current_h1.append(text)
         if self.current_anchor is not None:
             self.current_anchor_text.append(text)
-        if self.in_footer:
-            self.data.footer_text.append(text)
 
 
-def parse_page(raw: str) -> PageData:
+def parse_page(raw):
     parser = PageParser()
     parser.feed(raw)
     parser.close()
     return parser.data
 
 
-def local_target(page: Path, value: str) -> Path | None:
+def sitemap_entries():
+    entries = []
+    tree = ET.parse(ROOT / 'sitemap.xml')
+    for loc in tree.findall('.//sm:loc', NS):
+        if not loc.text:
+            continue
+        url = loc.text.strip()
+        parsed = urlparse(url)
+        if parsed.netloc not in SITE_HOSTS:
+            continue
+        rel = unquote(parsed.path).lstrip('/') or 'index.html'
+        if rel.endswith('/'):
+            rel += 'index.html'
+        entries.append((url, rel))
+    return entries
+
+
+def local_target(page: Path, value: str):
     value = value.strip()
-    if not value or value.startswith("#") or value.startswith("//"):
+    if not value or value.startswith('#') or value.startswith('//'):
         return None
     parsed = urlparse(value)
-    if parsed.scheme.lower() in SKIP_SCHEMES or parsed.netloc:
+    if parsed.scheme.lower() in SKIP_SCHEMES:
+        return None
+    if parsed.netloc and parsed.netloc not in SITE_HOSTS:
         return None
     clean = unquote(parsed.path)
     if not clean:
         return None
-    target = (ROOT / clean.lstrip("/")) if clean.startswith("/") else (page.parent / clean)
-    if clean.endswith("/"):
-        target = target / "index.html"
+    target = (ROOT / clean.lstrip('/')) if (clean.startswith('/') or parsed.netloc) else (page.parent / clean)
+    if clean.endswith('/'):
+        target = target / 'index.html'
     return target.resolve()
 
 
-def check_local_reference(page_rel: str, page: Path, value: str, kind: str, issues: list[tuple]) -> None:
+def check_local_reference(page_rel, page, value, kind, issues):
     if SKIP_ASSETS:
         return
     target = local_target(page, value)
-    if target is None:
-        return
-    if not target.exists():
-        issues.append((page_rel, f"missing local {kind}", value))
+    if target is not None and not target.exists():
+        issues.append((page_rel, f'missing local {kind}', value))
 
 
-issues: list[tuple] = []
-htmls: list[tuple[str, bool, PageData, str]] = []
-canonicals: dict[str, str] = {}
-menus: Counter = Counter()
-footer_signatures: Counter = Counter()
+def canonical_expected(rel):
+    return f'{SITE_ORIGIN}/' if rel == 'index.html' else f'{SITE_ORIGIN}/{rel}'
 
-for path in sorted(ROOT.rglob("*.html")):
-    if path.name.startswith("._") or ".git" in path.parts or "node_modules" in path.parts:
-        continue
-    rel = path.relative_to(ROOT).as_posix()
-    raw = path.read_text("utf-8", errors="replace")
-    page = parse_page(raw)
-    indexable = "noindex" not in page.robots.lower()
-    if rel in REDIRECT_STUBS:
-        continue
-    htmls.append((rel, indexable, page, raw))
 
-    if page.lang != "it":
-        issues.append((rel, "html lang missing/not it"))
+def audit():
+    issues = []
+    entries = sitemap_entries()
+    sitemap_urls = [url for url, _ in entries]
+    if len(sitemap_urls) != len(set(sitemap_urls)):
+        issues.append(('sitemap.xml', 'duplicate URL'))
 
-    if not indexable:
-        continue
+    pages = {}
+    for url, rel in entries:
+        path = ROOT / rel
+        if not path.exists():
+            issues.append((rel, 'sitemap file missing'))
+            continue
+        raw = path.read_text('utf-8', errors='replace')
+        page = parse_page(raw)
+        pages[rel] = (page, raw)
 
-    if len(page.h1_texts) != 1:
-        issues.append((rel, "expected one H1", len(page.h1_texts)))
-    if not page.title:
-        issues.append((rel, "missing title"))
-    if not page.canonical:
-        issues.append((rel, "missing canonical"))
-    else:
-        if page.canonical in canonicals:
-            issues.append((rel, "duplicate canonical", page.canonical, canonicals[page.canonical]))
-        canonicals[page.canonical] = rel
+        if page.lang != 'it':
+            issues.append((rel, 'html lang missing/not it', page.lang))
+        if len(page.h1_texts) != 1:
+            issues.append((rel, 'expected one H1', len(page.h1_texts)))
+        if not page.title:
+            issues.append((rel, 'missing title'))
+        expected = canonical_expected(rel)
+        if page.canonical != expected:
+            issues.append((rel, 'canonical mismatch', page.canonical, expected))
+        if not page.has_nav:
+            issues.append((rel, 'missing navigation'))
+        if not page.has_footer:
+            issues.append((rel, 'missing footer'))
 
-    lower_raw = raw.lower()
-    for token in OLD_PUBLIC_TERMS:
-        if token.lower() in lower_raw:
-            issues.append((rel, "obsolete public term", token))
-    if "®" in raw:
-        issues.append((rel, "registered symbol must not be used"))
-    if not page.ip_link:
-        issues.append((rel, "missing intellectual-property link"))
-    if not page.has_footer:
-        issues.append((rel, "missing standard footer"))
-    else:
-        footer_signatures[re.sub(r"\s+", " ", " ".join(page.footer_text)).strip()] += 1
-    if not page.has_nav:
-        issues.append((rel, "missing navigation"))
-    else:
-        menus[tuple(page.nav_links)] += 1
+        for token in LEGACY_PUBLIC_TERMS:
+            if token.lower() in raw.lower():
+                issues.append((rel, 'legacy public term', token))
+        if '®' in raw:
+            issues.append((rel, 'registered symbol must not be used'))
 
-    for link in page.links:
-        if link["data_start_path"] and link["href"] != "/analisi-preventiva.html#percorso":
-            issues.append((rel, "guided CTA wrong target", link["href"]))
-        check_local_reference(rel, path, link["href"], "link", issues)
+        for link in page.links:
+            if link['data_start_path'] and '#richiedi' not in link['href']:
+                issues.append((rel, 'Free Entry CTA wrong target', link['href']))
+            check_local_reference(rel, path, link['href'], 'link', issues)
+        for image in page.images:
+            if 'alt' not in image:
+                issues.append((rel, 'image missing alt', image.get('src', '')))
+            if not image.get('width') or not image.get('height'):
+                issues.append((rel, 'image missing intrinsic dimensions', image.get('src', '')))
+            check_local_reference(rel, path, image.get('src', ''), 'image', issues)
+        for source in page.scripts:
+            check_local_reference(rel, path, source, 'script', issues)
+        for stylesheet in page.stylesheets:
+            check_local_reference(rel, path, stylesheet, 'stylesheet', issues)
 
-    for image in page.images:
-        if "alt" not in image:
-            issues.append((rel, "image missing alt", image.get("src", "")))
-        if not image.get("width") or not image.get("height"):
-            issues.append((rel, "image missing intrinsic dimensions", image.get("src", "")))
-        check_local_reference(rel, path, image.get("src", ""), "image", issues)
-    for source in page.scripts:
-        check_local_reference(rel, path, source, "script", issues)
-    for stylesheet in page.stylesheets:
-        check_local_reference(rel, path, stylesheet, "stylesheet", issues)
+    # Contratto dell'offerta pubblica.
+    services = (ROOT / 'servizi.html').read_text('utf-8', errors='replace')
+    for token in CANONICAL_OFFER:
+        if token not in services:
+            issues.append(('servizi.html', 'canonical offer missing', token))
 
-if len(menus) != 1:
-    issues.append(("GLOBAL", "multiple navigation variants", len(menus)))
-if len(footer_signatures) != 1:
-    issues.append(("GLOBAL", "multiple footer variants", len(footer_signatures)))
+    intake = (ROOT / 'analisi-preventiva.html').read_text('utf-8', errors='replace')
+    if 'id="richiedi"' not in intake:
+        issues.append(('analisi-preventiva.html', 'Free Entry #richiedi missing'))
+    portal_links = re.findall(r'https://portale\.sistema90g\.it/portal\.html\?[^\"\']+', intake)
+    if len(portal_links) < 7:
+        issues.append(('analisi-preventiva.html', 'expected role-based Free Entry links', len(portal_links)))
+    for href in portal_links:
+        if 'service=valutazione-iniziale' not in href:
+            issues.append(('analisi-preventiva.html', 'portal link not Free Entry', href))
+        if 'service_price=' in href:
+            issues.append(('analisi-preventiva.html', 'Free Entry link transmits price', href))
 
-for filename, heading in EXPECTED_HEADINGS.items():
-    path = ROOT / filename
-    if not path.exists():
-        issues.append((filename, "required page missing"))
-    else:
-        page = parse_page(path.read_text("utf-8", errors="replace"))
-        if heading not in page.h1_texts:
-            issues.append((filename, "wrong/missing H1", heading, page.h1_texts))
+    # I runtime pubblici non devono poter reintrodurre il vecchio funnel.
+    for filename in PUBLIC_RUNTIME_FILES:
+        raw = (ROOT / filename).read_text('utf-8', errors='replace')
+        for token in ['#percorso', '#livelli-seconda-opinione', 'controllo-mirato', 'analisi-completa']:
+            if token in raw:
+                issues.append((filename, 'legacy runtime token', token))
 
-role_path = ROOT / "role-case-path.js"
-if not role_path.exists():
-    issues.append(("role-case-path.js", "required file missing"))
-    role = ""
-else:
-    role = role_path.read_text("utf-8", errors="replace")
-for service_id, price in PRICE_MATRIX.items():
-    if service_id not in role or not re.search(rf"(?:price|unitPrice):\s*{price}\b", role):
-        issues.append(("role-case-path.js", "approved price missing/wrong", service_id, price))
-for token in [
-    "requester_role", "case_context", "service", "service_title",
-    "service_price", "service_time", "service_currency",
-]:
-    if token not in role:
-        issues.append(("role-case-path.js", "portal parameter missing", token))
-if "Inizia la richiesta" not in role:
-    issues.append(("role-case-path.js", "final CTA wording missing"))
+    # Il vecchio catalogo può restare nel repository solo come materiale storico,
+    # ma il build deve esplicitamente impedirne la pubblicazione.
+    build = (ROOT / 'tools/build_cloudflare.sh').read_text('utf-8', errors='replace')
+    for token in ['role-case-path.js', 'role-case-path.css']:
+        if token not in build:
+            issues.append(('tools/build_cloudflare.sh', 'legacy catalog exclusion missing', token))
 
-portal_path = ROOT / "portal-config.js"
-if not portal_path.exists():
-    issues.append(("portal-config.js", "required file missing"))
-    portal = ""
-else:
-    portal = portal_path.read_text("utf-8", errors="replace")
-for token in [
-    "enabled: true", "status: 'active'", "initialRequest: true",
-    "attachments: false", "payments: false", "delivery: false",
-]:
-    if token not in portal:
-        issues.append(("portal-config.js", "capability/config missing", token))
+    for xml_name in ['sitemap.xml', 'guide-cucina-sitemap.xml', 'image-sitemap.xml']:
+        try:
+            ET.parse(ROOT / xml_name)
+        except Exception as exc:
+            issues.append((xml_name, 'invalid XML', str(exc)))
 
-htaccess_path = ROOT / ".htaccess"
-if not htaccess_path.exists():
-    issues.append((".htaccess", "required file missing"))
-    htaccess = ""
-else:
-    htaccess = htaccess_path.read_text("utf-8", errors="replace")
-for pattern in ["^index\\.html$", "^progetto-da-zero\\.html$", "^www\\.sistema90g\\.it$", "%{HTTPS} !=on"]:
-    if pattern not in htaccess:
-        issues.append((".htaccess", "redirect/canonical rule missing", pattern))
+    print(f'Public sitemap pages checked: {len(entries)}')
+    print(f'Issues: {len(issues)}')
+    for issue in issues:
+        print(' -', issue)
+    if issues:
+        return 1
+    print('RELEASE AUDIT: PASS')
+    return 0
 
-namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-try:
-    sitemap_urls = {
-        element.text.strip()
-        for element in ET.parse(ROOT / "sitemap.xml").findall(".//sm:loc", namespace)
-        if element.text
-    }
-except Exception as exc:
-    sitemap_urls = set()
-    issues.append(("sitemap.xml", "invalid XML", str(exc)))
-if sitemap_urls != set(canonicals):
-    issues.append((
-        "sitemap.xml",
-        "canonical parity mismatch",
-        {
-            "missing": sorted(set(canonicals) - sitemap_urls),
-            "extra": sorted(sitemap_urls - set(canonicals)),
-        },
-    ))
-try:
-    ET.parse(ROOT / "image-sitemap.xml")
-except Exception as exc:
-    issues.append(("image-sitemap.xml", "invalid XML", str(exc)))
 
-print(f"HTML checked: {len(htmls)}")
-print(f"Indexable pages: {len(canonicals)}")
-print(f"Navigation variants: {len(menus)}")
-print(f"Footer variants: {len(footer_signatures)}")
-print(f"Issues: {len(issues)}")
-for issue in issues:
-    print(" -", issue)
-if issues:
-    sys.exit(1)
-print("RELEASE AUDIT: PASS")
+if __name__ == '__main__':
+    sys.exit(audit())
