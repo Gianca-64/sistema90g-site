@@ -42,26 +42,7 @@ AVVISI SEO:
 SEO guide OK: 36 pagine controllate
 
 === PRICING ===
-node:internal/assert/utils:281
-    throw err;
-    ^
-
-AssertionError [ERR_ASSERTION]: nessun acquisto automatico
-    at Object.<anonymous> (/home/runner/work/sistema90g-site/sistema90g-site/tools/test_guided_pricing.js:21:8)
-    at Module._compile (node:internal/modules/cjs/loader:1521:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
-    at Module.load (node:internal/modules/cjs/loader:1266:32)
-    at Module._load (node:internal/modules/cjs/loader:1091:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
-    at node:internal/main/run_main_module:28:49 {
-  generatedMessage: false,
-  code: 'ERR_ASSERTION',
-  actual: false,
-  expected: true,
-  operator: '=='
-}
-
-Node.js v20.20.2
+FREE ENTRY OFFER CONTRACT TEST: PASS
 
 === FREE ENTRY ===
 SECTION D FREE ENTRY CONTRACT TEST: PASS

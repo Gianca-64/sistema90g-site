@@ -1,9 +1,9 @@
-commit=302f57331ed42da820c66949cb5263235cde9970
+commit=301174f41a4346d607c56afb7ce78d79ff62357d
 release=success
 responsive=success
 navigation=success
 seo=success
-pricing=failure
+pricing=success
 free_entry=success
 build=success
 boundary=success
