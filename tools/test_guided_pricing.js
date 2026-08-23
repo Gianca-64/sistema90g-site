@@ -10,7 +10,7 @@ const intake=read('analisi-preventiva.html');
 const project=read('progetto-cucina-sistema90g.html');
 const verify=read('seconda-opinione-cucina.html');
 
-for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €','Add-on progettuali · 117 € ciascuno','Render fotorealistici · 57 € / vista']){
+for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €','+117 € ciascuno','Render fotorealistici · 57 € / vista']){
   assert.ok(services.includes(token),`offerta canonica assente: ${token}`);
 }
 assert.ok(project.includes('Progetto Cucina 90G · 145 €'),'prezzo progetto');
