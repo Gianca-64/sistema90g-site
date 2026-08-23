@@ -30,16 +30,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Audit release diagnostico
+      - name: Audit release
         id: release_audit
         shell: bash
         run: |
           set +e
           python tools/audit_release.py 2>&1 | tee audit-release.log
           status=${PIPESTATUS[0]}
-          if [ "$status" -ne 0 ]; then
-            python tools/diagnose_navigation_variants.py 2>&1 | tee -a audit-release.log
-          fi
           echo "$status" > audit-release.status
           exit 0
 
@@ -55,7 +52,7 @@ jobs:
       - name: Test prezzi e contratto portale
         run: node tools/test_guided_pricing.js
 
-      - name: Contratto sezione D
+      - name: Contratto Free Entry
         run: node tools/test_section_d_contract.js
 
       - name: Build Cloudflare Pages
@@ -70,6 +67,8 @@ jobs:
           test ! -e dist/.github
           test ! -e dist/.htaccess
           test ! -e dist/CNAME
+          test ! -e dist/role-case-path.js
+          test ! -e dist/role-case-path.css
           ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
 
       - name: Pubblica diagnostica audit
@@ -82,13 +81,13 @@ jobs:
             audit-release.status
           retention-days: 7
 
-      - name: Segnala debito storico release
+      - name: Applica esito audit release
         if: always()
         shell: bash
         run: |
           status="$(cat audit-release.status 2>/dev/null || echo 1)"
           if [ "$status" -ne 0 ]; then
-            echo "::warning::Audit release storico non ancora pulito. Consultare l'artifact site-audit-diagnostics."
-          else
-            echo "Audit release storico pulito."
+            echo "::error::Audit release non superato. Consultare l'artifact site-audit-diagnostics."
+            exit "$status"
           fi
+          echo "Audit release pulito."
