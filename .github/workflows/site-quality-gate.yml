@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Applica correzioni meccaniche residue
+        run: python tools/fix_quality_gate_residuals.py
+
       - name: Audit release
         id: release
         continue-on-error: true
@@ -187,8 +190,8 @@ jobs:
           } > .quality-gate-diagnostics.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .quality-gate-status.txt .quality-gate-diagnostics.txt
-          git diff --cached --quiet || git commit -m "ci: record temporary site quality gate diagnostics"
+          git add -A
+          git diff --cached --quiet || git commit -m "ci: apply residual fixes and record quality gate diagnostics"
           git push origin HEAD:${GITHUB_REF_NAME}
 
       - name: Applica esito quality gate
