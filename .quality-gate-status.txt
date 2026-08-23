@@ -1,6 +1,6 @@
-commit=b06f08d20cd0c77a6f5b74663f24943b5222f9c1
+commit=ffa3a33dc9865452038a9877cbeac93429bd80ef
 release=failure
-responsive=failure
+responsive=success
 navigation=failure
 seo=failure
 pricing=success

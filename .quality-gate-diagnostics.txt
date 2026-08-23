@@ -32,23 +32,8 @@ Issues: 27
 === RESPONSIVE ===
 HTML checked: 137
 Visual pages checked: 118
-Issues: 16
- - acquisto-assistito-cucina.html: versione CSS non aggiornata
- - acquisto-assistito-cucina.html: versione CSS incoerente ['20260817b']
- - consulenza-90g.html: versione CSS non aggiornata
- - consulenza-90g.html: versione CSS incoerente ['20260817b']
- - index.html: versione CSS non aggiornata
- - index.html: versione CSS incoerente ['20260817b']
- - progetto-cucina-sistema90g.html: versione CSS non aggiornata
- - progetto-cucina-sistema90g.html: versione CSS incoerente ['20260817b']
- - scelta-finiture-cucina.html: versione CSS non aggiornata
- - scelta-finiture-cucina.html: versione CSS incoerente ['20260817b']
- - seconda-opinione-cucina.html: versione CSS non aggiornata
- - seconda-opinione-cucina.html: versione CSS incoerente ['20260817b']
- - servizi.html: versione CSS non aggiornata
- - servizi.html: versione CSS incoerente ['20260817b']
- - verifica-90g.html: versione CSS non aggiornata
- - verifica-90g.html: versione CSS incoerente ['20260817b']
+Issues: 0
+RESPONSIVE CONTRACT TEST: PASS
 
 === NAVIGATION ===
 {
