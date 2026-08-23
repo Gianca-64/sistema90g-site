@@ -1,0 +1,72 @@
+=== RELEASE ===
+Public sitemap pages checked: 80
+Issues: 0
+RELEASE AUDIT: PASS
+
+=== RESPONSIVE ===
+HTML checked: 137
+Visual pages checked: 118
+Issues: 0
+RESPONSIVE CONTRACT TEST: PASS
+
+=== NAVIGATION ===
+{
+  "public_html_pages": 80,
+  "sitemap_missing_files": 0,
+  "missing_internal_targets": 0,
+  "indexable_orphans": 0,
+  "generic_cta_labels": 0,
+  "duplicate_ids": 0,
+  "legacy_anchors": 0
+}
+
+=== SEO ===
+AVVISI SEO:
+- montaggio-allacciamenti-cucina-cosa-chiarire.html: schema JSON-LD non ancora presente
+- voci-escluse-preventivo-cucina.html: schema JSON-LD non ancora presente
+- cucina-piccola-come-progettarla.html: schema JSON-LD non ancora presente
+- tavolo-vicino-cucina-spazi-sedute.html: schema JSON-LD non ancora presente
+- lavastoviglie-cucina-aperture-passaggi.html: schema JSON-LD non ancora presente
+- colonna-forno-microonde-cucina.html: schema JSON-LD non ancora presente
+- elettrodomestici-incasso-misure-cucina.html: schema JSON-LD non ancora presente
+- prese-impianti-cucina.html: schema JSON-LD non ancora presente
+- altezza-pensili-spazio-top-cucina.html: schema JSON-LD non ancora presente
+- top-cucina-materiali-guida.html: schema JSON-LD non ancora presente
+- ante-cucina-materiali-manutenzione.html: schema JSON-LD non ancora presente
+- finiture-opache-lucide-cucina.html: schema JSON-LD non ancora presente
+- cucina-chiara-scura-luce.html: schema JSON-LD non ancora presente
+- abbinare-cucina-pavimento.html: schema JSON-LD non ancora presente
+- lavello-sotto-finestra-cucina.html: schema JSON-LD non ancora presente
+- profondita-cucina-75-cm.html: schema JSON-LD non ancora presente
+- cucina-ad-angolo-guida.html: schema JSON-LD non ancora presente
+SEO guide OK: 36 pagine controllate
+
+=== PRICING ===
+node:internal/assert/utils:281
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: nessun acquisto automatico
+    at Object.<anonymous> (/home/runner/work/sistema90g-site/sistema90g-site/tools/test_guided_pricing.js:21:8)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}
+
+Node.js v20.20.2
+
+=== FREE ENTRY ===
+SECTION D FREE ENTRY CONTRACT TEST: PASS
+
+=== BUILD ===
+Cloudflare Pages dist pronta: 327 file pubblici
+
+=== BOUNDARY ===
