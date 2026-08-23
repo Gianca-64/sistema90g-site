@@ -18,6 +18,14 @@ Non trasformare ogni richiesta in una vendita. Se la cosa più utile è recupera
 
 I testi pubblici non devono presentare il Free Entry principalmente come "scelta del servizio giusto". Devono far capire che Sistema 90G guarda davvero il problema e prova ad aiutare la persona a risolverlo, mantenendo chiaro il confine tra prima valutazione gratuita e lavoro professionale completo.
 
+## Ruolo dell'AI
+
+L'AI è uno strumento di supporto interno per aumentare velocità, completezza, ordine e coerenza del lavoro. Può aiutare a leggere materiali, estrarre informazioni, confrontare dati, preparare bozze e segnalare elementi da verificare.
+
+L'AI non prende decisioni al posto di Sistema 90G e non deve essere presentata come il soggetto che risponde al cliente. Individuazione del problema rilevante, priorità, confine tra gratuito e servizio, scelta dell'approfondimento, valutazione finale e comunicazione al cliente restano sotto controllo umano.
+
+Nel sito pubblico questa struttura deve essere percepibile senza esporre processi interni: prima viene il problema della persona, poi il metodo e gli strumenti usati per lavorare bene; l'AI non è il prodotto e non è il centro del posizionamento.
+
 ## Neutralita verso marchi terzi
 
 Sistema 90G non deve costruire cluster SEO, landing page o contenuti con l'effetto principale di promuovere, rafforzare o fare pubblicita gratuita a un marchio terzo. La crescita organica deve partire dai problemi e dalle decisioni dell'utente, non dal nome del produttore.
