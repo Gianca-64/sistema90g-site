@@ -156,13 +156,14 @@ def parse_page(raw):
     return parser.data
 
 
+def xml_locs(filename):
+    tree = ET.parse(ROOT / filename)
+    return [el.text.strip() for el in tree.findall('.//sm:loc', NS) if el.text]
+
+
 def sitemap_entries():
     entries = []
-    tree = ET.parse(ROOT / 'sitemap.xml')
-    for loc in tree.findall('.//sm:loc', NS):
-        if not loc.text:
-            continue
-        url = loc.text.strip()
+    for url in xml_locs('sitemap.xml'):
         parsed = urlparse(url)
         if parsed.netloc not in SITE_HOSTS:
             continue
@@ -205,9 +206,14 @@ def canonical_expected(rel):
 
 def audit():
     issues = []
-    entries = sitemap_entries()
+    try:
+        entries = sitemap_entries()
+    except Exception as exc:
+        print(' -', ('sitemap.xml', 'invalid XML', str(exc)))
+        return 1
     sitemap_urls = [url for url, _ in entries]
-    if len(sitemap_urls) != len(set(sitemap_urls)):
+    canonical_set = set(sitemap_urls)
+    if len(sitemap_urls) != len(canonical_set):
         issues.append(('sitemap.xml', 'duplicate URL'))
 
     pages = {}
@@ -255,6 +261,17 @@ def audit():
         for stylesheet in page.stylesheets:
             check_local_reference(rel, path, stylesheet, 'stylesheet', issues)
 
+    # Le sitemap secondarie possono solo approfondire URL già canoniche.
+    for xml_name in ['guide-cucina-sitemap.xml', 'image-sitemap.xml']:
+        try:
+            urls = xml_locs(xml_name)
+        except Exception as exc:
+            issues.append((xml_name, 'invalid XML', str(exc)))
+            continue
+        extra = sorted(set(urls) - canonical_set)
+        if extra:
+            issues.append((xml_name, 'contains non-canonical/redirected URLs', extra))
+
     # Contratto dell'offerta pubblica.
     services = (ROOT / 'servizi.html').read_text('utf-8', errors='replace')
     for token in CANONICAL_OFFER:
@@ -273,6 +290,17 @@ def audit():
         if 'service_price=' in href:
             issues.append(('analisi-preventiva.html', 'Free Entry link transmits price', href))
 
+    # Configurazione pubblica del portale: allegati e consegna attivi, pagamento separato.
+    portal = (ROOT / 'portal-config.js').read_text('utf-8', errors='replace')
+    for token in ['enabled: true', "status: 'active'", 'initialRequest: true', 'attachments: true', 'payments: false', 'delivery: true']:
+        if token not in portal:
+            issues.append(('portal-config.js', 'portal capability mismatch', token))
+
+    privacy = (ROOT / 'privacy-policy.html').read_text('utf-8', errors='replace')
+    for token in ['Allegati</span><strong>Disponibili nel portale', 'Pagamento</span><strong>Fuori dal portale']:
+        if token not in privacy:
+            issues.append(('privacy-policy.html', 'privacy/portal capability mismatch', token))
+
     # I runtime pubblici non devono poter reintrodurre il vecchio funnel.
     for filename in PUBLIC_RUNTIME_FILES:
         raw = (ROOT / filename).read_text('utf-8', errors='replace')
@@ -286,12 +314,6 @@ def audit():
     for token in ['role-case-path.js', 'role-case-path.css']:
         if token not in build:
             issues.append(('tools/build_cloudflare.sh', 'legacy catalog exclusion missing', token))
-
-    for xml_name in ['sitemap.xml', 'guide-cucina-sitemap.xml', 'image-sitemap.xml']:
-        try:
-            ET.parse(ROOT / xml_name)
-        except Exception as exc:
-            issues.append((xml_name, 'invalid XML', str(exc)))
 
     print(f'Public sitemap pages checked: {len(entries)}')
     print(f'Issues: {len(issues)}')
