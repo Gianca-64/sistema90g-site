@@ -13,7 +13,7 @@ Aumentare contemporaneamente:
 
 L'audit non misura il successo dal numero di pagine pubblicate o dal traffico generico. Ogni intervento deve essere giudicato sul percorso:
 
-`query/problema reale → pagina utile → fiducia/prova → valutazione gratuita → eventuale servizio`
+`problema reale → pagina utile → fiducia/prova → valutazione gratuita → eventuale servizio`
 
 ## Vincoli
 
@@ -22,7 +22,9 @@ L'audit non misura il successo dal numero di pagine pubblicate o dal traffico ge
 - mantenere chiaro il confine tra valore gratuito e servizio professionale;
 - non inventare volumi di ricerca o dati Search Console non disponibili;
 - non creare pagine solo per occupare una parola chiave;
-- conservare gli URL storici utili quando hanno valore SEO, ma riallinearne contenuto e percorso commerciale.
+- conservare gli URL storici utili quando hanno valore SEO, ma riallinearne contenuto e percorso commerciale;
+- non costruire cluster editoriali che abbiano l'effetto principale di promuovere marchi terzi;
+- i marchi possono essere citati solo quando necessari per un caso concreto o una verifica specifica, in modo neutrale e subordinato al problema dell'utente.
 
 ---
 
@@ -30,42 +32,32 @@ L'audit non misura il successo dal numero di pagine pubblicate o dal traffico ge
 
 ## 1. Free Entry come ingresso canonico
 
-Stato: **in corso / quasi completato**.
-
 Ingresso canonico:
 
 `/analisi-preventiva.html#richiedi`
 
 La valutazione iniziale deve precedere qualunque acquisto. Sono stati riallineati pagine principali, casi reali, guide ad alta intenzione, professionisti, rivenditori e landing storiche.
 
-Residui individuati durante l'audit:
+Residui già corretti:
 
-- `_redirects`: `/richiesta.html` puntava ancora a `#percorso` → corretto;
-- `.htaccess`: stesso residuo → corretto;
-- `navigation-conversion.js`: catalogo/prezzi legacy e fallback `#percorso` → corretto;
-- `chi-e-sistema90g.html`: CTA finale legacy → corretta;
-- `metodo-sistema90g.html`: CTA finale legacy → corretta;
-- test automatici che proteggevano il catalogo precedente → riallineati al contratto Free Entry.
+- `_redirects`: `/richiesta.html` puntava a `#percorso`;
+- `.htaccess`: stesso residuo;
+- `navigation-conversion.js`: catalogo/prezzi legacy e fallback `#percorso`;
+- `chi-e-sistema90g.html`: CTA finale legacy;
+- `metodo-sistema90g.html`: CTA finale legacy;
+- test automatici che proteggevano il catalogo precedente.
 
 ## 2. Sitemap e segnali di aggiornamento
 
-Stato: **in corso**.
-
-Le pagine modificate nel ramo Free Entry devono avere `lastmod` coerente con il reale aggiornamento del 23 agosto 2026. Non aggiornare artificialmente le pagine non modificate.
-
-Prima tranche già aggiornata nella sitemap. Al termine dell'audit va eseguita una normalizzazione finale dei `lastmod` per tutte e sole le pagine effettivamente toccate.
+Le pagine realmente modificate nel ramo devono avere `lastmod` coerente con l'aggiornamento del 23 agosto 2026. Non aggiornare artificialmente le pagine non modificate.
 
 ## 3. URL con `.html` e URL senza estensione
 
-Stato: **da verificare prima del deploy**.
+Le canonical dichiarate nelle pagine esaminate usano URL `.html`. I risultati pubblici mostrano anche varianti senza `.html`.
 
-Le canonical dichiarate nelle pagine esaminate usano URL `.html`. I risultati pubblici mostrano però anche varianti senza `.html`.
-
-Prima di introdurre redirect globali è necessario verificare il comportamento reale di Cloudflare in produzione, per evitare loop o redirect incompatibili con la piattaforma. Obiettivo finale: una sola URL indicizzabile per contenuto, canonical coerente e nessun segnale contraddittorio.
+Prima di introdurre redirect globali è necessario verificare il comportamento reale di Cloudflare in produzione, per evitare loop o redirect incompatibili. Obiettivo finale: una sola URL indicizzabile per contenuto, canonical coerente e nessun segnale contraddittorio.
 
 ## 4. Quality gate
-
-Stato: **non ancora dichiarato verde**.
 
 Il ramo non va integrato o pubblicato fino all'esecuzione reale del quality gate completo. Le verifiche statiche e i contratti automatici sono stati riallineati, ma il workflow deve ancora essere eseguito nel contesto GitHub/CI disponibile.
 
@@ -82,7 +74,7 @@ Esempi:
 - preventivo → `Sottoponi gratuitamente il preventivo`;
 - isola/passaggi → `Sottoponi gratuitamente il progetto`;
 - elettrodomestico → invio di progetto, modello e scheda tecnica;
-- materiali/finiture → CTA più discreta, perché la pagina è anche informativa;
+- materiali/finiture → CTA più discreta;
 - caso reale → `Hai un problema simile?`.
 
 ## Pagine già riallineate
@@ -106,73 +98,60 @@ Esempi:
 - sostituzione elettrodomestici;
 - pagine esempio/prova;
 - Metodo 90G;
-- Chi sono.
-
-## Da controllare nel giro finale
-
-- hub `progettare-cucina-guide.html`;
+- Chi sono;
+- hub progettazione;
 - hub elettrodomestici/impianti;
 - hub materiali/finiture;
-- pagine progettazione create il 18 agosto non ancora toccate dal Free Entry;
-- pagine micro-problema del 14 agosto con CTA potenzialmente generiche.
+- hub preventivo/acquisto;
+- varie guide tecniche che erano content island.
 
 ---
 
-# P1 — Matrice iniziale delle opportunità SEO
+# P1 — Matrice opportunità SEO brand-neutral
 
-Questa matrice ordina le opportunità in base a **intenzione commerciale**, **pertinenza Sistema 90G**, **copertura già esistente** e **capacità di generare una valutazione gratuita**. Non rappresenta volumi di ricerca: questi dovranno essere confermati con Search Console o altri dati reali quando disponibili.
+La matrice ordina le opportunità in base a **intenzione commerciale**, **pertinenza Sistema 90G**, **copertura già esistente** e **capacità di generare una valutazione gratuita**. Non rappresenta volumi di ricerca.
 
-| Cluster | Intento | Copertura attuale | Azione | Priorità |
+| Cluster/problema | Intento | Copertura attuale | Azione | Priorità |
 |---|---|---|---|---|
 | progetto cucina prima dell'ordine | molto alto | forte | consolidare internal linking + Free Entry | P1 |
+| progetto creato con planner online | molto alto | nuovo | pagina neutrale + collegamenti a misure/aperture/rilievo | P1 |
 | preventivo cucina / confronto preventivi | molto alto | forte | consolidare cluster + casi reali | P1 |
 | misure, passaggi, aperture | alto | forte | collegare guide ↔ casi ↔ valutazione | P1 |
 | isola / penisola / open space | alto | forte | rafforzare casi e CTA contestuali | P1 |
 | rilievo misure / prima di firmare | molto alto | presente | collegamento forte alla valutazione | P1 |
 | elettrodomestici da incasso / compatibilità | alto | forte | ampliare solo su problemi reali | P1 |
-| IKEA / METOD / planner IKEA | molto alto | assente | creare cluster iniziale utile e non promozionale | P1 |
-| ENHET | medio-alto | assente | valutare contenuto comparativo/compatibilità | P1/P2 |
+| elettrodomestici acquistati separatamente | alto | presente | rafforzare compatibilità, responsabilità e montaggio | P1 |
 | montaggio / posa / allacciamenti | alto quando nasce un problema | presente | audit conversione e collegamenti | P1 |
+| progetto modificato dopo il rilievo | molto alto | parziale | valutare pagina/FAQ dedicata se supportata da casi reali | P1 |
+| differenza tra progetto digitale e ambiente reale | alto | nuovo/parziale | presidiare senza citare marchi | P1 |
 | top / materiali / finiture | medio-alto | forte | CTA discreta + Consulenza 90G | P2 |
 | cucina esistente / restyling | medio-alto | presente | consolidare Consulenza vs Progetto | P2 |
 | query di sola ispirazione estetica | medio-basso | presente | non inseguire traffico generico | P3 |
 
 ---
 
-# Primo cluster nuovo consigliato — IKEA / METOD / ENHET
+# Regola brand-neutral
 
-## Perché
+La ricerca operativa può continuare a intercettare richieste contenenti nomi di marchi, perché il problema dell'utente può essere pertinente a Sistema 90G.
 
-Le richieste su IKEA sono pertinenti quando riguardano una decisione reale sulla cucina e possono essere trattate indipendentemente dal marchio. Il sito oggi non presidia in modo specifico questo gruppo di problemi.
+Il sito pubblico segue però una logica diversa:
 
-## Non creare
+`problema dell'utente → criterio indipendente → eventuale valutazione gratuita`
 
-Una pagina generica `cucine IKEA` costruita solo per intercettare il marchio.
+Non:
 
-## Creare progressivamente solo se supportato da problemi reali
+`marchio → cluster di pagine sul marchio → traffico`
 
-1. **Controllare un progetto cucina IKEA prima dell'ordine**
-   - planner/progetto già esistente;
-   - passaggi e aperture;
-   - misure da verificare;
-   - cosa deve confermare IKEA/rivenditore/installatore;
-   - CTA: valutazione gratuita del caso.
+Esempi di contenuti ammessi:
 
-2. **METOD: progetto, misure e compatibilità da controllare**
-   - modularità come dato del produttore da non inventare;
-   - relazione tra progetto, vano, pareti, aperture ed elettrodomestici;
-   - rimando alle fonti IKEA per dati di prodotto variabili.
+- controllare un progetto cucina creato con un planner online;
+- verificare un progetto prima dell'ordine;
+- capire se un elettrodomestico acquistato separatamente è compatibile con il progetto;
+- capire cosa cambia quando il progetto viene modificato dopo il rilievo;
+- distinguere misure nominali, misure reali e ingombri di apertura;
+- verificare una cucina modulare rispetto a pareti, passaggi e vincoli reali.
 
-3. **Planner IKEA: cosa verificare prima di considerare il progetto definitivo**
-   - distinzione tra rappresentazione del planner e rilievo reale;
-   - interferenze, passaggi, aperture, impianti e fattibilità finale;
-   - niente sostituzione del controllo IKEA/installatore.
-
-4. **ENHET o METOD: quale sistema ha senso per il caso reale**
-   - solo dopo verifica delle fonti aggiornate;
-   - evitare confronti basati su caratteristiche non confermate.
-
-Il cluster deve essere costruito con fonti ufficiali aggiornate per dimensioni, compatibilità e dati di prodotto.
+I nomi commerciali possono comparire solo quando indispensabili per un caso specifico e senza trasformare il sito in una fonte promozionale del produttore.
 
 ---
 
@@ -235,14 +214,14 @@ Non ottimizzare per `sessioni` isolate. Ottimizzare progressivamente per:
 
 ---
 
-# Ordine operativo
+# Ordine operativo aggiornato
 
 1. chiudere residui P0 e quality gate;
-2. pubblicare il ramo Free Entry solo dopo gate verde;
-3. verificare canonical/redirect e indicizzazione reale post-deploy;
-4. richiedere/accelerare nuova scansione delle pagine prioritarie attraverso gli strumenti Google disponibili;
-5. chiudere audit conversione degli hub ancora non riallineati;
-6. creare il primo contenuto IKEA ad alta intenzione solo con fonti ufficiali aggiornate;
-7. rafforzare internal linking dei cluster esistenti;
+2. completare bonifica content island e legacy CTA;
+3. rafforzare internal linking dei cluster esistenti;
+4. sviluppare solo gap brand-neutral ad alta intenzione;
+5. pubblicare il ramo Free Entry solo dopo gate verde;
+6. verificare canonical/redirect e indicizzazione reale post-deploy;
+7. richiedere/accelerare nuova scansione delle pagine prioritarie attraverso gli strumenti Google disponibili;
 8. misurare richieste per landing e non solo traffico totale;
 9. espandere i contenuti solo sulla base di query e problemi reali osservati.
