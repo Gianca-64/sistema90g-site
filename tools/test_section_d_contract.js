@@ -36,6 +36,12 @@ assert.ok(intake.includes('id="richiedi"'),'Free Entry #richiedi');
 assert.ok(intake.includes('service=valutazione-iniziale'),'valutazione iniziale');
 assert.equal(intake.includes('service_price='),false,'Free Entry senza prezzi nel portale');
 assert.equal(intake.includes('#percorso'),false,'Free Entry non deve usare anchor legacy');
+for(const principle of [
+  'Prima del servizio viene il problema da risolvere.',
+  'Non una semplice indicazione commerciale: una prima lettura del problema.',
+  'A volte non serve acquistare nulla.',
+  'Ti diciamo cosa può aiutarti a risolverlo'
+]) assert.ok(intake.includes(principle),`principio Free Entry assente: ${principle}`);
 for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €']){
   assert.ok(services.includes(token),`prezzo canonico assente da servizi: ${token}`);
 }
