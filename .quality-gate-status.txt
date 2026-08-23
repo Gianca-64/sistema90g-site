@@ -1,8 +1,8 @@
-commit=ffa3a33dc9865452038a9877cbeac93429bd80ef
+commit=7996fa84886638fc347eed40e37f3f2852610dbb
 release=failure
 responsive=success
 navigation=failure
-seo=failure
+seo=success
 pricing=success
 free_entry=success
 build=success

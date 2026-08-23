@@ -1,0 +1,26 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Il bridge del consenso deve poter essere incorporato esclusivamente dal
+# portale pubblico. Rimuove X-Frame-Options ereditato e usa CSP frame-ancestors
+# per mantenere il resto del sito protetto da embedding cross-origin.
+/consent-bridge.html
+  ! X-Frame-Options
+  Content-Security-Policy: default-src 'none'; script-src 'unsafe-inline'; frame-ancestors https://portale.sistema90g.it
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+# Evita che gli URL tecnici di Cloudflare creino duplicati SEO.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Workers Static Assets usa workers.dev per il collaudo tecnico.
+https://:worker.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow

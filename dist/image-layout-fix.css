@@ -1,0 +1,91 @@
+/* Sistema 90G — immagini intere, leggibili e non tagliate */
+.cases-grid,
+.case-grid,
+.casi-grid,
+.cards-grid {
+  align-items: stretch;
+}
+
+.case-card,
+.cases-grid article,
+.case-grid article,
+.casi-grid article {
+  overflow: hidden;
+}
+
+.case-card figure,
+.cases-grid article figure,
+.case-grid article figure,
+.casi-grid article figure,
+.case-card .image,
+.case-card .case-image,
+.case-media {
+  width: 100%;
+  min-height: 250px;
+  margin: 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f5ef;
+  overflow: hidden;
+}
+
+.case-card img,
+.cases-grid article img,
+.case-grid article img,
+.casi-grid article img,
+.case-media img {
+  display: block;
+  width: 100% !important;
+  height: 250px !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 12px;
+  background: #f7f5ef;
+}
+
+.case-hero img,
+.hero-case img,
+.cases-hero img,
+.case-hero-media img,
+.hero-visual img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 520px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f7f5ef;
+}
+
+@media (min-width: 900px) {
+  .case-card img,
+  .cases-grid article img,
+  .case-grid article img,
+  .casi-grid article img,
+  .case-media img {
+    height: 290px !important;
+  }
+
+  .case-card figure,
+  .cases-grid article figure,
+  .case-grid article figure,
+  .casi-grid article figure,
+  .case-card .image,
+  .case-card .case-image,
+  .case-media {
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-card img,
+  .cases-grid article img,
+  .case-grid article img,
+  .casi-grid article img,
+  .case-media img {
+    height: 220px !important;
+  }
+}
