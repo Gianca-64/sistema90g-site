@@ -31,11 +31,14 @@ assert.ok(visual>=50);
 assert.ok(privacy>=50);
 
 const intake=read('analisi-preventiva.html');
+const services=read('servizi.html');
 assert.ok(intake.includes('id="richiedi"'),'Free Entry #richiedi');
 assert.ok(intake.includes('service=valutazione-iniziale'),'valutazione iniziale');
-assert.ok(intake.includes('Consulenza 90G · 97 €'),'Consulenza 90G');
-assert.ok(intake.includes('Verifica 90G · 127 €'),'Verifica 90G');
-assert.ok(intake.includes('Progetto Cucina 90G · 145 €'),'Progetto Cucina 90G');
+assert.equal(intake.includes('service_price='),false,'Free Entry senza prezzi nel portale');
+assert.equal(intake.includes('#percorso'),false,'Free Entry non deve usare anchor legacy');
+for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €']){
+  assert.ok(services.includes(token),`prezzo canonico assente da servizi: ${token}`);
+}
 assert.equal(intake.includes('role-case-path.js'),false,'la pagina Free Entry non deve dipendere dal catalogo legacy');
 assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry non deve dipendere dallo stile legacy');
 
