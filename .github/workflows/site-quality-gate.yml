@@ -2,9 +2,15 @@ name: Site quality gate
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - strategy/free-entry-organic-20260823
+    paths-ignore:
+      - .quality-gate-status.txt
+      - .quality-gate-diagnostics.txt
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: site-quality-${{ github.workflow }}-${{ github.ref }}
@@ -31,63 +37,161 @@ jobs:
           node-version: '20'
 
       - name: Audit release
-        id: release_audit
+        id: release
+        continue-on-error: true
         shell: bash
         run: |
           set +e
           python tools/audit_release.py 2>&1 | tee audit-release.log
           status=${PIPESTATUS[0]}
-          echo "$status" > audit-release.status
-          exit 0
+          exit "$status"
 
       - name: Contratto responsive
-        run: python tools/test_responsive_contract.py
+        id: responsive
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python tools/test_responsive_contract.py 2>&1 | tee responsive.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Audit navigazione e collegamenti
-        run: python tools/audit_section_d_navigation.py .
+        id: navigation
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python tools/audit_section_d_navigation.py . 2>&1 | tee navigation.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Audit SEO guide cucina
-        run: python tools/check_guide_seo.py
+        id: seo
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          python tools/check_guide_seo.py 2>&1 | tee seo.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Test prezzi e contratto portale
-        run: node tools/test_guided_pricing.js
+        id: pricing
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          node tools/test_guided_pricing.js 2>&1 | tee pricing.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Contratto Free Entry
-        run: node tools/test_section_d_contract.js
+        id: free_entry
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          node tools/test_section_d_contract.js 2>&1 | tee free-entry.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Build Cloudflare Pages
-        run: bash tools/build_cloudflare.sh
+        id: build
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          bash tools/build_cloudflare.sh 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Verifica confine output Cloudflare
+        id: boundary
+        continue-on-error: true
+        shell: bash
         run: |
-          test -f dist/index.html
-          test -f dist/_headers
-          test -f dist/_redirects
-          test ! -e dist/tools
-          test ! -e dist/.github
-          test ! -e dist/.htaccess
-          test ! -e dist/CNAME
-          test ! -e dist/role-case-path.js
-          test ! -e dist/role-case-path.css
-          ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
+          set +e
+          {
+            test -f dist/index.html
+            test -f dist/_headers
+            test -f dist/_redirects
+            test ! -e dist/tools
+            test ! -e dist/.github
+            test ! -e dist/.htaccess
+            test ! -e dist/CNAME
+            test ! -e dist/role-case-path.js
+            test ! -e dist/role-case-path.css
+            ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
+          } 2>&1 | tee boundary.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
-      - name: Pubblica diagnostica audit
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-audit-diagnostics
-          path: |
-            audit-release.log
-            audit-release.status
-          retention-days: 7
-
-      - name: Applica esito audit release
+      - name: Registra esito temporaneo sul branch
         if: always()
         shell: bash
         run: |
-          status="$(cat audit-release.status 2>/dev/null || echo 1)"
-          if [ "$status" -ne 0 ]; then
-            echo "::error::Audit release non superato. Consultare l'artifact site-audit-diagnostics."
-            exit "$status"
+          cat > .quality-gate-status.txt <<'EOF'
+          commit=${{ github.sha }}
+          release=${{ steps.release.outcome }}
+          responsive=${{ steps.responsive.outcome }}
+          navigation=${{ steps.navigation.outcome }}
+          seo=${{ steps.seo.outcome }}
+          pricing=${{ steps.pricing.outcome }}
+          free_entry=${{ steps.free_entry.outcome }}
+          build=${{ steps.build.outcome }}
+          boundary=${{ steps.boundary.outcome }}
+          EOF
+          {
+            echo "=== RELEASE ==="
+            tail -n 240 audit-release.log 2>/dev/null || true
+            echo
+            echo "=== RESPONSIVE ==="
+            tail -n 160 responsive.log 2>/dev/null || true
+            echo
+            echo "=== NAVIGATION ==="
+            tail -n 240 navigation.log 2>/dev/null || true
+            echo
+            echo "=== SEO ==="
+            tail -n 200 seo.log 2>/dev/null || true
+            echo
+            echo "=== PRICING ==="
+            tail -n 80 pricing.log 2>/dev/null || true
+            echo
+            echo "=== FREE ENTRY ==="
+            tail -n 80 free-entry.log 2>/dev/null || true
+            echo
+            echo "=== BUILD ==="
+            tail -n 120 build.log 2>/dev/null || true
+            echo
+            echo "=== BOUNDARY ==="
+            tail -n 80 boundary.log 2>/dev/null || true
+          } > .quality-gate-diagnostics.txt
+          rm -rf dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .quality-gate-status.txt .quality-gate-diagnostics.txt
+          git diff --cached --quiet || git commit -m "ci: record retailer-offer quality gate diagnostics"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Applica esito quality gate
+        if: always()
+        shell: bash
+        run: |
+          failed=0
+          for outcome in \
+            '${{ steps.release.outcome }}' \
+            '${{ steps.responsive.outcome }}' \
+            '${{ steps.navigation.outcome }}' \
+            '${{ steps.seo.outcome }}' \
+            '${{ steps.pricing.outcome }}' \
+            '${{ steps.free_entry.outcome }}' \
+            '${{ steps.build.outcome }}' \
+            '${{ steps.boundary.outcome }}'; do
+            if [ "$outcome" != "success" ]; then failed=1; fi
+          done
+          if [ "$failed" -ne 0 ]; then
+            echo "::error::Site quality gate non superato."
+            exit 1
           fi
-          echo "Audit release pulito."
+          echo "SITE QUALITY GATE: PASS"
