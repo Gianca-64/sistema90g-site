@@ -7,6 +7,7 @@ on:
       - strategy/free-entry-organic-20260823
     paths-ignore:
       - .quality-gate-status.txt
+      - .quality-gate-diagnostics.txt
 
 permissions:
   contents: write
@@ -49,47 +50,83 @@ jobs:
       - name: Contratto responsive
         id: responsive
         continue-on-error: true
-        run: python tools/test_responsive_contract.py
+        shell: bash
+        run: |
+          set +e
+          python tools/test_responsive_contract.py 2>&1 | tee responsive.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Audit navigazione e collegamenti
         id: navigation
         continue-on-error: true
-        run: python tools/audit_section_d_navigation.py .
+        shell: bash
+        run: |
+          set +e
+          python tools/audit_section_d_navigation.py . 2>&1 | tee navigation.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Audit SEO guide cucina
         id: seo
         continue-on-error: true
-        run: python tools/check_guide_seo.py
+        shell: bash
+        run: |
+          set +e
+          python tools/check_guide_seo.py 2>&1 | tee seo.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Test prezzi e contratto portale
         id: pricing
         continue-on-error: true
-        run: node tools/test_guided_pricing.js
+        shell: bash
+        run: |
+          set +e
+          node tools/test_guided_pricing.js 2>&1 | tee pricing.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Contratto Free Entry
         id: free_entry
         continue-on-error: true
-        run: node tools/test_section_d_contract.js
+        shell: bash
+        run: |
+          set +e
+          node tools/test_section_d_contract.js 2>&1 | tee free-entry.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Build Cloudflare Pages
         id: build
         continue-on-error: true
-        run: bash tools/build_cloudflare.sh
+        shell: bash
+        run: |
+          set +e
+          bash tools/build_cloudflare.sh 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Verifica confine output Cloudflare
         id: boundary
         continue-on-error: true
+        shell: bash
         run: |
-          test -f dist/index.html
-          test -f dist/_headers
-          test -f dist/_redirects
-          test ! -e dist/tools
-          test ! -e dist/.github
-          test ! -e dist/.htaccess
-          test ! -e dist/CNAME
-          test ! -e dist/role-case-path.js
-          test ! -e dist/role-case-path.css
-          ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
+          set +e
+          {
+            test -f dist/index.html
+            test -f dist/_headers
+            test -f dist/_redirects
+            test ! -e dist/tools
+            test ! -e dist/.github
+            test ! -e dist/.htaccess
+            test ! -e dist/CNAME
+            test ! -e dist/role-case-path.js
+            test ! -e dist/role-case-path.css
+            ! find dist -maxdepth 1 -type f -name '*.md' | grep -q .
+          } 2>&1 | tee boundary.log
+          status=${PIPESTATUS[0]}
+          exit "$status"
 
       - name: Pubblica diagnostica audit
         if: always()
@@ -99,6 +136,13 @@ jobs:
           path: |
             audit-release.log
             audit-release.status
+            responsive.log
+            navigation.log
+            seo.log
+            pricing.log
+            free-entry.log
+            build.log
+            boundary.log
           retention-days: 7
 
       - name: Registra esito temporaneo sul branch
@@ -116,10 +160,35 @@ jobs:
           build=${{ steps.build.outcome }}
           boundary=${{ steps.boundary.outcome }}
           EOF
+          {
+            echo "=== RELEASE ==="
+            tail -n 240 audit-release.log 2>/dev/null || true
+            echo
+            echo "=== RESPONSIVE ==="
+            tail -n 160 responsive.log 2>/dev/null || true
+            echo
+            echo "=== NAVIGATION ==="
+            tail -n 240 navigation.log 2>/dev/null || true
+            echo
+            echo "=== SEO ==="
+            tail -n 200 seo.log 2>/dev/null || true
+            echo
+            echo "=== PRICING ==="
+            tail -n 80 pricing.log 2>/dev/null || true
+            echo
+            echo "=== FREE ENTRY ==="
+            tail -n 80 free-entry.log 2>/dev/null || true
+            echo
+            echo "=== BUILD ==="
+            tail -n 120 build.log 2>/dev/null || true
+            echo
+            echo "=== BOUNDARY ==="
+            tail -n 80 boundary.log 2>/dev/null || true
+          } > .quality-gate-diagnostics.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .quality-gate-status.txt
-          git diff --cached --quiet || git commit -m "ci: record temporary site quality gate status"
+          git add .quality-gate-status.txt .quality-gate-diagnostics.txt
+          git diff --cached --quiet || git commit -m "ci: record temporary site quality gate diagnostics"
           git push origin HEAD:${GITHUB_REF_NAME}
 
       - name: Applica esito quality gate
