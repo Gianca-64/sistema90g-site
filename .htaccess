@@ -26,8 +26,8 @@ RewriteRule ^agenzie-immobiliari\.html$ /agenzie-immobiliari-cucina.html [R=301,
 RewriteRule ^analisi-unita-varianti\.html$ /agenzie-immobiliari-cucina.html [R=301,L]
 RewriteRule ^come-sistema90g-utilizza-intelligenza-artificiale\.html$ /metodo-sistema90g.html [R=301,L]
 RewriteRule ^render-fotorealistici-interni\.html$ /progetto-cucina-sistema90g.html [R=301,L]
-RewriteRule ^servizi/add-on-capitolato(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
-RewriteRule ^blog/capitolato-cucina-cosa-controllare(?:\.html)?/?$ /analisi-preventivo-cucina.html [R=301,L]
+RewriteRule ^servizi/add-on-capitolato(?:\.html)?/?$ /seconda-opinione-cucina.html [R=301,L]
+RewriteRule ^blog/capitolato-cucina-cosa-controllare(?:\.html)?/?$ /seconda-opinione-cucina.html [R=301,L]
 RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /progetto-cucina-sistema90g.html [R=301,L]
 RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /progettare-cucina-guide.html [R=301,L]
 RewriteRule ^contatti/?$ /contatti.html [R=301,L]
@@ -65,4 +65,7 @@ RewriteRule ^caso-cabina-armadio-camera-irregolare\.html$ /casi-analizzati.html 
 RewriteRule ^caso-studio-postazione-lavoro\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^caso-open-space-tv-divano-passaggi\.html$ /cucina-open-space-tavolo-passaggi.html [R=301,L]
 RewriteRule ^verifica-planimetria-distribuzione-casa\.html$ /progetto-cucina-sistema90g.html [R=301,L]
+RewriteRule ^controllo-mirato\.html$ /seconda-opinione-cucina.html [R=301,L]
+RewriteRule ^analisi-completa\.html$ /seconda-opinione-cucina.html [R=301,L]
+RewriteRule ^analisi-preventivo-cucina\.html$ /seconda-opinione-cucina.html [R=301,L]
 </IfModule>
