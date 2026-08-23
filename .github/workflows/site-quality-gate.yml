@@ -5,9 +5,11 @@ on:
   push:
     branches:
       - strategy/free-entry-organic-20260823
+    paths-ignore:
+      - .quality-gate-status.txt
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: site-quality-${{ github.workflow }}-${{ github.ref }}
@@ -34,34 +36,49 @@ jobs:
           node-version: '20'
 
       - name: Audit release
-        id: release_audit
+        id: release
+        continue-on-error: true
         shell: bash
         run: |
           set +e
           python tools/audit_release.py 2>&1 | tee audit-release.log
           status=${PIPESTATUS[0]}
           echo "$status" > audit-release.status
-          exit 0
+          exit "$status"
 
       - name: Contratto responsive
+        id: responsive
+        continue-on-error: true
         run: python tools/test_responsive_contract.py
 
       - name: Audit navigazione e collegamenti
+        id: navigation
+        continue-on-error: true
         run: python tools/audit_section_d_navigation.py .
 
       - name: Audit SEO guide cucina
+        id: seo
+        continue-on-error: true
         run: python tools/check_guide_seo.py
 
       - name: Test prezzi e contratto portale
+        id: pricing
+        continue-on-error: true
         run: node tools/test_guided_pricing.js
 
       - name: Contratto Free Entry
+        id: free_entry
+        continue-on-error: true
         run: node tools/test_section_d_contract.js
 
       - name: Build Cloudflare Pages
+        id: build
+        continue-on-error: true
         run: bash tools/build_cloudflare.sh
 
       - name: Verifica confine output Cloudflare
+        id: boundary
+        continue-on-error: true
         run: |
           test -f dist/index.html
           test -f dist/_headers
@@ -84,13 +101,45 @@ jobs:
             audit-release.status
           retention-days: 7
 
-      - name: Applica esito audit release
+      - name: Registra esito temporaneo sul branch
         if: always()
         shell: bash
         run: |
-          status="$(cat audit-release.status 2>/dev/null || echo 1)"
-          if [ "$status" -ne 0 ]; then
-            echo "::error::Audit release non superato. Consultare l'artifact site-audit-diagnostics."
-            exit "$status"
+          cat > .quality-gate-status.txt <<'EOF'
+          commit=${{ github.sha }}
+          release=${{ steps.release.outcome }}
+          responsive=${{ steps.responsive.outcome }}
+          navigation=${{ steps.navigation.outcome }}
+          seo=${{ steps.seo.outcome }}
+          pricing=${{ steps.pricing.outcome }}
+          free_entry=${{ steps.free_entry.outcome }}
+          build=${{ steps.build.outcome }}
+          boundary=${{ steps.boundary.outcome }}
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .quality-gate-status.txt
+          git diff --cached --quiet || git commit -m "ci: record temporary site quality gate status"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Applica esito quality gate
+        if: always()
+        shell: bash
+        run: |
+          failed=0
+          for outcome in \
+            '${{ steps.release.outcome }}' \
+            '${{ steps.responsive.outcome }}' \
+            '${{ steps.navigation.outcome }}' \
+            '${{ steps.seo.outcome }}' \
+            '${{ steps.pricing.outcome }}' \
+            '${{ steps.free_entry.outcome }}' \
+            '${{ steps.build.outcome }}' \
+            '${{ steps.boundary.outcome }}'; do
+            if [ "$outcome" != "success" ]; then failed=1; fi
+          done
+          if [ "$failed" -ne 0 ]; then
+            echo "::error::Site quality gate non superato."
+            exit 1
           fi
-          echo "Audit release pulito."
+          echo "SITE QUALITY GATE: PASS"
