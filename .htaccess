@@ -32,7 +32,7 @@ RewriteRule ^blog/progetto-cucina-da-zero-come-fare(?:\.html)?/?$ /progetto-cuci
 RewriteRule ^blog/7-errori(?:-di)?-misura.*cucina(?:\.html)?/?$ /progettare-cucina-guide.html [R=301,L]
 RewriteRule ^contatti/?$ /contatti.html [R=301,L]
 RewriteRule ^rivenditori-veneta-cucine\.html$ /rivenditori-cucine.html [R=301,L]
-RewriteRule ^richiesta\.html$ /analisi-preventiva.html#percorso [R=301,NE,L]
+RewriteRule ^richiesta\.html$ /analisi-preventiva.html#richiedi [R=301,NE,L]
 RewriteRule ^casi-cucina\.html$ /casi-analizzati.html [R=301,L]
 RewriteRule ^caso-passaggio-lavastoviglie\.html$ /caso-lavastoviglie-passaggio-cucina.html [R=301,L]
 RewriteRule ^caso-verificato-isola-forno-passaggi\.html$ /caso-isola-passaggi-cucina.html [R=301,L]
