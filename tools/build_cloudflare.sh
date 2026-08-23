@@ -27,15 +27,6 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
-# Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
-# come debito storico di sviluppo: non deve essere referenziato né pubblicato.
-if grep -R -n -E 'role-case-path\.(js|css)' "$DIST" --include='*.html' >/tmp/s90g-role-path-references.log 2>/dev/null; then
-  echo "ERRORE: una pagina pubblica dipende ancora dal catalogo legacy role-case-path" >&2
-  cat /tmp/s90g-role-path-references.log >&2
-  exit 1
-fi
-rm -f "$DIST/role-case-path.js" "$DIST/role-case-path.css"
-
 # Perimetro pubblico: esclusivamente cucina.
 # Manteniamo solo i sei casi reali cucina attualmente approvati; tutti gli altri
 # vecchi casi casa/soggiorno/camere/bagno/garage/terrazzo vengono esclusi dal deploy.
@@ -85,6 +76,16 @@ find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
     "$file"
   rm -f "$file.bak"
 done
+
+# Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
+# come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
+# perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
+if grep -R -n -E 'role-case-path\.(js|css)' "$DIST" --include='*.html' >/tmp/s90g-role-path-references.log 2>/dev/null; then
+  echo "ERRORE: una pagina pubblica dipende ancora dal catalogo legacy role-case-path" >&2
+  cat /tmp/s90g-role-path-references.log >&2
+  exit 1
+fi
+rm -f "$DIST/role-case-path.js" "$DIST/role-case-path.css"
 
 # Guard rail: nessuna pagina extra-cucina nota puo rientrare accidentalmente nel deploy.
 for forbidden_public in \
