@@ -6,81 +6,8 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: cloudflare-production
-  cancel-in-progress: true
-
 jobs:
-  deploy:
+  disabled-by-policy:
     runs-on: ubuntu-latest
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Build cucina-only dist
-        shell: bash
-        run: |
-          set -euo pipefail
-          cp _redirects /tmp/s90g-redirects
-          sed -i '\|^/index.html / 301$|d' _redirects
-          bash tools/build_cloudflare.sh
-          cp /tmp/s90g-redirects _redirects
-          cp /tmp/s90g-redirects dist/_redirects
-
-      - name: Validate package
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -f dist/index.html
-          test -f dist/_redirects
-          test -f dist/_headers
-          test -f dist/cucina-ad-angolo-guida.html
-          test -f dist/guide-cucina-sitemap.xml
-          test -f dist/innovazioni.html
-          test -f dist/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html
-          test -f dist/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html
-          test -f dist/images/editoriale/forno-ai-telecamera-editoriale.webp
-          test -f dist/images/editoriale/piano-induzione-opaco-editoriale.webp
-          grep -q 'Novità, tecnologie e soluzioni che migliorano la cucina di ogni giorno' dist/innovazioni.html
-          grep -q 'forno-ai-telecamera-editoriale.webp' dist/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html
-          grep -q 'piano-induzione-opaco-editoriale.webp' dist/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html
-          grep -q '^/index.html / 301$' dist/_redirects
-          ! test -e dist/casi-camere-contenimento.html
-          ! test -e dist/casi-distribuzione-casa.html
-          ! test -e dist/casi-soggiorno-open-space.html
-          ! test -e dist/casi-spazi-servizio.html
-
-      - name: Detect Cloudflare credentials
-        id: cf
-        shell: bash
-        run: |
-          if [ -n "${CLOUDFLARE_API_TOKEN:-}" ] && [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::Cloudflare deploy skipped: add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets."
-          fi
-
-      - name: Deploy to Cloudflare
-        if: steps.cf.outputs.configured == 'true'
-        run: npx --yes wrangler@4 deploy
-
-      - name: Smoke test production
-        if: steps.cf.outputs.configured == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          sleep 5
-          stamp="$(date +%s)"
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/?verify=$stamp" > /tmp/home.html
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/innovazioni.html?verify=$stamp" > /tmp/innovazioni.html
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/approfondimenti/forno-intelligenza-artificiale-telecamera-cosa-cambia.html?verify=$stamp" > /tmp/forno.html
-          curl --fail --silent --show-error --location --retry 5 --retry-delay 2 "https://sistema90g.it/approfondimenti/piano-induzione-opaco-antigraffio-cosa-cambia.html?verify=$stamp" > /tmp/induzione.html
-          grep -qi 'Sistema 90G' /tmp/home.html
-          grep -q 'Novità, tecnologie e soluzioni che migliorano la cucina di ogni giorno' /tmp/innovazioni.html
-          grep -q 'forno-ai-telecamera-editoriale.webp' /tmp/forno.html
-          grep -q 'piano-induzione-opaco-editoriale.webp' /tmp/induzione.html
+      - run: echo "Deploy automatico GitHub Actions disattivato. Sistema 90G usa il deploy locale verificato sul Mac."
