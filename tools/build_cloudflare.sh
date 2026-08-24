@@ -77,6 +77,16 @@ find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
   rm -f "$file.bak"
 done
 
+# Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
+# come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
+# perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
+if grep -R -n -E 'role-case-path\.(js|css)' "$DIST" --include='*.html' >/tmp/s90g-role-path-references.log 2>/dev/null; then
+  echo "ERRORE: una pagina pubblica dipende ancora dal catalogo legacy role-case-path" >&2
+  cat /tmp/s90g-role-path-references.log >&2
+  exit 1
+fi
+rm -f "$DIST/role-case-path.js" "$DIST/role-case-path.css"
+
 # Guard rail: nessuna pagina extra-cucina nota puo rientrare accidentalmente nel deploy.
 for forbidden_public in \
   'casi-camere-contenimento.html' 'casi-distribuzione-casa.html' \
@@ -91,7 +101,8 @@ done
 # Guard rail: i materiali operativi non devono comparire nell'output Pages.
 for forbidden in \
   '.git' '.github' 'tools' '.htaccess' 'CNAME' 'README.md' \
-  'AUDIT_PRELIMINARE_SITO_2026-08-04.md' 'BASE_ORIGINALE_PRESERVATA.txt'; do
+  'AUDIT_PRELIMINARE_SITO_2026-08-04.md' 'BASE_ORIGINALE_PRESERVATA.txt' \
+  'role-case-path.js' 'role-case-path.css'; do
   if [ -e "$DIST/$forbidden" ]; then
     echo "ERRORE: file interno presente in dist: $forbidden" >&2
     exit 1

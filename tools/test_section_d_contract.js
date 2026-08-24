@@ -2,34 +2,59 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-global.window={addEventListener(){}};
-global.document={readyState:'loading',addEventListener(){},getElementById(){return null;},querySelectorAll(){return [];}};
-require('../role-case-path.js');
-const {catalog,calculatePrice}=window.S90G_PATH;
-const expected=[
- ['private','scelta-finiture-cucina',47],
- ['private','restyling-cucina-esistente',79],
- ['private','controllo-mirato',127],
- ['private','analisi-completa',253],
- ['private','acquisto-assistito-cucina',290],
- ['professional','controllo-mirato',127],
- ['professional','analisi-completa',253],
- ['retailer','verifica-progetto-cucina',150]
-];
-for(const [group,id,price] of expected){
- const item=catalog[group].find(x=>x.id===id);
- assert.ok(item,`${group}/${id}`);
- assert.equal(calculatePrice(item).price,price,id);
- assert.ok(item.checks.length>=2,`${id}: checks`);
- assert.ok(item.deliverables.length>=2,`${id}: deliverables`);
- assert.ok(item.limits.length>=2,`${id}: limits`);
-}
-for(const obsolete of ['studio-preliminare-spazi','verifica-preliminare-immobile','analisi-unita-varianti']){
- assert.equal(Object.values(catalog).flat().some(item=>item.id===obsolete),false,`${obsolete} non deve essere nel catalogo cucina corrente`);
-}
-const guided=fs.readFileSync(path.join(__dirname,'..','role-case-path.js'),'utf8');
-for(const token of ['requester_role','case_context','service','service_title','service_price','service_currency','service_time']) assert.ok(guided.includes(token),token);
-const nav=fs.readFileSync(path.join(__dirname,'..','navigation-conversion.js'),'utf8');
+const root=path.join(__dirname,'..');
+const read=name=>fs.readFileSync(path.join(root,name),'utf8');
+
+const nav=read('navigation-conversion.js');
 for(const token of ['Rivenditori','Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
+assert.ok(nav.includes('/analisi-preventiva.html#richiedi'),'navigazione deve usare #richiedi');
+assert.ok(nav.includes('Chiedi la valutazione gratuita'),'normalizzazione CTA Free Entry');
+for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina',"'restyling-cucina-esistente':'79'",'SERVICE_PRICES']){
+  assert.equal(nav.includes(obsolete),false,`navigation contiene residuo ${obsolete}`);
+}
 for(const obsolete of ['scelta-finiture-casa','studio-preliminare-spazi','analisi-unita-varianti','verifica-planimetria-distribuzione-casa']) assert.equal(nav.includes(obsolete),false,`navigation contiene residuo ${obsolete}`);
-const htmlFiles=[];const walk=dir=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(entry.name==='.git'||entry.name.startsWith('._')||entry.name==='dist')continue;const full=path.join(dir,entry.name);if(entry.isDirectory())walk(full);else if(entry.name.endsWith('.html'))htmlFiles.push(full)}};walk(path.join(__dirname,'..'));let visual=0,privacy=0;for(const file of htmlFiles){const raw=fs.readFileSync(file,'utf8');if(raw.includes('sistema90g-visual-2026.css')){visual++;assert.ok(raw.includes('sistema90g-visual-2026.css?v=20260730a'),file)}if(raw.includes('privacy-consent.js')){privacy++;assert.ok(raw.includes('privacy-consent.js?v=20260730a'),file)}}assert.ok(visual>=50);assert.ok(privacy>=50);const pathPage=fs.readFileSync(path.join(__dirname,'..','analisi-preventiva.html'),'utf8');assert.ok(pathPage.includes('role-case-path.css?v=20260728e'));assert.ok(pathPage.includes('role-case-path.js?v=20260816b'));const consent=fs.readFileSync(path.join(__dirname,'..','privacy-consent.js'),'utf8');assert.ok(consent.includes('/navigation-conversion.js?v=20260815a'));assert.equal(consent.includes('progetti casa'),false,'dati strutturati non devono descrivere il vecchio perimetro casa');assert.equal(consent.includes('scelta-finiture-casa'),false,'privacy-consent non deve contenere il vecchio servizio finiture casa');console.log('SECTION D CONTRACT TEST: PASS');
+
+const htmlFiles=[];
+const walk=dir=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
+  if(entry.name==='.git'||entry.name.startsWith('._')||entry.name==='dist')continue;
+  const full=path.join(dir,entry.name);
+  if(entry.isDirectory())walk(full);else if(entry.name.endsWith('.html'))htmlFiles.push(full);
+}};
+walk(root);
+let visual=0,privacy=0;
+for(const file of htmlFiles){
+  const raw=fs.readFileSync(file,'utf8');
+  if(raw.includes('sistema90g-visual-2026.css')){visual++;assert.ok(raw.includes('sistema90g-visual-2026.css?v=20260730a')||raw.includes('sistema90g-visual-2026.css?v=20260817b'),file);}
+  if(raw.includes('privacy-consent.js')){privacy++;assert.ok(raw.includes('privacy-consent.js?v=20260730a'),file);}
+}
+assert.ok(visual>=50);
+assert.ok(privacy>=50);
+
+const intake=read('analisi-preventiva.html');
+const services=read('servizi.html');
+assert.ok(intake.includes('id="richiedi"'),'Free Entry #richiedi');
+assert.ok(intake.includes('service=valutazione-iniziale'),'valutazione iniziale');
+assert.equal(intake.includes('service_price='),false,'Free Entry senza prezzi nel portale');
+assert.equal(intake.includes('#percorso'),false,'Free Entry non deve usare anchor legacy');
+for(const principle of [
+  'Prima del servizio viene il problema da risolvere.',
+  'Non una semplice indicazione commerciale: una prima lettura del problema.',
+  'A volte non serve acquistare nulla.',
+  'Ti diciamo cosa può aiutarti a risolverlo'
+]) assert.ok(intake.includes(principle),`principio Free Entry assente: ${principle}`);
+for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €']){
+  assert.ok(services.includes(token),`prezzo canonico assente da servizi: ${token}`);
+}
+assert.equal(intake.includes('role-case-path.js'),false,'la pagina Free Entry non deve dipendere dal catalogo legacy');
+assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry non deve dipendere dallo stile legacy');
+
+const consent=read('privacy-consent.js');
+assert.ok(consent.includes('/navigation-conversion.js?v=20260815a'));
+assert.ok(consent.includes('analisi-preventiva.html#richiedi'),'privacy-consent deve usare il Free Entry #richiedi');
+assert.equal(consent.includes('#percorso'),false,'privacy-consent non deve usare anchor legacy #percorso');
+for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina']){
+  assert.equal(consent.includes(obsolete),false,`privacy-consent contiene residuo servizio legacy ${obsolete}`);
+}
+assert.equal(consent.includes('progetti casa'),false,'dati strutturati non devono descrivere il vecchio perimetro casa');
+assert.equal(consent.includes('scelta-finiture-casa'),false,'privacy-consent non deve contenere il vecchio servizio finiture casa');
+console.log('SECTION D FREE ENTRY CONTRACT TEST: PASS');

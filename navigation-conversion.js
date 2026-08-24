@@ -3,18 +3,13 @@
   const CAMPAIGN_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const CONSENT_KEY='s90g_cookie_consent';
   const PORTAL_ORIGIN='https://portale.sistema90g.it';
-  const PRIVATE_SERVICES=new Set(['progetto-cucina-sistema90g','scelta-finiture-cucina','restyling-cucina-esistente','controllo-mirato','analisi-completa','acquisto-assistito-cucina']);
-  const SERVICE_PRICES={
-    'progetto-cucina-sistema90g':'145',
-    'controllo-mirato':'127',
-    'analisi-completa':'253',
-    'acquisto-assistito-cucina':'290',
-    'acquisto-assistito-cucina-90g':'290',
-    'scelta-finiture-cucina':'47',
-    'restyling-cucina-esistente':'79',
-    'verifica-progetto-cucina':'150',
-    'analisi-progetto-cucina-rivenditore':'150'
-  };
+  const SERVICE_PAGES=new Set([
+    'progetto-cucina-sistema90g',
+    'seconda-opinione-cucina',
+    'scelta-finiture-cucina',
+    'restyling-cucina-esistente',
+    'acquisto-assistito-cucina'
+  ]);
   const NAV_LINKS=[
     ['home','Home','/'],
     ['services','Servizi','/servizi.html'],
@@ -47,11 +42,11 @@
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'innovation';
     if(slug==='chi-e-sistema90g')return 'about';
     if(slug==='contatti')return 'contacts';
-    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='analisi-preventivo-cucina')return 'services';
+    if(slug==='servizi'||SERVICE_PAGES.has(slug)||slug==='analisi-preventivo-cucina')return 'services';
     return '';
   };
   const inferRoleHint=slug=>{
-    if(PRIVATE_SERVICES.has(slug))return 'private';
+    if(SERVICE_PAGES.has(slug))return 'private';
     if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailer';
     return '';
   };
@@ -60,7 +55,7 @@
     if(slug.startsWith('casi-'))return 'case-category';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'article';
     if(['professionisti','professionisti-progetto-cucina','agenzie-immobiliari-cucina','rivenditori-cucine'].includes(slug))return 'professional';
-    if(slug==='servizi'||PRIVATE_SERVICES.has(slug)||slug==='controllo-progetto-cucina')return 'service';
+    if(slug==='servizi'||SERVICE_PAGES.has(slug)||slug==='controllo-progetto-cucina')return 'service';
     if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
     return 'page';
   };
@@ -84,7 +79,7 @@
   function preparePathLinks(scope=document){
     const current=new URL(location.href), slug=pageSlug(), defaultRole=inferRoleHint(slug);
     scope.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
-      const target=new URL(link.getAttribute('href')||'/analisi-preventiva.html#percorso',location.href);
+      const target=new URL(link.getAttribute('href')||'/analisi-preventiva.html#richiedi',location.href);
       target.searchParams.set('source_page',link.dataset.sourcePage||slug);
       target.searchParams.set('content_type',link.dataset.contentType||inferContentType(slug));
       target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
@@ -109,7 +104,6 @@
       if(role&&!target.searchParams.get('requester_role'))target.searchParams.set('requester_role',role);
       const service=target.searchParams.get('service')||link.dataset.service||'';
       if(service&&!target.searchParams.get('service'))target.searchParams.set('service',service);
-      if(service&&!target.searchParams.get('service_price')&&SERVICE_PRICES[service])target.searchParams.set('service_price',SERVICE_PRICES[service]);
       if(!target.searchParams.get('case_id')&&current.searchParams.get('case_id'))target.searchParams.set('case_id',current.searchParams.get('case_id'));
       CAMPAIGN_KEYS.forEach(k=>{const v=current.searchParams.get(k);if(v&&!target.searchParams.get(k))target.searchParams.set(k,v)});
       link.href=target.toString();
@@ -119,10 +113,10 @@
   function normalizeActionLabels(scope=document){
     scope.querySelectorAll('a[data-start-path]').forEach(link=>{
       const text=(link.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
-      if(text.includes('invia il tuo caso')||text.includes('sottoponi il caso')||text==='valuta il caso'||text.startsWith('parliamo del caso')){
+      if(text.includes('invia il tuo caso')||text.includes('sottoponi il caso')||text==='valuta il caso'||text==='valuta il tuo caso'||text.startsWith('parliamo del caso')){
         const arrow=link.querySelector('[aria-hidden="true"]');
-        if(arrow){const first=link.querySelector('span:not([aria-hidden])')||link.querySelector('span');if(first)first.textContent='Valuta il tuo caso';}
-        else link.textContent='Valuta il tuo caso →';
+        if(arrow){const first=link.querySelector('span:not([aria-hidden])')||link.querySelector('span');if(first)first.textContent='Chiedi la valutazione gratuita';}
+        else link.textContent='Chiedi la valutazione gratuita →';
       }
     });
     scope.querySelectorAll('a.s90g-link').forEach(link=>{

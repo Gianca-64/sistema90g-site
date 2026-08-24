@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 root = Path(__file__).resolve().parents[1]
-version = "20260730a"
+approved_versions = {"20260730a", "20260817b"}
 errors = []
 css = (root / "sistema90g-visual-2026.css").read_text(encoding="utf-8", errors="replace")
 required = [
@@ -22,7 +22,7 @@ pattern = re.compile(r"sistema90g-visual-2026\.css\?v=([^\"']+)")
 checked = 0
 visual = 0
 for path in sorted(root.rglob("*.html")):
-    if ".git" in path.parts or path.name.startswith("._"):
+    if ".git" in path.parts or path.name.startswith("._") or "dist" in path.parts:
         continue
     raw = path.read_text(encoding="utf-8", errors="replace")
     checked += 1
@@ -31,12 +31,11 @@ for path in sorted(root.rglob("*.html")):
     visual += 1
     if 'name="viewport"' not in raw and "name='viewport'" not in raw:
         errors.append(f"{path.name}: meta viewport mancante")
-    expected = f"sistema90g-visual-2026.css?v={version}"
-    if expected not in raw:
-        errors.append(f"{path.name}: versione CSS non aggiornata")
     versions = pattern.findall(raw)
-    if versions and any(item != version for item in versions):
-        errors.append(f"{path.name}: versione CSS incoerente {versions}")
+    if not versions:
+        errors.append(f"{path.name}: versione CSS assente")
+    elif any(item not in approved_versions for item in versions):
+        errors.append(f"{path.name}: versione CSS non approvata {versions}")
 if visual < 50:
     errors.append(f"numero anomalo di pagine visuali: {visual}")
 print(f"HTML checked: {checked}")

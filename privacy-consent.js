@@ -131,7 +131,7 @@ function s90gInferContentType(){
   if(slug.startsWith('casi-'))return 'case-category';
   if(location.pathname.includes('/approfondimenti/')||slug==='innovazioni')return 'article';
   if(['professionisti','professionisti-progetto-cucina','agenzie-immobiliari-cucina','rivenditori-cucine'].includes(slug))return 'professional';
-  if(['progetto-cucina-sistema90g','controllo-mirato','analisi-completa','scelta-finiture-cucina','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina'].includes(slug))return 'service';
+  if(['progetto-cucina-sistema90g','seconda-opinione-cucina','scelta-finiture-cucina','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina'].includes(slug))return 'service';
   if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
   return 'page';
 }
@@ -140,7 +140,7 @@ function s90gPrepareGuidedPathLinks(){
   const campaignKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const current=new URL(location.href);
   document.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
-    const target=new URL(link.getAttribute('href')||'analisi-preventiva.html#percorso',location.href);
+    const target=new URL(link.getAttribute('href')||'analisi-preventiva.html#richiedi',location.href);
     target.searchParams.set('source_page',link.dataset.sourcePage||s90gPageSlug());
     target.searchParams.set('content_type',link.dataset.contentType||s90gInferContentType());
     target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
@@ -166,7 +166,7 @@ function addWhatsAppChat(){
   if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Per sottoporre foto, planimetrie o preventivi usa il percorso guidato, che mostra prima servizio e prezzo.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#percorso" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Valuta un caso cucina</a></div></section>`;
+  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Se vuoi sottoporre foto, planimetrie o preventivi, invia gratuitamente il caso: solo se serve un lavoro professionale ti verranno indicati contenuti e prezzo prima di procedere.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#richiedi" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Sottoponi il caso</a></div></section>`;
   document.body.appendChild(wrapper);
   const cookieBanner=document.getElementById('cookie-banner');
   const syncChatVisibility=()=>{const bannerIsVisible=cookieBanner&&!cookieBanner.hidden;wrapper.style.display=bannerIsVisible?'none':'';};
