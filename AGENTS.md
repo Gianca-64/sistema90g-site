@@ -1,5 +1,8 @@
 # Sistema 90G — Sito pubblico — istruzioni per agenti
 
+## Avvio obbligatorio di ogni nuova conversazione
+Prima di qualsiasi attività leggere `docs/CHATGPT_CODEX_OPERATING_MANUAL.md`. Il manuale definisce apertura chat, divisione ChatGPT/Codex, delega delle attività locali, gestione delle working copy parallele, condizioni di stop e rapporto finale. Le sue regole operative sono vincolanti insieme a questo file.
+
 ## Ruoli permanenti
 
 Questa divisione è vincolante anche per il Sito pubblico di Sistema 90G.
