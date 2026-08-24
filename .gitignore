@@ -4,3 +4,5 @@ audit-visuale-completo/
 audit-visuale-completo.zip
 verifica-visuale-post-fix/
 *.log
+dist/
+.wrangler/cache/
