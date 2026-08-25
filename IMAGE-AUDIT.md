@@ -196,8 +196,8 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `sconto-cucina-valore-reale.html` | `images/hero-preventivo-90g-2026.jpg` | La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando. | Analisi Sistema 90G del valore reale di un preventivo cucina oltre la percentuale di sconto |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Verifica 90G · 127 € · prezzo chiaro prima di iniziare · nessuna provvigione sulla vendita. | Controllo indipendente di progetto e preventivo cucina prima dell |
 | `seconda-opinione-cucina.html` | `images/22_CASI_PREVENTIVO.jpg` | Descrivi la situazione e allega ciò che hai. Prima controlliamo se la Verifica 90G è davvero adatta al tuo caso. | Verifica indipendente di una proposta cucina |
-| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | La cucina può essere ancora da progettare, già definita in una proposta da controllare oppure quasi risolta, con una sola scelta su cui hai  | Servizi indipendenti di progettazione, verifica e consulenza cucina |
-| `servizi.html` | `images/progetto-cucina-90g-report-20260817.png` | Allega, se li hai, foto, planimetria, progetto o preventivo. Ti diciamo se possiamo aiutarti e quale lavoro è adatto, con il prezzo chiaro p | Elaborati del Progetto Cucina Sistema 90G |
+| `servizi.html` | `images/13_SERVIZI_HERO.jpg` | Non devi scegliere un servizio prima di aver spiegato il problema. Partiamo dal caso reale e dal materiale che hai già. Se basta un chiarime | Servizi indipendenti di progettazione, verifica e consulenza cucina |
+| `servizi.html` | `images/progetto-cucina-90g-report-20260817.png` | Allega, se li hai, foto, planimetria, progetto o preventivo. La prima valutazione serve a capire il passo utile: può bastare un chiarimento  | Elaborati del Progetto Cucina Sistema 90G |
 | `sostituire-elettrodomestici-cucina-esistente.html` | `images/hero-cucina-90g-2026.jpg` | Prima di scegliere il nuovo modello bisogna verificare il vano reale e confrontarlo con la scheda tecnica dell'apparecchio. Larghezza nomina | Cucina esistente con elettrodomestici da verificare prima della sostituzione |
 | `studio-preliminare-spazi.html` | `images/16_SERVIZI_PROGETTO_DA_ZERO.png` | Per organizzare funzioni, priorità e rapporti tra uno o più ambienti quando non esiste ancora una soluzione definita. | Studio preliminare degli spazi con planimetria descrittiva |
 | `studio-preliminare-spazi.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | La Console prepara una valutazione preliminare; servizio, condizioni e risposta vengono verificati personalmente prima dell’invio. | Invio del materiale per il servizio |
@@ -245,7 +245,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 - `consulenza-90g.html` — Una decisione principale · prezzo unico 97 € · valutazione iniziale gratuita
 - `consulenza-90g.html` — Con la valutazione iniziale gratuita verifichiamo se basta Consulenza 90G oppure se il problema richiede Verifica o Progetto.
-- `servizi.html` — La cucina può essere ancora da progettare, già definita in una proposta da controllare oppure quasi risolta, con una sola scelta su cui hai 
+- `servizi.html` — Non devi scegliere un servizio prima di aver spiegato il problema. Partiamo dal caso reale e dal materiale che hai già. Se basta un chiarime
 
 ### `images/17_SERVIZI_FINITURE.jpg` — 9 utilizzi
 
@@ -518,7 +518,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `index.html` — Progetto base 145 € · nessun vincolo di marchio
 - `progetto-cucina-sistema90g.html` — Il progetto base deve essere utile da solo. Gli approfondimenti sono facoltativi e vengono aggiunti solo se servono davvero.
 - `progetto-cucina-sistema90g.html` — Invia ciò che hai e racconta cosa vuoi ottenere. Se basta una Verifica o una Consulenza, te lo diciamo prima di avviare il lavoro.
-- `servizi.html` — Allega, se li hai, foto, planimetria, progetto o preventivo. Ti diciamo se possiamo aiutarti e quale lavoro è adatto, con il prezzo chiaro p
+- `servizi.html` — Allega, se li hai, foto, planimetria, progetto o preventivo. La prima valutazione serve a capire il passo utile: può bastare un chiarimento 
 
 ## Pagine senza immagini — informativo
 
