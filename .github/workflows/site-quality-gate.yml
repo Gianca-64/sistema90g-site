@@ -2,9 +2,9 @@ name: Site quality gate
 
 on:
   workflow_dispatch:
-  pull_request:
+  push:
     branches:
-      - main
+      - content/problem-first-services-20260825
 
 permissions:
   contents: read
