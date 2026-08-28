@@ -8,57 +8,63 @@ root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('dist')
 if not root.is_dir():
     raise SystemExit(f'ERRORE: directory pubblica non trovata: {root}')
 
+HUBS = {
+    'progettazione': {
+        'file': 'progettare-cucina-guide.html',
+        'label': 'Hub progettazione cucina',
+        'guides': [
+            'progetto-cucina-planner-online-prima-ordine.html', 'errori-progetto-cucina.html',
+            'isola-cucina-distanze-passaggi.html', 'misure-passaggi-cucina.html',
+            'cucina-piccola-come-progettarla.html', 'cucina-open-space-tavolo-passaggi.html',
+            'tavolo-vicino-cucina-spazi-sedute.html', 'penisola-cucina-distanze-passaggi.html',
+            'lavello-sotto-finestra-cucina.html', 'profondita-cucina-75-cm.html',
+            'cucina-ad-angolo-guida.html',
+        ],
+    },
+    'preventivo-acquisto': {
+        'file': 'preventivo-acquisto-cucina-guide.html',
+        'label': 'Hub preventivo e acquisto cucina',
+        'guides': [
+            'rilievo-misure-cucina-prima-ordine.html', 'montaggio-allacciamenti-cucina-cosa-chiarire.html',
+            'preventivo-cucina-guida.html', 'confrontare-due-preventivi-cucina.html',
+            'prima-di-firmare-ordine-cucina.html', 'voci-escluse-preventivo-cucina.html',
+            'sconto-cucina-valore-reale.html', 'quando-verifica-indipendente-cucina.html',
+        ],
+    },
+    'elettrodomestici-impianti': {
+        'file': 'elettrodomestici-impianti-cucina-guide.html',
+        'label': 'Hub elettrodomestici e impianti',
+        'guides': [
+            'frigorifero-cucina-vicino-parete.html', 'lavastoviglie-cucina-aperture-passaggi.html',
+            'piano-induzione-cucina.html', 'colonna-forno-microonde-cucina.html',
+            'elettrodomestici-incasso-misure-cucina.html', 'cappa-aspirazione-cucina.html',
+            'prese-impianti-cucina.html', 'altezza-pensili-spazio-top-cucina.html',
+        ],
+    },
+    'materiali-finiture': {
+        'file': 'materiali-finiture-cucina-guide.html',
+        'label': 'Hub materiali e finiture cucina',
+        'guides': [
+            'top-cucina-materiali-guida.html', 'ante-cucina-materiali-manutenzione.html',
+            'finiture-opache-lucide-cucina.html', 'cucina-chiara-scura-luce.html',
+            'abbinare-cucina-pavimento.html',
+        ],
+    },
+}
+
 CLUSTERS = {
-    'isola': {
-        'case': 'caso-isola-passaggi-cucina.html',
-        'guide': 'isola-cucina-distanze-passaggi.html',
-        'guide_label': 'Guida isola: distanze, passaggi e aperture',
-        'hub': 'progettare-cucina-guide.html',
-        'hub_label': 'Hub progettazione cucina',
-    },
-    'lavastoviglie': {
-        'case': 'caso-lavastoviglie-passaggio-cucina.html',
-        'guide': 'lavastoviglie-cucina-aperture-passaggi.html',
-        'guide_label': 'Guida lavastoviglie: aperture e passaggi',
-        'hub': 'elettrodomestici-impianti-cucina-guide.html',
-        'hub_label': 'Hub elettrodomestici e impianti',
-    },
-    'lavello-finestra': {
-        'case': 'caso-lavello-sotto-finestra-aperture.html',
-        'guide': 'lavello-sotto-finestra-cucina.html',
-        'guide_label': 'Guida lavello sotto finestra',
-        'hub': 'progettare-cucina-guide.html',
-        'hub_label': 'Hub progettazione cucina',
-    },
-    'cucina-piccola': {
-        'case': 'caso-cucina-piccola-tre-lati.html',
-        'guide': 'cucina-piccola-come-progettarla.html',
-        'guide_label': 'Guida cucina piccola',
-        'hub': 'progettare-cucina-guide.html',
-        'hub_label': 'Hub progettazione cucina',
-    },
-    'profondita-75': {
-        'case': 'caso-cucina-profondita-75-angolo.html',
-        'guide': 'profondita-cucina-75-cm.html',
-        'guide_label': 'Guida profondità cucina 75 cm',
-        'hub': 'progettare-cucina-guide.html',
-        'hub_label': 'Hub progettazione cucina',
-    },
-    'preventivo-sconto': {
-        'case': 'caso-preventivo-cucina-sconto-valore.html',
-        'guide': 'sconto-cucina-valore-reale.html',
-        'guide_label': 'Guida sconto e valore reale',
-        'hub': 'preventivo-acquisto-cucina-guide.html',
-        'hub_label': 'Hub preventivo e acquisto cucina',
-    },
+    'isola': ('caso-isola-passaggi-cucina.html', 'isola-cucina-distanze-passaggi.html', 'Guida isola: distanze, passaggi e aperture', 'progettare-cucina-guide.html', 'Hub progettazione cucina'),
+    'lavastoviglie': ('caso-lavastoviglie-passaggio-cucina.html', 'lavastoviglie-cucina-aperture-passaggi.html', 'Guida lavastoviglie: aperture e passaggi', 'elettrodomestici-impianti-cucina-guide.html', 'Hub elettrodomestici e impianti'),
+    'lavello-finestra': ('caso-lavello-sotto-finestra-aperture.html', 'lavello-sotto-finestra-cucina.html', 'Guida lavello sotto finestra', 'progettare-cucina-guide.html', 'Hub progettazione cucina'),
+    'cucina-piccola': ('caso-cucina-piccola-tre-lati.html', 'cucina-piccola-come-progettarla.html', 'Guida cucina piccola', 'progettare-cucina-guide.html', 'Hub progettazione cucina'),
+    'profondita-75': ('caso-cucina-profondita-75-angolo.html', 'profondita-cucina-75-cm.html', 'Guida profondità cucina 75 cm', 'progettare-cucina-guide.html', 'Hub progettazione cucina'),
+    'preventivo-sconto': ('caso-preventivo-cucina-sconto-valore.html', 'sconto-cucina-valore-reale.html', 'Guida sconto e valore reale', 'preventivo-acquisto-cucina-guide.html', 'Hub preventivo e acquisto cucina'),
 }
 
 changed: list[str] = []
 
 
 def public_url(filename: str) -> str:
-    if not filename.endswith('.html'):
-        raise ValueError(filename)
     return '/' + filename[:-5]
 
 
@@ -72,43 +78,41 @@ def inject(path: Path, block: str, marker: str) -> None:
     changed.append(path.name)
 
 
-def ensure_hub_link(path: Path, cluster: str, guide: str, guide_label: str) -> None:
+def ensure_hub_link(path: Path, key: str, guide: str) -> None:
     text = path.read_text('utf-8', errors='strict')
-    guide_href = f'href="{public_url(guide)}"'
-    if guide_href in text:
+    if f'href="{public_url(guide)}"' in text:
         return
-    marker = f'data-s90g-cluster-hub-link="{cluster}"'
-    block = (
-        f'<p class="s90g-trust" {marker}><strong>Approfondimento del cluster:</strong> '
-        f'<a href="{public_url(guide)}">{guide_label}</a></p>'
-    )
-    inject(path, block, marker)
+    marker = f'data-s90g-cluster-hub-link="{key}"'
+    label = guide[:-5].replace('-', ' ')
+    inject(path, f'<p class="s90g-trust" {marker}><strong>Approfondimento del cluster:</strong> <a href="{public_url(guide)}">{label}</a></p>', marker)
 
 
-for cluster, data in CLUSTERS.items():
-    case_path = root / data['case']
-    guide_path = root / data['guide']
-    hub_path = root / data['hub']
+pilot_guides = {values[1] for values in CLUSTERS.values()}
+
+for hub_key, hub in HUBS.items():
+    hub_path = root / hub['file']
+    if not hub_path.is_file():
+        raise SystemExit(f'ERRORE: hub editoriale mancante: {hub_path.name}')
+    for guide in hub['guides']:
+        guide_path = root / guide
+        if not guide_path.is_file():
+            raise SystemExit(f'ERRORE: guida editoriale mancante: {guide_path.name}')
+        ensure_hub_link(hub_path, f'{hub_key}:{guide[:-5]}', guide)
+        if guide not in pilot_guides:
+            marker = f'data-s90g-guide-hub="{hub_key}"'
+            block = f'<p class="s90g-trust" {marker}><strong>Percorso tematico:</strong> <a href="{public_url(hub["file"])}">{hub["label"]}</a></p>'
+            inject(guide_path, block, marker)
+
+for cluster, (case_file, guide_file, guide_label, hub_file, hub_label) in CLUSTERS.items():
+    case_path, guide_path, hub_path = root / case_file, root / guide_file, root / hub_file
     for path in (case_path, guide_path, hub_path):
         if not path.is_file():
             raise SystemExit(f'ERRORE: pagina cluster mancante: {path.name}')
 
     case_marker = f'data-s90g-cluster-path="case:{cluster}"'
-    case_block = (
-        f'<p class="s90g-trust" {case_marker}><strong>Percorso tematico:</strong> '
-        f'<a href="{public_url(data["guide"])}">{data["guide_label"]}</a> · '
-        f'<a href="{public_url(data["hub"])}">{data["hub_label"]}</a></p>'
-    )
-    inject(case_path, case_block, case_marker)
+    inject(case_path, f'<p class="s90g-trust" {case_marker}><strong>Percorso tematico:</strong> <a href="{public_url(guide_file)}">{guide_label}</a> · <a href="{public_url(hub_file)}">{hub_label}</a></p>', case_marker)
 
     guide_marker = f'data-s90g-cluster-path="guide:{cluster}"'
-    guide_block = (
-        f'<p class="s90g-trust" {guide_marker}><strong>Percorso tematico:</strong> '
-        f'<a href="{public_url(data["hub"])}">{data["hub_label"]}</a> · '
-        f'<a href="{public_url(data["case"])}">Caso reale correlato</a></p>'
-    )
-    inject(guide_path, guide_block, guide_marker)
-
-    ensure_hub_link(hub_path, cluster, data['guide'], data['guide_label'])
+    inject(guide_path, f'<p class="s90g-trust" {guide_marker}><strong>Percorso tematico:</strong> <a href="{public_url(hub_file)}">{hub_label}</a> · <a href="{public_url(case_file)}">Caso reale correlato</a></p>', guide_marker)
 
 print('Cluster contenuti pubblici integrati: ' + (', '.join(dict.fromkeys(changed)) if changed else 'gia presenti'))
