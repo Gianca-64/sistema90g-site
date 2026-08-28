@@ -27,6 +27,20 @@ FORBIDDEN = {
     'voci-escluse-preventivo-cucina.html': [
         'percorso complessivo', 'perimetro della propria offerta',
     ],
+    'top-cucina-materiali-guida.html': [
+        'Progetto Cucina 90G', 'add-on', 'Finiture e materiali</a> approfondisce',
+    ],
+    'ante-cucina-materiali-manutenzione.html': [
+        'basta una Consulenza 90G',
+    ],
+    'cucina-piccola-come-progettarla.html': [
+        'puoi approfondire il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>',
+    ],
+    'errori-progetto-cucina.html': [
+        'servizio appropriato', 'può essere appropriata <a href="/servizi.html">Verifica 90G</a>',
+        'può essere più adatto il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>',
+        'Sottoponi gratuitamente il tuo caso →',
+    ],
 }
 
 REQUIRED = {
@@ -39,6 +53,18 @@ REQUIRED = {
     ],
     'voci-escluse-preventivo-cucina.html': [
         "costo e sull'organizzazione complessiva", 'chiarire cosa comprende la propria offerta',
+    ],
+    'top-cucina-materiali-guida.html': [
+        'prima leggiamo il problema', 'serve un approfondimento sulle finiture',
+    ],
+    'ante-cucina-materiali-manutenzione.html': [
+        'se basta chiarire il confronto oppure se la scelta richiede un approfondimento nel progetto',
+    ],
+    'cucina-piccola-come-progettarla.html': [
+        'Prima leggiamo il problema e poi ti diciamo se serve davvero un approfondimento',
+    ],
+    'errori-progetto-cucina.html': [
+        'senza che tu debba scegliere in anticipo il servizio', 'prima ti diciamo quale lavoro è utile e quanto costa',
     ],
 }
 
@@ -62,4 +88,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public editorial copy contract: 6 guide senza residui legacy, tecnicismi interni o CTA duplicate')
+print('OK public editorial copy contract: 10 guide allineate a nomenclatura, linguaggio naturale e Free Entry')
