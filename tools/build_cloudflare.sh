@@ -88,6 +88,11 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# P2: i rich result FAQ non sono piu mostrati da Google. Manteniamo le domande
+# visibili per le persone ma rimuoviamo dal solo output pubblico il vecchio FAQPage,
+# evitando markup inutile o divergente dal contenuto effettivamente mostrato.
+python3 "$ROOT/tools/normalize_public_search_semantics.py" "$DIST"
+
 # P2: Home e Free Entry devono portare vicino alla decisione una prova concreta
 # di identita, indipendenza e casi verificabili, senza cambiare il funnel.
 python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
@@ -129,6 +134,10 @@ python3 "$ROOT/tools/test_public_trust_bridge_contract.py" "$DIST"
 
 # P2: il Free Entry deve spiegare invio, prima lettura e assenza di acquisto automatico.
 python3 "$ROOT/tools/test_public_free_entry_expectation_contract.py" "$DIST"
+
+# P2 SEO/AEO: struttura tecnica leggibile, JSON-LD valido e coerente, canonical
+# puliti e sitemap canonica; niente markup FAQ obsoleto usato come scorciatoia AEO.
+python3 "$ROOT/tools/test_public_search_semantics_contract.py" "$DIST"
 
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
