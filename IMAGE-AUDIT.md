@@ -132,7 +132,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `contatti.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | L'invio del caso serve solo a capire la situazione. Se è utile un lavoro professionale, servizio e prezzo vengono indicati prima di iniziare | Planimetrie e informazioni per una prima valutazione cucina |
 | `controllo-mirato.html` | `images/14_SERVIZI_CONTROLLO_MIRATO.jpg` | Il Controllo mirato verifica una domanda circoscritta senza trasformarla in un’analisi dell’intero progetto. È adatto quando sai già qual è  | Controllo mirato su progetto e misure della cucina |
 | `controllo-mirato.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Invia il materiale e indica il punto preciso che vuoi controllare. La richiesta viene verificata prima della conferma del servizio. | Materiale per il controllo indipendente della cucina |
-| `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Verifica professionale · 150 € se il caso è compatibile · valutazione iniziale gratuita prima dell'acquisto. | Verifica professionale di un progetto cucina già sviluppato |
+| `controllo-progetto-cucina.html` | `images/hero-cucina-90g-2026.jpg` | Verifica 90G · 127 € se il caso è compatibile · valutazione iniziale gratuita prima dell'acquisto. | Verifica professionale di un progetto cucina già sviluppato |
 | `cookie-policy.html` | `images/01_HOME_HERO.jpg` | Ultimo aggiornamento: 23 agosto 2026 | Misurazione delle visite al sito Sistema 90G |
 | `cucina-ad-angolo-guida.html` | `images/caso-cucina-profondita-75-angolo.jpg` | L’angolo può aumentare il contenimento, ma può anche creare zone difficili da raggiungere, aperture in conflitto e raccordi poco efficienti. | Cucina ad angolo con profondità maggiorata e verifica dei raccordi e dello spazio accessibile |
 | `cucina-chiara-scura-luce.html` | `images/17_SERVIZI_FINITURE.jpg` | Il colore va letto insieme a luce naturale, dimensioni, pavimento, top e superfici circostanti. | Studio Sistema 90G di finiture cucina chiare e scure in relazione alla luce |
@@ -470,7 +470,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 
 ### `images/hero-cucina-90g-2026.jpg` — 7 utilizzi
 
-- `controllo-progetto-cucina.html` — Verifica professionale · 150 € se il caso è compatibile · valutazione iniziale gratuita prima dell'acquisto.
+- `controllo-progetto-cucina.html` — Verifica 90G · 127 € se il caso è compatibile · valutazione iniziale gratuita prima dell'acquisto.
 - `illuminazione-cucina-progetto.html` — Quando la disposizione è abbastanza chiara da sapere dove saranno piano di lavoro, lavello, cottura, colonne, isola o penisola. In questo mo
 - `piano-lavoro-colonne-cucina.html` — Non esiste una misura unica valida per tutti. Il piano deve essere sufficiente per preparare, appoggiare, usare gli elettrodomestici abitual
 - `restyling-cucina-esistente.html` — Non devi scegliere tu il servizio prima di spiegare cosa vuoi cambiare.
