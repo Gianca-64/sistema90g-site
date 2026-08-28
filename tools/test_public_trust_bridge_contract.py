@@ -55,10 +55,47 @@ if free_entry:
     if bridge_pos < 0 or request_pos < 0 or bridge_pos > request_pos:
         issues.append('analisi-preventiva.html: trust bridge deve precedere il punto di invio')
 
+case_pages = [
+    'caso-lavastoviglie-passaggio-cucina.html',
+    'caso-isola-passaggi-cucina.html',
+    'caso-lavello-sotto-finestra-aperture.html',
+    'caso-cucina-piccola-tre-lati.html',
+    'caso-cucina-profondita-75-angolo.html',
+    'caso-preventivo-cucina-sconto-valore.html',
+]
+for rel in case_pages:
+    path = root / rel
+    if not path.is_file():
+        issues.append(f'{rel}: caso pubblico mancante')
+        continue
+    text = path.read_text('utf-8', errors='ignore')
+    if 'Caso reale anonimizzato' not in text:
+        issues.append(f'{rel}: manca indicazione di caso reale anonimizzato')
+    if "Limite dell'analisi pubblica:" not in text:
+        issues.append(f'{rel}: manca il limite dell analisi pubblica')
+    if '/analisi-preventiva' not in text:
+        issues.append(f'{rel}: manca il percorso alla valutazione iniziale')
+
+hub = root / 'casi-analizzati.html'
+if not hub.is_file():
+    issues.append('casi-analizzati.html: pagina pubblica mancante')
+else:
+    text = hub.read_text('utf-8', errors='ignore')
+    for token in (
+        'Problemi reali, pubblicati in forma anonima',
+        'data-s90g-case-proof-boundary="true"',
+        'il caso mostra il criterio che ha fatto emergere il problema',
+        'non sostituisce la verifica del progetto, delle misure o del preventivo specifico',
+    ):
+        if token not in text:
+            issues.append(f'casi-analizzati.html: prova pubblica mancante: {token}')
+    if text.count('data-s90g-case-proof-boundary="true"') != 1:
+        issues.append('casi-analizzati.html: confine prova duplicato o mancante')
+
 if issues:
-    print('ERRORE: contratto trust bridge pubblico non rispettato:')
+    print('ERRORE: contratto trust/prova pubblico non rispettato:')
     for issue in issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public trust bridge contract: Home brand-first + identita personale nel Free Entry')
+print('OK public trust bridge contract: Home brand-first + identita nel Free Entry + 6 casi reali anonimizzati con limiti')
