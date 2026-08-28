@@ -45,6 +45,16 @@ FORBIDDEN = {
         'valuta pertinenza e tipo di bisogno',
         'percorso, contenuti e prezzo vengono indicati prima di iniziare',
     ],
+    'rinnovare-cucina-senza-cambiarla.html': [
+        'href="/servizi#servizi"',
+    ],
+    'professionisti-progetto-cucina.html': [
+        'perimetro concordato',
+        'Definisci il dubbio o il perimetro',
+        'caso è pertinente',
+        'servizio è eventualmente appropriato',
+        'servizio, contenuti e prezzo vengono indicati prima di iniziare',
+    ],
 }
 
 REQUIRED = {
@@ -72,6 +82,15 @@ REQUIRED = {
     ],
     'casi-analizzati.html': [
         'quale lavoro è utile e quanto costa',
+        'prima di iniziare sai che cosa verrà fatto e quanto costa',
+    ],
+    'rinnovare-cucina-senza-cambiarla.html': [
+        'href="/servizi#consulenza"',
+    ],
+    'professionisti-progetto-cucina.html': [
+        'problema concordato',
+        'Definisci il dubbio o ciò che vuoi approfondire',
+        'se dal materiale possiamo aiutarti',
         'prima di iniziare sai che cosa verrà fatto e quanto costa',
     ],
 }
@@ -114,4 +133,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public editorial copy contract: 11 pagine allineate + Home instradata alle 3 sezioni servizio corrette')
+print('OK public editorial copy contract: 13 pagine allineate + Home instradata alle 3 sezioni servizio corrette')

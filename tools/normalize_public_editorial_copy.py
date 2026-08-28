@@ -76,6 +76,15 @@ REPLACEMENTS = {
         'Sistema 90G valuta pertinenza e tipo di bisogno; solo se serve un approfondimento viene indicato il servizio professionale con il relativo prezzo.': 'Sistema 90G legge il materiale per capire che cosa merita davvero attenzione; solo se serve un approfondimento ti diciamo quale lavoro è utile e quanto costa.',
         'Se il caso richiede un lavoro professionale, percorso, contenuti e prezzo vengono indicati prima di iniziare.': 'Se il caso richiede un lavoro professionale, prima di iniziare sai che cosa verrà fatto e quanto costa.',
     },
+    'rinnovare-cucina-senza-cambiarla.html': {
+        'href="/servizi#servizi"': 'href="/servizi#consulenza"',
+    },
+    'professionisti-progetto-cucina.html': {
+        "Il supporto resta circoscritto alla cucina e al perimetro concordato.": "Il supporto resta circoscritto alla cucina e al problema concordato.",
+        '1. Definisci il dubbio o il perimetro': '1. Definisci il dubbio o ciò che vuoi approfondire',
+        'Ti diciamo se il caso è pertinente, quale servizio è eventualmente appropriato e quali informazioni servono. Solo dopo, con contenuti e prezzo chiari, decidi se procedere con l\'approfondimento professionale.': 'Ti diciamo se dal materiale possiamo aiutarti, quali informazioni servono e, solo se occorre un approfondimento, quale lavoro è utile e quanto costa. Poi decidi se procedere.',
+        'Se serve un approfondimento, servizio, contenuti e prezzo vengono indicati prima di iniziare.': 'Se serve un approfondimento, prima di iniziare sai che cosa verrà fatto e quanto costa.',
+    },
 }
 
 changed: list[str] = []
