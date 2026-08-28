@@ -166,7 +166,7 @@ function addWhatsAppChat(){
   if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Se vuoi sottoporre foto, planimetrie o preventivi, invia gratuitamente il caso: solo se serve un lavoro professionale ti verranno indicati contenuti e prezzo prima di procedere.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="/analisi-preventiva.html#richiedi" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Sottoponi il caso</a></div></section>`;
+  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden role="dialog" aria-labelledby="s90g-chat-title"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2 id="s90g-chat-title">Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Se vuoi sottoporre foto, planimetrie o preventivi, invia gratuitamente il caso: solo se serve un lavoro professionale ti verranno indicati contenuti e prezzo prima di procedere.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="/analisi-preventiva.html#richiedi" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Sottoponi il caso</a></div></section>`;
   document.body.appendChild(wrapper);
   const cookieBanner=document.getElementById('cookie-banner');
   const syncChatVisibility=()=>{const bannerIsVisible=cookieBanner&&!cookieBanner.hidden;wrapper.style.display=bannerIsVisible?'none':'';};
@@ -175,10 +175,21 @@ function addWhatsAppChat(){
   const launcher=wrapper.querySelector('.s90g-chat-launcher');
   const popup=wrapper.querySelector('.s90g-chat-popup');
   const close=wrapper.querySelector('.s90g-chat-close');
-  const setOpen=open=>{popup.hidden=!open;launcher.setAttribute('aria-expanded',String(open));wrapper.classList.toggle('is-open',open)};
+  const setOpen=(open,returnFocus=false)=>{
+    popup.hidden=!open;
+    launcher.setAttribute('aria-expanded',String(open));
+    wrapper.classList.toggle('is-open',open);
+    if(open){close.focus()}
+    else if(returnFocus)launcher.focus();
+  };
   launcher.addEventListener('click',()=>setOpen(popup.hidden));
-  close.addEventListener('click',()=>setOpen(false));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false)});
+  close.addEventListener('click',()=>setOpen(false,true));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&!popup.hidden){
+      event.preventDefault();
+      setOpen(false,true);
+    }
+  });
 }
 function s90gIntegrateAiTransparencyPage(){
   const href='/metodo-sistema90g.html';
