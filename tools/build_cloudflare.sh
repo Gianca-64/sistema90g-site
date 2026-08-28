@@ -27,6 +27,12 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
+# Due PNG storici molto pesanti non sono referenziati dal sito pubblico.
+# Restano nel repository come materiale storico, ma non devono entrare nel deploy.
+rm -f \
+  "$DIST/images/02_HOME_SCENA_PROBLEMA.png" \
+  "$DIST/images/04_HOME_COSTO_TARDIVO.png"
+
 # Perimetro pubblico: esclusivamente cucina.
 # Manteniamo solo i sei casi reali cucina attualmente approvati; tutti gli altri
 # vecchi casi casa/soggiorno/camere/bagno/garage/terrazzo vengono esclusi dal deploy.
@@ -99,6 +105,10 @@ python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
 # La cache lunga immutable e consentita solo se tutti i riferimenti CSS/JS pubblici
 # portano la versione automatica basata sul contenuto.
 python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
+
+# Controlli statici ad alta confidenza sul solo output realmente pubblicato:
+# lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
+python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
 
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
