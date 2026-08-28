@@ -88,6 +88,11 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# Ogni pagina di contenuto deve avere una UI di consenso funzionante prima che
+# privacy-consent.js inizializzi lo stato analytics. Il componente non duplica
+# eventuali banner storici gia presenti nel markup.
+python3 "$ROOT/tools/inject_public_consent_ui.py" "$DIST"
+
 # Ogni CSS/JS locale riceve nel solo output pubblico una query v= derivata
 # dal contenuto reale del file. La sorgente resta leggibile e ogni modifica futura
 # invalida automaticamente la cache browser senza bump manuali.
@@ -105,6 +110,10 @@ python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
 # La cache lunga immutable e consentita solo se tutti i riferimenti CSS/JS pubblici
 # portano la versione automatica basata sul contenuto.
 python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
+
+# Il consenso deve restare negato di default e ogni pagina pubblica deve esporre
+# una UI accessibile per accettare, rifiutare e riaprire le preferenze.
+python3 "$ROOT/tools/test_public_consent_contract.py" "$DIST"
 
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
