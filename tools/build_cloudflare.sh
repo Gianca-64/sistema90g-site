@@ -110,6 +110,10 @@ python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
 python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
 
+# Un'immagine raster referenziata da HTML/metadata pubblici non deve superare 1 MB.
+# Il gate evita regressioni pesanti senza imporre conversioni a immagini gia efficienti.
+python3 "$ROOT/tools/test_public_image_performance_contract.py" "$DIST"
+
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
 # perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
