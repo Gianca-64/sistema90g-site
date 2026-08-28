@@ -114,6 +114,10 @@ python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
 # Il gate evita regressioni pesanti senza imporre conversioni a immagini gia efficienti.
 python3 "$ROOT/tools/test_public_image_performance_contract.py" "$DIST"
 
+# Gli URL creati a runtime devono funzionare anche sulle pagine annidate sotto
+# /approfondimenti/: CSS, fallback immagini e CTA non possono essere page-relative.
+python3 "$ROOT/tools/test_public_runtime_root_paths.py" "$DIST"
+
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
 # perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
