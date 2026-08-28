@@ -88,6 +88,10 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# P2: Home e Free Entry devono portare vicino alla decisione una prova concreta
+# di identita, indipendenza e casi verificabili, senza cambiare il funnel.
+python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
+
 # Ogni pagina di contenuto deve avere una UI di consenso funzionante prima che
 # privacy-consent.js inizializzi lo stato analytics. Il componente non duplica
 # eventuali banner storici gia presenti nel markup.
@@ -114,6 +118,10 @@ python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
 # Il consenso deve restare negato di default e ogni pagina pubblica deve esporre
 # una UI accessibile per accettare, rifiutare e riaprire le preferenze.
 python3 "$ROOT/tools/test_public_consent_contract.py" "$DIST"
+
+# P2: la prova di fiducia deve essere presente una sola volta sulla Home e prima
+# del punto di invio nel Free Entry.
+python3 "$ROOT/tools/test_public_trust_bridge_contract.py" "$DIST"
 
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
