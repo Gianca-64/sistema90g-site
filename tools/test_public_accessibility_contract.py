@@ -139,6 +139,25 @@ for page in all_pages:
     for item in parser.positive_tabindex:
         issues.append(f"{rel}: ordine tastiera forzato con {item}")
 
+# La chat viene creata a runtime e non compare nell'HTML statico. Verifichiamo
+# quindi anche il contratto minimo di accessibilità nel bundle pubblico.
+runtime_path = root / "privacy-consent.js"
+if not runtime_path.is_file():
+    issues.append("privacy-consent.js: runtime pubblico mancante")
+else:
+    runtime = runtime_path.read_text("utf-8", errors="ignore")
+    runtime_requirements = {
+        'role="dialog"': "chat senza role=dialog",
+        'aria-labelledby="s90g-chat-title"': "chat senza titolo collegato",
+        'id="s90g-chat-title"': "titolo chat senza id accessibile",
+        "if(open){close.focus()}": "apertura chat senza focus interno",
+        "if(returnFocus)launcher.focus()": "chiusura chat senza restituzione focus",
+        "setOpen(false,true)": "chiusura chat/Escape senza focus di ritorno",
+    }
+    for token, label in runtime_requirements.items():
+        if token not in runtime:
+            issues.append(f"privacy-consent.js: {label}")
+
 if issues:
     print("ERRORE: contratto accessibilità pubblico non rispettato:")
     for issue in issues:
@@ -147,5 +166,5 @@ if issues:
 
 print(
     f"OK public accessibility contract: {checked_pages} pagine di contenuto "
-    f"({len(TECHNICAL_PAGES)} pagina tecnica esclusa)"
+    f"({len(TECHNICAL_PAGES)} pagina tecnica esclusa) + chat dinamica"
 )
