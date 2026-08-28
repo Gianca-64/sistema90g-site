@@ -93,6 +93,10 @@ python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 # evitando markup inutile o divergente dal contenuto effettivamente mostrato.
 python3 "$ROOT/tools/normalize_public_search_semantics.py" "$DIST"
 
+# P2: pulizia editoriale puntuale delle guide recenti. Corregge nel solo output
+# pubblico residui di nomenclatura legacy e apostrofi mancanti gia verificati.
+python3 "$ROOT/tools/normalize_public_editorial_copy.py" "$DIST"
+
 # P2: Home e Free Entry devono portare vicino alla decisione una prova concreta
 # di identita, indipendenza e casi verificabili, senza cambiare il funnel.
 python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
@@ -139,6 +143,10 @@ python3 "$ROOT/tools/test_public_trust_bridge_contract.py" "$DIST"
 # P2: i cluster editoriali pilota devono mantenere il percorso hub -> guida -> caso
 # e il collegamento reciproco nelle sei coppie con prova pubblica disponibile.
 python3 "$ROOT/tools/test_public_content_clusters_contract.py" "$DIST"
+
+# P2: le guide recenti corrette devono restare prive di nomenclatura legacy visibile
+# e dei residui tipografici gia individuati durante l'audit qualitativo.
+python3 "$ROOT/tools/test_public_editorial_copy_contract.py" "$DIST"
 
 # P2: il Free Entry deve spiegare invio, prima lettura e assenza di acquisto automatico.
 python3 "$ROOT/tools/test_public_free_entry_expectation_contract.py" "$DIST"
