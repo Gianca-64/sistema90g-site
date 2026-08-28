@@ -11,6 +11,10 @@ TARGET = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
 if not TARGET.is_dir():
     raise SystemExit(f"ERRORE: directory non trovata: {TARGET}")
 
+LEGACY_ROUTE_MIGRATIONS = {
+    "acquisto-assistito-cucina": "sviluppo-avanzato-progetto-cucina",
+}
+
 # Cloudflare Workers Static Assets usa di default html_handling=auto-trailing-slash:
 # /pagina.html -> /pagina. Il contenuto pubblico deve quindi dichiarare e collegare
 # direttamente l'URL pulito, evitando canonical/sitemap che puntano a una redirect.
@@ -26,6 +30,9 @@ def clean_public_text(text: str) -> str:
     # La home resta semplicemente '/'.
     text = text.replace("https://sistema90g.it/index.html", "https://sistema90g.it/")
     text = text.replace("/index.html", "/")
+
+    for old_slug, new_slug in LEGACY_ROUTE_MIGRATIONS.items():
+        text = text.replace(old_slug, new_slug)
 
     def absolute_repl(match: re.Match[str]) -> str:
         suffix = match.group("suffix") or ""
@@ -47,6 +54,18 @@ for pattern in ("*.html", "*.xml"):
         updated = clean_public_text(original)
         if updated != original:
             path.write_text(updated, encoding="utf-8")
+            changed += 1
+
+# Anche i due runtime che classificano le pagine servizio devono conoscere il nuovo slug.
+for runtime_name in ("navigation-conversion.js", "privacy-consent.js"):
+    runtime = TARGET / runtime_name
+    if runtime.is_file():
+        original = runtime.read_text(encoding="utf-8", errors="strict")
+        updated = original
+        for old_slug, new_slug in LEGACY_ROUTE_MIGRATIONS.items():
+            updated = updated.replace(old_slug, new_slug)
+        if updated != original:
+            runtime.write_text(updated, encoding="utf-8")
             changed += 1
 
 # Nei redirect manteniamo la sorgente legacy (.html), ma portiamo la destinazione
@@ -82,6 +101,17 @@ if redirects.exists():
             lines.append(updated_line)
         else:
             lines.append(raw_line)
+
+    for old_slug, new_slug in LEGACY_ROUTE_MIGRATIONS.items():
+        for source in (f"/{old_slug}", f"/{old_slug}.html"):
+            rule = f"{source} /{new_slug} 301"
+            if rule not in lines:
+                lines.append(rule)
+                redirects_changed = True
+        legacy_file = TARGET / f"{old_slug}.html"
+        if legacy_file.exists():
+            legacy_file.unlink()
+            changed += 1
 
     if redirects_changed:
         redirects.write_text("\n".join(lines) + "\n", encoding="utf-8")
