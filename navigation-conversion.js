@@ -5,6 +5,8 @@
   const PORTAL_ORIGIN='https://portale.sistema90g.it';
   const SERVICE_PAGES=new Set([
     'progetto-cucina-sistema90g',
+    'consulenza-90g',
+    'verifica-90g',
     'seconda-opinione-cucina',
     'scelta-finiture-cucina',
     'restyling-cucina-esistente',
