@@ -87,6 +87,10 @@ python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 # proposti solo dopo la qualificazione del caso.
 python3 "$ROOT/tools/test_public_portal_entry_contract.py" "$DIST"
 
+# L'offerta pubblica deve restare allineata al listino canonico anche nelle
+# pagine dedicate a professionisti e rivenditori.
+python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
+
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
 # perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
