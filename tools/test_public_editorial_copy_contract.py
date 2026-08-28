@@ -34,12 +34,16 @@ FORBIDDEN = {
         'basta una Consulenza 90G',
     ],
     'cucina-piccola-come-progettarla.html': [
-        'puoi approfondire il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>',
+        'puoi approfondire il <a href="/progetto-cucina-sistema90g">Progetto Cucina 90G</a>',
     ],
     'errori-progetto-cucina.html': [
-        'servizio appropriato', 'può essere appropriata <a href="/servizi.html">Verifica 90G</a>',
-        'può essere più adatto il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>',
+        'servizio appropriato', 'può essere appropriata <a href="/servizi">Verifica 90G</a>',
+        'può essere più adatto il <a href="/progetto-cucina-sistema90g">Progetto Cucina 90G</a>',
         'Sottoponi gratuitamente il tuo caso →',
+    ],
+    'casi-analizzati.html': [
+        'valuta pertinenza e tipo di bisogno',
+        'percorso, contenuti e prezzo vengono indicati prima di iniziare',
     ],
 }
 
@@ -66,6 +70,10 @@ REQUIRED = {
     'errori-progetto-cucina.html': [
         'senza che tu debba scegliere in anticipo il servizio', 'prima ti diciamo quale lavoro è utile e quanto costa',
     ],
+    'casi-analizzati.html': [
+        'quale lavoro è utile e quanto costa',
+        'prima di iniziare sai che cosa verrà fatto e quanto costa',
+    ],
 }
 
 issues: list[str] = []
@@ -82,10 +90,28 @@ for filename, forbidden in FORBIDDEN.items():
         if token not in text:
             issues.append(f'{filename}: correzione attesa mancante: {token}')
 
+home = root / 'index.html'
+servizi = root / 'servizi.html'
+if not home.is_file():
+    issues.append('index.html: pagina mancante')
+else:
+    home_text = home.read_text('utf-8', errors='strict')
+    for href in ('/servizi#consulenza', '/servizi#verifica', '/servizi#progetto'):
+        if f'href="{href}"' not in home_text:
+            issues.append(f'index.html: collegamento servizio mancante {href}')
+
+if not servizi.is_file():
+    issues.append('servizi.html: pagina mancante')
+else:
+    servizi_text = servizi.read_text('utf-8', errors='strict')
+    for section_id in ('consulenza', 'verifica', 'progetto'):
+        if f'id="{section_id}"' not in servizi_text:
+            issues.append(f'servizi.html: ancora mancante #{section_id}')
+
 if issues:
-    print('ERRORE: contratto copy editoriale non rispettato:')
+    print('ERRORE: contratto copy/conversione editoriale non rispettato:')
     for issue in issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public editorial copy contract: 10 guide allineate a nomenclatura, linguaggio naturale e Free Entry')
+print('OK public editorial copy contract: 11 pagine allineate + Home instradata alle 3 sezioni servizio corrette')
