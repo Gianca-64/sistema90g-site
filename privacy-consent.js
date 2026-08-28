@@ -131,7 +131,7 @@ function s90gInferContentType(){
   if(slug.startsWith('casi-'))return 'case-category';
   if(location.pathname.includes('/approfondimenti/')||slug==='innovazioni')return 'article';
   if(['professionisti','professionisti-progetto-cucina','agenzie-immobiliari-cucina','rivenditori-cucine'].includes(slug))return 'professional';
-  if(['progetto-cucina-sistema90g','seconda-opinione-cucina','scelta-finiture-cucina','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina'].includes(slug))return 'service';
+  if(['progetto-cucina-sistema90g','consulenza-90g','verifica-90g','seconda-opinione-cucina','scelta-finiture-cucina','restyling-cucina-esistente','acquisto-assistito-cucina','servizi','controllo-progetto-cucina'].includes(slug))return 'service';
   if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
   return 'page';
 }
