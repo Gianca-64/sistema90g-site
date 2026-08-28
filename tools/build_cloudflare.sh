@@ -97,6 +97,10 @@ python3 "$ROOT/tools/normalize_public_search_semantics.py" "$DIST"
 # pubblico residui di nomenclatura legacy e apostrofi mancanti gia verificati.
 python3 "$ROOT/tools/normalize_public_editorial_copy.py" "$DIST"
 
+# P1 WOW: la Home deve aiutare a partire dalla situazione reale, senza chiedere
+# all'utente di scegliere in anticipo Progetto, Verifica o Consulenza.
+python3 "$ROOT/tools/inject_public_wow_situation_selector.py" "$DIST"
+
 # P2: Home e Free Entry devono portare vicino alla decisione una prova concreta
 # di identita, indipendenza e casi verificabili, senza cambiare il funnel.
 python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
@@ -147,6 +151,10 @@ python3 "$ROOT/tools/test_public_content_clusters_contract.py" "$DIST"
 # P2: le guide recenti corrette devono restare prive di nomenclatura legacy visibile
 # e dei residui tipografici gia individuati durante l'audit qualitativo.
 python3 "$ROOT/tools/test_public_editorial_copy_contract.py" "$DIST"
+
+# P1 WOW: il selettore Home deve coprire situazioni reali senza introdurre una
+# scelta obbligatoria del servizio o un secondo catalogo commerciale.
+python3 "$ROOT/tools/test_public_wow_situation_selector_contract.py" "$DIST"
 
 # P2: il Free Entry deve spiegare invio, prima lettura e assenza di acquisto automatico.
 python3 "$ROOT/tools/test_public_free_entry_expectation_contract.py" "$DIST"
