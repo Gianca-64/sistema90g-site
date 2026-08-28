@@ -18,7 +18,10 @@ HUBS = {
             'cucina-piccola-come-progettarla.html', 'cucina-open-space-tavolo-passaggi.html',
             'tavolo-vicino-cucina-spazi-sedute.html', 'penisola-cucina-distanze-passaggi.html',
             'lavello-sotto-finestra-cucina.html', 'profondita-cucina-75-cm.html',
-            'cucina-ad-angolo-guida.html',
+            'cucina-ad-angolo-guida.html', 'piano-lavoro-colonne-cucina.html',
+            'illuminazione-cucina-progetto.html', 'progettare-cucina-prima-impianti.html',
+            'vincoli-verticali-cucina-pensili-colonne-finestre.html',
+            'lavello-una-o-due-vasche-gocciolatoio.html',
         ],
     },
     'preventivo-acquisto': {
@@ -29,6 +32,7 @@ HUBS = {
             'preventivo-cucina-guida.html', 'confrontare-due-preventivi-cucina.html',
             'prima-di-firmare-ordine-cucina.html', 'voci-escluse-preventivo-cucina.html',
             'sconto-cucina-valore-reale.html', 'quando-verifica-indipendente-cucina.html',
+            'pareti-fuori-squadra-cucina.html',
         ],
     },
     'elettrodomestici-impianti': {
@@ -39,6 +43,9 @@ HUBS = {
             'piano-induzione-cucina.html', 'colonna-forno-microonde-cucina.html',
             'elettrodomestici-incasso-misure-cucina.html', 'cappa-aspirazione-cucina.html',
             'prese-impianti-cucina.html', 'altezza-pensili-spazio-top-cucina.html',
+            'elettrodomestici-rivenditore-o-acquisto-separato.html',
+            'frigorifero-incasso-o-libera-installazione.html',
+            'piano-induzione-aspirazione-integrata-o-cappa.html',
         ],
     },
     'materiali-finiture': {
