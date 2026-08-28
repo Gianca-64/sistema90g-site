@@ -174,9 +174,9 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 | `preventivo-acquisto-cucina-guide.html` | `images/hero-preventivo-90g-2026.jpg` | Un preventivo non è solo un totale: racconta una composizione, prodotti, servizi e condizioni. Leggerlo insieme al progetto aiuta cliente e  | Preventivo cucina letto insieme al progetto e ai servizi previsti |
 | `prima-di-firmare-ordine-cucina.html` | `images/hero-preventivo-90g-2026.jpg` | Verifica con il rivenditore che progetto aggiornato, rilievo, moduli, elettrodomestici, top, finiture, trasporto, montaggio, altri servizi,  | Progetto e preventivo cucina riletti insieme prima della conferma dell |
 | `privacy-policy.html` | `images/28_CONTATTI_RACCOLTA_MATERIALI.jpg` | Ultimo aggiornamento: 23 agosto 2026 | Dati e documenti associati a una richiesta Sistema 90G |
-| `professionisti-progetto-cucina.html` | `images/hero-rivenditori-processo-90g.webp` | La prima valutazione serve a capire gratuitamente se e come Sistema 90G può essere utile, senza attivare automaticamente un servizio. | Approfondimento specialistico di un progetto cucina a supporto del professionista |
+| `professionisti-progetto-cucina.html` | `images/hero-rivenditori-processo-90g.jpg` | La prima valutazione serve a capire gratuitamente se e come Sistema 90G può essere utile, senza attivare automaticamente un servizio. | Approfondimento specialistico di un progetto cucina a supporto del professionista |
 | `professionisti-progetto-cucina.html` | `images/12_CHI_SONO_CASO.jpg` | Invia il caso per una prima valutazione gratuita. Se serve un approfondimento, servizio, contenuti e prezzo vengono indicati prima di inizia | Analisi specialistica di un caso cucina per un professionista |
-| `professionisti.html` | `images/hero-rivenditori-processo-90g.webp` | Il cliente finale resta associato al professionista che presenta il caso. | Professionista che approfondisce un progetto cucina con supporto specialistico |
+| `professionisti.html` | `images/hero-rivenditori-processo-90g.jpg` | Il cliente finale resta associato al professionista che presenta il caso. | Professionista che approfondisce un progetto cucina con supporto specialistico |
 | `profondita-cucina-75-cm.html` | `images/caso-cucina-profondita-75-angolo.jpg` | Una profondità maggiore può aumentare piano di lavoro e volume contenitivo, ma deve essere verificata insieme a raggiungibilità, angoli, rac | Cucina con profondità maggiorata a 75 cm e verifica dell |
 | `progettare-cucina-guide.html` | `images/03_HOME_METODO.jpg` | Scopri Progetto Cucina Sistema 90G → | Schizzo progettuale Sistema 90G con planimetria, quote e verifica delle aperture in cucina |
 | `progettare-cucina-prima-impianti.html` | `images/hero-planimetria-90g-2026.jpg` | Quando il cantiere lo consente, conviene definire prima almeno la logica distributiva: posizione di lavello, lavastoviglie, cottura, colonne | Planimetria cucina con quote e predisposizioni da coordinare prima del cantiere |
@@ -505,7 +505,7 @@ Il numero di immagini per pagina non è un vincolo numerico: zero, una o più im
 - `sconto-cucina-valore-reale.html` — La percentuale di sconto da sola dice poco. Per capire se un'offerta è conveniente bisogna ricostruire ciò che si sta realmente acquistando.
 - `voci-escluse-preventivo-cucina.html` — Non tutti i rivenditori organizzano la fornitura nello stesso modo. Per confrontare due offerte è quindi utile capire quali attività e servi
 
-### `images/hero-rivenditori-processo-90g.webp` — 2 utilizzi
+### `images/hero-rivenditori-processo-90g.jpg` — 2 utilizzi
 
 - `professionisti-progetto-cucina.html` — La prima valutazione serve a capire gratuitamente se e come Sistema 90G può essere utile, senza attivare automaticamente un servizio.
 - `professionisti.html` — Il cliente finale resta associato al professionista che presenta il caso.
