@@ -39,6 +39,14 @@ REPLACEMENTS = {
         'dell ordine': "dell'ordine",
         'dell acquisto': "dell'acquisto",
     },
+    'confrontare-due-preventivi-cucina.html': {
+        "prima ricevi l'indicazione del percorso appropriato e del relativo prezzo.": "prima ti diciamo se serve davvero un approfondimento e, se sì, quale lavoro è adatto e quanto costa.",
+        '<p><a href="/analisi-preventiva#richiedi"><strong>Chiedi la valutazione gratuita →</strong></a></p>': '',
+    },
+    'voci-escluse-preventivo-cucina.html': {
+        'quanto incide sul percorso complessivo.': "quanto incide sul costo e sull'organizzazione complessiva.",
+        'chiarire il perimetro della propria offerta.': 'chiarire cosa comprende la propria offerta.',
+    },
 }
 
 changed: list[str] = []
