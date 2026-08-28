@@ -97,6 +97,10 @@ python3 "$ROOT/tools/normalize_public_search_semantics.py" "$DIST"
 # di identita, indipendenza e casi verificabili, senza cambiare il funnel.
 python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
 
+# P2: i sei casi reali devono dichiarare il percorso verso la guida tecnica e
+# il relativo hub; le guide corrispondenti devono riportare a hub e caso reale.
+python3 "$ROOT/tools/inject_public_content_clusters.py" "$DIST"
+
 # P2: prima del punto di invio il Free Entry deve chiarire cosa succede dopo,
 # senza promettere tempi o canali operativi non verificati.
 python3 "$ROOT/tools/inject_public_free_entry_expectation.py" "$DIST"
@@ -131,6 +135,10 @@ python3 "$ROOT/tools/test_public_consent_contract.py" "$DIST"
 # P2: la prova di fiducia deve essere presente una sola volta sulla Home e prima
 # del punto di invio nel Free Entry.
 python3 "$ROOT/tools/test_public_trust_bridge_contract.py" "$DIST"
+
+# P2: i cluster editoriali pilota devono mantenere il percorso hub -> guida -> caso
+# e il collegamento reciproco nelle sei coppie con prova pubblica disponibile.
+python3 "$ROOT/tools/test_public_content_clusters_contract.py" "$DIST"
 
 # P2: il Free Entry deve spiegare invio, prima lettura e assenza di acquisto automatico.
 python3 "$ROOT/tools/test_public_free_entry_expectation_contract.py" "$DIST"
