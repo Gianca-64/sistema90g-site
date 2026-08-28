@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from hashlib import sha256
 from pathlib import Path
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 import re
 import sys
 
@@ -36,6 +36,13 @@ def content_version(path: Path) -> str:
     return sha256(path.read_bytes()).hexdigest()[:12]
 
 
+def with_content_version(raw: str, version: str) -> str:
+    parsed = urlsplit(raw)
+    query_items = [(key, value) for key, value in parse_qsl(parsed.query, keep_blank_values=True) if key != "v"]
+    query_items.append(("v", version))
+    return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, urlencode(query_items), parsed.fragment))
+
+
 changed_files = 0
 rewritten_refs = 0
 missing_assets: list[str] = []
@@ -44,7 +51,6 @@ for html in sorted(root.rglob("*.html")):
     text = html.read_text("utf-8", errors="ignore")
 
     def replace(match: re.Match[str]) -> str:
-        nonlocal_rewritten = 0
         raw = match.group("url").strip()
 
         if not raw or raw.startswith(("http://", "https://", "//", "data:", "mailto:", "tel:", "#", "javascript:")):
@@ -59,10 +65,7 @@ for html in sorted(root.rglob("*.html")):
             missing_assets.append(f"{html.relative_to(root)} -> {raw}")
             return match.group(0)
 
-        version = content_version(asset)
-        query = f"v={version}"
-        updated = urlunsplit((parsed.scheme, parsed.netloc, parsed.path, query, parsed.fragment))
-
+        updated = with_content_version(raw, content_version(asset))
         if updated == raw:
             return match.group(0)
 
