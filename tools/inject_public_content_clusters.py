@@ -72,6 +72,19 @@ def inject(path: Path, block: str, marker: str) -> None:
     changed.append(path.name)
 
 
+def ensure_hub_link(path: Path, cluster: str, guide: str, guide_label: str) -> None:
+    text = path.read_text('utf-8', errors='strict')
+    guide_href = f'href="{public_url(guide)}"'
+    if guide_href in text:
+        return
+    marker = f'data-s90g-cluster-hub-link="{cluster}"'
+    block = (
+        f'<p class="s90g-trust" {marker}><strong>Approfondimento del cluster:</strong> '
+        f'<a href="{public_url(guide)}">{guide_label}</a></p>'
+    )
+    inject(path, block, marker)
+
+
 for cluster, data in CLUSTERS.items():
     case_path = root / data['case']
     guide_path = root / data['guide']
@@ -96,4 +109,6 @@ for cluster, data in CLUSTERS.items():
     )
     inject(guide_path, guide_block, guide_marker)
 
-print('Cluster contenuti pubblici integrati: ' + (', '.join(changed) if changed else 'gia presenti'))
+    ensure_hub_link(hub_path, cluster, data['guide'], data['guide_label'])
+
+print('Cluster contenuti pubblici integrati: ' + (', '.join(dict.fromkeys(changed)) if changed else 'gia presenti'))
