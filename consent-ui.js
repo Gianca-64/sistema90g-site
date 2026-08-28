@@ -14,7 +14,7 @@
     banner.innerHTML = `
       <div class="s90g-consent-copy">
         <strong id="s90g-consent-title">Privacy e cookie</strong>
-        <p>Usiamo cookie tecnici necessari al funzionamento del sito. Solo con il tuo consenso attiviamo la misurazione anonima delle visite per capire quali contenuti sono utili.</p>
+        <p>Usiamo cookie tecnici necessari al funzionamento del sito. Solo con il tuo consenso attiviamo la misurazione statistica delle visite per capire quali contenuti sono utili.</p>
         <p class="s90g-consent-links"><a href="/privacy-policy.html">Privacy</a><a href="/cookie-policy.html">Cookie policy</a></p>
       </div>
       <div class="s90g-consent-actions">
