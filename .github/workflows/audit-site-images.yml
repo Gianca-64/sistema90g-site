@@ -2,15 +2,6 @@ name: Audit immagini sito
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - tools/audit_site_images.py
-      - .github/workflows/audit-site-images.yml
-      - '*.html'
-      - '*.js'
-      - 'images/**'
 
 permissions:
   contents: write
