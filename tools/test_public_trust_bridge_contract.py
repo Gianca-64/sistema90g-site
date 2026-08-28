@@ -11,8 +11,7 @@ if not root.is_dir():
 checks = {
     'index.html': [
         'data-s90g-trust-bridge="home"',
-        'Gian Carlo Primo',
-        'progettazione, vendita, montaggio e post-vendita',
+        'esperienza diretta tra progettazione, vendita, montaggio e post-vendita',
         'non vende cucine',
         '/chi-e-sistema90g',
         '/metodo-sistema90g',
@@ -41,6 +40,14 @@ for rel, tokens in checks.items():
     if text.count('data-s90g-trust-bridge=') != 1:
         issues.append(f'{rel}: trust bridge duplicato o mancante')
 
+home = (root / 'index.html').read_text('utf-8', errors='ignore') if (root / 'index.html').is_file() else ''
+if home:
+    start = home.find('data-s90g-trust-bridge="home"')
+    end = home.find('</section>', start)
+    home_bridge = home[start:end] if start >= 0 and end >= 0 else ''
+    if 'Gian Carlo Primo' in home_bridge:
+        issues.append('index.html: il trust bridge Home deve restare brand-first, senza nome personale')
+
 free_entry = (root / 'analisi-preventiva.html').read_text('utf-8', errors='ignore') if (root / 'analisi-preventiva.html').is_file() else ''
 if free_entry:
     bridge_pos = free_entry.find('data-s90g-trust-bridge="free-entry"')
@@ -54,4 +61,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public trust bridge contract: Home + Free Entry con identita, indipendenza e prove verificabili')
+print('OK public trust bridge contract: Home brand-first + identita personale nel Free Entry')
