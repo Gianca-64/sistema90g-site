@@ -50,7 +50,7 @@ else:
 
     proof_required = [
         'Guarda cosa vede Sistema 90G',
-        'images/caso-lavastoviglie-passaggio-cucina.jpg',
+        'images/05_HOME_CASO_1.jpg',
         'images/caso-isola-passaggi-cucina.jpg',
         'Apertura reale', 'Passaggio residuo', 'Sedute in uso', 'Percorso operativo',
         'Conseguenza da verificare:',
