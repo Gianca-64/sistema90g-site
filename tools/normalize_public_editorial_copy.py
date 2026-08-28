@@ -47,6 +47,20 @@ REPLACEMENTS = {
         'quanto incide sul percorso complessivo.': "quanto incide sul costo e sull'organizzazione complessiva.",
         'chiarire il perimetro della propria offerta.': 'chiarire cosa comprende la propria offerta.',
     },
+    'top-cucina-materiali-guida.html': {
+        'Se la cucina è ancora in fase di definizione, il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a> permette di leggere il top insieme a composizione e funzioni; l’add-on <a href="/scelta-finiture-cucina.html">Finiture e materiali</a> approfondisce il confronto tra alternative.': 'Se il dubbio riguarda il tuo progetto o due materiali concreti, puoi partire dalla valutazione iniziale: prima leggiamo il problema e poi ti diciamo se basta un chiarimento o se serve un approfondimento sulle finiture.',
+    },
+    'ante-cucina-materiali-manutenzione.html': {
+        'La prima valutazione serve a capire se il dubbio è leggibile dal materiale e se basta una Consulenza 90G o se ha senso approfondire la scelta nel progetto.': 'La prima valutazione serve a capire se il dubbio è leggibile dal materiale, se basta chiarire il confronto oppure se la scelta richiede un approfondimento nel progetto.',
+    },
+    'cucina-piccola-come-progettarla.html': {
+        'Se hai già un progetto, puoi partire da una prima valutazione gratuita: non serve decidere in anticipo se il dubbio riguarda un solo punto o l’intera composizione. Se invece la cucina deve ancora essere impostata, puoi approfondire il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>.': 'Se hai già un progetto, o se la cucina deve ancora essere impostata, puoi partire da una prima valutazione gratuita: non serve decidere in anticipo se il dubbio riguarda un solo punto o l’intera composizione. Prima leggiamo il problema e poi ti diciamo se serve davvero un approfondimento.',
+    },
+    'errori-progetto-cucina.html': {
+        "se serve un'analisi professionale, ricevi prima indicazione del servizio appropriato e del prezzo.": "se serve un'analisi professionale, prima ti diciamo quale lavoro è utile e quanto costa.",
+        'Se uno di questi errori riguarda una cucina già disegnata o un preventivo già ricevuto, la verifica più utile è quella fatta sul materiale reale: misure disponibili, composizione proposta, aperture, impianti ed eventuali vincoli dell’ambiente. In quel caso può essere appropriata <a href="/servizi.html">Verifica 90G</a>. Se invece la cucina deve ancora essere definita, può essere più adatto il <a href="/progetto-cucina-sistema90g.html">Progetto Cucina 90G</a>. La valutazione gratuita serve proprio a stabilirlo prima di qualsiasi acquisto.': 'Se uno di questi errori riguarda una cucina già disegnata, un preventivo già ricevuto o una cucina ancora da definire, la lettura più utile parte dal materiale reale: misure disponibili, composizione, aperture, impianti ed eventuali vincoli dell’ambiente. La valutazione iniziale serve a capire se il dubbio è circoscritto oppure se richiede un lavoro più ampio, senza che tu debba scegliere in anticipo il servizio.',
+        '<a href="/analisi-preventiva#richiedi"><strong>Sottoponi gratuitamente il tuo caso →</strong></a>': '',
+    },
 }
 
 changed: list[str] = []
