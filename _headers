@@ -24,3 +24,11 @@ https://:version.:project.pages.dev/*
 # Workers Static Assets usa workers.dev per il collaudo tecnico.
 https://:worker.:subdomain.workers.dev/*
   X-Robots-Tag: noindex, nofollow
+
+# CSS e JavaScript ricevono URL con hash del contenuto durante il build.
+# Possono quindi essere conservati a lungo dal browser senza bloccare aggiornamenti.
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
