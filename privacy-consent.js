@@ -23,7 +23,7 @@ function loadAuditFix(){
   if(document.querySelector('link[data-s90g-audit-fix]'))return;
   const link=document.createElement('link');
   link.rel='stylesheet';
-  link.href='sistema90g-audit-fix-20260707.css?v=20260708am';
+  link.href='/sistema90g-audit-fix-20260707.css?v=20260708am';
   link.dataset.s90gAuditFix='true';
   document.head.appendChild(link);
 }
@@ -65,8 +65,8 @@ function addStructuredData(){
 function archiveFallback(img){
   const card=img.closest('.s90g-archive-card');
   const label=card?.querySelector('.s90g-archive-copy span')?.textContent.toLowerCase()||'';
-  if(label.includes('cucina')||label.includes('preventivo'))return 'images/19_CASI_CUCINA.jpg?v=20260715a';
-  return 'images/19_CASI_CUCINA.jpg?v=20260715a';
+  if(label.includes('cucina')||label.includes('preventivo'))return '/images/19_CASI_CUCINA.jpg?v=20260715a';
+  return '/images/19_CASI_CUCINA.jpg?v=20260715a';
 }
 function optimizeImages(){
   const images=[...document.querySelectorAll('img')];
@@ -76,7 +76,7 @@ function optimizeImages(){
     const applyFallback=()=>{
       if(img.dataset.s90gFallbackApplied)return;
       img.dataset.s90gFallbackApplied='true';
-      img.src=isArchive?archiveFallback(img):'images/19_CASI_CUCINA.jpg?v=20260715a';
+      img.src=isArchive?archiveFallback(img):'/images/19_CASI_CUCINA.jpg?v=20260715a';
     };
     img.addEventListener('error',applyFallback,{once:true});
     if(isArchive){
@@ -140,7 +140,7 @@ function s90gPrepareGuidedPathLinks(){
   const campaignKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const current=new URL(location.href);
   document.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
-    const target=new URL(link.getAttribute('href')||'analisi-preventiva.html#richiedi',location.href);
+    const target=new URL(link.getAttribute('href')||'/analisi-preventiva.html#richiedi',location.href);
     target.searchParams.set('source_page',link.dataset.sourcePage||s90gPageSlug());
     target.searchParams.set('content_type',link.dataset.contentType||s90gInferContentType());
     target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
@@ -166,7 +166,7 @@ function addWhatsAppChat(){
   if(document.querySelector('.s90g-chat-launcher'))return;
   const wrapper=document.createElement('div');
   wrapper.className='s90g-chat-widget';
-  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Se vuoi sottoporre foto, planimetrie o preventivi, invia gratuitamente il caso: solo se serve un lavoro professionale ti verranno indicati contenuti e prezzo prima di procedere.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="analisi-preventiva.html#richiedi" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Sottoponi il caso</a></div></section>`;
+  wrapper.innerHTML=`<button class="s90g-chat-launcher" type="button" aria-expanded="false" aria-controls="s90g-chat-popup"><span aria-hidden="true">💬</span><span>Chat</span></button><section class="s90g-chat-popup" id="s90g-chat-popup" hidden aria-label="Chat Sistema 90G"><button class="s90g-chat-close" type="button" aria-label="Chiudi la chat">×</button><p class="s90g-chat-kicker">Domande rapide</p><h2>Come posso aiutarti?</h2><p>Per una domanda veloce puoi aprire WhatsApp. Se vuoi sottoporre foto, planimetrie o preventivi, invia gratuitamente il caso: solo se serve un lavoro professionale ti verranno indicati contenuti e prezzo prima di procedere.</p><div class="s90g-chat-actions"><a class="s90g-chat-primary" href="${WHATSAPP_CHAT_URL}" target="_blank" rel="noopener" data-track-whatsapp>Apri WhatsApp</a><a class="s90g-chat-secondary" href="/analisi-preventiva.html#richiedi" data-start-path data-content-type="chat" data-cta-position="chat" data-service="">Sottoponi il caso</a></div></section>`;
   document.body.appendChild(wrapper);
   const cookieBanner=document.getElementById('cookie-banner');
   const syncChatVisibility=()=>{const bannerIsVisible=cookieBanner&&!cookieBanner.hidden;wrapper.style.display=bannerIsVisible?'none':'';};
