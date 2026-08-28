@@ -107,7 +107,7 @@ python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
 python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
 
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
-# lingua, titolo, main/H1, alt, ID duplicati, controlli e pulsanti accessibili.
+# lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
 python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
 
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
