@@ -82,6 +82,11 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# Ogni CSS/JS locale riceve nel solo output pubblico una query v= derivata
+# dal contenuto reale del file. La sorgente resta leggibile e ogni modifica futura
+# invalida automaticamente la cache browser senza bump manuali.
+python3 "$ROOT/tools/version_public_static_assets.py" "$DIST"
+
 # Il Portale pubblico accetta soltanto il Free Entry. Ogni CTA pubblica deve quindi
 # usare esplicitamente service=valutazione-iniziale; i servizi a pagamento vengono
 # proposti solo dopo la qualificazione del caso.
@@ -90,6 +95,10 @@ python3 "$ROOT/tools/test_public_portal_entry_contract.py" "$DIST"
 # L'offerta pubblica deve restare allineata al listino canonico anche nelle
 # pagine dedicate a professionisti e rivenditori.
 python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
+
+# La cache lunga immutable e consentita solo se tutti i riferimenti CSS/JS pubblici
+# portano la versione automatica basata sul contenuto.
+python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
 
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
