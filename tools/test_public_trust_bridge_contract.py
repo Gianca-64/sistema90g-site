@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 import sys
 
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('dist')
@@ -13,16 +14,16 @@ checks = {
         'data-s90g-trust-bridge="home"',
         'esperienza diretta tra progettazione, vendita, montaggio e post-vendita',
         'non vende cucine',
-        '/chi-e-sistema90g',
-        '/metodo-sistema90g',
-        '/casi-analizzati',
+        'href="/chi-e-sistema90g"',
+        'href="/metodo-sistema90g"',
+        'href="/casi-analizzati"',
     ],
     'analisi-preventiva.html': [
         'data-s90g-trust-bridge="free-entry"',
         'Gian Carlo Primo',
         'progettazione, vendita, montaggio e post-vendita',
-        '/chi-e-sistema90g',
-        '/casi-analizzati',
+        'href="/chi-e-sistema90g"',
+        'href="/casi-analizzati"',
         'id="richiedi"',
     ],
 }
@@ -47,6 +48,8 @@ if home:
     home_bridge = home[start:end] if start >= 0 and end >= 0 else ''
     if 'Gian Carlo Primo' in home_bridge:
         issues.append('index.html: il trust bridge Home deve restare brand-first, senza nome personale')
+    if '.html"' in home_bridge:
+        issues.append('index.html: il trust bridge deve usare URL pubblici canonici senza .html')
 
 free_entry = (root / 'analisi-preventiva.html').read_text('utf-8', errors='ignore') if (root / 'analisi-preventiva.html').is_file() else ''
 if free_entry:
@@ -54,6 +57,11 @@ if free_entry:
     request_pos = free_entry.find('id="richiedi"')
     if bridge_pos < 0 or request_pos < 0 or bridge_pos > request_pos:
         issues.append('analisi-preventiva.html: trust bridge deve precedere il punto di invio')
+    start = free_entry.find('data-s90g-trust-bridge="free-entry"')
+    end = free_entry.find('</section>', start)
+    free_bridge = free_entry[start:end] if start >= 0 and end >= 0 else ''
+    if '.html"' in free_bridge:
+        issues.append('analisi-preventiva.html: il trust bridge deve usare URL pubblici canonici senza .html')
 
 case_pages = [
     'caso-lavastoviglie-passaggio-cucina.html',
@@ -92,10 +100,57 @@ else:
     if text.count('data-s90g-case-proof-boundary="true"') != 1:
         issues.append('casi-analizzati.html: confine prova duplicato o mancante')
 
+nav_items = [
+    ('/servizi', 'Servizi'),
+    ('/analisi-preventiva', 'Come funziona'),
+    ('/domande-cucina-faq', 'Domande'),
+    ('/casi-analizzati', 'Casi reali'),
+    ('/professionisti', 'Professionisti'),
+    ('/rivenditori-cucine', 'Rivenditori'),
+    ('/metodo-sistema90g', 'Metodo e AI'),
+    ('/innovazioni', 'Innovazioni'),
+    ('/chi-e-sistema90g', 'Chi sono'),
+    ('/contatti', 'Contatti'),
+]
+nav_current = {
+    'index.html': None,
+    'servizi.html': '/servizi',
+    'analisi-preventiva.html': '/analisi-preventiva',
+    'domande-cucina-faq.html': '/domande-cucina-faq',
+    'casi-analizzati.html': '/casi-analizzati',
+    'professionisti.html': '/professionisti',
+    'rivenditori-cucine.html': '/rivenditori-cucine',
+    'metodo-sistema90g.html': '/metodo-sistema90g',
+    'innovazioni.html': '/innovazioni',
+    'chi-e-sistema90g.html': '/chi-e-sistema90g',
+    'contatti.html': '/contatti',
+}
+nav_pattern = re.compile(r'<nav\b[^>]*class="[^"]*\bs90g-nav\b[^"]*"[^>]*>(.*?)</nav>', re.S)
+link_pattern = re.compile(r'<a([^>]*) href="([^"]+)">([^<]+)</a>')
+for rel, current in nav_current.items():
+    path = root / rel
+    if not path.is_file():
+        issues.append(f'{rel}: pagina strategica mancante')
+        continue
+    text = path.read_text('utf-8', errors='ignore')
+    match = nav_pattern.search(text)
+    if not match:
+        issues.append(f'{rel}: navigazione primaria mancante')
+        continue
+    links = [(href, label, attrs) for attrs, href, label in link_pattern.findall(match.group(1))]
+    if [(href, label) for href, label, _ in links] != nav_items:
+        issues.append(f'{rel}: menu principale diverso dalla sequenza canonica')
+    currents = [href for href, _, attrs in links if 'aria-current="page"' in attrs]
+    expected = [] if current is None else [current]
+    if currents != expected:
+        issues.append(f'{rel}: aria-current errato: {currents}, atteso {expected}')
+    if 'aria-label="Navigazione principale"' not in match.group(0):
+        issues.append(f'{rel}: manca aria-label sulla navigazione principale')
+
 if issues:
-    print('ERRORE: contratto trust/prova pubblico non rispettato:')
+    print('ERRORE: contratto trust/prova/navigazione pubblico non rispettato:')
     for issue in issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public trust bridge contract: Home brand-first + identita nel Free Entry + 6 casi reali anonimizzati con limiti')
+print('OK public trust bridge contract: trust + 6 casi reali + 11 pagine con navigazione canonica')
