@@ -82,6 +82,11 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# Il Portale pubblico accetta soltanto il Free Entry. Ogni CTA pubblica deve quindi
+# usare esplicitamente service=valutazione-iniziale; i servizi a pagamento vengono
+# proposti solo dopo la qualificazione del caso.
+python3 "$ROOT/tools/test_public_portal_entry_contract.py" "$DIST"
+
 # Il vecchio percorso guidato con catalogo/prezzi legacy resta nel repository solo
 # come debito storico di sviluppo. Controlliamo le sole pagine che sopravvivono nel
 # perimetro pubblico, poi rimuoviamo gli asset legacy dall'output.
