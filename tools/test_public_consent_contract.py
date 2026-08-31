@@ -12,6 +12,7 @@ if not root.is_dir():
 
 TECHNICAL_PAGES = {Path('consent-bridge.html')}
 attr_re = re.compile(r'''(?:src|href)\s*=\s*["']([^"']+)["']''', re.I)
+inline_css_re = re.compile(r'<style\b[^>]*data-s90g-consent-ui-style[^>]*>(.*?)</style>', re.I | re.S)
 issues: list[str] = []
 checked = 0
 
@@ -26,10 +27,19 @@ for page in sorted(root.rglob('*.html')):
     def count_suffix(name: str) -> int:
         return sum(1 for ref in refs if ref.endswith('/' + name) or ref == name)
 
-    for name in ('consent-ui.css', 'consent-ui.js', 'privacy-consent.js'):
+    for name in ('consent-ui.js', 'privacy-consent.js'):
         count = count_suffix(name)
         if count != 1:
             issues.append(f'{rel}: atteso 1 riferimento a {name}, trovati {count}')
+
+    if count_suffix('consent-ui.css') != 0:
+        issues.append(f'{rel}: consent-ui.css non deve generare una richiesta esterna')
+
+    inline_matches = inline_css_re.findall(text)
+    if len(inline_matches) != 1:
+        issues.append(f'{rel}: atteso 1 blocco CSS Consent UI inline, trovati {len(inline_matches)}')
+    elif '.s90g-consent-banner' not in inline_matches[0]:
+        issues.append(f'{rel}: CSS Consent UI inline incompleto')
 
     ui_pos = text.find('consent-ui.js')
     privacy_pos = text.find('privacy-consent.js')
@@ -59,7 +69,7 @@ else:
             issues.append(f'consent-ui.js: {label}')
 
 if not css_path.is_file():
-    issues.append('consent-ui.css: asset pubblico mancante')
+    issues.append('consent-ui.css: asset sorgente pubblico mancante')
 else:
     css = css_path.read_text('utf-8', errors='ignore')
     for token, label in {
@@ -93,6 +103,6 @@ if issues:
     raise SystemExit(1)
 
 print(
-    f'OK public consent contract: {checked} pagine con Consent UI + '
+    f'OK public consent contract: {checked} pagine con Consent UI CSS inline + '
     'privacy-consent, analytics denied fino a consenso'
 )
