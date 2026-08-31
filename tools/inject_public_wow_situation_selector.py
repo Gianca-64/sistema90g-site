@@ -64,9 +64,11 @@ if bad:
     detail = ', '.join(f'{name}={len(source_tags[name])}' for name in bad)
     raise SystemExit(f'ERRORE: riferimenti CSS Home inattesi: {detail}')
 
+# data-s90g-audit-fix fa sì che privacy-consent.js riconosca che sulla Home le
+# correzioni audit sono già presenti e non aggiunga un secondo stylesheet a runtime.
 text = text.replace(
     source_tags[initial_sources[0]][0],
-    f'<link rel="stylesheet" href="/{bundle_name}" data-s90g-home-critical>',
+    f'<link rel="stylesheet" href="/{bundle_name}" data-s90g-home-critical data-s90g-audit-fix>',
     1,
 )
 for name in initial_sources[1:]:
