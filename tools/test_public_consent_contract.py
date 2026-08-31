@@ -12,6 +12,14 @@ if not root.is_dir():
 
 TECHNICAL_PAGES = {Path('consent-bridge.html')}
 attr_re = re.compile(r'''(?:src|href)\s*=\s*["']([^"']+)["']''', re.I)
+nav_bootstrap_script_re = re.compile(
+    r'<script\b[^>]*data-s90g-nav-bootstrap[^>]*>\s*document\.documentElement\.classList\.add\(["\']s90g-js["\']\)\s*</script>',
+    re.I,
+)
+nav_bootstrap_style_re = re.compile(
+    r'<style\b[^>]*data-s90g-nav-bootstrap[^>]*>.*?html\.s90g-js\s+\.s90g-header\s+\.s90g-nav\s*\{display:none\}.*?html\.s90g-js\s+\.s90g-header\.is-nav-open\s+\.s90g-nav\s*\{display:grid\}.*?</style>',
+    re.I | re.S,
+)
 issues: list[str] = []
 checked = 0
 
@@ -30,6 +38,16 @@ for page in sorted(root.rglob('*.html')):
         count = count_suffix(name)
         if count != 1:
             issues.append(f'{rel}: atteso 1 riferimento a {name}, trovati {count}')
+
+    script_match = nav_bootstrap_script_re.search(text)
+    style_match = nav_bootstrap_style_re.search(text)
+    if not script_match:
+        issues.append(f'{rel}: bootstrap JS navigazione mobile mancante')
+    if not style_match:
+        issues.append(f'{rel}: stile bootstrap navigazione mobile mancante')
+    first_stylesheet = re.search(r'<link\b[^>]*rel=["\']stylesheet["\'][^>]*>', text, re.I)
+    if script_match and first_stylesheet and script_match.start() > first_stylesheet.start():
+        issues.append(f'{rel}: bootstrap navigazione deve precedere il primo stylesheet')
 
     ui_pos = text.find('consent-ui.js')
     privacy_pos = text.find('privacy-consent.js')
@@ -87,12 +105,12 @@ else:
             issues.append(f'privacy-consent.js: {label}')
 
 if issues:
-    print('ERRORE: contratto consenso pubblico non rispettato:')
+    print('ERRORE: contratto UI pubblico non rispettato:')
     for issue in issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
 print(
-    f'OK public consent contract: {checked} pagine con Consent UI + '
-    'privacy-consent, analytics denied fino a consenso'
+    f'OK public consent contract: {checked} pagine con nav mobile stabile + '
+    'Consent UI + privacy-consent, analytics denied fino a consenso'
 )
