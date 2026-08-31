@@ -10,11 +10,18 @@ if not root.is_dir():
     raise SystemExit(f'ERRORE: directory pubblica non trovata: {root}')
 
 TECHNICAL_PAGES = {Path('consent-bridge.html')}
-CSS_TAG = '<link rel="stylesheet" href="/consent-ui.css" data-s90g-consent-ui>'
+INLINE_CSS_MARKER = 'data-s90g-consent-ui-style'
 JS_TAG = '<script defer src="/consent-ui.js" data-s90g-consent-ui></script>'
 PRIVACY_TAG = '<script defer src="/privacy-consent.js"></script>'
 
-css_re = re.compile(r'<link\b[^>]*href=["\'][^"\']*consent-ui\.css(?:\?[^"\']*)?["\'][^>]*>', re.I)
+css_asset = root / 'consent-ui.css'
+if not css_asset.is_file():
+    raise SystemExit('ERRORE: consent-ui.css mancante nell\'output pubblico')
+css_text = css_asset.read_text('utf-8', errors='strict').strip()
+INLINE_CSS_TAG = f'<style {INLINE_CSS_MARKER}>{css_text}</style>'
+
+external_css_re = re.compile(r'<link\b[^>]*href=["\'][^"\']*consent-ui\.css(?:\?[^"\']*)?["\'][^>]*>', re.I)
+inline_css_re = re.compile(r'<style\b[^>]*data-s90g-consent-ui-style[^>]*>.*?</style>', re.I | re.S)
 ui_js_re = re.compile(r'<script\b[^>]*src=["\'][^"\']*consent-ui\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', re.I)
 privacy_re = re.compile(r'<script\b[^>]*src=["\'][^"\']*privacy-consent\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', re.I)
 
@@ -31,11 +38,15 @@ for page in sorted(root.rglob('*.html')):
     text = page.read_text('utf-8', errors='ignore')
     original = text
 
-    if not css_re.search(text):
+    # Il CSS del banner e molto piccolo e deve essere disponibile subito, ma non
+    # giustifica una richiesta render-blocking separata. Lo incorporiamo quindi
+    # nel documento mantenendo identico il comportamento visivo e senza FOUC.
+    text = external_css_re.sub('', text)
+    if not inline_css_re.search(text):
         if '</head>' not in text.lower():
-            issues.append(f'{rel}: </head> mancante per iniezione consent-ui.css')
+            issues.append(f'{rel}: </head> mancante per iniezione Consent UI inline')
         else:
-            text = re.sub(r'</head>', CSS_TAG + '</head>', text, count=1, flags=re.I)
+            text = re.sub(r'</head>', INLINE_CSS_TAG + '</head>', text, count=1, flags=re.I)
 
     privacy_match = privacy_re.search(text)
     ui_match = ui_js_re.search(text)
@@ -60,5 +71,5 @@ if issues:
 
 print(
     f'Consent UI pubblico integrato: {checked} pagine di contenuto, '
-    f'{changed} aggiornate, privacy-consent aggiunto a {privacy_added}'
+    f'{changed} aggiornate, CSS inline, privacy-consent aggiunto a {privacy_added}'
 )
