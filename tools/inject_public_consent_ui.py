@@ -13,10 +13,23 @@ TECHNICAL_PAGES = {Path('consent-bridge.html')}
 CSS_TAG = '<link rel="stylesheet" href="/consent-ui.css" data-s90g-consent-ui>'
 JS_TAG = '<script defer src="/consent-ui.js" data-s90g-consent-ui></script>'
 PRIVACY_TAG = '<script defer src="/privacy-consent.js"></script>'
+NAV_BOOTSTRAP_MARKER = 'data-s90g-nav-bootstrap'
+NAV_BOOTSTRAP_TAG = (
+    '<script data-s90g-nav-bootstrap>'
+    "document.documentElement.classList.add('s90g-js')"
+    '</script>'
+    '<style data-s90g-nav-bootstrap>'
+    '@media(max-width:1180px){'
+    'html.s90g-js .s90g-header .s90g-nav{display:none}'
+    'html.s90g-js .s90g-header.is-nav-open .s90g-nav{display:grid}'
+    '}'
+    '</style>'
+)
 
 css_re = re.compile(r'<link\b[^>]*href=["\'][^"\']*consent-ui\.css(?:\?[^"\']*)?["\'][^>]*>', re.I)
 ui_js_re = re.compile(r'<script\b[^>]*src=["\'][^"\']*consent-ui\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', re.I)
 privacy_re = re.compile(r'<script\b[^>]*src=["\'][^"\']*privacy-consent\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', re.I)
+nav_bootstrap_re = re.compile(r'<(?:script|style)\b[^>]*data-s90g-nav-bootstrap[^>]*>.*?</(?:script|style)>', re.I | re.S)
 
 issues: list[str] = []
 changed = 0
@@ -30,6 +43,16 @@ for page in sorted(root.rglob('*.html')):
     checked += 1
     text = page.read_text('utf-8', errors='ignore')
     original = text
+
+    # Progressive enhancement della navigazione mobile: senza JavaScript la nav
+    # resta visibile; con JavaScript viene marcata prima del primo paint, evitando
+    # che la nav completa venga renderizzata e poi nascosta a DOMContentLoaded.
+    text = nav_bootstrap_re.sub('', text)
+    head_match = re.search(r'<head\b[^>]*>', text, flags=re.I)
+    if not head_match:
+        issues.append(f'{rel}: <head> mancante per bootstrap navigazione')
+    else:
+        text = text[:head_match.end()] + NAV_BOOTSTRAP_TAG + text[head_match.end():]
 
     if not css_re.search(text):
         if '</head>' not in text.lower():
@@ -53,12 +76,12 @@ for page in sorted(root.rglob('*.html')):
         changed += 1
 
 if issues:
-    print('ERRORE: impossibile integrare Consent UI pubblico:', file=sys.stderr)
+    print('ERRORE: impossibile integrare UI pubblica:', file=sys.stderr)
     for issue in issues:
         print(f' - {issue}', file=sys.stderr)
     raise SystemExit(1)
 
 print(
     f'Consent UI pubblico integrato: {checked} pagine di contenuto, '
-    f'{changed} aggiornate, privacy-consent aggiunto a {privacy_added}'
+    f'{changed} aggiornate, nav bootstrap stabile, privacy-consent aggiunto a {privacy_added}'
 )
