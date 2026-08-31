@@ -92,6 +92,21 @@ else:
     if 'data-s90g-audit-fix' not in text:
         issues.append('index.html: marker audit-fix iniziale mancante')
 
+    # Il runtime di navigazione deve essere scoperto dal parser e defer sulla Home,
+    # non aggiunto soltanto a DOMContentLoaded da privacy-consent.js.
+    nav_script_re = re.compile(r'<script\b[^>]*src=["\'][^"\']*navigation-conversion\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', re.I)
+    nav_scripts = nav_script_re.findall(text)
+    if len(nav_scripts) != 1:
+        issues.append(f'index.html: atteso 1 navigation-conversion.js anticipato, trovati {len(nav_scripts)}')
+    else:
+        tag = nav_scripts[0]
+        if 'defer' not in tag:
+            issues.append('index.html: navigation-conversion.js anticipato deve essere defer')
+        if 'data-s90g-navigation-conversion' not in tag:
+            issues.append('index.html: marker navigation-conversion anticipato mancante')
+        if text.find(tag) > text.lower().find('</head>'):
+            issues.append('index.html: navigation-conversion.js deve essere nel head')
+
     bundle = root / bundle_name
     if not bundle.is_file():
         issues.append(f'{bundle_name}: asset generato mancante')
@@ -142,4 +157,4 @@ if issues:
         print(' -', issue)
     raise SystemExit(1)
 
-print('OK public WOW Home: 6 situazioni + 2 casi + bundle CSS Home con audit-fix iniziale e cascata invariata')
+print('OK public WOW Home: 6 situazioni + 2 casi + CSS finale iniziale + navigazione anticipata')
