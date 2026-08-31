@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from urllib.parse import urlsplit
+import re
 import sys
 
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('dist')
@@ -29,5 +31,44 @@ if 'data-s90g-wow-visual-proof="true"' not in text:
     text = text.replace(selector_anchor, proof + selector_anchor, 1)
     changed.append('prova visuale')
 
+# P1 performance Home: i tre fogli sono piccoli e vengono applicati tutti in modo
+# sincrono. Manteniamo quindi identico timing e ordine di cascata, ma li serviamo
+# con una sola richiesta per evitare round-trip separati su rete mobile lenta.
+css_sources = [
+    'sistema90g-visual-2026.css',
+    's90g-offer-2026.css',
+    's90g-wow-visual-proof.css',
+]
+bundle_name = 's90g-home-critical.css'
+for name in css_sources:
+    if not (root / name).is_file():
+        raise SystemExit(f'ERRORE: CSS Home sorgente mancante: {name}')
+
+parts = []
+for name in css_sources:
+    css = (root / name).read_text('utf-8', errors='strict').rstrip()
+    parts.append(f'/* bundled: {name} */\n{css}')
+(root / bundle_name).write_text('\n\n'.join(parts) + '\n', 'utf-8')
+
+link_re = re.compile(r'<link\b[^>]*rel=["\']stylesheet["\'][^>]*href=["\']([^"\']+)["\'][^>]*>', re.I)
+source_tags = {name: [] for name in css_sources}
+for match in link_re.finditer(text):
+    name = Path(urlsplit(match.group(1)).path).name
+    if name in source_tags:
+        source_tags[name].append(match.group(0))
+
+bad = [name for name, tags in source_tags.items() if len(tags) != 1]
+if bad:
+    detail = ', '.join(f'{name}={len(source_tags[name])}' for name in bad)
+    raise SystemExit(f'ERRORE: riferimenti CSS Home inattesi: {detail}')
+
+text = text.replace(
+    source_tags[css_sources[0]][0],
+    f'<link rel="stylesheet" href="/{bundle_name}" data-s90g-home-critical>',
+    1,
+)
+for name in css_sources[1:]:
+    text = text.replace(source_tags[name][0], '', 1)
+
 page.write_text(text, 'utf-8')
-print('WOW Home integrata: ' + (', '.join(changed) if changed else 'gia completa'))
+print('WOW Home integrata: ' + (', '.join(changed) if changed else 'gia completa') + '; CSS Home consolidato')
