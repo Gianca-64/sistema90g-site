@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from urllib.parse import urlsplit
+import re
 import sys
 
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('dist')
@@ -62,10 +64,44 @@ else:
         if token not in proof:
             issues.append(f'index.html: elemento prova WOW mancante: {token}')
 
-    if 's90g-wow-visual-proof.css' not in text:
-        issues.append('index.html: stylesheet prova WOW mancante')
     if proof.count('class="s90g-wow-proof-card"') != 2:
         issues.append('index.html: attese esattamente 2 prove visuali')
+
+    # La Home deve conservare il medesimo ordine di cascata dei tre CSS originari,
+    # ma con una sola richiesta bloccante. consent-ui.css resta separato.
+    href_re = re.compile(r'href=["\']([^"\']+)["\']', re.I)
+    href_paths = [Path(urlsplit(m.group(1)).path).name for m in href_re.finditer(text)]
+    bundle_name = 's90g-home-critical.css'
+    css_sources = [
+        'sistema90g-visual-2026.css',
+        's90g-offer-2026.css',
+        's90g-wow-visual-proof.css',
+    ]
+    if href_paths.count(bundle_name) != 1:
+        issues.append(f'index.html: atteso 1 riferimento a {bundle_name}, trovati {href_paths.count(bundle_name)}')
+    for name in css_sources:
+        if href_paths.count(name) != 0:
+            issues.append(f'index.html: {name} deve essere assorbito nel bundle Home')
+    if href_paths.count('consent-ui.css') != 1:
+        issues.append('index.html: consent-ui.css deve restare separato')
+    if text.find(bundle_name) > text.find('consent-ui.css'):
+        issues.append('index.html: bundle Home deve precedere consent-ui.css')
+
+    bundle = root / bundle_name
+    if not bundle.is_file():
+        issues.append(f'{bundle_name}: asset generato mancante')
+    else:
+        expected_parts = []
+        for name in css_sources:
+            css_path = root / name
+            if not css_path.is_file():
+                issues.append(f'{name}: asset sorgente mancante')
+                continue
+            expected_parts.append(f'/* bundled: {name} */\n{css_path.read_text("utf-8", errors="strict").rstrip()}')
+        if len(expected_parts) == len(css_sources):
+            expected = '\n\n'.join(expected_parts) + '\n'
+            if bundle.read_text('utf-8', errors='strict') != expected:
+                issues.append(f'{bundle_name}: ordine o contenuto diverso dalla cascata canonica')
 
     selector_forbidden = [
         'Scegli il servizio', 'Quale servizio vuoi',
@@ -85,7 +121,7 @@ else:
 
 css = root / 's90g-wow-visual-proof.css'
 if not css.is_file():
-    issues.append('s90g-wow-visual-proof.css: asset mancante')
+    issues.append('s90g-wow-visual-proof.css: asset sorgente mancante')
 
 if issues:
     print('ERRORE: contratto WOW Home non rispettato:')
@@ -93,4 +129,4 @@ if issues:
         print(' -', issue)
     raise SystemExit(1)
 
-print('OK public WOW Home: 6 situazioni problem-first + 2 casi visuali + 4 evidenze qualitative, no scelta servizio/soluzione completa')
+print('OK public WOW Home: 6 situazioni + 2 casi + bundle CSS Home con cascata invariata')
