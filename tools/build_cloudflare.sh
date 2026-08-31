@@ -44,7 +44,8 @@ find "$DIST" -maxdepth 1 -type f -name 'caso-*.html' -print0 | while IFS= read -
   fi
 done
 
-# Le vecchie raccolte extra-cucina non devono essere pubblicate come pagine autonome.
+# La vecchia offerta casa e i contenuti extra-cucina restano nello storico del
+# repository ma non devono essere pubblicati, indicizzati o raggiunti tramite alias.
 rm -f \
   "$DIST/casi-camere-contenimento.html" \
   "$DIST/casi-distribuzione-casa.html" \
@@ -54,7 +55,11 @@ rm -f \
   "$DIST/scelta-finiture-casa.html" \
   "$DIST/agenzie-immobiliari.html" \
   "$DIST/analisi-unita-varianti.html" \
-  "$DIST/studio-preliminare-spazi.html"
+  "$DIST/studio-preliminare-spazi.html" \
+  "$DIST/progetto-da-zero.html" \
+  "$DIST/approfondimenti/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.html" \
+  "$DIST/images/editoriale/colonna-lavanderia-20260817.jpg" \
+  "$DIST/images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png"
 
 # Se un vecchio URL HTML ha gia un redirect 301 esplicito, rimuoviamo il file fisico
 # dall'output cosi il redirect non puo essere mascherato da una risorsa statica omonima.
@@ -185,16 +190,43 @@ if grep -R -n -E 'role-case-path\.(js|css)' "$DIST" --include='*.html' >/tmp/s90
 fi
 rm -f "$DIST/role-case-path.js" "$DIST/role-case-path.css"
 
-# Guard rail: nessuna pagina extra-cucina nota puo rientrare accidentalmente nel deploy.
+# Guard rail: nessuna pagina o contenuto noto della vecchia offerta casa puo
+# rientrare accidentalmente nel deploy pubblico.
 for forbidden_public in \
   'casi-camere-contenimento.html' 'casi-distribuzione-casa.html' \
   'casi-soggiorno-open-space.html' 'casi-spazi-servizio.html' \
-  'verifica-planimetria-distribuzione-casa.html' 'scelta-finiture-casa.html'; do
+  'verifica-planimetria-distribuzione-casa.html' 'scelta-finiture-casa.html' \
+  'agenzie-immobiliari.html' 'analisi-unita-varianti.html' \
+  'studio-preliminare-spazi.html' 'progetto-da-zero.html' \
+  'approfondimenti/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.html' \
+  'images/editoriale/colonna-lavanderia-20260817.jpg' \
+  'images/editoriale/colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c.png'; do
   if [ -e "$DIST/$forbidden_public" ]; then
-    echo "ERRORE: pagina extra-cucina presente in dist: $forbidden_public" >&2
+    echo "ERRORE: contenuto extra-cucina presente in dist: $forbidden_public" >&2
     exit 1
   fi
 done
+
+# Nessun vecchio alias dell'offerta casa deve trasformarsi in un redirect
+# semanticamente non equivalente verso l'offerta cucina attuale.
+for retired_alias in \
+  '/scelta-finiture-casa.html' '/progetto-da-zero.html' \
+  '/studio-preliminare-spazi.html' '/verifica-planimetria-distribuzione-casa.html' \
+  '/agenzie-immobiliari.html' '/analisi-unita-varianti.html' \
+  '/casi-camere-contenimento.html' '/casi-distribuzione-casa.html' \
+  '/casi-soggiorno-open-space.html' '/casi-spazi-servizio.html'; do
+  if grep -Eq "^${retired_alias//./\.}([[:space:]]|$)" "$DIST/_redirects"; then
+    echo "ERRORE: alias extra-cucina ancora presente in _redirects: $retired_alias" >&2
+    exit 1
+  fi
+done
+
+if grep -R -n -F 'colonna-lavanderia-a-piena-capacita-con-comandi-ad-altezza-accessibile-1ff0f9c' \
+  "$DIST/innovazioni.html" "$DIST/editoriale/feed.json" >/tmp/s90g-retired-editorial.log 2>/dev/null; then
+  echo "ERRORE: contenuto editoriale lavanderia ancora promosso pubblicamente" >&2
+  cat /tmp/s90g-retired-editorial.log >&2
+  exit 1
+fi
 
 # Guard rail: i materiali operativi non devono comparire nell'output Pages.
 for forbidden in \
