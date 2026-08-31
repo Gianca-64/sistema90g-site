@@ -74,14 +74,5 @@ text = text.replace(
 for name in initial_sources[1:]:
     text = text.replace(source_tags[name][0], '', 1)
 
-# navigation-conversion.js veniva scoperto soltanto da privacy-consent.js dopo
-# DOMContentLoaded. Sulla Home lo rendiamo parser-discovered e defer, conservando
-# lo stesso init ma eliminando il round-trip e la mutazione tardiva di scoperta.
-# Il marker evita che privacy-consent.js ne inserisca una seconda copia.
-nav_tag = '<script defer src="/navigation-conversion.js" data-s90g-navigation-conversion></script>'
-if 'data-s90g-navigation-conversion' not in text:
-    text = text.replace('</head>', nav_tag + '</head>', 1)
-    changed.append('navigazione anticipata')
-
 page.write_text(text, 'utf-8')
 print('WOW Home integrata: ' + (', '.join(changed) if changed else 'gia completa') + '; CSS Home + audit-fix consolidati')
