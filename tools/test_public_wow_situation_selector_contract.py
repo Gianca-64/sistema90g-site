@@ -67,8 +67,8 @@ else:
     if proof.count('class="s90g-wow-proof-card"') != 2:
         issues.append('index.html: attese esattamente 2 prove visuali')
 
-    # La Home deve conservare il medesimo ordine di cascata dei tre CSS originari,
-    # ma con una sola richiesta bloccante. consent-ui.css resta separato.
+    # La Home deve conservare il medesimo risultato finale ma senza applicare
+    # audit-fix dopo DOMContentLoaded: visual -> offer -> WOW -> audit-fix.
     href_re = re.compile(r'href=["\']([^"\']+)["\']', re.I)
     href_paths = [Path(urlsplit(m.group(1)).path).name for m in href_re.finditer(text)]
     bundle_name = 's90g-home-critical.css'
@@ -76,6 +76,7 @@ else:
         'sistema90g-visual-2026.css',
         's90g-offer-2026.css',
         's90g-wow-visual-proof.css',
+        'sistema90g-audit-fix-20260707.css',
     ]
     if href_paths.count(bundle_name) != 1:
         issues.append(f'index.html: atteso 1 riferimento a {bundle_name}, trovati {href_paths.count(bundle_name)}')
@@ -86,6 +87,10 @@ else:
         issues.append('index.html: consent-ui.css deve restare separato')
     if text.find(bundle_name) > text.find('consent-ui.css'):
         issues.append('index.html: bundle Home deve precedere consent-ui.css')
+    if 'data-s90g-home-critical' not in text:
+        issues.append('index.html: marker bundle Home mancante')
+    if 'data-s90g-audit-fix' not in text:
+        issues.append('index.html: marker audit-fix iniziale mancante')
 
     bundle = root / bundle_name
     if not bundle.is_file():
@@ -100,8 +105,12 @@ else:
             expected_parts.append(f'/* bundled: {name} */\n{css_path.read_text("utf-8", errors="strict").rstrip()}')
         if len(expected_parts) == len(css_sources):
             expected = '\n\n'.join(expected_parts) + '\n'
-            if bundle.read_text('utf-8', errors='strict') != expected:
+            actual = bundle.read_text('utf-8', errors='strict')
+            if actual != expected:
                 issues.append(f'{bundle_name}: ordine o contenuto diverso dalla cascata canonica')
+            for token in ('.s90g-chat-widget', '.s90g-hero-grid', '.s90g-hero-media img'):
+                if token not in actual:
+                    issues.append(f'{bundle_name}: regola audit-fix necessaria mancante: {token}')
 
     selector_forbidden = [
         'Scegli il servizio', 'Quale servizio vuoi',
@@ -123,10 +132,14 @@ css = root / 's90g-wow-visual-proof.css'
 if not css.is_file():
     issues.append('s90g-wow-visual-proof.css: asset sorgente mancante')
 
+audit_css = root / 'sistema90g-audit-fix-20260707.css'
+if not audit_css.is_file():
+    issues.append('sistema90g-audit-fix-20260707.css: asset sorgente mancante')
+
 if issues:
     print('ERRORE: contratto WOW Home non rispettato:')
     for issue in issues:
         print(' -', issue)
     raise SystemExit(1)
 
-print('OK public WOW Home: 6 situazioni + 2 casi + bundle CSS Home con cascata invariata')
+print('OK public WOW Home: 6 situazioni + 2 casi + bundle CSS Home con audit-fix iniziale e cascata invariata')
