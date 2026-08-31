@@ -19,6 +19,7 @@ class ImageRefs(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.refs: list[str] = []
+        self.images: list[dict[str, str]] = []
 
     @staticmethod
     def attrs_dict(attrs: list[tuple[str, str | None]]) -> dict[str, str]:
@@ -29,6 +30,7 @@ class ImageRefs(HTMLParser):
         tag = tag.lower()
         if tag == "img" and data.get("src"):
             self.refs.append(data["src"])
+            self.images.append(data)
         elif tag == "meta":
             prop = data.get("property", "").lower()
             name = data.get("name", "").lower()
@@ -94,8 +96,40 @@ for page in sorted(root.rglob("*.html")):
                 f"(limite {MAX_IMAGE_BYTES:,})"
             )
 
+# P1 Home: solo l'immagine hero può partecipare al caricamento eager iniziale.
+# Tutte le immagini successive devono usare il scheduling nativo lazy/async.
+home = root / "index.html"
+if home.is_file():
+    home_parser = ImageRefs()
+    home_parser.feed(home.read_text("utf-8", errors="ignore"))
+    home_parser.close()
+
+    hero_count = 0
+    deferred_count = 0
+    for image in home_parser.images:
+        src = image.get("src", "")
+        name = Path(urlparse(src).path).name
+        if name == "01_HOME_HERO.jpg":
+            hero_count += 1
+            if image.get("loading", "").lower() == "lazy":
+                issues.append("index.html: immagine hero non deve essere loading=lazy")
+            continue
+
+        deferred_count += 1
+        if image.get("loading", "").lower() != "lazy":
+            issues.append(f"index.html: immagine sotto-fold senza loading=lazy: {src}")
+        if image.get("decoding", "").lower() != "async":
+            issues.append(f"index.html: immagine sotto-fold senza decoding=async: {src}")
+
+    if hero_count != 1:
+        issues.append(f"index.html: attesa 1 immagine hero 01_HOME_HERO.jpg, trovate {hero_count}")
+    if deferred_count == 0:
+        issues.append("index.html: nessuna immagine sotto-fold trovata per il controllo scheduling")
+else:
+    issues.append("index.html: Home mancante per il controllo immagini")
+
 if issues:
-    print("ERRORE: immagini pubbliche referenziate oltre il budget di 1 MB:")
+    print("ERRORE: contratto immagini pubbliche non rispettato:")
     for issue in issues:
         print(f" - {issue}")
     raise SystemExit(1)
@@ -110,5 +144,6 @@ else:
 print(
     "OK public image performance contract: "
     f"{checked_refs} riferimenti raster, {len(unique_assets)} asset unici; "
+    f"Home hero eager + {deferred_count} immagini sotto-fold lazy/async; "
     f"massimo {largest_label}"
 )
