@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import re
 import sys
 
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('dist')
@@ -62,15 +63,29 @@ else:
         if token not in proof:
             issues.append(f'index.html: elemento prova WOW mancante: {token}')
 
-    preload_tag = '<link rel="preload" href="s90g-wow-visual-proof.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">'
-    fallback_tag = '<noscript><link rel="stylesheet" href="s90g-wow-visual-proof.css"></noscript>'
-    blocking_tag = '<link rel="stylesheet" href="s90g-wow-visual-proof.css">'
-    if preload_tag not in text:
+    version = r'(?:\?v=[^"\']+)?'
+    preload_re = re.compile(
+        rf'<link\s+rel="preload"\s+href="s90g-wow-visual-proof\.css{version}"\s+as="style"\s+onload="this\.onload=null;this\.rel=\'stylesheet\'">'
+    )
+    fallback_re = re.compile(
+        rf'<noscript><link\s+rel="stylesheet"\s+href="s90g-wow-visual-proof\.css{version}"></noscript>'
+    )
+    blocking_re = re.compile(
+        rf'<link\s+rel="stylesheet"\s+href="s90g-wow-visual-proof\.css{version}">'
+    )
+
+    if not preload_re.search(text):
         issues.append('index.html: preload non bloccante prova WOW mancante')
-    if fallback_tag not in text:
+    fallback_match = fallback_re.search(text)
+    if not fallback_match:
         issues.append('index.html: fallback noscript prova WOW mancante')
-    if blocking_tag in text.replace(fallback_tag, ''):
+
+    text_without_fallback = text
+    if fallback_match:
+        text_without_fallback = text[:fallback_match.start()] + text[fallback_match.end():]
+    if blocking_re.search(text_without_fallback):
         issues.append('index.html: stylesheet prova WOW ancora render-blocking')
+
     if proof.count('class="s90g-wow-proof-card"') != 2:
         issues.append('index.html: attese esattamente 2 prove visuali')
 
