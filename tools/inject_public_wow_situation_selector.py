@@ -74,5 +74,28 @@ text = text.replace(
 for name in initial_sources[1:]:
     text = text.replace(source_tags[name][0], '', 1)
 
+# P1 performance immagini Home: la sola immagine hero resta eager. Tutte le altre
+# immagini della Home sono sotto la prima viewport e non devono competere sulla rete
+# iniziale; manteniamo dimensioni/markup e aggiungiamo soltanto scheduling nativo.
+img_re = re.compile(r'<img\b[^>]*>', re.I)
+src_re = re.compile(r'\bsrc=["\']([^"\']+)["\']', re.I)
+
+def schedule_home_image(match: re.Match[str]) -> str:
+    tag = match.group(0)
+    src_match = src_re.search(tag)
+    if not src_match:
+        return tag
+    name = Path(urlsplit(src_match.group(1)).path).name
+    if name == '01_HOME_HERO.jpg':
+        return tag
+    if not re.search(r'\bloading\s*=', tag, re.I):
+        tag = tag[:-1] + ' loading="lazy">'
+    if not re.search(r'\bdecoding\s*=', tag, re.I):
+        tag = tag[:-1] + ' decoding="async">'
+    return tag
+
+text = img_re.sub(schedule_home_image, text)
+changed.append('immagini sotto-fold differite')
+
 page.write_text(text, 'utf-8')
 print('WOW Home integrata: ' + (', '.join(changed) if changed else 'gia completa') + '; CSS Home + audit-fix consolidati')
