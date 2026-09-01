@@ -25,6 +25,13 @@ checks = {
         'href="/chi-e-sistema90g"',
         'href="/casi-analizzati"',
         'id="richiedi"',
+        's90g-free-entry-visual-v1.css',
+        's90g-free-entry-visual-v1',
+        'data-s90g-free-entry-stage="read"',
+        'data-s90g-free-entry-stage="example"',
+        'data-s90g-free-entry-stage="process"',
+        'data-s90g-free-entry-stage="independence"',
+        'data-s90g-free-entry-stage="deepen"',
     ],
 }
 
@@ -62,6 +69,22 @@ if free_entry:
     free_bridge = free_entry[start:end] if start >= 0 and end >= 0 else ''
     if '.html"' in free_bridge:
         issues.append('analisi-preventiva.html: il trust bridge deve usare URL pubblici canonici senza .html')
+    if free_entry.count('s90g-free-entry-visual-v1.css') != 1:
+        issues.append('analisi-preventiva.html: stylesheet Free Entry visual duplicato o mancante')
+    if free_entry.count('s90g-free-entry-visual-v1') != 2:
+        issues.append('analisi-preventiva.html: marker Free Entry visual inatteso')
+    for stage in ('read', 'example', 'process', 'independence', 'deepen'):
+        if free_entry.count(f'data-s90g-free-entry-stage="{stage}"') != 1:
+            issues.append(f'analisi-preventiva.html: stage Free Entry {stage} duplicato o mancante')
+
+free_entry_css = root / 's90g-free-entry-visual-v1.css'
+if not free_entry_css.is_file():
+    issues.append('s90g-free-entry-visual-v1.css: stylesheet pubblico mancante')
+else:
+    css = free_entry_css.read_text('utf-8', errors='ignore')
+    for token in ('90G Focus', '90G Next Step', '#richiedi', 's90g-free-entry-visual-v1'):
+        if token not in css:
+            issues.append(f's90g-free-entry-visual-v1.css: grammatica visuale mancante: {token}')
 
 case_modes = {
     'caso-lavastoviglie-passaggio-cucina.html': 's90g-case-mode-use',
@@ -177,4 +200,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public trust bridge contract: trust + 6 casi reali Case V2 + 11 pagine con navigazione canonica')
+print('OK public trust bridge contract: trust + Free Entry Visual V1 + 6 casi reali Case V2 + 11 pagine con navigazione canonica')
