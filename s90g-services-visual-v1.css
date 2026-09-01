@@ -1,0 +1,60 @@
+/* Sistema 90G — Services Visual V1
+   Scoped by usage: this stylesheet is loaded only by servizi.html. */
+
+.s90g-inner-hero{background:#f6f2e9;border-bottom:1px solid var(--line)}
+.s90g-inner-hero-grid{align-items:center;gap:64px}
+.s90g-inner-copy h1{font-size:clamp(46px,4.4vw,68px);line-height:.98;max-width:760px}
+.s90g-inner-copy .s90g-lead{max-width:760px}
+.s90g-inner-media{background:#ece6da;padding:10px}
+.s90g-inner-media img{display:block;width:100%;height:auto}
+
+#servizi{padding-top:90px}
+#servizi .s90g-section-head{max-width:920px}
+#servizi .s90g-section-head .s90g-eyebrow::before{content:"90G Choose · ";color:var(--gold-dark)}
+#servizi .s90g-route-grid{gap:0;border:1px solid var(--line);background:#fff}
+#servizi .s90g-route-card{border:0;border-right:1px solid var(--line);min-height:240px;padding:34px}
+#servizi .s90g-route-card:last-child{border-right:0}
+
+main>.s90g-dark-band:first-of-type{position:relative}
+main>.s90g-dark-band:first-of-type .s90g-eyebrow::before{content:"90G Check · ";color:#d8aa4d}
+main>.s90g-dark-band:first-of-type h2{font-size:clamp(38px,4vw,58px);max-width:900px}
+
+main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-grid{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-card{border:0;border-right:1px solid var(--line);min-height:235px}
+main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-card:last-child{border-right:0}
+
+main>.s90g-section:nth-of-type(5){background:#f7f5ef}
+main>.s90g-section:nth-of-type(5) .s90g-section-head .s90g-eyebrow::before{content:"90G Build · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(5) .s90g-route-grid{gap:18px}
+main>.s90g-section:nth-of-type(5) .s90g-route-card{min-height:265px}
+
+main>.s90g-dark-band:nth-of-type(6) .s90g-eyebrow::before{content:"90G Next Step · ";color:#d8aa4d}
+main>.s90g-dark-band:nth-of-type(6) h2{font-size:clamp(36px,3.8vw,56px);max-width:980px}
+
+.s90g-final{border-top:1px solid var(--line);background:#f6f2e9}
+.s90g-final-copy{padding-top:76px;padding-bottom:76px}
+.s90g-final .s90g-kicker::before{content:"90G Next Step · ";color:var(--gold-dark)}
+.s90g-final h2{font-size:clamp(42px,4.5vw,64px)}
+.s90g-final-media{background:#ece6da}
+.s90g-final-media img{object-fit:contain}
+
+@media(max-width:900px){
+  .s90g-inner-hero-grid{gap:28px}
+  .s90g-inner-copy h1{font-size:clamp(40px,10vw,54px)}
+  #servizi{padding-top:64px}
+  #servizi .s90g-route-grid,
+  main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-grid{border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  #servizi .s90g-route-card,
+  main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-card{border-right:0;border-bottom:1px solid var(--line)}
+  #servizi .s90g-route-card:last-child,
+  main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-card:last-child{border-bottom:0}
+}
+
+@media(max-width:560px){
+  .s90g-inner-copy h1{font-size:40px}
+  .s90g-inner-media{padding:6px}
+  #servizi .s90g-route-card{padding:26px 24px;min-height:0}
+  main>.s90g-dark-band:first-of-type + .s90g-section .s90g-route-card{min-height:0}
+  main>.s90g-section:nth-of-type(5) .s90g-route-card{min-height:0}
+  .s90g-final-copy{padding-top:56px;padding-bottom:56px}
+}
