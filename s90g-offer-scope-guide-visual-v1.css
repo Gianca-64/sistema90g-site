@@ -1,0 +1,48 @@
+/* Sistema 90G — Offer Scope Guide Visual V1
+   Scoped to voci-escluse-preventivo-cucina.html. */
+
+.s90g-offer-scope-guide-v1{background:#fff}
+.s90g-offer-scope-guide-v1 main>.s90g-section{padding-top:76px;padding-bottom:104px}
+.s90g-offer-scope-guide-v1 main>.s90g-section>.s90g-shell{width:min(1120px,calc(100% - 48px))}
+.s90g-offer-scope-guide-v1 main>.s90g-section>.s90g-shell>.s90g-eyebrow::before{content:"90G Scope · ";color:#8b681c}
+.s90g-offer-scope-guide-v1 main h1{font-size:clamp(48px,5.8vw,76px);line-height:.98;max-width:940px;margin-bottom:24px}
+.s90g-offer-scope-guide-v1 main>.s90g-section>.s90g-shell>.s90g-lead{font-size:22px;line-height:1.58;max-width:900px;color:#354238;margin-bottom:44px}
+
+.s90g-offer-scope-guide-v1 .s90g-guide-figure{width:min(1040px,100%);margin:0 auto 66px;padding:10px;background:#ece6da;border:1px solid rgba(39,61,44,.16)}
+.s90g-offer-scope-guide-v1 .s90g-guide-figure figcaption{padding:3px 4px 1px}
+
+.s90g-offer-scope-guide-v1 .s90g-prose{max-width:940px;margin:0 auto}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2{position:relative;margin:0;padding:31px 0 13px;border-top:1px solid rgba(39,61,44,.18);font-size:clamp(29px,3vw,40px);line-height:1.1;max-width:850px}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2::before{display:block;margin-bottom:10px;color:#8b681c;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:nth-of-type(1)::before{content:"90G Scope · definisci cosa comprende l'offerta"}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:nth-of-type(2)::before{content:"90G Compare · confronta lo stesso perimetro"}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:nth-of-type(3)::before{content:"90G Check · chiarisci responsabilità e costi"}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:nth-of-type(4)::before{content:"90G Boundary · separa montaggio e allacciamenti"}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:nth-of-type(5)::before{content:"90G Next Step · verifica ciò che resta fuori"}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2+p{max-width:860px;margin-top:0;margin-bottom:36px;font-size:18px;line-height:1.65}
+.s90g-offer-scope-guide-v1 .s90g-prose>ul{margin:2px 0 48px;padding:24px 28px 24px 48px;background:#f7f5ef;border:1px solid rgba(39,61,44,.16)}
+.s90g-offer-scope-guide-v1 .s90g-prose>ul li{margin:8px 0;line-height:1.55}
+.s90g-offer-scope-guide-v1 .s90g-prose>p:has(a){margin:0;border-top:1px solid rgba(39,61,44,.18)}
+.s90g-offer-scope-guide-v1 .s90g-prose>p:has(a) a{display:block;padding:16px 0;text-decoration:none;font-weight:600}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type{margin-top:40px;padding:38px 38px 12px;background:#273d2c;color:#fff;border-top:0}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type::before{color:#d8aa4d}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type+p{margin:0;padding:0 38px 18px;background:#273d2c;color:rgba(255,255,255,.86)}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type+p+p{margin:0;padding:0 38px 38px;background:#273d2c;border-top:0}
+.s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type+p+p a{display:inline-block;padding:0;color:#fff;text-decoration:underline;text-decoration-color:#d8aa4d;text-underline-offset:4px}
+
+@media(max-width:760px){
+  .s90g-offer-scope-guide-v1 main>.s90g-section{padding-top:52px;padding-bottom:76px}
+  .s90g-offer-scope-guide-v1 main>.s90g-section>.s90g-shell{width:min(100% - 30px,1120px)}
+  .s90g-offer-scope-guide-v1 main h1{font-size:42px}
+  .s90g-offer-scope-guide-v1 main>.s90g-section>.s90g-shell>.s90g-lead{font-size:19px}
+  .s90g-offer-scope-guide-v1 .s90g-guide-figure{padding:6px;margin-bottom:50px}
+  .s90g-offer-scope-guide-v1 .s90g-prose>h2{padding-top:27px}
+  .s90g-offer-scope-guide-v1 .s90g-prose>ul{padding:20px 20px 20px 38px}
+  .s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type{padding:32px 24px 12px}
+  .s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type+p{padding:0 24px 18px}
+  .s90g-offer-scope-guide-v1 .s90g-prose>h2:last-of-type+p+p{padding:0 24px 32px}
+}
+
+@media(max-width:480px){
+  .s90g-offer-scope-guide-v1 main h1{font-size:38px}
+}
