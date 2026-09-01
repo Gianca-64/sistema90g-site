@@ -1,0 +1,55 @@
+/* Sistema 90G — Compare Guide Visual V1
+   Scoped to confrontare-due-preventivi-cucina.html. */
+
+.s90g-compare-guide-v1{background:#fff}
+.s90g-compare-guide-v1 main>.s90g-section{padding-top:76px;padding-bottom:104px}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell{width:min(1120px,calc(100% - 48px))}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-eyebrow::before{content:"90G Compare · ";color:#8b681c}
+.s90g-compare-guide-v1 main h1{font-size:clamp(48px,5.8vw,76px);line-height:.98;max-width:900px;margin-bottom:24px}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-lead{font-size:22px;line-height:1.58;max-width:900px;color:#354238;margin-bottom:42px}
+
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout{margin:0 0 50px;padding:34px 36px 36px;background:#f6f2e9;border:1px solid rgba(39,61,44,.18);border-top:4px solid #9a7423}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout::before{content:"90G Compare · prima rendi equivalenti le voci";display:block;margin-bottom:14px;color:#8b681c;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout h2{margin:0 0 15px;font-size:clamp(30px,3vw,42px);line-height:1.08;max-width:820px}
+.s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout p{max-width:900px;margin-bottom:0}
+
+.s90g-compare-guide-v1 .s90g-guide-figure{width:min(1040px,100%);margin:0 auto 68px;padding:10px;background:#ece6da;border:1px solid rgba(39,61,44,.16)}
+.s90g-compare-guide-v1 .s90g-guide-figure figcaption{padding:3px 4px 1px}
+
+.s90g-compare-guide-v1 .s90g-prose{max-width:940px;margin:0 auto}
+.s90g-compare-guide-v1 .s90g-prose>h2{position:relative;margin:0;padding:32px 0 13px;border-top:1px solid rgba(39,61,44,.18);font-size:clamp(29px,3vw,40px);line-height:1.1;max-width:850px}
+.s90g-compare-guide-v1 .s90g-prose>h2::before{display:block;margin-bottom:10px;color:#8b681c;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.s90g-compare-guide-v1 .s90g-prose>h2:nth-of-type(1)::before{content:"90G Compare 01 · struttura"}
+.s90g-compare-guide-v1 .s90g-prose>h2:nth-of-type(2)::before{content:"90G Compare 02 · materiali"}
+.s90g-compare-guide-v1 .s90g-prose>h2:nth-of-type(3)::before{content:"90G Compare 03 · prodotti"}
+.s90g-compare-guide-v1 .s90g-prose>h2:nth-of-type(4)::before{content:"90G Compare 04 · servizi"}
+.s90g-compare-guide-v1 .s90g-prose>h2:nth-of-type(n+5)::before{content:"90G Check · interpreta la differenza"}
+.s90g-compare-guide-v1 .s90g-prose>h2+p{max-width:860px;margin-top:0;margin-bottom:38px;font-size:18px;line-height:1.65}
+.s90g-compare-guide-v1 .s90g-prose>ul{margin:4px 0 48px;padding:24px 28px 24px 48px;background:#f7f5ef;border:1px solid rgba(39,61,44,.16)}
+.s90g-compare-guide-v1 .s90g-prose>ul li{margin:8px 0;line-height:1.55}
+
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout{margin:12px 0 42px;padding:42px 40px 44px;background:#273d2c;color:#fff;border:0}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout::before{content:"90G Next Step · confronta il materiale reale";display:block;margin-bottom:15px;color:#d8aa4d;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout h2{margin:0 0 16px;color:#fff;font-size:clamp(31px,3.3vw,46px);line-height:1.06}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout p{color:rgba(255,255,255,.86)}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout a{color:#fff;text-decoration-color:#d8aa4d;text-underline-offset:4px}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout~p{margin:0;border-top:1px solid rgba(39,61,44,.18)}
+.s90g-compare-guide-v1 .s90g-prose>.s90g-callout~p a{display:block;padding:17px 0;text-decoration:none;font-weight:600}
+
+@media(max-width:760px){
+  .s90g-compare-guide-v1 main>.s90g-section{padding-top:52px;padding-bottom:76px}
+  .s90g-compare-guide-v1 main>.s90g-section>.s90g-shell{width:min(100% - 30px,1120px)}
+  .s90g-compare-guide-v1 main h1{font-size:42px}
+  .s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-lead{font-size:19px}
+  .s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout{padding:28px 24px 30px}
+  .s90g-compare-guide-v1 .s90g-guide-figure{padding:6px;margin-bottom:52px}
+  .s90g-compare-guide-v1 .s90g-prose>h2{padding-top:27px}
+  .s90g-compare-guide-v1 .s90g-prose>ul{padding:20px 20px 20px 38px}
+  .s90g-compare-guide-v1 .s90g-prose>.s90g-callout{padding:34px 24px 36px}
+}
+
+@media(max-width:480px){
+  .s90g-compare-guide-v1 main h1{font-size:38px}
+  .s90g-compare-guide-v1 main>.s90g-section>.s90g-shell>.s90g-callout,
+  .s90g-compare-guide-v1 .s90g-prose>.s90g-callout{padding-left:21px;padding-right:21px}
+}
