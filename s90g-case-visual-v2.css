@@ -1,0 +1,189 @@
+/* Sistema 90G — Case Visual V2 pilot
+   Scope: only pages explicitly marked with .s90g-case-visual-v2.
+   Goal: make the reasoning sequence visible without changing the case content. */
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero{
+  background:#f7f5ef;
+  border-bottom:1px solid var(--line);
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero-grid{
+  grid-template-columns:minmax(360px,.86fr) minmax(560px,1.14fr);
+  min-height:600px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-copy{
+  padding-top:64px;
+  padding-bottom:56px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-copy .s90g-kicker{
+  color:var(--gold-dark);
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-media{
+  min-height:600px;
+  background:#ece8de;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-media img{
+  object-fit:cover;
+}
+
+body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type{
+  background:#fff;
+}
+
+body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-shell{
+  display:grid;
+  grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);
+  gap:64px;
+  align-items:start;
+}
+
+body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-section-head{
+  margin:0;
+}
+
+body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-section-head .s90g-kicker::before{
+  content:"90G Check · ";
+  color:var(--gold-dark);
+}
+
+body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-prose{
+  max-width:none;
+  border-left:3px solid var(--gold);
+  padding:6px 0 6px 28px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band{
+  position:relative;
+  padding:68px 0;
+  background:#111719;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band .s90g-kicker{
+  color:#d7aa55;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band .s90g-kicker::before{
+  content:"90G Use · ";
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band h2{
+  max-width:1050px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature-grid{
+  gap:0;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature{
+  border:0;
+  border-right:1px solid var(--line);
+  padding:30px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature:last-child{
+  border-right:0;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature h3{
+  font-size:13px;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--gold-dark);
+  margin-bottom:12px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature p{
+  font-size:18px;
+  line-height:1.5;
+  color:#303432;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature-grid + .s90g-prose{
+  margin-top:26px;
+  padding:18px 22px;
+  max-width:none;
+  background:#f7f5ef;
+  border-left:3px solid #9b6d18;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-feature-grid + .s90g-prose p{
+  margin:0;
+  font-size:15px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section{
+  background:#f4f5f2;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-shell{
+  display:grid;
+  grid-template-columns:minmax(240px,.64fr) minmax(0,1.36fr);
+  gap:64px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-section-head{
+  margin:0;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-kicker::before{
+  content:"90G Consequence · ";
+  color:var(--gold-dark);
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose{
+  max-width:none;
+  border-left:3px solid #a87416;
+  padding:4px 0 4px 28px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-case-path{
+  background:#fff;
+}
+
+@media (max-width: 900px){
+  body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-shell,
+  body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-shell{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 .s90g-feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 .s90g-feature{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 .s90g-feature:last-child{
+    border-bottom:0;
+  }
+}
+
+@media (max-width: 560px){
+  body.s90g-visual.s90g-case-visual-v2 .s90g-inner-copy{
+    padding-top:42px;
+    padding-bottom:30px;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 .s90g-inner-media{
+    min-height:300px;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-prose,
+  body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose{
+    padding-left:18px;
+  }
+}
