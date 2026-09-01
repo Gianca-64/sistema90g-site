@@ -1,5 +1,5 @@
 /* Sistema 90G — Strategic Guide Visual V1
-   Pilot: errori-progetto-cucina.html only. */
+   Shared visual language for selected high-intent technical guides. */
 
 .s90g-strategic-guide-v1{background:#fff}
 .s90g-strategic-guide-v1 .s90g-guide{width:min(1120px,calc(100% - 48px));padding:82px 0 108px}
@@ -9,6 +9,8 @@
 
 .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type{margin:0 0 52px;padding:34px 36px 36px;background:#f6f2e9;border:1px solid rgba(39,61,44,.18);border-top:4px solid #9a7423}
 .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type::before{content:"90G Check · prima della conferma";display:block;margin-bottom:14px;color:#8b681c;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.s90g-guide-mode-measurements .s90g-guide>.s90g-callout:first-of-type::before{content:"90G Evidence · leggere la quota nel contesto"}
+.s90g-guide-mode-conflict .s90g-guide>.s90g-callout:first-of-type::before{content:"90G Conflict · misurare lo spazio durante l’uso"}
 .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type h2{margin:0 0 15px;font-size:clamp(30px,3vw,42px);line-height:1.08;max-width:820px}
 .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type p{max-width:900px;margin-bottom:0}
 
@@ -16,15 +18,17 @@
 .s90g-strategic-guide-v1 .s90g-guide-figure--wide figcaption{padding:3px 4px 1px}
 .s90g-strategic-guide-v1 .s90g-guide>h2:not([id]){position:relative;margin-top:0;padding:34px 0 14px;border-top:1px solid rgba(39,61,44,.18);font-size:clamp(30px,3.05vw,42px);line-height:1.08;max-width:850px}
 .s90g-strategic-guide-v1 .s90g-guide>h2:not([id])::before{content:"90G Focus";display:block;margin-bottom:11px;color:#8b681c;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.s90g-guide-mode-measurements .s90g-guide>h2:not([id])::before{content:"90G Check"}
+.s90g-guide-mode-conflict .s90g-guide>h2:not([id])::before{content:"90G Conflict"}
 .s90g-strategic-guide-v1 .s90g-guide>h2:not([id])+p{max-width:880px;margin-top:0;margin-bottom:44px}
 .s90g-strategic-guide-v1 .s90g-guide-figure--detail{margin:0 0 58px;padding:10px;background:#f7f5ef;border:1px solid rgba(39,61,44,.16)}
 .s90g-strategic-guide-v1 .s90g-guide-figure--detail figcaption{padding:3px 4px 1px}
 
-.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type{margin:24px 0 56px;padding:44px 42px 46px;background:#273d2c;color:#fff;border:0}
-.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type::before{content:"90G Next Step · dal dubbio al materiale reale";display:block;margin-bottom:15px;color:#d8aa4d;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
-.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type h2{margin:0 0 18px;color:#fff;font-size:clamp(32px,3.4vw,48px);line-height:1.05;max-width:850px}
-.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type p{max-width:850px;color:rgba(255,255,255,.86)}
-.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type a{color:#fff;text-decoration-color:#d8aa4d;text-underline-offset:4px}
+.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"]{margin:24px 0 56px;padding:44px 42px 46px;background:#273d2c;color:#fff;border:0}
+.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"]::before{content:"90G Next Step · dal dubbio al materiale reale";display:block;margin-bottom:15px;color:#d8aa4d;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"] h2{margin:0 0 18px;color:#fff;font-size:clamp(32px,3.4vw,48px);line-height:1.05;max-width:850px}
+.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"] p{max-width:850px;color:rgba(255,255,255,.86)}
+.s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"] a{color:#fff;text-decoration-color:#d8aa4d;text-underline-offset:4px}
 
 .s90g-strategic-guide-v1 .s90g-guide__links{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:42px;border:1px solid rgba(39,61,44,.20)}
 .s90g-strategic-guide-v1 .s90g-guide__links a{display:flex;align-items:flex-start;padding:22px 24px;border:0;border-right:1px solid rgba(39,61,44,.20);background:#f7f5ef;line-height:1.45}
@@ -37,7 +41,7 @@
   .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type{padding:28px 24px 30px}
   .s90g-strategic-guide-v1 .s90g-guide-figure--wide{width:calc(100vw - 28px);padding:6px;margin-bottom:54px}
   .s90g-strategic-guide-v1 .s90g-guide>h2:not([id]){padding-top:28px}
-  .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type{padding:34px 25px 36px}
+  .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"]{padding:34px 25px 36px}
   .s90g-strategic-guide-v1 .s90g-guide__links{grid-template-columns:1fr}
   .s90g-strategic-guide-v1 .s90g-guide__links a{border-right:0;border-bottom:1px solid rgba(39,61,44,.20)}
   .s90g-strategic-guide-v1 .s90g-guide__links a:last-child{border-bottom:0}
@@ -46,5 +50,5 @@
 @media(max-width:480px){
   .s90g-strategic-guide-v1 .s90g-guide>h1{font-size:38px}
   .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:first-of-type,
-  .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout:last-of-type{padding-left:21px;padding-right:21px}
+  .s90g-strategic-guide-v1 .s90g-guide>.s90g-callout[aria-labelledby="hai-progetto"]{padding-left:21px;padding-right:21px}
 }
