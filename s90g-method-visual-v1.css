@@ -1,0 +1,67 @@
+/* Sistema 90G — Method Visual V1
+   Scoped by usage: this stylesheet is loaded only by metodo-sistema90g.html. */
+
+.s90g-inner-hero{background:#f6f2e9;border-bottom:1px solid var(--line)}
+.s90g-inner-hero-grid{align-items:center;gap:64px}
+.s90g-inner-copy h1{font-size:clamp(46px,4.35vw,66px);line-height:.99;max-width:820px}
+.s90g-inner-copy .s90g-lead{max-width:780px}
+.s90g-inner-media{background:#ece6da;padding:10px}
+.s90g-inner-media img{display:block;width:100%;height:auto}
+
+main>.s90g-section:nth-of-type(2){padding-top:88px;padding-bottom:72px}
+main>.s90g-section:nth-of-type(2) .s90g-section-head{max-width:970px}
+main>.s90g-section:nth-of-type(2) .s90g-kicker::before{content:"90G Principle · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(2) h2{font-size:clamp(38px,3.8vw,56px)}
+
+main>.s90g-section:nth-of-type(3){padding-top:30px}
+main>.s90g-section:nth-of-type(3) .s90g-kicker::before{content:"90G Route · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(3) .s90g-feature-grid{gap:0;border:1px solid var(--line)}
+main>.s90g-section:nth-of-type(3) .s90g-feature{border:0;border-right:1px solid var(--line);min-height:230px;padding:34px}
+main>.s90g-section:nth-of-type(3) .s90g-feature:last-child{border-right:0}
+
+main>.s90g-section:nth-of-type(4){background:#f7f5ef}
+main>.s90g-section:nth-of-type(4) .s90g-kicker::before{content:"90G Check · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(4) .s90g-feature-grid{gap:18px}
+main>.s90g-section:nth-of-type(4) .s90g-feature{min-height:240px}
+
+main>.s90g-dark-band{position:relative}
+main>.s90g-dark-band .s90g-kicker::before{content:"90G AI Assist · ";color:#d8aa4d}
+main>.s90g-dark-band h2{font-size:clamp(40px,4vw,60px);max-width:980px}
+main>.s90g-dark-band p:last-child{max-width:980px}
+
+main>.s90g-section:nth-of-type(6){padding-top:84px;padding-bottom:66px}
+main>.s90g-section:nth-of-type(6) .s90g-kicker::before{content:"90G Human Control · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(6) .s90g-section-head{max-width:960px}
+
+main>.s90g-section:nth-of-type(7){padding-top:36px}
+main>.s90g-section:nth-of-type(7) .s90g-kicker::before{content:"90G Boundary · ";color:var(--gold-dark)}
+main>.s90g-section:nth-of-type(7) .s90g-feature-grid{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+main>.s90g-section:nth-of-type(7) .s90g-feature{border:0;border-right:1px solid var(--line);min-height:255px;padding:34px}
+main>.s90g-section:nth-of-type(7) .s90g-feature:last-child{border-right:0}
+
+.s90g-final{background:#f6f2e9;border-top:1px solid var(--line)}
+.s90g-final .s90g-kicker::before{content:"90G Next Step · ";color:var(--gold-dark)}
+.s90g-final h2{font-size:clamp(42px,4.5vw,64px)}
+.s90g-final-media{background:#ece6da}
+.s90g-final-media img{object-fit:cover}
+
+@media(max-width:900px){
+  .s90g-inner-hero-grid{gap:28px}
+  .s90g-inner-copy h1{font-size:clamp(40px,10vw,54px)}
+  main>.s90g-section:nth-of-type(3) .s90g-feature-grid,
+  main>.s90g-section:nth-of-type(7) .s90g-feature-grid{border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  main>.s90g-section:nth-of-type(3) .s90g-feature,
+  main>.s90g-section:nth-of-type(7) .s90g-feature{border-right:0;border-bottom:1px solid var(--line)}
+  main>.s90g-section:nth-of-type(3) .s90g-feature:last-child,
+  main>.s90g-section:nth-of-type(7) .s90g-feature:last-child{border-bottom:0}
+}
+
+@media(max-width:560px){
+  .s90g-inner-copy h1{font-size:40px}
+  .s90g-inner-media{padding:6px}
+  main>.s90g-section:nth-of-type(2){padding-top:64px;padding-bottom:50px}
+  main>.s90g-section:nth-of-type(3) .s90g-feature,
+  main>.s90g-section:nth-of-type(4) .s90g-feature,
+  main>.s90g-section:nth-of-type(7) .s90g-feature{min-height:0;padding:26px 24px}
+  main>.s90g-section:nth-of-type(6){padding-top:64px;padding-bottom:46px}
+}
