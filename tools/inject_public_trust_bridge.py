@@ -22,7 +22,17 @@ CASE_LABELS = {
     'caso-preventivo-cucina-sconto-valore.html': ('Caso pratico preventivo', 'Caso reale anonimizzato · preventivo cucina'),
 }
 
-CASE_VISUAL_PILOT = 'caso-lavastoviglie-passaggio-cucina.html'
+# The visual grammar is shared, while each case keeps a mode that reflects
+# the reasoning it demonstrates. This avoids turning the six cases into
+# mechanically identical pages.
+CASE_VISUAL_MODES = {
+    'caso-lavastoviglie-passaggio-cucina.html': 's90g-case-mode-use',
+    'caso-isola-passaggi-cucina.html': 's90g-case-mode-conflict',
+    'caso-lavello-sotto-finestra-aperture.html': 's90g-case-mode-conflict',
+    'caso-cucina-piccola-tre-lati.html': 's90g-case-mode-use',
+    'caso-cucina-profondita-75-angolo.html': 's90g-case-mode-check',
+    'caso-preventivo-cucina-sconto-valore.html': 's90g-case-mode-compare',
+}
 CASE_VISUAL_STYLESHEET = 's90g-case-visual-v2.css'
 
 NAV_ITEMS = [
@@ -63,6 +73,42 @@ def inject_once(path: Path, marker: str, anchor: str, block: str, before: bool) 
     path.write_text(text.replace(anchor, replacement, 1), 'utf-8')
     return True
 
+
+def apply_case_visual(path: Path, mode_class: str) -> bool:
+    text = path.read_text('utf-8', errors='ignore')
+    changed_local = False
+    stylesheet_link = f'<link href="{CASE_VISUAL_STYLESHEET}" rel="stylesheet"/>'
+    if stylesheet_link not in text:
+        anchor = '<link href="s90g-offer-2026.css'
+        start = text.find(anchor)
+        if start < 0:
+            raise SystemExit(f'ERRORE: CSS base non trovato in {path.name}')
+        end = text.find('/>', start)
+        if end < 0:
+            raise SystemExit(f'ERRORE: chiusura CSS base non trovata in {path.name}')
+        end += 2
+        text = text[:end] + stylesheet_link + text[end:]
+        changed_local = True
+
+    body_match = re.search(r'<body class="([^"]*)">', text)
+    if not body_match:
+        raise SystemExit(f'ERRORE: body visuale non trovato in {path.name}')
+    classes = body_match.group(1).split()
+    desired = ['s90g-visual', 's90g-case-visual-v2', mode_class]
+    new_classes = []
+    for cls in classes + desired:
+        if cls not in new_classes:
+            new_classes.append(cls)
+    new_body = '<body class="' + ' '.join(new_classes) + '">'
+    if body_match.group(0) != new_body:
+        text = text[:body_match.start()] + new_body + text[body_match.end():]
+        changed_local = True
+
+    if changed_local:
+        path.write_text(text, 'utf-8')
+    return changed_local
+
+
 changed = []
 
 home = root / 'index.html'
@@ -82,42 +128,16 @@ for rel, (old_label, new_label) in CASE_LABELS.items():
     if not path.is_file():
         raise SystemExit(f'ERRORE: caso pubblico mancante: {rel}')
     text = path.read_text('utf-8', errors='ignore')
-    if new_label in text:
-        continue
-    old = f'<p class="s90g-kicker">{old_label}</p>'
-    new = f'<p class="s90g-kicker">{new_label}</p>'
-    if old not in text:
-        raise SystemExit(f'ERRORE: etichetta caso non trovata in {rel}: {old_label}')
-    path.write_text(text.replace(old, new, 1), 'utf-8')
-    changed.append(rel)
+    if new_label not in text:
+        old = f'<p class="s90g-kicker">{old_label}</p>'
+        new = f'<p class="s90g-kicker">{new_label}</p>'
+        if old not in text:
+            raise SystemExit(f'ERRORE: etichetta caso non trovata in {rel}: {old_label}')
+        path.write_text(text.replace(old, new, 1), 'utf-8')
+        changed.append(rel)
 
-pilot = root / CASE_VISUAL_PILOT
-if not pilot.is_file():
-    raise SystemExit(f'ERRORE: caso pilota visuale mancante: {CASE_VISUAL_PILOT}')
-text = pilot.read_text('utf-8', errors='ignore')
-pilot_changed = False
-stylesheet_link = f'<link href="{CASE_VISUAL_STYLESHEET}" rel="stylesheet"/>'
-if stylesheet_link not in text:
-    anchor = '<link href="s90g-offer-2026.css'
-    start = text.find(anchor)
-    if start < 0:
-        raise SystemExit('ERRORE: CSS base non trovato nel caso pilota')
-    end = text.find('/>', start)
-    if end < 0:
-        raise SystemExit('ERRORE: chiusura CSS base non trovata nel caso pilota')
-    end += 2
-    text = text[:end] + stylesheet_link + text[end:]
-    pilot_changed = True
-if 's90g-case-visual-v2' not in text:
-    old_body = '<body class="s90g-visual">'
-    new_body = '<body class="s90g-visual s90g-case-visual-v2">'
-    if old_body not in text:
-        raise SystemExit('ERRORE: body visuale non trovato nel caso pilota')
-    text = text.replace(old_body, new_body, 1)
-    pilot_changed = True
-if pilot_changed:
-    pilot.write_text(text, 'utf-8')
-    changed.append(CASE_VISUAL_PILOT)
+    if apply_case_visual(path, CASE_VISUAL_MODES[rel]):
+        changed.append(rel)
 
 hub = root / 'casi-analizzati.html'
 if not hub.is_file():
