@@ -1,6 +1,6 @@
-/* Sistema 90G — Case Visual V2 pilot
+/* Sistema 90G — Case Visual V2
    Scope: only pages explicitly marked with .s90g-case-visual-v2.
-   Goal: make the reasoning sequence visible without changing the case content. */
+   Goal: make the reasoning sequence visible without changing case content. */
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero{
   background:#f7f5ef;
@@ -73,6 +73,18 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band .s90g-kicker{
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band .s90g-kicker::before{
   content:"90G Use · ";
+}
+
+body.s90g-visual.s90g-case-visual-v2.s90g-case-mode-conflict .s90g-dark-band .s90g-kicker::before{
+  content:"90G Conflict · ";
+}
+
+body.s90g-visual.s90g-case-visual-v2.s90g-case-mode-check .s90g-dark-band .s90g-kicker::before{
+  content:"90G Check · ";
+}
+
+body.s90g-visual.s90g-case-visual-v2.s90g-case-mode-compare .s90g-dark-band .s90g-kicker::before{
+  content:"90G Compare · ";
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band h2{
@@ -153,6 +165,10 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-sec
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose p{
   margin:0;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose p + p{
+  margin-top:14px;
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-case-path{
