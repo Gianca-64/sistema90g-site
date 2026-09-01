@@ -7,12 +7,12 @@ import process from 'node:process';
 
 const chrome = process.argv[2];
 const outDir = process.argv[3];
+const url = process.argv[4] || 'https://sistema90g.it/';
 if (!chrome || !outDir) {
-  console.error('Uso: node tools/capture_wow_home_visual.mjs <chrome> <output-dir>');
+  console.error('Uso: node tools/capture_wow_home_visual.mjs <chrome> <output-dir> [url]');
   process.exit(2);
 }
 
-const url = 'https://sistema90g.it/';
 const viewports = [['desktop',1440,1100,false],['mobile',390,844,true]];
 const selectors = [['visual-proof','[data-s90g-wow-visual-proof="true"]'],['situation-selector','[data-s90g-wow-situation-selector="true"]']];
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -35,7 +35,7 @@ async function connectCdp(wsUrl) {
 async function captureViewport(suffix,width,height,mobile){
   const profile=mkdtempSync(join(tmpdir(),`s90g-wow-${suffix}-`)); let chromeProc;
   try {
-    console.log(`Cattura Home WOW ${suffix} (${width}x${height}${mobile?', emulazione mobile':''})...`);
+    console.log(`Cattura Home WOW ${suffix} (${width}x${height}${mobile?', emulazione mobile':''}) da ${url}...`);
     chromeProc=spawn(chrome,['--headless=new','--disable-gpu','--hide-scrollbars','--disable-extensions','--disable-background-networking','--disable-component-update','--disable-sync','--metrics-recording-only','--no-first-run','--no-default-browser-check',`--user-data-dir=${profile}`,'--remote-debugging-port=0','about:blank'],{detached:true,stdio:['ignore','pipe','pipe']});
     const port=await waitForDevToolsPort(profile); const targets=await fetch(`http://127.0.0.1:${port}/json/list`).then(r=>r.json()); const pageTarget=targets.find(target=>target.type==='page'); if(!pageTarget?.webSocketDebuggerUrl)throw new Error('Target pagina DevTools non trovato');
     const cdp=await connectCdp(pageTarget.webSocketDebuggerUrl); await cdp.send('Page.enable'); await cdp.send('Runtime.enable'); await cdp.send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile,screenWidth:width,screenHeight:height,positionX:0,positionY:0,dontSetVisibleSize:false}); if(mobile)await cdp.send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:5});
@@ -52,7 +52,7 @@ async function captureViewport(suffix,width,height,mobile){
     }
     await cdp.send('Runtime.evaluate',{expression:'window.scrollTo(0,0)'}); await sleep(300);
     const overview=await cdp.send('Page.captureScreenshot',{format:'png',fromSurface:true,captureBeyondViewport:true,clip:{x:0,y:0,width:metrics.clientWidth,height:Math.min(metrics.scrollHeight,9000),scale:1}}); writeFileSync(join(outDir,`home-full-${suffix}.png`),Buffer.from(overview.data,'base64')); cdp.ws.close();
-    return {suffix,width,height,mobile,...metrics,horizontalOverflow:Number(metrics.scrollWidth)>Number(metrics.clientWidth)+1,captures};
+    return {suffix,width,height,mobile,url,...metrics,horizontalOverflow:Number(metrics.scrollWidth)>Number(metrics.clientWidth)+1,captures};
   } finally { if(chromeProc?.pid){try{process.kill(-chromeProc.pid,'SIGKILL');}catch{}} rmSync(profile,{recursive:true,force:true}); }
 }
 
