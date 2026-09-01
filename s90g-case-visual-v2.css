@@ -21,6 +21,11 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-inner-copy .s90g-kicker{
   color:var(--gold-dark);
 }
 
+body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero h1{
+  font-size:clamp(42px,4.25vw,64px);
+  max-width:700px;
+}
+
 body.s90g-visual.s90g-case-visual-v2 .s90g-inner-media{
   min-height:600px;
   background:#ece8de;
@@ -119,13 +124,14 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-feature-grid + .s90g-prose p{
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section{
-  background:#f4f5f2;
+  background:#fff;
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-shell{
   display:grid;
   grid-template-columns:minmax(240px,.64fr) minmax(0,1.36fr);
   gap:64px;
+  align-items:start;
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-section-head{
@@ -139,8 +145,14 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-sec
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose{
   max-width:none;
+  margin:0;
   border-left:3px solid #a87416;
-  padding:4px 0 4px 28px;
+  background:#f1f4f0;
+  padding:22px 26px;
+}
+
+body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose p{
+  margin:0;
 }
 
 body.s90g-visual.s90g-case-visual-v2 .s90g-case-path{
@@ -178,12 +190,19 @@ body.s90g-visual.s90g-case-visual-v2 .s90g-case-path{
     padding-bottom:30px;
   }
 
+  body.s90g-visual.s90g-case-visual-v2 .s90g-inner-hero h1{
+    font-size:40px;
+  }
+
   body.s90g-visual.s90g-case-visual-v2 .s90g-inner-media{
     min-height:300px;
   }
 
-  body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-prose,
-  body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose{
+  body.s90g-visual.s90g-case-visual-v2 main > .s90g-section:first-of-type .s90g-prose{
     padding-left:18px;
+  }
+
+  body.s90g-visual.s90g-case-visual-v2 .s90g-dark-band + .s90g-section + .s90g-section .s90g-prose{
+    padding:18px 18px 18px 20px;
   }
 }
