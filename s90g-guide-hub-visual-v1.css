@@ -1,5 +1,5 @@
 /* Sistema 90G — Guide Hub Visual V1
-   Pilot scoped by usage: loaded only by preventivo-acquisto-cucina-guide.html. */
+   Shared visual language for the four canonical editorial hubs. */
 
 .s90g-guide-hub{background:#fff}
 .s90g-guide-hero{padding:86px 0 70px;background:#f6f2e9;border-bottom:1px solid rgba(39,61,44,.18)}
@@ -22,11 +22,34 @@
 .s90g-guide-group:nth-child(3)::after,
 .s90g-guide-group:nth-child(4)::after,
 .s90g-guide-group:nth-child(5)::after{display:block;margin:24px 0 13px;color:#8b681c;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+
+/* Preventivo/acquisto: original pilot labels. */
 .s90g-guide-group:nth-child(1)::after{content:"90G Compare · rendere confrontabili le proposte"}
 .s90g-guide-group:nth-child(2)::after{content:"90G Evidence · collegare progetto e misure reali"}
 .s90g-guide-group:nth-child(3)::after{content:"90G Check · chiarire responsabilità e servizi"}
 .s90g-guide-group:nth-child(4)::after{content:"90G Check · verificare prima dell’ordine"}
 .s90g-guide-group:nth-child(5)::after{content:"90G Next Step · isolare il dubbio residuo"}
+
+/* Progettazione: spazio -> uso -> conflitti -> verifica. */
+.s90g-guide-mode-design .s90g-guide-group:nth-child(1)::after{content:"90G Scope · definire prima la logica della cucina"}
+.s90g-guide-mode-design .s90g-guide-group:nth-child(2)::after{content:"90G Check · leggere misure, vincoli e struttura"}
+.s90g-guide-mode-design .s90g-guide-group:nth-child(3)::after{content:"90G Conflict · verificare passaggi e interferenze"}
+.s90g-guide-mode-design .s90g-guide-group:nth-child(4)::after{content:"90G Evidence · confrontare il disegno con lo spazio reale"}
+.s90g-guide-mode-design .s90g-guide-group:nth-child(5)::after{content:"90G Next Step · capire cosa va verificato prima di confermare"}
+
+/* Elettrodomestici e impianti: dato tecnico -> contesto -> compatibilità. */
+.s90g-guide-mode-technical .s90g-guide-group:nth-child(1)::after{content:"90G Check · coordinare composizione e predisposizioni"}
+.s90g-guide-mode-technical .s90g-guide-group:nth-child(2)::after{content:"90G Evidence · verificare il modello reale e la scheda tecnica"}
+.s90g-guide-mode-technical .s90g-guide-group:nth-child(3)::after{content:"90G Check · integrare prodotto, mobile e installazione"}
+.s90g-guide-mode-technical .s90g-guide-group:nth-child(4)::after{content:"90G Compare · confrontare prodotto, servizio e responsabilità"}
+.s90g-guide-mode-technical .s90g-guide-group:nth-child(5)::after{content:"90G Conflict · controllare aperture e passaggi durante l’uso"}
+
+/* Materiali e finiture: campione -> contesto -> scelta. */
+.s90g-guide-mode-materials .s90g-guide-group:nth-child(1)::after{content:"90G Compare · confrontare la finitura nell’uso reale"}
+.s90g-guide-mode-materials .s90g-guide-group:nth-child(2)::after{content:"90G Context · leggere insieme luce, pavimento e top"}
+.s90g-guide-mode-materials .s90g-guide-group:nth-child(3)::after{content:"90G Evidence · valutare prestazioni, manutenzione e lavorazioni"}
+.s90g-guide-mode-materials .s90g-guide-group:nth-child(4)::after{content:"90G Next Step · mettere a confronto le alternative nel loro contesto"}
+
 .s90g-guide-group h2{font-size:clamp(28px,2.65vw,38px);max-width:520px;margin-bottom:18px}
 .s90g-guide-group p{max-width:570px;line-height:1.68}
 .s90g-guide-links{margin-top:18px;gap:0;border-top:1px solid rgba(23,23,20,.12)}
@@ -37,10 +60,14 @@
 
 .s90g-guide-cta{max-width:none;margin:0;padding:76px max(20px,calc((100% - 1180px)/2)) 86px;background:#273d2c;color:#fff;border-top:0}
 .s90g-guide-cta::before{content:"90G Next Step · prima di trasformare il dubbio in un problema";display:block;margin-bottom:18px;color:#d8aa4d;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.s90g-guide-mode-design .s90g-guide-cta::before{content:"90G Next Step · dal dubbio a un progetto verificabile"}
+.s90g-guide-mode-technical .s90g-guide-cta::before{content:"90G Next Step · dal dato tecnico alla compatibilità nel progetto"}
+.s90g-guide-mode-materials .s90g-guide-cta::before{content:"90G Next Step · dal campione alla scelta contestuale"}
 .s90g-guide-cta h2{font-size:clamp(38px,4vw,58px);line-height:1.02;max-width:900px}
 .s90g-guide-cta p{max-width:820px;color:rgba(255,255,255,.84)}
 .s90g-guide-cta .s90g-guide-button{border-color:#d8aa4d;color:#fff}
 .s90g-guide-cta .s90g-guide-button:hover{background:#d8aa4d;color:#171714}
+.s90g-guide-cta a:not(.s90g-guide-button){color:#fff;text-decoration-color:rgba(255,255,255,.5)}
 
 @media(max-width:850px){
   .s90g-guide-hero{padding:56px 0 44px}
