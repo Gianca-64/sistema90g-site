@@ -22,6 +22,9 @@ CASE_LABELS = {
     'caso-preventivo-cucina-sconto-valore.html': ('Caso pratico preventivo', 'Caso reale anonimizzato · preventivo cucina'),
 }
 
+CASE_VISUAL_PILOT = 'caso-lavastoviglie-passaggio-cucina.html'
+CASE_VISUAL_STYLESHEET = 's90g-case-visual-v2.css'
+
 NAV_ITEMS = [
     ('/servizi', 'Servizi'),
     ('/analisi-preventiva', 'Come funziona'),
@@ -87,6 +90,34 @@ for rel, (old_label, new_label) in CASE_LABELS.items():
         raise SystemExit(f'ERRORE: etichetta caso non trovata in {rel}: {old_label}')
     path.write_text(text.replace(old, new, 1), 'utf-8')
     changed.append(rel)
+
+pilot = root / CASE_VISUAL_PILOT
+if not pilot.is_file():
+    raise SystemExit(f'ERRORE: caso pilota visuale mancante: {CASE_VISUAL_PILOT}')
+text = pilot.read_text('utf-8', errors='ignore')
+pilot_changed = False
+stylesheet_link = f'<link href="{CASE_VISUAL_STYLESHEET}" rel="stylesheet"/>'
+if stylesheet_link not in text:
+    anchor = '<link href="s90g-offer-2026.css'
+    start = text.find(anchor)
+    if start < 0:
+        raise SystemExit('ERRORE: CSS base non trovato nel caso pilota')
+    end = text.find('/>', start)
+    if end < 0:
+        raise SystemExit('ERRORE: chiusura CSS base non trovata nel caso pilota')
+    end += 2
+    text = text[:end] + stylesheet_link + text[end:]
+    pilot_changed = True
+if 's90g-case-visual-v2' not in text:
+    old_body = '<body class="s90g-visual">'
+    new_body = '<body class="s90g-visual s90g-case-visual-v2">'
+    if old_body not in text:
+        raise SystemExit('ERRORE: body visuale non trovato nel caso pilota')
+    text = text.replace(old_body, new_body, 1)
+    pilot_changed = True
+if pilot_changed:
+    pilot.write_text(text, 'utf-8')
+    changed.append(CASE_VISUAL_PILOT)
 
 hub = root / 'casi-analizzati.html'
 if not hub.is_file():
