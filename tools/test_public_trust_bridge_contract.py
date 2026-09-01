@@ -63,15 +63,15 @@ if free_entry:
     if '.html"' in free_bridge:
         issues.append('analisi-preventiva.html: il trust bridge deve usare URL pubblici canonici senza .html')
 
-case_pages = [
-    'caso-lavastoviglie-passaggio-cucina.html',
-    'caso-isola-passaggi-cucina.html',
-    'caso-lavello-sotto-finestra-aperture.html',
-    'caso-cucina-piccola-tre-lati.html',
-    'caso-cucina-profondita-75-angolo.html',
-    'caso-preventivo-cucina-sconto-valore.html',
-]
-for rel in case_pages:
+case_modes = {
+    'caso-lavastoviglie-passaggio-cucina.html': 's90g-case-mode-use',
+    'caso-isola-passaggi-cucina.html': 's90g-case-mode-conflict',
+    'caso-lavello-sotto-finestra-aperture.html': 's90g-case-mode-conflict',
+    'caso-cucina-piccola-tre-lati.html': 's90g-case-mode-use',
+    'caso-cucina-profondita-75-angolo.html': 's90g-case-mode-check',
+    'caso-preventivo-cucina-sconto-valore.html': 's90g-case-mode-compare',
+}
+for rel, mode_class in case_modes.items():
     path = root / rel
     if not path.is_file():
         issues.append(f'{rel}: caso pubblico mancante')
@@ -83,6 +83,30 @@ for rel in case_pages:
         issues.append(f'{rel}: manca il limite dell analisi pubblica')
     if '/analisi-preventiva' not in text:
         issues.append(f'{rel}: manca il percorso alla valutazione iniziale')
+    if 's90g-case-visual-v2.css' not in text:
+        issues.append(f'{rel}: manca stylesheet Case Visual V2')
+    if 's90g-case-visual-v2' not in text:
+        issues.append(f'{rel}: manca classe Case Visual V2')
+    if mode_class not in text:
+        issues.append(f'{rel}: manca modalità visuale specifica {mode_class}')
+
+case_css = root / 's90g-case-visual-v2.css'
+if not case_css.is_file():
+    issues.append('s90g-case-visual-v2.css: stylesheet pubblico mancante')
+else:
+    css = case_css.read_text('utf-8', errors='ignore')
+    for token in (
+        '90G Check',
+        '90G Use',
+        '90G Conflict',
+        '90G Compare',
+        '90G Consequence',
+        's90g-case-mode-conflict',
+        's90g-case-mode-check',
+        's90g-case-mode-compare',
+    ):
+        if token not in css:
+            issues.append(f's90g-case-visual-v2.css: grammatica visuale mancante: {token}')
 
 hub = root / 'casi-analizzati.html'
 if not hub.is_file():
@@ -153,4 +177,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public trust bridge contract: trust + 6 casi reali + 11 pagine con navigazione canonica')
+print('OK public trust bridge contract: trust + 6 casi reali Case V2 + 11 pagine con navigazione canonica')
