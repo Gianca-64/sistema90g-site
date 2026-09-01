@@ -5,6 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 OUT="$HOME/Desktop/Sistema90G-WOW-Home-Visual"
 ZIP="$HOME/Desktop/Sistema90G-WOW-Home-Visual.zip"
+TARGET_URL="${1:-http://127.0.0.1:4173/}"
 
 if [ ! -x "$CHROME" ]; then
   echo "ERRORE: Google Chrome non trovato in $CHROME" >&2
@@ -19,13 +20,19 @@ if [ "$NODE_MAJOR" -lt 22 ]; then
   echo "ERRORE: serve Node.js 22 o successivo (trovato $(node -v))" >&2
   exit 1
 fi
+if ! /usr/bin/curl -fsS "$TARGET_URL" >/dev/null 2>&1; then
+  echo "ERRORE: preview non raggiungibile: $TARGET_URL" >&2
+  echo "Avvia prima bash tools/preview_visual_system_v1.sh e lascia aperto quel Terminale." >&2
+  exit 2
+fi
 
 rm -rf "$OUT" "$ZIP"
 mkdir -p "$OUT"
-node "$ROOT/tools/capture_wow_home_visual.mjs" "$CHROME" "$OUT"
+node "$ROOT/tools/capture_wow_home_visual.mjs" "$CHROME" "$OUT" "$TARGET_URL"
 
-cat > "$OUT/README.txt" <<'EOF'
+cat > "$OUT/README.txt" <<EOF
 Sistema 90G — verifica visuale Home WOW
+Sorgente verificata: $TARGET_URL
 
 Contenuto:
 - visual-proof-desktop.png
@@ -52,4 +59,5 @@ EOF
 
 echo
 echo "PACCHETTO WOW CREATO: $ZIP"
+echo "Sorgente: $TARGET_URL"
 echo "Il repository resta pulito: il pacchetto e' stato salvato sul Desktop."
