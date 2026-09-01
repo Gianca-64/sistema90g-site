@@ -1,0 +1,178 @@
+/* Sistema 90G — Free Entry visual pilot v1
+   Scope: analisi-preventiva only. No copy, funnel or service logic changes. */
+
+body.s90g-free-entry-visual-v1 .s90g-inner-hero{
+  background:#f5f1e8;
+  border-bottom:1px solid var(--line);
+}
+
+body.s90g-free-entry-visual-v1 .s90g-inner-hero-grid{
+  align-items:stretch;
+}
+
+body.s90g-free-entry-visual-v1 .s90g-inner-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+body.s90g-free-entry-visual-v1 .s90g-inner-copy h1{
+  max-width:760px;
+  font-size:clamp(44px,4.6vw,68px);
+  letter-spacing:-.035em;
+}
+
+body.s90g-free-entry-visual-v1 .s90g-inner-media{
+  background:#ece6da;
+  padding:18px;
+}
+
+body.s90g-free-entry-visual-v1 .s90g-inner-media img{
+  object-fit:cover;
+  min-height:100%;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-grid{
+  gap:0;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-card{
+  border:0;
+  border-right:1px solid var(--line);
+  min-height:0;
+  padding:28px 30px;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-card:last-child{
+  border-right:0;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="example"]{
+  position:relative;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="example"] .s90g-eyebrow::before{
+  content:"90G Focus · ";
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="example"] h2{
+  max-width:900px;
+  font-size:clamp(36px,4vw,58px);
+  line-height:1.02;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-grid{
+  gap:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-card{
+  border:0;
+  border-right:1px solid var(--line);
+  min-height:0;
+  padding:30px;
+  background:transparent;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-card:last-child{
+  border-right:0;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-card>.s90g-eyebrow{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:22px;
+  background:var(--deep);
+  color:#fff;
+  letter-spacing:0;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="independence"]{
+  background:#f6f7f4;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="independence"] .s90g-section-head{
+  grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);
+  align-items:start;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="independence"] .s90g-section-head>div{
+  max-width:920px;
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="deepen"] .s90g-eyebrow::before{
+  content:"90G Next Step · ";
+}
+
+body.s90g-free-entry-visual-v1 [data-s90g-trust-bridge="free-entry"]{
+  background:#171c1a;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+body.s90g-free-entry-visual-v1 #richiedi{
+  background:#f5f1e8;
+  border-top:1px solid var(--line);
+}
+
+body.s90g-free-entry-visual-v1 #richiedi .s90g-section-head{
+  max-width:900px;
+}
+
+body.s90g-free-entry-visual-v1 #richiedi .s90g-actions{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  align-items:stretch;
+}
+
+body.s90g-free-entry-visual-v1 #richiedi .s90g-button{
+  justify-content:space-between;
+  min-height:58px;
+}
+
+body.s90g-free-entry-visual-v1 #richiedi .s90g-button.primary{
+  grid-column:span 2;
+}
+
+@media(max-width:1000px){
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-grid,
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-grid{
+    grid-template-columns:1fr;
+  }
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-card,
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-card{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="read"] .s90g-route-card:last-child,
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="process"] .s90g-route-card:last-child{
+    border-bottom:0;
+  }
+  body.s90g-free-entry-visual-v1 #richiedi .s90g-actions{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:680px){
+  body.s90g-free-entry-visual-v1 .s90g-inner-copy h1{
+    font-size:clamp(40px,12vw,52px);
+  }
+  body.s90g-free-entry-visual-v1 .s90g-inner-media{
+    padding:10px;
+  }
+  body.s90g-free-entry-visual-v1 [data-s90g-free-entry-stage="example"] h2{
+    font-size:clamp(34px,10vw,46px);
+  }
+  body.s90g-free-entry-visual-v1 #richiedi .s90g-actions{
+    grid-template-columns:1fr;
+  }
+  body.s90g-free-entry-visual-v1 #richiedi .s90g-button.primary{
+    grid-column:auto;
+  }
+}
