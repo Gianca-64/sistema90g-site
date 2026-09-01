@@ -22,9 +22,6 @@ CASE_LABELS = {
     'caso-preventivo-cucina-sconto-valore.html': ('Caso pratico preventivo', 'Caso reale anonimizzato · preventivo cucina'),
 }
 
-# The visual grammar is shared, while each case keeps a mode that reflects
-# the reasoning it demonstrates. This avoids turning the six cases into
-# mechanically identical pages.
 CASE_VISUAL_MODES = {
     'caso-lavastoviglie-passaggio-cucina.html': 's90g-case-mode-use',
     'caso-isola-passaggi-cucina.html': 's90g-case-mode-conflict',
@@ -34,6 +31,7 @@ CASE_VISUAL_MODES = {
     'caso-preventivo-cucina-sconto-valore.html': 's90g-case-mode-compare',
 }
 CASE_VISUAL_STYLESHEET = 's90g-case-visual-v2.css'
+FREE_ENTRY_VISUAL_STYLESHEET = 's90g-free-entry-visual-v1.css'
 
 NAV_ITEMS = [
     ('/servizi', 'Servizi'),
@@ -74,10 +72,10 @@ def inject_once(path: Path, marker: str, anchor: str, block: str, before: bool) 
     return True
 
 
-def apply_case_visual(path: Path, mode_class: str) -> bool:
+def add_stylesheet_and_body_class(path: Path, stylesheet: str, body_class: str) -> bool:
     text = path.read_text('utf-8', errors='ignore')
     changed_local = False
-    stylesheet_link = f'<link href="{CASE_VISUAL_STYLESHEET}" rel="stylesheet"/>'
+    stylesheet_link = f'<link href="{stylesheet}" rel="stylesheet"/>'
     if stylesheet_link not in text:
         anchor = '<link href="s90g-offer-2026.css'
         start = text.find(anchor)
@@ -94,14 +92,66 @@ def apply_case_visual(path: Path, mode_class: str) -> bool:
     if not body_match:
         raise SystemExit(f'ERRORE: body visuale non trovato in {path.name}')
     classes = body_match.group(1).split()
-    desired = ['s90g-visual', 's90g-case-visual-v2', mode_class]
-    new_classes = []
-    for cls in classes + desired:
-        if cls not in new_classes:
-            new_classes.append(cls)
-    new_body = '<body class="' + ' '.join(new_classes) + '">'
+    for cls in ('s90g-visual', body_class):
+        if cls not in classes:
+            classes.append(cls)
+    new_body = '<body class="' + ' '.join(classes) + '">'
     if body_match.group(0) != new_body:
         text = text[:body_match.start()] + new_body + text[body_match.end():]
+        changed_local = True
+
+    if changed_local:
+        path.write_text(text, 'utf-8')
+    return changed_local
+
+
+def apply_case_visual(path: Path, mode_class: str) -> bool:
+    changed_local = add_stylesheet_and_body_class(path, CASE_VISUAL_STYLESHEET, 's90g-case-visual-v2')
+    text = path.read_text('utf-8', errors='ignore')
+    body_match = re.search(r'<body class="([^"]*)">', text)
+    if not body_match:
+        raise SystemExit(f'ERRORE: body visuale non trovato in {path.name}')
+    classes = body_match.group(1).split()
+    if mode_class not in classes:
+        classes.append(mode_class)
+        new_body = '<body class="' + ' '.join(classes) + '">'
+        text = text[:body_match.start()] + new_body + text[body_match.end():]
+        path.write_text(text, 'utf-8')
+        changed_local = True
+    return changed_local
+
+
+def apply_free_entry_visual(path: Path) -> bool:
+    changed_local = add_stylesheet_and_body_class(path, FREE_ENTRY_VISUAL_STYLESHEET, 's90g-free-entry-visual-v1')
+    text = path.read_text('utf-8', errors='ignore')
+    replacements = [
+        (
+            '<section class="s90g-section"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Cosa ottieni già nel Free Entry</p>',
+            '<section class="s90g-section" data-s90g-free-entry-stage="read"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Cosa ottieni già nel Free Entry</p>',
+        ),
+        (
+            '<section class="s90g-dark-band"><div class="s90g-shell"><p class="s90g-eyebrow">Un esempio concreto</p>',
+            '<section class="s90g-dark-band" data-s90g-free-entry-stage="example"><div class="s90g-shell"><p class="s90g-eyebrow">Un esempio concreto</p>',
+        ),
+        (
+            '<section class="s90g-section"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Come funziona</p>',
+            '<section class="s90g-section" data-s90g-free-entry-stage="process"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Come funziona</p>',
+        ),
+        (
+            '<section class="s90g-section"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Indipendenza concreta</p>',
+            '<section class="s90g-section" data-s90g-free-entry-stage="independence"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Indipendenza concreta</p>',
+        ),
+        (
+            '<section class="s90g-dark-band"><div class="s90g-shell"><p class="s90g-eyebrow">Se serve approfondire</p>',
+            '<section class="s90g-dark-band" data-s90g-free-entry-stage="deepen"><div class="s90g-shell"><p class="s90g-eyebrow">Se serve approfondire</p>',
+        ),
+    ]
+    for old, new in replacements:
+        if new in text:
+            continue
+        if old not in text:
+            raise SystemExit(f'ERRORE: stage Free Entry non trovato in {path.name}: {old[:80]}')
+        text = text.replace(old, new, 1)
         changed_local = True
 
     if changed_local:
@@ -121,6 +171,8 @@ free_entry = root / 'analisi-preventiva.html'
 if not free_entry.is_file():
     raise SystemExit('ERRORE: analisi-preventiva.html non trovato nella dist')
 if inject_once(free_entry, 'data-s90g-trust-bridge="free-entry"', '<section class="s90g-section" id="richiedi">', FREE_ENTRY_BLOCK, True):
+    changed.append('analisi-preventiva.html')
+if apply_free_entry_visual(free_entry):
     changed.append('analisi-preventiva.html')
 
 for rel, (old_label, new_label) in CASE_LABELS.items():
