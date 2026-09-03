@@ -107,6 +107,8 @@
       if(role&&!target.searchParams.get('requester_role'))target.searchParams.set('requester_role',role);
       const service=target.searchParams.get('service')||link.dataset.service||'';
       if(service&&!target.searchParams.get('service'))target.searchParams.set('service',service);
+      const serviceHint=target.searchParams.get('service_hint')||link.dataset.serviceHint||current.searchParams.get('service_hint')||'';
+      if(serviceHint&&!target.searchParams.get('service_hint'))target.searchParams.set('service_hint',serviceHint);
       if(!target.searchParams.get('case_id')&&current.searchParams.get('case_id'))target.searchParams.set('case_id',current.searchParams.get('case_id'));
       CAMPAIGN_KEYS.forEach(k=>{const v=current.searchParams.get(k);if(v&&!target.searchParams.get(k))target.searchParams.set(k,v)});
       link.href=target.toString();

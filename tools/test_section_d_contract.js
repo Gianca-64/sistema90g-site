@@ -7,6 +7,7 @@ const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
 const nav=read('navigation-conversion.js');
 for(const token of ['Rivenditori','Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
+assert.ok(nav.includes("current.searchParams.get('service_hint')"),'service_hint preservato fino al Portale');
 assert.ok(nav.includes('/analisi-preventiva.html#richiedi'),'navigazione deve usare #richiedi');
 assert.ok(nav.includes('Chiedi la valutazione gratuita'),'normalizzazione CTA Free Entry');
 for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina',"'restyling-cucina-esistente':'79'",'SERVICE_PRICES']){
