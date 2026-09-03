@@ -18,6 +18,7 @@ NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
 CANONICAL_OFFER = [
+    'Progetto &amp; Preventivo Cucina 90G · 185 €',
     'Consulenza 90G · 97 €',
     'Verifica 90G · 127 €',
     'Progetto Cucina 90G · 145 €',
