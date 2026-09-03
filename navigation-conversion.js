@@ -10,7 +10,8 @@
     'seconda-opinione-cucina',
     'scelta-finiture-cucina',
     'restyling-cucina-esistente',
-    'acquisto-assistito-cucina'
+    'acquisto-assistito-cucina',
+    'progetto-preventivo-cucina-90g'
   ]);
   const NAV_LINKS=[
     ['home','Home','/'],
