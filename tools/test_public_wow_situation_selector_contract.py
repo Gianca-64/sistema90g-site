@@ -37,18 +37,27 @@ else:
     proof = extract_section(text, proof_marker, selector_marker)
 
     selector_required = [
-        'Cosa stai cercando di capire?',
-        'Ho già un progetto o un preventivo',
-        'Sto valutando isola o penisola',
-        'Devo confrontare due preventivi',
-        'Devo scegliere materiali o finiture',
-        'La cucina è già montata',
-        'Non so come definire il problema',
+        'A che punto sei con la tua cucina?',
+        'Sto scegliendo',
+        'Ho uno o più preventivi',
+        'Ho già un progetto',
+        'Devo sviluppare una soluzione',
+        'Ho già ordinato',
+        'La cucina è stata consegnata o montata e qualcosa non va',
+        'Consulenza 90G · 97 €',
+        'Analisi Preventivo &amp; Ordine 90G · da 127 €',
+        'Verifica Cucina 90G · da 147 €',
+        'Progetto Cucina 90G · da 247 €',
+        'Controllo Pre-Montaggio 90G · da 127 €',
+        'Analisi Problema 90G · da 147 €',
         'href="/analisi-preventiva#richiedi"',
     ]
+
     for token in selector_required:
         if token not in selector:
-            issues.append(f'index.html: elemento selettore mancante: {token}')
+            issues.append(
+                f'index.html: elemento customer journey mancante: {token}'
+            )
 
     proof_required = [
         'Guarda cosa vede Sistema 90G',
@@ -142,4 +151,4 @@ if issues:
         print(' -', issue)
     raise SystemExit(1)
 
-print('OK public WOW Home: 6 situazioni + 2 casi + bundle CSS Home con audit-fix iniziale e cascata invariata')
+print('OK public WOW Home: customer journey V1 a 6 situazioni + 2 casi + bundle CSS Home con audit-fix iniziale e cascata invariata')

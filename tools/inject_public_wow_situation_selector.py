@@ -10,19 +10,48 @@ if not page.is_file():
     raise SystemExit('ERRORE: index.html mancante')
 
 text = page.read_text('utf-8', errors='strict')
-anchor = '<section class="s90g-section"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Gli strumenti, se servono</p>'
-if anchor not in text and 'data-s90g-wow-situation-selector="true"' not in text:
-    raise SystemExit('ERRORE: punto di inserimento Home non trovato')
+journey_marker = '<!-- S90G-CUSTOMER-JOURNEY-V1 -->'
+selector_marker = 'data-s90g-wow-situation-selector="true"'
+
+# La customer journey commerciale è ora parte del sorgente canonico della Home.
+# La build non deve più iniettare un secondo selettore.
+if journey_marker not in text and selector_marker not in text:
+    raise SystemExit('ERRORE: customer journey V1 Home non trovata')
 
 changed = []
 
-if 'data-s90g-wow-situation-selector="true"' not in text:
-    selector = '''<section class="s90g-section" data-s90g-wow-situation-selector="true"><div class="s90g-shell"><div class="s90g-section-head"><div><p class="s90g-eyebrow">Cosa stai cercando di capire?</p><h2>Parti dalla situazione, non dal nome del servizio.</h2><p>Scegli il dubbio che assomiglia di più al tuo. Se nessuno coincide, puoi comunque raccontare liberamente il problema nella valutazione iniziale gratuita.</p></div></div><div class="s90g-route-grid"><article class="s90g-route-card"><h3>Ho già un progetto o un preventivo</h3><p>Vuoi capire se passaggi, aperture, composizione o voci economiche meritano un controllo.</p><a class="s90g-link" href="/quando-verifica-indipendente-cucina">Vedi cosa controllare →</a></article><article class="s90g-route-card"><h3>Sto valutando isola o penisola</h3><p>Il dubbio riguarda distanze, sgabelli, aperture o spazio che resta durante l'uso.</p><a class="s90g-link" href="/isola-cucina-distanze-passaggi">Guarda i criteri →</a></article><article class="s90g-route-card"><h3>Devo confrontare due preventivi</h3><p>Vuoi rendere comparabili prodotti, lavorazioni, inclusioni ed esclusioni prima di decidere.</p><a class="s90g-link" href="/confrontare-due-preventivi-cucina">Come confrontarli →</a></article><article class="s90g-route-card"><h3>Devo scegliere materiali o finiture</h3><p>Il problema è decidere tra alternative concrete senza fermarsi solo all'effetto estetico.</p><a class="s90g-link" href="/materiali-finiture-cucina-guide">Esplora le scelte →</a></article><article class="s90g-route-card"><h3>La cucina è già montata</h3><p>Vuoi capire se conviene intervenire su finiture, componenti o elettrodomestici senza rifare tutto.</p><a class="s90g-link" href="/rinnovare-cucina-senza-cambiarla">Valuta il rinnovo →</a></article><article class="s90g-route-card"><h3>Non so come definire il problema</h3><p>Non serve classificarlo da solo: descrivi cosa non ti convince e allega ciò che hai.</p><a class="s90g-link" href="/analisi-preventiva#richiedi">Racconta il problema →</a></article></div></div></section>'''
-    text = text.replace(anchor, selector + anchor, 1)
-    changed.append('selettore situazione')
+if selector_marker not in text:
+    journey_pos = text.find(journey_marker)
+    section_start = text.find('<section', journey_pos)
+
+    if section_start == -1:
+        raise SystemExit('ERRORE: sezione customer journey V1 non trovata')
+
+    section_end = text.find('>', section_start)
+
+    if section_end == -1:
+        raise SystemExit('ERRORE: tag customer journey V1 non valido')
+
+    section_tag = text[section_start:section_end + 1]
+
+    if 'id="servizi"' not in section_tag:
+        raise SystemExit('ERRORE: customer journey V1 senza id servizi')
+
+    marked_tag = (
+        section_tag[:-1]
+        + ' data-s90g-wow-situation-selector="true">'
+    )
+
+    text = (
+        text[:section_start]
+        + marked_tag
+        + text[section_end + 1:]
+    )
+
+    changed.append('customer journey V1 riconosciuta')
 
 if 'data-s90g-wow-visual-proof="true"' not in text:
-    selector_anchor = '<section class="s90g-section" data-s90g-wow-situation-selector="true">'
+    selector_anchor = '<section class="s90g-section" id="servizi" data-s90g-wow-situation-selector="true">'
     if selector_anchor not in text:
         raise SystemExit('ERRORE: selettore situazione WOW non trovato in Home')
     if 's90g-wow-visual-proof.css' not in text:

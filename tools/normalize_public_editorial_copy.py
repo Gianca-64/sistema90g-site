@@ -61,11 +61,6 @@ REPLACEMENTS = {
         'Se uno di questi errori riguarda una cucina già disegnata o un preventivo già ricevuto, la verifica più utile è quella fatta sul materiale reale: misure disponibili, composizione proposta, aperture, impianti ed eventuali vincoli dell’ambiente. In quel caso può essere appropriata <a href="/servizi">Verifica 90G</a>. Se invece la cucina deve ancora essere definita, può essere più adatto il <a href="/progetto-cucina-sistema90g">Progetto Cucina 90G</a>. La valutazione gratuita serve proprio a stabilirlo prima di qualsiasi acquisto.': 'Se uno di questi errori riguarda una cucina già disegnata, un preventivo già ricevuto o una cucina ancora da definire, la lettura più utile parte dal materiale reale: misure disponibili, composizione, aperture, impianti ed eventuali vincoli dell’ambiente. La valutazione iniziale serve a capire se il dubbio è circoscritto oppure se richiede un lavoro più ampio, senza che tu debba scegliere in anticipo il servizio.',
         '<a href="/analisi-preventiva#richiedi"><strong>Sottoponi gratuitamente il tuo caso →</strong></a>': '',
     },
-    'index.html': {
-        '<a class="s90g-link" href="/servizi">Scopri il Progetto →</a>': '<a class="s90g-link" href="/servizi#progetto">Scopri il Progetto →</a>',
-        '<a class="s90g-link" href="/servizi">Scopri la Verifica →</a>': '<a class="s90g-link" href="/servizi#verifica">Scopri la Verifica →</a>',
-        '<a class="s90g-link" href="/servizi">Scopri la Consulenza →</a>': '<a class="s90g-link" href="/servizi#consulenza">Scopri la Consulenza →</a>',
-    },
     'servizi.html': {
         '<section class="s90g-section" id="servizi">': '<section class="s90g-section" id="consulenza">',
         '<section class="s90g-dark-band"><div class="s90g-shell"><p class="s90g-eyebrow">Hai già progetto o preventivo</p>': '<section class="s90g-dark-band" id="verifica"><div class="s90g-shell"><p class="s90g-eyebrow">Hai già progetto o preventivo</p>',

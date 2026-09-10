@@ -115,9 +115,59 @@ if not home.is_file():
     issues.append('index.html: pagina mancante')
 else:
     home_text = home.read_text('utf-8', errors='strict')
-    for href in ('/servizi#consulenza', '/servizi#verifica', '/servizi#progetto'):
-        if f'href="{href}"' not in home_text:
-            issues.append(f'index.html: collegamento servizio mancante {href}')
+
+    if home_text.count('data-s90g-wow-situation-selector="true"') != 1:
+        issues.append(
+            'index.html: customer journey V1 mancante o duplicata'
+        )
+
+    home_required = [
+        'A che punto sei con la tua cucina?',
+        'Consulenza 90G · 97 €',
+        'Analisi Preventivo &amp; Ordine 90G · da 127 €',
+        'Verifica Cucina 90G · da 147 €',
+        'Progetto Cucina 90G · da 247 €',
+        'Controllo Pre-Montaggio 90G · da 127 €',
+        'Analisi Problema 90G · da 147 €',
+    ]
+
+    for token in home_required:
+        if token not in home_text:
+            issues.append(
+                f'index.html: customer journey incompleta: {token}'
+            )
+
+    selector_start = home_text.find(
+        'data-s90g-wow-situation-selector="true"'
+    )
+
+    selector_end = home_text.find('</section>', selector_start)
+
+    if selector_start == -1 or selector_end == -1:
+        issues.append(
+            'index.html: sezione customer journey non leggibile'
+        )
+    else:
+        selector = home_text[selector_start:selector_end]
+
+        free_entry_href = 'href="/analisi-preventiva#richiedi"'
+
+        if selector.count(free_entry_href) != 7:
+            issues.append(
+                'index.html: customer journey deve avere '
+                '6 CTA situazione + 1 CTA finale verso Free Entry'
+            )
+
+        for legacy_href in (
+            'href="/servizi#consulenza"',
+            'href="/servizi#verifica"',
+            'href="/servizi#progetto"',
+        ):
+            if legacy_href in selector:
+                issues.append(
+                    f'index.html: funnel legacy presente nella '
+                    f'customer journey: {legacy_href}'
+                )
 
 if not servizi.is_file():
     issues.append('servizi.html: pagina mancante')
@@ -133,4 +183,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public editorial copy contract: 13 pagine allineate + Home instradata alle 3 sezioni servizio corrette')
+print('OK public editorial copy contract: 13 pagine allineate + Home instradata dalle 6 situazioni al Free Entry')
