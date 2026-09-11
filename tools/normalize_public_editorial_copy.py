@@ -48,7 +48,6 @@ REPLACEMENTS = {
         'chiarire il perimetro della propria offerta.': 'chiarire cosa comprende la propria offerta.',
     },
     'top-cucina-materiali-guida.html': {
-        'Se la cucina è ancora in fase di definizione, il <a href="/progetto-cucina-sistema90g">Progetto Cucina 90G</a> permette di leggere il top insieme a composizione e funzioni; l’add-on <a href="/scelta-finiture-cucina">Finiture e materiali</a> approfondisce il confronto tra alternative.': 'Se il dubbio riguarda il tuo progetto o due materiali concreti, puoi partire dalla valutazione iniziale: prima leggiamo il problema e poi ti diciamo se basta un chiarimento o se serve un approfondimento sulle finiture.',
     },
     'ante-cucina-materiali-manutenzione.html': {
         'La prima valutazione serve a capire se il dubbio è leggibile dal materiale e se basta una Consulenza 90G o se ha senso approfondire la scelta nel progetto.': 'La prima valutazione serve a capire se il dubbio è leggibile dal materiale, se basta chiarire il confronto oppure se la scelta richiede un approfondimento nel progetto.',
@@ -73,12 +72,6 @@ REPLACEMENTS = {
     },
     'rinnovare-cucina-senza-cambiarla.html': {
         'href="/servizi#servizi"': 'href="/servizi#consulenza"',
-    },
-    'professionisti-progetto-cucina.html': {
-        "Il supporto resta circoscritto alla cucina e al perimetro concordato.": "Il supporto resta circoscritto alla cucina e al problema concordato.",
-        '1. Definisci il dubbio o il perimetro': '1. Definisci il dubbio o ciò che vuoi approfondire',
-        'Ti diciamo se il caso è pertinente, quale servizio è eventualmente appropriato e quali informazioni servono. Solo dopo, con contenuti e prezzo chiari, decidi se procedere con l\'approfondimento professionale.': 'Ti diciamo se dal materiale possiamo aiutarti, quali informazioni servono e, solo se occorre un approfondimento, quale lavoro è utile e quanto costa. Poi decidi se procedere.',
-        'Se serve un approfondimento, servizio, contenuti e prezzo vengono indicati prima di iniziare.': 'Se serve un approfondimento, prima di iniziare sai che cosa verrà fatto e quanto costa.',
     },
 }
 

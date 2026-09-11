@@ -7,6 +7,7 @@ from urllib.parse import parse_qs, urlparse
 
 PORTAL_HOST = "portale.sistema90g.it"
 PUBLIC_SERVICE = "valutazione-iniziale"
+PUBLIC_REQUESTER_ROLE = "private"
 
 
 def main() -> int:
@@ -35,18 +36,38 @@ def main() -> int:
             if parsed.hostname != PORTAL_HOST:
                 continue
             checked += 1
-            service = parse_qs(parsed.query).get("service", [""])[0]
+            query = parse_qs(parsed.query)
+            service = query.get("service", [""])[0]
+            requester_role = query.get("requester_role", [""])[0]
+
+            rel = html.relative_to(root)
+
             if service != PUBLIC_SERVICE:
-                rel = html.relative_to(root)
-                errors.append(f"{rel}: CTA Portale pubblica con service={service or '<mancante>'}: {raw}")
+                errors.append(
+                    f"{rel}: CTA Portale pubblica con "
+                    f"service={service or '<mancante>'}: {raw}"
+                )
+
+            if requester_role != PUBLIC_REQUESTER_ROLE:
+                errors.append(
+                    f"{rel}: CTA Portale pubblica con "
+                    f"requester_role={requester_role or '<mancante>'}: {raw}"
+                )
 
     if errors:
-        print("ERRORE: il Portale pubblico accetta solo la Valutazione iniziale gratuita.", file=sys.stderr)
+        print(
+            "ERRORE: il Portale pubblico accetta solo il Free Entry "
+            "per clienti privati.",
+            file=sys.stderr,
+        )
         for error in errors:
             print(f" - {error}", file=sys.stderr)
         return 1
 
-    print(f"OK public Portal entry contract: {checked} CTA, solo {PUBLIC_SERVICE}")
+    print(
+        f"OK public Portal entry contract: {checked} CTA, "
+        f"solo {PUBLIC_REQUESTER_ROLE} + {PUBLIC_SERVICE}"
+    )
     return 0
 
 

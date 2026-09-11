@@ -1,20 +1,19 @@
 /index.html / 301
 /come-sistema90g-utilizza-intelligenza-artificiale.html /metodo-sistema90g.html 301
 /render-fotorealistici-interni.html /progetto-cucina-sistema90g.html 301
-/servizi/add-on-capitolato /seconda-opinione-cucina.html 301
-/servizi/add-on-capitolato.html /seconda-opinione-cucina.html 301
-/blog/capitolato-cucina-cosa-controllare /seconda-opinione-cucina.html 301
-/blog/capitolato-cucina-cosa-controllare.html /seconda-opinione-cucina.html 301
+/servizi/add-on-capitolato /analisi-preventivo-cucina.html 301
+/servizi/add-on-capitolato.html /analisi-preventivo-cucina.html 301
+/blog/capitolato-cucina-cosa-controllare /analisi-preventivo-cucina.html 301
+/blog/capitolato-cucina-cosa-controllare.html /analisi-preventivo-cucina.html 301
 /blog/progetto-cucina-da-zero-come-fare /progetto-cucina-sistema90g.html 301
 /blog/progetto-cucina-da-zero-come-fare.html /progetto-cucina-sistema90g.html 301
 /blog/7-errori* /progettare-cucina-guide.html 301
-/rivenditori-veneta-cucine.html /rivenditori-cucine.html 301
 /richiesta.html /analisi-preventiva.html#richiedi 301
 /casi-cucina.html /casi-analizzati.html 301
 /caso-passaggio-lavastoviglie.html /caso-lavastoviglie-passaggio-cucina.html 301
 /caso-verificato-isola-forno-passaggi.html /caso-isola-passaggi-cucina.html 301
 /centro-casi-reali.html /casi-analizzati.html 301
-/cosa-cambia-dopo-il-controllo.html /seconda-opinione-cucina.html 301
+/cosa-cambia-dopo-il-controllo.html /verifica-90g.html 301
 /dubbi-reali-cucina.html /domande-cucina-faq.html 301
 /errori-trovati-davvero.html /casi-analizzati.html 301
 /micro-caso-frigo-apertura.html /frigorifero-cucina-vicino-parete.html 301
@@ -27,9 +26,36 @@
 /tutto-sembrava-corretto-finche.html /casi-analizzati.html 301
 
 # Vecchi servizi cucina: manteniamo solo redirect verso l'attuale percorso equivalente.
-/controllo-mirato.html /seconda-opinione-cucina.html 301
-/analisi-completa.html /seconda-opinione-cucina.html 301
-/analisi-preventivo-cucina.html /seconda-opinione-cucina.html 301
-/controllo-mirato /seconda-opinione-cucina.html 301
-/analisi-completa /seconda-opinione-cucina.html 301
-/analisi-preventivo-cucina /seconda-opinione-cucina.html 301
+
+/professionisti /servizi.html 301
+/professionisti.html /servizi.html 301
+/professionisti-progetto-cucina /progetto-cucina-sistema90g.html 301
+/professionisti-progetto-cucina.html /progetto-cucina-sistema90g.html 301
+/agenzie-immobiliari-cucina /analisi-preventiva.html 301
+/agenzie-immobiliari-cucina.html /analisi-preventiva.html 301
+/rivenditori-cucine /metodo-sistema90g.html 301
+/rivenditori-cucine.html /metodo-sistema90g.html 301
+/rivenditori-veneta-cucine /metodo-sistema90g.html 301
+/rivenditori-veneta-cucine.html /metodo-sistema90g.html 301
+/controllo-progetto-cucina /verifica-90g.html 301
+/controllo-progetto-cucina.html /verifica-90g.html 301
+
+# Legacy B2C offer migration — B2.15D1
+/seconda-opinione-cucina /verifica-90g.html 301
+/seconda-opinione-cucina.html /verifica-90g.html 301
+/controllo-mirato /verifica-90g.html 301
+/controllo-mirato.html /verifica-90g.html 301
+/analisi-completa /verifica-90g.html 301
+/analisi-completa.html /verifica-90g.html 301
+/sviluppo-avanzato-progetto-cucina /progetto-cucina-sistema90g.html 301
+/sviluppo-avanzato-progetto-cucina.html /progetto-cucina-sistema90g.html 301
+/acquisto-assistito-cucina /progetto-preventivo-cucina-90g.html 301
+/acquisto-assistito-cucina.html /progetto-preventivo-cucina-90g.html 301
+/scelta-finiture-cucina /consulenza-90g.html 301
+/scelta-finiture-cucina.html /consulenza-90g.html 301
+/restyling-cucina-esistente /analisi-preventiva.html#richiedi 301
+/restyling-cucina-esistente.html /analisi-preventiva.html#richiedi 301
+
+# Legacy example migration — B2.15D2
+/esempio-fascicolo-cucina /esempio-progetto-cucina-90g.html 301
+/esempio-fascicolo-cucina.html /esempio-progetto-cucina-90g.html 301

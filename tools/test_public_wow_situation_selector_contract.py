@@ -44,12 +44,12 @@ else:
         'Devo sviluppare una soluzione',
         'Ho già ordinato',
         'La cucina è stata consegnata o montata e qualcosa non va',
-        'Consulenza 90G · 97 €',
-        'Analisi Preventivo &amp; Ordine 90G · da 127 €',
-        'Verifica Cucina 90G · da 147 €',
-        'Progetto Cucina 90G · da 247 €',
-        'Controllo Pre-Montaggio 90G · da 127 €',
-        'Analisi Problema 90G · da 147 €',
+        'Consulenza 90G · 79 €',
+        'Analisi Preventivo &amp; Ordine 90G · 129 €',
+        'Verifica Cucina 90G · 149 €',
+        'Progetto Cucina 90G · 299 €',
+        'Controllo Pre-Montaggio 90G · 179 €',
+        'Analisi Problema 90G · 149 €',
         'href="/analisi-preventiva#richiedi"',
     ]
 

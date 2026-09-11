@@ -6,7 +6,11 @@ const root=path.join(__dirname,'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
 const nav=read('navigation-conversion.js');
-for(const token of ['Rivenditori','Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
+for(const token of ['Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
+
+for(const obsoleteNav of ['Professionisti','Rivenditori','/professionisti.html','/rivenditori-cucine.html']){
+  assert.equal(nav.includes(obsoleteNav),false,`navigation contiene target B2B pubblico ${obsoleteNav}`);
+}
 assert.ok(nav.includes('/analisi-preventiva.html#richiedi'),'navigazione deve usare #richiedi');
 assert.ok(nav.includes('Chiedi la valutazione gratuita'),'normalizzazione CTA Free Entry');
 for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina',"'restyling-cucina-esistente':'79'",'SERVICE_PRICES']){
@@ -34,6 +38,27 @@ const intake=read('analisi-preventiva.html');
 const services=read('servizi.html');
 assert.ok(intake.includes('id="richiedi"'),'Free Entry #richiedi');
 assert.ok(intake.includes('service=valutazione-iniziale'),'valutazione iniziale');
+assert.ok(intake.includes('requester_role=private'),'Free Entry pubblico per privati');
+for(const forbiddenRole of [
+  'requester_role=interior',
+  'requester_role=technician',
+  'requester_role=company',
+  'requester_role=agency',
+  'requester_role=other',
+  'requester_role=retailer'
+]){
+  assert.equal(intake.includes(forbiddenRole),false,`Free Entry pubblico contiene ruolo B2B ${forbiddenRole}`);
+}
+for(const forbiddenLabel of [
+  'Interior designer',
+  'Architetto o geometra',
+  'Agenzia immobiliare',
+  'Altro professionista',
+  'Rivenditore cucine',
+  'Per professionisti e rivenditori'
+]){
+  assert.equal(intake.includes(forbiddenLabel),false,`Free Entry pubblico contiene target B2B ${forbiddenLabel}`);
+}
 assert.equal(intake.includes('service_price='),false,'Free Entry senza prezzi nel portale');
 assert.equal(intake.includes('#percorso'),false,'Free Entry non deve usare anchor legacy');
 for(const principle of [
@@ -42,8 +67,15 @@ for(const principle of [
   'A volte non serve acquistare nulla.',
   'Ti diciamo cosa può aiutarti a risolverlo'
 ]) assert.ok(intake.includes(principle),`principio Free Entry assente: ${principle}`);
-for(const token of ['Consulenza 90G · 97 €','Verifica 90G · 127 €','Progetto Cucina 90G · 145 €']){
-  assert.ok(services.includes(token),`prezzo canonico assente da servizi: ${token}`);
+for(const token of [
+  'Consulenza 90G · 79 €',
+  'Analisi Preventivo &amp; Ordine 90G · 129 €',
+  'Verifica Cucina 90G · 149 €',
+  'Progetto Cucina 90G · 299 €',
+  'Controllo Pre-Montaggio 90G · 179 €',
+  'Analisi Problema 90G · 149 €'
+]){
+  assert.ok(services.includes(token),`servizio canonico assente da servizi: ${token}`);
 }
 assert.equal(intake.includes('role-case-path.js'),false,'la pagina Free Entry non deve dipendere dal catalogo legacy');
 assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry non deve dipendere dallo stile legacy');

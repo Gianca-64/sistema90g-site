@@ -18,12 +18,14 @@ NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
 CANONICAL_OFFER = [
-    'Progetto &amp; Preventivo Cucina 90G · 185 €',
-    'Consulenza 90G · 97 €',
-    'Verifica 90G · 127 €',
-    'Progetto Cucina 90G · 145 €',
-    '+117 € ciascuno',
-    'Render fotorealistici · 57 € / vista',
+    'Consulenza 90G · 79 €',
+    'Analisi Preventivo &amp; Ordine 90G · 129 €',
+    'Verifica Cucina 90G · 149 €',
+    'Progetto Cucina 90G · 299 €',
+    'Controllo Pre-Montaggio 90G · 179 €',
+    'Analisi Problema 90G · 149 €',
+    'Progetto &amp; Preventivo 90G · 349 €',
+    'Render fotorealistico aggiuntivo · 39 € / vista',
 ]
 LEGACY_PUBLIC_TERMS = [
     '#percorso',
@@ -283,9 +285,11 @@ def audit():
     if 'id="richiedi"' not in intake:
         issues.append(('analisi-preventiva.html', 'Free Entry #richiedi missing'))
     portal_links = re.findall(r'https://portale\.sistema90g\.it/portal\.html\?[^\"\']+', intake)
-    if len(portal_links) < 7:
-        issues.append(('analisi-preventiva.html', 'expected role-based Free Entry links', len(portal_links)))
+    if len(portal_links) != 1:
+        issues.append(('analisi-preventiva.html', 'expected exactly one public Free Entry link', len(portal_links)))
     for href in portal_links:
+        if 'requester_role=private' not in href:
+            issues.append(('analisi-preventiva.html', 'public Free Entry link not private-only', href))
         if 'service=valutazione-iniziale' not in href:
             issues.append(('analisi-preventiva.html', 'portal link not Free Entry', href))
         if 'service_price=' in href:

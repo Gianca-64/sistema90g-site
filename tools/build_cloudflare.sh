@@ -110,6 +110,15 @@ python3 "$ROOT/tools/inject_public_wow_situation_selector.py" "$DIST"
 # di identita, indipendenza e casi verificabili, senza cambiare il funnel.
 python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
 
+# B2C pubblico: Professionisti e Rivenditori non sono target di navigazione.
+# Le pagine legacy vengono gestite separatamente con redirect/SEO.
+python3 "$ROOT/tools/remove_public_b2b_navigation.py" "$DIST"
+
+# Le landing B2B non fanno più parte del sito pubblico B2C.
+# Gli URL storici restano gestiti tramite _redirects.
+python3 "$ROOT/tools/retire_public_b2b_pages.py" "$DIST"
+python3 "$ROOT/tools/retire_public_legacy_offer_pages.py" "$DIST"
+
 # P2: i sei casi reali devono dichiarare il percorso verso la guida tecnica e
 # il relativo hub; le guide corrispondenti devono riportare a hub e caso reale.
 python3 "$ROOT/tools/inject_public_content_clusters.py" "$DIST"
@@ -128,9 +137,10 @@ python3 "$ROOT/tools/inject_public_consent_ui.py" "$DIST"
 # invalida automaticamente la cache browser senza bump manuali.
 python3 "$ROOT/tools/version_public_static_assets.py" "$DIST"
 
-# Il Portale pubblico accetta soltanto il Free Entry. Ogni CTA pubblica deve quindi
-# usare esplicitamente service=valutazione-iniziale; i servizi a pagamento vengono
-# proposti solo dopo la qualificazione del caso.
+# Il Portale pubblico accetta soltanto il Free Entry per clienti privati.
+# Ogni CTA pubblica deve usare requester_role=private e
+# service=valutazione-iniziale; i servizi a pagamento vengono proposti solo
+# dopo la qualificazione del caso.
 python3 "$ROOT/tools/test_public_portal_entry_contract.py" "$DIST"
 
 # L'offerta pubblica deve restare allineata al listino canonico anche nelle

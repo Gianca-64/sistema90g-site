@@ -48,17 +48,10 @@ FORBIDDEN = {
     'rinnovare-cucina-senza-cambiarla.html': [
         'href="/servizi#servizi"',
     ],
-    'professionisti-progetto-cucina.html': [
-        'perimetro concordato',
-        'Definisci il dubbio o il perimetro',
-        'caso è pertinente',
-        'servizio è eventualmente appropriato',
-        'servizio, contenuti e prezzo vengono indicati prima di iniziare',
-    ],
 }
 
 REQUIRED = {
-    'pareti-fuori-squadra-cucina.html': ['Verifica 90G'],
+    'pareti-fuori-squadra-cucina.html': ['Verifica Cucina 90G', 'href="/verifica-90g"'],
     'frigorifero-incasso-o-libera-installazione.html': ["dell'ordine"],
     'lavello-una-o-due-vasche-gocciolatoio.html': ["all'uso"],
     'piano-induzione-aspirazione-integrata-o-cappa.html': ["L'aspirazione"],
@@ -69,7 +62,9 @@ REQUIRED = {
         "costo e sull'organizzazione complessiva", 'chiarire cosa comprende la propria offerta',
     ],
     'top-cucina-materiali-guida.html': [
-        'prima leggiamo il problema', 'serve un approfondimento sulle finiture',
+        'prestazioni, manutenzione e compatibilità con la composizione reale',
+        'Consulenza 90G su materiali e finiture',
+        'se rientra nella Consulenza 90G oppure richiede un percorso diverso',
     ],
     'ante-cucina-materiali-manutenzione.html': [
         'se basta chiarire il confronto oppure se la scelta richiede un approfondimento nel progetto',
@@ -86,12 +81,6 @@ REQUIRED = {
     ],
     'rinnovare-cucina-senza-cambiarla.html': [
         'href="/servizi#consulenza"',
-    ],
-    'professionisti-progetto-cucina.html': [
-        'problema concordato',
-        'Definisci il dubbio o ciò che vuoi approfondire',
-        'se dal materiale possiamo aiutarti',
-        'prima di iniziare sai che cosa verrà fatto e quanto costa',
     ],
 }
 
@@ -123,12 +112,12 @@ else:
 
     home_required = [
         'A che punto sei con la tua cucina?',
-        'Consulenza 90G · 97 €',
-        'Analisi Preventivo &amp; Ordine 90G · da 127 €',
-        'Verifica Cucina 90G · da 147 €',
-        'Progetto Cucina 90G · da 247 €',
-        'Controllo Pre-Montaggio 90G · da 127 €',
-        'Analisi Problema 90G · da 147 €',
+        'Consulenza 90G · 79 €',
+        'Analisi Preventivo &amp; Ordine 90G · 129 €',
+        'Verifica Cucina 90G · 149 €',
+        'Progetto Cucina 90G · 299 €',
+        'Controllo Pre-Montaggio 90G · 179 €',
+        'Analisi Problema 90G · 149 €',
     ]
 
     for token in home_required:
@@ -173,9 +162,32 @@ if not servizi.is_file():
     issues.append('servizi.html: pagina mancante')
 else:
     servizi_text = servizi.read_text('utf-8', errors='strict')
-    for section_id in ('consulenza', 'verifica', 'progetto'):
-        if f'id="{section_id}"' not in servizi_text:
-            issues.append(f'servizi.html: ancora mancante #{section_id}')
+    canonical_service_links = [
+        'href="/consulenza-90g"',
+        'href="/analisi-preventivo-cucina"',
+        'href="/verifica-90g"',
+        'href="/progetto-cucina-sistema90g"',
+        'href="/controllo-pre-montaggio-cucina"',
+        'href="/analisi-problema-cucina"',
+    ]
+
+    for service_href in canonical_service_links:
+        if service_href not in servizi_text:
+            issues.append(
+                'servizi.html: collegamento servizio canonico mancante: '
+                f'{service_href}'
+            )
+
+    for legacy_anchor in (
+        'href="/servizi#consulenza"',
+        'href="/servizi#verifica"',
+        'href="/servizi#progetto"',
+    ):
+        if legacy_anchor in servizi_text:
+            issues.append(
+                'servizi.html: anchor catalogo legacy presente: '
+                f'{legacy_anchor}'
+            )
 
 if issues:
     print('ERRORE: contratto copy/conversione editoriale non rispettato:')

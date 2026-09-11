@@ -7,19 +7,16 @@
     'progetto-cucina-sistema90g',
     'consulenza-90g',
     'verifica-90g',
-    'seconda-opinione-cucina',
-    'scelta-finiture-cucina',
-    'restyling-cucina-esistente',
-    'acquisto-assistito-cucina',
-    'progetto-preventivo-cucina-90g'
-  ]);
+    'progetto-preventivo-cucina-90g',
+    'analisi-preventivo-cucina',
+    'controllo-pre-montaggio-cucina',
+    'analisi-problema-cucina',
+]);
   const NAV_LINKS=[
     ['home','Home','/'],
     ['services','Servizi','/servizi.html'],
     ['process','Come funziona','/analisi-preventiva.html'],
     ['cases','Casi reali','/casi-analizzati.html'],
-    ['professionals','Professionisti','/professionisti.html'],
-    ['retailers','Rivenditori','/rivenditori-cucine.html'],
     ['method','Metodo 90G','/metodo-sistema90g.html'],
     ['innovation','Innovazioni','/innovazioni.html'],
     ['about','Chi sono','/chi-e-sistema90g.html'],
@@ -39,26 +36,22 @@
     if(slug==='home')return 'home';
     if(slug==='analisi-preventiva')return 'process';
     if(slug==='casi-analizzati'||slug.startsWith('casi-')||slug.startsWith('caso-'))return 'cases';
-    if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailers';
-    if(slug==='professionisti'||slug==='professionisti-progetto-cucina'||slug==='agenzie-immobiliari-cucina')return 'professionals';
     if(slug==='metodo-sistema90g')return 'method';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'innovation';
     if(slug==='chi-e-sistema90g')return 'about';
     if(slug==='contatti')return 'contacts';
-    if(slug==='servizi'||SERVICE_PAGES.has(slug)||slug==='analisi-preventivo-cucina')return 'services';
+    if(slug==='servizi'||SERVICE_PAGES.has(slug))return 'services';
     return '';
   };
   const inferRoleHint=slug=>{
     if(SERVICE_PAGES.has(slug))return 'private';
-    if(slug==='rivenditori-cucine'||slug==='controllo-progetto-cucina')return 'retailer';
     return '';
   };
   const inferContentType=slug=>{
     if(slug.startsWith('caso-'))return 'case';
     if(slug.startsWith('casi-'))return 'case-category';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'article';
-    if(['professionisti','professionisti-progetto-cucina','agenzie-immobiliari-cucina','rivenditori-cucine'].includes(slug))return 'professional';
-    if(slug==='servizi'||SERVICE_PAGES.has(slug)||slug==='controllo-progetto-cucina')return 'service';
+    if(slug==='servizi'||SERVICE_PAGES.has(slug))return 'service';
     if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
     return 'page';
   };

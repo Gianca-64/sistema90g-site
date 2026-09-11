@@ -16,8 +16,6 @@ strategic = [
     'analisi-preventiva.html',
     'domande-cucina-faq.html',
     'casi-analizzati.html',
-    'professionisti.html',
-    'rivenditori-cucine.html',
     'metodo-sistema90g.html',
     'innovazioni.html',
     'chi-e-sistema90g.html',
