@@ -1,0 +1,477 @@
+/* ==========================================================
+   SISTEMA 90G — FREE ENTRY ACQUISITION V1
+   Customer problem -> first reading -> useful next step
+   ========================================================== */
+
+.s90g-free-entry-acquisition {
+  --fe-deep: #111719;
+  --fe-paper: #f7f5ef;
+  --fe-gold: #a87518;
+  --fe-line: #ded8cc;
+}
+
+.s90g-free-entry-acquisition .s90g-logo small {
+  color: var(--gold-dark, #8a5a00);
+}
+
+
+/* HERO */
+
+.s90g-fe-hero {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line, #ddd7ca);
+  background:
+    radial-gradient(
+      circle at 18% 15%,
+      rgba(168,117,24,.09),
+      transparent 30%
+    ),
+    #fff;
+}
+
+.s90g-fe-hero-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(430px, 1fr)
+    minmax(500px, .95fr);
+  min-height: 690px;
+}
+
+.s90g-fe-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 52px 68px 0;
+}
+
+.s90g-fe-hero h1 {
+  max-width: 760px;
+  margin: 0 0 26px;
+  font-size: clamp(46px,4.7vw,72px);
+  line-height: .99;
+  letter-spacing: -.05em;
+}
+
+.s90g-fe-hero h1 span {
+  display: block;
+  margin-top: .16em;
+  color: var(--gold-dark, #8a5a00);
+}
+
+.s90g-fe-lead {
+  max-width: 700px;
+  margin: 0 0 22px;
+  color: #393d3b;
+  font-size: clamp(18px,1.5vw,22px);
+  line-height: 1.55;
+}
+
+.s90g-fe-promise {
+  max-width: 700px;
+  margin: 0 0 25px;
+  padding-left: 18px;
+  border-left: 3px solid var(--fe-gold);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.s90g-fe-hero-media {
+  position: relative;
+  margin: 0;
+  min-height: 690px;
+  overflow: hidden;
+  background: var(--fe-paper);
+}
+
+.s90g-fe-hero-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(11,15,16,.72) 100%
+    );
+}
+
+.s90g-fe-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s90g-fe-hero-media figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  bottom: 28px;
+  left: 30px;
+  display: grid;
+  gap: 5px;
+  color: #fff;
+}
+
+.s90g-fe-hero-media figcaption span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.s90g-fe-hero-media figcaption strong {
+  max-width: 600px;
+  font-size: clamp(21px,2vw,29px);
+}
+
+
+/* HEADINGS */
+
+.s90g-fe-heading {
+  max-width: 900px;
+  margin-bottom: 38px;
+}
+
+.s90g-fe-heading h2 {
+  margin: 0 0 17px;
+  font-size: clamp(36px,3.8vw,58px);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.s90g-fe-heading > p:last-child {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted, #606563);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+
+/* THREE STEPS */
+
+.s90g-fe-first,
+.s90g-fe-process {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.s90g-fe-three {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  border: 1px solid var(--fe-line);
+}
+
+.s90g-fe-three article {
+  min-height: 280px;
+  padding: 34px;
+  border-right: 1px solid var(--fe-line);
+}
+
+.s90g-fe-three article:last-child {
+  border-right: 0;
+}
+
+.s90g-fe-three article > span {
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fe-deep);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.s90g-fe-three h3 {
+  margin: 30px 0 13px;
+  font-size: 25px;
+  line-height: 1.12;
+}
+
+.s90g-fe-three p {
+  margin: 0;
+  color: var(--muted, #606563);
+  line-height: 1.62;
+}
+
+
+/* MATERIALS */
+
+.s90g-fe-materials {
+  padding: 76px 0;
+  border-top: 1px solid var(--fe-line);
+  border-bottom: 1px solid var(--fe-line);
+  background: var(--fe-paper);
+}
+
+.s90g-fe-materials-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.s90g-fe-materials h2 {
+  margin: 0 0 15px;
+  font-size: clamp(36px,3.7vw,56px);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.s90g-fe-materials p {
+  color: var(--muted, #606563);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.s90g-fe-material-list {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+}
+
+.s90g-fe-material-list span {
+  padding: 18px;
+  border: 1px solid var(--fe-line);
+  background: #fff;
+  font-weight: 750;
+}
+
+
+/* EXAMPLE */
+
+.s90g-fe-example {
+  padding: 86px 0;
+}
+
+.s90g-fe-example-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 72px;
+}
+
+.s90g-fe-example h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(38px,4vw,60px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.s90g-fe-example-grid > div:last-child p {
+  margin-top: 0;
+  color: #c9cecb;
+  font-size: 18px;
+  line-height: 1.68;
+}
+
+.s90g-fe-example .s90g-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #e3c17b;
+}
+
+
+/* INDEPENDENCE */
+
+.s90g-fe-independence {
+  padding: 86px 0;
+  border-top: 1px solid var(--fe-line);
+  border-bottom: 1px solid var(--fe-line);
+  background: var(--fe-paper);
+}
+
+.s90g-fe-independence-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 72px;
+}
+
+.s90g-fe-independence h2 {
+  max-width: 600px;
+  margin: 0;
+  font-size: clamp(40px,4vw,60px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.s90g-fe-independence-grid > div:last-child {
+  max-width: 760px;
+}
+
+.s90g-fe-independence-grid > div:last-child p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.68;
+}
+
+
+/* FINAL */
+
+.s90g-fe-final {
+  padding: 88px 0;
+  background:
+    linear-gradient(
+      120deg,
+      #111719 0%,
+      #192225 100%
+    );
+  color: #fff;
+}
+
+.s90g-fe-final-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
+}
+
+.s90g-fe-final h2 {
+  max-width: 780px;
+  margin: 0 0 18px;
+  font-size: clamp(42px,4.6vw,66px);
+  line-height: .99;
+  letter-spacing: -.045em;
+}
+
+.s90g-fe-final p {
+  max-width: 680px;
+  color: #c9cecb;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.s90g-fe-final-action {
+  max-width: 430px;
+}
+
+.s90g-fe-final-action .s90g-button {
+  width: 100%;
+}
+
+.s90g-fe-final-action p {
+  margin: 15px 0 0;
+  font-size: 13px;
+}
+
+
+/* ACCESSIBILITY */
+
+.s90g-free-entry-acquisition
+:is(
+  .s90g-button,
+  .s90g-link,
+  .s90g-header-cta
+):focus-visible {
+  outline: 3px solid #d8aa4d;
+  outline-offset: 4px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .s90g-fe-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .s90g-fe-three {
+    grid-template-columns: 1fr;
+  }
+
+  .s90g-fe-three article {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--fe-line);
+  }
+
+  .s90g-fe-three article:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .s90g-fe-hero-grid,
+  .s90g-fe-materials-grid,
+  .s90g-fe-example-grid,
+  .s90g-fe-independence-grid,
+  .s90g-fe-final-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s90g-fe-hero-copy {
+    padding: 58px 0 42px;
+  }
+
+  .s90g-fe-hero-media {
+    min-height: 460px;
+  }
+
+  .s90g-fe-materials-grid,
+  .s90g-fe-example-grid,
+  .s90g-fe-independence-grid,
+  .s90g-fe-final-grid {
+    gap: 34px;
+  }
+
+  .s90g-fe-final-action {
+    max-width: none;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .s90g-fe-hero h1 {
+    font-size: 45px;
+  }
+
+  .s90g-fe-hero-media {
+    min-height: 390px;
+  }
+
+  .s90g-fe-material-list {
+    grid-template-columns: 1fr;
+  }
+
+  .s90g-fe-first,
+  .s90g-fe-process,
+  .s90g-fe-materials,
+  .s90g-fe-example,
+  .s90g-fe-independence,
+  .s90g-fe-final {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .s90g-free-entry-acquisition *,
+  .s90g-free-entry-acquisition *::before,
+  .s90g-free-entry-acquisition *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+    animation-duration: .001ms !important;
+  }
+
+}
+
+/* A4.1-R2 — preserve more useful kitchen-document context */
+.s90g-fe-hero-media img {
+  object-position: 38% center;
+}
+
+@media (max-width: 800px) {
+  .s90g-fe-hero-media img {
+    object-position: 42% center;
+  }
+}
