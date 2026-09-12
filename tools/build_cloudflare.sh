@@ -27,10 +27,12 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
-# Il PNG storico sotto non è referenziato dal sito pubblico.
-# Resta nel repository come materiale storico, ma non deve entrare nel deploy.
-# I due layer della Vista 90G sono invece asset pubblici e devono restare nel build.
+# I PNG legacy della Vista 90G restano nel repository come sorgenti storiche.
+# Il sito pubblico usa i JPEG ottimizzati; i PNG non devono entrare nel deploy.
+# Anche il PNG storico 04_HOME_COSTO_TARDIVO resta escluso dal build pubblico.
 rm -f \
+  "$DIST/images/02_HOME_SCENA_PULITA.png" \
+  "$DIST/images/02_HOME_SCENA_PROBLEMA.png" \
   "$DIST/images/04_HOME_COSTO_TARDIVO.png"
 
 # Perimetro pubblico: esclusivamente cucina.

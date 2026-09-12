@@ -134,7 +134,7 @@ print("PASS — focus and reduced-motion contracts present")
 print("PASS — acquisition analytics hooks present")
 # A3-R3 — Vista 90G reveal contract
 for marker in (
-    "02_HOME_SCENA_PULITA.png",
+    "02_HOME_SCENA_PULITA.jpg",
     "data-vista-90g-clean-src=",
     "data-vista-90g-analysed-src=",
 ):

@@ -17,8 +17,8 @@ HOME = (
     / "index.html"
 )
 
-CLEAN = "02_HOME_SCENA_PULITA.png"
-ANALYSED = "02_HOME_SCENA_PROBLEMA.png"
+CLEAN = "02_HOME_SCENA_PULITA.jpg"
+ANALYSED = "02_HOME_SCENA_PROBLEMA.jpg"
 
 errors = []
 

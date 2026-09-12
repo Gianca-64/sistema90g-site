@@ -6,14 +6,22 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
-LEGACY = {
+LEGACY_B2B_REDIRECTS = {
     "professionisti",
     "professionisti-progetto-cucina",
     "agenzie-immobiliari-cucina",
     "rivenditori-cucine",
+}
+
+RETIRED_EXTRA_CUCINA = {
     "studio-preliminare-spazi",
     "verifica-planimetria-distribuzione-casa",
 }
+
+RETIRED_PUBLIC = (
+    LEGACY_B2B_REDIRECTS
+    | RETIRED_EXTRA_CUCINA
+)
 
 redirects_text = (
     ROOT
@@ -50,7 +58,7 @@ errors = []
 slug_pattern = "|".join(
     re.escape(x)
     for x in sorted(
-        LEGACY,
+        RETIRED_PUBLIC,
         key=len,
         reverse=True,
     )
@@ -126,7 +134,7 @@ if "service=valutazione-iniziale" not in free_entry:
 
 redirects = redirects_text
 
-for slug in LEGACY:
+for slug in LEGACY_B2B_REDIRECTS:
     for route in (
         f"/{slug}",
         f"/{slug}.html",
@@ -142,10 +150,26 @@ for slug in LEGACY:
                 f"_redirects: missing 301 for {route}"
             )
 
+for slug in RETIRED_EXTRA_CUCINA:
+    for route in (
+        f"/{slug}",
+        f"/{slug}.html",
+    ):
+        pattern = re.compile(
+            rf'^{re.escape(route)}(?:\\s|$)',
+            re.M,
+        )
+
+        if pattern.search(redirects):
+            errors.append(
+                "_redirects: retired extra-cucina "
+                f"alias must be absent: {route}"
+            )
+
 for sitemap in ROOT.glob("sitemap*.xml"):
     text = sitemap.read_text(errors="replace")
 
-    for slug in LEGACY:
+    for slug in RETIRED_PUBLIC:
         if re.search(
             rf'https?://[^<]+/{re.escape(slug)}'
             rf'(?:\.html)?(?:<|$)',
@@ -165,6 +189,7 @@ if errors:
 print("PASS — Free Entry is private-only")
 print("PASS — no public internal links to retired B2B offers")
 print("PASS — no B2B requester roles or role hints")
-print("PASS — all retired B2B URLs have 301 redirects")
-print("PASS — retired B2B URLs absent from sitemaps")
+print("PASS — retired B2B URLs keep canonical 301 redirects")
+print("PASS — retired extra-cucina aliases remain absent")
+print("PASS — retired public URLs absent from sitemaps")
 print("B2C-ONLY PUBLIC SURFACE: PASS")
