@@ -6,7 +6,11 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 import sys
 
-root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("dist")
+root = (
+    Path(sys.argv[1])
+    if len(sys.argv) > 1
+    else Path("dist")
+).resolve()
 MAX_IMAGE_BYTES = 1_000_000
 SITE_HOSTS = {"sistema90g.it", "www.sistema90g.it"}
 RASTER_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
