@@ -59,3 +59,9 @@
 # Legacy example migration — B2.15D2
 /esempio-fascicolo-cucina /esempio-progetto-cucina-90g.html 301
 /esempio-fascicolo-cucina.html /esempio-progetto-cucina-90g.html 301
+
+# Legacy B2B-only offer retirement — private customers only
+/studio-preliminare-spazi /analisi-preventiva.html 301
+/studio-preliminare-spazi.html /analisi-preventiva.html 301
+/verifica-planimetria-distribuzione-casa /analisi-preventiva.html 301
+/verifica-planimetria-distribuzione-casa.html /analisi-preventiva.html 301
