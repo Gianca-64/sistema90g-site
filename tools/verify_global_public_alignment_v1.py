@@ -24,6 +24,9 @@ required_nav = [
     "VEDERE IL PROBLEMA PRIMA",
     "Mostra il tuo caso",
     "function normalizeHeaderCta()",
+    "link.className='s90g-header-cta'",
+    "inner.appendChild(link)",
+    "/analisi-preventiva.html#richiedi",
     "MOSTRA IL TUO CASO",
 
     "const pageManaged=nav.dataset.s90gNavManaged==='page';",

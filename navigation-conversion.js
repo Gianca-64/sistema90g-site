@@ -113,32 +113,69 @@
     });
   }
   function normalizeHeaderCta(){
-    document.querySelectorAll('.s90g-header-cta').forEach(link=>{
+    const header=document.querySelector('.s90g-header');
+    const inner=header?.querySelector('.s90g-header-inner');
+    const nav=header?.querySelector('.s90g-nav');
+
+    if(!inner||!nav)return;
+
+    let links=[
+      ...inner.querySelectorAll('.s90g-header-cta')
+    ];
+
+    if(
+      !links.length &&
+      nav.dataset.s90gNavManaged!=='page'
+    ){
+      const link=document.createElement('a');
+
+      link.className='s90g-header-cta';
+      link.href='/analisi-preventiva.html#richiedi';
+
+      link.dataset.startPath='true';
+      link.dataset.contentType='navigation';
+      link.dataset.ctaPosition='header';
+      link.dataset.service='';
+
+      link.innerHTML=
+        '<span>MOSTRA IL TUO CASO</span>' +
+        '<span aria-hidden="true">→</span>';
+
+      inner.appendChild(link);
+
+      links=[link];
+    }
+
+    links.forEach(link=>{
       const visible=
-        link.querySelector('span:not([aria-hidden])') ||
+        link.querySelector(
+          'span:not([aria-hidden])'
+        ) ||
         link.querySelector('span');
 
       if(visible){
         visible.textContent='MOSTRA IL TUO CASO';
       }else{
-        const arrow=(link.textContent||'').includes('→');
-
-        link.textContent=arrow
-          ? 'MOSTRA IL TUO CASO →'
-          : 'MOSTRA IL TUO CASO';
+        link.textContent='MOSTRA IL TUO CASO →';
       }
 
-      const href=link.getAttribute('href') || '';
+      link.setAttribute(
+        'href',
+        '/analisi-preventiva.html#richiedi'
+      );
 
-      if(
-        !href ||
-        href==='#' ||
-        /valutazione|contatt/i.test(href)
-      ){
-        link.setAttribute(
-          'href',
-          '/analisi-preventiva.html#richiedi'
-        );
+      link.dataset.startPath='true';
+
+      if(!link.dataset.contentType){
+        link.dataset.contentType='navigation';
+      }
+
+      if(!link.dataset.ctaPosition){
+        link.dataset.ctaPosition='header';
+      }
+
+      if(link.dataset.service===undefined){
+        link.dataset.service='';
       }
     });
   }
