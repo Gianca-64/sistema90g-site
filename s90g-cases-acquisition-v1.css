@@ -1,0 +1,501 @@
+/* ==========================================================
+   SISTEMA 90G — CASES ACQUISITION V1
+   What seemed fine -> what changed -> what to verify
+   ========================================================== */
+
+.s90g-cases-acquisition {
+  --case-paper: #f5f2eb;
+  --case-deep: #111719;
+  --case-gold: #a87518;
+  --case-line: #dcd6ca;
+}
+
+.s90g-cases-acquisition .s90g-logo small {
+  color: var(--gold-dark,#8a5a00);
+}
+
+
+/* HERO */
+
+.s90g-cases-hero {
+  border-bottom: 1px solid var(--case-line);
+  background:
+    radial-gradient(
+      circle at 18% 15%,
+      rgba(168,117,24,.10),
+      transparent 30%
+    ),
+    #fff;
+}
+
+.s90g-cases-hero-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(430px,1fr)
+    minmax(500px,.95fr);
+  min-height: 690px;
+}
+
+.s90g-cases-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 55px 65px 0;
+}
+
+.s90g-cases-hero h1 {
+  max-width: 800px;
+  margin: 0 0 25px;
+  font-size: clamp(45px,4.7vw,72px);
+  line-height: .99;
+  letter-spacing: -.052em;
+}
+
+.s90g-cases-hero h1 span {
+  display: block;
+  margin-top: .16em;
+  color: var(--gold-dark,#8a5a00);
+}
+
+.s90g-cases-lead {
+  max-width: 690px;
+  margin: 0 0 20px;
+  color: #3d413f;
+  font-size: clamp(18px,1.5vw,22px);
+  line-height: 1.57;
+}
+
+.s90g-cases-promise {
+  max-width: 700px;
+  margin: 0 0 26px;
+  padding-left: 18px;
+  border-left: 3px solid var(--case-gold);
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.s90g-cases-hero-media {
+  position: relative;
+  min-height: 690px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--case-paper);
+}
+
+.s90g-cases-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s90g-cases-hero-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(
+      180deg,
+      transparent 52%,
+      rgba(12,16,18,.76) 100%
+    );
+  pointer-events: none;
+}
+
+.s90g-cases-hero-media figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  display: grid;
+  gap: 5px;
+  color: #fff;
+}
+
+.s90g-cases-hero-media figcaption span {
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .11em;
+}
+
+.s90g-cases-hero-media figcaption strong {
+  max-width: 590px;
+  font-size: clamp(20px,2vw,29px);
+  line-height: 1.18;
+}
+
+
+/* PRINCIPLE */
+
+.s90g-cases-principle {
+  padding: 84px 0;
+  background: var(--case-deep);
+  color: #fff;
+}
+
+.s90g-cases-principle-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 90px;
+}
+
+.s90g-cases-principle h2 {
+  max-width: 680px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(39px,4vw,61px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.s90g-cases-principle-grid > div:last-child {
+  max-width: 700px;
+}
+
+.s90g-cases-principle-grid p {
+  margin-top: 0;
+  color: #c8cdca;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.s90g-cases-principle-grid strong {
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.45;
+}
+
+
+/* INDEX */
+
+.s90g-cases-index {
+  padding: 84px 0 0;
+  background: var(--case-paper);
+}
+
+.s90g-cases-index-head {
+  max-width: 820px;
+}
+
+.s90g-cases-index-head h2 {
+  margin: 0;
+  font-size: clamp(40px,4vw,61px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.s90g-cases-quick {
+  display: grid;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  margin-top: 43px;
+  border-top: 1px solid var(--case-line);
+  border-left: 1px solid var(--case-line);
+}
+
+.s90g-cases-quick a {
+  min-height: 125px;
+  padding: 20px 16px;
+  border-right: 1px solid var(--case-line);
+  border-bottom: 1px solid var(--case-line);
+  color: var(--ink,#111);
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.s90g-cases-quick a:hover {
+  background: #fff;
+}
+
+.s90g-cases-quick span {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--case-gold);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+
+/* CASE PROOFS */
+
+.s90g-cases-list {
+  padding-bottom: 88px;
+  background: var(--case-paper);
+}
+
+.s90g-case-proof {
+  display: grid;
+  grid-template-columns:
+    minmax(380px,.86fr)
+    minmax(0,1.14fr);
+  gap: 58px;
+  align-items: center;
+  padding: 78px 0;
+  border-bottom: 1px solid var(--case-line);
+  scroll-margin-top: 115px;
+}
+
+.s90g-case-proof.is-reverse .s90g-case-media {
+  order: 2;
+}
+
+.s90g-case-proof.is-reverse .s90g-case-copy {
+  order: 1;
+}
+
+.s90g-case-media {
+  position: relative;
+  min-height: 440px;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.s90g-case-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+}
+
+.s90g-case-media > span {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 9px 11px;
+  background: rgba(17,23,25,.88);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .09em;
+}
+
+.s90g-case-copy h2 {
+  max-width: 790px;
+  margin: 0 0 27px;
+  font-size: clamp(35px,3.5vw,54px);
+  line-height: 1.02;
+  letter-spacing: -.042em;
+}
+
+.s90g-case-signals {
+  display: grid;
+  gap: 0;
+  margin-bottom: 28px;
+  border-top: 1px solid var(--case-line);
+}
+
+.s90g-case-signals > div {
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--case-line);
+}
+
+.s90g-case-signals span {
+  color: #80642d;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .09em;
+}
+
+.s90g-case-signals strong {
+  font-size: 15px;
+  line-height: 1.48;
+}
+
+
+/* PRIVACY */
+
+.s90g-cases-privacy {
+  padding: 86px 0;
+  background: #fff;
+}
+
+.s90g-cases-privacy-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 85px;
+}
+
+.s90g-cases-privacy h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(38px,4vw,59px);
+  line-height: 1;
+  letter-spacing: -.044em;
+}
+
+.s90g-cases-privacy-grid > div:last-child {
+  max-width: 700px;
+}
+
+.s90g-cases-privacy-grid > div:last-child p {
+  margin-top: 0;
+  color: var(--muted,#606563);
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+
+/* FINAL */
+
+.s90g-cases-final {
+  padding: 88px 0;
+  border-top: 1px solid var(--case-line);
+  background:
+    linear-gradient(
+      125deg,
+      #f3eee2,
+      #fff 68%
+    );
+}
+
+.s90g-cases-final-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 70px;
+  align-items: center;
+}
+
+.s90g-cases-final h2 {
+  max-width: 840px;
+  margin: 0 0 16px;
+  font-size: clamp(40px,4.2vw,63px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.s90g-cases-final p {
+  max-width: 700px;
+  color: var(--muted,#606563);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ACCESSIBILITY */
+
+.s90g-cases-acquisition
+:is(
+  .s90g-cases-quick a,
+  .s90g-button,
+  .s90g-link,
+  .s90g-header-cta
+):focus-visible {
+  outline: 3px solid #d8aa4d;
+  outline-offset: 4px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+  .s90g-cases-quick {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+
+  .s90g-case-proof {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .s90g-cases-hero-grid,
+  .s90g-cases-principle-grid,
+  .s90g-case-proof,
+  .s90g-cases-privacy-grid,
+  .s90g-cases-final-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s90g-cases-hero-copy {
+    padding: 58px 0 42px;
+  }
+
+  .s90g-cases-hero-media {
+    min-height: 430px;
+  }
+
+  .s90g-case-proof {
+    gap: 30px;
+    padding: 60px 0;
+  }
+
+  .s90g-case-proof.is-reverse .s90g-case-media,
+  .s90g-case-proof.is-reverse .s90g-case-copy {
+    order: initial;
+  }
+
+  .s90g-cases-principle-grid,
+  .s90g-cases-privacy-grid,
+  .s90g-cases-final-grid {
+    gap: 35px;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .s90g-cases-quick {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .s90g-cases-quick a {
+    min-height: 105px;
+  }
+
+  .s90g-cases-hero h1 {
+    font-size: 43px;
+  }
+
+  .s90g-case-media,
+  .s90g-case-media img {
+    min-height: 330px;
+  }
+
+  .s90g-case-signals > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .s90g-cases-principle,
+  .s90g-cases-privacy,
+  .s90g-cases-final {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .s90g-cases-acquisition *,
+  .s90g-cases-acquisition *::before,
+  .s90g-cases-acquisition *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+    animation-duration: .001ms !important;
+  }
+
+}
+
+/* A4.3 final refinement */
+.s90g-cases-hero-media img {
+  object-position: 46% center;
+}
+
+.s90g-cases-index {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 800px) {
+  .s90g-cases-hero-media img {
+    object-position: 50% center;
+  }
+}
