@@ -27,10 +27,10 @@ for dir in images editoriale approfondimenti .well-known; do
   fi
 done
 
-# Due PNG storici molto pesanti non sono referenziati dal sito pubblico.
-# Restano nel repository come materiale storico, ma non devono entrare nel deploy.
+# Il PNG storico sotto non è referenziato dal sito pubblico.
+# Resta nel repository come materiale storico, ma non deve entrare nel deploy.
+# I due layer della Vista 90G sono invece asset pubblici e devono restare nel build.
 rm -f \
-  "$DIST/images/02_HOME_SCENA_PROBLEMA.png" \
   "$DIST/images/04_HOME_COSTO_TARDIVO.png"
 
 # Perimetro pubblico: esclusivamente cucina.
@@ -102,13 +102,14 @@ python3 "$ROOT/tools/normalize_public_search_semantics.py" "$DIST"
 # pubblico residui di nomenclatura legacy e apostrofi mancanti gia verificati.
 python3 "$ROOT/tools/normalize_public_editorial_copy.py" "$DIST"
 
-# P1 WOW: la Home deve aiutare a partire dalla situazione reale, senza chiedere
-# all'utente di scegliere in anticipo Progetto, Verifica o Consulenza.
-python3 "$ROOT/tools/inject_public_wow_situation_selector.py" "$DIST"
-
-# P2: Home e Free Entry devono portare vicino alla decisione una prova concreta
-# di identita, indipendenza e casi verificabili, senza cambiare il funnel.
-python3 "$ROOT/tools/inject_public_trust_bridge.py" "$DIST"
+# Home, Free Entry, casi e navigazione sono ora canonici nel sorgente.
+# La build non deve ricostruire markup commerciale o navigazione legacy:
+# valida invece i contract correnti prima delle trasformazioni tecniche della dist.
+python3 "$ROOT/tools/verify_home_acquisition_v1.py"
+python3 "$ROOT/tools/verify_free_entry_acquisition_v1.py"
+python3 "$ROOT/tools/verify_cases_acquisition_v1.py"
+python3 "$ROOT/tools/verify_services_acquisition_v1.py"
+python3 "$ROOT/tools/verify_global_public_alignment_v1.py"
 
 # B2C pubblico: Professionisti e Rivenditori non sono target di navigazione.
 # Le pagine legacy vengono gestite separatamente con redirect/SEO.
@@ -123,9 +124,9 @@ python3 "$ROOT/tools/retire_public_legacy_offer_pages.py" "$DIST"
 # il relativo hub; le guide corrispondenti devono riportare a hub e caso reale.
 python3 "$ROOT/tools/inject_public_content_clusters.py" "$DIST"
 
-# P2: prima del punto di invio il Free Entry deve chiarire cosa succede dopo,
-# senza promettere tempi o canali operativi non verificati.
-python3 "$ROOT/tools/inject_public_free_entry_expectation.py" "$DIST"
+# Il percorso Free Entry, incluse aspettative e passo successivo,
+# è ora canonico nel sorgente analisi-preventiva.html.
+# La build non deve iniettare una seconda versione del percorso.
 
 # Ogni pagina di contenuto deve avere una UI di consenso funzionante prima che
 # privacy-consent.js inizializzi lo stato analytics. Il componente non duplica
@@ -155,9 +156,9 @@ python3 "$ROOT/tools/test_public_static_asset_versioning.py" "$DIST"
 # una UI accessibile per accettare, rifiutare e riaprire le preferenze.
 python3 "$ROOT/tools/test_public_consent_contract.py" "$DIST"
 
-# P2: la prova di fiducia deve essere presente una sola volta sulla Home e prima
-# del punto di invio nel Free Entry.
-python3 "$ROOT/tools/test_public_trust_bridge_contract.py" "$DIST"
+# Il vecchio trust-bridge build-time è ritirato.
+# Fiducia, indipendenza e casi sono parte del sorgente canonico
+# e sono coperti dai contract acquisition correnti.
 
 # P2: i cluster editoriali pilota devono mantenere il percorso hub -> guida -> caso
 # e il collegamento reciproco nelle sei coppie con prova pubblica disponibile.
@@ -167,12 +168,11 @@ python3 "$ROOT/tools/test_public_content_clusters_contract.py" "$DIST"
 # e dei residui tipografici gia individuati durante l'audit qualitativo.
 python3 "$ROOT/tools/test_public_editorial_copy_contract.py" "$DIST"
 
-# P1 WOW: il selettore Home deve coprire situazioni reali senza introdurre una
-# scelta obbligatoria del servizio o un secondo catalogo commerciale.
-python3 "$ROOT/tools/test_public_wow_situation_selector_contract.py" "$DIST"
+# Il precedente customer-journey/WOW build-time è ritirato.
+# La Home attuale usa il percorso problema -> Vista 90G -> caso -> Free Entry.
 
-# P2: il Free Entry deve spiegare invio, prima lettura e assenza di acquisto automatico.
-python3 "$ROOT/tools/test_public_free_entry_expectation_contract.py" "$DIST"
+# Le aspettative Free Entry sono validate dal contract acquisition
+# sul sorgente canonico prima delle trasformazioni tecniche della dist.
 
 # P2 SEO/AEO: struttura tecnica leggibile, JSON-LD valido e coerente, canonical
 # puliti e sitemap canonica; niente markup FAQ obsoleto usato come scorciatoia AEO.

@@ -51,15 +51,15 @@ SITEMAP_URLS = [
 ]
 
 
-SERVICE_OFFER_TOKENS = [
-    "Consulenza 90G · 79 €",
-    "Analisi Preventivo &amp; Ordine 90G · 129 €",
-    "Verifica Cucina 90G · 149 €",
-    "Progetto Cucina 90G · 299 €",
-    "Controllo Pre-Montaggio 90G · 179 €",
-    "Analisi Problema 90G · 149 €",
-    "Progetto &amp; Preventivo 90G · 349 €",
-    "Render fotorealistico aggiuntivo · 39 € / vista",
+SERVICE_OFFER_FACTS = [
+    ("Consulenza 90G", "79 €"),
+    ("Analisi Preventivo &amp; Ordine 90G", "129 €"),
+    ("Verifica Cucina 90G", "149 €"),
+    ("Progetto Cucina 90G", "299 €"),
+    ("Controllo Pre-Montaggio 90G", "179 €"),
+    ("Analisi Problema 90G", "149 €"),
+    ("Progetto &amp; Preventivo 90G", "349 €"),
+    ("Render fotorealistico aggiuntivo", "39 €"),
 ]
 
 
@@ -99,10 +99,16 @@ if not services.is_file():
 else:
     text = services.read_text("utf-8", errors="replace")
 
-    for token in SERVICE_OFFER_TOKENS:
-        if token not in text:
+    for name, price in SERVICE_OFFER_FACTS:
+        if name not in text:
             errors.append(
-                f"servizi.html: offerta canonica assente {token!r}"
+                f"servizi.html: nome offerta canonica assente {name!r}"
+            )
+
+        if price not in text:
+            errors.append(
+                f"servizi.html: prezzo offerta canonica assente "
+                f"{name!r} -> {price!r}"
             )
 
     for token in OBSOLETE_OFFER_TOKENS:
@@ -229,5 +235,5 @@ if errors:
 
 print(
     "OK public B2C commercial contract: "
-    "sette servizi canonici + Free Entry + routing/runtime coerenti"
+    "listino canonico + Free Entry + routing/runtime coerenti"
 )
