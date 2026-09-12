@@ -80,16 +80,68 @@ for(const principle of [
   'Se non serve altro, te lo diciamo.',
   'Cosa non ti convince della tua cucina?'
 ]) assert.ok(intake.includes(principle),`principio Free Entry assente: ${principle}`);
-for(const token of [
-  'Consulenza 90G · 79 €',
-  'Analisi Preventivo &amp; Ordine 90G · 129 €',
-  'Verifica Cucina 90G · 149 €',
-  'Progetto Cucina 90G · 299 €',
-  'Controllo Pre-Montaggio 90G · 179 €',
-  'Analisi Problema 90G · 149 €'
-]){
-  assert.ok(services.includes(token),`servizio canonico assente da servizi: ${token}`);
+const canonicalServiceRoutes = [
+  {
+    id: "scelta",
+    name: "Consulenza 90G",
+    price: "79 €",
+  },
+  {
+    id: "preventivo",
+    name: "Analisi Preventivo &amp; Ordine 90G",
+    price: "129 €",
+  },
+  {
+    id: "verifica",
+    name: "Verifica Cucina 90G",
+    price: "149 €",
+  },
+  {
+    id: "progetto",
+    name: "Progetto Cucina 90G",
+    price: "299 €",
+  },
+  {
+    id: "premontaggio",
+    name: "Controllo Pre-Montaggio 90G",
+    price: "179 €",
+  },
+  {
+    id: "problema",
+    name: "Analisi Problema 90G",
+    price: "149 €",
+  },
+];
+
+for (const { id, name, price } of canonicalServiceRoutes) {
+  const articlePattern = new RegExp(
+    `<article[\\s\\S]*?id="${id}"[\\s\\S]*?` +
+      name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
+      `[\\s\\S]*?` +
+      price.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
+      `[\\s\\S]*?</article>`
+  );
+
+  assert.ok(
+    articlePattern.test(services),
+    `serviceso/prezzo canonico assente dalla situazione ${id}: ${name} / ${price}`
+  );
 }
+
+/*
+ * Project & Preventivo is intentionally an extension,
+ * not a seventh primary situation.
+ */
+assert.ok(
+  /Progetto &amp; Preventivo 90G[\s\S]{0,1800}349 €/.test(services),
+  "estensione Progetto & Preventivo 90G / 349 € assente"
+);
+
+assert.ok(
+  /Render fotorealistico aggiuntivo[\s\S]{0,1000}39 €/.test(services),
+  "render aggiuntivo / 39 € assente"
+);
+
 assert.equal(intake.includes('role-case-path.js'),false,'la pagina Free Entry non deve dipendere dal catalogo legacy');
 assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry non deve dipendere dallo stile legacy');
 
