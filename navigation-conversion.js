@@ -13,14 +13,12 @@
     'analisi-problema-cucina',
 ]);
   const NAV_LINKS=[
-    ['home','Home','/'],
-    ['services','Servizi','/servizi.html'],
-    ['process','Come funziona','/analisi-preventiva.html'],
+    ['problems','Problemi da evitare','/#problemi'],
     ['cases','Casi reali','/casi-analizzati.html'],
-    ['method','Metodo 90G','/metodo-sistema90g.html'],
-    ['innovation','Innovazioni','/innovazioni.html'],
+    ['guides','Guide','/progettare-cucina-guide.html'],
+    ['process','Come funziona','/analisi-preventiva.html'],
+    ['services','Servizi e prezzi','/servizi.html'],
     ['about','Chi sono','/chi-e-sistema90g.html'],
-    ['contacts','Contatti','/contatti.html']
   ];
   const pageSlug=()=>{
     const name=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
@@ -36,6 +34,14 @@
     if(slug==='home')return 'home';
     if(slug==='analisi-preventiva')return 'process';
     if(slug==='casi-analizzati'||slug.startsWith('casi-')||slug.startsWith('caso-'))return 'cases';
+    if(
+      slug==='progettare-cucina-guide'||
+      slug==='preventivo-acquisto-cucina-guide'||
+      slug==='elettrodomestici-impianti-cucina-guide'||
+      slug==='materiali-finiture-cucina-guide'||
+      location.pathname.includes('/approfondimenti/')
+    )return 'guides';
+
     if(slug==='metodo-sistema90g')return 'method';
     if(slug==='innovazioni'||location.pathname.includes('/approfondimenti/'))return 'innovation';
     if(slug==='chi-e-sistema90g')return 'about';
@@ -106,13 +112,44 @@
       link.dataset.finalPortal='true';
     });
   }
+  function normalizeHeaderCta(){
+    document.querySelectorAll('.s90g-header-cta').forEach(link=>{
+      const visible=
+        link.querySelector('span:not([aria-hidden])') ||
+        link.querySelector('span');
+
+      if(visible){
+        visible.textContent='MOSTRA IL TUO CASO';
+      }else{
+        const arrow=(link.textContent||'').includes('→');
+
+        link.textContent=arrow
+          ? 'MOSTRA IL TUO CASO →'
+          : 'MOSTRA IL TUO CASO';
+      }
+
+      const href=link.getAttribute('href') || '';
+
+      if(
+        !href ||
+        href==='#' ||
+        /valutazione|contatt/i.test(href)
+      ){
+        link.setAttribute(
+          'href',
+          '/analisi-preventiva.html#richiedi'
+        );
+      }
+    });
+  }
+
   function normalizeActionLabels(scope=document){
     scope.querySelectorAll('a[data-start-path]').forEach(link=>{
       const text=(link.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
       if(text.includes('invia il tuo caso')||text.includes('sottoponi il caso')||text==='valuta il caso'||text==='valuta il tuo caso'||text.startsWith('parliamo del caso')){
         const arrow=link.querySelector('[aria-hidden="true"]');
-        if(arrow){const first=link.querySelector('span:not([aria-hidden])')||link.querySelector('span');if(first)first.textContent='Chiedi la valutazione gratuita';}
-        else link.textContent='Chiedi la valutazione gratuita →';
+        if(arrow){const first=link.querySelector('span:not([aria-hidden])')||link.querySelector('span');if(first)first.textContent='Mostra il tuo caso';}
+        else link.textContent='Mostra il tuo caso →';
       }
     });
     scope.querySelectorAll('a.s90g-link').forEach(link=>{
@@ -124,6 +161,10 @@
     });
   }
   function buildNavigation(){
+    document.querySelectorAll('.s90g-logo small').forEach(
+      item=>{item.textContent='VEDERE IL PROBLEMA PRIMA';}
+    );
+
     const header=document.querySelector('.s90g-header');
     const nav=header?.querySelector('.s90g-nav');
     if(!header||!nav)return;
@@ -215,7 +256,7 @@
     document.addEventListener('click',event=>{
       if(event.target.closest('[data-cookie-choice],a[data-start-path],a[data-final-portal]'))queueMicrotask(syncConsentCookie);
     },true);
-    addSkipLink();buildNavigation();enhancePathLinks();normalizeActionLabels();preparePathLinks();preparePortalLinks();preserveCampaignParams();
+    addSkipLink();buildNavigation();normalizeHeaderCta();enhancePathLinks();normalizeActionLabels();preparePathLinks();preparePortalLinks();preserveCampaignParams();
     document.dispatchEvent(new CustomEvent('s90g:navigation-ready'));
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();

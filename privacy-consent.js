@@ -190,27 +190,36 @@ function addWhatsAppChat(){
     }
   });
 }
-function s90gIntegrateAiTransparencyPage(){
+function s90gIntegrateMethodFooterLink(){
   const href='/metodo-sistema90g.html';
-  const isPage=location.pathname.endsWith(href);
-  const nav=document.querySelector('.s90g-nav');
-  if(nav&&nav.dataset.s90gNavManaged!=='page'){
-    let link=nav.querySelector('a[data-nav-key="method"],a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
-    if(!link){link=document.createElement('a');link.href=href;link.dataset.navKey='method';nav.appendChild(link);}
-    link.textContent='Metodo e AI';
-    if(isPage){nav.querySelectorAll('a[aria-current="page"]').forEach(item=>item.removeAttribute('aria-current'));link.setAttribute('aria-current','page');}
-  }
+
   document.querySelectorAll('.s90g-footer-links').forEach(footerLinks=>{
-    let link=footerLinks.querySelector('a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
-    if(!link){link=document.createElement('a');link.href=href;const ip=footerLinks.querySelector('a[href$="/proprieta-intellettuale.html"],a[href$="proprieta-intellettuale.html"]');if(ip)ip.before(link);else footerLinks.appendChild(link);}
-    link.textContent='Metodo e AI';
+    let link=footerLinks.querySelector(
+      'a[href$="/metodo-sistema90g.html"],' +
+      'a[href$="metodo-sistema90g.html"]'
+    );
+
+    if(!link){
+      link=document.createElement('a');
+      link.href=href;
+
+      const ip=footerLinks.querySelector(
+        'a[href$="/proprieta-intellettuale.html"],' +
+        'a[href$="proprieta-intellettuale.html"]'
+      );
+
+      if(ip)ip.before(link);
+      else footerLinks.appendChild(link);
+    }
+
+    link.textContent='Metodo';
   });
 }
-document.addEventListener('s90g:navigation-ready',s90gIntegrateAiTransparencyPage);
+document.addEventListener('s90g:navigation-ready',s90gIntegrateMethodFooterLink);
 
 document.addEventListener('DOMContentLoaded',()=>{
   loadNavigationConversion();
-  s90gIntegrateAiTransparencyPage();
+  s90gIntegrateMethodFooterLink();
   loadAuditFix();
   addStructuredData();
   optimizeImages();

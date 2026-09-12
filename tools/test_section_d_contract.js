@@ -6,7 +6,7 @@ const root=path.join(__dirname,'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
 const nav=read('navigation-conversion.js');
-for(const token of ['Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
+for(const token of ['Problemi da evitare','Casi reali','Guide','Come funziona','Servizi e prezzi','Chi sono','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
 
 assert.ok(
   nav.includes("nav.dataset.s90gNavManaged==='page'"),
@@ -17,7 +17,7 @@ for(const obsoleteNav of ['Professionisti','Rivenditori','/professionisti.html',
   assert.equal(nav.includes(obsoleteNav),false,`navigation contiene target B2B pubblico ${obsoleteNav}`);
 }
 assert.ok(nav.includes('/analisi-preventiva.html#richiedi'),'navigazione deve usare #richiedi');
-assert.ok(nav.includes('Chiedi la valutazione gratuita'),'normalizzazione CTA Free Entry');
+assert.ok(nav.includes('Mostra il tuo caso'),'normalizzazione CTA customer-first');
 for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina',"'restyling-cucina-esistente':'79'",'SERVICE_PRICES']){
   assert.equal(nav.includes(obsolete),false,`navigation contiene residuo ${obsolete}`);
 }
@@ -179,8 +179,25 @@ const consent=read('privacy-consent.js');
 assert.ok(consent.includes('/navigation-conversion.js?v=20260912a'));
 
 assert.ok(
-  consent.includes("nav.dataset.s90gNavManaged!=='page'"),
-  'AI transparency must not mutate page-managed navigation'
+  consent.includes('function s90gIntegrateMethodFooterLink()'),
+  'shared runtime must expose Method footer integration'
+);
+
+assert.equal(
+  consent.includes('s90gIntegrateAiTransparencyPage'),
+  false,
+  'retired AI transparency integration must stay removed'
+);
+
+assert.equal(
+  consent.includes("link.textContent='Metodo e AI';"),
+  false,
+  'retired Metodo e AI runtime label must stay removed'
+);
+
+assert.ok(
+  consent.includes("link.textContent='Metodo';"),
+  'shared Method footer label must remain canonical'
 );
 assert.ok(consent.includes('analisi-preventiva.html#richiedi'),'privacy-consent deve usare il Free Entry #richiedi');
 assert.equal(consent.includes('#percorso'),false,'privacy-consent non deve usare anchor legacy #percorso');
