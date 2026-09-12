@@ -165,7 +165,7 @@ def person_node() -> dict:
         "@id": PERSON_ID,
         "name": "Gian Carlo Primo",
         "url": f"{SITE}/chi-e-sistema90g.html",
-        "jobTitle": "Tecnico indipendente per analisi preventiva di progetti casa e cucina",
+        "jobTitle": "Fondatore di Sistema 90G",
         "worksFor": {"@id": ORG_ID},
     }
 
@@ -195,7 +195,7 @@ def website_node() -> dict:
         "@id": WEBSITE_ID,
         "url": f"{SITE}/",
         "name": "Sistema 90G",
-        "description": "Analisi preventiva indipendente per progetti, spazi, preventivi e cucine.",
+        "description": "Sistema 90G aiuta a individuare problemi, incongruenze e decisioni rischiose sulla cucina prima che diventino costosi o difficili da correggere.",
         "inLanguage": "it-IT",
         "publisher": {"@id": ORG_ID},
     }
