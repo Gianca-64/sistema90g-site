@@ -120,6 +120,54 @@ function denyAnalytics(){
 }
 function hideCookieBanner(b){if(b)b.setAttribute('hidden','')}
 function showCookieBanner(b){if(b)b.removeAttribute('hidden')}
+function s90gEnsureCookieBanner(){
+  let banner=document.getElementById('cookie-banner');
+
+  if(banner)return banner;
+
+  banner=document.createElement('aside');
+  banner.id='cookie-banner';
+  banner.className='cookie-banner';
+  banner.setAttribute('aria-label','Preferenze cookie');
+  banner.hidden=true;
+
+  banner.innerHTML=
+    '<div>' +
+      '<strong>Cookie e misurazione</strong>' +
+      '<p>Usiamo cookie tecnici e, solo con il consenso, ' +
+      'misurazione statistica delle visite e delle aperture ' +
+      'della valutazione iniziale.</p>' +
+    '</div>' +
+    '<div class="cookie-actions">' +
+      '<button data-cookie-choice="accept" type="button">' +
+        'Accetta' +
+      '</button>' +
+      '<button data-cookie-choice="reject" type="button">' +
+        'Rifiuta' +
+      '</button>' +
+    '</div>';
+
+  document.body.appendChild(banner);
+
+  return banner;
+}
+
+function s90gEnsureCookieSettingsControl(){
+  document
+    .querySelectorAll('.s90g-footer-links')
+    .forEach(footer=>{
+      if(footer.querySelector('[data-cookie-settings]'))return;
+
+      const link=document.createElement('a');
+
+      link.href='#';
+      link.dataset.cookieSettings='';
+      link.textContent='Gestisci cookie';
+
+      footer.appendChild(link);
+    });
+}
+
 function saveConsent(c){window.localStorage.setItem(CONSENT_KEY,c)}
 function s90gPageSlug(){
   const name=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
@@ -226,7 +274,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   addWhatsAppChat();
   s90gPrepareGuidedPathLinks();
   s90gPreparePortalLinks();
-  const b=document.getElementById('cookie-banner'),c=localStorage.getItem(CONSENT_KEY);
+  const b=s90gEnsureCookieBanner(),c=localStorage.getItem(CONSENT_KEY);s90gEnsureCookieSettingsControl();
   if(c==='accepted'){hideCookieBanner(b);loadAnalytics()}else if(c==='rejected'){hideCookieBanner(b);denyAnalytics()}else showCookieBanner(b);
   document.querySelectorAll('[data-cookie-choice]').forEach(x=>x.addEventListener('click',()=>{const ok=x.dataset.cookieChoice==='accept';saveConsent(ok?'accepted':'rejected');hideCookieBanner(b);ok?loadAnalytics():denyAnalytics()}));
   document.querySelectorAll('[data-cookie-settings]').forEach(x=>x.addEventListener('click',e=>{e.preventDefault();showCookieBanner(b)}));
