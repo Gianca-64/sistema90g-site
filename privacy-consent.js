@@ -14,7 +14,7 @@ window.gtag('consent','default',{
 function loadNavigationConversion(){
   if(document.querySelector('script[data-s90g-navigation-conversion]'))return;
   const script=document.createElement('script');
-  script.src='/navigation-conversion.js?v=20260815a';
+  script.src='/navigation-conversion.js?v=20260912a';
   script.defer=true;
   script.dataset.s90gNavigationConversion='true';
   document.head.appendChild(script);
@@ -194,7 +194,7 @@ function s90gIntegrateAiTransparencyPage(){
   const href='/metodo-sistema90g.html';
   const isPage=location.pathname.endsWith(href);
   const nav=document.querySelector('.s90g-nav');
-  if(nav){
+  if(nav&&nav.dataset.s90gNavManaged!=='page'){
     let link=nav.querySelector('a[data-nav-key="method"],a[href$="/metodo-sistema90g.html"],a[href$="metodo-sistema90g.html"]');
     if(!link){link=document.createElement('a');link.href=href;link.dataset.navKey='method';nav.appendChild(link);}
     link.textContent='Metodo e AI';

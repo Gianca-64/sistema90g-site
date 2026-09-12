@@ -8,6 +8,11 @@ const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const nav=read('navigation-conversion.js');
 for(const token of ['Metodo 90G','Innovazioni','Contatti','aria-expanded','aria-controls','utm_source','role_hint','service_hint','source_page','content_type','cta_position']) assert.ok(nav.includes(token),token);
 
+assert.ok(
+  nav.includes("nav.dataset.s90gNavManaged==='page'"),
+  'navigation runtime must preserve page-managed navigation'
+);
+
 for(const obsoleteNav of ['Professionisti','Rivenditori','/professionisti.html','/rivenditori-cucine.html']){
   assert.equal(nav.includes(obsoleteNav),false,`navigation contiene target B2B pubblico ${obsoleteNav}`);
 }
@@ -29,7 +34,14 @@ let visual=0,privacy=0;
 for(const file of htmlFiles){
   const raw=fs.readFileSync(file,'utf8');
   if(raw.includes('sistema90g-visual-2026.css')){visual++;assert.ok(raw.includes('sistema90g-visual-2026.css?v=20260730a')||raw.includes('sistema90g-visual-2026.css?v=20260817b'),file);}
-  if(raw.includes('privacy-consent.js')){privacy++;assert.ok(raw.includes('privacy-consent.js?v=20260730a'),file);}
+  if(raw.includes('privacy-consent.js')){
+  privacy++;
+  assert.ok(
+    raw.includes('privacy-consent.js?v=20260730a') ||
+    raw.includes('privacy-consent.js?v=20260912a'),
+    file
+  );
+}
 }
 assert.ok(visual>=50);
 assert.ok(privacy>=50);
@@ -80,8 +92,43 @@ for(const token of [
 assert.equal(intake.includes('role-case-path.js'),false,'la pagina Free Entry non deve dipendere dal catalogo legacy');
 assert.equal(intake.includes('role-case-path.css'),false,'la pagina Free Entry non deve dipendere dallo stile legacy');
 
+const home=read('index.html');
+
+assert.ok(
+  home.includes('data-s90g-nav-managed="page"'),
+  'homepage must own its acquisition navigation'
+);
+
+const homeNavMatch=home.match(
+  /<nav\b[^>]*class=["'][^"']*\bs90g-nav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i
+);
+
+assert.ok(
+  homeNavMatch,
+  'homepage acquisition navigation must be parseable'
+);
+
+const homeNav=homeNavMatch[1];
+
+for(const legacyHomeNav of [
+  '>Metodo e AI<',
+  '>Innovazioni<',
+  '>Contatti<'
+]){
+  assert.equal(
+    homeNav.includes(legacyHomeNav),
+    false,
+    `homepage acquisition nav contains ${legacyHomeNav}`
+  );
+}
+
 const consent=read('privacy-consent.js');
-assert.ok(consent.includes('/navigation-conversion.js?v=20260815a'));
+assert.ok(consent.includes('/navigation-conversion.js?v=20260912a'));
+
+assert.ok(
+  consent.includes("nav.dataset.s90gNavManaged!=='page'"),
+  'AI transparency must not mutate page-managed navigation'
+);
 assert.ok(consent.includes('analisi-preventiva.html#richiedi'),'privacy-consent deve usare il Free Entry #richiedi');
 assert.equal(consent.includes('#percorso'),false,'privacy-consent non deve usare anchor legacy #percorso');
 for(const obsolete of ['controllo-mirato','analisi-completa','acquisto-assistito-cucina-90g','verifica-progetto-cucina']){

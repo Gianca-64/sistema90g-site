@@ -127,24 +127,80 @@
     const header=document.querySelector('.s90g-header');
     const nav=header?.querySelector('.s90g-nav');
     if(!header||!nav)return;
+
     const key=activeKey(pageSlug());
-    nav.id='s90g-main-navigation';
-    nav.innerHTML=NAV_LINKS.map(([id,label,href])=>`<a data-nav-key="${id}" href="${href}"${id===key?' aria-current="page"':''}>${label}</a>`).join('');
+    const pageManaged=nav.dataset.s90gNavManaged==='page';
+
+    nav.id=nav.id||'s90g-main-navigation';
+
+    if(!pageManaged){
+      nav.innerHTML=NAV_LINKS.map(
+        ([id,label,href])=>
+          `<a data-nav-key="${id}" href="${href}"${id===key?' aria-current="page"':''}>${label}</a>`
+      ).join('');
+    }
+
     let toggle=header.querySelector('.s90g-menu-toggle');
+
     if(!toggle){
       toggle=document.createElement('button');
-      toggle.type='button';toggle.className='s90g-menu-toggle';toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls',nav.id);
-      toggle.innerHTML='<span>Menu</span><span aria-hidden="true">☰</span>';
+      toggle.type='button';
+      toggle.className='s90g-menu-toggle';
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-controls',nav.id);
+      toggle.innerHTML=
+        '<span>Menu</span><span aria-hidden="true">☰</span>';
       nav.before(toggle);
     }
-    const setOpen=open=>{header.classList.toggle('is-nav-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.querySelector('[aria-hidden="true"]').textContent=open?'×':'☰'};
-    toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));
-    nav.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false)});
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&header.classList.contains('is-nav-open')){setOpen(false);toggle.focus()}});
-    document.addEventListener('click',event=>{if(header.classList.contains('is-nav-open')&&!header.contains(event.target))setOpen(false)});
-    const mq=matchMedia('(min-width: 1181px)');const reset=()=>{if(mq.matches)setOpen(false)};mq.addEventListener?.('change',reset);
+
+    const setOpen=open=>{
+      header.classList.toggle('is-nav-open',open);
+      toggle.setAttribute('aria-expanded',String(open));
+      toggle.querySelector('[aria-hidden="true"]').textContent=
+        open?'×':'☰';
+    };
+
+    toggle.addEventListener(
+      'click',
+      ()=>setOpen(
+        toggle.getAttribute('aria-expanded')!=='true'
+      )
+    );
+
+    nav.addEventListener('click',event=>{
+      if(event.target.closest('a'))setOpen(false);
+    });
+
+    document.addEventListener('keydown',event=>{
+      if(
+        event.key==='Escape' &&
+        header.classList.contains('is-nav-open')
+      ){
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click',event=>{
+      if(
+        header.classList.contains('is-nav-open') &&
+        !header.contains(event.target)
+      ){
+        setOpen(false);
+      }
+    });
+
+    const mq=matchMedia('(min-width: 1181px)');
+
+    const reset=()=>{
+      if(mq.matches)setOpen(false);
+    };
+
+    mq.addEventListener?.('change',reset);
+
     header.classList.add('s90g-nav-ready');
   }
+
   function addSkipLink(){
     if(document.querySelector('.s90g-skip-link'))return;
     const main=document.querySelector('main');if(!main)return;if(!main.id)main.id='contenuto-principale';
