@@ -1,6 +1,47 @@
 (() => {
   'use strict';
 
+  const isEnglish =
+    (document.documentElement.lang || '')
+      .toLowerCase()
+      .startsWith('en');
+
+  const sourcePage =
+    isEnglish
+      ? 'home-en-gb'
+      : 'home';
+
+  const vistaText =
+    isEnglish
+      ? {
+          panelTitle:
+            'Now look at where the real questions appear.',
+          panelCopy:
+            'Clearances, openings, people and real use can change what looked right on paper. Select one of the numbered points.',
+          active:
+            '90G View active',
+          inactive:
+            'Activate 90G View',
+          fallbackTitle:
+            'Point to check',
+          status:
+            '90G View active',
+        }
+      : {
+          panelTitle:
+            'Adesso guarda dove compaiono le domande vere.',
+          panelCopy:
+            'Passaggi, aperture, persone e uso reale possono cambiare ciò che sulla carta sembrava corretto. Seleziona uno dei punti numerati.',
+          active:
+            'Vista 90G attiva',
+          inactive:
+            'Attiva Vista 90G',
+          fallbackTitle:
+            'Punto da verificare',
+          status:
+            'Lettura 90G attiva',
+        };
+
   const track = (name, params = {}) => {
     if (typeof window.gtag !== 'function') return;
 
@@ -48,12 +89,10 @@
 
     const setPanelIntro = () => {
       title.textContent =
-        'Adesso guarda dove compaiono le domande vere.';
+        vistaText.panelTitle;
 
       copy.textContent =
-        'Passaggi, aperture, persone e uso reale possono ' +
-        'cambiare ciò che sulla carta sembrava corretto. ' +
-        'Seleziona uno dei punti numerati.';
+        vistaText.panelCopy;
     };
 
     const setActive = active => {
@@ -67,8 +106,8 @@
       if (toggleLabel) {
         toggleLabel.textContent =
           active
-            ? 'Vista 90G attiva'
-            : 'Attiva Vista 90G';
+            ? vistaText.active
+            : vistaText.inactive;
       }
 
       if (active) {
@@ -101,7 +140,7 @@
 
         if (active) {
           track('vista90g_open', {
-            source_page: 'home',
+            source_page: sourcePage,
           });
         }
 
@@ -140,13 +179,13 @@
 
         title.textContent =
           button.dataset.title ||
-          'Punto da verificare';
+          vistaText.fallbackTitle;
 
         copy.textContent =
           button.dataset.copy || '';
 
         track('vista90g_hotspot', {
-          source_page: 'home',
+          source_page: sourcePage,
           hotspot:
             button.dataset.vistaId || '',
         });
@@ -156,7 +195,7 @@
     root.dataset.s90gVistaEnhanced = 'true';
 
     // Contract marker retained for regression.
-    const statusText = 'Lettura 90G attiva';
+    const statusText = vistaText.status;
     root.dataset.s90gVistaStatus = statusText;
   }
 
@@ -167,7 +206,7 @@
     .forEach(link => {
       link.addEventListener('click', () => {
         track('problem_selected', {
-          source_page: 'home',
+          source_page: sourcePage,
           problem: link.dataset.problem || '',
         });
       });
@@ -178,7 +217,7 @@
     .forEach(link => {
       link.addEventListener('click', () => {
         track('free_entry_click', {
-          source_page: 'home',
+          source_page: sourcePage,
           cta_position:
             link.dataset.ctaPosition || '',
           content_type:
