@@ -1,0 +1,193 @@
+{
+  "version": "site-i18n-en-gb-2026-09-13.1",
+  "host": "https://sistema90g.it",
+  "defaultLanguage": "it",
+  "defaultLocale": "it-IT",
+  "pilotLanguage": "en",
+  "pilotLocale": "en-GB",
+  "pilotMarket": "GB",
+  "currency": "EUR",
+  "englishPrefix": "/en/",
+  "urlStrategy": "italian-root-english-subdirectory",
+  "portal": {
+    "origin": "https://portale.sistema90g.it",
+    "language": "en",
+    "locale": "en-GB",
+    "requesterRole": "private",
+    "freeEntryService": "valutazione-iniziale"
+  },
+  "seo": {
+    "selfCanonical": true,
+    "pairedHreflang": [
+      "it-IT",
+      "en-GB"
+    ],
+    "xDefault": "italian",
+    "automaticLanguageRedirect": false
+  },
+  "pages": [
+    {
+      "id": "home",
+      "group": "acquisition",
+      "it": "index.html",
+      "en": "en/index.html",
+      "enUrl": "/en/"
+    },
+    {
+      "id": "how-it-works",
+      "group": "acquisition",
+      "it": "analisi-preventiva.html",
+      "en": "en/how-it-works.html",
+      "enUrl": "/en/how-it-works.html"
+    },
+    {
+      "id": "services",
+      "group": "commercial",
+      "it": "servizi.html",
+      "en": "en/services.html",
+      "enUrl": "/en/services.html"
+    },
+    {
+      "id": "consultation",
+      "group": "service",
+      "it": "consulenza-90g.html",
+      "en": "en/kitchen-consultation.html",
+      "enUrl": "/en/kitchen-consultation.html"
+    },
+    {
+      "id": "quote-order-review",
+      "group": "service",
+      "it": "analisi-preventivo-cucina.html",
+      "en": "en/kitchen-quote-order-review.html",
+      "enUrl": "/en/kitchen-quote-order-review.html"
+    },
+    {
+      "id": "kitchen-review",
+      "group": "service",
+      "it": "verifica-90g.html",
+      "en": "en/kitchen-review.html",
+      "enUrl": "/en/kitchen-review.html"
+    },
+    {
+      "id": "kitchen-design",
+      "group": "service",
+      "it": "progetto-cucina-sistema90g.html",
+      "en": "en/kitchen-design.html",
+      "enUrl": "/en/kitchen-design.html"
+    },
+    {
+      "id": "kitchen-design-example",
+      "group": "evidence",
+      "it": "esempio-progetto-cucina-90g.html",
+      "en": "en/kitchen-design-example.html",
+      "enUrl": "/en/kitchen-design-example.html"
+    },
+    {
+      "id": "pre-installation-check",
+      "group": "service",
+      "it": "controllo-pre-montaggio-cucina.html",
+      "en": "en/pre-installation-check.html",
+      "enUrl": "/en/pre-installation-check.html"
+    },
+    {
+      "id": "problem-analysis",
+      "group": "service",
+      "it": "analisi-problema-cucina.html",
+      "en": "en/kitchen-problem-analysis.html",
+      "enUrl": "/en/kitchen-problem-analysis.html"
+    },
+    {
+      "id": "real-cases",
+      "group": "evidence",
+      "it": "casi-analizzati.html",
+      "en": "en/real-kitchen-cases.html",
+      "enUrl": "/en/real-kitchen-cases.html"
+    },
+    {
+      "id": "case-dishwasher-passage",
+      "group": "evidence",
+      "it": "caso-lavastoviglie-passaggio-cucina.html",
+      "en": "en/case-dishwasher-passage.html",
+      "enUrl": "/en/case-dishwasher-passage.html"
+    },
+    {
+      "id": "case-island-clearances",
+      "group": "evidence",
+      "it": "caso-isola-passaggi-cucina.html",
+      "en": "en/case-kitchen-island-clearances.html",
+      "enUrl": "/en/case-kitchen-island-clearances.html"
+    },
+    {
+      "id": "case-quote-value",
+      "group": "evidence",
+      "it": "caso-preventivo-cucina-sconto-valore.html",
+      "en": "en/case-kitchen-quote-discount-value.html",
+      "enUrl": "/en/case-kitchen-quote-discount-value.html"
+    },
+    {
+      "id": "guides",
+      "group": "content",
+      "it": "progettare-cucina-guide.html",
+      "en": "en/kitchen-guides.html",
+      "enUrl": "/en/kitchen-guides.html"
+    },
+    {
+      "id": "faq",
+      "group": "content",
+      "it": "domande-cucina-faq.html",
+      "en": "en/kitchen-faq.html",
+      "enUrl": "/en/kitchen-faq.html"
+    },
+    {
+      "id": "method",
+      "group": "trust",
+      "it": "metodo-sistema90g.html",
+      "en": "en/method.html",
+      "enUrl": "/en/method.html"
+    },
+    {
+      "id": "about",
+      "group": "trust",
+      "it": "chi-e-sistema90g.html",
+      "en": "en/about.html",
+      "enUrl": "/en/about.html"
+    },
+    {
+      "id": "contact",
+      "group": "trust",
+      "it": "contatti.html",
+      "en": "en/contact.html",
+      "enUrl": "/en/contact.html"
+    },
+    {
+      "id": "privacy",
+      "group": "legal",
+      "it": "privacy-policy.html",
+      "en": "en/privacy-policy.html",
+      "enUrl": "/en/privacy-policy.html"
+    },
+    {
+      "id": "cookie",
+      "group": "legal",
+      "it": "cookie-policy.html",
+      "en": "en/cookie-policy.html",
+      "enUrl": "/en/cookie-policy.html"
+    },
+    {
+      "id": "intellectual-property",
+      "group": "legal",
+      "it": "proprieta-intellettuale.html",
+      "en": "en/intellectual-property.html",
+      "enUrl": "/en/intellectual-property.html"
+    }
+  ],
+  "releaseBlockers": [
+    "english-commercial-terms",
+    "english-consumer-cancellation-information",
+    "paired-hreflang",
+    "english-sitemap",
+    "language-switcher",
+    "portal-en-gb-release",
+    "bilingual-e2e"
+  ]
+}
