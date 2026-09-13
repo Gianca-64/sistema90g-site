@@ -47,6 +47,7 @@ FORBIDDEN = {
     ],
     'rinnovare-cucina-senza-cambiarla.html': [
         'href="/servizi#servizi"',
+        'href="/servizi#consulenza"',
     ],
 }
 
@@ -77,7 +78,7 @@ REQUIRED = {
     ],
     'casi-analizzati.html': [],
     'rinnovare-cucina-senza-cambiarla.html': [
-        'href="/servizi#consulenza"',
+        'href="/consulenza-90g"',
     ],
 }
 

@@ -71,7 +71,8 @@ REPLACEMENTS = {
         'Se il caso richiede un lavoro professionale, percorso, contenuti e prezzo vengono indicati prima di iniziare.': 'Se il caso richiede un lavoro professionale, prima di iniziare sai che cosa verrà fatto e quanto costa.',
     },
     'rinnovare-cucina-senza-cambiarla.html': {
-        'href="/servizi#servizi"': 'href="/servizi#consulenza"',
+        'href="/servizi#servizi"': 'href="/consulenza-90g"',
+        'href="/servizi#consulenza"': 'href="/consulenza-90g"',
     },
 }
 
