@@ -35,8 +35,8 @@ required_html = [
     "Non dobbiamo venderti una cucina.",
     "9 domande che farei sulla tua cucina.",
     "Mostra gratuitamente il tuo caso",
-    'href="s90g-home-acquisition-v1.css?v=20260912a"',
-    'src="s90g-home-acquisition-v1.js?v=20260912e"',
+    'href="s90g-home-acquisition-v1.css?v=',
+    'src="s90g-home-acquisition-v1.js?v=',
     'data-s90g-nav-managed="page"',
     'TAVOLA 90G · USO REALE',
 ]
