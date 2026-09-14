@@ -426,9 +426,13 @@
 }
 
 .s90g-proof-case img {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 260px;
+  max-height: 260px;
+  aspect-ratio: auto;
   object-fit: cover;
+  object-position: center;
 }
 
 .s90g-proof-case > div {
@@ -874,6 +878,29 @@
     padding: 40px 0;
   }
 
+}
+
+
+/* PROOF IMAGE HEIGHT — explicit visual control */
+@media (max-width: 1080px) {
+  .s90g-proof-case img {
+    height: 240px;
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 800px) {
+  .s90g-proof-case img {
+    height: 300px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .s90g-proof-case img {
+    height: 220px;
+    max-height: 220px;
+  }
 }
 
 
