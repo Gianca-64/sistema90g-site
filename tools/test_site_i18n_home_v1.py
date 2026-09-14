@@ -403,3 +403,60 @@ if "Made in Italy" in _brand_home:
     )
 
 print("PASS — intentional Italian brand identity on English homepage")
+
+# VQA-2D — release-critical EN-GB mobile navigation contract.
+from pathlib import Path as _S90GNavPath
+import re as _s90g_nav_re
+
+_s90g_nav_root = (
+    _S90GNavPath(__file__)
+    .resolve()
+    .parents[1]
+)
+
+_s90g_nav_runtime = (
+    _s90g_nav_root
+    / "s90g-site-en-gb-v1.js"
+).read_text(
+    encoding="utf-8"
+)
+
+_s90g_nav_css = (
+    _s90g_nav_root
+    / "sistema90g-visual-2026.css"
+).read_text(
+    encoding="utf-8"
+)
+
+if not _s90g_nav_re.search(
+    r"""header\.classList\.add\(
+\s*['"]s90g-nav-ready['"]\s*,?
+\s*\)""",
+    _s90g_nav_runtime,
+):
+    raise SystemExit(
+        "FAIL — English runtime does not enter "
+        "the managed mobile-navigation state"
+    )
+
+if (
+    ".s90g-header.s90g-nav-ready "
+    ".s90g-nav{display:none}"
+    not in _s90g_nav_css
+):
+    raise SystemExit(
+        "FAIL — canonical closed mobile-nav CSS missing"
+    )
+
+if (
+    ".s90g-header.s90g-nav-ready.is-nav-open "
+    ".s90g-nav{display:grid}"
+    not in _s90g_nav_css
+):
+    raise SystemExit(
+        "FAIL — canonical open mobile-nav CSS missing"
+    )
+
+print(
+    "PASS — English mobile navigation is closed by default"
+)

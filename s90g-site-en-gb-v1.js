@@ -441,6 +441,10 @@
       nav.before(toggle);
     }
 
+    header.classList.add(
+      's90g-nav-ready',
+    );
+
     const setOpen =
       open => {
         header.classList.toggle(
