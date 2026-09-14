@@ -460,3 +460,113 @@ if (
 print(
     "PASS — English mobile navigation is closed by default"
 )
+
+# VQA-2E-R2 — disclosure for synthetic Italian Home case imagery.
+from pathlib import Path as _S90GDisclosurePath
+
+_s90g_disclosure_root = (
+    _S90GDisclosurePath(__file__)
+    .resolve()
+    .parents[1]
+)
+
+_s90g_disclosure_it = (
+    _s90g_disclosure_root
+    / "index.html"
+).read_text(
+    encoding="utf-8"
+)
+
+_s90g_disclosure_en = (
+    _s90g_disclosure_root
+    / "en/index.html"
+).read_text(
+    encoding="utf-8"
+)
+
+_s90g_disclosure_images = [
+    "s90g-home-case-dishwasher-20260914.webp",
+    "s90g-home-case-island-20260914.webp",
+    "s90g-home-case-quote-20260914.webp",
+]
+
+_s90g_disclosure_label = (
+    "Immagine illustrativa"
+)
+
+if (
+    _s90g_disclosure_it.count(
+        _s90g_disclosure_label
+    )
+    != 3
+):
+    raise SystemExit(
+        "FAIL — Italian illustration disclosure count invalid"
+    )
+
+for _s90g_disclosure_image in _s90g_disclosure_images:
+    if (
+        _s90g_disclosure_it.count(
+            _s90g_disclosure_image
+        )
+        != 1
+    ):
+        raise SystemExit(
+            "FAIL — Italian synthetic image reference invalid"
+        )
+
+    if (
+        _s90g_disclosure_image
+        in _s90g_disclosure_en
+    ):
+        raise SystemExit(
+            "FAIL — Italian synthetic image leaked into English Home"
+        )
+
+    _s90g_disclosure_pos = (
+        _s90g_disclosure_it.index(
+            _s90g_disclosure_image
+        )
+    )
+
+    _s90g_disclosure_start = (
+        _s90g_disclosure_it.rfind(
+            '<article class="s90g-proof-case">',
+            0,
+            _s90g_disclosure_pos,
+        )
+    )
+
+    _s90g_disclosure_end = (
+        _s90g_disclosure_it.find(
+            "</article>",
+            _s90g_disclosure_pos,
+        )
+    )
+
+    if (
+        _s90g_disclosure_start < 0
+        or _s90g_disclosure_end < 0
+    ):
+        raise SystemExit(
+            "FAIL — Italian proof-case boundary missing"
+        )
+
+    _s90g_disclosure_card = (
+        _s90g_disclosure_it[
+            _s90g_disclosure_start:
+            _s90g_disclosure_end
+        ]
+    )
+
+    if (
+        _s90g_disclosure_label
+        not in _s90g_disclosure_card
+    ):
+        raise SystemExit(
+            "FAIL — synthetic Home image not disclosed"
+        )
+
+print(
+    "PASS — Italian synthetic home illustrations are explicitly labelled"
+)
