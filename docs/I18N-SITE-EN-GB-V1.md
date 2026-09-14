@@ -172,7 +172,28 @@ The website must not become a traditional catalogue-led consultancy site.
 
 The positioning remains independent kitchen expertise focused on finding problems, inconsistencies and risky decisions before they become costly or difficult to correct.
 
-Italian origin may support trust but is not the main promise.
+Italian origin is a deliberate part of the brand promise.
+
+Sistema 90G presents itself internationally as an Italian method for
+better kitchen decisions: independent checks, attention to real use,
+attention to detail and early identification of problems before they
+become costly or difficult to correct.
+
+Italian identity must support the customer-first promise, never replace
+it. Public communication must not become generic "Italian design",
+luxury or style positioning.
+
+Preferred public expressions include:
+
+- `Italian method`
+- `Italian expertise`
+- `Developed in Italy`
+- `Born in Italy`
+
+`Made in Italy` is not the default claim for the service.
+
+Every market must still be genuinely localised for terminology,
+commercial rules, legal requirements and customer expectations.
 
 ## Legal release gate
 

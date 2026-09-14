@@ -608,3 +608,91 @@ print("PASS — no direct Portale bypass")
 print("PASS — Free Entry remains website-first")
 print("PASS — English safe runtime only")
 print("SITE I18N METHOD + ABOUT + CONTACT V1: PASS")
+
+
+# === INTERNATIONAL BRAND PLATFORM V1 — METHOD / ABOUT ===
+from pathlib import Path as _BrandPath
+
+_brand_root = _BrandPath(__file__).resolve().parents[1]
+
+_brand_method = (
+    _brand_root / "en" / "method.html"
+).read_text(encoding="utf-8")
+
+_brand_about = (
+    _brand_root / "en" / "about.html"
+).read_text(encoding="utf-8")
+
+_brand_contract = (
+    _brand_root / "docs" / "I18N-SITE-EN-GB-V1.md"
+).read_text(encoding="utf-8")
+
+_brand_roadmap = (
+    _brand_root / "docs" / "I18N-INTERNATIONAL-MARKETS-ROADMAP-V1.md"
+).read_text(encoding="utf-8")
+
+_brand_platform = (
+    _brand_root / "docs" / "INTERNATIONAL-BRAND-PLATFORM-V1.md"
+).read_text(encoding="utf-8")
+
+_required = {
+    "EN method": (
+        _brand_method,
+        [
+            "An Italian method for better kitchen decisions",
+            "Developed in Italy · independent checks · human-controlled conclusions",
+        ],
+    ),
+    "EN about": (
+        _brand_about,
+        [
+            "Sistema 90G grew in Italy from experience",
+            "That origin is part of the method",
+        ],
+    ),
+    "UK architecture contract": (
+        _brand_contract,
+        [
+            "Italian origin is a deliberate part of the brand promise.",
+            "Italian method for",
+        ],
+    ),
+    "international roadmap": (
+        _brand_roadmap,
+        [
+            "Brand identity invariant",
+            "Sistema 90G remains explicitly Italian as it expands internationally.",
+        ],
+    ),
+    "brand platform": (
+        _brand_platform,
+        [
+            "Italian method. Independent checks. Better kitchen decisions.",
+            "An Italian method for better kitchen decisions.",
+            "customer -> problem -> understanding -> useful next step -> service only",
+        ],
+    ),
+}
+
+for _label, (_text, _markers) in _required.items():
+    for _marker in _markers:
+        if _marker not in _text:
+            raise SystemExit(
+                f"FAIL — {_label} missing international brand marker: {_marker}"
+            )
+
+if "Italian origin may support trust but is not the main promise." in _brand_contract:
+    raise SystemExit(
+        "FAIL — superseded Italian-origin positioning remains"
+    )
+
+for _label, _text in [
+    ("EN method", _brand_method),
+    ("EN about", _brand_about),
+]:
+    if "Made in Italy" in _text:
+        raise SystemExit(
+            f"FAIL — generic Made in Italy claim leaked into {_label}"
+        )
+
+print("PASS — international Italian brand platform contract")

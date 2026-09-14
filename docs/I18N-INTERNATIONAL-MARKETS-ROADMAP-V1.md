@@ -16,6 +16,29 @@ has completed its full release and end-to-end verification.
 
 This roadmap does not activate the United States today.
 
+## 1A. Brand identity invariant
+
+Sistema 90G remains explicitly Italian as it expands internationally.
+
+The `.it` domain, Italian origin and the concept of an `Italian method`
+are deliberate brand signals rather than temporary limitations.
+
+The international positioning is not generic Italian design, luxury or
+style. Italian identity represents attention to function, detail,
+everyday use, the relationship between decisions and their practical
+consequences, and the principle of identifying problems before they
+become costly mistakes.
+
+The brand promise must remain subordinate to the customer's real
+problem:
+
+customer -> problem -> understanding -> useful next step -> service only
+when useful.
+
+Localisation remains mandatory. Italian identity does not justify using
+the same terminology, legal rules, measurements, currency presentation
+or commercial wording in every country.
+
 ---
 
 ## 2. Canonical principle

@@ -378,3 +378,28 @@ print(
 print(
     "SITE I18N HOME V1: PASS"
 )
+
+
+# === INTERNATIONAL BRAND PLATFORM V1 — HOME ===
+from pathlib import Path as _BrandPath
+
+_brand_root = _BrandPath(__file__).resolve().parents[1]
+_brand_home = (
+    _brand_root / "en" / "index.html"
+).read_text(encoding="utf-8")
+
+for _marker in [
+    "Italian method · independent checks · better kitchen decisions",
+    "Independent Italian kitchen expertise focused on identifying problems",
+]:
+    if _marker not in _brand_home:
+        raise SystemExit(
+            f"FAIL — international Italian brand marker missing from EN home: {_marker}"
+        )
+
+if "Made in Italy" in _brand_home:
+    raise SystemExit(
+        "FAIL — generic Made in Italy claim must not be used on EN home"
+    )
+
+print("PASS — intentional Italian brand identity on English homepage")
