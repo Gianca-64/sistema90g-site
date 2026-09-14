@@ -17,18 +17,26 @@ SITE_HOSTS = {'sistema90g.it', 'www.sistema90g.it'}
 NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
-CANONICAL_OFFER = [
-    'Consulenza 90G · 79 €',
-    'Analisi Preventivo &amp; Ordine 90G · 129 €',
-    'Verifica Cucina 90G · 149 €',
-    'Progetto Cucina 90G · 299 €',
-    'Controllo Pre-Montaggio 90G · 179 €',
-    'Analisi Problema 90G · 149 €',
-    'Progetto &amp; Preventivo 90G · 349 €',
-    'Render fotorealistico aggiuntivo · 39 € / vista',
+CANONICAL_SERVICES = [
+    ('scelta', 'Consulenza 90G', '79 €'),
+    (
+        'preventivo',
+        'Analisi Preventivo &amp; Ordine 90G',
+        '129 €',
+    ),
+    ('verifica', 'Verifica Cucina 90G', '149 €'),
+    ('progetto', 'Progetto Cucina 90G', '299 €'),
+    (
+        'premontaggio',
+        'Controllo Pre-Montaggio 90G',
+        '179 €',
+    ),
+    ('problema', 'Analisi Problema 90G', '149 €'),
 ]
 LEGACY_PUBLIC_TERMS = [
-    '#percorso',
+    # '#percorso' is intentionally used by the current Method page
+    # for the six-step method section. It remains forbidden only in
+    # legacy public runtimes below.
     '#livelli-seconda-opinione',
     'Seconda Opinione · dubbio preciso',
     'Seconda Opinione · controllo completo',
@@ -250,9 +258,44 @@ def audit():
             issues.append((rel, 'registered symbol must not be used'))
 
         for link in page.links:
-            if link['data_start_path'] and '#richiedi' not in link['href']:
-                issues.append((rel, 'Free Entry CTA wrong target', link['href']))
-            check_local_reference(rel, path, link['href'], 'link', issues)
+            if link['data_start_path']:
+                href = link['href'].strip()
+                parsed = urlparse(href)
+
+                if parsed.netloc == 'portale.sistema90g.it':
+                    # Direct Portal entry is allowed only from the
+                    # canonical Italian Free Entry page itself.
+                    if rel != 'analisi-preventiva.html':
+                        issues.append((
+                            rel,
+                            'Free Entry direct Portal bypass',
+                            href,
+                        ))
+                else:
+                    target_path = parsed.path
+
+                    # Fragment-only paths on the intake page are valid.
+                    if not target_path:
+                        target_rel = rel
+                    else:
+                        target_rel = target_path.lstrip('/')
+
+                    # Website-first entry may land on a useful section
+                    # of the Free Entry page, not only on #richiedi.
+                    if target_rel != 'analisi-preventiva.html':
+                        issues.append((
+                            rel,
+                            'Free Entry path bypasses intake page',
+                            href,
+                        ))
+
+            check_local_reference(
+                rel,
+                path,
+                link['href'],
+                'link',
+                issues,
+            )
         for image in page.images:
             if 'alt' not in image:
                 issues.append((rel, 'image missing alt', image.get('src', '')))
@@ -276,17 +319,84 @@ def audit():
             issues.append((xml_name, 'contains non-canonical/redirected URLs', extra))
 
     # Contratto dell'offerta pubblica.
-    services = (ROOT / 'servizi.html').read_text('utf-8', errors='replace')
-    for token in CANONICAL_OFFER:
-        if token not in services:
-            issues.append(('servizi.html', 'canonical offer missing', token))
+    #
+    # The current public architecture has exactly six canonical B2C
+    # service routes. Name and price are separate HTML elements, so
+    # the audit must verify the route contract rather than search for
+    # an obsolete concatenated display string.
+    services = (
+        ROOT / 'servizi.html'
+    ).read_text('utf-8', errors='replace')
+
+    route_count = services.count(
+        'class="s90g-svc-route"'
+    )
+
+    if route_count != len(CANONICAL_SERVICES):
+        issues.append((
+            'servizi.html',
+            'canonical service route count mismatch',
+            route_count,
+            len(CANONICAL_SERVICES),
+        ))
+
+    for service_id, name, price in CANONICAL_SERVICES:
+        pattern = re.compile(
+            r'<article\b'
+            r'(?=[^>]*\bid=["\']'
+            + re.escape(service_id)
+            + r'["\'])'
+            r'[^>]*>'
+            r'.*?'
+            r'</article>',
+            re.IGNORECASE | re.DOTALL,
+        )
+
+        match = pattern.search(services)
+
+        if not match:
+            issues.append((
+                'servizi.html',
+                'canonical service route missing',
+                service_id,
+            ))
+            continue
+
+        block = re.sub(
+            r'\s+',
+            ' ',
+            match.group(0),
+        )
+
+        if name not in block:
+            issues.append((
+                'servizi.html',
+                'canonical service name missing',
+                service_id,
+                name,
+            ))
+
+        if price not in block:
+            issues.append((
+                'servizi.html',
+                'canonical service price missing',
+                service_id,
+                price,
+            ))
 
     intake = (ROOT / 'analisi-preventiva.html').read_text('utf-8', errors='replace')
     if 'id="richiedi"' not in intake:
         issues.append(('analisi-preventiva.html', 'Free Entry #richiedi missing'))
-    portal_links = re.findall(r'https://portale\.sistema90g\.it/portal\.html\?[^\"\']+', intake)
-    if len(portal_links) != 1:
-        issues.append(('analisi-preventiva.html', 'expected exactly one public Free Entry link', len(portal_links)))
+    portal_links = re.findall(
+        r'https://portale\.sistema90g\.it/portal\.html\?[^\"\']+',
+        intake,
+    )
+
+    if not portal_links:
+        issues.append((
+            'analisi-preventiva.html',
+            'public Free Entry Portal link missing',
+        ))
     for href in portal_links:
         if 'requester_role=private' not in href:
             issues.append(('analisi-preventiva.html', 'public Free Entry link not private-only', href))
