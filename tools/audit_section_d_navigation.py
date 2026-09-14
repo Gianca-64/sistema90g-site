@@ -136,8 +136,19 @@ def main():
         if dup:
             duplicates.append({'page': rel, 'ids': dup})
 
-        if '#percorso' in raw or '#livelli-seconda-opinione' in raw:
-            legacy_anchors.append(rel)
+        for href, text, attrs in parser.links:
+            u = urlsplit(href)
+            fragment = unquote(u.fragment)
+
+            if fragment in {'percorso', 'livelli-seconda-opinione'}:
+                # A same-page anchor that resolves to an actual id on the
+                # current page is valid navigation, not a legacy route.
+                # Cross-page uses of these historical fragments remain
+                # release blockers.
+                same_page = not u.path and not u.netloc and not u.scheme
+                if not (same_page and fragment in parser.ids):
+                    legacy_anchors.append(rel)
+                    break
 
         for href, text, attrs in parser.links:
             low = text.lower().replace('→', '').strip()
