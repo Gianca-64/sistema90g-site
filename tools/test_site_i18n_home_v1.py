@@ -570,3 +570,90 @@ for _s90g_disclosure_image in _s90g_disclosure_images:
 print(
     "PASS — Italian synthetic home illustrations are explicitly labelled"
 )
+
+# VQA-2G — clean language-neutral EN-GB Home case imagery.
+from pathlib import Path as _S90GEnCleanAssetPath
+
+_s90g_en_clean_root = (
+    _S90GEnCleanAssetPath(__file__)
+    .resolve()
+    .parents[1]
+)
+
+_s90g_en_clean_home = (
+    _s90g_en_clean_root
+    / "en/index.html"
+).read_text(
+    encoding="utf-8"
+)
+
+_s90g_en_clean_assets = [
+    "s90g-home-case-dishwasher-en-gb-20260914.webp",
+    "s90g-home-case-island-en-gb-20260914.webp",
+    "s90g-home-case-quote-en-gb-20260914.webp",
+]
+
+_s90g_en_legacy_assets = [
+    "/images/caso-lavastoviglie-passaggio-cucina.jpg?v=20260715b",
+    "/images/caso-isola-passaggi-cucina.jpg?v=20260715b",
+    "/images/22_CASI_PREVENTIVO.jpg?v=20260715a",
+]
+
+if _s90g_en_clean_home.count("Illustrative image") != 3:
+    raise SystemExit(
+        "FAIL — English Home illustrative disclosure count invalid"
+    )
+
+for _s90g_asset in _s90g_en_clean_assets:
+    if _s90g_en_clean_home.count(_s90g_asset) != 1:
+        raise SystemExit(
+            f"FAIL — clean EN Home asset reference invalid: {_s90g_asset}"
+        )
+
+    _s90g_file = (
+        _s90g_en_clean_root
+        / "images"
+        / _s90g_asset
+    )
+
+    if not _s90g_file.is_file() or _s90g_file.stat().st_size <= 0:
+        raise SystemExit(
+            f"FAIL — clean EN Home asset missing: {_s90g_asset}"
+        )
+
+    _s90g_pos = _s90g_en_clean_home.index(_s90g_asset)
+
+    _s90g_start = _s90g_en_clean_home.rfind(
+        '<article class="s90g-proof-case">',
+        0,
+        _s90g_pos,
+    )
+
+    _s90g_end = _s90g_en_clean_home.find(
+        "</article>",
+        _s90g_pos,
+    )
+
+    if _s90g_start < 0 or _s90g_end < 0:
+        raise SystemExit(
+            f"FAIL — EN proof-case boundary missing: {_s90g_asset}"
+        )
+
+    _s90g_card = _s90g_en_clean_home[
+        _s90g_start:_s90g_end
+    ]
+
+    if "Illustrative image" not in _s90g_card:
+        raise SystemExit(
+            f"FAIL — EN clean asset is not disclosed: {_s90g_asset}"
+        )
+
+for _s90g_legacy in _s90g_en_legacy_assets:
+    if _s90g_legacy in _s90g_en_clean_home:
+        raise SystemExit(
+            f"FAIL — legacy annotated image remains on EN Home: {_s90g_legacy}"
+        )
+
+print(
+    "PASS — English Home uses clean language-neutral case illustrations"
+)
