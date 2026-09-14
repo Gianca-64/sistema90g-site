@@ -21,7 +21,7 @@ find "$ROOT" -maxdepth 1 -type f \( \
   -name '_redirects' \
 \) -exec cp {} "$DIST/" \;
 
-for dir in images editoriale approfondimenti .well-known; do
+for dir in images editoriale approfondimenti en .well-known; do
   if [ -d "$ROOT/$dir" ]; then
     cp -R "$ROOT/$dir" "$DIST/$dir"
   fi
@@ -252,7 +252,7 @@ for forbidden in \
 done
 
 # Requisiti minimi del sito pubblico.
-for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html; do
+for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html en/index.html en/how-it-works.html en/commercial-terms.html en/cancellation-information.html; do
   test -f "$DIST/$required" || { echo "ERRORE: manca $required in dist" >&2; exit 1; }
 done
 
