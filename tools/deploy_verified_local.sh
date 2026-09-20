@@ -43,7 +43,46 @@ trap restore_redirects EXIT
 perl -0pi -e 's#^/index\.html / 301\n##m' _redirects
 bash tools/build_cloudflare.sh
 cp "$TMP_REDIRECTS" _redirects
-cp "$TMP_REDIRECTS" dist/_redirects
+
+# build_cloudflare.sh ha gia normalizzato le destinazioni di dist/_redirects
+# alla forma pubblica senza .html. Non sovrascrivere il file normalizzato con
+# la sorgente grezza: ripristiniamo nel solo artefatto la regola /index.html
+# rimossa temporaneamente prima della build.
+python3 - <<'PY_REDIRECTS'
+from pathlib import Path
+
+redirects = Path("dist/_redirects")
+lines = redirects.read_text(encoding="utf-8").splitlines()
+
+for line in lines:
+    stripped = line.strip()
+    if not stripped or stripped.startswith("#"):
+        continue
+    parts = stripped.split()
+    if parts and parts[0] == "/index.html":
+        raise SystemExit(
+            "STOP: /index.html presente in dist/_redirects prima del ripristino controllato."
+        )
+
+redirects.write_text(
+    "/index.html / 301\n" + "\n".join(lines) + "\n",
+    encoding="utf-8",
+)
+PY_REDIRECTS
+
+# Fail-closed: il deploy non deve mai reintrodurre destinazioni .html,
+# che causerebbero una catena 301 -> redirect automatico Cloudflare.
+if awk '
+  /^[[:space:]]*#/ { next }
+  NF >= 2 && $2 ~ /^\/.*\.html([?#].*)?$/ {
+    print
+    found=1
+  }
+  END { exit found ? 0 : 1 }
+' dist/_redirects; then
+  echo "STOP: destinazione .html presente in dist/_redirects." >&2
+  exit 24
+fi
 
 test -f dist/index.html
 test -f dist/_redirects
