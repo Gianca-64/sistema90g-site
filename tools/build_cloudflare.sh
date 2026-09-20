@@ -27,6 +27,11 @@ for dir in images editoriale approfondimenti en .well-known; do
   fi
 done
 
+# I metadati locali di macOS non fanno parte dell'artefatto pubblico.
+# Le cartelle sorgente possono vivere sotto File Provider/iCloud: la build deve
+# restare deterministica e non copiare eventuali .DS_Store presenti localmente.
+find "$DIST" -type f -name '.DS_Store' -delete
+
 # I PNG legacy della Vista 90G restano nel repository come sorgenti storiche.
 # Il sito pubblico usa i JPEG ottimizzati; i PNG non devono entrare nel deploy.
 # Anche il PNG storico 04_HOME_COSTO_TARDIVO resta escluso dal build pubblico.
