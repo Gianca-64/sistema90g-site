@@ -8,12 +8,20 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 
 html_path = ROOT / "index.html"
+en_html_path = ROOT / "en" / "index.html"
+en_method_path = ROOT / "en" / "method.html"
 css_path = ROOT / "s90g-home-acquisition-v1.css"
 js_path = ROOT / "s90g-home-acquisition-v1.js"
 
 errors = []
 
-for path in (html_path, css_path, js_path):
+for path in (
+    html_path,
+    en_html_path,
+    en_method_path,
+    css_path,
+    js_path,
+):
     if not path.exists():
         errors.append(f"missing file: {path.name}")
 
@@ -23,6 +31,8 @@ if errors:
     sys.exit(1)
 
 html = html_path.read_text()
+en_html = en_html_path.read_text()
+en_method = en_method_path.read_text()
 css = css_path.read_text()
 js = js_path.read_text()
 
@@ -48,11 +58,50 @@ required_html = [
     'data-evidence-state="to-check"',
     'data-evidence-state="not-determinable"',
     'href="/metodo-sistema90g.html"',
+    'href="/esempio-verifica-cucina-90g.html"',
 ]
 
 for marker in required_html:
     if marker not in html:
         errors.append(f"missing homepage marker: {marker}")
+
+for marker in (
+    "VERIFIED",
+    "TO CHECK",
+    "NOT DETERMINABLE",
+    'href="/en/method.html"',
+    'href="/en/kitchen-review-example.html"',
+):
+    if marker not in en_html:
+        errors.append(
+            f"English P1 Home alignment missing: {marker}"
+        )
+
+for marker in (
+    "VERIFIED",
+    "TO CHECK",
+    "NOT DETERMINABLE",
+):
+    if marker not in en_method:
+        errors.append(
+            f"English P1 Method certainty state missing: {marker}"
+        )
+
+if "TO BE VERIFIED" in en_method:
+    errors.append(
+        "retired English certainty label remains: TO BE VERIFIED"
+    )
+
+if "“to be verified”" in en_method:
+    errors.append(
+        "retired English certainty wording remains in Method example"
+    )
+
+if en_method.count("TO CHECK") != 2:
+    errors.append(
+        "English Method must expose canonical TO CHECK exactly twice "
+        "(state label + explanatory example)"
+    )
 
 for forbidden in (
     r"\bprivato\b",
@@ -152,6 +201,8 @@ if errors:
 print("PASS — memorable customer-first hero present")
 print("PASS — Vista 90G structure present")
 print("PASS — three evidence-certainty states visible")
+print("PASS — direct illustrative proof link visible IT + EN")
+print("PASS — canonical EN certainty vocabulary aligned")
 print("PASS — six problem-first entry routes present")
 print("PASS — three proof cases integrated")
 print("PASS — independence positioning present")
