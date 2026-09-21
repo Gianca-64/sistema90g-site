@@ -88,6 +88,27 @@ require(
     "English problem-first promise",
 )
 
+for marker in [
+    'A useful answer should show',
+    'how certain it is.',
+    'VERIFIED',
+    'TO CHECK',
+    'NOT DETERMINABLE',
+    'data-evidence-state="verified"',
+    'data-evidence-state="to-check"',
+    'data-evidence-state="not-determinable"',
+    'href="/en/method.html"',
+]:
+    require(
+        marker in EN,
+        f"English evidence differentiation missing: {marker}",
+    )
+
+require(
+    EN.count('data-evidence-state=') == 3,
+    "English homepage must expose exactly three evidence states",
+)
+
 require(
     'Free initial assessment'
     in EN,
@@ -337,6 +358,10 @@ print(
 
 print(
     "PASS — English UK visible content"
+)
+
+print(
+    "PASS — English evidence differentiation"
 )
 
 print(

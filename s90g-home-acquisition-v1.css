@@ -340,6 +340,89 @@
 }
 
 
+/* EVIDENCE DIFFERENTIATION */
+
+.s90g-home-evidence {
+  padding: 82px 0 86px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.s90g-home-evidence-intro {
+  display: grid;
+  grid-template-columns:
+    minmax(300px, .88fr)
+    minmax(0, 1.12fr);
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.s90g-home-evidence-intro h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(36px, 4vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.s90g-home-evidence-intro h2 span {
+  display: block;
+  color: var(--gold-dark);
+}
+
+.s90g-home-evidence-intro > div:last-child {
+  max-width: 720px;
+}
+
+.s90g-home-evidence-intro > div:last-child p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.s90g-home-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.s90g-home-evidence-card {
+  min-height: 250px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  background: var(--paper);
+}
+
+.s90g-home-evidence-card > span {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 30px;
+  padding: 7px 9px;
+  border: 1px solid rgba(16,18,20,.16);
+  background: #fff;
+  color: var(--gold-dark);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.s90g-home-evidence-card h3 {
+  margin: 0 0 14px;
+  font-size: 25px;
+  line-height: 1.12;
+}
+
+.s90g-home-evidence-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
 /* PROBLEM GRID */
 
 .s90g-problem-section {
@@ -751,6 +834,7 @@
     min-height: 0;
   }
 
+  .s90g-home-evidence-grid,
   .s90g-problem-grid,
   .s90g-proof-case-grid,
   .s90g-checklist {
@@ -781,6 +865,8 @@
     min-height: 480px;
   }
 
+  .s90g-home-evidence-intro,
+  .s90g-home-evidence-grid,
   .s90g-problem-grid,
   .s90g-proof-case-grid,
   .s90g-solution-grid,
@@ -839,6 +925,7 @@
   }
 
   .s90g-home-scan,
+  .s90g-home-evidence,
   .s90g-problem-section,
   .s90g-home-proof,
   .s90g-solution-section,

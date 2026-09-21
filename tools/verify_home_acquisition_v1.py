@@ -39,6 +39,15 @@ required_html = [
     'src="s90g-home-acquisition-v1.js?v=',
     'data-s90g-nav-managed="page"',
     'TAVOLA 90G · USO REALE',
+    'Una risposta utile deve dire',
+    'quanto è certa.',
+    'VERIFICATO',
+    'DA VERIFICARE',
+    'NON DETERMINABILE',
+    'data-evidence-state="verified"',
+    'data-evidence-state="to-check"',
+    'data-evidence-state="not-determinable"',
+    'href="/metodo-sistema90g.html"',
 ]
 
 for marker in required_html:
@@ -62,6 +71,23 @@ if len(re.findall(r"data-vista-hotspot", html)) != 4:
 
 if len(re.findall(r"data-problem=", html)) != 6:
     errors.append("homepage must expose exactly 6 problem routes")
+
+if len(re.findall(r"data-evidence-state=", html)) != 3:
+    errors.append(
+        "homepage must expose exactly 3 evidence states"
+    )
+
+for evidence_state in (
+    "verified",
+    "to-check",
+    "not-determinable",
+):
+    if html.count(
+        f'data-evidence-state="{evidence_state}"'
+    ) != 1:
+        errors.append(
+            f"homepage evidence state must exist exactly once: {evidence_state}"
+        )
 
 if len(re.findall(r"data-checklist-item", html)) != 9:
     errors.append("homepage checklist must contain 9 questions")
@@ -125,6 +151,7 @@ if errors:
 
 print("PASS — memorable customer-first hero present")
 print("PASS — Vista 90G structure present")
+print("PASS — three evidence-certainty states visible")
 print("PASS — six problem-first entry routes present")
 print("PASS — three proof cases integrated")
 print("PASS — independence positioning present")
