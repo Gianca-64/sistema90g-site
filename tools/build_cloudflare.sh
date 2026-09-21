@@ -116,6 +116,7 @@ python3 "$ROOT/tools/verify_home_acquisition_v1.py"
 python3 "$ROOT/tools/verify_free_entry_acquisition_v1.py"
 python3 "$ROOT/tools/verify_cases_acquisition_v1.py"
 python3 "$ROOT/tools/verify_services_acquisition_v1.py"
+python3 "$ROOT/tools/verify_kitchen_review_output_example_v1.py"
 python3 "$ROOT/tools/verify_global_public_alignment_v1.py"
 
 # B2C pubblico: Professionisti e Rivenditori non sono target di navigazione.
