@@ -12,7 +12,7 @@ if not TARGET.is_dir():
     raise SystemExit(f"ERRORE: directory non trovata: {TARGET}")
 
 LEGACY_ROUTE_MIGRATIONS = {
-    "acquisto-assistito-cucina": "sviluppo-avanzato-progetto-cucina",
+    "acquisto-assistito-cucina": "progetto-preventivo-cucina-90g",
 }
 
 # Cloudflare Workers Static Assets usa di default html_handling=auto-trailing-slash:
@@ -112,6 +112,34 @@ if redirects.exists():
         if legacy_file.exists():
             legacy_file.unlink()
             changed += 1
+
+    seen_redirect_sources: dict[str, tuple[int, str]] = {}
+    duplicate_redirect_sources: list[str] = []
+
+    for line_number, line in enumerate(lines, start=1):
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+
+        parts = stripped.split()
+        if len(parts) < 2:
+            continue
+
+        source = parts[0]
+        if source in seen_redirect_sources:
+            first_line, first_rule = seen_redirect_sources[source]
+            duplicate_redirect_sources.append(
+                f"{source}: line {first_line} '{first_rule}' "
+                f"e line {line_number} '{stripped}'"
+            )
+        else:
+            seen_redirect_sources[source] = (line_number, stripped)
+
+    if duplicate_redirect_sources:
+        print("ERRORI REDIRECT DUPLICATI:", file=sys.stderr)
+        for item in duplicate_redirect_sources:
+            print(f"- {item}", file=sys.stderr)
+        raise SystemExit(1)
 
     if redirects_changed:
         redirects.write_text("\n".join(lines) + "\n", encoding="utf-8")
