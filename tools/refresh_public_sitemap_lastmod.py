@@ -30,12 +30,12 @@ def source_for_url(url: str) -> Path:
 
     if public_path in ("", "/"):
         relative = Path("index.html")
+    elif public_path.endswith("/"):
+        relative = Path(public_path.lstrip("/")) / "index.html"
     else:
-        relative_text = public_path.lstrip("/").rstrip("/")
+        relative_text = public_path.lstrip("/")
 
-        if not relative_text:
-            relative = Path("index.html")
-        elif Path(relative_text).suffix:
+        if Path(relative_text).suffix:
             relative = Path(relative_text)
         else:
             relative = Path(relative_text + ".html")
