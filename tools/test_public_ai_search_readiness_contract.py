@@ -61,6 +61,7 @@ OBSOLETE_PUBLIC_TOKENS = (
 SITEMAPS = (
     "sitemap.xml",
     "guide-cucina-sitemap.xml",
+    "en-sitemap.xml",
 )
 
 
@@ -174,6 +175,7 @@ else:
     for sitemap_url in (
         "https://sistema90g.it/sitemap.xml",
         "https://sistema90g.it/guide-cucina-sitemap.xml",
+        "https://sistema90g.it/en-sitemap.xml",
         "https://sistema90g.it/image-sitemap.xml",
     ):
         if f"Sitemap: {sitemap_url}" not in text:
