@@ -271,7 +271,7 @@ for forbidden in \
 done
 
 # Requisiti minimi del sito pubblico.
-for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html en/index.html en/how-it-works.html en/commercial-terms.html en/cancellation-information.html; do
+for required in index.html robots.txt sitemap.xml guide-cucina-sitemap.xml en-sitemap.xml image-sitemap.xml _headers _redirects privacy-policy.html cookie-policy.html en/index.html en/how-it-works.html en/commercial-terms.html en/cancellation-information.html; do
   test -f "$DIST/$required" || { echo "ERRORE: manca $required in dist" >&2; exit 1; }
 done
 
