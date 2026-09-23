@@ -199,6 +199,10 @@ python3 "$ROOT/tools/test_public_ai_search_readiness_contract.py" "$DIST"
 # come una sola fonte coerente e non possono divergere dal contenuto visibile.
 python3 "$ROOT/tools/test_public_source_identity_contract.py" "$DIST"
 
+# P1 internazionale: ogni coppia italiana/inglese pubblica deve mantenere
+# canonicalizzazione linguistica reciproca con it-IT, en-GB e x-default.
+python3 "$ROOT/tools/test_public_hreflang_contract.py" "$DIST"
+
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
 python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
