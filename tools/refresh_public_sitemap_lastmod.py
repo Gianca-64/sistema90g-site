@@ -11,7 +11,7 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "dist"
-SITEMAPS = ("sitemap.xml", "guide-cucina-sitemap.xml")
+SITEMAPS = ("sitemap.xml", "guide-cucina-sitemap.xml", "en-sitemap.xml")
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 
 ET.register_namespace("", SITEMAP_NS)
