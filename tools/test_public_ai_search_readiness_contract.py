@@ -64,6 +64,29 @@ SITEMAPS = (
     "en-sitemap.xml",
 )
 
+EXPECTED_EN_URLS = {
+    "https://sistema90g.it/en/",
+    "https://sistema90g.it/en/about",
+    "https://sistema90g.it/en/how-it-works",
+    "https://sistema90g.it/en/services",
+    "https://sistema90g.it/en/method",
+    "https://sistema90g.it/en/contact",
+    "https://sistema90g.it/en/kitchen-guides",
+    "https://sistema90g.it/en/kitchen-faq",
+    "https://sistema90g.it/en/real-kitchen-cases",
+    "https://sistema90g.it/en/case-dishwasher-passage",
+    "https://sistema90g.it/en/case-kitchen-island-clearances",
+    "https://sistema90g.it/en/case-kitchen-quote-discount-value",
+    "https://sistema90g.it/en/kitchen-consultation",
+    "https://sistema90g.it/en/kitchen-quote-order-review",
+    "https://sistema90g.it/en/kitchen-review",
+    "https://sistema90g.it/en/kitchen-design",
+    "https://sistema90g.it/en/pre-installation-check",
+    "https://sistema90g.it/en/kitchen-problem-analysis",
+    "https://sistema90g.it/en/kitchen-design-example",
+    "https://sistema90g.it/en/kitchen-review-example",
+}
+
 
 def parse_redirects(path: Path) -> dict[str, tuple[str, str]]:
     rules: dict[str, tuple[str, str]] = {}
@@ -231,6 +254,37 @@ for html in TARGET.rglob("*.html"):
                 f"{html.relative_to(TARGET)}: residuo legacy {token!r}"
             )
 
+en_sitemap = TARGET / "en-sitemap.xml"
+
+if en_sitemap.is_file():
+    try:
+        en_tree = ET.parse(en_sitemap)
+        actual_en_urls = {
+            (loc.text or "").strip()
+            for loc in en_tree.getroot().findall(
+                f"{{{SITEMAP_NS}}}url/{{{SITEMAP_NS}}}loc"
+            )
+            if (loc.text or "").strip()
+        }
+
+        if actual_en_urls != EXPECTED_EN_URLS:
+            missing = sorted(EXPECTED_EN_URLS - actual_en_urls)
+            unexpected = sorted(actual_en_urls - EXPECTED_EN_URLS)
+
+            for url in missing:
+                errors.append(
+                    f"en-sitemap.xml: URL pubblica EN mancante {url}"
+                )
+
+            for url in unexpected:
+                errors.append(
+                    f"en-sitemap.xml: URL EN inattesa {url}"
+                )
+    except ET.ParseError as exc:
+        errors.append(
+            f"en-sitemap.xml: XML non valido: {exc}"
+        )
+
 for sitemap_name in SITEMAPS:
     path = TARGET / sitemap_name
 
@@ -335,5 +389,6 @@ print("PASS — OAI-SearchBot e sitemap dichiarati")
 print("PASS — landing B2B/offer legacy ritirate con 301")
 print("PASS — vecchi prezzi e messaggi commerciali assenti dal dist")
 print("PASS — sitemap prive di URL legacy")
+print("PASS — sitemap EN contiene esattamente 20 URL pubbliche")
 print("PASS — lastmod sitemap sincronizzati con la storia Git")
 print("AI SEARCH READINESS CONTRACT: PASS")
