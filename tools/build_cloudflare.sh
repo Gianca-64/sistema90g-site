@@ -203,6 +203,10 @@ python3 "$ROOT/tools/test_public_source_identity_contract.py" "$DIST"
 # canonicalizzazione linguistica reciproca con it-IT, en-GB e x-default.
 python3 "$ROOT/tools/test_public_hreflang_contract.py" "$DIST"
 
+# P1 AI Search: i prezzi visibili e le Offer JSON-LD devono restare identici
+# nelle pagine servizio italiane e inglesi.
+python3 "$ROOT/tools/test_public_structured_offer_contract.py" "$DIST"
+
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
 python3 "$ROOT/tools/test_public_accessibility_contract.py" "$DIST"
