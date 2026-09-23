@@ -100,6 +100,11 @@ done
 # alla forma realmente servita, evitando canonical verso redirect e catene 301 -> 307.
 python3 "$ROOT/tools/normalize_public_urls.py" "$DIST"
 
+# P0 AI Search: i motori devono ricevere segnali di freschezza reali, non date
+# manuali rimaste indietro. I lastmod delle sitemap derivano dall'ultima modifica
+# Git del rispettivo file sorgente e il build fallisce se una URL non e risolvibile.
+python3 "$ROOT/tools/refresh_public_sitemap_lastmod.py" "$DIST"
+
 # P2: i rich result FAQ non sono piu mostrati da Google. Manteniamo le domande
 # visibili per le persone ma rimuoviamo dal solo output pubblico il vecchio FAQPage,
 # evitando markup inutile o divergente dal contenuto effettivamente mostrato.
@@ -185,6 +190,10 @@ python3 "$ROOT/tools/test_public_editorial_copy_contract.py" "$DIST"
 # P2 SEO/AEO: struttura tecnica leggibile, JSON-LD valido e coerente, canonical
 # puliti e sitemap canonica; niente markup FAQ obsoleto usato come scorciatoia AEO.
 python3 "$ROOT/tools/test_public_search_semantics_contract.py" "$DIST"
+
+# P0 AI Search: impedisce il ritorno di landing/prezzi legacy, verifica i redirect
+# 301, l'accesso OAI-SearchBot e la coerenza temporale delle sitemap con Git.
+python3 "$ROOT/tools/test_public_ai_search_readiness_contract.py" "$DIST"
 
 # Controlli statici ad alta confidenza sul solo output realmente pubblicato:
 # lingua/titolo, alt, ID duplicati, etichette, pulsanti e ordine tastiera.
