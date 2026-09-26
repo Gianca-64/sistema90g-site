@@ -8,12 +8,12 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 
 services_path = ROOT / "servizi.html"
-detail_path = ROOT / "progetto-preventivo-cucina-90g.html"
+retired_path = ROOT / "progetto-preventivo-cucina-90g.html"
 css_path = ROOT / "s90g-services-acquisition-v1.css"
 
 errors = []
 
-for path in (services_path, detail_path, css_path):
+for path in (services_path, retired_path, css_path):
     if not path.exists():
         errors.append(f"missing file: {path.name}")
 
@@ -23,7 +23,7 @@ if errors:
     sys.exit(1)
 
 html = services_path.read_text()
-detail = detail_path.read_text()
+retired = retired_path.read_text()
 css = css_path.read_text()
 
 required = [
@@ -78,45 +78,43 @@ for name, price, time in services:
                 f"canonical service fact missing: {marker}"
             )
 
-extension_markers = [
-    "Progetto &amp; Preventivo 90G",
-    "349 €",
-    "Tempo Sistema 90G:",
-    "tempi del rivenditore",
-    "Solo dopo la tua approvazione esplicita",
-    "Il pagamento del servizio",
-    "non costituisce autorizzazione all'invio",
-    "identificare univocamente la richiesta",
-    "NESSUN DATO SENSIBILE",
-    "I dati sensibili non vengono trasmessi",
-    "riferimento di pratica",
-    "estranei alla richiesta commerciale",
+journey_markers = [
+    "Assistenza continuativa",
+    "Percorso Acquisto Cucina 90G",
+    'id="percorso-acquisto"',
+    "I servizi singoli restano disponibili",
 ]
 
-for marker in extension_markers:
+for marker in journey_markers:
     if marker not in html:
         errors.append(
-            f"services extension contract missing: {marker}"
+            f"purchase journey contract missing: {marker}"
         )
 
-detail_markers = [
-    "La richiesta parte solo dopo la tua approvazione.",
-    "approvazione esplicita",
-    "autorizzazione alla trasmissione",
-    "Il pagamento del servizio non costituisce",
-    "identificare",
-    "univocamente la richiesta",
-    "riferimento di pratica",
-    "Non vengono trasmessi dati sensibili",
-    "Non vengono trasmessi dati sensibili",
-    "I tempi necessari al rivenditore",
-    "non sono controllati da Sistema 90G",
+for marker in (
+    "Progetto &amp; Preventivo 90G",
+    "Progetto & Preventivo 90G",
+    "349 €",
+    "Veneta Cucine",
+):
+    if marker in html:
+        errors.append(
+            f"retired commercial offer still visible in services: {marker}"
+        )
+
+retired_markers = [
+    '<meta name="robots" content="noindex,follow">',
+    '<meta http-equiv="refresh" content="0;url=/servizi.html">',
+    '<link rel="canonical" href="https://sistema90g.it/servizi.html">',
+    "Questo servizio non fa più parte dell'offerta attiva.",
+    "Sistema 90G oggi opera in modo indipendente",
+    "Consulta i servizi attuali e il Percorso Acquisto Cucina 90G",
 ]
 
-for marker in detail_markers:
-    if marker not in detail:
+for marker in retired_markers:
+    if marker not in retired:
         errors.append(
-            f"detail approval/privacy contract missing: {marker}"
+            f"retired service shell contract missing: {marker}"
         )
 
 ids = re.findall(
@@ -213,11 +211,9 @@ print("PASS — services start from customer situations")
 print("PASS — six canonical service routes present")
 print("PASS — canonical prices preserved")
 print("PASS — canonical delivery times preserved")
-print("PASS — Project & Preventivo remains an extension")
-print("PASS — retailer timing is separated from Sistema 90G timing")
-print("PASS — retailer send requires explicit customer approval")
-print("PASS — payment is not treated as send authorization")
-print("PASS — retailer data minimization is explicit")
+print("PASS — Percorso Acquisto Cucina 90G present")
+print("PASS — retired Progetto & Preventivo absent from active offer")
+print("PASS — retired detail URL is a noindex redirect shell to Servizi")
 print("PASS — Free Entry remains the default when uncertain")
 print("PASS — public language is customer-direct")
 print("PASS — accessibility contracts present")

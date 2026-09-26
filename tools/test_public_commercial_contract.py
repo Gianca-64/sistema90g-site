@@ -33,10 +33,6 @@ CANONICAL_PAGES = {
         "Analisi Problema 90G",
         "149 €",
     ],
-    "progetto-preventivo-cucina-90g.html": [
-        "Progetto &amp; Preventivo 90G",
-        "349 €",
-    ],
 }
 
 
@@ -47,7 +43,6 @@ SITEMAP_URLS = [
     "https://sistema90g.it/progetto-cucina-sistema90g.html",
     "https://sistema90g.it/controllo-pre-montaggio-cucina.html",
     "https://sistema90g.it/analisi-problema-cucina.html",
-    "https://sistema90g.it/progetto-preventivo-cucina-90g.html",
 ]
 
 
@@ -58,7 +53,6 @@ SERVICE_OFFER_FACTS = [
     ("Progetto Cucina 90G", "299 €"),
     ("Controllo Pre-Montaggio 90G", "179 €"),
     ("Analisi Problema 90G", "149 €"),
-    ("Progetto &amp; Preventivo 90G", "349 €"),
     ("Render fotorealistico aggiuntivo", "39 €"),
 ]
 
@@ -67,13 +61,35 @@ OBSOLETE_OFFER_TOKENS = [
     "Progetto Cucina 90G · 145 €",
     "Verifica 90G · 127 €",
     "Progetto &amp; Preventivo Cucina 90G · 185 €",
+    "Progetto & Preventivo Cucina 90G · 185 €",
+    "Progetto &amp; Preventivo 90G",
+    "Progetto & Preventivo 90G",
     "+117 € ciascuno",
     "Acquisto Assistito · 290 €",
     "Analisi progetto cucina · 150 €",
 ]
 
 
+RETIRED_REDIRECTS = {
+    "/progetto-preventivo-cucina-90g": "/servizi",
+    "/progetto-preventivo-cucina-90g.html": "/servizi",
+    "/acquisto-assistito-cucina": "/servizi",
+    "/acquisto-assistito-cucina.html": "/servizi",
+}
+
+
+CANONICAL_RUNTIME_SLUGS = [
+    "consulenza-90g",
+    "analisi-preventivo-cucina",
+    "verifica-90g",
+    "progetto-cucina-sistema90g",
+    "controllo-pre-montaggio-cucina",
+    "analisi-problema-cucina",
+]
+
+
 errors = []
+is_dist = TARGET.name == "dist"
 
 
 for name, required in CANONICAL_PAGES.items():
@@ -107,7 +123,7 @@ else:
 
         if price not in text:
             errors.append(
-                f"servizi.html: prezzo offerta canonica assente "
+                "servizi.html: prezzo offerta canonica assente "
                 f"{name!r} -> {price!r}"
             )
 
@@ -116,6 +132,11 @@ else:
             errors.append(
                 f"servizi.html: residuo offerta obsoleta {token!r}"
             )
+
+    if "Percorso Acquisto Cucina 90G" not in text:
+        errors.append(
+            "servizi.html: Percorso Acquisto Cucina 90G assente"
+        )
 
     free_entry_links = (
         "/analisi-preventiva.html#richiedi",
@@ -137,8 +158,6 @@ else:
         "utf-8",
         errors="replace",
     )
-
-    is_dist = TARGET.name == "dist"
 
     for source_url in SITEMAP_URLS:
         expected_url = (
@@ -170,27 +189,78 @@ else:
                     f"{alternate_url!r}"
                 )
 
+    for retired in (
+        "progetto-preventivo-cucina-90g",
+        "acquisto-assistito-cucina",
+    ):
+        if retired in sitemap_text:
+            errors.append(
+                f"sitemap.xml: URL ritirata ancora presente {retired!r}"
+            )
+
 
 redirects = TARGET / "_redirects"
 
 if not redirects.is_file():
     errors.append("_redirects: mancante")
 else:
-    redirects_text = redirects.read_text(
+    rules = {}
+
+    for raw in redirects.read_text(
         "utf-8",
         errors="replace",
-    )
+    ).splitlines():
+        line = raw.strip()
 
-    obsolete_redirect = (
-        "/analisi-preventivo-cucina.html "
-        "/seconda-opinione-cucina.html 301"
-    )
+        if not line or line.startswith("#"):
+            continue
 
-    if obsolete_redirect in redirects_text:
-        errors.append(
-            "_redirects: Analisi Preventivo viene ancora "
-            "deviata verso Seconda Opinione"
+        parts = line.split()
+
+        if len(parts) < 3:
+            continue
+
+        source, target, status = parts[:3]
+
+        if source in rules:
+            errors.append(
+                f"_redirects: sorgente duplicata {source!r}"
+            )
+            continue
+
+        rules[source] = (
+            target,
+            status,
         )
+
+    for source, dist_target in RETIRED_REDIRECTS.items():
+        expected_target = (
+            dist_target
+            if is_dist
+            else dist_target + ".html"
+        )
+
+        actual = rules.get(source)
+
+        if actual != (
+            expected_target,
+            "301",
+        ):
+            errors.append(
+                f"_redirects: {source!r} -> {actual!r}; "
+                f"atteso {(expected_target, '301')!r}"
+            )
+
+
+if is_dist:
+    for name in (
+        "progetto-preventivo-cucina-90g.html",
+        "acquisto-assistito-cucina.html",
+    ):
+        if (TARGET / name).exists():
+            errors.append(
+                f"{name}: landing ritirata ancora presente nel dist"
+            )
 
 
 for runtime_name in (
@@ -208,15 +278,7 @@ for runtime_name in (
         errors="replace",
     )
 
-    for slug in [
-        "consulenza-90g",
-        "analisi-preventivo-cucina",
-        "verifica-90g",
-        "progetto-cucina-sistema90g",
-        "controllo-pre-montaggio-cucina",
-        "analisi-problema-cucina",
-        "progetto-preventivo-cucina-90g",
-    ]:
+    for slug in CANONICAL_RUNTIME_SLUGS:
         if slug not in text:
             errors.append(
                 f"{runtime_name}: servizio canonico "
@@ -235,5 +297,6 @@ if errors:
 
 print(
     "OK public B2C commercial contract: "
-    "listino canonico + Free Entry + routing/runtime coerenti"
+    "sei servizi canonici + Percorso Acquisto + "
+    "Free Entry + retirement URL coerenti"
 )

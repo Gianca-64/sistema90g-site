@@ -16,7 +16,6 @@ EXPECTED = {
     "progetto-cucina-sistema90g.html": ("299", "EUR", "299 €"),
     "controllo-pre-montaggio-cucina.html": ("179", "EUR", "179 €"),
     "analisi-problema-cucina.html": ("149", "EUR", "149 €"),
-    "progetto-preventivo-cucina-90g.html": ("349", "EUR", "349 €"),
     "en/kitchen-consultation.html": ("79", "EUR", "€79"),
     "en/kitchen-quote-order-review.html": ("129", "EUR", "€129"),
     "en/kitchen-review.html": ("149", "EUR", "€149"),
@@ -128,7 +127,7 @@ if errors:
 
     raise SystemExit(1)
 
-print("PASS — 13 servizi IT/EN hanno prezzo visibile canonico")
+print("PASS — 12 servizi IT/EN hanno prezzo visibile canonico")
 print("PASS — Offer JSON-LD coincide con prezzo e valuta visibili")
 print("PASS — nessuna Offer confliggente nelle pagine servizio")
 print("STRUCTURED OFFER CONTRACT: PASS")

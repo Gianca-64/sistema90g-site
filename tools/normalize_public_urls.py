@@ -12,7 +12,6 @@ if not TARGET.is_dir():
     raise SystemExit(f"ERRORE: directory non trovata: {TARGET}")
 
 LEGACY_ROUTE_MIGRATIONS = {
-    "acquisto-assistito-cucina": "progetto-preventivo-cucina-90g",
 }
 
 # Cloudflare Workers Static Assets usa di default html_handling=auto-trailing-slash:
