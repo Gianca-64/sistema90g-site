@@ -29,6 +29,7 @@ HUBS = {
         'label': 'Hub preventivo e acquisto cucina',
         'guides': [
             'rilievo-misure-cucina-prima-ordine.html', 'montaggio-allacciamenti-cucina-cosa-chiarire.html',
+            'controlli-cucina-dopo-montaggio.html',
             'preventivo-cucina-guida.html', 'confrontare-due-preventivi-cucina.html',
             'prima-di-firmare-ordine-cucina.html', 'voci-escluse-preventivo-cucina.html',
             'sconto-cucina-valore-reale.html', 'quando-verifica-indipendente-cucina.html',

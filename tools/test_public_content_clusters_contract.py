@@ -23,6 +23,7 @@ HUBS = {
     ]),
     'preventivo-acquisto': ('preventivo-acquisto-cucina-guide.html', [
         'rilievo-misure-cucina-prima-ordine.html', 'montaggio-allacciamenti-cucina-cosa-chiarire.html',
+        'controlli-cucina-dopo-montaggio.html',
         'preventivo-cucina-guida.html', 'confrontare-due-preventivi-cucina.html',
         'prima-di-firmare-ordine-cucina.html', 'voci-escluse-preventivo-cucina.html',
         'sconto-cucina-valore-reale.html', 'quando-verifica-indipendente-cucina.html',
@@ -88,7 +89,7 @@ for hub_key, (hub_file, guides) in HUBS.items():
 
 if len(all_guides) != len(set(all_guides)):
     issues.append('una o piu guide sono assegnate a piu hub canonici')
-if len(all_guides) != 41:
+if len(all_guides) != 42:
     issues.append(f'attese 41 guide specifiche, trovate {len(all_guides)} nella mappa')
 
 for cluster, (case_file, guide_file, hub_file) in CLUSTERS.items():
@@ -136,4 +137,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public content clusters contract: 4 hub + 41 guide + 6 casi reali, sitemap editoriale completa')
+print('OK public content clusters contract: 4 hub + 42 guide + 6 casi reali, sitemap editoriale completa')
