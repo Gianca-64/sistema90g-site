@@ -93,3 +93,33 @@
   .s90g-guide-group:nth-child(4)::after,
   .s90g-guide-group:nth-child(5)::after{font-size:10px;line-height:1.45}
 }
+
+
+/* Sistema 90G — Complete Guide Index V1 */
+.s90g-guide-mode-index .s90g-guide-groups{
+  align-items:stretch
+}
+.s90g-guide-mode-index .s90g-guide-group{
+  min-height:0
+}
+.s90g-guide-mode-index .s90g-guide-group:nth-child(1)::after{
+  content:"90G Project · spazio, uso e composizione"
+}
+.s90g-guide-mode-index .s90g-guide-group:nth-child(2)::after{
+  content:"90G Order · preventivo, ordine e montaggio"
+}
+.s90g-guide-mode-index .s90g-guide-group:nth-child(3)::after{
+  content:"90G Technical · elettrodomestici e impianti"
+}
+.s90g-guide-mode-index .s90g-guide-group:nth-child(4)::after{
+  content:"90G Materials · materiali, luce e manutenzione"
+}
+.s90g-guide-mode-index .s90g-guide-cta::before{
+  content:"90G Guide · dal problema alla verifica"
+}
+.s90g-guide-mode-index .s90g-guide-hub-link{
+  margin:18px 0 4px
+}
+.s90g-guide-mode-index .s90g-guide-hub-link a{
+  color:#31513b
+}
