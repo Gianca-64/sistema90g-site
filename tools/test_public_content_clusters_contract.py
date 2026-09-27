@@ -31,6 +31,7 @@ HUBS = {
     ]),
     'elettrodomestici-impianti': ('elettrodomestici-impianti-cucina-guide.html', [
         'frigorifero-cucina-vicino-parete.html', 'lavastoviglie-cucina-aperture-passaggi.html',
+        'lavastoviglie-sotto-forno-colonna.html',
         'piano-induzione-cucina.html', 'piano-induzione-vicino-colonna-frigorifero.html',
         'colonna-forno-microonde-cucina.html',
         'elettrodomestici-incasso-misure-cucina.html', 'cappa-aspirazione-cucina.html',
@@ -90,8 +91,8 @@ for hub_key, (hub_file, guides) in HUBS.items():
 
 if len(all_guides) != len(set(all_guides)):
     issues.append('una o piu guide sono assegnate a piu hub canonici')
-if len(all_guides) != 43:
-    issues.append(f'attese 43 guide specifiche, trovate {len(all_guides)} nella mappa')
+if len(all_guides) != 44:
+    issues.append(f'attese 44 guide specifiche, trovate {len(all_guides)} nella mappa')
 
 for cluster, (case_file, guide_file, hub_file) in CLUSTERS.items():
     case_path = root / case_file
@@ -138,4 +139,4 @@ if issues:
         print(f' - {issue}')
     raise SystemExit(1)
 
-print('OK public content clusters contract: 4 hub + 43 guide + 6 casi reali, sitemap editoriale completa')
+print('OK public content clusters contract: 4 hub + 44 guide + 6 casi reali, sitemap editoriale completa')

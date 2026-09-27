@@ -41,6 +41,7 @@ HUBS = {
         'label': 'Hub elettrodomestici e impianti',
         'guides': [
             'frigorifero-cucina-vicino-parete.html', 'lavastoviglie-cucina-aperture-passaggi.html',
+            'lavastoviglie-sotto-forno-colonna.html',
             'piano-induzione-cucina.html', 'piano-induzione-vicino-colonna-frigorifero.html',
             'colonna-forno-microonde-cucina.html',
             'elettrodomestici-incasso-misure-cucina.html', 'cappa-aspirazione-cucina.html',
