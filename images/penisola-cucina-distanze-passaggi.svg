@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1536"
+     height="1024"
+     viewBox="0 0 1536 1024"
+     role="img"
+     aria-labelledby="title desc">
+
+<title id="title">Penisola cucina con sedute, apertura e passaggio</title>
+<desc id="desc">Tavola tecnica editoriale con penisola collegata alla cucina, tre sgabelli, uno arretrato, un cassetto aperto e corridoi di passaggio evidenziati.</desc>
+
+<defs>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16"
+                  flood-color="#23332b" flood-opacity=".15"/>
+  </filter>
+
+  <marker id="blueArrow"
+          markerWidth="12"
+          markerHeight="12"
+          refX="9"
+          refY="6"
+          orient="auto">
+    <path d="M0,0 L10,6 L0,12 z" fill="#2d70b8"/>
+  </marker>
+
+  <marker id="redArrow"
+          markerWidth="12"
+          markerHeight="12"
+          refX="9"
+          refY="6"
+          orient="auto">
+    <path d="M0,0 L10,6 L0,12 z" fill="#c9483f"/>
+  </marker>
+
+  <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#f5f1e9"/>
+    <stop offset="1" stop-color="#e7e1d7"/>
+  </linearGradient>
+</defs>
+
+<rect width="1536" height="1024" fill="#fbfaf7"/>
+
+<polygon
+  points="95,120 1430,120 1510,910 40,910"
+  fill="url(#floor)"
+  stroke="#d6d1c8"
+  stroke-width="3"/>
+
+<g stroke="#d9d4cb" stroke-width="2" opacity=".55">
+  <path d="M90 260 L1460 260"/>
+  <path d="M75 420 L1475 420"/>
+  <path d="M60 580 L1490 580"/>
+  <path d="M45 740 L1505 740"/>
+
+  <path d="M290 120 L225 910"/>
+  <path d="M560 120 L535 910"/>
+  <path d="M830 120 L845 910"/>
+  <path d="M1100 120 L1155 910"/>
+  <path d="M1370 120 L1465 910"/>
+</g>
+
+<!-- composizione a parete -->
+<g filter="url(#shadow)">
+  <rect x="735" y="120"
+        width="650" height="230"
+        rx="5"
+        fill="#5d6b61"/>
+
+  <rect x="735" y="350"
+        width="650" height="158"
+        rx="4"
+        fill="#e8e0d1"/>
+
+  <rect x="748" y="367"
+        width="195" height="124"
+        fill="#59685e"/>
+
+  <rect x="952" y="367"
+        width="195" height="124"
+        fill="#59685e"/>
+
+  <rect x="1156" y="367"
+        width="216" height="124"
+        fill="#59685e"/>
+
+  <rect x="1160" y="388"
+        width="165" height="72"
+        rx="8"
+        fill="#252a28"/>
+
+  <path d="M1242 392 v-45
+           q0-18 18-18
+           q18 0 18 18"
+        fill="none"
+        stroke="#242724"
+        stroke-width="9"
+        stroke-linecap="round"/>
+</g>
+
+<!-- colonne -->
+<g filter="url(#shadow)">
+  <rect x="610" y="120"
+        width="112" height="388"
+        fill="#666f69"/>
+
+  <rect x="625" y="155"
+        width="82" height="125"
+        rx="4"
+        fill="#232725"/>
+</g>
+
+<!-- penisola realmente collegata -->
+<g filter="url(#shadow)">
+  <path d="M755 492
+           L1190 492
+           L1025 770
+           L560 770 Z"
+        fill="#65756a"/>
+
+  <path d="M735 470
+           L1210 470
+           L1038 650
+           L590 650 Z"
+        fill="#e9ddc9"
+        stroke="#cfc0aa"
+        stroke-width="3"/>
+
+  <path d="M875 500
+           L1020 500
+           L970 570
+           L830 570 Z"
+        fill="#242927"/>
+
+  <circle cx="908" cy="535"
+          r="24"
+          fill="none"
+          stroke="#777"
+          stroke-width="3"/>
+
+  <circle cx="958" cy="535"
+          r="24"
+          fill="none"
+          stroke="#777"
+          stroke-width="3"/>
+</g>
+
+<!-- cassetto aperto verso il corridoio -->
+<g filter="url(#shadow)">
+  <path d="M835 407
+           L1045 407
+           L1000 495
+           L792 495 Z"
+        fill="#f1ebe0"
+        stroke="#5d665f"
+        stroke-width="4"/>
+
+  <path d="M792 495
+           L1000 495
+           L985 588
+           L775 588 Z"
+        fill="#d9d2c6"
+        stroke="#5d665f"
+        stroke-width="4"/>
+
+  <g fill="#bba989">
+    <rect x="830" y="438"
+          width="58" height="16"
+          rx="8"/>
+
+    <rect x="900" y="438"
+          width="58" height="16"
+          rx="8"/>
+
+    <rect x="820" y="466"
+          width="75" height="14"
+          rx="7"/>
+
+    <rect x="910" y="466"
+          width="64" height="14"
+          rx="7"/>
+  </g>
+</g>
+
+<!-- tre sgabelli lungo la penisola -->
+<g filter="url(#shadow)"
+   stroke="#8d6a43"
+   stroke-width="8"
+   stroke-linecap="round">
+
+  <g transform="translate(610 610)">
+    <ellipse cx="0" cy="0"
+             rx="70" ry="48"
+             fill="#d9d2c8"
+             stroke="#c8beb1"
+             stroke-width="3"/>
+    <path d="M-38 33 L-55 165
+             M38 33 L55 165
+             M-45 112 L45 112"/>
+  </g>
+
+  <g transform="translate(790 665)">
+    <ellipse cx="0" cy="0"
+             rx="70" ry="48"
+             fill="#d9d2c8"
+             stroke="#c8beb1"
+             stroke-width="3"/>
+    <path d="M-38 33 L-55 165
+             M38 33 L55 165
+             M-45 112 L45 112"/>
+  </g>
+
+  <g transform="translate(980 680)">
+    <ellipse cx="0" cy="0"
+             rx="70" ry="48"
+             fill="#d9d2c8"
+             stroke="#c8beb1"
+             stroke-width="3"/>
+    <path d="M-38 33 L-55 165
+             M38 33 L55 165
+             M-45 112 L45 112"/>
+  </g>
+</g>
+
+<!-- sgabello arretrato -->
+<g filter="url(#shadow)"
+   stroke="#8d6a43"
+   stroke-width="8"
+   stroke-linecap="round"
+   transform="translate(1120 780)">
+
+  <ellipse cx="0" cy="0"
+           rx="75" ry="52"
+           fill="#e3dcd2"
+           stroke="#c8beb1"
+           stroke-width="3"/>
+
+  <path d="M-40 34 L-58 150
+           M40 34 L58 150
+           M-48 104 L48 104"/>
+</g>
+
+<!-- corridoio libero -->
+<path d="M155 300
+         C250 330 330 360 385 435
+         C430 505 430 660 395 820"
+      fill="none"
+      stroke="#7db6e8"
+      stroke-width="118"
+      stroke-linecap="round"
+      opacity=".27"/>
+
+<path d="M155 300
+         C250 330 330 360 385 435
+         C430 505 430 660 395 820"
+      fill="none"
+      stroke="#2d70b8"
+      stroke-width="10"
+      stroke-dasharray="24 22"
+      marker-end="url(#blueArrow)"/>
+
+<!-- area d'interferenza in uso -->
+<path d="M760 545
+         C880 600 980 655 1105 785"
+      fill="none"
+      stroke="#e77970"
+      stroke-width="150"
+      stroke-linecap="round"
+      opacity=".26"/>
+
+<path d="M760 545
+         C880 600 980 655 1105 785"
+      fill="none"
+      stroke="#c9483f"
+      stroke-width="10"
+      stroke-dasharray="24 20"
+      marker-end="url(#redArrow)"/>
+
+<circle cx="800" cy="552"
+        r="34"
+        fill="#c9483f"
+        opacity=".9"/>
+
+<path d="M783 535 L817 569
+         M817 535 L783 569"
+      stroke="#fff"
+      stroke-width="10"
+      stroke-linecap="round"/>
+
+<circle cx="1085" cy="775"
+        r="34"
+        fill="#c9483f"
+        opacity=".9"/>
+
+<path d="M1068 758 L1102 792
+         M1102 758 L1068 792"
+      stroke="#fff"
+      stroke-width="10"
+      stroke-linecap="round"/>
+
+<circle cx="702" cy="528" r="22" fill="#77936f"/>
+<circle cx="732" cy="523" r="20" fill="#88a67e"/>
+<circle cx="717" cy="500" r="18" fill="#97b08f"/>
+
+</svg>
