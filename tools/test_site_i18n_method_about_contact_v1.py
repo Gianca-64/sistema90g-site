@@ -158,7 +158,7 @@ for label in [
 
 for label in [
     "VERIFIED",
-    "TO BE VERIFIED",
+    "TO CHECK",
     "NOT DETERMINABLE",
 ]:
     require(
@@ -586,7 +586,7 @@ for filename, source in [
 
 print("PASS — three reciprocal IT / en-GB pairs")
 print("PASS — six-step method preserved")
-print("PASS — VERIFIED / TO BE VERIFIED / NOT DETERMINABLE")
+print("PASS — VERIFIED / TO CHECK / NOT DETERMINABLE")
 print("PASS — no-invented-data boundary")
 print("PASS — human final-review boundary")
 print("PASS — technology / AI boundary")
