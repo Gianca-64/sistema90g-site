@@ -85,6 +85,21 @@ if html.count('class="s90g-home-economic-value"') != 1:
         "homepage must expose exactly one economic-value section"
     )
 
+if html.count("PERCHÉ SCOPRIRLO PRIMA CONTA") != 3:
+    errors.append(
+        "homepage must expose exactly three early-discovery proof markers"
+    )
+
+for marker in (
+    "Prima dell'ordine si può ancora rivedere la disposizione",
+    "Prima della conferma si possono ancora rivedere dimensioni",
+    "Prima della firma si possono chiarire voci, esclusioni e componenti",
+):
+    if marker not in html:
+        errors.append(
+            f"homepage early-discovery proof missing: {marker}"
+        )
+
 for marker in (
     "VERIFIED",
     "TO CHECK",

@@ -76,6 +76,24 @@ cases = [
     ),
 ]
 
+case_paths = [ROOT / href for _, href, _ in cases]
+
+for case_path in case_paths:
+    if not case_path.exists():
+        errors.append(
+            f"canonical case file missing: {case_path.name}"
+        )
+        continue
+
+    case_html = case_path.read_text()
+    marker_count = case_html.count("Momento utile per verificarlo")
+
+    if marker_count != 1:
+        errors.append(
+            f"{case_path.name} must expose exactly one useful-moment marker, "
+            f"found {marker_count}"
+        )
+
 for case_id, href, proof in cases:
     for marker in (
         f'id="{case_id}"',
