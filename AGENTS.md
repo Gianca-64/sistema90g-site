@@ -58,11 +58,11 @@ I testi pubblici non devono presentare il Free Entry principalmente come "scelta
 
 ## Ruolo dell'AI
 
-L'AI è uno strumento di supporto interno per aumentare velocità, completezza, ordine e coerenza del lavoro. Può aiutare a leggere materiali, estrarre informazioni, confrontare dati, preparare bozze e segnalare elementi da verificare.
+L'AI non analizza il caso, non interpreta i materiali per formulare la valutazione, non estrae o confronta dati per costruire il giudizio e non prepara la risposta tecnica. Non decide priorità, conclusione o servizio.
 
-L'AI non prende decisioni al posto di Sistema 90G e non deve essere presentata come il soggetto che risponde al cliente. Individuazione del problema rilevante, priorità, confine tra gratuito e servizio, scelta dell'approfondimento, valutazione finale e comunicazione al cliente restano sotto controllo umano.
+Può essere usata per produrre immagini o rappresentazioni visive quando servono a spiegare un problema o una soluzione. Analisi, giudizio, risposta e revisione finale restano umani.
 
-Nel sito pubblico questa struttura deve essere percepibile senza esporre processi interni: prima viene il problema della persona, poi il metodo e gli strumenti usati per lavorare bene; l'AI non è il prodotto e non è il centro del posizionamento.
+L'AI non è il prodotto e non è il centro del posizionamento pubblico di Sistema 90G.
 
 ## Neutralità verso marchi terzi
 

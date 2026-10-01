@@ -42,6 +42,23 @@ for marker in required:
             f"services acquisition marker missing: {marker}"
         )
 
+economic_value_markers = [
+    "Il prezzo del servizio non dice quanto risparmierai",
+    "Non ogni verifica produce un risparmio economico",
+    "Sistema 90G\n        non lo promette",
+]
+
+for marker in economic_value_markers:
+    if marker not in html:
+        errors.append(
+            f"services economic-value contract missing: {marker}"
+        )
+
+if html.count('class="s90g-svc-economic-value"') != 1:
+    errors.append(
+        "services must expose exactly one economic-value section"
+    )
+
 services = [
     ("Consulenza 90G", "79 €", "1 giorno lavorativo"),
     (
@@ -77,6 +94,25 @@ for name, price, time in services:
             errors.append(
                 f"canonical service fact missing: {marker}"
             )
+
+expected_price_counts = {
+    "79 €": 1,
+    "129 €": 1,
+    "149 €": 2,
+    "299 €": 1,
+    "179 €": 1,
+}
+
+for price, expected_count in expected_price_counts.items():
+    price_count = len(re.findall(
+        rf'class="s90g-svc-price">\s*{re.escape(price)}',
+        html,
+    ))
+    if price_count != expected_count:
+        errors.append(
+            f"canonical price count changed: {price} "
+            f"expected {expected_count}, found {price_count}"
+        )
 
 journey_markers = [
     "Assistenza continuativa",

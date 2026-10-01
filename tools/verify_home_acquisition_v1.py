@@ -65,6 +65,26 @@ for marker in required_html:
     if marker not in html:
         errors.append(f"missing homepage marker: {marker}")
 
+economic_value_markers = [
+    "Proteggi ciò che stai per spendere.",
+    "non promette uno sconto o un risparmio garantito",
+    'href="/analisi-preventiva.html#richiedi"',
+    'data-content-type="economic-value"',
+    'data-cta-position="economic-value"',
+    "data-free-entry",
+]
+
+for marker in economic_value_markers:
+    if marker not in html:
+        errors.append(
+            f"homepage economic-value contract missing: {marker}"
+        )
+
+if html.count('class="s90g-home-economic-value"') != 1:
+    errors.append(
+        "homepage must expose exactly one economic-value section"
+    )
+
 for marker in (
     "VERIFIED",
     "TO CHECK",

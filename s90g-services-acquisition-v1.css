@@ -527,6 +527,79 @@
   line-height: 1.6;
 }
 
+/* ECONOMIC VALUE */
+
+.s90g-svc-economic-value {
+  padding: 84px 0;
+  border-top: 1px solid var(--svc-line);
+  border-bottom: 1px solid var(--svc-line);
+  background: #fff;
+}
+
+.s90g-svc-economic-head {
+  max-width: 980px;
+}
+
+.s90g-svc-economic-head h2 {
+  margin: 0 0 20px;
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -.04em;
+}
+
+.s90g-svc-economic-head h2 span {
+  display: block;
+  color: var(--gold-dark, #8a5a00);
+}
+
+.s90g-svc-economic-head > p:last-child {
+  max-width: 800px;
+  color: var(--muted, #606563);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.s90g-svc-economic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 42px;
+  border-top: 1px solid var(--svc-line);
+  border-left: 1px solid var(--svc-line);
+}
+
+.s90g-svc-economic-grid article {
+  padding: 28px;
+  border-right: 1px solid var(--svc-line);
+  border-bottom: 1px solid var(--svc-line);
+  background: var(--svc-paper);
+}
+
+.s90g-svc-economic-grid h3 {
+  margin: 0 0 14px;
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+.s90g-svc-economic-grid p {
+  margin-bottom: 0;
+  color: var(--muted, #606563);
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .s90g-svc-economic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .s90g-svc-economic-value {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+}
+
+
 /* ACCESSIBILITY */
 
 .s90g-services-acquisition
