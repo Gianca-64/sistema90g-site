@@ -78,16 +78,48 @@
       link.href=target.toString();
     });
   }
+  function normalizeActionEntryLinks(scope=document){
+    scope.querySelectorAll('a[href]').forEach(link=>{
+      if(link.dataset.startPath!==undefined)return;
+
+      let target;
+      try{
+        target=new URL(link.getAttribute('href')||'',location.href);
+      }catch{
+        return;
+      }
+
+      if(target.origin!==location.origin)return;
+
+      const pathname=
+        target.pathname.replace(/\/+$/,'')||'/';
+
+      const isFreeEntryPage=
+        pathname==='/analisi-preventiva'||
+        pathname==='/analisi-preventiva.html';
+
+      const isActionHash=
+        target.hash==='#richiedi'||
+        target.hash==='#percorso';
+
+      if(!isFreeEntryPage||!isActionHash)return;
+
+      link.dataset.startPath='true';
+    });
+  }
+
   function preparePathLinks(scope=document){
     const current=new URL(location.href), slug=pageSlug(), defaultRole=inferRoleHint(slug);
     scope.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
       const target=new URL(link.getAttribute('href')||'/analisi-preventiva.html#richiedi',location.href);
-      target.searchParams.set('source_page',link.dataset.sourcePage||slug);
-      target.searchParams.set('content_type',link.dataset.contentType||inferContentType(slug));
-      target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
+      target.searchParams.set('source_page',current.searchParams.get('source_page')||link.dataset.sourcePage||slug);
+      target.searchParams.set('content_type',current.searchParams.get('content_type')||link.dataset.contentType||inferContentType(slug));
+      target.searchParams.set('cta_position',current.searchParams.get('cta_position')||link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
       if(link.dataset.service)target.searchParams.set('service_hint',link.dataset.service);
       const role=link.dataset.roleHint||defaultRole;if(role)target.searchParams.set('role_hint',role);
-      if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
+      const inheritedCaseId=current.searchParams.get('case_id');
+      if(inheritedCaseId)target.searchParams.set('case_id',inheritedCaseId);
+      else if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
       CAMPAIGN_KEYS.forEach(k=>{const v=current.searchParams.get(k);if(v)target.searchParams.set(k,v)});
       link.href=target.toString();
     });
@@ -99,9 +131,33 @@
       const raw=link.getAttribute('href')||'';
       let target;try{target=new URL(raw,location.href)}catch{return}
       if(target.origin!==PORTAL_ORIGIN)return;
-      if(!target.searchParams.get('source_page'))target.searchParams.set('source_page',link.dataset.sourcePage||slug);
-      if(!target.searchParams.get('content_type'))target.searchParams.set('content_type',link.dataset.contentType||inferContentType(slug));
-      if(!target.searchParams.get('cta_position'))target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`portal-${index+1}`)));
+      const inheritedSourcePage=current.searchParams.get('source_page');
+      const inheritedContentType=current.searchParams.get('content_type');
+      const inheritedCtaPosition=current.searchParams.get('cta_position');
+
+      target.searchParams.set(
+        'source_page',
+        inheritedSourcePage||
+        target.searchParams.get('source_page')||
+        link.dataset.sourcePage||
+        slug
+      );
+
+      target.searchParams.set(
+        'content_type',
+        inheritedContentType||
+        target.searchParams.get('content_type')||
+        link.dataset.contentType||
+        inferContentType(slug)
+      );
+
+      target.searchParams.set(
+        'cta_position',
+        inheritedCtaPosition||
+        target.searchParams.get('cta_position')||
+        link.dataset.ctaPosition||
+        ((link.closest('header'))?'header':(link.closest('footer')?'footer':`portal-${index+1}`))
+      );
       const role=target.searchParams.get('requester_role')||link.dataset.roleHint||defaultRole;
       if(role&&!target.searchParams.get('requester_role'))target.searchParams.set('requester_role',role);
       const service=target.searchParams.get('service')||link.dataset.service||'';
@@ -293,7 +349,7 @@
     document.addEventListener('click',event=>{
       if(event.target.closest('[data-cookie-choice],a[data-start-path],a[data-final-portal]'))queueMicrotask(syncConsentCookie);
     },true);
-    addSkipLink();buildNavigation();normalizeHeaderCta();enhancePathLinks();normalizeActionLabels();preparePathLinks();preparePortalLinks();preserveCampaignParams();
+    addSkipLink();buildNavigation();normalizeHeaderCta();enhancePathLinks();normalizeActionEntryLinks();normalizeActionLabels();preparePathLinks();preparePortalLinks();preserveCampaignParams();
     document.dispatchEvent(new CustomEvent('s90g:navigation-ready'));
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();

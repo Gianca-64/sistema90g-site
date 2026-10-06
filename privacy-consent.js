@@ -14,7 +14,7 @@ window.gtag('consent','default',{
 function loadNavigationConversion(){
   if(document.querySelector('script[data-s90g-navigation-conversion]'))return;
   const script=document.createElement('script');
-  script.src='/navigation-conversion.js?v=20260912a';
+  script.src='/navigation-conversion.js?v=20261006a';
   script.defer=true;
   script.dataset.s90gNavigationConversion='true';
   document.head.appendChild(script);
@@ -183,17 +183,47 @@ function s90gInferContentType(){
   return 'page';
 }
 
+function s90gNormalizeActionEntryLinks(scope=document){
+  scope.querySelectorAll('a[href]').forEach(link=>{
+    if(link.dataset.startPath!==undefined)return;
+
+    let target;
+    try{
+      target=new URL(link.getAttribute('href')||'',location.href);
+    }catch{
+      return;
+    }
+
+    if(target.origin!==location.origin)return;
+
+    const pathname=target.pathname.replace(/\/+$/,'')||'/';
+
+    const isFreeEntryPage=
+      pathname==='/analisi-preventiva'||
+      pathname==='/analisi-preventiva.html';
+
+    const isActionHash=
+      target.hash==='#richiedi'||
+      target.hash==='#percorso';
+
+    if(!isFreeEntryPage||!isActionHash)return;
+
+    link.dataset.startPath='true';
+  });
+}
 function s90gPrepareGuidedPathLinks(){
   const campaignKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
   const current=new URL(location.href);
   document.querySelectorAll('a[data-start-path]').forEach((link,index)=>{
     const target=new URL(link.getAttribute('href')||'/analisi-preventiva.html#richiedi',location.href);
-    target.searchParams.set('source_page',link.dataset.sourcePage||s90gPageSlug());
-    target.searchParams.set('content_type',link.dataset.contentType||s90gInferContentType());
-    target.searchParams.set('cta_position',link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
+    target.searchParams.set('source_page',current.searchParams.get('source_page')||link.dataset.sourcePage||s90gPageSlug());
+    target.searchParams.set('content_type',current.searchParams.get('content_type')||link.dataset.contentType||s90gInferContentType());
+    target.searchParams.set('cta_position',current.searchParams.get('cta_position')||link.dataset.ctaPosition||((link.closest('header'))?'header':(link.closest('footer')?'footer':`inline-${index+1}`)));
     if(link.dataset.service)target.searchParams.set('service_hint',link.dataset.service);
     if(link.dataset.roleHint)target.searchParams.set('role_hint',link.dataset.roleHint);
-    if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
+    const inheritedCaseId=current.searchParams.get('case_id');
+    if(inheritedCaseId)target.searchParams.set('case_id',inheritedCaseId);
+    else if(link.dataset.caseId)target.searchParams.set('case_id',link.dataset.caseId);
     campaignKeys.forEach(key=>{if(current.searchParams.get(key))target.searchParams.set(key,current.searchParams.get(key));});
     link.href=target.toString();
   });
@@ -272,6 +302,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   addStructuredData();
   optimizeImages();
   addWhatsAppChat();
+  s90gNormalizeActionEntryLinks();
   s90gPrepareGuidedPathLinks();
   s90gPreparePortalLinks();
   const b=s90gEnsureCookieBanner(),c=localStorage.getItem(CONSENT_KEY);s90gEnsureCookieSettingsControl();
