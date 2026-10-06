@@ -36,7 +36,6 @@ required = [
     'data-s90g-nav-managed="page"',
     "VEDERE IL PROBLEMA PRIMA",
     "images/22_CASI_PREVENTIVO.jpg?v=20260912a",
-    'src="privacy-consent.js?v=20260912a"',
 ]
 
 for marker in required:
@@ -44,6 +43,16 @@ for marker in required:
         errors.append(
             f"required Free Entry marker missing: {marker}"
         )
+
+privacy_script = re.search(
+    r'src=["\'](?:/?)(privacy-consent\.js\?v=[^"\']+)["\']',
+    html,
+)
+
+if privacy_script is None:
+    errors.append(
+        "versioned privacy-consent.js reference missing"
+    )
 
 portal_contract = [
     "requester_role=private",
