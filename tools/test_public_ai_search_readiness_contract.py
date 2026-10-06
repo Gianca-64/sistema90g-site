@@ -210,6 +210,47 @@ else:
                 f"robots.txt: sitemap non dichiarata {sitemap_url}"
             )
 
+# 404 PUBLIC RETIREMENT CONTRACT
+
+not_found = TARGET / "404.html"
+
+if not not_found.is_file():
+    errors.append("404.html mancante")
+else:
+    not_found_text = not_found.read_text(
+        "utf-8",
+        errors="strict",
+    )
+
+    required_404 = (
+        "VEDERE IL PROBLEMA PRIMA",
+        "MOSTRA IL TUO CASO",
+        "Problemi, verifiche e decisioni sulla cucina",
+        "/analisi-preventiva#richiedi",
+    )
+
+    forbidden_404 = (
+        "ANALISI PREVENTIVA INDIPENDENTE",
+        "VALUTA IL TUO CASO",
+        "Acquisto assistito",
+        ">Professionisti<",
+        ">Rivenditori<",
+    )
+
+    for token in required_404:
+        if token not in not_found_text:
+            errors.append(
+                "404.html: contratto canonico assente "
+                f"{token!r}"
+            )
+
+    for token in forbidden_404:
+        if token in not_found_text:
+            errors.append(
+                "404.html: residuo legacy "
+                f"{token!r}"
+            )
+
 redirects = TARGET / "_redirects"
 
 if not redirects.is_file():
