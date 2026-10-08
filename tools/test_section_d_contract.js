@@ -196,7 +196,7 @@ for(const legacyHomeNav of [
 }
 
 const consent=read('privacy-consent.js');
-assert.ok(consent.includes('/navigation-conversion.js?v=20260912a'));
+assert.ok(consent.includes('/navigation-conversion.js?v=20261006a'), 'shared navigation runtime must use the current canonical version');
 
 assert.ok(
   consent.includes('function s90gIntegrateMethodFooterLink()'),
