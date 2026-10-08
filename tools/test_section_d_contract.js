@@ -33,14 +33,27 @@ walk(root);
 let visual=0,privacy=0;
 for(const file of htmlFiles){
   const raw=fs.readFileSync(file,'utf8');
-  if(raw.includes('sistema90g-visual-2026.css')){visual++;assert.ok(raw.includes('sistema90g-visual-2026.css?v=20260730a')||raw.includes('sistema90g-visual-2026.css?v=20260817b'),file);}
+  if(raw.includes('sistema90g-visual-2026.css')){
+  visual++;
+  const cssRefs=[...raw.matchAll(/<link\b[^>]*\bhref=["']([^"']*sistema90g-visual-2026\.css(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
+  assert.ok(cssRefs.length>0, `missing valid stylesheet reference: ${file}`);
+  for(const href of cssRefs){
+    assert.ok(/^(?:(?:\.\.\/)|\/)?sistema90g-visual-2026\.css(?:\?v=(?:20260730a|20260817b))?$/.test(href), `unexpected stylesheet reference: ${file}: ${href}`);
+    const cssAsset=href.split('?')[0];
+    const cssResolved=cssAsset.startsWith('/') ? path.join(root,cssAsset.slice(1)) : path.resolve(path.dirname(file),cssAsset);
+    assert.equal(cssResolved,path.join(root,'sistema90g-visual-2026.css'),`stylesheet resolves outside canonical asset: ${file}: ${href}`);
+  }
+}
   if(raw.includes('privacy-consent.js')){
   privacy++;
-  assert.ok(
-    raw.includes('privacy-consent.js?v=20260730a') ||
-    raw.includes('privacy-consent.js?v=20260912a'),
-    file
-  );
+  const privacyRefs=[...raw.matchAll(/<script\b[^>]*\bsrc=["']([^"']*privacy-consent\.js(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
+  assert.ok(privacyRefs.length>0, `missing valid privacy runtime reference: ${file}`);
+  for(const src of privacyRefs){
+    assert.ok(/^(?:(?:\.\.\/)|\/)?privacy-consent\.js(?:\?v=(?:20260730a|20260912a|20261006a))?$/.test(src), `unexpected privacy runtime reference: ${file}: ${src}`);
+    const jsAsset=src.split('?')[0];
+    const jsResolved=jsAsset.startsWith('/') ? path.join(root,jsAsset.slice(1)) : path.resolve(path.dirname(file),jsAsset);
+    assert.equal(jsResolved,path.join(root,'privacy-consent.js'),`privacy runtime resolves outside canonical asset: ${file}: ${src}`);
+  }
 }
 }
 assert.ok(visual>=50);
@@ -129,12 +142,19 @@ for (const { id, name, price } of canonicalServiceRoutes) {
 }
 
 /*
- * Project & Preventivo is intentionally an extension,
- * not a seventh primary situation.
+ * The retired Project & Preventivo extension must never reappear.
+ * Progetto Cucina 90G at 299 € is already verified above in
+ * canonicalServiceRoutes.
  */
-assert.ok(
-  /Progetto &amp; Preventivo 90G[\s\S]{0,1800}349 €/.test(services),
-  "estensione Progetto & Preventivo 90G / 349 € assente"
+assert.equal(
+  /Progetto\s*(?:&amp;|&)\s*Preventivo 90G/.test(services),
+  false,
+  "offerta ritirata Progetto & Preventivo 90G reintrodotta"
+);
+assert.equal(
+  /349\s*€/.test(services),
+  false,
+  "prezzo legacy 349 € reintrodotto"
 );
 
 assert.ok(
@@ -176,7 +196,7 @@ for(const legacyHomeNav of [
 }
 
 const consent=read('privacy-consent.js');
-assert.ok(consent.includes('/navigation-conversion.js?v=20260912a'));
+assert.ok(consent.includes('/navigation-conversion.js?v=20261006a'), 'shared navigation runtime must use the current canonical version');
 
 assert.ok(
   consent.includes('function s90gIntegrateMethodFooterLink()'),

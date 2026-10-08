@@ -203,8 +203,7 @@ function s90gNormalizeActionEntryLinks(scope=document){
       pathname==='/analisi-preventiva.html';
 
     const isActionHash=
-      target.hash==='#richiedi'||
-      target.hash==='#percorso';
+      target.hash==='#richiedi';
 
     if(!isFreeEntryPage||!isActionHash)return;
 
