@@ -35,10 +35,10 @@ for(const file of htmlFiles){
   const raw=fs.readFileSync(file,'utf8');
   if(raw.includes('sistema90g-visual-2026.css')){
   visual++;
-  const cssRefs=[...raw.matchAll(/<link\\b[^>]*\\bhref=["']([^"']*sistema90g-visual-2026\\.css(?:\\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
+  const cssRefs=[...raw.matchAll(/<link\b[^>]*\bhref=["']([^"']*sistema90g-visual-2026\.css(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
   assert.ok(cssRefs.length>0, `missing valid stylesheet reference: ${file}`);
   for(const href of cssRefs){
-    assert.ok(/^(?:\\/)?sistema90g-visual-2026\\.css(?:\\?v=(?:20260730a|20260817b))?$/.test(href), `unexpected stylesheet reference: ${file}: ${href}`);
+    assert.ok(/^(?:\/)?sistema90g-visual-2026\.css(?:\?v=(?:20260730a|20260817b))?$/.test(href), `unexpected stylesheet reference: ${file}: ${href}`);
   }
 }
   if(raw.includes('privacy-consent.js')){
