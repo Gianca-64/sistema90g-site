@@ -142,12 +142,19 @@ for (const { id, name, price } of canonicalServiceRoutes) {
 }
 
 /*
- * Project & Preventivo is intentionally an extension,
- * not a seventh primary situation.
+ * The retired Project & Preventivo extension must never reappear.
+ * Progetto Cucina 90G at 299 € is already verified above in
+ * canonicalServiceRoutes.
  */
-assert.ok(
-  /Progetto &amp; Preventivo 90G[\s\S]{0,1800}349 €/.test(services),
-  "estensione Progetto & Preventivo 90G / 349 € assente"
+assert.equal(
+  /Progetto\s*(?:&amp;|&)\s*Preventivo 90G/.test(services),
+  false,
+  "offerta ritirata Progetto & Preventivo 90G reintrodotta"
+);
+assert.equal(
+  /349\s*€/.test(services),
+  false,
+  "prezzo legacy 349 € reintrodotto"
 );
 
 assert.ok(
