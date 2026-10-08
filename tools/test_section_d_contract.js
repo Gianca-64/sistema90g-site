@@ -38,7 +38,10 @@ for(const file of htmlFiles){
   const cssRefs=[...raw.matchAll(/<link\b[^>]*\bhref=["']([^"']*sistema90g-visual-2026\.css(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
   assert.ok(cssRefs.length>0, `missing valid stylesheet reference: ${file}`);
   for(const href of cssRefs){
-    assert.ok(/^(?:\/)?sistema90g-visual-2026\.css(?:\?v=(?:20260730a|20260817b))?$/.test(href), `unexpected stylesheet reference: ${file}: ${href}`);
+    assert.ok(/^(?:(?:\.\.\/)|\/)?sistema90g-visual-2026\.css(?:\?v=(?:20260730a|20260817b))?$/.test(href), `unexpected stylesheet reference: ${file}: ${href}`);
+    const cssAsset=href.split('?')[0];
+    const cssResolved=cssAsset.startsWith('/') ? path.join(root,cssAsset.slice(1)) : path.resolve(path.dirname(file),cssAsset);
+    assert.equal(cssResolved,path.join(root,'sistema90g-visual-2026.css'),`stylesheet resolves outside canonical asset: ${file}: ${href}`);
   }
 }
   if(raw.includes('privacy-consent.js')){
@@ -46,7 +49,10 @@ for(const file of htmlFiles){
   const privacyRefs=[...raw.matchAll(/<script\b[^>]*\bsrc=["']([^"']*privacy-consent\.js(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
   assert.ok(privacyRefs.length>0, `missing valid privacy runtime reference: ${file}`);
   for(const src of privacyRefs){
-    assert.ok(/^(?:\/)?privacy-consent\.js(?:\?v=(?:20260730a|20260912a|20261006a))?$/.test(src), `unexpected privacy runtime reference: ${file}: ${src}`);
+    assert.ok(/^(?:(?:\.\.\/)|\/)?privacy-consent\.js(?:\?v=(?:20260730a|20260912a|20261006a))?$/.test(src), `unexpected privacy runtime reference: ${file}: ${src}`);
+    const jsAsset=src.split('?')[0];
+    const jsResolved=jsAsset.startsWith('/') ? path.join(root,jsAsset.slice(1)) : path.resolve(path.dirname(file),jsAsset);
+    assert.equal(jsResolved,path.join(root,'privacy-consent.js'),`privacy runtime resolves outside canonical asset: ${file}: ${src}`);
   }
 }
 }
