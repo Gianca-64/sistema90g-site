@@ -43,11 +43,11 @@ for(const file of htmlFiles){
 }
   if(raw.includes('privacy-consent.js')){
   privacy++;
-  assert.ok(
-    raw.includes('privacy-consent.js?v=20260730a') ||
-    raw.includes('privacy-consent.js?v=20260912a'),
-    file
-  );
+  const privacyRefs=[...raw.matchAll(/<script\b[^>]*\bsrc=["']([^"']*privacy-consent\.js(?:\?v=[^"']*)?)["'][^>]*>/gi)].map(match=>match[1]);
+  assert.ok(privacyRefs.length>0, `missing valid privacy runtime reference: ${file}`);
+  for(const src of privacyRefs){
+    assert.ok(/^(?:\/)?privacy-consent\.js(?:\?v=(?:20260730a|20260912a|20261006a))?$/.test(src), `unexpected privacy runtime reference: ${file}: ${src}`);
+  }
 }
 }
 assert.ok(visual>=50);
