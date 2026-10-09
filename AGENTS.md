@@ -58,9 +58,11 @@ I testi pubblici non devono presentare il Free Entry principalmente come "scelta
 
 ## Ruolo dell'AI
 
-L'AI non analizza il caso, non interpreta i materiali per formulare la valutazione, non estrae o confronta dati per costruire il giudizio e non prepara la risposta tecnica. Non decide priorità, conclusione o servizio.
+L'AI non analizza il caso, non interpreta i materiali per costruire la valutazione tecnica, non estrae o confronta dati per determinare il giudizio e non decide priorità, conclusioni, rischi, raccomandazioni o servizi.
 
-Può essere usata per produrre immagini o rappresentazioni visive quando servono a spiegare un problema o una soluzione. Analisi, giudizio, risposta e revisione finale restano umani.
+Può essere impiegata per immagini esplicative e per la sola formulazione linguistica di una risposta, esclusivamente sulla base delle conclusioni tecniche già revisionate e approvate dall'operatore. Non può introdurre, omettere o alterare fatti, grado di certezza, rischi, raccomandazioni e limiti. Analisi, giudizio, approvazione e responsabilità finale restano umani.
+
+La formulazione assistita è consentita dal progetto ma non va descritta come una funzionalità già attiva in ogni flusso della Console.
 
 L'AI non è il prodotto e non è il centro del posizionamento pubblico di Sistema 90G.
 

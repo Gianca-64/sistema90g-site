@@ -195,6 +195,9 @@ python3 "$ROOT/tools/test_public_search_semantics_contract.py" "$DIST"
 # 301, l'accesso OAI-SearchBot e la coerenza temporale delle sitemap con Git.
 python3 "$ROOT/tools/test_public_ai_search_readiness_contract.py" "$DIST"
 
+# La formulazione AI non deve essere confusa con il giudizio tecnico.
+python3 "$ROOT/tools/test_public_ai_disclosure_contract.py" "$DIST"
+
 # P1 AI Search: autore, pagina profilo e date dei casi devono essere leggibili
 # come una sola fonte coerente e non possono divergere dal contenuto visibile.
 python3 "$ROOT/tools/test_public_source_identity_contract.py" "$DIST"
