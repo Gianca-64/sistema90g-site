@@ -96,7 +96,7 @@ const expectedServices = [
   {
     id: 'scelta',
     name: 'Consulenza 90G',
-    price: '79 €',
+    price: '99 €',
     href: '/consulenza-90g.html',
     detail: 'consulenza-90g.html',
   },
@@ -104,7 +104,7 @@ const expectedServices = [
     id: 'preventivo',
     name:
       'Analisi Preventivo & Ordine 90G',
-    price: '129 €',
+    price: '169 €',
     href:
       '/analisi-preventivo-cucina.html',
     detail:
@@ -113,14 +113,14 @@ const expectedServices = [
   {
     id: 'verifica',
     name: 'Verifica Cucina 90G',
-    price: '149 €',
+    price: '199 €',
     href: '/verifica-90g.html',
     detail: 'verifica-90g.html',
   },
   {
     id: 'progetto',
     name: 'Progetto Cucina 90G',
-    price: '299 €',
+    price: '399 €',
     href:
       '/progetto-cucina-sistema90g.html',
     detail:
@@ -130,7 +130,7 @@ const expectedServices = [
     id: 'premontaggio',
     name:
       'Controllo Pre-Montaggio 90G',
-    price: '179 €',
+    price: '229 €',
     href:
       '/controllo-pre-montaggio-cucina.html',
     detail:
@@ -139,7 +139,7 @@ const expectedServices = [
   {
     id: 'problema',
     name: 'Analisi Problema 90G',
-    price: '149 €',
+    price: '199 €',
     href:
       '/analisi-problema-cucina.html',
     detail:

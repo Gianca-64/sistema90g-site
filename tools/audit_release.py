@@ -18,20 +18,20 @@ NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
 CANONICAL_SERVICES = [
-    ('scelta', 'Consulenza 90G', '79 €'),
+    ('scelta', 'Consulenza 90G', '99 €'),
     (
         'preventivo',
         'Analisi Preventivo &amp; Ordine 90G',
-        '129 €',
+        '169 €',
     ),
-    ('verifica', 'Verifica Cucina 90G', '149 €'),
-    ('progetto', 'Progetto Cucina 90G', '299 €'),
+    ('verifica', 'Verifica Cucina 90G', '199 €'),
+    ('progetto', 'Progetto Cucina 90G', '399 €'),
     (
         'premontaggio',
         'Controllo Pre-Montaggio 90G',
-        '179 €',
+        '229 €',
     ),
-    ('problema', 'Analisi Problema 90G', '149 €'),
+    ('problema', 'Analisi Problema 90G', '199 €'),
 ]
 LEGACY_PUBLIC_TERMS = [
     # '#percorso' is intentionally used by the current Method page

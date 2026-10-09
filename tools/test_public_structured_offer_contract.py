@@ -10,18 +10,18 @@ import sys
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("dist")
 
 EXPECTED = {
-    "consulenza-90g.html": ("79", "EUR", "79 €"),
-    "analisi-preventivo-cucina.html": ("129", "EUR", "129 €"),
-    "verifica-90g.html": ("149", "EUR", "149 €"),
-    "progetto-cucina-sistema90g.html": ("299", "EUR", "299 €"),
-    "controllo-pre-montaggio-cucina.html": ("179", "EUR", "179 €"),
-    "analisi-problema-cucina.html": ("149", "EUR", "149 €"),
-    "en/kitchen-consultation.html": ("79", "EUR", "€79"),
-    "en/kitchen-quote-order-review.html": ("129", "EUR", "€129"),
-    "en/kitchen-review.html": ("149", "EUR", "€149"),
-    "en/kitchen-design.html": ("299", "EUR", "€299"),
-    "en/pre-installation-check.html": ("179", "EUR", "€179"),
-    "en/kitchen-problem-analysis.html": ("149", "EUR", "€149"),
+    "consulenza-90g.html": ("99", "EUR", "99 €"),
+    "analisi-preventivo-cucina.html": ("169", "EUR", "169 €"),
+    "verifica-90g.html": ("199", "EUR", "199 €"),
+    "progetto-cucina-sistema90g.html": ("399", "EUR", "399 €"),
+    "controllo-pre-montaggio-cucina.html": ("229", "EUR", "229 €"),
+    "analisi-problema-cucina.html": ("199", "EUR", "199 €"),
+    "en/kitchen-consultation.html": ("99", "EUR", "€99"),
+    "en/kitchen-quote-order-review.html": ("169", "EUR", "€169"),
+    "en/kitchen-review.html": ("199", "EUR", "€199"),
+    "en/kitchen-design.html": ("399", "EUR", "€399"),
+    "en/pre-installation-check.html": ("229", "EUR", "€229"),
+    "en/kitchen-problem-analysis.html": ("199", "EUR", "€199"),
 }
 
 SCRIPT_RE = re.compile(

@@ -43,9 +43,9 @@ for marker in required:
         )
 
 economic_value_markers = [
-    "Il prezzo del servizio non dice quanto risparmierai",
-    "Non ogni verifica produce un risparmio economico",
-    "Sistema 90G\n        non lo promette",
+    "Il valore non è il controllo in sé.",
+    "È ciò che puoi sapere e decidere quando sei ancora in tempo per intervenire.",
+    "Sistema 90G non promette un risparmio economico garantito.",
 ]
 
 for marker in economic_value_markers:
@@ -60,30 +60,30 @@ if html.count('class="s90g-svc-economic-value"') != 1:
     )
 
 services = [
-    ("Consulenza 90G", "79 €", "1 giorno lavorativo"),
+    ("Consulenza 90G", "99 €", "1 giorno lavorativo"),
     (
         "Analisi Preventivo &amp; Ordine 90G",
-        "129 €",
+        "169 €",
         "2 giorni lavorativi",
     ),
     (
         "Verifica Cucina 90G",
-        "149 €",
+        "199 €",
         "2 giorni lavorativi",
     ),
     (
         "Progetto Cucina 90G",
-        "299 €",
+        "399 €",
         "3 giorni lavorativi",
     ),
     (
         "Controllo Pre-Montaggio 90G",
-        "179 €",
+        "229 €",
         "2 giorni lavorativi",
     ),
     (
         "Analisi Problema 90G",
-        "149 €",
+        "199 €",
         "2 giorni lavorativi",
     ),
 ]
@@ -96,11 +96,11 @@ for name, price, time in services:
             )
 
 expected_price_counts = {
-    "79 €": 1,
-    "129 €": 1,
-    "149 €": 2,
-    "299 €": 1,
-    "179 €": 1,
+    "99 €": 1,
+    "169 €": 1,
+    "199 €": 2,
+    "399 €": 1,
+    "229 €": 1,
 }
 
 for price, expected_count in expected_price_counts.items():

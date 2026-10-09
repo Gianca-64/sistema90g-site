@@ -61,7 +61,7 @@ for marker in (
     "Passo successivo",
     "non comprende una riprogettazione",
     "Non è una certificazione",
-    "149 €",
+    "199 €",
     "Entro 2 giorni lavorativi",
 ):
     require(
@@ -85,7 +85,7 @@ for marker in (
     "Next step",
     "does not include redesign",
     "It is not a certification",
-    "€149",
+    "€199",
     "Within 2 working days",
 ):
     require(
@@ -147,7 +147,7 @@ require(
 )
 
 for marker in (
-    "Verifica Cucina 90G · 149 €",
+    "Verifica Cucina 90G · 199 €",
     "entro 2 giorni lavorativi",
 ):
     require(
@@ -156,7 +156,7 @@ for marker in (
     )
 
 for marker in (
-    "90G Kitchen Review · €149",
+    "90G Kitchen Review · €199",
     "within 2 working days",
 ):
     require(

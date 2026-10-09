@@ -65,6 +65,18 @@ for marker in required_html:
     if marker not in html:
         errors.append(f"missing homepage marker: {marker}")
 
+value_first_markers = [
+    "Prima di spendere migliaia di euro per la tua cucina",
+    "Il risultato che cerchiamo",
+    "non promette uno sconto o un risparmio garantito",
+]
+
+for marker in value_first_markers:
+    if marker not in html:
+        errors.append(
+            f"homepage value-first contract missing: {marker}"
+        )
+
 economic_value_markers = [
     "Proteggi ciò che stai per spendere.",
     "non promette uno sconto o un risparmio garantito",

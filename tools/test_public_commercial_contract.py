@@ -11,27 +11,27 @@ TARGET = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT
 CANONICAL_PAGES = {
     "consulenza-90g.html": [
         "Consulenza 90G",
-        "79 €",
+        "99 €",
     ],
     "analisi-preventivo-cucina.html": [
         "Analisi Preventivo",
-        "129 €",
+        "169 €",
     ],
     "verifica-90g.html": [
         "Verifica Cucina 90G",
-        "149 €",
+        "199 €",
     ],
     "progetto-cucina-sistema90g.html": [
         "Progetto Cucina 90G",
-        "299 €",
+        "399 €",
     ],
     "controllo-pre-montaggio-cucina.html": [
         "Controllo Pre-Montaggio 90G",
-        "179 €",
+        "229 €",
     ],
     "analisi-problema-cucina.html": [
         "Analisi Problema 90G",
-        "149 €",
+        "199 €",
     ],
 }
 
@@ -47,12 +47,12 @@ SITEMAP_URLS = [
 
 
 SERVICE_OFFER_FACTS = [
-    ("Consulenza 90G", "79 €"),
-    ("Analisi Preventivo &amp; Ordine 90G", "129 €"),
-    ("Verifica Cucina 90G", "149 €"),
-    ("Progetto Cucina 90G", "299 €"),
-    ("Controllo Pre-Montaggio 90G", "179 €"),
-    ("Analisi Problema 90G", "149 €"),
+    ("Consulenza 90G", "99 €"),
+    ("Analisi Preventivo &amp; Ordine 90G", "169 €"),
+    ("Verifica Cucina 90G", "199 €"),
+    ("Progetto Cucina 90G", "399 €"),
+    ("Controllo Pre-Montaggio 90G", "229 €"),
+    ("Analisi Problema 90G", "199 €"),
     ("Render fotorealistico aggiuntivo", "39 €"),
 ]
 

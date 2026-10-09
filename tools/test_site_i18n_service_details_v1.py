@@ -11,7 +11,7 @@ SERVICES = [
         "en": "en/kitchen-consultation.html",
         "url": "/en/kitchen-consultation.html",
         "name": "90G Kitchen Consultation",
-        "price": "79",
+        "price": "99",
         "days": "1 working day",
         "id": "S90G-01",
     },
@@ -20,7 +20,7 @@ SERVICES = [
         "en": "en/kitchen-quote-order-review.html",
         "url": "/en/kitchen-quote-order-review.html",
         "name": "90G Quote & Order Review",
-        "price": "129",
+        "price": "169",
         "days": "2 working days",
         "id": "S90G-02",
     },
@@ -29,7 +29,7 @@ SERVICES = [
         "en": "en/kitchen-review.html",
         "url": "/en/kitchen-review.html",
         "name": "90G Kitchen Review",
-        "price": "149",
+        "price": "199",
         "days": "2 working days",
         "id": "S90G-03",
     },
@@ -38,7 +38,7 @@ SERVICES = [
         "en": "en/kitchen-design.html",
         "url": "/en/kitchen-design.html",
         "name": "90G Kitchen Design",
-        "price": "299",
+        "price": "399",
         "days": "3 working days",
         "id": "S90G-04",
     },
@@ -47,7 +47,7 @@ SERVICES = [
         "en": "en/pre-installation-check.html",
         "url": "/en/pre-installation-check.html",
         "name": "90G Pre-installation Check",
-        "price": "179",
+        "price": "229",
         "days": "2 working days",
         "id": "S90G-05",
     },
@@ -56,7 +56,7 @@ SERVICES = [
         "en": "en/kitchen-problem-analysis.html",
         "url": "/en/kitchen-problem-analysis.html",
         "name": "90G Kitchen Problem Analysis",
-        "price": "149",
+        "price": "199",
         "days": "2 working days",
         "id": "S90G-06",
     },
@@ -221,8 +221,10 @@ for item in SERVICES:
     )
 
     require(
-        "€39" not in en
-        and "39 €" not in en,
+        not re.search(
+            r"(?<!\d)€39(?!\d)|(?<!\d)39\s*€(?!\d)",
+            en,
+        ),
         f"unmapped render add-on leaked: {item['en']}",
     )
 

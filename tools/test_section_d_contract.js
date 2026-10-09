@@ -97,32 +97,32 @@ const canonicalServiceRoutes = [
   {
     id: "scelta",
     name: "Consulenza 90G",
-    price: "79 €",
+    price: "99 €",
   },
   {
     id: "preventivo",
     name: "Analisi Preventivo &amp; Ordine 90G",
-    price: "129 €",
+    price: "169 €",
   },
   {
     id: "verifica",
     name: "Verifica Cucina 90G",
-    price: "149 €",
+    price: "199 €",
   },
   {
     id: "progetto",
     name: "Progetto Cucina 90G",
-    price: "299 €",
+    price: "399 €",
   },
   {
     id: "premontaggio",
     name: "Controllo Pre-Montaggio 90G",
-    price: "179 €",
+    price: "229 €",
   },
   {
     id: "problema",
     name: "Analisi Problema 90G",
-    price: "149 €",
+    price: "199 €",
   },
 ];
 
@@ -143,7 +143,7 @@ for (const { id, name, price } of canonicalServiceRoutes) {
 
 /*
  * The retired Project & Preventivo extension must never reappear.
- * Progetto Cucina 90G at 299 € is already verified above in
+ * Progetto Cucina 90G at 399 € is already verified above in
  * canonicalServiceRoutes.
  */
 assert.equal(

@@ -12,6 +12,15 @@ css_path = ROOT / "s90g-free-entry-acquisition-v1.css"
 
 errors = []
 
+value_first_markers = [
+    "La prima valutazione serve a capire se",
+    "Se non emerge la necessità di altro, te lo diciamo.",
+    "non è una verifica completa del progetto",
+    "Tre possibili risultati della prima valutazione.",
+    "Non ogni dubbio deve diventare un servizio.",
+]
+
+
 for path in (html_path, css_path):
     if not path.exists():
         errors.append(f"missing file: {path.name}")
@@ -22,6 +31,12 @@ if errors:
     sys.exit(1)
 
 html = html_path.read_text()
+
+for marker in value_first_markers:
+    if marker not in html:
+        errors.append(
+            f"free-entry value-first contract missing: {marker}"
+        )
 css = css_path.read_text()
 
 required = [
