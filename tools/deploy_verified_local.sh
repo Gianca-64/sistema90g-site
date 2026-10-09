@@ -259,7 +259,7 @@ curl \
   > /tmp/s90g-p0-project.html
 
 grep -q \
-  'Progetto Cucina 90G · 299 €' \
+  'Progetto Cucina 90G · 399 €' \
   /tmp/s90g-p0-project.html
 
 if grep -qE \
@@ -274,7 +274,7 @@ if grep -qE \
 fi
 
 echo \
-  "PASS — Progetto Cucina live = 299 €, nessun vecchio add-on"
+  "PASS — Progetto Cucina live = 399 €, nessun vecchio add-on"
 
 curl \
   --fail \
@@ -285,11 +285,11 @@ curl \
   > /tmp/s90g-p0-services.html
 
 for required in \
-  '79 €' \
-  '129 €' \
-  '149 €' \
-  '299 €' \
-  '179 €'; do
+  '99 €' \
+  '169 €' \
+  '199 €' \
+  '399 €' \
+  '229 €'; do
 
   grep -q \
     "$required" \
