@@ -1189,3 +1189,9 @@
 .s90g-home-acquisition #problems {
   scroll-margin-top: 106px;
 }
+@media (max-width: 700px) {
+  .s90g-home-acquisition #problemi,
+  .s90g-home-acquisition #problems {
+    scroll-margin-top: 168px;
+  }
+}
