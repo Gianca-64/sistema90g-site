@@ -196,3 +196,36 @@ body>.s90g-footer{
 .s90g-proof .s90g-button{min-width:190px}
 @media(max-width:1000px){.s90g-proof-grid{grid-template-columns:1fr;gap:28px}.s90g-proof-media{order:-1}.s90g-proof-media img{aspect-ratio:16/8}}
 @media(max-width:560px){.s90g-proof{padding:36px 0}.s90g-proof-media img{aspect-ratio:4/3}.s90g-proof-copy h2{font-size:34px}}
+
+
+/* UX OCT 2026 — accessible primary actions, restrained colour */
+body.s90g-visual .s90g-header-cta,
+body.s90g-visual .s90g-button.primary {
+  background: #80570f;
+  border-color: #80570f;
+  color: #fff;
+  box-shadow: none;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+body.s90g-visual .s90g-header-cta:hover,
+body.s90g-visual .s90g-button.primary:hover {
+  background: #6c4a10;
+  border-color: #6c4a10;
+  color: #fff;
+  transform: translateY(-1px);
+}
+body.s90g-visual .s90g-header-cta:focus-visible,
+body.s90g-visual .s90g-button:focus-visible {
+  outline: 3px solid #80570f;
+  outline-offset: 4px;
+}
+body.s90g-visual .s90g-dark-band .s90g-button:focus-visible {
+  outline-color: #f4d08a;
+}
+@media (prefers-reduced-motion: reduce) {
+  body.s90g-visual .s90g-header-cta,
+  body.s90g-visual .s90g-button.primary {
+    transition: none;
+    transform: none;
+  }
+}
