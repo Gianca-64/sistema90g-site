@@ -1182,3 +1182,10 @@
     align-self: flex-start;
   }
 }
+
+
+/* Keep in-page navigation headings visible below the sticky header. */
+.s90g-home-acquisition #problemi,
+.s90g-home-acquisition #problems {
+  scroll-margin-top: 106px;
+}
