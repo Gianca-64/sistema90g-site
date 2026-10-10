@@ -1135,3 +1135,63 @@
     transition: none;
   }
 }
+
+
+/* UX OCT 2026 — simpler surfaces and keyboard-safe Vista */
+.s90g-home-acquisition .s90g-acq-hero {
+  background: #fff;
+}
+.s90g-home-acquisition .s90g-acq-examples span {
+  padding: 8px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  box-shadow: none;
+  font-weight: 650;
+}
+.s90g-home-acquisition .s90g-acq-examples span::before {
+  display: none;
+}
+.s90g-home-acquisition .s90g-acq-promise {
+  max-width: 670px;
+  padding-left: 16px;
+  border-left: 1px solid var(--gold-dark);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.s90g-home-acquisition .s90g-acq-hero .s90g-actions > .s90g-button:not(.primary) {
+  min-width: 0;
+  padding-inline: 4px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--deep);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.s90g-home-acquisition .s90g-vista-hotspot {
+  visibility: hidden;
+}
+.s90g-home-acquisition .s90g-vista-stage.is-active .s90g-vista-hotspot {
+  visibility: visible;
+}
+@media (max-width: 560px) {
+  .s90g-home-acquisition .s90g-acq-hero .s90g-actions > .s90g-button:not(.primary) {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+
+/* Keep in-page navigation headings visible below the sticky header. */
+.s90g-home-acquisition #problemi,
+.s90g-home-acquisition #problems {
+  scroll-margin-top: 106px;
+}
+@media (max-width: 700px) {
+  .s90g-home-acquisition #problemi,
+  .s90g-home-acquisition #problems {
+    scroll-margin-top: 168px;
+  }
+}
