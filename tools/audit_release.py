@@ -22,16 +22,16 @@ CANONICAL_SERVICES = [
     (
         'preventivo',
         'Analisi Preventivo &amp; Ordine 90G',
-        '169 €',
+        '189 €',
     ),
-    ('verifica', 'Verifica Cucina 90G', '199 €'),
-    ('progetto', 'Progetto Cucina 90G', '399 €'),
+    ('verifica', 'Verifica Cucina 90G', '229 €'),
+    ('progetto', 'Progetto Cucina 90G', '449 €'),
     (
         'premontaggio',
         'Controllo Pre-Montaggio 90G',
-        '229 €',
+        '269 €',
     ),
-    ('problema', 'Analisi Problema 90G', '199 €'),
+    ('problema', 'Analisi Problema 90G', '229 €'),
 ]
 LEGACY_PUBLIC_TERMS = [
     # '#percorso' is intentionally used by the current Method page
