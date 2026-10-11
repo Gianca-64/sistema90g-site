@@ -15,23 +15,23 @@ CANONICAL_PAGES = {
     ],
     "analisi-preventivo-cucina.html": [
         "Analisi Preventivo",
-        "169 €",
+        "189 €",
     ],
     "verifica-90g.html": [
         "Verifica Cucina 90G",
-        "199 €",
+        "229 €",
     ],
     "progetto-cucina-sistema90g.html": [
         "Progetto Cucina 90G",
-        "399 €",
+        "449 €",
     ],
     "controllo-pre-montaggio-cucina.html": [
         "Controllo Pre-Montaggio 90G",
-        "229 €",
+        "269 €",
     ],
     "analisi-problema-cucina.html": [
         "Analisi Problema 90G",
-        "199 €",
+        "229 €",
     ],
 }
 
@@ -48,12 +48,12 @@ SITEMAP_URLS = [
 
 SERVICE_OFFER_FACTS = [
     ("Consulenza 90G", "99 €"),
-    ("Analisi Preventivo &amp; Ordine 90G", "169 €"),
-    ("Verifica Cucina 90G", "199 €"),
-    ("Progetto Cucina 90G", "399 €"),
-    ("Controllo Pre-Montaggio 90G", "229 €"),
-    ("Analisi Problema 90G", "199 €"),
-    ("Render fotorealistico aggiuntivo", "39 €"),
+    ("Analisi Preventivo &amp; Ordine 90G", "189 €"),
+    ("Verifica Cucina 90G", "229 €"),
+    ("Progetto Cucina 90G", "449 €"),
+    ("Controllo Pre-Montaggio 90G", "269 €"),
+    ("Analisi Problema 90G", "229 €"),
+    ("Render fotorealistico aggiuntivo", "59 €"),
 ]
 
 
