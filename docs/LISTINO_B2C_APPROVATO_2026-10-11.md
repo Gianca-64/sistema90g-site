@@ -37,3 +37,14 @@ Il Percorso Acquisto Cucina 90G continuativo rimane con proposta personalizzata:
 - Il deploy del sito usa soltanto la procedura locale canonica; non usare GitHub Actions come deploy ordinario.
 
 Questo documento prevale **per le tariffe B2C attive** su offerte storiche datate 2026-08 e precedenti, senza cancellarne il valore archivistico.
+
+
+## Integrazione Cloudflare verificata nel repository Portale
+
+La revisione del codice del Portale ha identificato la fonte commerciale corrente per il Worker nella cartella `cloudflare/src/service-catalog.js`, non nel catalogo PHP storico. PR di integrazione: `Gianca-64/sistema90g-portale-backend#27`.
+
+Il Worker filtra il primo ingresso con `PUBLIC_INTAKE_SERVICE_IDS`: solo `S90G-F00` gratuito è visibile in questa fase. Quando la Console conferma un servizio, il backend usa il catalogo `S90G-01`–`S90G-06` e persiste l'importo. Nel branch di integrazione i sei importi sono aggiornati e viene impedito di alterare inavvertitamente le proposte già confermate. **Non è un deploy né un test browser completato.**
+
+Attenzione: il render opzionale a 59 EUR è ora aggiornato nelle pagine pubbliche italiane, ma l'attuale contratto di conferma del Worker addebita soltanto il prezzo fisso del servizio. **La somma `449 € + 59 € × viste` non è implementata e non va fatturata automaticamente senza uno specifico flusso add-on approvato, snapshot e test.** Le modalità per il percorso continuativo a prezzo personalizzato richiedono analoga definizione.
+
+Per il rilascio: controllare congiuntamente le PR Sito #79, Portale #27 e il flusso effettivo della Console locale; conservare la valutazione gratuita e gli impegni economici già comunicati.
