@@ -63,27 +63,27 @@ services = [
     ("Consulenza 90G", "99 €", "1 giorno lavorativo"),
     (
         "Analisi Preventivo &amp; Ordine 90G",
-        "169 €",
+        "189 €",
         "2 giorni lavorativi",
     ),
     (
         "Verifica Cucina 90G",
-        "199 €",
-        "2 giorni lavorativi",
-    ),
-    (
-        "Progetto Cucina 90G",
-        "399 €",
-        "3 giorni lavorativi",
-    ),
-    (
-        "Controllo Pre-Montaggio 90G",
         "229 €",
         "2 giorni lavorativi",
     ),
     (
+        "Progetto Cucina 90G",
+        "449 €",
+        "3 giorni lavorativi",
+    ),
+    (
+        "Controllo Pre-Montaggio 90G",
+        "269 €",
+        "2 giorni lavorativi",
+    ),
+    (
         "Analisi Problema 90G",
-        "199 €",
+        "229 €",
         "2 giorni lavorativi",
     ),
 ]
@@ -97,10 +97,10 @@ for name, price, time in services:
 
 expected_price_counts = {
     "99 €": 1,
-    "169 €": 1,
-    "199 €": 2,
-    "399 €": 1,
-    "229 €": 1,
+    "189 €": 1,
+    "229 €": 2,
+    "449 €": 1,
+    "269 €": 1,
 }
 
 for price, expected_count in expected_price_counts.items():
