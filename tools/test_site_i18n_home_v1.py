@@ -82,11 +82,19 @@ require(
     "English acquisition headline",
 )
 
-require(
-    'Sistema 90G looks for problems, inconsistencies'
-    in EN,
-    "English problem-first promise",
+# Validate the visible lead, rather than a retired sentence elsewhere in HTML.
+lead_match = re.search(
+    r'<p class="s90g-acq-lead">(.*?)</p>', EN, re.S
 )
+require(lead_match is not None, "English homepage lead missing")
+lead_text = re.sub(r'<[^>]+>', '', lead_match.group(1))
+lead_text = re.sub(r'\s+', ' ', lead_text).strip()
+for concept in (
+    'independent support when buying a kitchen',
+    'what works and what needs checking',
+    'in a design or quote, before you decide',
+):
+    require(concept in lead_text, f"English lead missing: {concept}")
 
 for marker in [
     'A useful answer should show',
@@ -415,12 +423,23 @@ _brand_home = (
 
 for _marker in [
     "Italian method · independent checks · better kitchen decisions",
-    "Independent Italian kitchen expertise focused on identifying problems",
 ]:
     if _marker not in _brand_home:
         raise SystemExit(
             f"FAIL — international Italian brand marker missing from EN home: {_marker}"
         )
+
+# Check the current search description separately from the visible brand tagline.
+description_match = re.search(
+    r'<meta\s+name="description"\s+content="([^"]+)"', _brand_home
+)
+require(description_match is not None, "English search description missing")
+for concept in (
+    "Independent support when buying a kitchen",
+    "identifies problems, inconsistencies and risky decisions",
+):
+    require(concept in description_match.group(1),
+            f"English search description missing: {concept}")
 
 if "Made in Italy" in _brand_home:
     raise SystemExit(
