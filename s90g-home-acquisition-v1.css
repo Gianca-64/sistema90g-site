@@ -1135,3 +1135,29 @@
     transition: none;
   }
 }
+
+/* Keep both image layers and hotspot coordinates on the same uncropped canvas. */
+.s90g-vista-stage {
+  min-height: 0;
+  align-self: start;
+}
+
+.s90g-vista-stage > .s90g-vista-clean-layer {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.s90g-vista-stage > .s90g-vista-analysed-layer {
+  object-fit: contain;
+}
+
+.s90g-vista-hotspot:disabled {
+  visibility: hidden;
+}
+
+.s90g-vista-panel {
+  min-height: 0;
+}

@@ -98,6 +98,13 @@
     const setActive = active => {
       stage.classList.toggle('is-active', active);
 
+      if (!active && hotspots.includes(document.activeElement)) {
+        toggle.focus({ preventScroll: true });
+      }
+      hotspots.forEach(button => {
+        button.disabled = !active;
+      });
+
       toggle.setAttribute(
         'aria-pressed',
         String(active)
@@ -192,6 +199,8 @@
       });
     });
 
+    setActive(false);
+    toggle.disabled = false;
     root.dataset.s90gVistaEnhanced = 'true';
 
     // Contract marker retained for regression.
