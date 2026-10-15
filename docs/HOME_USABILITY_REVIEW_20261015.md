@@ -17,12 +17,12 @@ Base verificata: `8ddae6ebe4ee77cc69e36f1bb34f8b3893dbd88b` (`main`).
 - `python tools/verify_about_acquisition_v1.py`: PASS.
 - `python tools/test_responsive_contract.py`: PASS (controlli statici, non collaudo visuale).
 - `git diff --check`: PASS.
-- `tools/test_site_i18n_home_v1.py`: FAIL preesistente `English problem-first promise`, riprodotto leggendo i file originali da HEAD. Cerca la frase “Sistema 90G looks for problems, inconsistencies”, assente già nella base; test non modificato per mascherare l'esito.
+- `python tools/test_site_i18n_home_v1.py`: PASS. Aggiornati due riferimenti a frasi superate: ora vengono controllati il messaggio visibile del lead e la descrizione per i motori di ricerca. Conservati i controlli su identità italiana, lingua, navigazione e immagini. Il primo errore era stato riprodotto anche sulla base originale.
 
 ## Verifiche ancora aperte
 
-- Collaudo visuale desktop e mobile: proporzioni dei due livelli Vista, coordinate, pulsante e focus a 320/375/390/768 px; verifica tastiera nel browser e assenza di salti di pagina. Nessun browser QA eseguito in questa sessione.
-- Portale: le richieste automatiche hanno restituito 403; la rappresentazione indicizzata include “Percorso non riconosciuto” insieme a modulo e conferma. Questi dati non provano un guasto: possono includere stati nascosti in HTML. Serve verifica nel browser del percorso effettivo e, nell'ambiente autorizzato del Portale, invio/allegati/conferma. Nessun invio di prova effettuato.
+- Collaudo visuale desktop e mobile: proporzioni dei due livelli Vista, coordinate, pulsante e focus a 320/375/390/768 px; verifica tastiera nel browser e assenza di salti di pagina. Nessun collaudo nel browser della versione modificata eseguito in questa sessione.
+- Portale live: verificato nel browser il collegamento dalla pagina Analisi preventiva al modulo. Caricamento completato, servizio “Valutazione iniziale gratuita”, totale 0 €, campi e pulsante di invio presenti. Il precedente 403 delle richieste automatiche e gli stati indicizzati non dimostrano un guasto. Restano da verificare invio/allegati/conferma nell’ambiente autorizzato del Portale; nessun invio di prova effettuato.
 - Descrizione AI: da allineare solo dopo verifica del funzionamento definitivo della Console; nessun cambiamento in questa proposta.
 
 ## Pubblicazione
