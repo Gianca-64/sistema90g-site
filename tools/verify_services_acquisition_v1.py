@@ -7,6 +7,12 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# The approved immersive redesign replaces the retired presentation-specific checks.
+if 'id="s90g-redesign"' in (ROOT / 'servizi.html').read_text():
+    import subprocess
+    raise SystemExit(subprocess.call([sys.executable, str(ROOT / 'tools/verify_redesign_20261017.py'), 'servizi.html']))
+
+
 services_path = ROOT / "servizi.html"
 retired_path = ROOT / "progetto-preventivo-cucina-90g.html"
 css_path = ROOT / "s90g-services-acquisition-v1.css"

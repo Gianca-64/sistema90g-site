@@ -113,7 +113,7 @@ if home.is_file():
     for image in home_parser.images:
         src = image.get("src", "")
         name = Path(urlparse(src).path).name
-        if name == "01_HOME_HERO.jpg":
+        if name in {"01_HOME_HERO.jpg", "s90g-immersive-closed.webp"}:
             hero_count += 1
             if image.get("loading", "").lower() == "lazy":
                 issues.append("index.html: immagine hero non deve essere loading=lazy")
@@ -126,7 +126,7 @@ if home.is_file():
             issues.append(f"index.html: immagine sotto-fold senza decoding=async: {src}")
 
     if hero_count != 1:
-        issues.append(f"index.html: attesa 1 immagine hero 01_HOME_HERO.jpg, trovate {hero_count}")
+        issues.append(f"index.html: attesa 1 immagine hero approvata, trovate {hero_count}")
     if deferred_count == 0:
         issues.append("index.html: nessuna immagine sotto-fold trovata per il controllo scheduling")
 else:

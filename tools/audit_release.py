@@ -329,7 +329,7 @@ def audit():
     ).read_text('utf-8', errors='replace')
 
     route_count = services.count(
-        'class="s90g-svc-route"'
+        '<details id='
     )
 
     if route_count != len(CANONICAL_SERVICES):
@@ -342,13 +342,13 @@ def audit():
 
     for service_id, name, price in CANONICAL_SERVICES:
         pattern = re.compile(
-            r'<article\b'
+            r'<(?:article|details)\b'
             r'(?=[^>]*\bid=["\']'
             + re.escape(service_id)
             + r'["\'])'
             r'[^>]*>'
             r'.*?'
-            r'</article>',
+            r'</(?:article|details)>',
             re.IGNORECASE | re.DOTALL,
         )
 
