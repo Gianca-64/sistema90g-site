@@ -17,15 +17,53 @@
   color: #4b6044;
 }
 
-/* S90G mobile scene readability 20261017 — preserve complete title on small screens.
-   Story remains scrollable for enlarged text and short viewports. */
+/* S90G interactive kitchen mobile: show the WHOLE appliance photo ABOVE the
+   explanation instead of masking the open dishwasher with an overlay card. */
 @media (max-width:700px) {
+  #s90g-redesign .stage.active {
+    height:auto;
+    min-height:0;
+    padding-top:66.6667vw;
+    padding-bottom:85px;
+    overflow:visible;
+    background:#24382e;
+  }
+  #s90g-redesign .stage.active .photo {
+    top:0;
+    bottom:auto;
+    left:0;
+    width:100%;
+    height:66.6667vw;
+    object-fit:contain;
+    object-position:center top;
+    transform:none !important;
+  }
+  #s90g-redesign .stage.active .shade {
+    display:none;
+  }
   #s90g-redesign .stage.active .story {
-    max-height:calc(100% - 110px);
-    overscroll-behavior:contain;
+    position:relative;
+    top:auto;
+    bottom:auto;
+    left:auto;
+    right:auto;
+    margin:0;
+    padding:22px 24px 30px;
+    width:100%;
+    max-width:none;
+    max-height:none;
+    overflow:visible;
+    background:#24382e;
   }
   #s90g-redesign .stage.active .story h2 {
     font-size:clamp(29px,7.7vw,34px);
     line-height:1.12;
+  }
+  #s90g-redesign .stage.active .bottom {
+    position:relative;
+    inset:auto;
+    margin:0;
+    padding:10px 24px 0;
+    align-items:center;
   }
 }
