@@ -147,99 +147,50 @@ const expectedServices = [
   },
 ];
 
-const articleBlocks =
-  [
-    ...services.matchAll(
-      /<article\b[\s\S]*?<\/article>/gi,
-    ),
-  ]
-    .map(
-      match =>
-        match[0],
-    )
-    .filter(
-      block =>
-        block.includes(
-          's90g-svc-route',
-        ),
-    );
+// The public Services page now uses six accessible <details> panels, not
+// the retired <article class="s90g-svc-route"> layout. Keep checks strict.
+const serviceList =
+  services.match(
+    /<section\b[^>]*class="[^"]*\bservice-list\b[^"]*"[^>]*>([\s\S]*?)<\/section>/i,
+  );
+assert.ok(serviceList, 'sezione servizi disponibili assente');
+
+const panels =
+  [...serviceList[1].matchAll(
+    /<details\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/details>/gi,
+  )].map(match => ({ id: match[1], html: match[2] }));
 
 assert.equal(
-  articleBlocks.length,
+  panels.length,
   expectedServices.length,
   'la pagina servizi deve esporre esattamente sei percorsi canonici',
 );
+assert.deepEqual(
+  new Set(panels.map(panel => panel.id)),
+  new Set(expectedServices.map(service => service.id)),
+  'insieme degli identificativi dei sei servizi non canonico',
+);
 
-for (
-  const expected
-  of expectedServices
-) {
-  const block =
-    articleBlocks.find(
-      candidate =>
-        candidate.includes(
-          `id="${expected.id}"`,
-        ),
-    );
-
-  assert.ok(
-    block,
-    `percorso canonico assente: ${expected.id}`,
-  );
-
-  const name =
-    extractClass(
-      block,
-      'p',
-      's90g-svc-name',
-    );
-
-  const price =
-    extractClass(
-      block,
-      'strong',
-      's90g-svc-price',
-    );
-
-  assert.equal(
-    name,
-    expected.name,
-    `nome servizio errato: ${expected.id}`,
-  );
-
-  assert.equal(
-    price,
-    expected.price,
-    `prezzo servizio errato: ${expected.id}`,
-  );
-
-  assert.ok(
-    block.includes(
-      `href="${expected.href}"`,
-    ),
-    `link servizio errato: ${expected.id}`,
-  );
-
-  const detail =
-    normalize(
-      read(
-        expected.detail,
-      ),
-    );
-
-  assert.ok(
-    detail.includes(
-      expected.name,
-    ),
-    `nome assente nella pagina dettaglio: ${expected.name}`,
-  );
-
-  assert.ok(
-    detail.includes(
-      expected.price,
-    ),
-    `prezzo assente nella pagina dettaglio: ${expected.name}`,
-  );
+for (const expected of expectedServices) {
+  const panel = panels.find(candidate => candidate.id === expected.id);
+  assert.ok(panel, `percorso canonico assente: ${expected.id}`);
+  const summary = panel.html.match(/<summary\b[^>]*>([\s\S]*?)<\/summary>/i);
+  assert.ok(summary, `riepilogo servizio assente: ${expected.id}`);
+  const small = summary[1].match(/<small\b[^>]*>([\s\S]*?)<\/small>/i);
+  const priceSpan =
+    summary[1].match(/<span\b[^>]*class="[^"]*\bprice\b[^"]*"[^>]*>([\s\S]*?)<\/span>/i);
+  assert.ok(small && priceSpan, `nome o prezzo nel riepilogo assente: ${expected.id}`);
+  assert.equal(normalize(small[1]), expected.name,
+    `nome servizio errato: ${expected.id}`);
+  assert.equal(normalize(priceSpan[1]), expected.price,
+    `prezzo servizio errato: ${expected.id}`);
+  assert.ok(panel.html.includes(`href="${expected.href}"`),
+    `link servizio errato: ${expected.id}`);
+  const detail = normalize(read(expected.detail));
+  assert.ok(detail.includes(expected.name),
+    `nome assente nella pagina dettaglio: ${expected.name}`);
+  assert.ok(detail.includes(expected.price),
+    `prezzo assente nella pagina dettaglio: ${expected.name}`);
 }
 
 assert.ok(

@@ -126,19 +126,31 @@ const canonicalServiceRoutes = [
   },
 ];
 
-for (const { id, name, price } of canonicalServiceRoutes) {
-  const articlePattern = new RegExp(
-    `<article[\\s\\S]*?id="${id}"[\\s\\S]*?` +
-      name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
-      `[\\s\\S]*?` +
-      price.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
-      `[\\s\\S]*?</article>`
-  );
-
-  assert.ok(
-    articlePattern.test(services),
-    `serviceso/prezzo canonico assente dalla situazione ${id}: ${name} / ${price}`
-  );
+// Check the CURRENT six <details> service panels, not the retired article layout.
+const serviceList = services.match(
+  /<section\b[^>]*class="[^"]*\bservice-list\b[^"]*"[^>]*>([\s\S]*?)<\/section>/i
+);
+assert.ok(serviceList, 'service-list section missing');
+const servicePanels = [...serviceList[1].matchAll(
+  /<details\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/details>/gi
+)].map(match => ({id:match[1], html:match[2]}));
+assert.equal(servicePanels.length, canonicalServiceRoutes.length,
+  'la pagina servizi deve contenere esattamente sei percorsi canonici');
+assert.deepEqual(new Set(servicePanels.map(item=>item.id)),
+  new Set(canonicalServiceRoutes.map(item=>item.id)),
+  'identificativi percorsi canonici alterati');
+for (const {id, name, price} of canonicalServiceRoutes) {
+  const panel = servicePanels.find(item=>item.id===id);
+  assert.ok(panel, `percorso servizio mancante: ${id}`);
+  const summary = panel.html.match(/<summary\b[^>]*>([\s\S]*?)<\/summary>/i);
+  assert.ok(summary, `summary servizio assente: ${id}`);
+  const small = summary[1].match(/<small\b[^>]*>([\s\S]*?)<\/small>/i);
+  const priceSpan = summary[1].match(/<span\b[^>]*class="[^"]*\bprice\b[^"]*"[^>]*>([\s\S]*?)<\/span>/i);
+  assert.ok(small && priceSpan, `nome/prezzo assente: ${id}`);
+  assert.equal(small[1].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(),name,
+    `nome canonico errato: ${id}`);
+  assert.equal(priceSpan[1].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim(),price,
+    `prezzo canonico errato: ${id}`);
 }
 
 /*
