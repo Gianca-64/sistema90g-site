@@ -59,13 +59,6 @@
     font-size:clamp(29px,7.7vw,34px);
     line-height:1.12;
   }
-  #s90g-redesign .stage.active .bottom {
-    position:relative;
-    inset:auto;
-    margin:0;
-    padding:10px 24px 0;
-    align-items:center;
-  }
 }
 
 /* S90G mobile chat-safe interactive controls 20261017: preserve the floating WhatsApp launcher and
@@ -81,6 +74,10 @@
     white-space:normal;
   }
   #s90g-redesign .stage.active .bottom {
+    position:relative;
+    inset:auto;
+    margin:0;
+    padding:10px 24px 0;
     flex-direction:column;
     align-items:flex-start;
     gap:6px;
