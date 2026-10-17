@@ -16,3 +16,16 @@
 #s90g-redesign .olive-band .number {
   color: #4b6044;
 }
+
+/* S90G mobile scene readability 20261017 — preserve complete title on small screens.
+   Story remains scrollable for enlarged text and short viewports. */
+@media (max-width:700px) {
+  #s90g-redesign .stage.active .story {
+    max-height:calc(100% - 110px);
+    overscroll-behavior:contain;
+  }
+  #s90g-redesign .stage.active .story h2 {
+    font-size:clamp(29px,7.7vw,34px);
+    line-height:1.12;
+  }
+}
