@@ -40,7 +40,8 @@ rm -f \
   "$DIST/images/02_HOME_SCENA_PROBLEMA.png" \
   "$DIST/images/04_HOME_COSTO_TARDIVO.png"
 
-# Perimetro pubblico: esclusivamente cucina.
+# Perimetro pubblico: cucina + Analisi Distributiva 90G approvata il 2026-10-26.
+# La nuova analisi non riattiva le vecchie offerte o i casi casa ritirati.
 # Manteniamo solo i sei casi reali cucina attualmente approvati; tutti gli altri
 # vecchi casi casa/soggiorno/camere/bagno/garage/terrazzo vengono esclusi dal deploy.
 case_keep='^(caso-cucina-piccola-tre-lati|caso-cucina-profondita-75-angolo|caso-isola-passaggi-cucina|caso-lavastoviglie-passaggio-cucina|caso-lavello-sotto-finestra-aperture|caso-preventivo-cucina-sconto-valore)\.html$'
@@ -84,7 +85,8 @@ while read -r source target status rest; do
   esac
 done < "$DIST/_redirects"
 
-# Guard rail semantico: il sito pubblico deve comunicare esclusivamente cucina.
+# Guard rail semantico sulle pagine storiche cucina; la nuova Analisi Distributiva
+# mantiene il perimetro approvato nella propria pagina dedicata.
 # Ripulisce residui storici nei metadati/schema e collega direttamente all'hub casi canonico.
 find "$DIST" -type f -name '*.html' -print0 | while IFS= read -r -d '' file; do
   sed -i.bak \
@@ -160,6 +162,7 @@ python3 "$ROOT/tools/test_public_portal_entry_contract.py" "$DIST"
 # L'offerta pubblica deve restare allineata al listino canonico anche nelle
 # pagine dedicate a professionisti e rivenditori.
 python3 "$ROOT/tools/test_public_commercial_contract.py" "$DIST"
+python3 "$ROOT/tools/test_layout_analysis_contract.py" "$DIST"
 
 # La cache lunga immutable e consentita solo se tutti i riferimenti CSS/JS pubblici
 # portano la versione automatica basata sul contenuto.

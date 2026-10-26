@@ -11,6 +11,7 @@
     'analisi-preventivo-cucina',
     'controllo-pre-montaggio-cucina',
     'analisi-problema-cucina',
+    'analisi-distributiva-90g',
 ]);
   const NAV_LINKS=[
     ['problems','Problemi da evitare','/#problemi'],

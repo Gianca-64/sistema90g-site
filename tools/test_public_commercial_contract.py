@@ -9,6 +9,7 @@ TARGET = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT
 
 
 CANONICAL_PAGES = {
+    "analisi-distributiva-90g.html": ["Analisi Distributiva 90G", "199 €"],
     "consulenza-90g.html": [
         "Consulenza 90G",
         "99 €",
@@ -37,6 +38,7 @@ CANONICAL_PAGES = {
 
 
 SITEMAP_URLS = [
+    "https://sistema90g.it/analisi-distributiva-90g.html",
     "https://sistema90g.it/consulenza-90g.html",
     "https://sistema90g.it/analisi-preventivo-cucina.html",
     "https://sistema90g.it/verifica-90g.html",
@@ -47,6 +49,7 @@ SITEMAP_URLS = [
 
 
 SERVICE_OFFER_FACTS = [
+    ("Analisi Distributiva 90G", "199 €"),
     ("Consulenza 90G", "99 €"),
     ("Analisi Preventivo &amp; Ordine 90G", "169 €"),
     ("Verifica Cucina 90G", "199 €"),
@@ -79,6 +82,7 @@ RETIRED_REDIRECTS = {
 
 
 CANONICAL_RUNTIME_SLUGS = [
+    "analisi-distributiva-90g",
     "consulenza-90g",
     "analisi-preventivo-cucina",
     "verifica-90g",
@@ -297,6 +301,6 @@ if errors:
 
 print(
     "OK public B2C commercial contract: "
-    "sei servizi canonici + Percorso Acquisto + "
+    "sette servizi canonici + Percorso Acquisto + "
     "Free Entry + retirement URL coerenti"
 )

@@ -178,7 +178,7 @@ function s90gInferContentType(){
   if(slug.startsWith('caso-'))return 'case';
   if(slug.startsWith('casi-'))return 'case-category';
   if(location.pathname.includes('/approfondimenti/')||slug==='innovazioni')return 'article';
-  if(['progetto-cucina-sistema90g','progetto-preventivo-cucina-90g','consulenza-90g','verifica-90g','servizi','analisi-preventivo-cucina','controllo-pre-montaggio-cucina','analisi-problema-cucina',].includes(slug))return 'service';
+  if(['progetto-cucina-sistema90g','progetto-preventivo-cucina-90g','consulenza-90g','verifica-90g','servizi','analisi-preventivo-cucina','controllo-pre-montaggio-cucina','analisi-problema-cucina','analisi-distributiva-90g',].includes(slug))return 'service';
   if(slug==='esempio-progetto-cucina-90g'||slug==='esempio-fascicolo-cucina')return 'proof';
   return 'page';
 }

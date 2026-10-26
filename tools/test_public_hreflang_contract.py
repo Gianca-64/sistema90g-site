@@ -9,6 +9,7 @@ import sys
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("dist")
 
 PAIRS = (
+    ("analisi-distributiva-90g.html", "en/layout-analysis.html", "https://sistema90g.it/analisi-distributiva-90g", "https://sistema90g.it/en/layout-analysis"),
     ("index.html", "en/index.html", "https://sistema90g.it/", "https://sistema90g.it/en/"),
     ("chi-e-sistema90g.html", "en/about.html", "https://sistema90g.it/chi-e-sistema90g", "https://sistema90g.it/en/about"),
     ("analisi-preventiva.html", "en/how-it-works.html", "https://sistema90g.it/analisi-preventiva", "https://sistema90g.it/en/how-it-works"),
@@ -108,6 +109,6 @@ if errors:
 
     raise SystemExit(1)
 
-print("PASS — 20 coppie IT/EN hanno hreflang reciproco")
+print("PASS — 21 coppie IT/EN hanno hreflang reciproco")
 print("PASS — x-default resta sulla versione italiana")
 print("HREFLANG CONTRACT: PASS")

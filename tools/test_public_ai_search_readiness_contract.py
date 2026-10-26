@@ -69,6 +69,7 @@ SITEMAPS = (
 )
 
 EXPECTED_EN_URLS = {
+    "https://sistema90g.it/en/layout-analysis",
     "https://sistema90g.it/en/",
     "https://sistema90g.it/en/about",
     "https://sistema90g.it/en/how-it-works",
@@ -434,6 +435,6 @@ print("PASS — OAI-SearchBot e sitemap dichiarati")
 print("PASS — landing B2B/offer legacy ritirate con 301")
 print("PASS — vecchi prezzi e messaggi commerciali assenti dal dist")
 print("PASS — sitemap prive di URL legacy")
-print("PASS — sitemap EN contiene esattamente 20 URL pubbliche")
+print("PASS — sitemap EN contiene esattamente 21 URL pubbliche")
 print("PASS — lastmod sitemap sincronizzati con la storia Git")
 print("AI SEARCH READINESS CONTRACT: PASS")

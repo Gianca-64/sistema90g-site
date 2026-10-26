@@ -156,7 +156,7 @@ No B2B role is reintroduced.
 
 ## Services
 
-The English website exposes the same current six B2C service families as the Italian website.
+The English website exposes the same B2C service families as the Italian website. The six kitchen families are joined by 90G Layout Analysis (Analisi Distributiva 90G), approved on 26 October 2026: fixed €199 EUR regardless of the number or type of rooms; analysis only, without new designs or alternatives. See `ANALISI_DISTRIBUTIVA_90G_20261026.md`.
 
 The service meaning, scope, price and exclusions must remain semantically equivalent.
 

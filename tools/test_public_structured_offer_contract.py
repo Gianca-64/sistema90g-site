@@ -10,6 +10,8 @@ import sys
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("dist")
 
 EXPECTED = {
+    "analisi-distributiva-90g.html": ("199", "EUR", "199 €"),
+    "en/layout-analysis.html": ("199", "EUR", "€199"),
     "consulenza-90g.html": ("99", "EUR", "99 €"),
     "analisi-preventivo-cucina.html": ("169", "EUR", "169 €"),
     "verifica-90g.html": ("199", "EUR", "199 €"),
@@ -127,7 +129,7 @@ if errors:
 
     raise SystemExit(1)
 
-print("PASS — 12 servizi IT/EN hanno prezzo visibile canonico")
+print("PASS — 14 pagine servizio IT/EN hanno prezzo visibile canonico")
 print("PASS — Offer JSON-LD coincide con prezzo e valuta visibili")
 print("PASS — nessuna Offer confliggente nelle pagine servizio")
 print("STRUCTURED OFFER CONTRACT: PASS")

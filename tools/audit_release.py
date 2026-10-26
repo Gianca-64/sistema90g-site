@@ -18,6 +18,7 @@ NS = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
 SKIP_SCHEMES = {'mailto', 'tel', 'javascript', 'data'}
 
 CANONICAL_SERVICES = [
+    ('distribuzione', 'Analisi Distributiva 90G', '199 €'),
     ('scelta', 'Consulenza 90G', '99 €'),
     (
         'preventivo',
@@ -320,7 +321,7 @@ def audit():
 
     # Contratto dell'offerta pubblica.
     #
-    # The current public architecture has exactly six canonical B2C
+    # The current public architecture has seven canonical B2C
     # service routes. Name and price are separate HTML elements, so
     # the audit must verify the route contract rather than search for
     # an obsolete concatenated display string.
