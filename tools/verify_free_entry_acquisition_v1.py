@@ -15,7 +15,7 @@ errors = []
 value_first_markers = [
     "La prima valutazione serve a capire se",
     "Se non emerge la necessità di altro, te lo diciamo.",
-    "non è una verifica completa del progetto",
+    "non è una progettazione o una verifica tecnica completa",
     "Tre possibili risultati della prima valutazione.",
     "Non ogni dubbio deve diventare un servizio.",
 ]
@@ -40,14 +40,14 @@ for marker in value_first_markers:
 css = css_path.read_text()
 
 required = [
-    "Mostraci cosa non ti convince.",
+    "Hai un dubbio su una scelta per la casa?",
     "Partiamo da lì.",
     "Non devi scegliere un servizio",
     "Prima capiamo cosa sta succedendo.",
     'id="cosa-guardiamo"',
     "Cosa cerchiamo nel materiale che ci mostri.",
     "Se non serve altro, te lo diciamo.",
-    "Cosa non ti convince della tua cucina?",
+    "Quale scelta per la tua casa vuoi chiarire?",
     'data-s90g-nav-managed="page"',
     "VEDERE IL PROBLEMA PRIMA",
     "images/22_CASI_PREVENTIVO.jpg?v=20260912a",
