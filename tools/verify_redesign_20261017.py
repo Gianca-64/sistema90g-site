@@ -31,14 +31,26 @@ for block in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</sc
 css=(ROOT/'s90g-immersive-20261017.css').read_text()
 assert 'prefers-reduced-motion' in css and ':focus-visible' in css
 if page=='index.html':
-    assert len(re.findall(r'data-index="[012]"',s))==3
-    for id in ['stage','closed-photo','photo','intro','story','spots','back','next','esempio']:assert id in p.ids,id
-    for text in ['Assistenza indipendente','Scena illustrativa generata','VERIFICATO','DA VERIFICARE','NON DETERMINABILE','Non è un caso cliente','Gian Carlo Primo']:assert text in s,text
-    for im in p.images:
-        assert im.get('alt') and im.get('width') and im.get('height')
-    assert any(i.get('fetchpriority')=='high' for i in p.images)
-    js=(ROOT/'s90g-immersive-20261017.js').read_text()
-    for marker in ['Escape','preventScroll','aria-expanded','vista90g_hotspot','window.gtag']:assert marker in js
+    if 's90g-clear-hero' in s:
+        # PR 89: a readable opening replaces the interactive illustration.
+        for id in ['stage','main-title','capire','esempio']:assert id in p.ids,id
+        for text in ['Consulenza indipendente per la casa','Prima di spendere per la tua casa',
+                     'Mostra gratuitamente il tuo caso','specializzazione principale è la cucina',
+                     'VERIFICATO','DA VERIFICARE','NON DETERMINABILE','Non è un caso cliente',
+                     'Gian Carlo Primo']:assert text in s,text
+        assert 'aria-labelledby="main-title"' in s
+        assert len(re.findall(r'data-free-entry(?:\s|>)',s)) == 3
+        assert not p.images and 's90g-immersive-20261017.js' not in s
+        assert 'fotografia in apertura' not in s
+    else:
+        assert len(re.findall(r'data-index="[012]"',s))==3
+        for id in ['stage','closed-photo','photo','intro','story','spots','back','next','esempio']:assert id in p.ids,id
+        for text in ['Assistenza indipendente','Scena illustrativa generata','VERIFICATO','DA VERIFICARE','NON DETERMINABILE','Non è un caso cliente','Gian Carlo Primo']:assert text in s,text
+        for im in p.images:
+            assert im.get('alt') and im.get('width') and im.get('height')
+        assert any(i.get('fetchpriority')=='high' for i in p.images)
+        js=(ROOT/'s90g-immersive-20261017.js').read_text()
+        for marker in ['Escape','preventScroll','aria-expanded','vista90g_hotspot','window.gtag']:assert marker in js
 else:
     ids=['scelta','preventivo','verifica','progetto','premontaggio','problema']
     prices=['99','169','199','399','229','199']
