@@ -40,7 +40,10 @@ if page=='index.html':
                      'Gian Carlo Primo']:assert text in s,text
         assert 'aria-labelledby="main-title"' in s
         assert len(re.findall(r'data-free-entry(?:\s|>)',s)) == 3
-        assert not p.images and 's90g-immersive-20261017.js' not in s
+        assert len(p.images)==3 and 's90g-immersive-20261017.js' not in s
+        for im in p.images: assert im.get('src') and im.get('alt') and im.get('width') and im.get('height')
+        assert sum(im.get('fetchpriority')=='high' for im in p.images)==1
+        assert sum(im.get('loading')=='lazy' for im in p.images)==2
         assert 'fotografia in apertura' not in s
     else:
         assert len(re.findall(r'data-index="[012]"',s))==3
