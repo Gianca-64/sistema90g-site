@@ -127,8 +127,11 @@ if home.is_file():
             issues.append(f"index.html: immagine sotto-fold senza decoding=async: {src}")
 
     text_opening = 'class="editorial s90g-clear-hero"' in home_html
-    if text_opening and home_parser.images:
-        issues.append("index.html: l'apertura testuale non prevede immagini")
+    if text_opening:
+        if hero_count != 1:
+            issues.append(f"index.html: attesa 1 immagine hero, trovate {hero_count}")
+        if deferred_count != 2:
+            issues.append(f"index.html: attese 2 immagini successive, trovate {deferred_count}")
     if not text_opening and hero_count != 1:
         issues.append(f"index.html: attesa 1 immagine hero approvata, trovate {hero_count}")
     if not text_opening and deferred_count == 0:
