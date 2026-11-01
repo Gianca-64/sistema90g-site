@@ -114,7 +114,7 @@ if home.is_file():
     for image in home_parser.images:
         src = image.get("src", "")
         name = Path(urlparse(src).path).name
-        if name in {"01_HOME_HERO.jpg", "s90g-immersive-closed.webp"}:
+        if name in {"01_HOME_HERO.jpg", "s90g-immersive-closed.webp", "s90g-home-cucina-hero.webp"}:
             hero_count += 1
             if image.get("loading", "").lower() == "lazy":
                 issues.append("index.html: immagine hero non deve essere loading=lazy")
