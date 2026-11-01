@@ -105,7 +105,8 @@ for page in sorted(root.rglob("*.html")):
 home = root / "index.html"
 if home.is_file():
     home_parser = ImageRefs()
-    home_parser.feed(home.read_text("utf-8", errors="ignore"))
+    home_html = home.read_text("utf-8", errors="ignore")
+    home_parser.feed(home_html)
     home_parser.close()
 
     hero_count = 0
@@ -125,9 +126,12 @@ if home.is_file():
         if image.get("decoding", "").lower() != "async":
             issues.append(f"index.html: immagine sotto-fold senza decoding=async: {src}")
 
-    if hero_count != 1:
+    text_opening = 'class="editorial s90g-clear-hero"' in home_html
+    if text_opening and home_parser.images:
+        issues.append("index.html: l'apertura testuale non prevede immagini")
+    if not text_opening and hero_count != 1:
         issues.append(f"index.html: attesa 1 immagine hero approvata, trovate {hero_count}")
-    if deferred_count == 0:
+    if not text_opening and deferred_count == 0:
         issues.append("index.html: nessuna immagine sotto-fold trovata per il controllo scheduling")
 else:
     issues.append("index.html: Home mancante per il controllo immagini")
@@ -148,6 +152,6 @@ else:
 print(
     "OK public image performance contract: "
     f"{checked_refs} riferimenti raster, {len(unique_assets)} asset unici; "
-    f"Home hero eager + {deferred_count} immagini sotto-fold lazy/async; "
+    f"Home: {hero_count} hero eager + {deferred_count} immagini sotto-fold lazy/async; "
     f"massimo {largest_label}"
 )
