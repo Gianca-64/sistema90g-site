@@ -275,6 +275,79 @@
 }
 
 
+/* PROFESSIONAL SERVICES — clear difference from free orientation */
+.s90g-fe-offers {
+  padding: 88px 0;
+  border-top: 1px solid var(--fe-line);
+  background: #fff;
+}
+.s90g-fe-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+.s90g-fe-offer {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px 30px 24px;
+  border: 1px solid var(--fe-line);
+  background: var(--fe-paper);
+}
+.s90g-fe-offer-when {
+  margin: 0 0 9px;
+  color: #6c5124;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+.s90g-fe-offer h3 {
+  margin: 0 0 14px;
+  color: var(--fe-deep);
+  font-size: clamp(21px, 2.1vw, 27px);
+  line-height: 1.15;
+}
+.s90g-fe-offer > p:not(.s90g-fe-offer-when, .s90g-fe-offer-price) {
+  margin: 0 0 13px;
+  color: #3e4441;
+  line-height: 1.6;
+}
+.s90g-fe-offer .s90g-fe-offer-output { margin-top: auto !important; padding-top: 8px; }
+.s90g-fe-offer-output strong { color: var(--fe-deep); }
+.s90g-fe-offer .s90g-fe-offer-price {
+  margin: 12px 0 0;
+  padding-top: 13px;
+  border-top: 1px solid var(--fe-line);
+  color: var(--fe-deep);
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -.02em;
+}
+.s90g-fe-offer-continuity { background: #eaece8; }
+.s90g-fe-offer .s90g-fe-offer-price-custom { font-size: 16px; letter-spacing: 0; }
+.s90g-fe-offers-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 26px;
+}
+.s90g-fe-offers-bottom p {
+  max-width: 750px;
+  margin: 0;
+  color: #4d5350;
+  line-height: 1.6;
+}
+.s90g-fe-offers-bottom .s90g-link { flex: 0 0 auto; color: #72501c; font-weight: 750; }
+@media (max-width: 800px) {
+  .s90g-fe-offer-grid { grid-template-columns: 1fr; }
+  .s90g-fe-offers-bottom { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 560px) {
+  .s90g-fe-offers { padding: 62px 0; }
+  .s90g-fe-offer { padding: 24px 22px 20px; }
+}
+
 /* INDEPENDENCE */
 
 .s90g-fe-independence {
